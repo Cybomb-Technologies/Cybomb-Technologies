@@ -15,7 +15,7 @@ function Servicedropdown({ onLinkClick, onDropdownClick }) {
       </Link>
 
       <div className="dropdown-menu mega-dropdown container">
-        <div className="container">
+       
           <div className="row">
             <div className="col-md-3">
               <a className="dropdown-item text-primary">Design & Development</a>
@@ -393,7 +393,7 @@ function Servicedropdown({ onLinkClick, onDropdownClick }) {
               </a>
             </div>
           </div>
-        </div>
+       
       </div>
     </li>
   );
