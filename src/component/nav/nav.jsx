@@ -7,6 +7,7 @@ import Datadropdown from "./data-ai";
 import Securitydropdown from "./security-dropdown";
 import Industriesdropdown from "./Industries-dropdown";
 import Technologiesdropdown from "./technologies-dropdoen";
+import Successstoriesdropdown from "./success-stories";
 
 function Nav() {
   const handleCloseOffcanvas = () => {
@@ -93,17 +94,9 @@ function Nav() {
                 </li>
 
                 <Technologiesdropdown />
-                
-                <li className="nav-item custom-nav-item">
-                  <Link
-                    className="nav-link custom-nav-link"
-                    to="/contact"
-                    onClick={handleCloseOffcanvas}
-                  >
-                    Contact
-                  </Link>
-                </li>
-              
+                <Successstoriesdropdown />
+
+                <></>
               </ul>
             </div>
           </div>
