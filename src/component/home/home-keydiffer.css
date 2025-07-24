@@ -1,0 +1,36 @@
+.HomeKeydiffer{
+    background-color: rgb(205 211 224);
+}
+
+.differentiator-card {
+  background-color: #FFFFFF !important;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.differentiator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.bg-purple {
+  background-color: #9333ea !important;
+}
+
+/* .stat-box {
+  background-color: #1e293b;
+} */
+
+.text-purple {
+  color: #9333ea !important;
+}

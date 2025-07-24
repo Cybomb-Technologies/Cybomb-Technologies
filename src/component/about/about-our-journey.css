@@ -1,0 +1,14 @@
+.ourjourney{
+    background: #e6ecef;
+}
+.journey-card {
+    background: rgb(205 211 224) !important;
+
+}
+.journey-card p{
+    font-size: 16px !important;
+}
+/* .journey-card h6{
+    color: rgba(255, 255, 255, 1) !important;
+} */
+

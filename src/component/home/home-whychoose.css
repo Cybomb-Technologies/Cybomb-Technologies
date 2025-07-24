@@ -1,0 +1,36 @@
+.why-choose-bg{
+  background-color: #e6ecef;
+}
+
+.stat-card {
+  background-color: rgb(205 211 224) !important;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}
+
+
+.cta-box {
+  background: linear-gradient(90deg, #2563eb 0%, #9333ea 100%);
+}
+
+
+.bg-purple {
+  background-color: #9333ea !important;
+}
+
+.text-purple {
+  color: #9333ea !important;
+}
+
+.border-orange {
+  border: 1px solid #f97316 !important;
+}

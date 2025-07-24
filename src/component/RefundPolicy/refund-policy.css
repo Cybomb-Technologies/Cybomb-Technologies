@@ -1,0 +1,14 @@
+.refund-policy {
+  background-color: rgb(205 211 224);
+  padding: 60px 0px;
+}
+
+.count{
+    padding: 5px 9px;
+    color:white;
+    border-radius: 50%;
+    font-size: 13px;
+}
+/* .points::marker{
+    background-color: red !important;
+} */

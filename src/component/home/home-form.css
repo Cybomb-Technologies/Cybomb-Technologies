@@ -1,0 +1,29 @@
+.contact-form-section {
+  background-color: rgb(205 211 224);
+  color: white;
+}
+.form{
+    background-color: #FFFFFF !important;
+}
+
+.btn-gradient {
+  background: linear-gradient(to right, #2563eb, #9333ea);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+.btn-gradient:hover {
+  opacity: 0.85;
+  color: white;
+}
+.forminput{
+    background-color: rgb(205 211 224) !important;
+    border: 2px solid rgb(205 211 224) !important;
+    padding: 10px !important;
+}
+.forminput::placeholder{
+    color:rgb(165, 159, 159) !important;
+}

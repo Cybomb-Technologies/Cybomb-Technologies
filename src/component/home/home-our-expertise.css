@@ -1,0 +1,20 @@
+.our-expertise-bg{
+    background-color: #e6ecef;
+}
+.expertise-card:hover{
+    transform: scale(1.1);
+}
+.expertise-card{
+    background-color: #FFFFFF !important;
+}
+.programming-btn{
+    border: none;;
+    background-color: rgb(205 211 224) !important;
+    margin: 0px 5px;
+    padding: 8px 14px;
+    border-radius: 18px;
+    color:rgb(57, 56, 56);
+}
+    .programming-btn:hover{
+    transform: scale(0.7);
+}
