@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-function Clouddropdown({ onLinkClick, onDropdownClick }) {
+function Successstoriesdropdown({ onLinkClick, onDropdownClick }) {
   return (
- <li className="nav-item dropdown custom-nav-item">
+    <li className="nav-item dropdown custom-nav-item">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
         to="/services"
@@ -11,7 +11,7 @@ function Clouddropdown({ onLinkClick, onDropdownClick }) {
         aria-expanded="false"
         // onClick={handlePortfolioClick}
       >
-        Cloud
+        Success Stories
       </Link>
 
       <ul className="dropdown-menu mt-3">
@@ -26,7 +26,7 @@ function Clouddropdown({ onLinkClick, onDropdownClick }) {
               className="bi bi-arrow-right arrow-right-icon bg-primary"
               style={{ fontSize: "10px" }}
             ></i>{" "}
-         AWS
+           Case Studies
           </a>
         </li>
         <li>
@@ -40,35 +40,7 @@ function Clouddropdown({ onLinkClick, onDropdownClick }) {
               className="bi bi-arrow-right arrow-right-icon bg-primary"
               style={{ fontSize: "10px" }}
             ></i>{" "}
-          Azure
-          </a>
-        </li>
-         <li>
-          <a
-            className="dropdown-item"
-            href="/demo/HRMS/"
-            target="_blank"
-            onClick={onLinkClick}
-          >
-            <i
-              className="bi bi-arrow-right arrow-right-icon bg-primary"
-              style={{ fontSize: "10px" }}
-            ></i>{" "}
-        Google Cloud
-          </a>
-        </li>
-         <li>
-          <a
-            className="dropdown-item"
-            href="/demo/HRMS/"
-            target="_blank"
-            onClick={onLinkClick}
-          >
-            <i
-              className="bi bi-arrow-right arrow-right-icon bg-primary"
-              style={{ fontSize: "10px" }}
-            ></i>{" "}
-       DevOps
+            Portfolio
           </a>
         </li>
        
@@ -77,4 +49,4 @@ function Clouddropdown({ onLinkClick, onDropdownClick }) {
   );
 }
 
-export default Clouddropdown;
+export default Successstoriesdropdown;
