@@ -55,8 +55,8 @@ function App() {
           element={<Softwareconsulting />}
         />
         <Route path="/portfolio" element={<Prortfolio />} />
-         <Route path="/career" element={<Career/>} />
-         <Route path="/faq" element={<Faq/>} />
+        <Route path="/career" element={<Career/>} />
+        <Route path="/faq" element={<Faq/>} />
          
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
@@ -66,7 +66,7 @@ function App() {
 
         {/* Services - ms*/}
         <Route path="services/mobile-app-development" element ={<MobileAppDevelopment/>} />
-         <Route path="technologies/android-app-development" element ={<AndoridAppDevelopment/>} />
+        <Route path="technologies/android-app-development" element ={<AndoridAppDevelopment/>} />
         {/*<Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />

@@ -1,15 +1,14 @@
-import React from 'react';
-import './android-app-dev.css';
-import AndoridAppDevContent from './android-app-dev-content';
-import AndroidAppDevBanner from './android-app-dev-banner';
+import React from "react";
+import AndroidAppDevContent from "./android-app-dev-content";
+import InfoStats from "./andorid-app-dev-section/InfoStats";
 
-function AndoridAppDevelopment() {
+function AndroidAppDevelopment() {
   return (
-    <div className="android-app-dev-section">
-      <AndroidAppDevBanner/>
-      <AndoridAppDevContent />
-    </div>
+    <>
+      <AndroidAppDevContent />
+      <InfoStats/>
+    </>
   );
 }
 
-export default AndoridAppDevelopment;
+export default AndroidAppDevelopment;
