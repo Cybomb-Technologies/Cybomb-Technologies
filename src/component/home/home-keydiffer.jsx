@@ -7,7 +7,7 @@ function HomeKeydiffer() {
         <h2 className="fw-bold mb-2 text-primary" data-aos="zoom-out-right">
           Our Key Differentiators
         </h2>
-        <p className="text-black mb-5" data-aos="zoom-out-left">
+        <p className="text-black mb-5 text-white" data-aos="zoom-out-left">
           What sets us apart in the competitive technology landscape
         </p>
 
