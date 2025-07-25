@@ -18,10 +18,10 @@ function Servicedropdown({ onLinkClick, onDropdownClick }) {
        
           <div className="row">
             <div className="col-md-3">
-              <a className="dropdown-item text-primary">Design & Development</a>
-              <a
+              <a className="dropdown-item text-primary">Design & Developments</a>
+              <Link
                 className="dropdown-item"
-                href="/demo/ai-agent/"
+                to="/demo/ai-agent/"
                 target="_blank"
                 onClick={onLinkClick}
               >
@@ -30,7 +30,7 @@ function Servicedropdown({ onLinkClick, onDropdownClick }) {
                   style={{ fontSize: "10px" }}
                 ></i>{" "}
                 Website Development
-              </a>
+              </Link>
               <a
                 className="dropdown-item"
                 href="/demo/HRMS/"
