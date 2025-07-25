@@ -32,7 +32,7 @@ function Nav() {
       <nav className="navbar navbar-expand-lg custom-navbar fixed-top">
         <div className="container">
           <a className="navbar-brand text-white test" href="#">
-            <h2 style={{ color: "#6366f1" }}>Cybomb Logo</h2>
+            <h2 style={{ color: "#f2f2f5ff" }}>Cybomb Logo</h2>
           </a>
           <button
             className="navbar-toggler"

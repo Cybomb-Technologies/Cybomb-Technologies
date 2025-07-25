@@ -1,5 +1,5 @@
 .home-service-bg{
-  background-color: #e6ecef;
+  background-color: #FFFFFF;
 }
 
 .service-card {
@@ -20,7 +20,7 @@
 }
 
 .btn-gradient {
-  background: linear-gradient(90deg, #2563eb 0%, #9333ea 100%);
+  background: #0098e8 !important;
   color: #fff;
   border-radius: 25px;
   padding: 6px 16px;
@@ -36,13 +36,13 @@
 }
 
 .custom-card-text{
-    color:rgb(88, 90, 92);
+    color:#FFFFFF;
     font-weight: 600;
     font-size: 17px;
 
 }
 .custom-card-body{
-    background-color: #FFFFFF !important;
+    background-color: #003459 !important;
 }
 
 .custom-card{
