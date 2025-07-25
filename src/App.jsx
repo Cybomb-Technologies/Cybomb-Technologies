@@ -61,6 +61,8 @@ function App() {
         <Route path="/privacy-policy" element={<Privacypolicy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/refund-policy" element={<Refundpolicy />} />
+  
+
         
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
