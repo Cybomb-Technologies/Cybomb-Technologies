@@ -1,0 +1,63 @@
+.techSection {
+  background-color: #007ba7;
+  padding: 4rem 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 2.5rem;
+}
+
+.tabGrid {
+  row-gap: 0.75rem;
+  column-gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.tabButton {
+  background-color: #fff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #000;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  white-space: nowrap;
+}
+
+.tabButton:hover {
+  background-color: #e6e6e6;
+}
+
+.active {
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+}
+
+.techCard {
+  background-color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease;
+  min-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .techCard {
+    min-width: auto;
+  }
+}
+
+.techCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
