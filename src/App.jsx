@@ -26,6 +26,29 @@ import Faq from "./pages/faq";
 import MobileAppDevelopment from "./component/pages-services/design-development/mobile-app-development/mobile-app-development";
 import AndoridAppDevelopment from "./component/pages-services/design-development/android-app-dev/android-app-development";
 
+// ms
+// 
+// 
+// 
+// 
+// 
+// 
+
+// sudesh
+// 
+// 
+// 
+// 
+// 
+
+// santhosh
+// 
+// 
+// 
+// 
+
+
+
 function App() {
   useEffect(() => {
     AOS.init({
