@@ -56,9 +56,9 @@ function Blogcontent() {
                     style={{ height: "200px", objectFit: "cover" }}
                   />
                   <div className="card-body">
-                    <h3 className="card-title text-primary h5">{post.title}</h3>
-                    <p className="card-text text-muted small">{post.date}</p>
-                    <p className="card-text">{post.excerpt}</p>
+                    <h3 className="card-title text-white h5">{post.title}</h3>
+                    <p className="card-text text-primary small">{post.date}</p>
+                    <p className="card-text text-white">{post.excerpt}</p>
                   </div>
                   <div className="border-0 pb-2  ms-2">
                     <a
@@ -73,12 +73,12 @@ function Blogcontent() {
             ))}
           </div>
 
-          <div className="row mt-5 py-4 text-white rounded" style={{backgroundColor:"rgb(205 211 224"}}>
+          <div className="row mt-5 py-4 text-white rounded" style={{backgroundColor:"#003459"}}>
             <div className="col-md-10 mx-auto">
               <div className="d-flex flex-column flex-md-row justify-content-between align-items-center">
                 <div>
-                  <h3 className="mb-3 text-secondary">Need Custom IT Solutions?</h3>
-                  <p className="mb-md-0 text-secondary">
+                  <h3 className="mb-3 text-white">Need Custom IT Solutions?</h3>
+                  <p className="mb-md-0 text-white">
                     Our experts can design and implement tailored IT solutions
                     for your specific business needs.
                   </p>

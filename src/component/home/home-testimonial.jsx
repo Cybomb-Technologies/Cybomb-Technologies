@@ -70,7 +70,7 @@ function Testimonials() {
               height="60"
             />
             <div>
-              <p className="small mb-2 fs-5 text-secondary">“{testimonial.feedback}”</p>
+              <p className="small mb-2 fs-5 text-white">“{testimonial.feedback}”</p>
               <div className="mb-1 text-warning">
                 {Array(testimonial.rating)
                   .fill()
