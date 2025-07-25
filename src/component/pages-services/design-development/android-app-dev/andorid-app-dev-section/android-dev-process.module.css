@@ -1,0 +1,53 @@
+.devProcessSection {
+  background-color: #003459;
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout for process cards */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+/* Individual card */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #007ea7;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  box-shadow: 2px 4px 10px rgba(0, 126, 167, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 4px 6px 14px rgba(0, 126, 167, 0.2);
+  background-color: #00171f;
+  color: #ffffff;              /* make text white for contrast */
+  border-color: #003459;       /* optional: slightly darker border */
+}
+
+/* Responsive padding */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}

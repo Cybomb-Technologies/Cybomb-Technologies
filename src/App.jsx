@@ -95,7 +95,8 @@ function App() {
 
 
         <Route path="*" element={<NotFoundPage />} />
-        {/* <Route path="/web-development" element={<Webdevelopment />} /> */}
+   
+       
       </Routes>
       <Footer />
     </Router>
