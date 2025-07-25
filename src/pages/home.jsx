@@ -1,4 +1,3 @@
-
 import HomeBanner from "../component/home/banner";
 import HomeService from "../component/home/home-service";
 import HomeKeydiffer from "../component/home/home-keydiffer";
@@ -15,14 +14,14 @@ function Home() {
     <>
       <HomeBanner />
       <HomeService />
-      <HomeUIUX/>
       <HomeKeydiffer />
+      <HomeUIUX />
       <Homewhychoose />
       <Hometestimonial />
       <Homeourexpertise />
       <Homeform />
-      <Homenewsletter/>
-      <Homecontact/>
+      <Homenewsletter />
+      <Homecontact />
     </>
   );
 }
