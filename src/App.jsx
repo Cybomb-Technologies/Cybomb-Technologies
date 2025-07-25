@@ -64,8 +64,35 @@ function App() {
         <Route path="/refund-policy" element={<Refundpolicy />} />
 
 
-        {/* Services */}
+        {/* Services - ms*/}
         <Route path="services/mobile-app-development" element ={<MobileAppDevelopment/>} />
+        {/* <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} /> */}
+
+        {/* Services - sudesh */}
+        {/* <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} /> */}
+
+        {/* Services - santhosh */}
+        {/* <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} /> */}
+
         
         
         <Route path="*" element={<NotFoundPage />} />
