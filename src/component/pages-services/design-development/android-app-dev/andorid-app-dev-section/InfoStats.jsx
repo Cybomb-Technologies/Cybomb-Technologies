@@ -18,10 +18,11 @@ function InfoStats() {
           <div className={styles.infoLabel}>Projects Delivered Successfully</div>
         </div>
       </div>
+      
+        <div className={styles.partnerCaption}>
+        Partnered with Startups and <span className={styles.partnerCaptionHighlight}>Fortune 500</span> Companies
+        </div>
 
-      <div className={styles.infoCaption}>
-        Partnered with Startups and Fortune 500 Companies
-      </div>
     </section>
   );
 }
