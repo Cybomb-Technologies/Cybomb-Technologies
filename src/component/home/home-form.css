@@ -1,9 +1,9 @@
 .contact-form-section {
-  background-color: rgb(205 211 224);
+  background-color: #FFFFFF;
   color: white;
 }
 .form{
-    background-color: #FFFFFF !important;
+    background-color: #003459 !important;
 }
 
 .btn-gradient {
@@ -25,5 +25,5 @@
     padding: 10px !important;
 }
 .forminput::placeholder{
-    color:rgb(165, 159, 159) !important;
+    color:rgb(75, 72, 72) !important;
 }

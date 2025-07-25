@@ -3,7 +3,7 @@
 }
 
 .service-card {
-  background-color: #1e293b;
+  background-color: #003459 !important;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -17,7 +17,10 @@
   height: 220px;
   background-size: cover;
   background-position: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px
 }
+
 
 .btn-gradient {
   background: #0098e8 !important;

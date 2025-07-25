@@ -4,7 +4,7 @@ function Homecontact() {
   return (
     <>
       <section
-        style={{ padding: "60px 0px", backgroundColor: "#e6ecef"}}
+        style={{ padding: "60px 0px", backgroundColor: "#FFFFFF"}}
       >
         <div className="container">
           <h2 className="text-primary text-center" data-aos="zoom-out-right">Get in Touch</h2>
@@ -107,7 +107,7 @@ function Homecontact() {
             </div>
             <div data-aos="zoom-out-down"
               className="col-sm-6 px-0"
-              style={{ backgroundColor: "rgb(205 211 224)" }}
+              style={{ backgroundColor: "#003459" }}
             >
               <div className="card">
                 <iframe
@@ -121,8 +121,8 @@ function Homecontact() {
                 ></iframe>
               </div>
               <div className="p-3">
-                  <h5 className="text-secondary">Visit Our Office</h5>
-              <p className="text-secondary">
+                  <h5 className="text-white">Visit Our Office</h5>
+              <p className="text-white">
                 Located in the heart of Chennai's tech hub, our office is easily
                 accessible and equipped with modern facilities for client
                 meetings and collaboration.

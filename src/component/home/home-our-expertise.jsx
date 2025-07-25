@@ -6,7 +6,7 @@ function Homeourexpertise() {
       <section className="our-expertise-bg" style={{ padding: "60px 0px"}}>
         <div className="container">
           <h2 className="text-primary text-center" data-aos="zoom-out-right">Our Expertise</h2>
-          <p className="text-black text-center" data-aos="zoom-out-left">
+          <p className="text-white text-center" data-aos="zoom-out-left">
             Technologies we master to build exceptional solutions
           </p>
 
