@@ -5,7 +5,7 @@ function Homewhychoose() {
     <section className="why-choose-bg text-white text-center" style={{ padding: "60px 0px"}}>
       <div className="container">
         {/* Heading */}
-        <h2 className="fw-bold mb-2 text-primary" data-aos="zoom-out-right">
+        <h2 className="fw-bold mb-2 text-white" data-aos="zoom-out-right">
           Why Choose Cybomb Technologies
         </h2>
         <p className="text-black mb-5" data-aos="zoom-out-left">Numbers that speak for our commitment to excellence</p>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Technologiesdropdown({ onLinkClick, onDropdownClick }) {
+function Technologiesdropdown({ onLinkClick }) {
   return (
     <li className="nav-item dropdown custom-nav-item position-static">
       <Link
@@ -18,9 +18,9 @@ function Technologiesdropdown({ onLinkClick, onDropdownClick }) {
         <div className="row">
           <div className="col-md-2">
             <a className="dropdown-item text-primary">Mobile Apps</a>
-            <a
+            <Link
               className="dropdown-item"
-              href="/demo/ai-agent/"
+              to="technologies/android-app-development"
               target="_blank"
               onClick={onLinkClick}
             >
@@ -29,7 +29,7 @@ function Technologiesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "}
               Android
-            </a>
+            </Link>
             <a
               className="dropdown-item"
               href="/demo/HRMS/"

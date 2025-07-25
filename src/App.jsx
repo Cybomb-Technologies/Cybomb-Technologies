@@ -24,6 +24,8 @@ import Refundpolicy from "./pages/refund-policy";
 import Career from "./pages/career";
 import Faq from "./pages/faq";
 import Webdevelopment from "./component/web-development/web-dev";
+import MobileAppDevelopment from "./component/pages-services/design-development/mobile-app-development/mobile-app-development";
+import AndoridAppDevelopment from "./component/pages-services/design-development/android-app-dev/android-app-development";
 
 function App() {
   useEffect(() => {
@@ -54,14 +56,45 @@ function App() {
           element={<Softwareconsulting />}
         />
         <Route path="/portfolio" element={<Prortfolio />} />
-         <Route path="/career" element={<Career/>} />
-         <Route path="/faq" element={<Faq/>} />
+        <Route path="/career" element={<Career/>} />
+        <Route path="/faq" element={<Faq/>} />
          
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/privacy-policy" element={<Privacypolicy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/refund-policy" element={<Refundpolicy />} />
+
+        {/* Services - ms*/}
+        <Route path="services/mobile-app-development" element ={<MobileAppDevelopment/>} />
+        <Route path="technologies/android-app-development" element ={<AndoridAppDevelopment/>} />
+        {/*<Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} /> */}
+
+        {/* Services - sudesh */}
+        {/* <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} /> */}
+
+        {/* Services - santhosh */}
+        {/* <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} /> */}
+
+        
         
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/web-development" element={<Webdevelopment />} />

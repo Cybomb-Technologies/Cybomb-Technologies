@@ -8,7 +8,7 @@ function Homeform() {
           {/* Left Content */}
           <div className="col-md-6" data-aos="zoom-out-up">
             <h2 className="text-primary">Let's Talk About Your Project</h2>
-            <p className="text-secondary fs-5 mt-3">
+            <p className="text-white fs-5 mt-3">
               Ready to transform your ideas into digital reality? Get in touch
               with our experts and let's discuss how we can bring your vision
               to life.
@@ -30,22 +30,22 @@ function Homeform() {
             <div className="card p-5 rounded-4 shadow-sm text-white border-0 form mt-1">
               <form>
                 <div className="mb-3">
-                  <label className="form-label fs-7 text-secondary fw-bold">First Name *</label>
+                  <label className="form-label fs-7 text-white fw-bold">First Name *</label>
                   <input type="text" className="form-control forminput" placeholder="Enter your first name" required />
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label fs-7 text-secondary fw-bold">Email *</label>
+                  <label className="form-label fs-7 text-white fw-bold">Email *</label>
                   <input type="email" className="form-control forminput" placeholder="Enter your email address" required />
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label fs-7 text-secondary fw-bold">Phone (+91)</label>
+                  <label className="form-label fs-7 text-white fw-bold">Phone (+91)</label>
                   <input type="tel" className="form-control forminput" placeholder="Enter your phone number" />
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label fs-7 text-secondary fw-bold ">Where did you find us?</label>
+                  <label className="form-label fs-7 text-white fw-bold ">Where did you find us?</label>
                   <select className="form-select forminput">
                     <option>Select an option</option>
                     <option>Google</option>
@@ -56,7 +56,7 @@ function Homeform() {
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label fs-7 text-secondary fw-bold">Message *</label>
+                  <label className="form-label fs-7 text-white fw-bold">Message *</label>
                   <textarea
                     className="form-control forminput"
                     rows="4"

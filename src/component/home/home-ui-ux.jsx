@@ -46,7 +46,7 @@ function HomeUIUX() {
         <h2 className="section-title-uiux">
           End-to-End UI/UX Services for Web & Mobile Development
         </h2>
-          <div className="services-grid-uiux">
+          <div className="services-grid-uiux" data-aos="fade-up">
             {services.map((service, index) => (
               <div key={index} className="service-card-uiux">
                 <h3 className="service-title-uiux">

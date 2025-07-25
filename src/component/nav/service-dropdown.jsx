@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Servicedropdown({ onLinkClick, onDropdownClick }) {
+function Servicedropdown({ onLinkClick}) {
   return (
     <li className="nav-item dropdown custom-nav-item position-static">
       <Link
@@ -31,9 +31,9 @@ function Servicedropdown({ onLinkClick, onDropdownClick }) {
                 ></i>{" "}
                 Website Development
               </Link>
-              <a
+              <Link
                 className="dropdown-item"
-                href="/demo/HRMS/"
+                to="services/mobile-app-development"
                 target="_blank"
                 onClick={onLinkClick}
               >
@@ -42,7 +42,7 @@ function Servicedropdown({ onLinkClick, onDropdownClick }) {
                   style={{ fontSize: "10px" }}
                 ></i>{" "}
                 Mobile App Development
-              </a>
+              </Link>
               <a
                 className="dropdown-item"
                 href="/demo/E-Commerce/"

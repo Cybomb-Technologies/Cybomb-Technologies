@@ -1,5 +1,5 @@
 .blog-section{
-    background-color: #e6ecef;
+    background-color: #FFFFFF;
 }
 .featured-post {
   border-radius: 12px;
@@ -13,7 +13,7 @@
 .blog-card {
   border-radius: 8px;
   transition: all 0.3s ease;
-  background-color: rgb(205 211 224) !important;
+  background-color: #003459 !important;
 }
 
 .blog-card:hover {

@@ -23,10 +23,11 @@ function Nav() {
     e.preventDefault();
     navigate("/services");
   };
-  const handlePortfolioClick = (e) => {
-    e.preventDefault();
-    navigate("/portfolio");
-  };
+  // const handlePortfolioClick = (e) => {
+  //   e.preventDefault();
+  //   navigate("/portfolio");
+  // };
+  
   return (
     <>
       <nav className="navbar navbar-expand-lg custom-navbar fixed-top">
@@ -34,6 +35,9 @@ function Nav() {
           <a className="navbar-brand text-white test" href="#">
             <h2 style={{ color: "#f2f2f5ff" }}>Cybomb Logo</h2>
           </a>
+          <Link className="navbar-brand text-white test" to="/">
+            <h2 style={{ color: "#f2f2f5ff" }}>Cybomb Logo</h2>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
