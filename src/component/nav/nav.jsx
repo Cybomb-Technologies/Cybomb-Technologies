@@ -1,4 +1,4 @@
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "./nav.css";
 
@@ -11,7 +11,7 @@ import Technologiesdropdown from "./technologies-dropdoen";
 import Successstoriesdropdown from "./success-stories";
 
 function Nav() {
-  const navigate = useNavigate();
+
   const location = useLocation();
 
   const handleCloseOffcanvas = () => {
@@ -19,11 +19,6 @@ function Nav() {
       "#offcanvasWithBothOptions .btn-close"
     );
     if (closeBtn) closeBtn.click();
-  };
-
-  const handleServicesClick = (e) => {
-    e.preventDefault();
-    navigate("/services");
   };
 
   useEffect(() => {
@@ -94,10 +89,7 @@ function Nav() {
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                <Servicedropdown
-                  onLinkClick={handleCloseOffcanvas}
-                  onDropdownClick={handleServicesClick}
-                />
+                <Servicedropdown />
                 <Clouddropdown />
                 <Datadropdown />
                 <Securitydropdown />

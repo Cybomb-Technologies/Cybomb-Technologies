@@ -1,5 +1,5 @@
 .devProcessSection {
-  background-color: #f9fafb;
+  background-color: #003459;
   padding: 4rem 1rem;
 }
 
@@ -12,7 +12,7 @@
 
 .title {
   font-size: 2rem;
-  color: #007ea7;
+  color: #ffffff;
   font-weight: 700;
   margin-bottom: 2rem;
 }
@@ -30,9 +30,9 @@
   border: 1px solid #007ea7;
   border-radius: 0.75rem;
   padding: 1rem 1.25rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #007ea7;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
   box-shadow: 2px 4px 10px rgba(0, 126, 167, 0.1);
   transition: transform 0.2s ease;
 }
@@ -40,6 +40,9 @@
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 4px 6px 14px rgba(0, 126, 167, 0.2);
+  background-color: #00171f;
+  color: #ffffff;              /* make text white for contrast */
+  border-color: #003459;       /* optional: slightly darker border */
 }
 
 /* Responsive padding */

@@ -8,7 +8,7 @@ function Homewhychoose() {
         <h2 className="fw-bold mb-2 text-white" data-aos="zoom-out-right">
           Why Choose Cybomb Technologies
         </h2>
-        <p className="text-black mb-5" data-aos="zoom-out-left">Numbers that speak for our commitment to excellence</p>
+        <p className="text-white mb-5" data-aos="zoom-out-left">Numbers that speak for our commitment to excellence</p>
 
         {/* Stats Row */}
         <div className="row g-4">

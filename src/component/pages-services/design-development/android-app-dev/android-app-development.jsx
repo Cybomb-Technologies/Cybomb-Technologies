@@ -4,6 +4,7 @@ import InfoStats from "./andorid-app-dev-section/InfoStats";
 import AndroidServiceOfferings from "./andorid-app-dev-section/android-service-offerings";
 import TechInfo from "./andorid-app-dev-section/TechInfo";
 import AndroidDevProcess from "./andorid-app-dev-section/android-dev-process";
+import StillNotSure from "../../../forms/StillNotSure";
 
 function AndroidAppDevelopment() {
   return (
@@ -13,6 +14,7 @@ function AndroidAppDevelopment() {
       <AndroidServiceOfferings/>
       <TechInfo/>
       <AndroidDevProcess/>
+      <StillNotSure/>
     </>
   );
 }
