@@ -23,6 +23,7 @@ import Terms from "./pages/terms";
 import Refundpolicy from "./pages/refund-policy";
 import Career from "./pages/career";
 import Faq from "./pages/faq";
+import Webdevelopment from "./component/web-development/web-dev";
 
 function App() {
   useEffect(() => {
@@ -65,6 +66,7 @@ function App() {
 
         
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/web-development" element={<Webdevelopment />} />
       </Routes>
       <Footer />
     </Router>
