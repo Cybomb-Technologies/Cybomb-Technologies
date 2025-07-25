@@ -17,7 +17,7 @@ function Servicedropdown({ onLinkClick}) {
       <div className="dropdown-menu mega-dropdown container">
        
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-xxl-3">
               <a className="dropdown-item text-primary">Design & Developments</a>
               <Link
                 className="dropdown-item"
@@ -117,7 +117,7 @@ function Servicedropdown({ onLinkClick}) {
               </a>
             </div>
 
-            <div className="col-md-3">
+            <div className="col-xxl-3">
               <a className="dropdown-item text-primary">Enterprise Services</a>
               <a
                 className="dropdown-item"
@@ -229,7 +229,7 @@ function Servicedropdown({ onLinkClick}) {
               </a>
             </div>
 
-            <div className="col-md-3">
+            <div className="col-xxl-3">
               <a className="dropdown-item text-primary">Support Services</a>
               <a
                 className="dropdown-item"
@@ -329,7 +329,7 @@ function Servicedropdown({ onLinkClick}) {
               </a>
             </div>
 
-            <div className="col-md-3">
+            <div className="col-xxl-3">
               <a className="dropdown-item text-primary">Digital Marketing</a>
               <a
                 className="dropdown-item"

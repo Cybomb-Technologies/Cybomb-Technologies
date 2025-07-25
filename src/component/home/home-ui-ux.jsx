@@ -43,7 +43,7 @@ function HomeUIUX() {
   return (
     <section className="uiux-section">
       <div className="container-uiux">
-        <h2 className="section-title-uiux">
+        <h2 className="section-title-uiux" style={{color:"#003459"}}>
           End-to-End UI/UX Services for Web & Mobile Development
         </h2>
           <div className="services-grid-uiux" data-aos="fade-up">

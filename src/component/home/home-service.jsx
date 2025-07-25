@@ -8,7 +8,7 @@ function HomeService() {
       style={{ padding: "60px 0px" }}
     >
       <div className="container text-center">
-        <h2 className="fw-bold mb-2 text-primary" data-aos="zoom-out-left">
+        <h2 className="fw-bold mb-2" data-aos="zoom-out-left" style={{color:"#003459"}}>
           Our Services
         </h2>
         <p className="black fs-6" data-aos="zoom-out-right">

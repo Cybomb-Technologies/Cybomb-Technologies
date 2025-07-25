@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import "./nav.css";
+
 import Servicedropdown from "./service-dropdown";
 import Clouddropdown from "./cloud-dropdown";
 import Datadropdown from "./data-ai";
@@ -10,6 +11,9 @@ import Technologiesdropdown from "./technologies-dropdoen";
 import Successstoriesdropdown from "./success-stories";
 
 function Nav() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const handleCloseOffcanvas = () => {
     const closeBtn = document.querySelector(
       "#offcanvasWithBothOptions .btn-close"
@@ -17,22 +21,45 @@ function Nav() {
     if (closeBtn) closeBtn.click();
   };
 
-  const navigate = useNavigate();
-
   const handleServicesClick = (e) => {
     e.preventDefault();
     navigate("/services");
   };
-  // const handlePortfolioClick = (e) => {
-  //   e.preventDefault();
-  //   navigate("/portfolio");
-  // };
-  
+
+  useEffect(() => {
+    const navbar = document.querySelector(".custom-navbar");
+
+    if (location.pathname === "/") {
+      // Home page: make it transparent first
+      navbar?.classList.add("transparent");
+
+      const handleScroll = () => {
+        if (window.scrollY > 600) {
+          navbar?.classList.add("scrolled");
+        } else {
+          navbar?.classList.remove("scrolled");
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+        navbar?.classList.remove("scrolled");
+        navbar?.classList.remove("transparent");
+      };
+    } else {
+      // Other pages: remove scroll logic and show solid color
+      navbar?.classList.remove("transparent");
+      navbar?.classList.remove("scrolled");
+    }
+  }, [location.pathname]);
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg custom-navbar fixed-top">
+      <nav className="navbar navbar-expand-xxl custom-navbar fixed-top">
         <div className="container">
-          <Link className="navbar-brand text-white test" to="/">
+          <Link className="navbar-brand text-white" to="/">
             <h2 style={{ color: "#f2f2f5ff" }}>Cybomb Logo</h2>
           </Link>
           <button
@@ -55,10 +82,7 @@ function Nav() {
             aria-labelledby="offcanvasWithBothOptionsLabel"
           >
             <div className="offcanvas-header">
-              <h5
-                className="offcanvas-title"
-                id="offcanvasWithBothOptionsLabel"
-              >
+              <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
                 Cybomb Logo
               </h5>
               <button
@@ -70,18 +94,13 @@ function Nav() {
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                {/* service dropdown */}
                 <Servicedropdown
                   onLinkClick={handleCloseOffcanvas}
                   onDropdownClick={handleServicesClick}
                 />
-                {/* cloud dropdown */}
                 <Clouddropdown />
-                {/* Data dropdown */}
                 <Datadropdown />
-                {/* Data dropdown */}
                 <Securitydropdown />
-                {/* Industries dropdown */}
                 <Industriesdropdown />
 
                 <li className="nav-item custom-nav-item">
@@ -96,8 +115,6 @@ function Nav() {
 
                 <Technologiesdropdown />
                 <Successstoriesdropdown />
-
-                <></>
               </ul>
             </div>
           </div>

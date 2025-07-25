@@ -7,7 +7,7 @@ function Homecontact() {
         style={{ padding: "60px 0px", backgroundColor: "#FFFFFF"}}
       >
         <div className="container">
-          <h2 className="text-primary text-center" data-aos="zoom-out-right">Get in Touch</h2>
+          <h2 className="text-center" data-aos="zoom-out-right" style={{color:"#003459"}}>Get in Touch</h2>
           <p className="text-secondary fs-5 text-center mt-3" data-aos="zoom-out-left">
             Ready to start your project? We're here to help you every step of
             the way

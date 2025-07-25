@@ -50,7 +50,7 @@ function Testimonials() {
       style={{ padding: "60px 0px"}}
     >
       <div className="container" data-aos="zoom-out-up">
-        <h2 className="fw-bold mb-2 text-primary">
+        <h2 className="fw-bold mb-2" style={{color:"#003459"}}>
           <span role="img" aria-label="testimonial">
             💬
           </span>{" "}

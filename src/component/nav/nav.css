@@ -1,5 +1,14 @@
 .custom-navbar {
-  background-color: #007ea7;
+  transition: background-color 0.3s ease;
+  background-color: #003459; /* default for all */
+}
+
+.custom-navbar.transparent {
+  background-color: transparent;
+}
+
+.custom-navbar.scrolled {
+  background-color: #003459;
 }
 .custom-nav-button {
   background: linear-gradient(90deg, #2563eb 0%, #9333ea 100%);
@@ -8,7 +17,7 @@
 }
 
 .custom-nav-button a:hover {
-  color: black !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 .custom-nav-item {
@@ -19,10 +28,10 @@
   font-weight: 500 !important;
 }
 .custom-nav-link:hover {
-  color: black !important;
+  color: rgb(18, 213, 231) !important;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1400px) {
   .custom-nav-link {
     color: black !important;
   }
@@ -34,14 +43,15 @@
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
+
 
 .custom-nav-item {
   position: relative;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1400px) {
   .dropdown-menu.mega-dropdown {
     position: absolute;
     top: 100%;
@@ -73,7 +83,7 @@
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1400px) {
   .custom-nav-item:hover .dropdown-menu,
   .custom-nav-item .dropdown-menu:hover {
     display: block;

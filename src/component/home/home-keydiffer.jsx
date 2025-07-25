@@ -4,7 +4,7 @@ function HomeKeydiffer() {
   return (
     <section className="black text-center HomeKeydiffer" style={{ padding: "60px 0px"}}>
       <div className="container">
-        <h2 className="fw-bold mb-2 text-primary" data-aos="zoom-out-right">
+        <h2 className="fw-bold mb-2 text-white" data-aos="zoom-out-right">
           Our Key Differentiators
         </h2>
         <p className="text-black mb-5 text-white" data-aos="zoom-out-left">
