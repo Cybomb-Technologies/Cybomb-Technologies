@@ -1,19 +1,18 @@
 import React from "react";
-import "./android-app-dev.css";
+import styles from "./android-app-dev.module.css";
 
-function AndoridAppDevContent() {
+function AndroidAppDevContent() {
   return (
-    <section className="android-app-content">
-      <div className="container">
-        {/* <h1 className="android-app-title">Andorid App Development</h1> */}
-        {/* <p className="android-app-description">
-          We specialize in building high-performance, scalable, and feature-rich mobile applications
-          tailored to your business needs. From idea to launch, we ensure a seamless experience across
-          iOS and Android platforms.
-        </p> */}
-      </div>
+    <section className={styles.androidAppSection}>
+      <h1 className={styles.heading}>Android App Development</h1>
+      <p className={styles.subtext}>
+        Discover top-tier Android app development services tailored to your business goals.
+      </p>
+      <button className={styles.button}>Book Free Consultation</button>
+
+      <p className={styles.note}> Fill out the form and our experts will contact you within 24 hours.</p>
     </section>
   );
 }
 
-export default AndoridAppDevContent;
+export default AndroidAppDevContent;
