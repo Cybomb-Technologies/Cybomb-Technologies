@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 
-function Datadropdown({ onLinkClick, onDropdownClick }) {
+function Datadropdown({ onLinkClick}) {
   return (
     <li className="nav-item dropdown custom-nav-item position-static">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
-        to="/services"
         role="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"

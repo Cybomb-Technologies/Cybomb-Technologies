@@ -88,8 +88,8 @@ function App() {
         <Route path="/refund-policy" element={<Refundpolicy />} />
 
         {/* Services - ms*/}
-        <Route path="services/mobile-app-development" element ={<MobileAppDevelopment/>} />
-        <Route path="technologies/android-app-development" element ={<AndoridAppDevelopment/>} />
+        <Route path="/services/mobile-app-development" element ={<MobileAppDevelopment/>} />
+        <Route path="/technologies/android-app-development" element ={<AndoridAppDevelopment/>} />
         {/*<Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
@@ -116,9 +116,9 @@ function App() {
         <Route path="" element ={} />
         <Route path="" element ={} /> */}
 
-        
-        
+
         <Route path="*" element={<NotFoundPage />} />
+   
        
       </Routes>
       <Footer />
