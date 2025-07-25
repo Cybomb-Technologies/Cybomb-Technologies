@@ -29,7 +29,7 @@ function HomeService() {
                 }}
               ></div>
               <div className="card-body custom-card-body p-4">
-                <h4 className="card-title display-7 fw-bold">
+                <h4 className="card-title display-7 fw-bold text-white">
                   Mobile App Development
                 </h4>
                 <h6 className="text-primary">Native & cross-platform apps</h6>
@@ -58,7 +58,7 @@ function HomeService() {
                 }}
               ></div>
               <div className="card-body custom-card-body p-4">
-                <h4 className="card-title display-7 fw-bold ">
+                <h4 className="card-title display-7 fw-bold text-white ">
                   Web Development
                 </h4>
                 <h6 className="text-primary">High-performance websites</h6>
@@ -87,7 +87,7 @@ function HomeService() {
                 }}
               ></div>
               <div className="card-body custom-card-body p-4">
-                <h4 className="card-title display-7 fw-bold">
+                <h4 className="card-title display-7 fw-bold text-white">
                   AI Integration & SaaS
                 </h4>
                 <h6 className="text-primary">Scalable AI & SaaS platforms</h6>
