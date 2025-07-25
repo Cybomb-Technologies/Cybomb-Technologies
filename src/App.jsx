@@ -23,6 +23,7 @@ import Terms from "./pages/terms";
 import Refundpolicy from "./pages/refund-policy";
 import Career from "./pages/career";
 import Faq from "./pages/faq";
+import Webdevelopment from "./component/web-development/web-dev";
 import MobileAppDevelopment from "./component/pages-services/design-development/mobile-app-development/mobile-app-development";
 import AndoridAppDevelopment from "./component/pages-services/design-development/android-app-dev/android-app-development";
 
@@ -96,6 +97,7 @@ function App() {
         
         
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/web-development" element={<Webdevelopment />} />
       </Routes>
       <Footer />
     </Router>

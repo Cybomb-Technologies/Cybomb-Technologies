@@ -59,7 +59,7 @@ function Nav() {
     <>
       <nav className="navbar navbar-expand-xxl custom-navbar fixed-top">
         <div className="container">
-          <Link className="navbar-brand text-white" to="/">
+          <Link className="navbar-brand text-white test" to="/">
             <h2 style={{ color: "#f2f2f5ff" }}>Cybomb Logo</h2>
           </Link>
           <button
