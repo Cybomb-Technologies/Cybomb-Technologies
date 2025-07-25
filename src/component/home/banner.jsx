@@ -14,7 +14,7 @@ function HomeBanner() {
       <div className="overlay"></div>
 
       {/* Banner Content */}
-      <div className="container position-relative z-1">
+      <div className="container position-relative z-5">
         <div className="row align-items-center">
           <div className="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
             <h1 className="display-2 fw-bold">

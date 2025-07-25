@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Clouddropdown({ onLinkClick, onDropdownClick }) {
+function Clouddropdown({ onLinkClick}) {
   return (
  <li className="nav-item dropdown custom-nav-item">
       <Link
