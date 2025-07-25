@@ -7,14 +7,18 @@ function TechInfo() {
       {/* Left Section */}
       <div className={styles.leftSection}>
         <div className={styles.content}>
+          {/* Card 1: Technologies */}
           <div className={styles.card}>
-            <h3 className={styles.cardTitle}>Technologies & Frameworks</h3>
-            <p><strong>Languages & SDKs:</strong> Kotlin, Java, Flutter, React Native, Xamarin, Capacitor — expertise across both native and cross-platform stacks.</p>
-            <p><strong>Complementary Technologies:</strong> Firebase, frontend/back-end databases, cloud services, DevOps, e-commerce and CRM plugins.</p>
+            <h3 className={styles.cardTitleBox}>Technologies & Frameworks</h3>
+            <div className={styles.columncard}>
+              <p><strong>Languages & SDKs:</strong> Kotlin, Java, Flutter, React Native, Xamarin, Capacitor — expertise across both native and cross-platform stacks.</p>
+              <p><strong>Complementary Technologies:</strong> Firebase, frontend/back-end databases, cloud services, DevOps, e-commerce and CRM plugins.</p>
+            </div>
           </div>
 
+          {/* Card 2: Hiring Models */}
           <div className={styles.card}>
-            <h3 className={styles.cardTitleCenter}>Hiring Models</h3>
+            <h3 className={styles.cardTitleBox}>Hiring Models</h3>
             <div className={styles.hiringGrid}>
               <div>
                 <strong>Bucket Hours:</strong><br />
@@ -32,7 +36,7 @@ function TechInfo() {
       {/* Right Section */}
       <div className={styles.rightSection}>
         <div className={styles.content}>
-          <h3 className={styles.cardTitle}>Why Choose Us</h3>
+          <h3 className={styles.cardTitleCenterH3}>Why Choose Us</h3>
           <p><strong>Clear Communication:</strong> Transparent updates, feedback loops, and complete ownership of code.</p>
           <p><strong>On-Time Delivery:</strong> Agile processes and PM tools ensure timely releases.</p>
           <p><strong>Custom Solutions:</strong> Tailored development in line with your goals.</p>
