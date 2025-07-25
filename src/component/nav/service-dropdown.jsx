@@ -21,7 +21,7 @@ function Servicedropdown({ onLinkClick}) {
               <a className="dropdown-item text-primary">Design & Developments</a>
               <Link
                 className="dropdown-item"
-                to="/web-development"
+                to="/services/web-development"
                 target="_blank"
                 onClick={onLinkClick}
               >

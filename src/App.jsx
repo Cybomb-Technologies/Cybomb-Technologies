@@ -25,6 +25,9 @@ import Career from "./pages/career";
 import Faq from "./pages/faq";
 import MobileAppDevelopment from "./component/pages-services/design-development/mobile-app-development/mobile-app-development";
 import AndoridAppDevelopment from "./component/pages-services/design-development/android-app-dev/android-app-development";
+<<<<<<< HEAD
+import WebDev from "./component/pages-services/design-development/web-development/web-dev";
+=======
 
 // ms
 // 
@@ -49,6 +52,7 @@ import AndoridAppDevelopment from "./component/pages-services/design-development
 
 
 
+>>>>>>> bfb7373c512991785fe910dccfdaed3bb6cfcecd
 function App() {
   useEffect(() => {
     AOS.init({
@@ -107,8 +111,8 @@ function App() {
         <Route path="" element ={} /> */}
 
         {/* Services - santhosh */}
-        {/* <Route path="" element ={} />
-        <Route path="" element ={} />
+         <Route path="/services/web-development" element ={<WebDev/>} />
+        {/* {<Route path="" element ={} />}
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
