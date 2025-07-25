@@ -23,6 +23,7 @@ import Terms from "./pages/terms";
 import Refundpolicy from "./pages/refund-policy";
 import Career from "./pages/career";
 import Faq from "./pages/faq";
+import MobileAppDevelopment from "./component/pages-services/design-development/mobile-app-development/mobile-app-development";
 
 function App() {
   useEffect(() => {
@@ -61,7 +62,10 @@ function App() {
         <Route path="/privacy-policy" element={<Privacypolicy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/refund-policy" element={<Refundpolicy />} />
-  
+
+
+        {/* Services pages */}
+        <Route path="services/mobile-app-development" element={<MobileAppDevelopment/>} />
 
         
         <Route path="*" element={<NotFoundPage />} />

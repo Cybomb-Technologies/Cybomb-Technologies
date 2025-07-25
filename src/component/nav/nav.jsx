@@ -23,10 +23,11 @@ function Nav() {
     e.preventDefault();
     navigate("/services");
   };
-  const handlePortfolioClick = (e) => {
-    e.preventDefault();
-    navigate("/portfolio");
-  };
+  // const handlePortfolioClick = (e) => {
+  //   e.preventDefault();
+  //   navigate("/portfolio");
+  // };
+  
   return (
     <>
       <nav className="navbar navbar-expand-lg custom-navbar fixed-top">
