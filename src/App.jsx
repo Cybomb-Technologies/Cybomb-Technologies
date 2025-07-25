@@ -24,6 +24,7 @@ import Refundpolicy from "./pages/refund-policy";
 import Career from "./pages/career";
 import Faq from "./pages/faq";
 import MobileAppDevelopment from "./component/pages-services/design-development/mobile-app-development/mobile-app-development";
+import AndoridAppDevelopment from "./component/pages-services/design-development/android-app-dev/android-app-development";
 
 function App() {
   useEffect(() => {
@@ -63,11 +64,10 @@ function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/refund-policy" element={<Refundpolicy />} />
 
-
         {/* Services - ms*/}
         <Route path="services/mobile-app-development" element ={<MobileAppDevelopment/>} />
-        {/* <Route path="" element ={} />
-        <Route path="" element ={} />
+         <Route path="technologies/android-app-development" element ={<AndoridAppDevelopment/>} />
+        {/*<Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
