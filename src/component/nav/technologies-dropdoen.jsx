@@ -16,7 +16,7 @@ function Technologiesdropdown({ onLinkClick }) {
 
       <div className="dropdown-menu mega-dropdown container">
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-xxl-2">
             <a className="dropdown-item text-primary">Mobile Apps</a>
             <Link
               className="dropdown-item"
@@ -104,7 +104,7 @@ function Technologiesdropdown({ onLinkClick }) {
             </a>
           </div>
 
-          <div className="col-md-2">
+          <div className="col-xxl-2">
             <a className="dropdown-item text-primary">Ecommerce</a>
             <a
               className="dropdown-item"
@@ -480,7 +480,7 @@ function Technologiesdropdown({ onLinkClick }) {
         </div>
         <hr />
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-xxl-2">
             <a className="dropdown-item text-primary">Full Stack Development</a>
             <a
               className="dropdown-item"
@@ -495,7 +495,7 @@ function Technologiesdropdown({ onLinkClick }) {
               Full Stack MERN
             </a>
           </div>
-          <div className="col-md-2">
+          <div className="col-xxl-2">
             <a className="dropdown-item text-primary">CRM</a>
             <a
               className="dropdown-item"
@@ -523,7 +523,7 @@ function Technologiesdropdown({ onLinkClick }) {
             </a>
           </div>
 
-          <div className="col-md-2">
+          <div className="col-xxl-2">
             <a className="dropdown-item text-primary">Games</a>
             <a
               className="dropdown-item"
@@ -550,7 +550,7 @@ function Technologiesdropdown({ onLinkClick }) {
               Unreal
             </a>
           </div>
-          <div className="col-md-2">
+          <div className="col-xxl-2">
             <a className="dropdown-item text-primary">Cloud</a>
             <a
               className="dropdown-item"
@@ -577,7 +577,7 @@ function Technologiesdropdown({ onLinkClick }) {
               Azure
             </a>
           </div>
-          <div className="col-md-2">
+          <div className="col-xxl-2">
             <a className="dropdown-item text-primary">Other</a>
             <a
               className="dropdown-item"

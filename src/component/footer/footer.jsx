@@ -5,7 +5,7 @@ function Footer() {
   return (
     <>
       <footer
-        style={{ padding: "60px 0px 0px", backgroundColor: "rgb(219 223 223)" }}
+        style={{ padding: "60px 0px 0px", backgroundColor: "#003459" }}
       >
         <div className="container">
           <div className="row">

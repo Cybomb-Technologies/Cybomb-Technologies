@@ -16,7 +16,7 @@ function Datadropdown({ onLinkClick, onDropdownClick }) {
 
       <div className="dropdown-menu mega-dropdown w-auto">
         <div className="row p-3">
-             <div className="col-md-5">
+             <div className="col-xxl-5">
             <a className="dropdown-item text-primary">Data</a>
             <a
               className="dropdown-item"
@@ -129,7 +129,7 @@ function Datadropdown({ onLinkClick, onDropdownClick }) {
               Cloud Data Migration
             </a>
           </div>
-          <div className="col-md-7">
+          <div className="col-xxl-7">
             <a className="dropdown-item text-primary">AI</a>
             <a
               className="dropdown-item"

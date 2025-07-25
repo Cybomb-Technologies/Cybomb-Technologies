@@ -16,7 +16,7 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
 
       <div className="dropdown-menu mega-dropdown container">
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-xxl-3">
             <a
               className="dropdown-item"
               href="/demo/ai-agent/"
@@ -81,7 +81,7 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
            
           </div>
 
-          <div className="col-md-3">
+          <div className="col-xxl-3">
           
             <a
               className="dropdown-item"
@@ -146,7 +146,7 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
            
           </div>
 
-          <div className="col-md-3">
+          <div className="col-xxl-3">
             
             <a
               className="dropdown-item"
@@ -211,7 +211,7 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
           
           </div>
 
-          <div className="col-md-3">
+          <div className="col-xxl-3">
            
             <a
               className="dropdown-item"
