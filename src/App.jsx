@@ -63,9 +63,9 @@ function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/refund-policy" element={<Refundpolicy />} />
 
-
-        {/* Services pages */}
-        <Route path="services/mobile-app-development" element={<MobileAppDevelopment/>} />
+{/* 
+        {/* Services pages
+        <Route path="services/mobile-app-development" element={<MobileAppDevelopment/>} /> */}
 
         
         <Route path="*" element={<NotFoundPage />} />
