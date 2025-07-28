@@ -24,10 +24,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Android
             </Link>
             <a
@@ -36,10 +36,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               React Native
             </a>
             <a
@@ -48,10 +48,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Ios
             </a>
             <a
@@ -60,10 +60,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Flutter
             </a>
             <a
@@ -72,10 +72,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Swift
             </a>
             <a
@@ -84,10 +84,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Kotlin
             </a>
             <a
@@ -96,10 +96,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Xamarin
             </a>
           </div>
@@ -112,10 +112,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Adobe Commerce
             </a>
             <a
@@ -124,10 +124,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Shopify
             </a>
             <a
@@ -136,10 +136,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Symfony
             </a>
             <a
@@ -148,10 +148,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               WooCommerce
             </a>
             <a
@@ -160,10 +160,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               BigCommerce
             </a>{" "}
             <a
@@ -172,10 +172,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Magento
             </a>
           </div>
@@ -190,10 +190,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Wordpress
                 </a>
                 <a
@@ -202,10 +202,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Drupal
                 </a>
                 <a
@@ -214,10 +214,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Craft
                 </a>{" "}
                 <a
@@ -226,10 +226,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Acquia
                 </a>
                  <a
@@ -238,10 +238,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Joomla
                 </a>
                 <a
@@ -250,10 +250,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   SharePoint
                 </a>
               </div>
@@ -265,10 +265,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Umbraco
                 </a>
                 <a
@@ -277,10 +277,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Sitecore
                 </a>
                 <a
@@ -289,10 +289,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Pantheon
                 </a>
                 <a
@@ -301,10 +301,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   AEM Development
                 </a>
               </div>
@@ -322,10 +322,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   PHP
                 </a>
                 <a
@@ -334,10 +334,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Laravel
                 </a>
                 <a
@@ -346,10 +346,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   ROR
                 </a>
                 <a
@@ -358,10 +358,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Power Platform
                 </a>
                 <a
@@ -370,10 +370,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   HTML5
                 </a>
                 <a
@@ -382,10 +382,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   JavaScript
                 </a>
                 <a
@@ -394,10 +394,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Zoho Creator
                 </a>
               </div>
@@ -408,10 +408,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Python
                 </a>
                 <a
@@ -420,10 +420,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   DotNet
                 </a>
                 <a
@@ -432,10 +432,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   NodeJS
                 </a>
                 <a
@@ -444,10 +444,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Angular
                 </a>
                 <a
@@ -456,10 +456,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   Spring
                 </a>
                 <a
@@ -468,10 +468,10 @@ function Technologiesdropdown({ onLinkClick }) {
                   target="_blank"
                   onClick={onLinkClick}
                 >
-                  <i
+                  {/* <i
                     className="bi bi-arrow-right arrow-right-icon bg-primary"
                     style={{ fontSize: "10px" }}
-                  ></i>{" "}
+                  ></i>{" "} */}
                   C#
                 </a>
               </div>
@@ -488,10 +488,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Full Stack MERN
             </a>
           </div>
@@ -503,10 +503,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               ServiceNow
             </a>
             <a
@@ -515,10 +515,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Salesforce
             </a>
           </div>
@@ -531,10 +531,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Unity
             </a>
             <a
@@ -543,10 +543,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Unreal
             </a>
           </div>
@@ -558,10 +558,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               AWS
             </a>
             <a
@@ -570,10 +570,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Azure
             </a>
           </div>
@@ -585,10 +585,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Golang
             </a>
             <a
@@ -597,10 +597,10 @@ function Technologiesdropdown({ onLinkClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               AR/VR
             </a>
           </div>

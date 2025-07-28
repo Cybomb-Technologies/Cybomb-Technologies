@@ -25,10 +25,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+               {/* <i className="bi bi-code me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Website Development
               </Link>
               <Link
@@ -37,22 +34,16 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+               {/* <i class="bi bi-phone me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Mobile App Development
               </Link>
               <a
                 className="dropdown-item"
-                href="/demo/E-Commerce/"
+                href="/services/Ecommerce-development"
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+               {/* <i class="bi bi-cart me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 E-commerce Development
               </a>
               <a
@@ -61,10 +52,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+             {/* <i class="bi bi-cpu me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Software Development
               </a>
               <a
@@ -73,10 +61,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+              {/* <i class="bi bi-controller me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Game Development
               </a>
               <a
@@ -85,10 +70,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+              {/* <i class="bi bi-bricks me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Bespoke Development
               </a>
               <a
@@ -97,10 +79,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+            {/* <i class="bi bi-cloud me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 API Development
               </a>
               <a
@@ -109,10 +88,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+               {/* <i class="bi bi-plug"></i> */}
                 Custom Software Integration
               </a>
             </div>
@@ -125,10 +101,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+               {/* <i class="bi bi-person me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 CRM Solutions
               </a>
               <a
@@ -137,10 +110,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+              {/* <i class="bi bi-cloud-upload me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Cloud Solutions
               </a>
               <a
@@ -149,10 +119,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+               {/* <i class="bi bi-broadcast me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 IoT Solutions
               </a>
               <a
@@ -161,10 +128,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+               	{/* <i class="bi bi-hdd-stack"></i> */}
                 Data Engineering
               </a>
               <a
@@ -173,10 +137,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+               {/* <i class="bi bi-robot me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 AI/ML
               </a>{" "}
               <a
@@ -185,10 +146,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+               {/* <i class="bi bi-bar-chart-line me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Salesforce
               </a>
               <a
@@ -197,10 +155,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+                {/* <i class="bi bi-diagram-3 me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 HubSpot
               </a>
               <a
@@ -209,10 +164,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+              {/* <i class="bi bi-shield-lock me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Zoho
               </a>
               <a
@@ -221,10 +173,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+               	{/* <i class="bi bi-journal-text me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 MS Dynamics
               </a>
             </div>
@@ -237,10 +186,7 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "}
+            {/* <i class="bi bi-puzzle me-1"></i> */}
                 Services
               </a>
               <a
@@ -249,10 +195,10 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 Hosting
               </a>
               <a
@@ -261,10 +207,10 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 Server Support
               </a>{" "}
               <a
@@ -273,10 +219,10 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 Development Support
               </a>
               <a
@@ -285,10 +231,10 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 Staff Augmentation
               </a>
               <a
@@ -297,10 +243,10 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 Digital Fulfilment
               </a>
               <a
@@ -309,10 +255,10 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 IT Support Services
               </a>
               <a
@@ -321,10 +267,10 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 DevOps
               </a>
             </div>
@@ -337,10 +283,10 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 Search Engine Optimization
               </a>
               <a
@@ -349,10 +295,10 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 Social Media Marketing
               </a>
               <a
@@ -361,10 +307,10 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 Pay Per Click
               </a>
               <a
@@ -373,10 +319,10 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 ORM
               </a>
               <a
@@ -385,10 +331,10 @@ function Servicedropdown({ onLinkClick}) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 Performance Optimization
               </a>
             </div>
