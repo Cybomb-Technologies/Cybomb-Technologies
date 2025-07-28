@@ -57,26 +57,32 @@
   padding-bottom: 4rem;
 }
 
-.statsBox {
+.whiteBox {
   background-color: white;
-  border-radius: 1rem 1rem 0 0;
-  padding: 2rem 1rem;
-  margin-top: 4rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.statsBox {
+  padding: 0 1rem;
 }
 
 .blueText {
   color: #0095f6;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .statDesc {
   font-size: 0.95rem;
   margin-top: 0.5rem;
   color: #333;
+  line-height: 1.4;
 }
 
-.bottomLine {
+.partnerLine {
   color: #111;
   font-size: 1.1rem;
 }
@@ -84,3 +90,24 @@
 .fortune {
   color: #0095f6;
 }
+
+@media (max-width: 768px) {
+  .whiteBox {
+    padding-top: 2rem;
+  }
+
+  .blueText {
+    font-size: 1.5rem;
+  }
+
+  .statDesc {
+    font-size: 0.9rem;
+  }
+
+  .partnerLine {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+    

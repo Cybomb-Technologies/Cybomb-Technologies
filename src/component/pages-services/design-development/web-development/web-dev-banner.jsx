@@ -23,27 +23,35 @@ export default function WebDevBanner() {
         {/* Form will be inserted here later */}
       </div>
       <div className={styles.statsWrapper}>
-<div className={`container ${styles.statsBox}`}>
-  <div className="row text-center">
-      <div className="col-md-4">
-        <h3 className={styles.blueText}>94%</h3>
-        <p className={styles.statDesc}>of first impressions relate to website design</p>
+  <div className="container">
+    <div className={styles.whiteBox}>
+      <div className={`row text-center ${styles.statsBox}`}>
+        <div className="col-md-4 mb-3">
+          <h3 className={styles.blueText}>94%</h3>
+          <p className={styles.statDesc}>
+            of first impressions relate to website design
+          </p>
+        </div>
+        <div className="col-md-4 mb-3">
+          <h3 className={styles.blueText}>75%</h3>
+          <p className={styles.statDesc}>
+            A well-built website increases trust and leads by up to
+          </p>
+        </div>
+        <div className="col-md-4 mb-3">
+          <h3 className={styles.blueText}>50%</h3>
+          <p className={styles.statDesc}>
+            of web traffic comes from mobile devices—mobile-first is a must!
+          </p>
+        </div>
       </div>
-      <div className="col-md-4">
-        <h3 className={styles.blueText}>75%</h3>
-        <p className={styles.statDesc}>A well-built website increases trust and leads by up to</p>
-      </div>
-      <div className="col-md-4">
-        <h3 className={styles.blueText}>50%</h3>
-        <p className={styles.statDesc}>of web traffic comes from mobile devices—mobile-first is a must!</p>
-      </div>
+      <p className={`text-center fw-bold mt-4 ${styles.partnerLine}`}>
+        Partnered with Startups and <span className={styles.fortune}>Fortune 500</span> Companies
+      </p>
     </div>
   </div>
-
-  <p className={`text-center fw-bold mt-4 ${styles.partnerLine}`}>
-    Partnered with Startups and <span className={styles.fortune}>Fortune 500</span> Companies
-  </p>
 </div>
+
 
     </header>
   );
