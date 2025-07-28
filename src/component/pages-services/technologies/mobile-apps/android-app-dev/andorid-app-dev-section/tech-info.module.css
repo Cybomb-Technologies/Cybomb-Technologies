@@ -27,7 +27,7 @@
 
 /* Card Style */
 .card {
-  background-color: #003459;
+  background-color: #e6f7fb;
   border-radius: 1rem;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -48,7 +48,7 @@
 
 /* Column card */
 .columncard {
-  background-color: #f1f5f9;
+  background-color: #ffffff;
   padding: 1rem;
   border-radius: 0.75rem;
   font-size: 1rem;
@@ -63,7 +63,8 @@
 }
 
 .hiringGrid div {
-  background-color: #f1f5f9;
+  /* background-color: #f1f5f9; */
+  background-color: #ffffff;
   padding: 1rem;
   border-radius: 0.75rem;
   font-size: 1rem;
