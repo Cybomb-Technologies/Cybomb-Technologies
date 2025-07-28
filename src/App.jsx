@@ -24,7 +24,7 @@ import Refundpolicy from "./pages/refund-policy";
 import Career from "./pages/career";
 import Faq from "./pages/faq";
 import MobileAppDevelopment from "./component/pages-services/design-development/mobile-app-development/mobile-app-development";
-import AndoridAppDevelopment from "./component/pages-services/design-development/android-app-dev/android-app-development";
+import AndoridAppDevelopment from "./component/pages-services/technologies/mobile-apps/android-app-dev/android-app-development";
 import WebDev from "./component/pages-services/design-development/web-development/web-dev";
 
 // ms
@@ -110,7 +110,7 @@ function App() {
         {/* Services - santhosh */}
          <Route path="/services/web-development" element ={<WebDev/>} />
         {/* {<Route path="" element ={} />}
-        <Route path="" element ={} />
+        <Route path="" element ={} />`
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
