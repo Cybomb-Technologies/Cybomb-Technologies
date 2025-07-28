@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './info-stats.module.css';
+import styles from './android-info-stats.module.css';
 
 function InfoStats() {
   return (

@@ -1,18 +1,23 @@
 import React from "react";
-import "./mobile-app-dev.css";
+import MobileAppBanner from "./mobile-app-dev-banner";
+import MobileInfoStats from './mobile-app-dev-section/mobile-InfoStats';
+import MobileServiceOfferings from './mobile-app-dev-section/mobile-service-offerings';
+import WhyChooseUs from './mobile-app-dev-section/mobile-app-WhyChoose';
+import MobileAppEngagementModels from './mobile-app-dev-section/mobile-app-EngagementModels';
+import MobileAppWebPresenceSection from './mobile-app-dev-section/mobile-app-WebPresenceSection';
+import MobileAppTechnologiesSection from './mobile-app-dev-section/mobile-app-TechnologiesSection';
 
 function MobileAppDevContent() {
   return (
-    <section className="mobile-app-content">
-      <div className="container">
-        <h1 className="mobile-app-title">Mobile App Development</h1>
-        <p className="mobile-app-description">
-          We specialize in building high-performance, scalable, and feature-rich mobile applications
-          tailored to your business needs. From idea to launch, we ensure a seamless experience across
-          iOS and Android platforms.
-        </p>
-      </div>
-    </section>
+   <section>
+    <MobileAppBanner/>
+    <MobileInfoStats/>
+    <MobileServiceOfferings/>
+    <MobileAppTechnologiesSection/>
+    <WhyChooseUs/>
+    <MobileAppWebPresenceSection/>
+    <MobileAppEngagementModels/>
+   </section>
   );
 }
 

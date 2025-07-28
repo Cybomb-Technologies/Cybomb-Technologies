@@ -1,10 +1,13 @@
 import React from "react";
 import AndroidAppDevContent from "./android-app-dev-content";
-import InfoStats from "./andorid-app-dev-section/InfoStats";
+import InfoStats from "./andorid-app-dev-section/android-InfoStats";
 import AndroidServiceOfferings from "./andorid-app-dev-section/android-service-offerings";
-import TechInfo from "./andorid-app-dev-section/TechInfo";
-import AndroidDevProcess from "./andorid-app-dev-section/android-dev-process";
-import StillNotSure from "../../../../forms/StillNotSure";
+import TechInfo from "./andorid-app-dev-section/android-TechInfo";
+import AndroidAppTechnologies from "./andorid-app-dev-section/android-app-technologies-section";
+
+import MobileDevProcess from "../../../../common-ui/agile-process/mobile-dev-agile-process";
+import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 
 function AndroidAppDevelopment() {
   return (
@@ -12,8 +15,9 @@ function AndroidAppDevelopment() {
       <AndroidAppDevContent />
       <InfoStats/>
       <AndroidServiceOfferings/>
+      <AndroidAppTechnologies/>
       <TechInfo/>
-      <AndroidDevProcess/>
+      <MobileDevProcess/>
       <StillNotSure/>
     </>
   );
