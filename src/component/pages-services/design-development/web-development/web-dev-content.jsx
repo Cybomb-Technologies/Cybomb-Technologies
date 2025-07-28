@@ -1,10 +1,10 @@
 import ServicesSection from "./sections/ServicesSection";
-import TestimonialsSection from "./sections/TestimonialsSection";
-import PricingSection from "./sections/PricingSection";
-import CTASection from "./sections/CTASection";
 import TechToolsSection from "./sections/TechToolsSection";
 import WhyChooseUs from "./sections/WhyChooseUs";
 import CallToAction from "./sections/CallToAction";
+import StillNotSure from "../../../forms/StillNotSure";
+import EngagementModels from "./sections/EngagementModels";
+import AgileProcess from "./sections/AgileProcess";
 export default function WebDevContent() {
   return (
     <main>
@@ -12,9 +12,11 @@ export default function WebDevContent() {
       <TechToolsSection />
       <WhyChooseUs />
       <CallToAction />
-      <TestimonialsSection />
-      <PricingSection />
-      <CTASection />
+      <EngagementModels />
+      <AgileProcess />
+      <StillNotSure />
+     
+      
     </main>
   );
 }

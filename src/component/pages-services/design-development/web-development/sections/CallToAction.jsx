@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./CallToAction.module.css";
-import laptop from "../../../../../assets/laptop-preview.jpg";
+import laptop from "../../../../../assets/laptop-preview.png";
 
 
 export default function CallToAction() {
@@ -25,7 +25,7 @@ export default function CallToAction() {
             <img
               src={laptop}
               alt="Web development preview on laptop"
-              className="img-fluid"
+              className="img-fluid rounded shadow-md"
             />
           </div>
         </div>
