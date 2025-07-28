@@ -25,9 +25,7 @@ import Career from "./pages/career";
 import Faq from "./pages/faq";
 import MobileAppDevelopment from "./component/pages-services/design-development/mobile-app-development/mobile-app-development";
 import AndoridAppDevelopment from "./component/pages-services/design-development/android-app-dev/android-app-development";
-<<<<<<< HEAD
 import WebDev from "./component/pages-services/design-development/web-development/web-dev";
-=======
 
 // ms
 // 
@@ -52,7 +50,6 @@ import WebDev from "./component/pages-services/design-development/web-developmen
 
 
 
->>>>>>> bfb7373c512991785fe910dccfdaed3bb6cfcecd
 function App() {
   useEffect(() => {
     AOS.init({
