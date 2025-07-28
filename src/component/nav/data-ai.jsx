@@ -5,6 +5,7 @@ function Datadropdown({ onLinkClick}) {
     <li className="nav-item dropdown custom-nav-item position-static">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
+         to="#" 
         role="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
