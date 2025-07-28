@@ -23,10 +23,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Travel & Hospitality
             </a>
              <a
@@ -35,10 +35,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
              Media & Entertainment
             </a>
            
@@ -48,10 +48,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Logistics
             </a>
             <a
@@ -60,10 +60,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
              Energy & Utilities
             </a>
             <a
@@ -72,10 +72,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Mortgage & Lending
             </a>
            
@@ -89,10 +89,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               CRM Solutions
             </a>
             <a
@@ -101,10 +101,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Automotive
             </a>
             <a
@@ -113,10 +113,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
              Sports
             </a>
             <a
@@ -125,10 +125,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
              Sports
             </a>
             <a
@@ -137,10 +137,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
            Banking & Payment
             </a>{" "}
            
@@ -154,10 +154,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Aviation
             </a>
             <a
@@ -166,10 +166,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
             Construction
             </a>
             <a
@@ -178,10 +178,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
              Construction
             </a>{" "}
             <a
@@ -190,10 +190,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
             Oil & Gas
             </a>
             <a
@@ -202,10 +202,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Publishing
             </a>
           
@@ -219,10 +219,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
              Fintech
             </a>
             <a
@@ -231,10 +231,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
             Real Estate
             </a>
             <a
@@ -243,10 +243,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
              Healthcare
             </a>
             <a
@@ -255,10 +255,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
             Retail/FMCG
             </a>
         

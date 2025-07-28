@@ -22,10 +22,10 @@ function Successstoriesdropdown({ onLinkClick, onDropdownClick }) {
             target="_blank"
             onClick={onLinkClick}
           >
-            <i
+            {/* <i
               className="bi bi-arrow-right arrow-right-icon bg-primary"
               style={{ fontSize: "10px" }}
-            ></i>{" "}
+            ></i>{" "} */}
            Case Studies
           </a>
         </li>
@@ -36,10 +36,10 @@ function Successstoriesdropdown({ onLinkClick, onDropdownClick }) {
             target="_blank"
             onClick={onLinkClick}
           >
-            <i
+            {/* <i
               className="bi bi-arrow-right arrow-right-icon bg-primary"
               style={{ fontSize: "10px" }}
-            ></i>{" "}
+            ></i>{" "} */}
             Portfolio
           </a>
         </li>
