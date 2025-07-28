@@ -1,4 +1,4 @@
-import "./android-app-dev.css";
+import "./android-app-dev.module.css";
 import { Link } from "react-router-dom";
 
 function AndroidAppDevBanner() {

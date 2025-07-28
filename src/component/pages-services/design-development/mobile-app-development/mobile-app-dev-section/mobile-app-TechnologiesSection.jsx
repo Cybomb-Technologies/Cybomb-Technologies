@@ -1,0 +1,77 @@
+import React, { useState } from "react";
+import styles from "./mobile-app-technologies-section.module.css";
+
+const techData = {
+  Languages: ["Swift", "Kotlin", "Dart", "React Native"],
+  Frameworks: ["Flutter", "React Native", "SwiftUI", "Jetpack Compose"],
+  Backend: ["Swift", "Kotlin", "Dart", "JavaScript"],
+  APIs: ["Node.js", "Firebase", "MongoDB", "Express.js", "Django"],
+  Tools: ["Figma", "GitHub", "Postman"],
+  Testing: ["Android Emulator", "Xcode Simulator", "BrowserStack", "Detox", "Appium"],
+};
+
+// CDN logos mapped to each technology
+const logoCDN = {
+  Swift: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg",
+  Kotlin: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+  Dart: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
+  "React Native": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  Flutter: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+  SwiftUI: "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png",
+  "Jetpack Compose": "https://logo.svgcdn.com/d/jetpackcompose-original.svg",
+  JavaScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  Firebase: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  MongoDB: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  "Express.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  Django: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+  Figma: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  GitHub: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  Postman: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.svg",
+  "Android Emulator": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
+  "Xcode Simulator": "https://developer.apple.com/assets/elements/icons/xcode/xcode-96x96_2x.png",
+  BrowserStack: "https://logo.svgcdn.com/l/browserstack.svg",
+  Detox: "https://wix.github.io/Detox/img/logo.png",
+  Appium: "https://logo.svgcdn.com/l/appium.svg",
+};
+
+const MobileAppTechnologiesSection = () => {
+  const categories = Object.keys(techData);
+  const [selected, setSelected] = useState(categories[0]);
+
+  return (
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <h2 className={styles.title}>Technologies We Use</h2>
+
+        <div className={styles.tabWrapper}>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={`${styles.tab} ${selected === cat ? styles.activeTab : ""}`}
+              onClick={() => setSelected(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        <div className={styles.cardGrid}>
+          {techData[selected].map((tech) => (
+            <div key={tech} className={styles.techCard}>
+              <img
+                src={logoCDN[tech]}
+                alt={`${tech} logo`}
+                className={styles.techLogo}
+                onError={(e) => (e.currentTarget.style.display = "none")}
+              />
+              <span>{tech}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MobileAppTechnologiesSection;

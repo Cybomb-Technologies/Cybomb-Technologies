@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './android-dev-process.module.css';
+import styles from './mobile-dev-agile-process.module.css';
 
 const process = [
   'Consultation',
@@ -10,7 +10,7 @@ const process = [
   'Maintenance',
 ];
 
-function AndroidDevProcess() {
+function MobileDevProcess() {
   return (
     <section className={styles.devProcessSection}>
       <div className={styles.container}>
@@ -27,4 +27,4 @@ function AndroidDevProcess() {
   );
 }
 
-export default AndroidDevProcess;
+export default MobileDevProcess;
