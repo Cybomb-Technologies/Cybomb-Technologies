@@ -29,7 +29,7 @@ import WebDev from "./component/pages-services/design-development/web-developmen
 import Ecommdev from "./component/pages-services/design-development/Ecommerce-development/Ecomm-dev";
 
 // ms
-// 
+import GameDevelopment from "./component/pages-services/design-development/game-development/game-development";
 // 
 // 
 // 
@@ -92,8 +92,8 @@ function App() {
         {/* Services - ms*/}
         <Route path="/services/mobile-app-development" element ={<MobileAppDevelopment/>} />
         <Route path="/technologies/android-app-development" element ={<AndoridAppDevelopment/>} />
-        {/*<Route path="" element ={} />
-        <Route path="" element ={} />
+        <Route path="/services/game-development" element ={<GameDevelopment/>} />
+        {/* <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} /> */}
