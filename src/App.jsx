@@ -44,8 +44,8 @@ import GameDevelopment from "./component/pages-services/design-development/game-
 // 
 
 // santhosh
-// 
-// 
+import SoftwareDevelopment from "./component/pages-services/design-development/software-development/Software-dev";
+import BespokeDevelopment from "./component/pages-services/design-development/bespoke-development/bespoke-dev";
 // 
 // 
 
@@ -109,10 +109,10 @@ function App() {
         <Route path="" element ={} /> */}
 
         {/* Services - santhosh */}
-         <Route path="/services/web-development" element ={<WebDev/>} />
-        {/* {<Route path="" element ={} />}
-        <Route path="" element ={} />`
-        <Route path="" element ={} />
+        <Route path="/services/web-development" element ={<WebDev/>} />
+        <Route path="/services/software-development" element ={<SoftwareDevelopment/>} />
+        <Route path="/services/bespoke-development" element ={<BespokeDevelopment/>} />
+        {/* {<Route path="" element ={} />`}
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />

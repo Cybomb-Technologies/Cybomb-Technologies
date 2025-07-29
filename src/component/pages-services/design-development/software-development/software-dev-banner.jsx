@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./web-dev-banner.module.css";
+import styles from "./Software-Dev-Banner.module.css";
 
-export default function WebDevBanner() {
+export default function SoftwareDevBanner() {
   return (
     <header className={`container-fluid ${styles.banner}`}>
       <div className="container text-center py-5">

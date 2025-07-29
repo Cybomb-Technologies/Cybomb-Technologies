@@ -1,30 +1,30 @@
 import React from 'react';
-import styles from './WhyChooseUs.module.css';
+import styles from './Software-WhyChooseUs.module.css';
 
 const data = [
   {
-    title: 'Custom-First Approach',
-    description: "We don’t use cookie-cutter templates-everything is made to fit you",
+    title: 'Solutions, Not Just Code',
+    description: "We focus on solving business problems with smart technology",
   },
   {
-    title: 'Mobile & SEO Ready',
-    description: 'Optimized for search engines and all screen sizes',
+    title: 'Secure by Design',
+    description: 'Security is integrated from day one',
   },
   {
-    title: 'Speed & Performance',
-    description: 'We use modern code and optimization techniques to keep your site fast',
+    title: 'End-to-End Development',
+    description: 'From idea to deployment—we handle everything',
   },
   {
-    title: 'You’re in Control',
-    description: "Easily update your content, images, or blogs without a developer",
+    title: 'Modular Architecture',
+    description: "Build software that's easy to expand and scale",
   },
   {
-    title: 'Ongoing Support',
-    description: "We're here for updates, fixes, scaling, and improvements",
+    title: 'Agile and Transparent',
+    description: "Work closely with you throughout the project lifecycle",
   },
 ];
 
-const WhyChooseUs = () => {
+const SoftwareWhyChooseUs = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -54,4 +54,4 @@ const WhyChooseUs = () => {
   );
 };
 
-export default WhyChooseUs;
+export default SoftwareWhyChooseUs;
