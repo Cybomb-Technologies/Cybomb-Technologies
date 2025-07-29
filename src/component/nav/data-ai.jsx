@@ -24,10 +24,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Strategy Consulting
             </a>
             <a
@@ -36,10 +36,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Processing
             </a>
             <a
@@ -48,10 +48,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Governance Solution
             </a>
             <a
@@ -60,10 +60,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Storage Solution
             </a>
             <a
@@ -72,10 +72,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Quality Management
             </a>{" "}
            
@@ -86,10 +86,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Modelling Design
             </a>
             <a
@@ -98,10 +98,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Architecture
             </a>
             <a
@@ -110,10 +110,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Analytics & Visualization
             </a>
             <a
@@ -122,10 +122,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               Cloud Data Migration
             </a>
           </div>
@@ -137,10 +137,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
              Custom AI Development
             </a>
             <a
@@ -149,10 +149,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
              AI Consulting Strategy
             </a>
             <a
@@ -161,10 +161,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
               AI Business Intelligence
             </a>
             <a
@@ -173,10 +173,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
              Large Language Models Solutions
             </a>
             <a
@@ -185,10 +185,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
              AI Personalized Customer Experience
             </a>
             <a
@@ -197,10 +197,10 @@ function Datadropdown({ onLinkClick}) {
               target="_blank"
               onClick={onLinkClick}
             >
-              <i
+              {/* <i
                 className="bi bi-arrow-right arrow-right-icon bg-primary"
                 style={{ fontSize: "10px" }}
-              ></i>{" "}
+              ></i>{" "} */}
             Blockchain
             </a>
            

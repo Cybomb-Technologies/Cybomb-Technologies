@@ -22,10 +22,10 @@ function Clouddropdown({ onLinkClick}) {
             target="_blank"
             onClick={onLinkClick}
           >
-            <i
+            {/* <i
               className="bi bi-arrow-right arrow-right-icon bg-primary"
               style={{ fontSize: "10px" }}
-            ></i>{" "}
+            ></i>{" "} */}
          AWS
           </a>
         </li>
@@ -36,10 +36,10 @@ function Clouddropdown({ onLinkClick}) {
             target="_blank"
             onClick={onLinkClick}
           >
-            <i
+            {/* <i
               className="bi bi-arrow-right arrow-right-icon bg-primary"
               style={{ fontSize: "10px" }}
-            ></i>{" "}
+            ></i>{" "} */}
           Azure
           </a>
         </li>
@@ -50,10 +50,10 @@ function Clouddropdown({ onLinkClick}) {
             target="_blank"
             onClick={onLinkClick}
           >
-            <i
+            {/* <i
               className="bi bi-arrow-right arrow-right-icon bg-primary"
               style={{ fontSize: "10px" }}
-            ></i>{" "}
+            ></i>{" "} */}
         Google Cloud
           </a>
         </li>
@@ -64,10 +64,10 @@ function Clouddropdown({ onLinkClick}) {
             target="_blank"
             onClick={onLinkClick}
           >
-            <i
+            {/* <i
               className="bi bi-arrow-right arrow-right-icon bg-primary"
               style={{ fontSize: "10px" }}
-            ></i>{" "}
+            ></i>{" "} */}
        DevOps
           </a>
         </li>

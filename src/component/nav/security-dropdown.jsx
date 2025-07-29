@@ -24,10 +24,10 @@ function Securitydropdown({ onLinkClick, onDropdownClick }) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                 AWSWeb Application Security
               </a>
               <a
@@ -36,10 +36,10 @@ function Securitydropdown({ onLinkClick, onDropdownClick }) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                Mobile Application Services
               </a>
               <a
@@ -48,10 +48,10 @@ function Securitydropdown({ onLinkClick, onDropdownClick }) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
                API Security
               </a>
               <a
@@ -60,10 +60,10 @@ function Securitydropdown({ onLinkClick, onDropdownClick }) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
               Cloud Security Services
               </a>
 
@@ -73,10 +73,10 @@ function Securitydropdown({ onLinkClick, onDropdownClick }) {
                 target="_blank"
                 onClick={onLinkClick}
               >
-                <i
+                {/* <i
                   className="bi bi-arrow-right arrow-right-icon bg-primary"
                   style={{ fontSize: "10px" }}
-                ></i>{" "}
+                ></i>{" "} */}
             Network Penetration Testing
               </a>
            

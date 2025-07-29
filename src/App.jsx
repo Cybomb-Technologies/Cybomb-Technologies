@@ -26,6 +26,7 @@ import Faq from "./pages/faq";
 import MobileAppDevelopment from "./component/pages-services/design-development/mobile-app-development/mobile-app-development";
 import AndoridAppDevelopment from "./component/pages-services/technologies/mobile-apps/android-app-dev/android-app-development";
 import WebDev from "./component/pages-services/design-development/web-development/web-dev";
+import Ecommdev from "./component/pages-services/design-development/Ecommerce-development/Ecomm-dev";
 
 // ms
 // 
@@ -36,7 +37,7 @@ import WebDev from "./component/pages-services/design-development/web-developmen
 // 
 
 // sudesh
-// 
+ 
 // 
 // 
 // 
@@ -98,8 +99,8 @@ function App() {
         <Route path="" element ={} /> */}
 
         {/* Services - sudesh */}
-        {/* <Route path="" element ={} />
-        <Route path="" element ={} />
+        <Route path="/services/Ecommerce-development" element ={ <Ecommdev/>} />
+{/*        
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />

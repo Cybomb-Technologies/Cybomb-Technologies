@@ -1,14 +1,15 @@
-import "./mobile-app-dev.css";
+
 import { Link } from "react-router-dom";
+import styles from "./mobile-app-dev.module.css";
 
 function MobileAppBanner() {
   return (
-    <div className="about-banner-img" style={{ padding: "135px 0px 60px" }}>
-        <div className="container">
-          <h1 className="text-white text-center">Mobile App Development</h1>
-          
-        </div>
-      </div>
+     <section className={styles.MobileAppSection}>
+      <h1 className={styles.heading}>Mobile App Development</h1>
+      <p className={styles.subtext}>
+        We turn your app idea into a powerful, user-friendly experience.
+      </p>
+    </section>
   );
 }
 
