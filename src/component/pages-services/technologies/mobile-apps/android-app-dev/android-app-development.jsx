@@ -14,7 +14,6 @@ function AndroidAppDevelopment() {
   return (
     <>
       <AndroidAppDevContent />
-      
       <InfoStats/>
       <AndroidServiceOfferings/>
       <AndroidAppTechnologies/>
