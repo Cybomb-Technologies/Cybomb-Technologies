@@ -1,7 +1,7 @@
 import React from 'react';
 import './mobile-app-dev.module.css';
 import MobileAppDevContent from './mobile-app-dev-content';
-import MobileDevProcess from '../../../common-ui/agile-process/agile-process';
+import AgileProcess from '../../../common-ui/agile-process/agile-process';
 import StillNotSure from '../../../common-ui/stillnotsure/StillNotSure';
 
 function MobileAppDevelopment() {
@@ -9,7 +9,7 @@ function MobileAppDevelopment() {
     <div className="mobile-app-dev-section">
       <MobileAppDevContent/>
       
-      <MobileDevProcess/>
+      <AgileProcess/>
       <StillNotSure/>
     </div>
   );
