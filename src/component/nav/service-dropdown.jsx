@@ -57,7 +57,7 @@ function Servicedropdown({ onLinkClick}) {
               </a>
               <a
                 className="dropdown-item"
-                href="/demo/E-Commerce/"
+                href="/Services/software-development"
                 target="_blank"
                 onClick={onLinkClick}
               >

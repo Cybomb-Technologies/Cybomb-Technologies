@@ -11,48 +11,36 @@ export default function WebDevBanner() {
         <p className={`mb-4 ${styles.subheading}`}>
           Beautiful, fast, and functional websites tailored to your brand and business goals
         </p>
-     <button className={`${styles.consultBtn}`}>
-  Book Free Consultation
-</button>
-
+        <button className={`${styles.consultBtn}`}>
+          Book Free Consultation
+        </button>
         <p className={`mt-4 mx-auto ${styles.description}`}>
           We design and build websites that don’t just look good—they work flawlessly. Whether it’s a landing page,
           business portfolio, eCommerce site, or web portal, our website development team ensures a smooth experience from idea to launch.
         </p>
-
-        {/* Form will be inserted here later */}
       </div>
-      <div className={styles.statsWrapper}>
-  <div className="container">
-    <div className={styles.whiteBox}>
-      <div className={`row text-center ${styles.statsBox}`}>
-        <div className="col-md-4 mb-3">
-          <h3 className={styles.blueText}>94%</h3>
-          <p className={styles.statDesc}>
-            of first impressions relate to website design
-          </p>
-        </div>
-        <div className="col-md-4 mb-3">
-          <h3 className={styles.blueText}>75%</h3>
-          <p className={styles.statDesc}>
-            A well-built website increases trust and leads by up to
-          </p>
-        </div>
-        <div className="col-md-4 mb-3">
-          <h3 className={styles.blueText}>50%</h3>
-          <p className={styles.statDesc}>
-            of web traffic comes from mobile devices—mobile-first is a must!
-          </p>
-        </div>
-      </div>
-      <p className={`text-center fw-bold mt-4 ${styles.partnerLine}`}>
-        Partnered with Startups and <span className={styles.fortune}>Fortune 500</span> Companies
-      </p>
-    </div>
-  </div>
-</div>
 
+      {/* Moved below all content */}
+      <section className={styles.infoSection}>
+        <div className={styles.infoCard}>
+          <div className={styles.infoItem}>
+            <div className={styles.infoNumber}>900+</div>
+            <div className={styles.infoLabel}>In-house Expert Developers</div>
+          </div>
+          <div className={styles.infoItem}>
+            <div className={styles.infoNumber}>70%</div>
+            <div className={styles.infoLabel}>Average Savings on Development Costs</div>
+          </div>
+          <div className={styles.infoItem}>
+            <div className={styles.infoNumber}>20,000+</div>
+            <div className={styles.infoLabel}>Projects Delivered Successfully</div>
+          </div>
+        </div>
 
+        <div className={styles.partnerCaption}>
+          Partnered with Startups and <span className={styles.partnerCaptionHighlight}>Fortune 500</span> Companies
+        </div>
+      </section>
     </header>
   );
 }

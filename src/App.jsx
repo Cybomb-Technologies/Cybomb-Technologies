@@ -43,7 +43,7 @@ import WebDev from "./component/pages-services/design-development/web-developmen
 // 
 
 // santhosh
-// 
+import SoftwareDevelopment from "./component/pages-services/design-development/software-development/Software-dev";
 // 
 // 
 // 
@@ -108,9 +108,9 @@ function App() {
         <Route path="" element ={} /> */}
 
         {/* Services - santhosh */}
-         <Route path="/services/web-development" element ={<WebDev/>} />
-        {/* {<Route path="" element ={} />}
-        <Route path="" element ={} />`
+        <Route path="/services/web-development" element ={<WebDev/>} />
+        <Route path="/services/software-development" element ={<SoftwareDevelopment/>} />
+        {/* {<Route path="" element ={} />`}
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
