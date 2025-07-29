@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./android-app-dev.module.css";
+import Bannerform from "../../../../banner-form/banner-form";
 
 function AndroidAppDevContent() {
   return (
@@ -8,6 +9,7 @@ function AndroidAppDevContent() {
       <p className={styles.subtext}>
         Discover top-tier Android app development services tailored to your business goals.
       </p>
+      <Bannerform/>
       {/* <button className={styles.button}>Book Free Consultation</button>
       <p className={styles.note}> Fill out the form and our experts will contact you within 24 hours.</p> */}
     </section>

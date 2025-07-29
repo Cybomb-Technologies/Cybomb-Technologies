@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './mobile-dev-agile-process.module.css';
+import styles from './agile-process.module.css';
 
 const process = [
   'Consultation',
