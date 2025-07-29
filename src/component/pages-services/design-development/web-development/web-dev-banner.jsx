@@ -3,7 +3,7 @@ import styles from "./web-dev-banner.module.css";
 
 export default function WebDevBanner() {
   return (
-    <header className={`container-fluid ${styles.banner}`}>
+    <header className={styles.banner}>
       <div className="container text-center py-5">
         <h1 className={`fw-bold ${styles.heading}`}>
           Website Development Services

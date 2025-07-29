@@ -56,7 +56,8 @@
   padding: 4rem 1rem;
   background-color: #f9fafb;
   text-align: center;
-  position: relative ;
+  /* position: relative; */
+  width: 100% !important;
 
 }
 
