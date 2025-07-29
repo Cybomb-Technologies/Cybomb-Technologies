@@ -1,45 +1,61 @@
-.servicesSection {
-  background-color: #062a42;
-  padding: 4rem 1rem;
-  color: #fff;
+.websiteServicesSection {
+  background-color: #003459;
+  padding: 4rem 2rem;
 }
 
-.title {
+.sectionTitle {
   font-size: 2rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 3rem;
 }
 
-.cardGrid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.sectionLayer {
+  background-color: #ffffff;
+  padding: 4rem 4rem;
+  border-radius: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
 }
 
 .card {
-  background-color: white;
-  color: #111;
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  height: 100%;
-  text-align: left;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease-in-out;
-  border-left: 4px solid #00bfff;
+  background-color: #ffffff;
+  border: 1px solid #007ea7;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  transition: transform 0.2s ease;
+  box-shadow: 10px 6px 6px rgba(0, 126, 167, 10); 
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
-.card h5 {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1rem;
 }
 
-.card p {
-  font-size: 0.95rem;
-  color: #333;
+.cardDescription {
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.6;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

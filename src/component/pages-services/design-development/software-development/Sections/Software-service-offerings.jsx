@@ -46,7 +46,7 @@ const services = [
 
 function SoftwareServiceOfferings() {
   return (
-    <section className={styles.androidServicesSection}>
+    <section className={styles.softwareServicesSection}>
       <h2 className={styles.sectionTitle}>Our Software Development Service Offerings</h2>
       <div className={styles.sectionLayer}>
         <div className={styles.grid}>

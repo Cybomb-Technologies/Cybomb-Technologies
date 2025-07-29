@@ -11,14 +11,14 @@ const CallToAction = () => {
         <div className={styles.textContent}>
           <h2 className={styles.title}>Craft a Captivating Online Presence for Your Brand!</h2>
           <p className={styles.description}>
-            Our custom Website development services turn your vision into a compelling online presence.
+            Our Bespoke Software development services turn your vision into a compelling online presence.
           </p>
           <button className={styles.button}>Request a Free Quote Today!</button>
         </div>
 
         {/* Right Side - Image */}
         <div className={styles.imageWrapper}>
-          <img src={placeholderImage} alt="Website Development" className={styles.image} />
+          <img src={placeholderImage} alt="Bespoke Software Development" className={styles.image} />
         </div>
 
       </div>

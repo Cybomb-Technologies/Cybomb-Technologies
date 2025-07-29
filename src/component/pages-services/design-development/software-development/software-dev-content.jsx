@@ -5,8 +5,6 @@ import SoftwareWhyChooseUs from './Sections/Software-WhyChooseUs';
 import SoftwareCallToAction from './Sections/CallToAction';
 import SoftwareDevelopmentProcess from './Sections/Software-Development-Process';
 import SoftwareEngagement from './Sections/Software-Engagement';
-import MobileDevProcess from '../../../common-ui/agile-process/agile-process';
-import StillNotSure from '../../../common-ui/stillnotsure/StillNotSure';
 export default function WebDevContent() {
   return (
     <main>
@@ -17,8 +15,7 @@ export default function WebDevContent() {
      <SoftwareCallToAction/>
      <SoftwareDevelopmentProcess/>
      <SoftwareEngagement/>
-     <AgileProcess/>
-     <StillNotSure/>
+
 
       
     </main>

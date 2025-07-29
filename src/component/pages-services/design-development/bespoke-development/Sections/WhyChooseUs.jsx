@@ -3,24 +3,24 @@ import styles from './WhyChooseUs.module.css';
 
 const data = [
   {
-    title: 'Custom-First Approach',
-    description: "We don’t use cookie-cutter templates-everything is made to fit you",
+    title: 'Built Around You',
+    description: 'Everything is customized for how your business actually works',
   },
   {
-    title: 'Mobile & SEO Ready',
-    description: 'Optimized for search engines and all screen sizes',
+    title: 'Problem-Solving First',
+    description: 'We focus on real-world use cases and outcomes—not just code',
   },
   {
-    title: 'Speed & Performance',
-    description: 'We use modern code and optimization techniques to keep your site fast',
+    title: 'Security at Core',
+    description: 'Data protection, secure access, and role-based permissions built-in',
   },
   {
-    title: 'You’re in Control',
-    description: "Easily update your content, images, or blogs without a developer",
+    title: 'Future-Ready',
+    description: 'Modular and scalable software that evolves as you grow',
   },
   {
-    title: 'Ongoing Support',
-    description: "We're here for updates, fixes, scaling, and improvements",
+    title: 'One-on-One Collaboration',
+    description: 'We work closely with you from idea to delivery',
   },
 ];
 
@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
     <section className={styles.section}>
       <div className={styles.container}>
         <h2 className={styles.heading}>Why Choose Us</h2>
-        
+
         {/* First Row - 3 Cards */}
         <div className={styles.row}>
           {data.slice(0, 3).map((item, index) => (

@@ -6,7 +6,7 @@ const techData = {
   Frontend: ["React", "Vue.js", "Angular"],
   Backend: ["Node.js", "Express.js", "Django", "Springboot", ".Net"],
   Databases: ["MongoDB", "MySQL", "PostgreSQL", "SQL Server"],
-  Cloud: ["AWS", "Azure", "Docker", "GitHub Actions", "CI/CD"],
+  "Cloud & Devops": ["AWS", "Azure", "Docker", "GitHub Actions", "CI/CD"],
   Desktop: ["Electron.js", "JavaFX", ".NET MAUI", "Flutter"],
   APIs: ["REST", "GraphQL", "gRPC"],
 };

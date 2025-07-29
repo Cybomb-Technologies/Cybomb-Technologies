@@ -45,7 +45,7 @@ import Ecommdev from "./component/pages-services/design-development/Ecommerce-de
 
 // santhosh
 import SoftwareDevelopment from "./component/pages-services/design-development/software-development/Software-dev";
-// 
+import BespokeDevelopment from "./component/pages-services/design-development/bespoke-development/bespoke-dev";
 // 
 // 
 
@@ -111,8 +111,8 @@ function App() {
         {/* Services - santhosh */}
         <Route path="/services/web-development" element ={<WebDev/>} />
         <Route path="/services/software-development" element ={<SoftwareDevelopment/>} />
+        <Route path="/services/bespoke-development" element ={<BespokeDevelopment/>} />
         {/* {<Route path="" element ={} />`}
-        <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
