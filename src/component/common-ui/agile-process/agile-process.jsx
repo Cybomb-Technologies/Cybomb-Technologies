@@ -10,7 +10,7 @@ const process = [
   'Maintenance',
 ];
 
-function MobileDevProcess() {
+function AgileProcess() {
   return (
     <section className={styles.devProcessSection}>
       <div className={styles.container}>
@@ -27,4 +27,4 @@ function MobileDevProcess() {
   );
 }
 
-export default MobileDevProcess;
+export default AgileProcess;
