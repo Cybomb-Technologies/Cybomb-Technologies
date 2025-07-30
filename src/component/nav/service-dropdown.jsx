@@ -48,25 +48,25 @@ function Servicedropdown({ onLinkClick}) {
               </a>
               <a
                 className="dropdown-item"
-                href="/demo/E-Commerce/"
+                href="/Services/software-development"
                 target="_blank"
                 onClick={onLinkClick}
               >
              {/* <i class="bi bi-cpu me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Software Development
               </a>
-              <a
+              <Link
                 className="dropdown-item"
-                href="/demo/E-Commerce/"
+                to="/services/game-development"
                 target="_blank"
                 onClick={onLinkClick}
               >
               {/* <i class="bi bi-controller me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Game Development
-              </a>
+              </Link>
               <a
                 className="dropdown-item"
-                href="/demo/E-Commerce/"
+                href="/Services/bespoke-development"
                 target="_blank"
                 onClick={onLinkClick}
               >

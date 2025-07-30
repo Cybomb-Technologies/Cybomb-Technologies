@@ -1,30 +1,30 @@
 import React from 'react';
-import styles from './WhyChooseUs.module.css';
+import styles from './game-dev-WhyChoose.module.css';
 
 const data = [
   {
-    title: 'Custom-First Approach',
-    description: "We don’t use cookie-cutter templates-everything is made to fit you",
+    title: 'Creative Game Design',
+    description: "Memorable characters, stories, and game loops",
   },
   {
-    title: 'Mobile & SEO Ready',
-    description: 'Optimized for search engines and all screen sizes',
+    title: 'Optimized for All Devices',
+    description: 'Smooth gameplay, fast load times, and low memory usage',
   },
   {
-    title: 'Speed & Performance',
-    description: 'We use modern code and optimization techniques to keep your site fast',
+    title: 'Concept to Launch Support',
+    description: 'We help brainstorm, prototype, test, and publish',
   },
   {
-    title: 'You’re in Control',
-    description: "Easily update your content, images, or blogs without a developer",
+    title: 'Monetization-Ready',
+    description: 'Ad integration, IAPS, rewards systems, and more',
   },
   {
-    title: 'Ongoing Support',
-    description: "We're here for updates, fixes, scaling, and improvements",
+    title: 'Analytics Integration',
+    description: "Track player behavior, retention, and revenue",
   },
 ];
 
-const WhyChooseUs = () => {
+const GameWhyChooseUs = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -54,4 +54,4 @@ const WhyChooseUs = () => {
   );
 };
 
-export default WhyChooseUs;
+export default GameWhyChooseUs;

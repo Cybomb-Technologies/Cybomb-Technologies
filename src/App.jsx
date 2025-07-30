@@ -29,7 +29,7 @@ import WebDev from "./component/pages-services/design-development/web-developmen
 import Ecommdev from "./component/pages-services/design-development/Ecommerce-development/Ecomm-dev";
 
 // ms
-// 
+import GameDevelopment from "./component/pages-services/design-development/game-development/game-development";
 // 
 // 
 // 
@@ -44,8 +44,8 @@ import Ecommdev from "./component/pages-services/design-development/Ecommerce-de
 // 
 
 // santhosh
-// 
-// 
+import SoftwareDevelopment from "./component/pages-services/design-development/software-development/Software-dev";
+import BespokeDevelopment from "./component/pages-services/design-development/bespoke-development/bespoke-dev";
 // 
 // 
 
@@ -92,8 +92,8 @@ function App() {
         {/* Services - ms*/}
         <Route path="/services/mobile-app-development" element ={<MobileAppDevelopment/>} />
         <Route path="/technologies/android-app-development" element ={<AndoridAppDevelopment/>} />
-        {/*<Route path="" element ={} />
-        <Route path="" element ={} />
+        <Route path="/services/game-development" element ={<GameDevelopment/>} />
+        {/* <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} /> */}
@@ -109,10 +109,10 @@ function App() {
         <Route path="" element ={} /> */}
 
         {/* Services - santhosh */}
-         <Route path="/services/web-development" element ={<WebDev/>} />
-        {/* {<Route path="" element ={} />}
-        <Route path="" element ={} />`
-        <Route path="" element ={} />
+        <Route path="/services/web-development" element ={<WebDev/>} />
+        <Route path="/services/software-development" element ={<SoftwareDevelopment/>} />
+        <Route path="/services/bespoke-development" element ={<BespokeDevelopment/>} />
+        {/* {<Route path="" element ={} />`}
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />

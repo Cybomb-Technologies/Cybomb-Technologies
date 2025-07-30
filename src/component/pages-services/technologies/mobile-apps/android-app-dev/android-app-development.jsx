@@ -5,7 +5,7 @@ import AndroidServiceOfferings from "./andorid-app-dev-section/android-service-o
 import TechInfo from "./andorid-app-dev-section/android-TechInfo";
 import AndroidAppTechnologies from "./andorid-app-dev-section/android-app-technologies-section";
 
-import MobileDevProcess from "../../../../common-ui/agile-process/agile-process";
+import AgileProcess from "../../../../common-ui/agile-process/agile-process";
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 
 
@@ -14,12 +14,11 @@ function AndroidAppDevelopment() {
   return (
     <>
       <AndroidAppDevContent />
-      
       <InfoStats/>
       <AndroidServiceOfferings/>
       <AndroidAppTechnologies/>
       <TechInfo/>
-      <MobileDevProcess/>
+      <AgileProcess/>
       <StillNotSure/>
     </>
   );
