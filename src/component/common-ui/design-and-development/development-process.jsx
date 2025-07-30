@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './../../../../common-ui/module-styles/devlopment-process-dnd.module.css';
+import styles from './devlopment-process.module.css';
 
 // const process = [
 //   {
@@ -24,12 +24,12 @@ import styles from './../../../../common-ui/module-styles/devlopment-process-dnd
 //   },
 // ];
 
-const GameDevProcess = ({Process}) => {
+const DevelopmentProcess = ({title, Process}) => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.titleWrapper}>
-          <h2 className={styles.title}>Our Game Development Process</h2>
+          <h2 className={styles.title}>{title}</h2>
         </div>
         <div className={styles.cardsWrapper}>
           {Process.map((Process, index) => (
@@ -49,4 +49,4 @@ const GameDevProcess = ({Process}) => {
   );
 };
 
-export default GameDevProcess;
+export default DevelopmentProcess;

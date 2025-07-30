@@ -76,3 +76,8 @@
     margin-top: 2rem;
   }
 }
+
+.arrow {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}

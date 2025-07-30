@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./mobile-app-technologies-section.module.css";
+import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const techData = {
   Languages: ["Swift", "Kotlin", "Dart", "React Native"],
@@ -10,8 +10,7 @@ const techData = {
   Testing: ["Android Emulator", "Xcode Simulator", "BrowserStack", "Detox", "Appium"],
 };
 
-// CDN logos mapped to each technology
-const logoCDN = {
+const techLogos = {
   Swift: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg",
   Kotlin: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
   Dart: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
@@ -42,8 +41,9 @@ const MobileAppTechnologiesSection = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Technologies We Use</h2>
+        <h2 className={styles.title}>Mobile App Development Technologies</h2>
 
+        {/* Tabs */}
         <div className={styles.tabWrapper}>
           {categories.map((cat) => (
             <button
@@ -56,16 +56,16 @@ const MobileAppTechnologiesSection = () => {
           ))}
         </div>
 
+        {/* Tech Cards */}
         <div className={styles.cardGrid}>
-          {techData[selected].map((tech) => (
-            <div key={tech} className={styles.techCard}>
+          {techData[selected].map((item) => (
+            <div key={item} className={styles.techCard}>
               <img
-                src={logoCDN[tech]}
-                alt={`${tech} logo`}
-                className={styles.techLogo}
-                onError={(e) => (e.currentTarget.style.display = "none")}
+                src={techLogos[item]}
+                alt={`${item} logo`}
+                className={styles.logo}
               />
-              <span>{tech}</span>
+              <span>{item}</span>
             </div>
           ))}
         </div>
