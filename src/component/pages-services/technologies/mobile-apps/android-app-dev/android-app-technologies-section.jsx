@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./android-app-technologies-section.module.css";
+import styles from "./../../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const techData = {
   Languages: ["Kotlin", "Java", "Flutter", "React Native", "Xamarin", "Capacitor"],

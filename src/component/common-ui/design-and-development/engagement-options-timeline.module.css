@@ -1,0 +1,163 @@
+.section {
+  padding: 4rem 1rem;
+  background-color: #007ea7;
+  text-align: center;
+  position: relative;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  background-color: #ffffff;
+  text-align: center;
+  align-items: center;
+  width: 36%;
+  padding: 1rem 1rem;
+  border-radius: 50px;
+  margin: 0 auto 3.1rem auto;
+  z-index: 12;
+}
+
+
+.flowContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.centerLine {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: #0f172a;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.cardRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.left {
+  flex-direction: row-reverse;
+}
+
+.right {
+  flex-direction: row;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 2rem;
+  max-width: 40%;
+  text-align: left;
+  z-index: 2;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.cardDesc {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.connector {
+  position: relative;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+/* 
+.circle {
+  width: 16px;
+  height: 16px;
+  background-color: #007ea7;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+} */
+
+.line {
+  height: 100px;
+  width: 2px;
+  background-color: #0f172a;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cardRow {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .connector {
+    margin: 1rem 0;
+    width: auto;
+  }
+
+  .line {
+    height: 50px;
+  }
+}
+
+.lineConnector {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.left .lineConnector {
+  left: 50%;
+  justify-content: flex-start;
+}
+
+.right .lineConnector {
+  right: 50%;
+  justify-content: flex-end;
+}
+
+.horizontalLine {
+  height: 2px;
+  width: calc(100% - 16px);
+  background-color: #0f172a;
+}
+/* 
+.circle {
+  width: 16px;
+  height: 16px;
+  background-color: #007ea7;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  z-index: 2;
+} */

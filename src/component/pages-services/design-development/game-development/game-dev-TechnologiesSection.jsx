@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-//import styles from "./game-dev-technologies-section.module.css";
-import styles from "./../../../../common-ui/module-styles/page-development-technologies-dnd.module.css";
+import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const techData = {
   "Game Engines": ["Unity", "Unreal Engine", "Phaser.js", "Godot", "Cocos2d"],
