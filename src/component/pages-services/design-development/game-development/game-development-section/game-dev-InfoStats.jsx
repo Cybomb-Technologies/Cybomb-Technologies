@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './game-dev-info-stats.module.css';
+import styles from './../../../../common-ui/module-styles/info-stats-dnd.module.css';
+//import styles from './game-dev-info-stats.module.css';
 
 function GameInfoStats() {
   return (

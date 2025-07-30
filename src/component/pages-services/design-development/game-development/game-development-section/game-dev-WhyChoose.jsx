@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './game-dev-WhyChoose.module.css';
+import styles from "./../../../../common-ui/module-styles/why-choose-us-dnd.module.css";
 
 const data = [
   {
