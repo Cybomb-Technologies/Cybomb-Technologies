@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './game-dev-service-offerings.module.css';
+import styles from "./../../../../common-ui/module-styles/service-offerings-dnd.module.css";
 
 const services = [
   {

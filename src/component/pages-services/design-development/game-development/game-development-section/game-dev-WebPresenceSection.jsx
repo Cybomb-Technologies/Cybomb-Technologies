@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './game-dev-WebPresenceSection.module.css';
+import styles from "./../../../../common-ui/module-styles/online-presence-dnd.module.css";
 import placeholderImage from '../../../../../assets/placeholder-image.webp';
 
 const GameDevPresenceSection = () => {

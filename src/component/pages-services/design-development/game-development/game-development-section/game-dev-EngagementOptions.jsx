@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./game-dev-engagement-options.module.css";
+import styles from './../../../../common-ui/module-styles/engagement-options-timeline-dnd.module.css';
 
 const options = [
   {
