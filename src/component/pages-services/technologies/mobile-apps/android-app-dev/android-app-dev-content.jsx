@@ -88,7 +88,9 @@ function AndroidAppDevContent() {
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"
     />
-    <ServicesOfferings Services={services}/>
+    <ServicesOfferings
+      title = "Our Android App Services"
+      Services={services}/>
     <MobileAppTechnologiesSection/>
     <WhyChooseUs ChooseUs={whychooseus}/>
    </section>

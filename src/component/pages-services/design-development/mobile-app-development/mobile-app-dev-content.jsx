@@ -107,7 +107,9 @@ function MobileAppDevContent() {
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"
     />
-    <ServicesOfferings Services={services}/>
+    <ServicesOfferings 
+      title = "Our Mobile App Services"
+      Services={services}/>
     <MobileAppTechnologiesSection/>
     <WhyChooseUs ChooseUs={whychooseus}/>
     <OnlinePresence 
@@ -116,7 +118,7 @@ function MobileAppDevContent() {
           buttonText = "Request a Free Quote Today!"
           buttonLink = "#"
           imageSrc = {placeholderImage}
-          imageAlt = "Web Development"
+          imageAlt = "Mobile App Development"
       />
     <DevelopmentProcess title="Our Mobile App Development Process"
       Process={process}

@@ -45,10 +45,10 @@ import styles from "./service-offerings.module.css";
 // ];
 // Services
 
-function ServicesOfferings({Services}) {
+function ServicesOfferings({title, Services }) {
   return (
     <section className={styles.androidServicesSection}>
-      <h2 className={styles.sectionTitle}>Our Game Development Services</h2>
+      <h2 className={styles.sectionTitle}>{title}</h2>
       <div className={styles.sectionLayer}>
         <div className={styles.grid}>
           {Services.map((Services, index) => (
