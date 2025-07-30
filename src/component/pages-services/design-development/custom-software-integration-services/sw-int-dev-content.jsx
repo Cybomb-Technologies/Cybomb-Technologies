@@ -3,13 +3,13 @@ import ServicesSection from './Sections/ServicesSection';
 import TechToolsSection from './Sections/TechToolsSection';
 import WhyChooseUs from './Sections/WhyChooseUs';
 import CallToAction from './Sections/CallToAction';
-import BespokeProcess from './Sections/bespoke-process';
+import SwIntProcess from './Sections/sw-int-process';
 import EngagementModels from './Sections/EngagementModels';
 
 
 
 
-export default function BespokeDevContent() {
+export default function SwIntDevContent() {
   return (
     <main>
       <Info/>
@@ -17,7 +17,7 @@ export default function BespokeDevContent() {
       <TechToolsSection/>
       <WhyChooseUs/>
       <CallToAction/>
-      <BespokeProcess/>
+      <SwIntProcess/>
       <EngagementModels/>
     </main>
   );
