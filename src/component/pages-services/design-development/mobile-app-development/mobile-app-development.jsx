@@ -7,10 +7,9 @@ import StillNotSure from '../../../common-ui/stillnotsure/StillNotSure';
 function MobileAppDevelopment() {
   return (
     <div className="mobile-app-dev-section">
-      <MobileAppDevContent/>
-      
-      <AgileProcess/>
-      <StillNotSure/>
+      <MobileAppDevContent />
+      <AgileProcess />
+      <StillNotSure />
     </div>
   );
 }
