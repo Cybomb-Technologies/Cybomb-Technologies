@@ -1,4 +1,4 @@
-import MobileAppDevContent from './mobile-app-dev-section/mobile-app-dev-content';
+import MobileAppDevContent from './mobile-app-dev-content';
 import AgileProcess from '../../../common-ui/agile-process/agile-process';
 import StillNotSure from '../../../common-ui/stillnotsure/StillNotSure';
 
