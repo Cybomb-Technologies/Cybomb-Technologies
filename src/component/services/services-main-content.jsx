@@ -1,6 +1,8 @@
 import Servicesaside from "./services-aside";
 import "./services.css";
 function Servicesmaincontent({details}) {
+
+  
   return (
     <>
       <section className="services-main">
