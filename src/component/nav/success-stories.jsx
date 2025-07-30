@@ -19,7 +19,6 @@ function Successstoriesdropdown({ onLinkClick, onDropdownClick }) {
           <a
             className="dropdown-item"
             href="/demo/ai-agent/"
-            target="_blank"
             onClick={onLinkClick}
           >
             {/* <i
@@ -33,7 +32,6 @@ function Successstoriesdropdown({ onLinkClick, onDropdownClick }) {
           <a
             className="dropdown-item"
             href="/demo/HRMS/"
-            target="_blank"
             onClick={onLinkClick}
           >
             {/* <i

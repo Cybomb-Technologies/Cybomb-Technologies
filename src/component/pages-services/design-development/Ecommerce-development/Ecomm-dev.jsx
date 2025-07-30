@@ -6,7 +6,6 @@ function Ecommdev() {
     <>
       <Ecommbanner />
       <Ecommcontent/>
-      
     </>
   );
 }

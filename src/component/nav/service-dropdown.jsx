@@ -22,7 +22,6 @@ function Servicedropdown({ onLinkClick}) {
               <Link
                 className="dropdown-item"
                 to="/services/web-development"
-                target="_blank"
                 onClick={onLinkClick}
               >
                {/* <i className="bi bi-code me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
@@ -31,52 +30,46 @@ function Servicedropdown({ onLinkClick}) {
               <Link
                 className="dropdown-item"
                 to="services/mobile-app-development"
-                target="_blank"
                 onClick={onLinkClick}
               >
                {/* <i class="bi bi-phone me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Mobile App Development
               </Link>
-              <a
+              <Link
                 className="dropdown-item"
-                href="/services/Ecommerce-development"
-                target="_blank"
+                to="/services/Ecommerce-development"
                 onClick={onLinkClick}
               >
                {/* <i class="bi bi-cart me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 E-commerce Development
-              </a>
-              <a
+              </Link>
+              <Link
                 className="dropdown-item"
-                href="/Services/software-development"
-                target="_blank"
+                to="/Services/software-development"
                 onClick={onLinkClick}
               >
              {/* <i class="bi bi-cpu me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Software Development
-              </a>
+              </Link>
               <Link
                 className="dropdown-item"
                 to="/services/game-development"
-                target="_blank"
                 onClick={onLinkClick}
               >
               {/* <i class="bi bi-controller me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Game Development
               </Link>
-              <a
+              <Link
                 className="dropdown-item"
-                href="/Services/bespoke-development"
-                target="_blank"
+                to="/Services/bespoke-development"
                 onClick={onLinkClick}
               >
               {/* <i class="bi bi-bricks me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Bespoke Development
-              </a>
+              </Link>
               <a
                 className="dropdown-item"
                 href="/demo/E-Commerce/"
-                target="_blank"
                 onClick={onLinkClick}
               >
             {/* <i class="bi bi-cloud me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
@@ -98,7 +91,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/grocery/"
-                target="_blank"
                 onClick={onLinkClick}
               >
                {/* <i class="bi bi-person me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
@@ -107,7 +99,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
               {/* <i class="bi bi-cloud-upload me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
@@ -116,7 +107,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/grocery/"
-                target="_blank"
                 onClick={onLinkClick}
               >
                {/* <i class="bi bi-broadcast me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
@@ -125,7 +115,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
                	{/* <i class="bi bi-hdd-stack"></i> */}
@@ -134,7 +123,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
                {/* <i class="bi bi-robot me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
@@ -143,7 +131,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
                {/* <i class="bi bi-bar-chart-line me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
@@ -152,7 +139,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i class="bi bi-diagram-3 me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
@@ -161,7 +147,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
               {/* <i class="bi bi-shield-lock me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
@@ -170,7 +155,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
                	{/* <i class="bi bi-journal-text me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
@@ -183,7 +167,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/grocery/"
-                target="_blank"
                 onClick={onLinkClick}
               >
             {/* <i class="bi bi-puzzle me-1"></i> */}
@@ -192,7 +175,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -204,7 +186,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -216,7 +197,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -228,7 +208,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -240,7 +219,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -252,7 +230,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -264,7 +241,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -280,7 +256,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/taxi-booking-app"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -292,7 +267,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/real-estate-app"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -304,7 +278,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/real-estate-app"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -316,7 +289,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/real-estate-app"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -328,7 +300,6 @@ function Servicedropdown({ onLinkClick}) {
               <a
                 className="dropdown-item"
                 href="/demo/real-estate-app"
-                target="_blank"
                 onClick={onLinkClick}
               >
                 {/* <i

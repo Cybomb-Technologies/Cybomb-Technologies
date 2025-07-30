@@ -21,7 +21,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <Link
               className="dropdown-item"
               to="technologies/android-app-development"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -33,7 +32,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/HRMS/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -45,7 +43,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/E-Commerce/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -57,7 +54,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/E-Commerce/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -69,7 +65,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/E-Commerce/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -81,7 +76,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/E-Commerce/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -93,7 +87,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/E-Commerce/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -109,7 +102,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/grocery/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -121,7 +113,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/school-mangement"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -133,7 +124,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/grocery/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -145,7 +135,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/school-mangement"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -157,7 +146,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/school-mangement"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -169,7 +157,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/school-mangement"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -187,7 +174,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/grocery/"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -199,7 +186,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/school-mangement"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -211,7 +198,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/school-mangement"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -223,7 +210,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/school-mangement"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -235,7 +222,7 @@ function Technologiesdropdown({ onLinkClick }) {
                  <a
                   className="dropdown-item"
                   href="/demo/school-mangement"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -247,7 +234,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/school-mangement"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -262,7 +249,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/school-mangement"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -274,7 +261,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/school-mangement"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -286,7 +273,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/school-mangement"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -298,7 +285,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/school-mangement"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -319,7 +306,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/taxi-booking-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -331,7 +318,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/real-estate-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -343,7 +330,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/real-estate-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -355,7 +342,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/real-estate-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -367,7 +354,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/real-estate-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -379,7 +366,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/real-estate-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -391,7 +378,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/real-estate-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -405,7 +392,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/taxi-booking-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -417,7 +404,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/real-estate-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -429,7 +416,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/real-estate-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -441,7 +428,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/real-estate-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -453,7 +440,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/real-estate-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -465,7 +452,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 <a
                   className="dropdown-item"
                   href="/demo/real-estate-app"
-                  target="_blank"
+  
                   onClick={onLinkClick}
                 >
                   {/* <i
@@ -485,7 +472,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/ai-agent/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -500,7 +486,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/ai-agent/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -512,7 +497,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/ai-agent/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -528,7 +512,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/ai-agent/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -540,7 +523,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/ai-agent/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -555,7 +537,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/ai-agent/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -567,7 +548,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/ai-agent/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -582,7 +562,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/ai-agent/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -594,7 +573,6 @@ function Technologiesdropdown({ onLinkClick }) {
             <a
               className="dropdown-item"
               href="/demo/ai-agent/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i

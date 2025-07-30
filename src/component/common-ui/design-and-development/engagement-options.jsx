@@ -1,25 +1,10 @@
 import React from "react";
-import styles from "./game-dev-engagement-options.module.css";
+import styles from './engagement-options-timeline.module.css';
 
-const options = [
-  {
-    title: "End-to-End Game Development",
-    description: "Full production of mobile, desktop, or browser games",
-  },
-  {
-    title: "Game Prototyping / MVPs",
-    description: "Build a testable game prototype to pitch or validate your concept",
-  },
-  {
-    title: "Art & Animation Services Only",
-    description: "Need characters, UI, or visual polish? We've got you",
-  },
-];
-
-const GameDevEngagementOptions = () => {
+function EngagementOptions({ title = "Engagement Options", options = [] }) {
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Engagement Options</h2>
+      <h2 className={styles.title}>{title}</h2>
       <div className={styles.flowContainer}>
         <div className={styles.centerLine}></div>
 
@@ -41,6 +26,6 @@ const GameDevEngagementOptions = () => {
       </div>
     </section>
   );
-};
+}
 
-export default GameDevEngagementOptions;
+export default EngagementOptions;
