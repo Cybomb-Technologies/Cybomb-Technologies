@@ -11,126 +11,103 @@ const techData = {
   "Design Tools": ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Canva"]
 };
 
-// UI class variables
-const title = "text-white mt-5";
-const tabButton = "btn btn-outline-light m-1";
-const active = "active";
-const tabGrid = "mt-3";
-const techCard = "border p-2 text-white bg-dark rounded text-center small";
+const techImages = {
+  // Frontend
+  "HTML5": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  "CSS3": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "Bootstrap": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+  "Tailwind CSS": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+  
+  // Frameworks
+  "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "Vue.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+  "Angular": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+  "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  "Svelte": "https://cdn.worldvectorlogo.com/logos/svelte-1.svg",
+  
+  // CMS Platforms
+  "WordPress": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
+  "Webflow": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg",
+  "Drupal": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/drupal/drupal-original.svg",
+  "Ghost": "https://ghost.org/favicon.svg",
+  "Strapi": "https://strapi.io/assets/strapi-logo-dark.svg",
+  
+  // eCommerce
+  "Shopify": "https://cdn.shopify.com/assets/images/logos/shopify-bag.png",
+  "WooCommerce": "https://woocommerce.com/wp-content/uploads/2019/10/woocommerce-logo.png",
+  "Magento": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg",
+  "BigCommerce": "https://simpleicons.org/icons/bigcommerce.svg",
+  "Ecwid": "https://www.ecwid.com/favicon.ico",
+  
+  // Backend
+  "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  "Express.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  "Spring Boot": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+  "PHP": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  "Python Django": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+  
+  // Hosting
+  "Vercel": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/180x180.png",
+  "Netlify": "https://www.netlify.com/v3/img/components/logomark.png",
+  "Hostinger": "https://upload.wikimedia.org/wikipedia/commons/6/61/Hostinger_logo_black.svg",
+  "AWS": "https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_stacked_REV_SQ.91cd4af40773cbfbd15577a3c2b8a346fe3e8fa2.png",
+  "DigitalOcean": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg",
+  
+  // Design Tools
+  "Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  "Adobe XD": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg",
+  "Photoshop": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
+  "Illustrator": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
+  "Canva": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
+};
 
 function Homeourexpertise() {
   const [activeTab, setActiveTab] = useState("Frontend");
 
   return (
-    <>
-      <section className="our-expertise-bg" style={{ padding: "60px 0px" }}>
-        <div className="container">
-          <h2 className="text-white text-center" data-aos="zoom-out-right">Our Expertise</h2>
-          <p className="text-white text-center" data-aos="zoom-out-left">
-            Technologies we master to build exceptional solutions
-          </p>
+    <section className="our-expertise-bg" style={{ padding: "10px 0px 60px" }}>
+      <div className="container">
+        <div className="container text-center">
+          <h2 className="text-white mt-5">Technologies &amp; Tools We Use</h2>
 
-          {/* Static Tech Cards Row */}
-          <div className="row mt-5">
-            {/* Example Card */}
-            <div className="col-6 col-sm-6 col-lg-4 col-xl-2 mt-3">
-              <div className="card shadow border-0 p-4 expertise-card text-center" data-aos="zoom-out-up">
-                <i className="bi bi-android2 text-success fs-1"></i>
-                <p className="text-black">Android</p>
-              </div>
-            </div>
-
-            {/* Apple */}
-            <div className="col-6 col-sm-6 col-lg-4 col-xl-2 mt-3">
-              <div className="card shadow border-0 p-4 expertise-card text-center" data-aos="zoom-out-down">
-                <i className="bi bi-apple fs-1 text-secondary"></i>
-                <p className="text-black">Apple</p>
-              </div>
-            </div>
-
-            {/* React */}
-            <div className="col-6 col-sm-6 col-lg-4 col-xl-2 mt-3">
-              <div data-aos="zoom-out-up" className="card shadow border-0 expertise-card d-flex flex-column align-items-center justify-content-center" style={{ padding: "37px" }}>
-                <img src="https://cdn-icons-png.flaticon.com/128/1260/1260667.png" alt="React" width="40" height="40" />
-                <p className="mt-2 mb-0 text-black">React</p>
-              </div>
-            </div>
-
-            {/* Flutter */}
-            <div className="col-6 col-sm-6 col-lg-4 col-xl-2 mt-3">
-              <div data-aos="zoom-out-down" className="card shadow border-0 expertise-card d-flex flex-column align-items-center justify-content-center" style={{ padding: "37px" }}>
-                <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png" alt="Flutter" width="40" height="40" />
-                <p className="mt-2 mb-0 text-black">Flutter</p>
-              </div>
-            </div>
-
-            {/* Node.js */}
-            <div className="col-6 col-sm-6 col-lg-4 col-xl-2 mt-3">
-              <div data-aos="zoom-out-up" className="card shadow border-0 expertise-card d-flex flex-column align-items-center justify-content-center" style={{ padding: "37px" }}>
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Node.js" width="40" height="40" />
-                <p className="mt-2 mb-0 text-black">Node.js</p>
-              </div>
-            </div>
-
-            {/* Python */}
-            <div className="col-6 col-sm-6 col-lg-4 col-xl-2 mt-3">
-              <div data-aos="zoom-out-down" className="card shadow border-0 expertise-card d-flex flex-column align-items-center justify-content-center" style={{ padding: "37px" }}>
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" width="40" height="40" />
-                <p className="mt-2 mb-0 text-black">Python</p>
-              </div>
-            </div>
-          </div>
-
-          {/* More Icons */}
-          <div className="row mt-5">
-            {[
-              { name: "JavaScript", img: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
-              { name: "TypeScript", img: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png" },
-              { name: "MongoDB", img: "https://cdn.iconscout.com/icon/free/png-256/free-mongodb-4-1175139.png" },
-              { name: "AWS", img: "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" },
-              { name: "Docker", img: "https://cdn-icons-png.flaticon.com/512/919/919853.png" },
-              { name: "Git", img: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" },
-            ].map((tech, index) => (
-              <div className="col-6 col-sm-6 col-lg-4 col-xl-2 mt-3" key={index}>
-                <div data-aos="zoom-out-up" className="card shadow border-0 expertise-card d-flex flex-column align-items-center justify-content-center" style={{ padding: "37px" }}>
-                  <img src={tech.img} alt={tech.name} width="40" height="40" />
-                  <p className="mt-2 mb-0 text-black">{tech.name}</p>
-                </div>
+          <div className="row justify-content-center mt-3">
+            {Object.keys(techData).map((tab) => (
+              <div className="col-auto px-1" key={tab}>
+                <button
+                  onClick={() => setActiveTab(tab)}
+                  className={`btn btn-outline-light m-1 ${activeTab === tab ? "active" : ""}`}
+                >
+                  {tab}
+                </button>
               </div>
             ))}
           </div>
 
-          {/* Tabs Section */}
-          <h5 className="mt-4 text-center text-secondary">
-            And many more cutting-edge technologies to bring your vision to life
-          </h5>
-          <div className="container text-center">
-            <h2 className={title}>Technologies &amp; Tools We Use</h2>
-
-            <div className={`row justify-content-center ${tabGrid}`}>
-              {Object.keys(techData).map((tab) => (
-                <div className="col-auto px-1" key={tab}>
-                  <button
-                    onClick={() => setActiveTab(tab)}
-                    className={`${tabButton} ${activeTab === tab ? active : ""}`}
-                  >
-                    {tab}
-                  </button>
+          <div className="row justify-content-center mt-4 g-3">
+            {techData[activeTab].map((item, idx) => (
+              <div key={idx} className="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div className="tech-card bg-white p-3 rounded d-flex flex-column align-items-center h-100">
+                  <img 
+                    src={techImages[item]} 
+                    alt={item} 
+                    width="40" 
+                    height="40"
+                    className="mb-2 tech-logo"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "https://via.placeholder.com/40?text=Tech";
+                      console.error(`Failed to load image for ${item}`);
+                    }}
+                  />
+                  <span className="text-center small">{item}</span>
                 </div>
-              ))}
-            </div>
-
-            <div className="row justify-content-center mt-4 g-3">
-              {techData[activeTab].map((item, idx) => (
-                <div key={idx} className="col-6 col-sm-4 col-md-3 col-lg-2">
-                  <div className="bg-white p-2 rounded">{item}</div>
-                </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
