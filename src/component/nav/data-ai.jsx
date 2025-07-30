@@ -21,7 +21,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/grocery/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -33,7 +32,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/school-mangement"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -45,7 +43,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/grocery/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -57,7 +54,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/school-mangement"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -69,7 +65,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/school-mangement"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -83,7 +78,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/school-mangement"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -95,7 +89,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/school-mangement"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -107,7 +100,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/school-mangement"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -119,7 +111,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/school-mangement"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -134,7 +125,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/ai-agent/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -146,7 +136,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/HRMS/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -158,7 +147,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/E-Commerce/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -170,7 +158,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/E-Commerce/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -182,7 +169,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/E-Commerce/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i
@@ -194,7 +180,6 @@ function Datadropdown({ onLinkClick}) {
             <a
               className="dropdown-item"
               href="/demo/E-Commerce/"
-              target="_blank"
               onClick={onLinkClick}
             >
               {/* <i

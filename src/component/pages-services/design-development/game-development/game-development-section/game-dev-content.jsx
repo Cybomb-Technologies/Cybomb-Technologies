@@ -31,6 +31,8 @@ const process = [
   },
 ];
 
+
+
 function GameDevContent() {
   return (
    <section>
