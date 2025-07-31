@@ -88,14 +88,14 @@ function Servicedropdown({ onLinkClick}) {
 
             <div className="col-xxl-3">
               <a className="dropdown-item text-primary">Enterprise Services</a>
-              <a
+              <Link
                 className="dropdown-item"
-                href="/demo/grocery/"
+                to="/services/crm-services"
                 onClick={onLinkClick}
               >
                {/* <i class="bi bi-person me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 CRM Solutions
-              </a>
+              </Link>
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
