@@ -1,4 +1,3 @@
-
 import Weoffer from "./section/we-offer";
 
 function Ecommcontent() {
