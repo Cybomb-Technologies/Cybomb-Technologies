@@ -47,12 +47,41 @@
 .arrow {
   margin-left: 0.5rem;
   font-weight: bold;
+  font-size: 24px;
 }
 
-/* Responsive behavior */
-@media (max-width: 768px) {
+/* Tablet */
+@media (max-width: 1024px) {
   .card {
     flex-direction: column;
     text-align: center;
+    align-items: center; /* ensures button centers under title */
   }
 }
+@media screen and (max-width: 375px) and (max-height: 740px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .ctaButton {
+    width: 100%;
+    max-width: 250px;
+    font-size: 1.1rem;
+    padding: 0.9rem 1.5rem;
+  }
+
+  .arrow {
+    display: inline-block;
+    margin-left: 0.3rem;
+    font-size: 1.2rem;
+  }
+}
+

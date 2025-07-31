@@ -85,15 +85,6 @@
   align-items: center;
   z-index: 2;
 }
-/* 
-.circle {
-  width: 16px;
-  height: 16px;
-  background-color: #007ea7;
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
-} */
 
 .line {
   height: 100px;
@@ -162,3 +153,118 @@
   flex-shrink: 0;
   z-index: 2;
 } */
+
+/* Tablet*/
+@media (max-width: 1024px) {
+  .title {
+    font-size: 1.75rem;
+    width: 60%;
+    padding: 0.75rem 1rem;
+    border-radius: 24px;
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .cardRow {
+    flex-direction: column !important;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .card {
+    max-width: 100%;
+    width: 600px;
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+  }
+
+  .cardDesc {
+    font-size: 0.95rem;
+  }
+
+  .connector {
+    margin: 1rem 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line {
+    height: 40px;
+  }
+
+  .lineConnector {
+    display: none; /* hide horizontal lines */
+  }
+
+  .centerLine {
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 3px;
+    background-color: #0f172a;
+  }
+}
+
+
+/* Mobile: up to 768px */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 24px;
+  }
+
+  .cardRow {
+    flex-direction: column !important;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .card {
+    max-width: 100%;
+    width: 600px;
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+  }
+
+  .cardDesc {
+    font-size: 0.95rem;
+  }
+
+  .connector {
+    margin: 1rem 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line {
+    height: 40px;
+  }
+
+  .lineConnector {
+    display: none; /* Still hide horizontal lines on mobile */
+  }
+
+  .centerLine {
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 3px;
+    background-color: #0f172a;
+  }
+}
+

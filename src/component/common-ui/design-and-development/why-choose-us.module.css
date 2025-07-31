@@ -35,13 +35,12 @@
   background: #fff;
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 1px 8px 12px rgba(28, 133, 203, 0.9); /* bottom-right shadow */
+  box-shadow: 1px 8px 12px rgba(28, 133, 203, 0.9);
   transition: transform 0.3s ease;
   border: 2px solid #1c85cb;
   align-items: center;
   text-align: center;
 }
-
 
 .card:hover {
   transform: translateY(-5px);
@@ -57,4 +56,42 @@
   color: #000;
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+/* ✅ Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .row {
+    justify-content: center;
+  }
+
+  .card {
+    flex: 1 1 calc(45% - 1.5rem);
+  }
+}
+
+/* ✅ Mobile (≤768px) */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+    padding-bottom: 0rem;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 600px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
 }
