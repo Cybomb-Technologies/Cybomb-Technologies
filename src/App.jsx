@@ -30,9 +30,9 @@ import Ecommdev from "./component/pages-services/design-development/Ecommerce-de
 
 // ms
 import GameDevelopment from "./component/pages-services/design-development/game-development/game-development";
+import CRMServices from "./component/pages-services/enterprise-services/crm/crm-services";
 // 
-// 
-// 
+import ApiDevelopment from "./component/pages-services/design-development/Api-development/api-devlopment";
 // 
 // 
 
@@ -48,9 +48,10 @@ import SoftwareDevelopment from "./component/pages-services/design-development/s
 import BespokeDevelopment from "./component/pages-services/design-development/bespoke-development/bespoke-dev";
 import SwIntDev from "./component/pages-services/design-development/custom-software-integration-services/sw-int-dev";
 import AwsCloud from "./component/pages-cloud/aws-cloud/aws-cloud"; 
-import AzureCloud from "./component/pages-cloud/azure-cloud/azure-cloud";
-import DevopsCloud from "./component/pages-cloud/devops/devops";
-import GoogleCloud from "./component/pages-cloud/google-cloud/google-cloud";
+
+
+
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -93,10 +94,20 @@ function App() {
         <Route path="/services/mobile-app-development" element ={<MobileAppDevelopment/>} />
         <Route path="/technologies/android-app-development" element ={<AndoridAppDevelopment/>} />
         <Route path="/services/game-development" element ={<GameDevelopment/>} />
+        <Route path="/services/crm-services" element ={<CRMServices/>} />
+        {/*<Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} /> */}
+
+
+{/* Services - divya*/}
+       
+        <Route path="/services/api-development" element ={<ApiDevelopment/>} />
         {/* <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} /> */}
+
 
         {/* Services - sudesh */}
         <Route path="/services/Ecommerce-development" element ={ <Ecommdev/>} />
