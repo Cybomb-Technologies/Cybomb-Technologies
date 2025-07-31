@@ -1,0 +1,94 @@
+.cloudOffersSection {
+  background-color: #003459;
+  color: #ffffff;
+  padding: 80px 5%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sectionTitle {
+  text-align: center;
+  background-color: #00a8e8;
+  padding: 12px 36px;
+  border-radius: 40px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.featureList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.featureList li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.arrow {
+  color: #00d1ff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.imageContainer {
+  flex: 1 1 400px;
+  max-width: 480px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contentWrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .featureList li {
+    justify-content: center;
+    gap: 10px;
+  }
+}
