@@ -48,7 +48,9 @@ import SoftwareDevelopment from "./component/pages-services/design-development/s
 import BespokeDevelopment from "./component/pages-services/design-development/bespoke-development/bespoke-dev";
 import SwIntDev from "./component/pages-services/design-development/custom-software-integration-services/sw-int-dev";
 import AwsCloud from "./component/pages-cloud/aws-cloud/aws-cloud"; 
-
+import AzureCloud from "./component/pages-cloud/azure-cloud/azure-cloud";
+import GoogleCloud from "./component/pages-cloud/google-cloud/google-cloud";
+import DevopsCloud from "./component/pages-cloud/devops/devops";
 
 
 

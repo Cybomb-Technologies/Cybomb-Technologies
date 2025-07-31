@@ -3,7 +3,7 @@ import ApiTechnologiesSection from "./api-dev-TechnologiesSection";
 
 import Banner from "../../../common-ui/design-and-development/banner";
 import InfoStats from "../../../common-ui/design-and-development/info-stats";
-import ServicesOfferings from "../../../common-ui/design-and-development/Service-offerings";
+import ServicesOfferings from "../../../common-ui/design-and-development/services-offerings";
 import DevelopmentProcess from "../../../common-ui/design-and-development/development-process";
 import WhyChooseUs from "../../../common-ui/design-and-development/why-choose-us";
 import OnlinePresence from "../../../common-ui/design-and-development/online-presence";
