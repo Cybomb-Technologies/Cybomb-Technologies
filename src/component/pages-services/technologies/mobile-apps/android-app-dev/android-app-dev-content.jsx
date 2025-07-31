@@ -1,6 +1,6 @@
 import Banner from "../../../../common-ui/design-and-development/banner";
 import InfoStats from "../../../../common-ui/design-and-development/info-stats";
-import ServicesOfferings from "../../../../common-ui/design-and-development/Service-offerings";
+import ServicesOfferings from "../../../../common-ui/design-and-development/services-offerings.jsx";
 import WhyChooseUs from "../../../../common-ui/design-and-development/why-choose-us";
 import MobileAppTechnologiesSection from './android-app-technologies-section.jsx';
 
