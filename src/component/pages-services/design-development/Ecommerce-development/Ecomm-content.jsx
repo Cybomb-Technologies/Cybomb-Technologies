@@ -1,9 +1,9 @@
-import WeOffer from "./section/we-offer";
-
+import Weoffer from "./section/we-offer";
+ 
 function Ecommcontent() {
   return (
     <>
-      <WeOffer />
+      <Weoffer/>
     </>
   );
 }

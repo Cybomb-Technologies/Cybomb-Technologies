@@ -133,7 +133,9 @@ function GameDevContent() {
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"
     />
-    <ServicesOfferings Services={services}/>
+    <ServicesOfferings 
+    title = "Game Development Services"
+    Services={services}/>
     <GameTechnologiesSection/>
     <WhyChooseUs ChooseUs={whychooseus}/>
     <OnlinePresence 

@@ -46,8 +46,8 @@ import GameDevelopment from "./component/pages-services/design-development/game-
 // santhosh
 import SoftwareDevelopment from "./component/pages-services/design-development/software-development/Software-dev";
 import BespokeDevelopment from "./component/pages-services/design-development/bespoke-development/bespoke-dev";
-// 
-// 
+import SwIntDev from "./component/pages-services/design-development/custom-software-integration-services/sw-int-dev";
+import AwsCloud from "./component/pages-cloud/aws-cloud/aws-cloud"; 
 
 
 
@@ -113,9 +113,9 @@ function App() {
         <Route path="/services/web-development" element ={<WebDev/>} />
         <Route path="/services/software-development" element ={<SoftwareDevelopment/>} />
         <Route path="/services/bespoke-development" element ={<BespokeDevelopment/>} />
-        {/* {<Route path="" element ={} />`}
-        <Route path="" element ={} />
-        <Route path="" element ={} />
+        <Route path="/services/custom-software-integration-services" element ={<SwIntDev/>}/>
+        <Route path="/services/aws-cloud" element ={<AwsCloud/>} />
+         {/* {<Route path="" element ={} />`}
         <Route path="" element ={} />
         <Route path="" element ={} /> */}
 

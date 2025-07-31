@@ -1,5 +1,5 @@
-.bespokeServicesSection {
-  background-color: #003459;
+.awsServicesSection {
+  background-color: white; /* Changed overall background to white */
   padding: 4rem 1.5rem;
 }
 
@@ -7,7 +7,7 @@
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  color: #ffffff;
+  color: #039fd8; /* Changed title color to #007ba7 */
   margin-bottom: 3rem;
 }
 

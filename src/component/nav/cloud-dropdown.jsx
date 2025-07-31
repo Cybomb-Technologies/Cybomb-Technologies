@@ -18,7 +18,8 @@ function Clouddropdown({ onLinkClick}) {
         <li>
           <a
             className="dropdown-item"
-            href="/demo/ai-agent/"
+            href="/Services/aws-cloud"
+            target="_blank"
             onClick={onLinkClick}
           >
             {/* <i
