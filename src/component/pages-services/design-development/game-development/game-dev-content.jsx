@@ -117,7 +117,6 @@ const engagementOptions = [
 function GameDevContent() {
   return (
    <section>
-    {/* <GameDevBanner/> */}
     <Banner 
         heading="Game Development"
         subtext="We turn your game ideas into immersive, playable realities"
