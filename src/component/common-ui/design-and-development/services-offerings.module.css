@@ -54,8 +54,64 @@
   font-size: 1rem;
 }
 
-@media (max-width: 768px) {
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+  .sectionLayer {
+    padding: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
   .grid {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .cardTitle {
+    font-size: 1.3rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .cardDescription {
+    font-size: 0.95rem;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .sectionLayer {
+    padding: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .cardDescription {
+    font-size: 0.9rem;
   }
 }
