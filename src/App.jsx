@@ -32,7 +32,7 @@ import Ecommdev from "./component/pages-services/design-development/Ecommerce-de
 import GameDevelopment from "./component/pages-services/design-development/game-development/game-development";
 // 
 // 
-// 
+import ApiDevelopment from "./component/pages-services/design-development/Api-development/api-devlopment";
 // 
 // 
 
@@ -48,6 +48,7 @@ import SoftwareDevelopment from "./component/pages-services/design-development/s
 import BespokeDevelopment from "./component/pages-services/design-development/bespoke-development/bespoke-dev";
 import SwIntDev from "./component/pages-services/design-development/custom-software-integration-services/sw-int-dev";
 import AwsCloud from "./component/pages-cloud/aws-cloud/aws-cloud"; 
+
 
 
 
@@ -97,6 +98,16 @@ function App() {
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} /> */}
+
+
+{/* Services - divya*/}
+       
+        <Route path="/services/api-development" element ={<ApiDevelopment/>} />
+        {/* <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} /> */}
+
 
         {/* Services - sudesh */}
         <Route path="/services/Ecommerce-development" element ={ <Ecommdev/>} />
