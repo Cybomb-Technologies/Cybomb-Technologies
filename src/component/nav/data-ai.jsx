@@ -1,197 +1,55 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-function Datadropdown({ onLinkClick}) {
+function Datadropdown({ onLinkClick, isMobile }) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleToggleClick = (e) => {
+    if (isMobile) {
+      e.preventDefault();
+      setIsDropdownOpen((prev) => !prev);
+    }
+  };
+
   return (
     <li className="nav-item dropdown custom-nav-item position-static">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
-        //  to="#" 
         role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-        // onClick={onDropdownClick}
+        to="#"
+        aria-expanded={isDropdownOpen ? "true" : "false"}
+        onClick={handleToggleClick}
       >
         Data & AI
       </Link>
 
-      <div className="dropdown-menu mega-dropdown w-auto">
+      <div
+        className={`dropdown-menu mega-dropdown w-auto ${isMobile && isDropdownOpen ? "show" : ""}`}
+        style={isMobile ? { display: isDropdownOpen ? "block" : "none" } : {}}
+      >
         <div className="row p-3">
-             <div className="col-xxl-5">
+          <div className="col-xxl-5">
             <Link className="dropdown-item text-primary">Data</Link>
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Strategy Consulting
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Processing
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/grocery/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Governance Solution
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Storage Solution
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Quality Management
-            </Link>{" "}
-           
-           
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Modelling Design
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Architecture
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Analytics & Visualization
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Cloud Data Migration
-            </Link>
-          </div>
-          <div className="col-xxl-7">
-            <Link className="dropdown-item text-primary">AI</Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/ai-agent/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-             Custom AI Development
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/HRMS/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-             AI Consulting Strategy
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/E-Commerce/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              AI Business Intelligence
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/E-Commerce/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-             Large Language Models Solutions
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/E-Commerce/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-             AI Personalized Customer Experience
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/E-Commerce/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-            Blockchain
-            </Link>
-           
+            <Link className="dropdown-item" to="#" onClick={onLinkClick}>Strategy Consulting</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Processing</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Governance Solution</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Storage Solution</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Quality Management</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Modelling Design</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Architecture</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Analytics & Visualization</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Cloud Data Migration</Link>
           </div>
 
-         
+          <div className="col-xxl-7">
+            <Link className="dropdown-item text-primary">AI</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Custom AI Development</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>AI Consulting Strategy</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>AI Business Intelligence</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Large Language Models Solutions</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>AI Personalized Customer Experience</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Blockchain</Link>
+          </div>
         </div>
       </div>
     </li>

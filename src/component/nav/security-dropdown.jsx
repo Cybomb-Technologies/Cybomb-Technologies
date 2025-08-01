@@ -1,84 +1,51 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-function Securitydropdown({ onLinkClick, onDropdownClick }) {
+function Securitydropdown({ onLinkClick, isMobile }) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleToggleClick = (e) => {
+    if (isMobile) {
+      e.preventDefault();
+      setIsDropdownOpen((prev) => !prev);
+    }
+  };
+
   return (
     <li className="nav-item dropdown custom-nav-item position-static">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
+        to="#"
         role="button"
-        aria-expanded="false"
-          data-bs-toggle="dropdown"
-        // onClick={onDropdownClick}
+        aria-expanded={isDropdownOpen ? "true" : "false"}
+        onClick={handleToggleClick}
       >
-       Security
+        Security
       </Link>
 
-      <div className="dropdown-menu mega-dropdown w-auto">
-    
-          <div className="row p-3">
-            <div className="col-sm-12">
-             <Link
-                className="dropdown-item"
-                // to="/demo/ai-agent/"
-                onClick={onLinkClick}
-              >
-                {/* <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "} */}
-                AWSWeb Application Security
-              </Link>
-              <Link
-                className="dropdown-item"
-                // to="/demo/ai-agent/"
-                onClick={onLinkClick}
-              >
-                {/* <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "} */}
-               Mobile Application Services
-              </Link>
-              <Link
-                className="dropdown-item"
-                // to="/demo/HRMS/"
-                onClick={onLinkClick}
-              >
-                {/* <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "} */}
-               API Security
-              </Link>
-              <Link
-                className="dropdown-item"
-                // to="/demo/E-Commerce/"
-                onClick={onLinkClick}
-              >
-                {/* <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "} */}
+      <div
+        className={`dropdown-menu mega-dropdown w-auto ${isMobile && isDropdownOpen ? "show" : ""}`}
+        style={isMobile ? { display: isDropdownOpen ? "block" : "none" } : {}}
+      >
+        <div className="row p-3">
+          <div className="col-sm-12">
+            <Link className="dropdown-item" onClick={onLinkClick}>
+              AWS Web Application Security
+            </Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>
+              Mobile Application Services
+            </Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>
+              API Security
+            </Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>
               Cloud Security Services
-              </Link>
-
-                <Link
-                className="dropdown-item"
-                // to="/demo/E-Commerce/"
-                onClick={onLinkClick}
-              >
-                {/* <i
-                  className="bi bi-arrow-right arrow-right-icon bg-primary"
-                  style={{ fontSize: "10px" }}
-                ></i>{" "} */}
-            Network Penetration Testing
-              </Link>
-           
-        
-            </div>
-
+            </Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>
+              Network Penetration Testing
+            </Link>
           </div>
-       
+        </div>
       </div>
     </li>
   );

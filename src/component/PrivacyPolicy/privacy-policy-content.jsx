@@ -3,7 +3,7 @@ function Privacypolicycontent() {
   return (
     <>
       <section className="privacy-policy-content">
-        <div className="container">
+        <div className="container p-5" style={{border:"4px solid black"}}>
           <h2 className="text-primary">Privacy Policy – Cybomb Technologies</h2>
           <h5 className="mt-3">A Legal Disclaimer</h5>
           <div className="mt-4">
@@ -157,10 +157,27 @@ function Privacypolicycontent() {
               Privacy Policy, please contact us:
             </p>
             <ul className="list-unstyled">
-              <li>📧  <a href="mailto:support@cybomb.com">Email: Support@cybomb.com</a></li>
-              <li>🌐  <a href="https://cybotechnologies.com/">Website: www.cybotechnologies.com</a></li>
+              <li>
+                📧{" "}
+                <a href="mailto:support@cybomb.com">
+                  Email: Support@cybomb.com
+                </a>
+              </li>
+              <li>
+                🌐{" "}
+                <a href="https://cybotechnologies.com/">
+                  Website: www.cybotechnologies.com
+                </a>
+              </li>
             </ul>
-            <p>By using <a href="https://cybotechnologies.com/">www.cybotechnologies.com</a>, you agree to this Privacy Policy. If you do not agree, please refrain from using our website and services.</p>
+            <p>
+              By using{" "}
+              <a href="https://cybotechnologies.com/">
+                www.cybotechnologies.com
+              </a>
+              , you agree to this Privacy Policy. If you do not agree, please
+              refrain from using our website and services.
+            </p>
           </div>
         </div>
       </section>

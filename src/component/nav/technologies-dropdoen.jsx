@@ -1,19 +1,31 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-function Technologiesdropdown({ onLinkClick }) {
+function Technologiesdropdown({ onLinkClick, isMobile }) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleToggleClick = (e) => {
+    if (isMobile) {
+      e.preventDefault();
+      setIsDropdownOpen((prev) => !prev);
+    }
+  };
   return (
-    <li className="nav-item dropdown custom-nav-item position-static">
+   <li className="nav-item dropdown custom-nav-item position-static">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
+        to="#"
         role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-        // onClick={onDropdownClick}
+        aria-expanded={isDropdownOpen ? "true" : "false"}
+        onClick={handleToggleClick}
       >
         Technologies
       </Link>
 
-      <div className="dropdown-menu mega-dropdown container">
+       <div
+        className={`dropdown-menu mega-dropdown container ${isMobile && isDropdownOpen ? "show" : ""}`}
+        style={isMobile ? { display: isDropdownOpen ? "block" : "none" } : {}}
+      >
         <div className="row">
           <div className="col-xxl-2">
             <Link className="dropdown-item text-primary">Mobile Apps</Link>
