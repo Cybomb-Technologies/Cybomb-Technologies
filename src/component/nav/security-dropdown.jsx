@@ -5,10 +5,9 @@ function Securitydropdown({ onLinkClick, onDropdownClick }) {
     <li className="nav-item dropdown custom-nav-item position-static">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
-        to="/services"
         role="button"
-        data-bs-toggle="dropdown"
         aria-expanded="false"
+          data-bs-toggle="dropdown"
         // onClick={onDropdownClick}
       >
        Security
@@ -18,9 +17,9 @@ function Securitydropdown({ onLinkClick, onDropdownClick }) {
     
           <div className="row p-3">
             <div className="col-sm-12">
-             <a
+             <Link
                 className="dropdown-item"
-                href="/demo/ai-agent/"
+                // to="/demo/ai-agent/"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -28,10 +27,10 @@ function Securitydropdown({ onLinkClick, onDropdownClick }) {
                   style={{ fontSize: "10px" }}
                 ></i>{" "} */}
                 AWSWeb Application Security
-              </a>
-              <a
+              </Link>
+              <Link
                 className="dropdown-item"
-                href="/demo/ai-agent/"
+                // to="/demo/ai-agent/"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -39,10 +38,10 @@ function Securitydropdown({ onLinkClick, onDropdownClick }) {
                   style={{ fontSize: "10px" }}
                 ></i>{" "} */}
                Mobile Application Services
-              </a>
-              <a
+              </Link>
+              <Link
                 className="dropdown-item"
-                href="/demo/HRMS/"
+                // to="/demo/HRMS/"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -50,10 +49,10 @@ function Securitydropdown({ onLinkClick, onDropdownClick }) {
                   style={{ fontSize: "10px" }}
                 ></i>{" "} */}
                API Security
-              </a>
-              <a
+              </Link>
+              <Link
                 className="dropdown-item"
-                href="/demo/E-Commerce/"
+                // to="/demo/E-Commerce/"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -61,11 +60,11 @@ function Securitydropdown({ onLinkClick, onDropdownClick }) {
                   style={{ fontSize: "10px" }}
                 ></i>{" "} */}
               Cloud Security Services
-              </a>
+              </Link>
 
-                <a
+                <Link
                 className="dropdown-item"
-                href="/demo/E-Commerce/"
+                // to="/demo/E-Commerce/"
                 onClick={onLinkClick}
               >
                 {/* <i
@@ -73,7 +72,7 @@ function Securitydropdown({ onLinkClick, onDropdownClick }) {
                   style={{ fontSize: "10px" }}
                 ></i>{" "} */}
             Network Penetration Testing
-              </a>
+              </Link>
            
         
             </div>

@@ -5,10 +5,9 @@ function Successstoriesdropdown({ onLinkClick, onDropdownClick }) {
     <li className="nav-item dropdown custom-nav-item">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
-        to="/services"
         role="button"
-        data-bs-toggle="dropdown"
         aria-expanded="false"
+          data-bs-toggle="dropdown"
         // onClick={handlePortfolioClick}
       >
         Success Stories
@@ -16,9 +15,9 @@ function Successstoriesdropdown({ onLinkClick, onDropdownClick }) {
 
       <ul className="dropdown-menu mt-3">
         <li>
-          <a
+          <Link
             className="dropdown-item"
-            href="/demo/ai-agent/"
+            // to="/demo/ai-agent/"
             onClick={onLinkClick}
           >
             {/* <i
@@ -26,12 +25,12 @@ function Successstoriesdropdown({ onLinkClick, onDropdownClick }) {
               style={{ fontSize: "10px" }}
             ></i>{" "} */}
            Case Studies
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             className="dropdown-item"
-            href="/demo/HRMS/"
+            // to="/demo/HRMS/"
             onClick={onLinkClick}
           >
             {/* <i
@@ -39,7 +38,7 @@ function Successstoriesdropdown({ onLinkClick, onDropdownClick }) {
               style={{ fontSize: "10px" }}
             ></i>{" "} */}
             Portfolio
-          </a>
+          </Link>
         </li>
        
       </ul>

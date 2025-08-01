@@ -5,7 +5,7 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
     <li className="nav-item dropdown custom-nav-item position-static">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
-        to="/services"
+        // to="/services"
         role="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
@@ -17,9 +17,9 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
       <div className="dropdown-menu mega-dropdown container">
         <div className="row">
           <div className="col-xxl-3">
-            <a
+            <Link
               className="dropdown-item"
-              href="/demo/ai-agent/"
+              // to="/demo/ai-agent/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -27,10 +27,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Travel & Hospitality
-            </a>
-             <a
+            </Link>
+             <Link
               className="dropdown-item"
-              href="/demo/E-Commerce/"
+              // to="/demo/E-Commerce/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -38,11 +38,11 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
              Media & Entertainment
-            </a>
+            </Link>
            
-            <a
+            <Link
               className="dropdown-item"
-              href="/demo/HRMS/"
+              // to="/demo/HRMS/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -50,10 +50,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Logistics
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/E-Commerce/"
+              // to="/demo/E-Commerce/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -61,10 +61,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
              Energy & Utilities
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/E-Commerce/"
+              // to="/demo/E-Commerce/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -72,15 +72,15 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Mortgage & Lending
-            </a>
+            </Link>
            
           </div>
 
           <div className="col-xxl-3">
           
-            <a
+            <Link
               className="dropdown-item"
-              href="/demo/grocery/"
+              // to="/demo/grocery/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -88,10 +88,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               CRM Solutions
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -99,10 +99,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Automotive
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/grocery/"
+              // to="/demo/grocery/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -110,10 +110,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
              Sports
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -121,10 +121,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
              Sports
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -132,15 +132,15 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
            Banking & Payment
-            </a>{" "}
+            </Link>{" "}
            
           </div>
 
           <div className="col-xxl-3">
             
-            <a
+            <Link
               className="dropdown-item"
-              href="/demo/grocery/"
+              // to="/demo/grocery/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -148,10 +148,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Aviation
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -159,10 +159,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
             Construction
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -170,10 +170,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
              Construction
-            </a>{" "}
-            <a
+            </Link>{" "}
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -181,10 +181,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
             Oil & Gas
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -192,15 +192,15 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Publishing
-            </a>
+            </Link>
           
           </div>
 
           <div className="col-xxl-3">
            
-            <a
+            <Link
               className="dropdown-item"
-              href="/demo/taxi-booking-app"
+              // to="/demo/taxi-booking-app"
               onClick={onLinkClick}
             >
               {/* <i
@@ -208,10 +208,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
              Fintech
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/real-estate-app"
+              // to="/demo/real-estate-app"
               onClick={onLinkClick}
             >
               {/* <i
@@ -219,10 +219,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
             Real Estate
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/real-estate-app"
+              // to="/demo/real-estate-app"
               onClick={onLinkClick}
             >
               {/* <i
@@ -230,10 +230,10 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
              Healthcare
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/real-estate-app"
+              // to="/demo/real-estate-app"
               onClick={onLinkClick}
             >
               {/* <i
@@ -241,7 +241,7 @@ function Industriesdropdown({ onLinkClick, onDropdownClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
             Retail/FMCG
-            </a>
+            </Link>
         
           </div>
         </div>

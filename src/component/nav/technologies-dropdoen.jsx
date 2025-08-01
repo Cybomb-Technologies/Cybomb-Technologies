@@ -5,7 +5,6 @@ function Technologiesdropdown({ onLinkClick }) {
     <li className="nav-item dropdown custom-nav-item position-static">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
-        to="/services"
         role="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
@@ -17,10 +16,10 @@ function Technologiesdropdown({ onLinkClick }) {
       <div className="dropdown-menu mega-dropdown container">
         <div className="row">
           <div className="col-xxl-2">
-            <a className="dropdown-item text-primary">Mobile Apps</a>
+            <Link className="dropdown-item text-primary">Mobile Apps</Link>
             <Link
               className="dropdown-item"
-              to="technologies/android-app-development"
+              // to="technologies/android-app-development"
               onClick={onLinkClick}
             >
               {/* <i
@@ -29,9 +28,9 @@ function Technologiesdropdown({ onLinkClick }) {
               ></i>{" "} */}
               Android
             </Link>
-            <a
+            <Link
               className="dropdown-item"
-              href="/demo/HRMS/"
+              // to="/demo/HRMS/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -39,10 +38,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               React Native
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/E-Commerce/"
+              // to="/demo/E-Commerce/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -50,10 +49,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Ios
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/E-Commerce/"
+              // to="/demo/E-Commerce/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -61,10 +60,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Flutter
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/E-Commerce/"
+              // to="/demo/E-Commerce/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -72,10 +71,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Swift
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/E-Commerce/"
+              // to="/demo/E-Commerce/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -83,10 +82,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Kotlin
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/E-Commerce/"
+              // to="/demo/E-Commerce/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -94,14 +93,14 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Xamarin
-            </a>
+            </Link>
           </div>
 
           <div className="col-xxl-2">
-            <a className="dropdown-item text-primary">Ecommerce</a>
-            <a
+            <Link className="dropdown-item text-primary">Ecommerce</Link>
+            <Link
               className="dropdown-item"
-              href="/demo/grocery/"
+              // to="/demo/grocery/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -109,10 +108,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Adobe Commerce
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -120,10 +119,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Shopify
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/grocery/"
+              // to="/demo/grocery/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -131,10 +130,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Symfony
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -142,10 +141,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               WooCommerce
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -153,10 +152,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               BigCommerce
-            </a>{" "}
-            <a
+            </Link>{" "}
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -164,16 +163,16 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Magento
-            </a>
+            </Link>
           </div>
 
           <div className="col-md-4">
-            <a className="dropdown-item text-primary">CMS</a>
+            <Link className="dropdown-item text-primary">CMS</Link>
             <div className="row">
               <div className="col-md-6">
-                <a
+                <Link
                   className="dropdown-item"
-                  href="/demo/grocery/"
+                  // to="/demo/grocery/"
   
                   onClick={onLinkClick}
                 >
@@ -182,10 +181,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Wordpress
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/school-mangement"
+                  // to="/demo/school-mangement"
   
                   onClick={onLinkClick}
                 >
@@ -194,10 +193,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Drupal
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/school-mangement"
+                  // to="/demo/school-mangement"
   
                   onClick={onLinkClick}
                 >
@@ -206,10 +205,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Craft
-                </a>{" "}
-                <a
+                </Link>{" "}
+                <Link
                   className="dropdown-item"
-                  href="/demo/school-mangement"
+                  // to="/demo/school-mangement"
   
                   onClick={onLinkClick}
                 >
@@ -218,10 +217,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Acquia
-                </a>
-                 <a
+                </Link>
+                 <Link
                   className="dropdown-item"
-                  href="/demo/school-mangement"
+                  // to="/demo/school-mangement"
   
                   onClick={onLinkClick}
                 >
@@ -230,10 +229,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Joomla
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/school-mangement"
+                  // to="/demo/school-mangement"
   
                   onClick={onLinkClick}
                 >
@@ -242,13 +241,13 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   SharePoint
-                </a>
+                </Link>
               </div>
               <div className="col-md-6">
                
-                <a
+                <Link
                   className="dropdown-item"
-                  href="/demo/school-mangement"
+                  // to="/demo/school-mangement"
   
                   onClick={onLinkClick}
                 >
@@ -257,10 +256,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Umbraco
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/school-mangement"
+                  // to="/demo/school-mangement"
   
                   onClick={onLinkClick}
                 >
@@ -269,10 +268,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Sitecore
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/school-mangement"
+                  // to="/demo/school-mangement"
   
                   onClick={onLinkClick}
                 >
@@ -281,10 +280,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Pantheon
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/school-mangement"
+                  // to="/demo/school-mangement"
   
                   onClick={onLinkClick}
                 >
@@ -293,19 +292,19 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   AEM Development
-                </a>
+                </Link>
               </div>
             </div>
           </div>
 
           <div className="col-md-4">
-            <a className="dropdown-item text-primary">Custom Development</a>
+            <Link className="dropdown-item text-primary">Custom Development</Link>
             <div className="row">
               <div className="col-md-6">
                 {" "}
-                <a
+                <Link
                   className="dropdown-item"
-                  href="/demo/taxi-booking-app"
+                  // to="/demo/taxi-booking-app"
   
                   onClick={onLinkClick}
                 >
@@ -314,10 +313,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   PHP
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/real-estate-app"
+                  // to="/demo/real-estate-app"
   
                   onClick={onLinkClick}
                 >
@@ -326,10 +325,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Laravel
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/real-estate-app"
+                  // to="/demo/real-estate-app"
   
                   onClick={onLinkClick}
                 >
@@ -338,10 +337,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   ROR
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/real-estate-app"
+                  // to="/demo/real-estate-app"
   
                   onClick={onLinkClick}
                 >
@@ -350,10 +349,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Power Platform
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/real-estate-app"
+                  // to="/demo/real-estate-app"
   
                   onClick={onLinkClick}
                 >
@@ -362,10 +361,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   HTML5
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/real-estate-app"
+                  // to="/demo/real-estate-app"
   
                   onClick={onLinkClick}
                 >
@@ -374,10 +373,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   JavaScript
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/real-estate-app"
+                  // to="/demo/real-estate-app"
   
                   onClick={onLinkClick}
                 >
@@ -386,12 +385,12 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Zoho Creator
-                </a>
+                </Link>
               </div>
               <div className="col-md-6">
-                <a
+                <Link
                   className="dropdown-item"
-                  href="/demo/taxi-booking-app"
+                  // to="/demo/taxi-booking-app"
   
                   onClick={onLinkClick}
                 >
@@ -400,10 +399,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Python
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/real-estate-app"
+                  // to="/demo/real-estate-app"
   
                   onClick={onLinkClick}
                 >
@@ -412,10 +411,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   DotNet
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/real-estate-app"
+                  // to="/demo/real-estate-app"
   
                   onClick={onLinkClick}
                 >
@@ -424,10 +423,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   NodeJS
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/real-estate-app"
+                  // to="/demo/real-estate-app"
   
                   onClick={onLinkClick}
                 >
@@ -436,10 +435,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Angular
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/real-estate-app"
+                  // to="/demo/real-estate-app"
   
                   onClick={onLinkClick}
                 >
@@ -448,10 +447,10 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   Spring
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
-                  href="/demo/real-estate-app"
+                  // to="/demo/real-estate-app"
   
                   onClick={onLinkClick}
                 >
@@ -460,7 +459,7 @@ function Technologiesdropdown({ onLinkClick }) {
                     style={{ fontSize: "10px" }}
                   ></i>{" "} */}
                   C#
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -468,10 +467,10 @@ function Technologiesdropdown({ onLinkClick }) {
         <hr />
         <div className="row">
           <div className="col-xxl-2">
-            <a className="dropdown-item text-primary">Full Stack Development</a>
-            <a
+            <Link className="dropdown-item text-primary">Full Stack Development</Link>
+            <Link
               className="dropdown-item"
-              href="/demo/ai-agent/"
+              // to="/demo/ai-agent/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -479,13 +478,13 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Full Stack MERN
-            </a>
+            </Link>
           </div>
           <div className="col-xxl-2">
-            <a className="dropdown-item text-primary">CRM</a>
-            <a
+            <Link className="dropdown-item text-primary">CRM</Link>
+            <Link
               className="dropdown-item"
-              href="/demo/ai-agent/"
+              // to="/demo/ai-agent/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -493,10 +492,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               ServiceNow
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/ai-agent/"
+              // to="/demo/ai-agent/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -504,14 +503,14 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Salesforce
-            </a>
+            </Link>
           </div>
 
           <div className="col-xxl-2">
-            <a className="dropdown-item text-primary">Games</a>
-            <a
+            <Link className="dropdown-item text-primary">Games</Link>
+            <Link
               className="dropdown-item"
-              href="/demo/ai-agent/"
+              // to="/demo/ai-agent/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -519,10 +518,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Unity
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/ai-agent/"
+              // to="/demo/ai-agent/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -530,13 +529,13 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Unreal
-            </a>
+            </Link>
           </div>
           <div className="col-xxl-2">
-            <a className="dropdown-item text-primary">Cloud</a>
-            <a
+            <Link className="dropdown-item text-primary">Cloud</Link>
+            <Link
               className="dropdown-item"
-              href="/demo/ai-agent/"
+              // to="/demo/ai-agent/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -544,10 +543,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               AWS
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/ai-agent/"
+              // to="/demo/ai-agent/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -555,13 +554,13 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Azure
-            </a>
+            </Link>
           </div>
           <div className="col-xxl-2">
-            <a className="dropdown-item text-primary">Other</a>
-            <a
+            <Link className="dropdown-item text-primary">Other</Link>
+            <Link
               className="dropdown-item"
-              href="/demo/ai-agent/"
+              // to="/demo/ai-agent/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -569,10 +568,10 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Golang
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/ai-agent/"
+              // to="/demo/ai-agent/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -580,7 +579,7 @@ function Technologiesdropdown({ onLinkClick }) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               AR/VR
-            </a>
+            </Link>
           </div>
         </div>
       </div>

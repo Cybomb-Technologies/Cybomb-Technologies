@@ -5,7 +5,7 @@ function Datadropdown({ onLinkClick}) {
     <li className="nav-item dropdown custom-nav-item position-static">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
-         to="#" 
+        //  to="#" 
         role="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
@@ -17,10 +17,10 @@ function Datadropdown({ onLinkClick}) {
       <div className="dropdown-menu mega-dropdown w-auto">
         <div className="row p-3">
              <div className="col-xxl-5">
-            <a className="dropdown-item text-primary">Data</a>
-            <a
+            <Link className="dropdown-item text-primary">Data</Link>
+            <Link
               className="dropdown-item"
-              href="/demo/grocery/"
+              to="#"
               onClick={onLinkClick}
             >
               {/* <i
@@ -28,10 +28,10 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Strategy Consulting
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -39,10 +39,10 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Processing
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/grocery/"
+              // to="/demo/grocery/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -50,10 +50,10 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Governance Solution
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -61,10 +61,10 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Storage Solution
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -72,12 +72,12 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Quality Management
-            </a>{" "}
+            </Link>{" "}
            
            
-            <a
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -85,10 +85,10 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Modelling Design
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -96,10 +96,10 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Architecture
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -107,10 +107,10 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Analytics & Visualization
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/school-mangement"
+              // to="/demo/school-mangement"
               onClick={onLinkClick}
             >
               {/* <i
@@ -118,13 +118,13 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               Cloud Data Migration
-            </a>
+            </Link>
           </div>
           <div className="col-xxl-7">
-            <a className="dropdown-item text-primary">AI</a>
-            <a
+            <Link className="dropdown-item text-primary">AI</Link>
+            <Link
               className="dropdown-item"
-              href="/demo/ai-agent/"
+              // to="/demo/ai-agent/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -132,10 +132,10 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
              Custom AI Development
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/HRMS/"
+              // to="/demo/HRMS/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -143,10 +143,10 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
              AI Consulting Strategy
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/E-Commerce/"
+              // to="/demo/E-Commerce/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -154,10 +154,10 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
               AI Business Intelligence
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/E-Commerce/"
+              // to="/demo/E-Commerce/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -165,10 +165,10 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
              Large Language Models Solutions
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/E-Commerce/"
+              // to="/demo/E-Commerce/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -176,10 +176,10 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
              AI Personalized Customer Experience
-            </a>
-            <a
+            </Link>
+            <Link
               className="dropdown-item"
-              href="/demo/E-Commerce/"
+              // to="/demo/E-Commerce/"
               onClick={onLinkClick}
             >
               {/* <i
@@ -187,7 +187,7 @@ function Datadropdown({ onLinkClick}) {
                 style={{ fontSize: "10px" }}
               ></i>{" "} */}
             Blockchain
-            </a>
+            </Link>
            
           </div>
 
