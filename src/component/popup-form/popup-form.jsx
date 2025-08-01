@@ -24,7 +24,7 @@ const PopupForm = () => {
     const timer = setTimeout(() => {
       setShowModal(true);
       setAnimate(true);
-    }, 2000);
+    }, 15000);
     return () => clearTimeout(timer);
   }, []);
 
