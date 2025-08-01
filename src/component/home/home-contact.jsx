@@ -15,7 +15,7 @@ function Homecontact() {
           <div className="row mt-5">
             <div className="col-sm-6" data-aos="zoom-out-up">
               <div className="card p-4 contact-card border-0 shadow" >
-                <h3 className="text-secondary">Contact Information</h3>
+                <h3 className="text-white">Contact Information</h3>
                 <div className="d-flex mt-3 align-items-start">
                   <div className="pt-3">
                     <i className="bi bi-geo-alt-fill contact-icon"></i>

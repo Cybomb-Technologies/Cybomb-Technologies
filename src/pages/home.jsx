@@ -11,8 +11,8 @@ import Homecontact from "../component/home/home-contact";
 import HomeUIUX from "../component/home/home-ui-ux";
 
 function Home() {
-  const websiteUrl = "https://cybotechnologies.com/";
-  const imageUrl = "https://cybotechnologies.com/images/banner-2.jpg";
+  const websiteUrl = "https://www.cybomb.com/";
+  const imageUrl = "https://www.cybomb.com/images/banner-2.jpg";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -83,7 +83,7 @@ function Home() {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
-      {/* 🧩 Home Page Sections */}
+  
       <HomeBanner />
       <HomeService />
       <HomeKeydiffer />
