@@ -19,7 +19,7 @@ function Clouddropdown({ onLinkClick}) {
           <a
             className="dropdown-item"
             href="/Services/aws-cloud"
-            target="_blank"
+
             onClick={onLinkClick}
           >
             {/* <i
@@ -32,7 +32,7 @@ function Clouddropdown({ onLinkClick}) {
         <li>
           <a
             className="dropdown-item"
-            href="/demo/HRMS/"
+            href="/Services/azure-cloud"
             onClick={onLinkClick}
           >
             {/* <i
@@ -45,7 +45,7 @@ function Clouddropdown({ onLinkClick}) {
          <li>
           <a
             className="dropdown-item"
-            href="/demo/HRMS/"
+            href="/Services/google-cloud"
             onClick={onLinkClick}
           >
             {/* <i
@@ -58,7 +58,7 @@ function Clouddropdown({ onLinkClick}) {
          <li>
           <a
             className="dropdown-item"
-            href="/demo/HRMS/"
+            href="/Services/devops"
             onClick={onLinkClick}
           >
             {/* <i

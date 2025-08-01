@@ -28,27 +28,15 @@ import AndoridAppDevelopment from "./component/pages-services/technologies/mobil
 import WebDev from "./component/pages-services/design-development/web-development/web-dev";
 import Ecommdev from "./component/pages-services/design-development/Ecommerce-development/Ecomm-dev";
 
-// ms
-import GameDevelopment from "./component/pages-services/design-development/game-development/game-development";
-//
-//
-//
-//
-//
-
-// sudesh
-
-//
-//
-//
-//
-
-// santhosh
 import SoftwareDevelopment from "./component/pages-services/design-development/software-development/Software-dev";
 import BespokeDevelopment from "./component/pages-services/design-development/bespoke-development/bespoke-dev";
 import SwIntDev from "./component/pages-services/design-development/custom-software-integration-services/sw-int-dev";
 import AwsCloud from "./component/pages-cloud/aws-cloud/aws-cloud";
 import Popupform from "./component/popup-form/popup-form";
+import AwsCloud from "./component/pages-cloud/aws-cloud/aws-cloud"; 
+
+
+
 
 function App() {
   useEffect(() => {
@@ -101,10 +89,20 @@ function App() {
           path="/services/game-development"
           element={<GameDevelopment />}
         />
+        <Route path="/services/crm-services" element ={<CRMServices/>} />
+        {/*<Route path="" element ={} />
+        <Route path="" element ={} />
+        <Route path="" element ={} /> */}
+
+
+        {/* Services - divya*/}
+       
+        <Route path="/services/api-development" element ={<ApiDevelopment/>} />
         {/* <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} /> */}
+
 
         {/* Services - sudesh */}
         <Route path="/services/Ecommerce-development" element={<Ecommdev />} />
@@ -117,24 +115,19 @@ function App() {
         <Route path="" element ={} />
         <Route path="" element ={} /> */}
 
-        {/* Services - santhosh */}
-        <Route path="/services/web-development" element={<WebDev />} />
-        <Route
-          path="/services/software-development"
-          element={<SoftwareDevelopment />}
-        />
-        <Route
-          path="/services/bespoke-development"
-          element={<BespokeDevelopment />}
-        />
-        <Route
-          path="/services/custom-software-integration-services"
-          element={<SwIntDev />}
-        />
+
         <Route path="/services/aws-cloud" element={<AwsCloud />} />
         {/* {<Route path="" element ={} />`}
         <Route path="" element ={} />
         <Route path="" element ={} /> */}
+        <Route path="/services/web-development" element ={<WebDev/>} />
+        <Route path="/services/software-development" element ={<SoftwareDevelopment/>} />
+        <Route path="/services/bespoke-development" element ={<BespokeDevelopment/>} />
+        <Route path="/services/custom-software-integration-services" element ={<SwIntDev/>}/>
+        <Route path="/services/aws-cloud" element ={<AwsCloud/>} />
+        <Route path="/services/azure-cloud" element ={<AzureCloud/>} />
+        <Route path="/services/devops" element ={<DevopsCloud/>}/>
+        <Route path="/services/google-cloud" element ={<GoogleCloud/>} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
