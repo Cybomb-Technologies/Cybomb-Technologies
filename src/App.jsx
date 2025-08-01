@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes } from "react-router-dom";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Popupform from "./component/popup-form/popup-form";
 
 import ScrollToTop from "./component/ScrollToTop";
 import Nav from "./component/nav/nav";
@@ -27,6 +28,7 @@ function App() {
         {emp3Routes}
         {emp4Routes}
       </Routes>
+      <Popupform/>
       <Footer />
     </Router>
   );

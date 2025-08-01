@@ -45,25 +45,24 @@ function Servicedropdown({ onLinkClick, isMobile }) {
           <div className="col-xxl-3">
             <Link className="dropdown-item text-primary">Enterprise Services</Link>
             <Link to="/services/crm-services" className="dropdown-item" onClick={onLinkClick}>CRM Solutions</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Cloud Solutions</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Data Engineering</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>AI/ML</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Salesforce</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>HubSpot</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Zoho</Link>
+            <Link to="/services/cloud-solution" className="dropdown-item" onClick={onLinkClick}>Cloud Solutions</Link>
+            <Link to="/services/data-engineering" className="dropdown-item" onClick={onLinkClick}>Data Engineering</Link>
+            <Link to="/services/ai-ml-services" className="dropdown-item" onClick={onLinkClick}>AI/ML</Link>
+            <Link to="/services/salesforce-services" className="dropdown-item" onClick={onLinkClick}>Salesforce</Link>
+            <Link to="/services/hubspot-services" className="dropdown-item" onClick={onLinkClick}>HubSpot</Link>
+            <Link to="/services/zoho-services" className="dropdown-item" onClick={onLinkClick}>Zoho</Link>
           </div>
 
           {/* Column 3 */}
           <div className="col-xxl-3">
             <Link className="dropdown-item text-primary">Support Services</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Services</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Hosting</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Server Support</Link>
+            <Link to ="services/hosting-service" className="dropdown-item" onClick={onLinkClick}>Hosting</Link>
+            <Link to ="/services/support-service" className="dropdown-item" onClick={onLinkClick}>Server Support</Link>
             <Link className="dropdown-item" onClick={onLinkClick}>Development Support</Link>
             <Link className="dropdown-item" onClick={onLinkClick}>Staff Augmentation</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Digital Fulfilment</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>IT Support Services</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>DevOps</Link>
+            <Link to="/services/digital-fulfilment-support"className="dropdown-item" onClick={onLinkClick}>Digital Fulfilment</Link>
+            <Link to="/services/it-support"className="dropdown-item" onClick={onLinkClick}>IT Support Services</Link>
+            <Link to="/services/devops-support"className="dropdown-item" onClick={onLinkClick}>DevOps</Link>
           </div>
 
           {/* Column 4 */}
