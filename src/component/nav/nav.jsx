@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./nav.css";
 
 import Servicedropdown from "./service-dropdown";
@@ -11,22 +11,28 @@ import Technologiesdropdown from "./technologies-dropdoen";
 import Successstoriesdropdown from "./success-stories";
 
 function Nav() {
-
   const location = useLocation();
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const isMobile = windowWidth < 1400;
 
   const handleCloseOffcanvas = () => {
     const closeBtn = document.querySelector(
       "#offcanvasWithBothOptions .btn-close"
     );
-    
     if (closeBtn) closeBtn.click();
   };
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const navbar = document.querySelector(".custom-navbar");
 
     if (location.pathname === "/") {
-      // Home page: make it transparent first
       navbar?.classList.add("transparent");
 
       const handleScroll = () => {
@@ -45,7 +51,6 @@ function Nav() {
         navbar?.classList.remove("transparent");
       };
     } else {
-      // Other pages: remove scroll logic and show solid color
       navbar?.classList.remove("transparent");
       navbar?.classList.remove("scrolled");
     }
@@ -90,11 +95,11 @@ function Nav() {
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                <Servicedropdown />
-                <Clouddropdown />
-                <Datadropdown />
-                <Securitydropdown />
-                <Industriesdropdown />
+                <Servicedropdown onLinkClick={handleCloseOffcanvas} isMobile={isMobile} />
+                <Clouddropdown onLinkClick={handleCloseOffcanvas} isMobile={isMobile} />
+                <Datadropdown onLinkClick={handleCloseOffcanvas} isMobile={isMobile} />
+                <Securitydropdown onLinkClick={handleCloseOffcanvas} isMobile={isMobile} />
+                <Industriesdropdown onLinkClick={handleCloseOffcanvas} isMobile={isMobile} />
 
                 <li className="nav-item custom-nav-item">
                   <Link
@@ -106,8 +111,8 @@ function Nav() {
                   </Link>
                 </li>
 
-                <Technologiesdropdown />
-                <Successstoriesdropdown />
+                <Technologiesdropdown onLinkClick={handleCloseOffcanvas} isMobile={isMobile} />
+                <Successstoriesdropdown onLinkClick={handleCloseOffcanvas} isMobile={isMobile} />
               </ul>
             </div>
           </div>

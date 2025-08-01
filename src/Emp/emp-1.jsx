@@ -19,6 +19,8 @@ import Career from "../pages/career";
 import Faq from "../pages/faq";
 import Ecommdev from "../component/pages-services/design-development/Ecommerce-development/Ecomm-dev";
 
+
+
 const emp1Routes = (
   <>
     <Route path="/" element={<Home />} />
@@ -46,6 +48,8 @@ const emp1Routes = (
     <Route path="/terms" element={<Terms />} />
     <Route path="/refund-policy" element={<Refundpolicy />} />
     <Route path="/services/Ecommerce-development" element ={ <Ecommdev/>} />
+    <Route path="*" element ={ <NotFoundPage/>} />
+    
   </>
 );
 

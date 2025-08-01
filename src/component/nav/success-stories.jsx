@@ -1,46 +1,42 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-function Successstoriesdropdown({ onLinkClick, onDropdownClick }) {
+function Successstoriesdropdown({ onLinkClick, isMobile }) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleToggleClick = (e) => {
+    if (isMobile) {
+      e.preventDefault();
+      setIsDropdownOpen((prev) => !prev);
+    }
+  };
+
   return (
     <li className="nav-item dropdown custom-nav-item">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
+        to="#"
         role="button"
-        aria-expanded="false"
-          data-bs-toggle="dropdown"
-        // onClick={handlePortfolioClick}
+        aria-expanded={isDropdownOpen ? "true" : "false"}
+        onClick={handleToggleClick}
       >
         Success Stories
       </Link>
 
-      <ul className="dropdown-menu mt-3">
+      <ul
+        className={`dropdown-menu mt-3 ${isMobile && isDropdownOpen ? "show" : ""}`}
+        style={isMobile ? { display: isDropdownOpen ? "block" : "none" } : {}}
+      >
         <li>
-          <Link
-            className="dropdown-item"
-            // to="/demo/ai-agent/"
-            onClick={onLinkClick}
-          >
-            {/* <i
-              className="bi bi-arrow-right arrow-right-icon bg-primary"
-              style={{ fontSize: "10px" }}
-            ></i>{" "} */}
-           Case Studies
+          <Link className="dropdown-item" onClick={onLinkClick}>
+            Case Studies
           </Link>
         </li>
         <li>
-          <Link
-            className="dropdown-item"
-            // to="/demo/HRMS/"
-            onClick={onLinkClick}
-          >
-            {/* <i
-              className="bi bi-arrow-right arrow-right-icon bg-primary"
-              style={{ fontSize: "10px" }}
-            ></i>{" "} */}
+          <Link className="dropdown-item" onClick={onLinkClick}>
             Portfolio
           </Link>
         </li>
-       
       </ul>
     </li>
   );

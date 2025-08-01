@@ -1,248 +1,60 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-function Industriesdropdown({ onLinkClick, onDropdownClick }) {
+function Industriesdropdown({ onLinkClick, isMobile }) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleToggleClick = (e) => {
+    if (isMobile) {
+      e.preventDefault();
+      setIsDropdownOpen((prev) => !prev);
+    }
+  };
+
   return (
     <li className="nav-item dropdown custom-nav-item position-static">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
-        // to="/services"
+        to="#"
         role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-        // onClick={onDropdownClick}
+        aria-expanded={isDropdownOpen ? "true" : "false"}
+        onClick={handleToggleClick}
       >
         Industries
       </Link>
 
-      <div className="dropdown-menu mega-dropdown container">
+      <div
+        className={`dropdown-menu mega-dropdown container ${isMobile && isDropdownOpen ? "show" : ""}`}
+        style={isMobile ? { display: isDropdownOpen ? "block" : "none" } : {}}
+      >
         <div className="row">
           <div className="col-xxl-3">
-            <Link
-              className="dropdown-item"
-              // to="/demo/ai-agent/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Travel & Hospitality
-            </Link>
-             <Link
-              className="dropdown-item"
-              // to="/demo/E-Commerce/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-             Media & Entertainment
-            </Link>
-           
-            <Link
-              className="dropdown-item"
-              // to="/demo/HRMS/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Logistics
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/E-Commerce/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-             Energy & Utilities
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/E-Commerce/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Mortgage & Lending
-            </Link>
-           
+            <Link className="dropdown-item" onClick={onLinkClick}>Travel & Hospitality</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Media & Entertainment</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Logistics</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Energy & Utilities</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Mortgage & Lending</Link>
           </div>
 
           <div className="col-xxl-3">
-          
-            <Link
-              className="dropdown-item"
-              // to="/demo/grocery/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              CRM Solutions
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Automotive
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/grocery/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-             Sports
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-             Sports
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-           Banking & Payment
-            </Link>{" "}
-           
+            <Link className="dropdown-item" onClick={onLinkClick}>CRM Solutions</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Automotive</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Sports</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Banking & Payment</Link>
           </div>
 
           <div className="col-xxl-3">
-            
-            <Link
-              className="dropdown-item"
-              // to="/demo/grocery/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Aviation
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-            Construction
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-             Construction
-            </Link>{" "}
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-            Oil & Gas
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Publishing
-            </Link>
-          
+            <Link className="dropdown-item" onClick={onLinkClick}>Aviation</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Construction</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Oil & Gas</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Publishing</Link>
           </div>
 
           <div className="col-xxl-3">
-           
-            <Link
-              className="dropdown-item"
-              // to="/demo/taxi-booking-app"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-             Fintech
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/real-estate-app"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-            Real Estate
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/real-estate-app"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-             Healthcare
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/real-estate-app"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-            Retail/FMCG
-            </Link>
-        
+            <Link className="dropdown-item" onClick={onLinkClick}>Fintech</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Real Estate</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Healthcare</Link>
+            <Link className="dropdown-item" onClick={onLinkClick}>Retail/FMCG</Link>
           </div>
         </div>
       </div>
