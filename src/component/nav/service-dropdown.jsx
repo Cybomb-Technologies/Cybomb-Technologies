@@ -57,7 +57,7 @@ function Servicedropdown({ onLinkClick, isMobile }) {
           <div className="col-xxl-3">
             <Link className="dropdown-item text-primary">Support Services</Link>
             <Link to ="services/hosting-service" className="dropdown-item" onClick={onLinkClick}>Hosting</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Server Support</Link>
+            <Link to ="/services/support-service" className="dropdown-item" onClick={onLinkClick}>Server Support</Link>
             <Link className="dropdown-item" onClick={onLinkClick}>Development Support</Link>
             <Link className="dropdown-item" onClick={onLinkClick}>Staff Augmentation</Link>
             <Link className="dropdown-item" onClick={onLinkClick}>Digital Fulfilment</Link>
