@@ -1,49 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes } from "react-router-dom";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import ScrollToTop from "./component/ScrollToTop";
 import Nav from "./component/nav/nav";
 import Footer from "./component/footer/footer";
-import Home from "./pages/home";
-import About from "./pages/about";
-import Services from "./component/services/services";
-import Mobileappservice from "./pages/mobile-app-service";
-import Webappservice from "./pages/web-app-service";
-import Aimachinelearning from "./pages/ai-machine-learning";
-import Saasproduct from "./pages/saas-product";
-import Uiuxservices from "./pages/ui-ux-service";
-import Softwareconsulting from "./pages/software-consulting ";
-import Prortfolio from "./pages/portfolio";
-import Contact from "./pages/contact";
-import Blog from "./pages/blog";
-import NotFoundPage from "./pages/404";
-import Privacypolicy from "./pages/privacy-policy";
-import Terms from "./pages/terms";
-import Refundpolicy from "./pages/refund-policy";
-import Career from "./pages/career";
-import Faq from "./pages/faq";
-import MobileAppDevelopment from "./component/pages-services/design-development/mobile-app-development/mobile-app-development";
-import AndoridAppDevelopment from "./component/pages-services/technologies/mobile-apps/android-app-dev/android-app-development";
-import WebDev from "./component/pages-services/design-development/web-development/web-dev";
-import Ecommdev from "./component/pages-services/design-development/Ecommerce-development/Ecomm-dev";
 
-import SoftwareDevelopment from "./component/pages-services/design-development/software-development/Software-dev";
-import BespokeDevelopment from "./component/pages-services/design-development/bespoke-development/bespoke-dev";
-import SwIntDev from "./component/pages-services/design-development/custom-software-integration-services/sw-int-dev";
-import AwsCloud from "./component/pages-cloud/aws-cloud/aws-cloud";
-import Popupform from "./component/popup-form/popup-form";
-import AwsCloud from "./component/pages-cloud/aws-cloud/aws-cloud"; 
-
-
-
+import emp1Routes from "./Emp/emp-1";
+import emp2Routes from "./Emp/emp-2";
+import emp3Routes from "./Emp/emp-3";
+import emp4Routes from "./Emp/emp-4";
 
 function App() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-    });
+    AOS.init({ duration: 1000, once: false });
   }, []);
 
   return (
@@ -51,88 +22,12 @@ function App() {
       <ScrollToTop />
       <Nav />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/mobile-app" element={<Mobileappservice />} />
-        <Route path="/services/web-app" element={<Webappservice />} />
-        <Route
-          path="/services/ai-machine-learning"
-          element={<Aimachinelearning />}
-        />
-        <Route path="/services/saas-product" element={<Saasproduct />} />
-        <Route path="/services/ui-ux" element={<Uiuxservices />} />
-        <Route
-          path="/services/software-consulting-Strategy"
-          element={<Softwareconsulting />}
-        />
-        <Route path="/portfolio" element={<Prortfolio />} />
-        <Route path="/career" element={<Career />} />
-        <Route path="/faq" element={<Faq />} />
-
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/privacy-policy" element={<Privacypolicy />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/refund-policy" element={<Refundpolicy />} />
-
-        {/* Services - ms*/}
-        <Route
-          path="/services/mobile-app-development"
-          element={<MobileAppDevelopment />}
-        />
-        <Route
-          path="/technologies/android-app-development"
-          element={<AndoridAppDevelopment />}
-        />
-        <Route
-          path="/services/game-development"
-          element={<GameDevelopment />}
-        />
-        <Route path="/services/crm-services" element ={<CRMServices/>} />
-        {/*<Route path="" element ={} />
-        <Route path="" element ={} />
-        <Route path="" element ={} /> */}
-
-
-        {/* Services - divya*/}
-       
-        <Route path="/services/api-development" element ={<ApiDevelopment/>} />
-        {/* <Route path="" element ={} />
-        <Route path="" element ={} />
-        <Route path="" element ={} />
-        <Route path="" element ={} /> */}
-
-
-        {/* Services - sudesh */}
-        <Route path="/services/Ecommerce-development" element={<Ecommdev />} />
-       
-        {/*        
-        <Route path="" element ={} />
-        <Route path="" element ={} />
-        <Route path="" element ={} />
-        <Route path="" element ={} />
-        <Route path="" element ={} />
-        <Route path="" element ={} /> */}
-
-
-        <Route path="/services/aws-cloud" element={<AwsCloud />} />
-        {/* {<Route path="" element ={} />`}
-        <Route path="" element ={} />
-        <Route path="" element ={} /> */}
-        <Route path="/services/web-development" element ={<WebDev/>} />
-        <Route path="/services/software-development" element ={<SoftwareDevelopment/>} />
-        <Route path="/services/bespoke-development" element ={<BespokeDevelopment/>} />
-        <Route path="/services/custom-software-integration-services" element ={<SwIntDev/>}/>
-        <Route path="/services/aws-cloud" element ={<AwsCloud/>} />
-        <Route path="/services/azure-cloud" element ={<AzureCloud/>} />
-        <Route path="/services/devops" element ={<DevopsCloud/>}/>
-        <Route path="/services/google-cloud" element ={<GoogleCloud/>} />
-
-        <Route path="*" element={<NotFoundPage />} />
+        {emp1Routes}
+        {emp2Routes}
+        {emp3Routes}
+        {emp4Routes}
       </Routes>
       <Footer />
-       <Popupform />
     </Router>
   );
 }

@@ -16,9 +16,9 @@ function Clouddropdown({ onLinkClick}) {
 
       <ul className="dropdown-menu mt-3">
         <li>
-          <a
+          <Link
             className="dropdown-item"
-            href="/Services/aws-cloud"
+            to="/Services/aws-cloud"
 
             onClick={onLinkClick}
           >
@@ -27,12 +27,12 @@ function Clouddropdown({ onLinkClick}) {
               style={{ fontSize: "10px" }}
             ></i>{" "} */}
          AWS
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             className="dropdown-item"
-            href="/Services/azure-cloud"
+            to="/Services/azure-cloud"
             onClick={onLinkClick}
           >
             {/* <i
@@ -40,12 +40,12 @@ function Clouddropdown({ onLinkClick}) {
               style={{ fontSize: "10px" }}
             ></i>{" "} */}
           Azure
-          </a>
+          </Link>
         </li>
          <li>
-          <a
+          <Link
             className="dropdown-item"
-            href="/Services/google-cloud"
+            to="/Services/google-cloud"
             onClick={onLinkClick}
           >
             {/* <i
@@ -53,12 +53,12 @@ function Clouddropdown({ onLinkClick}) {
               style={{ fontSize: "10px" }}
             ></i>{" "} */}
         Google Cloud
-          </a>
+          </Link>
         </li>
          <li>
-          <a
+          <Link
             className="dropdown-item"
-            href="/Services/devops"
+            to="/Services/devops"
             onClick={onLinkClick}
           >
             {/* <i
@@ -66,7 +66,7 @@ function Clouddropdown({ onLinkClick}) {
               style={{ fontSize: "10px" }}
             ></i>{" "} */}
        DevOps
-          </a>
+          </Link>
         </li>
        
       </ul>
