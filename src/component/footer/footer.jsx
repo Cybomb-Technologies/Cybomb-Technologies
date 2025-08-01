@@ -12,7 +12,7 @@ function Footer() {
             <div className="col-md-3" data-aos="fade-up">
               <h1 className="text-primary">Cybomb</h1>
               <p className="footer-para-color">
-                Transforming ideas into digital reality with cutting-edge mobile
+                Transforming Ideas into Digital reality with Cutting-Ddge Mobile
                 and web app development, AI integration, and SaaS solutions.
               </p>
               <div className="d-flex ">

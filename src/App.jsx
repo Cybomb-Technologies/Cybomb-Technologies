@@ -30,26 +30,25 @@ import Ecommdev from "./component/pages-services/design-development/Ecommerce-de
 
 // ms
 import GameDevelopment from "./component/pages-services/design-development/game-development/game-development";
-// 
-// 
-// 
-// 
-// 
+//
+//
+//
+//
+//
 
 // sudesh
- 
-// 
-// 
-// 
-// 
+
+//
+//
+//
+//
 
 // santhosh
 import SoftwareDevelopment from "./component/pages-services/design-development/software-development/Software-dev";
 import BespokeDevelopment from "./component/pages-services/design-development/bespoke-development/bespoke-dev";
 import SwIntDev from "./component/pages-services/design-development/custom-software-integration-services/sw-int-dev";
-import AwsCloud from "./component/pages-cloud/aws-cloud/aws-cloud"; 
-
-
+import AwsCloud from "./component/pages-cloud/aws-cloud/aws-cloud";
+import Popupform from "./component/popup-form/popup-form";
 
 function App() {
   useEffect(() => {
@@ -80,9 +79,9 @@ function App() {
           element={<Softwareconsulting />}
         />
         <Route path="/portfolio" element={<Prortfolio />} />
-        <Route path="/career" element={<Career/>} />
-        <Route path="/faq" element={<Faq/>} />
-         
+        <Route path="/career" element={<Career />} />
+        <Route path="/faq" element={<Faq />} />
+
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/privacy-policy" element={<Privacypolicy />} />
@@ -90,18 +89,27 @@ function App() {
         <Route path="/refund-policy" element={<Refundpolicy />} />
 
         {/* Services - ms*/}
-        <Route path="/services/mobile-app-development" element ={<MobileAppDevelopment/>} />
-        <Route path="/technologies/android-app-development" element ={<AndoridAppDevelopment/>} />
-        <Route path="/services/game-development" element ={<GameDevelopment/>} />
+        <Route
+          path="/services/mobile-app-development"
+          element={<MobileAppDevelopment />}
+        />
+        <Route
+          path="/technologies/android-app-development"
+          element={<AndoridAppDevelopment />}
+        />
+        <Route
+          path="/services/game-development"
+          element={<GameDevelopment />}
+        />
         {/* <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} /> */}
 
         {/* Services - sudesh */}
-        <Route path="/services/Ecommerce-development" element ={ <Ecommdev/>} />
-    
-{/*        
+        <Route path="/services/Ecommerce-development" element={<Ecommdev />} />
+       
+        {/*        
         <Route path="" element ={} />
         <Route path="" element ={} />
         <Route path="" element ={} />
@@ -110,21 +118,28 @@ function App() {
         <Route path="" element ={} /> */}
 
         {/* Services - santhosh */}
-        <Route path="/services/web-development" element ={<WebDev/>} />
-        <Route path="/services/software-development" element ={<SoftwareDevelopment/>} />
-        <Route path="/services/bespoke-development" element ={<BespokeDevelopment/>} />
-        <Route path="/services/custom-software-integration-services" element ={<SwIntDev/>}/>
-        <Route path="/services/aws-cloud" element ={<AwsCloud/>} />
-         {/* {<Route path="" element ={} />`}
+        <Route path="/services/web-development" element={<WebDev />} />
+        <Route
+          path="/services/software-development"
+          element={<SoftwareDevelopment />}
+        />
+        <Route
+          path="/services/bespoke-development"
+          element={<BespokeDevelopment />}
+        />
+        <Route
+          path="/services/custom-software-integration-services"
+          element={<SwIntDev />}
+        />
+        <Route path="/services/aws-cloud" element={<AwsCloud />} />
+        {/* {<Route path="" element ={} />`}
         <Route path="" element ={} />
         <Route path="" element ={} /> */}
 
-
         <Route path="*" element={<NotFoundPage />} />
-   
-       
       </Routes>
       <Footer />
+       <Popupform />
     </Router>
   );
 }

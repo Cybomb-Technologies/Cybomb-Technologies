@@ -75,15 +75,14 @@ function Servicedropdown({ onLinkClick}) {
             {/* <i class="bi bi-cloud me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 API Development
               </a>
-              <a
+              <Link
                 className="dropdown-item"
-                href="/Services/custom-software-integration-services"
-                target="_blank"
+                to="/Services/custom-software-integration-services"
                 onClick={onLinkClick}
               >
                {/* <i class="bi bi-plug"></i> */}
                 Custom Software Integration
-              </a>
+              </Link>
             </div>
 
             <div className="col-xxl-3">
