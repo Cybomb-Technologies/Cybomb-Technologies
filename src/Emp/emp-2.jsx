@@ -7,7 +7,9 @@ import AwsCloud from "../component/pages-cloud/aws-cloud/aws-cloud-content";
 import AzureCloud from "../component/pages-cloud/azure-cloud/azure-cloud";
 import DevopsCloud from "../component/pages-cloud/devops/devops";
 import GoogleCloud from "../component/pages-cloud/google-cloud/google-cloud";
-
+import DevOpsSupport from "../component/pages-services/support-services/Devops-support/devops-support";
+import ITSupport from "../component/pages-services/support-services/It-support-services/it-support";
+import DigitalFulfilmentSupport from "../component/pages-services/support-services/Digital-Fulfilment-support/Digital-Fulfilment";
 // Just return <Route />s. Don't wrap in <Routes>
 const emp2Routes = (
   <>
@@ -22,6 +24,9 @@ const emp2Routes = (
     <Route path="/services/devops" element={<DevopsCloud />} />
     <Route path="/services/azure-cloud" element={<AzureCloud />} />
     <Route path="/services/google-cloud" element={<GoogleCloud />} />
+    <Route path="/services/devops-support" element={<DevOpsSupport/>}/>
+    <Route path="/services/it-support" element={<ITSupport />} />
+    <Route path="/services/digital-fulfilment-support" element={<DigitalFulfilmentSupport/>}/>
   </>
 );
 
