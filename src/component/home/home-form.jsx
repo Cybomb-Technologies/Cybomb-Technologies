@@ -30,22 +30,22 @@ function Homeform() {
             <div className="card p-5 rounded-4 shadow-sm text-white border-0 form mt-1">
               <form>
                 <div className="mb-3">
-                  <label className="form-label fs-7 text-black fw-bold">First Name *</label>
+                  <label className="form-label fs-7 text-white fw-bold">First Name *</label>
                   <input type="text" className="form-control forminput" placeholder="Enter your first name" required />
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label fs-7 text-black fw-bold">Email *</label>
+                  <label className="form-label fs-7 text-white fw-bold">Email *</label>
                   <input type="email" className="form-control forminput" placeholder="Enter your email address" required />
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label fs-7 text-black fw-bold">Phone (+91)</label>
+                  <label className="form-label fs-7 text-white fw-bold">Phone (+91)</label>
                   <input type="tel" className="form-control forminput" placeholder="Enter your phone number" />
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label fs-7 text-black fw-bold ">Where did you find us?</label>
+                  <label className="form-label fs-7 text-white fw-bold ">Where did you find us?</label>
                   <select className="form-select forminput">
                     <option>Select an option</option>
                     <option>Google</option>
@@ -56,7 +56,7 @@ function Homeform() {
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label fs-7 text-black fw-bold">Message *</label>
+                  <label className="form-label fs-7 text-white fw-bold">Message *</label>
                   <textarea
                     className="form-control forminput"
                     rows="4"
