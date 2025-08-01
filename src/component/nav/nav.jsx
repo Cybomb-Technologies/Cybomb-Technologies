@@ -18,6 +18,7 @@ function Nav() {
     const closeBtn = document.querySelector(
       "#offcanvasWithBothOptions .btn-close"
     );
+    
     if (closeBtn) closeBtn.click();
   };
 

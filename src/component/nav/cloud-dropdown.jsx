@@ -5,7 +5,7 @@ function Clouddropdown({ onLinkClick}) {
  <li className="nav-item dropdown custom-nav-item">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
-        to="/services"
+        // to="/services"
         role="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
