@@ -112,7 +112,7 @@ function Technologiesdropdown({ onLinkClick, isMobile }) {
             <Link className="dropdown-item text-primary">Ecommerce</Link>
             <Link
               className="dropdown-item"
-              // to="/demo/grocery/"
+              // to="/demo/grocery/"  
               onClick={onLinkClick}
             >
               {/* <i

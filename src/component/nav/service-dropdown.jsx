@@ -45,12 +45,12 @@ function Servicedropdown({ onLinkClick, isMobile }) {
           <div className="col-xxl-3">
             <Link className="dropdown-item text-primary">Enterprise Services</Link>
             <Link to="/services/crm-services" className="dropdown-item" onClick={onLinkClick}>CRM Solutions</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Cloud Solutions</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Data Engineering</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>AI/ML</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Salesforce</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>HubSpot</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Zoho</Link>
+            <Link to="/services/cloud-solution" className="dropdown-item" onClick={onLinkClick}>Cloud Solutions</Link>
+            <Link to="/services/data-engineering" className="dropdown-item" onClick={onLinkClick}>Data Engineering</Link>
+            <Link to="/services/ai-ml-services" className="dropdown-item" onClick={onLinkClick}>AI/ML</Link>
+            <Link to="/services/salesforce-services" className="dropdown-item" onClick={onLinkClick}>Salesforce</Link>
+            <Link to="/services/hubspot-services" className="dropdown-item" onClick={onLinkClick}>HubSpot</Link>
+            <Link to="/services/zoho-services" className="dropdown-item" onClick={onLinkClick}>Zoho</Link>
           </div>
 
           {/* Column 3 */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './crm-platforms.module.css';
+import styles from '../../../common-ui/enterprise-services/crm-platforms.module.css';
 
 const platforms = [
   { name: 'Salesforce', logo: 'https://a.sfdcstatic.com/shared/images/c360-nav/salesforce-with-type-logo.svg' },
@@ -37,38 +37,3 @@ function CRMPlatforms() {
 }
 
 export default CRMPlatforms;
-
-
-
-// import React from 'react';
-// import styles from './crm-platforms.module.css';
-
-// const platforms = [
-//   'Salesforce',
-//   'HubSpot CRM',
-//   'Zoho CRM',
-//   'Microsoft Dynamics 365',
-//   'Pipedrive',
-//   'Freshworks CRM',
-//   'SugarCRM',
-//   'Custom-built CRMs'
-// ];
-
-// function CRMPlatforms() {
-//   return (
-//     <section className={styles.section}>
-//       <div className={styles.container}>
-//         <h2 className={styles.title}>CRM Platforms We Work With</h2>
-//         <div className={styles.scrollWrapper}>
-//           {platforms.map((platform, index) => (
-//             <div key={index} className={styles.card}>
-//               {platform}
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default CRMPlatforms;

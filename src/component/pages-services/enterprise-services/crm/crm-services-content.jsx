@@ -61,26 +61,6 @@ const whychooseus = [
   },
 ];
 
-// const engagementData = [
-//   {
-//     title: 'CRM Setup & Onboarding',
-//     description: 'Ideal for small teams or startups',
-//   },
-//   {
-//     title: 'Enterprise CRM Development',
-//     description: 'For large organizations with complex sales/customer pipelines',
-//   },
-//   {
-//     title: 'CRM Consulting & Auditing',
-//     description: "Already using a CRM? We'll help you get more out of it.",
-//   },
-//   {
-//     title: 'Ongoing CRM Support',
-//     description: 'Continuous improvements, training, and admin support',
-//   },
-// ];
-
-
 const useCases = [
   "Automating lead capture from your website and social media",
   "Managing real-time customer support tickets inside your CRM",
@@ -119,10 +99,6 @@ function CrmServicesContent() {
       imageAlt="CRM Consultation"
       Icon={MdSchedule}
     />
-    {/* <EngagementOptions
-        title="Engagement Models"
-        items={engagementData}
-      /> */}
     <WhyChooseUs ChooseUs={whychooseus}/>
     <OnlinePresence 
           title = "Let's Find the right CRM solution for your business."
