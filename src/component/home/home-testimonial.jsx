@@ -84,7 +84,6 @@ const Testimonials = () => {
     }
   };
 
-
   // Re-enable transition after instant jump
   useEffect(() => {
     if (!isTransitioning) {
