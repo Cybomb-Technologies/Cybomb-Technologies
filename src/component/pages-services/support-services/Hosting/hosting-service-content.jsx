@@ -1,28 +1,83 @@
 import Banner from "../../../common-ui/support-service/banner";
 import InfoStats from "../../../common-ui/support-service/info-stats";
 import WhyChooseUs from "../../../common-ui/support-service/why-choose-us";
+import ServicesOfferings from "../../../common-ui/support-service/services-offerings";
+import ScheduleConsultation from "../../../common-ui/support-service/schedule-consultation";
+import { MdSchedule } from 'react-icons/md';
+import placeholderImage from './../../../../assets/placeholder-image.webp';
+import CloudOffers from '../../../common-ui/support-service/cloud-offers';
+import awsImage from './../../../../assets/aws.avif';
+import DevelopmentProcess from "../../../common-ui/support-service/development-process";
+import OnlinePresence from "../../../common-ui/enterprise-services/online-presence";
+
+
 const whychooseus = [
   {
-    title: 'Business-Driven Approach',
-    description: "We focus on CRM as a revenue enabler not just a contact database.",
+    title: 'End-to-End Setup & Migration',
+    description: "We handle everything from DNS configuration to email setup and data migration.",
   },
   {
-    title: 'Seamless Integrations',
-    description: 'We ensure your CRM talks to your marketing, sales, and support systems in real time.',
+    title: '24/7 Monitoring & Security',
+    description: 'Our hosting comes with DDOS protection, firewall satup, SSL certificates, and regular backups.',
   },
   {
-    title: 'Industry Expertise',
-    description: 'We have built CRM systems for industries like real estate, healthcare, SaaS, finance, and more.',
+    title: 'High Performance',
+    description: 'Lightning-fast page loads and optimized server response times to keep users engaged.',
   },
   {
-    title: 'Security & Compliance',
-    description: 'Your customer data is protected with best practices and regulatory compliance (GDPR, HIPAA, etc.).',
+    title: 'Scalability Built-in',
+    description: 'Update resources on demand-perfect for growing businesses or seasonal spikes.',
   },
   {
     title: 'Scalable Solutions',
-    description: "Start small and grow fast. Our CRM systems scale with your business.",
+    description: "Our experts are available around the clock to assist with any technical needs.",
   },
 ];
+
+const offerings = [
+  {
+    title: 'Shared Hosting',
+    description: 'Affordable and easy-to-manage hosting for small businesses and websites.',
+  },
+  {
+    title: 'VPS (Virtual Private Server) Hosting',
+    description: 'Greater control and performance for mid-sized apps or custom environments.',
+  },
+  {
+    title: 'Cloud Hosting (AWS, Google Cloud)',
+    description: 'Scalable, flexible, and cost-effective hosting for high-traffic sites and applications.',
+  },
+  {
+    title: 'Dedicated Server Hosting',
+    description: 'Full control, enhanced performance, and enterprise-grade infrastructure.',
+  },
+  {
+    title: 'Managed WordPress Hosting',
+    description: 'Optimized environments specifically built for WordPress speed and security.',
+  },
+  {
+    title: 'Domain & Email Hosting',
+    description: 'Professional domain management with secure, branded email services.',
+  },
+];
+
+const features = [
+  'Ensures uptime and reliability for your customers',
+  'Impacts your site speed, SEO, and conversions',
+  'Provides essential security against cyber threats',
+  'Scales with your business needs and traffic.',
+  'Roduces IT overhead and simplifies deployments.',
+];
+
+const useCases = [
+  "Hosting business websites, landing pages, or eCommerce platforms",
+  "Deploying soos products or web applications",
+  "Email and file hosting for remote teams",
+  "Hosting development and stoging environments",
+  "CON-based static content delivery for global users"
+];
+
+
 
 function HostingServicesContent() {
   return (
@@ -41,9 +96,38 @@ function HostingServicesContent() {
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"
-    />   
+    /> 
+     <ServicesOfferings 
+          title="What We Offer" 
+          items={offerings}
+        />  
+      
+      <ScheduleConsultation
+            heading="Stay Ahead Of The Competition With Our CRM Development Services"
+            buttonText="Schedule a Consultation!"
+            imageSrc={placeholderImage}
+            imageAlt="CRM Consultation"
+            Icon={MdSchedule}
+          />
+      <CloudOffers
+      title="Why Hosting Matters"
+      features={features}
+      image={awsImage}
+    />
     
     <WhyChooseUs ChooseUs={whychooseus}/>
+
+    <DevelopmentProcess 
+                title="Use Case"
+                Process={useCases}
+                />
+    <OnlinePresence 
+              title = "Let's Find the right Hosting Services for your business."
+              buttonText = "CONTACT US"
+              buttonLink = "#"
+              imageSrc = {placeholderImage}
+              imageAlt = "CRM services"
+          />
 
 
    </section>
