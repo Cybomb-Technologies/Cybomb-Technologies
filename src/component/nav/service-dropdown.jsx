@@ -76,16 +76,15 @@ function Servicedropdown({ onLinkClick}) {
             {/* <i class="bi bi-cloud me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 API Development
               </Link>
-
-              <a
+            
+              <Link
                 className="dropdown-item"
-                href="/Services/custom-software-integration-services"
-                target="_blank"
+                to="/Services/custom-software-integration-services"
                 onClick={onLinkClick}
               >
                {/* <i class="bi bi-plug"></i> */}
                 Custom Software Integration
-              </a>
+              </Link>
             </div>
 
             <div className="col-xxl-3">
@@ -106,14 +105,7 @@ function Servicedropdown({ onLinkClick}) {
               {/* <i class="bi bi-cloud-upload me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Cloud Solutions
               </a>
-              <a
-                className="dropdown-item"
-                href="/demo/grocery/"
-                onClick={onLinkClick}
-              >
-               {/* <i class="bi bi-broadcast me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
-                IoT Solutions
-              </a>
+
               <a
                 className="dropdown-item"
                 href="/demo/school-mangement"
@@ -153,14 +145,6 @@ function Servicedropdown({ onLinkClick}) {
               >
               {/* <i class="bi bi-shield-lock me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
                 Zoho
-              </a>
-              <a
-                className="dropdown-item"
-                href="/demo/school-mangement"
-                onClick={onLinkClick}
-              >
-               	{/* <i class="bi bi-journal-text me-1" style={{ fontSize: "20px", color:"rgb(0, 52, 89)" }}></i> */}
-                MS Dynamics
               </a>
             </div>
 
