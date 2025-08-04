@@ -199,6 +199,10 @@
 
 /* Mobile View */
 @media (max-width: 480px) {
+  .sliderContainer{
+    overflow: clip;
+  }
+
   .title {
     font-size: 1.5rem;
   }
@@ -209,6 +213,7 @@
 
   .card {
     padding: 1.2rem;
+    max-width: 100%;
   }
 
   .feedback {
@@ -240,9 +245,77 @@
     font-size: 1.5rem;
     width: 36px;
     height: 36px;
+    padding: 1rem;
   }
 
   .carouselWrapper {
     gap: 0.5rem;
+  }
+
+  .dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .dotsWrapper {
+    gap: 12px;
+  }
+}
+
+/* foldable devices (min 540px to max 720px) */
+@media (min-width: 540px) and (max-width: 720px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 1.4rem;
+    font-size: 1.05rem;
+  }
+
+  .feedback {
+    font-size: 1.1rem;
+  }
+
+  .stars {
+    font-size: 1.7rem;
+  }
+
+  .footer {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .avatarInline {
+    width: 55px;
+    height: 55px;
+  }
+
+  .name {
+    font-size: 1.05rem;
+  }
+
+  .role {
+    font-size: 0.85rem;
+  }
+
+  .arrow {
+    font-size: 2.2rem;
+    width: 44px;
+    height: 44px;
+    padding: 1.5rem;
+  }
+
+  .carouselWrapper {
+    gap: 1.2rem;
+  }
+
+  .dot {
+    width: 13px;
+    height: 13px;
   }
 }

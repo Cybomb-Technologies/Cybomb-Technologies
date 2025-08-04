@@ -92,3 +92,63 @@
   vertical-align: middle;
 }
 
+
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .section-title-uiux {
+    font-size: 1.4rem;
+    padding: 0.75rem;
+  }
+
+  .service-title-uiux {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    width: 95%;
+    top: -1rem;
+  }
+
+  .service-description-uiux {
+    font-size: 1rem;
+    padding: 0 0.25rem;
+  }
+
+  .service-card-uiux {
+    padding: 2.5rem 1rem 1.5rem;
+  }
+
+  .service-title-uiux i {
+    font-size: 1rem;
+  }
+}
+
+/* Small Devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .section-title-uiux {
+    font-size: 1.6rem;
+  }
+
+  .service-title-uiux {
+    font-size: 1.15rem;
+    width: 98%;
+  }
+
+  .service-description-uiux {
+    font-size: 1.05rem;
+  }
+}
+
+/* Medium Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section-title-uiux {
+    font-size: 1.8rem;
+  }
+
+  .service-title-uiux {
+    font-size: 1.2rem;
+  }
+
+  .service-description-uiux {
+    font-size: 1.1rem;
+  }
+}

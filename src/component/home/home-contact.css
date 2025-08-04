@@ -1,14 +1,102 @@
-.contact-card{
-    background-color: #003459 !important;
+/* Contact Card Base */
+.contact-card {
+  background-color: #003459 !important;
+  color: #fff;
 }
-.contact-icon{
-    background-color: #2563EB;
-    padding: 15px;
-    font-size: 20px;
-    color: white;
-    border-radius: 5px;
-    margin-top: 10px;
+
+/* Icon Styling */
+.contact-icon {
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #2563EB;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
-.contact-text-color{
-    color: rgb(241, 239, 239);
+
+/* Text Colors */
+.contact-text-color {
+  color: #e2e8f0;
+}
+
+/* Social icon hover effect */
+.social-icons a i {
+  transition: transform 0.3s ease;
+}
+
+.social-icons a i:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Typography & Icons */
+@media (max-width: 768px) {
+  .contact-icon {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .contact-card h3,
+  .map-card h5 {
+    font-size: 1.25rem;
+  }
+
+  .contact-card p,
+  .map-card p {
+    font-size: 0.95rem;
+  }
+
+  .social-icons a i {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Flex Container: Row for tablet+ */
+.contact-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Each Card */
+.contact-card-wrapper {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/* Mobile view: stacked layout */
+@media (max-width: 539px) {
+  .contact-flex-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-card-wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet-specific tweaks (optional) */
+@media (min-width: 540px) and (max-width: 720px) {
+  .contact-flex-container {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .contact-card,
+  .map-card {
+    max-width: 90% !important;
+    margin: auto;
+  }
+
+  .social-icons {
+    gap: 1rem;
+    justify-content: center !important;
+  }
 }

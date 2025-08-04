@@ -27,15 +27,15 @@ function HomeBanner() {
       <div className="container">
         <div className="row align-items-center">
           {/* Left Side Text */}
-          <div className="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
-            <h1 className="display-2 fw-bold">
+          <div className="col-lg-7 text-center text-lg-start mb-4 mb-lg-0" >
+            <h1 className="display-2 fw-bold" style={{marginTop: "5rem"}}>
               <span className="gradient-text">Transforming Ideas</span>
               <br />
               <span>
                 into <strong>Digital Reality</strong>
               </span>
             </h1>
-            <p className="lead mt-3 fs-3 banner-paragrap-content">
+            <p className="lead mt-3 fs-5 banner-paragrap-content">
               Welcome to Cybomb Technologies, your partner for cutting-edge
               mobile and web app development, AI integration, and SaaS
               solutions.
@@ -57,10 +57,10 @@ function HomeBanner() {
           </div>
 
           {/* Right Side Image */}
-          <div className="col-lg-5 my-5">
+          <div className="col-lg-5 my-lg-5 my-0">
             <div className="row justify-content-center">
               <div className="col-lg-10">
-                <div className="card shadow-lg" style={{backgroundColor:"rgb(255 255 255 / 18%)"}}>
+                <div className="card shadow-lg" style={{backgroundColor:"rgb(120 120 120 / 20%)"}}> 
                   <div className="card-body py-3 px-4">
                     <h2
                       className="card-title text-center mb-3 mt-0"
@@ -68,7 +68,6 @@ function HomeBanner() {
                     >
                       Start a Conversation
                     </h2>
-
 
                     <form onSubmit={handleSubmit}>
                       <div className="row">

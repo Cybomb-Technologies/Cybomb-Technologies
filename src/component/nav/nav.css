@@ -4,12 +4,14 @@
 }
 
 .custom-navbar.transparent {
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: rgb(120 120 120 / 20%);
 }
 
 .custom-navbar.scrolled {
   background-color: #003459;
 }
+
 .custom-nav-button {
   background: linear-gradient(90deg, #2563eb 0%, #9333ea 100%);
   border-radius: 20px;
@@ -23,10 +25,12 @@
 .custom-nav-item {
   margin: 0px 9px;
 }
+
 .custom-nav-link {
   color: #FFFFFF !important;
   font-weight: 500 !important;
 }
+
 .custom-nav-link:hover {
   color: rgb(18, 213, 231) !important;
 }
@@ -38,7 +42,7 @@
 }
 
 .navbar-toggler {
-  background-color: rgb(196, 192, 192);
+  /* background-color: rgb(196, 192, 192); */
   border: none;
 }
 
@@ -49,6 +53,7 @@
 .custom-nav-item {
   position: relative;
 }
+
 @media screen and (min-width: 1400px) {
   .custom-nav-item:hover .dropdown-menu,
   .custom-nav-item .dropdown-menu:hover {
@@ -93,6 +98,7 @@
     color: #007bff;
   }
 }
+
 @media screen and (max-width: 1400px) {
   .dropdown-menu.mega-dropdown {
     position: absolute;
@@ -116,8 +122,6 @@
     padding: 0 15px;
   }
 }
-
-
 
 /* Main nav link hover effect */
 .nav-link.custom-nav-link {
