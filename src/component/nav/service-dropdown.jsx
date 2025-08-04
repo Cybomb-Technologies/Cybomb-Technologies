@@ -58,8 +58,8 @@ function Servicedropdown({ onLinkClick, isMobile }) {
             <Link className="dropdown-item text-primary">Support Services</Link>
             <Link to ="services/hosting-service" className="dropdown-item" onClick={onLinkClick}>Hosting</Link>
             <Link to ="/services/support-service" className="dropdown-item" onClick={onLinkClick}>Server Support</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Development Support</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Staff Augmentation</Link>
+            <Link to ="/services/development-support" className="dropdown-item" onClick={onLinkClick}>Development Support</Link>
+            <Link to="/services/Staff-augmentation" className="dropdown-item" onClick={onLinkClick}>Staff Augmentation</Link>
             <Link to="/services/digital-fulfilment-support"className="dropdown-item" onClick={onLinkClick}>Digital Fulfilment</Link>
             <Link to="/services/it-support"className="dropdown-item" onClick={onLinkClick}>IT Support Services</Link>
             <Link to="/services/devops-support"className="dropdown-item" onClick={onLinkClick}>DevOps</Link>
@@ -68,11 +68,11 @@ function Servicedropdown({ onLinkClick, isMobile }) {
           {/* Column 4 */}
           <div className="col-xxl-3">
             <Link className="dropdown-item text-primary">Digital Marketing</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Search Engine Optimization</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Social Media Marketing</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Pay Per Click</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>ORM</Link>
-            <Link className="dropdown-item" onClick={onLinkClick}>Performance Optimization</Link>
+            <Link to="/services/search-engine-optimization" className="dropdown-item" onClick={onLinkClick}>Search Engine Optimization</Link>
+            <Link to="/services/social-media-marketing" className="dropdown-item" onClick={onLinkClick}>Social Media Marketing</Link>
+            <Link to="/services/Pay-per-click" className="dropdown-item" onClick={onLinkClick}>Pay Per Click</Link>
+            <Link to="/services/ORM-services" className="dropdown-item" onClick={onLinkClick}>ORM</Link>
+            <Link to="/services/performance-optimization" className="dropdown-item" onClick={onLinkClick}>Performance Optimization</Link>
           </div>
         </div>
       </div>
