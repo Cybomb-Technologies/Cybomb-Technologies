@@ -36,7 +36,7 @@ function Nav() {
       navbar?.classList.add("transparent");
 
       const handleScroll = () => {
-        if (window.scrollY > 600) {
+        if (window.scrollY > 100) {
           navbar?.classList.add("scrolled");
         } else {
           navbar?.classList.remove("scrolled");
@@ -61,7 +61,7 @@ function Nav() {
       <nav className="navbar navbar-expand-xxl custom-navbar fixed-top">
         <div className="container">
           <Link className="navbar-brand text-white test" to="/">
-           <img src="/images/nav-logo.jpg" alt="" style={{height:"60px", width:"130px"}}/>
+           <img src="/images/nav-logo.jpeg" alt="" style={{width:"130px", height:"60px"}}/>
           </Link>
           <button
             className="navbar-toggler"
@@ -83,9 +83,7 @@ function Nav() {
             aria-labelledby="offcanvasWithBothOptionsLabel"
           >
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-                Cybomb Logo
-              </h5>
+              <img src="/images/nav-logo.jpeg" alt="" style={{width:"150px", height:"60px"}}/>
               <button
                 type="button"
                 className="btn-close"

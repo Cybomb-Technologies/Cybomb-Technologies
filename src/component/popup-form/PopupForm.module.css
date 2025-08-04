@@ -1,0 +1,238 @@
+/* PopupForm.module.css - Fixed and Responsive */
+/* Add these new styles at the bottom */
+.thankYouMessage {
+  background-color: #e6f2ff;
+  color: #003459;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 2rem;
+  border: 1px solid #b3d9ff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.thankYouMessage h3 {
+  color: #003459;
+  margin-bottom: 1rem;
+}
+
+.thankYouMessage p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Keep all your existing styles below */
+.modalHeader {
+  background-color: #003459;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+/* ... rest of your existing CSS ...
+.modalHeader {
+  background-color: #003f66;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+  gap: 0.5rem;
+  text-align: center;
+} */
+
+.headerBar span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.modalOverlay {
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1050;
+}
+
+.modalDialog {
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.modalDialogVisible {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.modalContent {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* .modalHeader {
+  text-align: center;
+  background-color: #003459;
+  color: white;
+  padding: 1rem 1.5rem;
+  position: relative;
+  z-index: 2;
+} */
+
+.closeButton {
+  margin-top: auto;
+  top: 1rem;
+}
+
+.leftPanel {
+  background-color: #003459;
+  color: white;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+
+.logoContainer {
+  max-width: 160px;
+  margin: 0 auto 1rem;
+}
+
+.logoImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.phoneButton {
+  background: white;
+  color: #003459;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.phoneButton svg,
+.phoneButton i {
+  color: #003459; /* or #00253e for slightly darker */
+}
+
+.phoneButton:hover {
+  background: #f2f2f2;
+  color: #00253e;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #003459;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+.formWrapper {
+  padding: 2rem;
+}
+
+.phoneInputField {
+  border-radius: 8px !important;
+  height: 45px !important;
+  padding-left: 52px !important;
+  background-color: #fff !important;
+  width: 100% !important;
+}
+
+.phoneInputButton {
+  background-color: white !important;
+  border: 1px solid #ced4da !important;
+  border-radius: 8px 0 0 8px !important;
+}
+
+.phoneInputDropdown {
+  border-radius: 0 0 8px 8px;
+}
+
+.submitButton {
+  background-color: #003459;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.submitButton svg,
+.submitButton i {
+  font-size: 1rem;
+  margin-bottom: 2px;
+  color: white;
+}
+.thankYouMessage {
+  color: #003459;
+  background-color: #e6f2ff;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  border: 1px solid #b3d9ff;
+}
+
+.submitButton:hover {
+  background-color: #00253e;
+}
+
+@media (max-width: 768px) {
+  .modalDialogVisible {
+    margin: 1rem;
+  }
+
+  .modalContent {
+    border-radius: 8px;
+  }
+
+  .leftPanel {
+    display: none !important;
+  }
+
+  .formWrapper {
+    padding: 1.5rem;
+  }
+
+  .modalHeader h5 {
+    font-size: 1rem;
+  }
+
+  .submitButton {
+    font-size: 0.95rem;
+  }
+
+  .iconWrapper {
+    width: 26px;
+    height: 26px;
+    font-size: 0.9rem;
+  }
+}

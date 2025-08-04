@@ -10,8 +10,9 @@ function Technologiesdropdown({ onLinkClick, isMobile }) {
       setIsDropdownOpen((prev) => !prev);
     }
   };
+
   return (
-   <li className="nav-item dropdown custom-nav-item position-static">
+    <li className="nav-item dropdown custom-nav-item position-static">
       <Link
         className="nav-link dropdown-toggle custom-nav-link"
         to="#"
@@ -22,579 +23,113 @@ function Technologiesdropdown({ onLinkClick, isMobile }) {
         Technologies
       </Link>
 
-       <div
-        className={`dropdown-menu mega-dropdown container ${isMobile && isDropdownOpen ? "show" : ""}`}
-        style={isMobile ? { display: isDropdownOpen ? "block" : "none" } : {}}
+      <ul
+        className={`dropdown-menu mt-3 dropdown-click ${isMobile && isDropdownOpen ? "show" : ""}`}
+        style={{
+          display: isMobile ? (isDropdownOpen ? "block" : "none") : undefined,
+          width: !isMobile && window.innerWidth >= 1400 ? "1050px" : "100%",
+          left: !isMobile && window.innerWidth >= 1400 ? "900px" : undefined,
+          padding: 0,
+        }}
       >
-        <div className="row">
-          <div className="col-xxl-2">
-            <Link className="dropdown-item text-primary">Mobile Apps</Link>
-            <Link
-              className="dropdown-item"
-              // to="technologies/android-app-development"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Android
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/HRMS/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              React Native
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/E-Commerce/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Ios
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/E-Commerce/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Flutter
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/E-Commerce/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Swift
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/E-Commerce/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Kotlin
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/E-Commerce/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Xamarin
-            </Link>
-          </div>
+        <li className="w-100">
+          <div className="row p-3 bg-white shadow rounded-3 m-0">
+            {/* Each column can be placed inside its own <ul><li> */}
+            <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">
+              <Link className="dropdown-item text-primary">Mobile Apps</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Android</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>React Native</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Ios</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Flutter</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Swift</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Kotlin</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Xamarin</Link>
+            </div>
 
-          <div className="col-xxl-2">
-            <Link className="dropdown-item text-primary">Ecommerce</Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/grocery/"  
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Adobe Commerce
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Shopify
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/grocery/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Symfony
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              WooCommerce
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              BigCommerce
-            </Link>{" "}
-            <Link
-              className="dropdown-item"
-              // to="/demo/school-mangement"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Magento
-            </Link>
-          </div>
+            <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">
+              <Link className="dropdown-item text-primary">Ecommerce</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Adobe Commerce</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Shopify</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Symfony</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>WooCommerce</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>BigCommerce</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Magento</Link>
+            </div>
 
-          <div className="col-md-4">
-            <Link className="dropdown-item text-primary">CMS</Link>
-            <div className="row">
-              <div className="col-md-6">
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/grocery/"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Wordpress
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/school-mangement"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Drupal
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/school-mangement"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Craft
-                </Link>{" "}
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/school-mangement"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Acquia
-                </Link>
-                 <Link
-                  className="dropdown-item"
-                  // to="/demo/school-mangement"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Joomla
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/school-mangement"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  SharePoint
-                </Link>
-              </div>
-              <div className="col-md-6">
-               
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/school-mangement"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Umbraco
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/school-mangement"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Sitecore
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/school-mangement"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Pantheon
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/school-mangement"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  AEM Development
-                </Link>
+            <div className="col-xxl-4 col-xl-6 col-md-12 col-12 mb-3">
+              <Link className="dropdown-item text-primary">CMS</Link>
+              <div className="row">
+                <div className="col-md-6">
+                  <Link className="dropdown-item" onClick={onLinkClick}>Wordpress</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>Drupal</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>Craft</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>Acquia</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>Joomla</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>SharePoint</Link>
+                </div>
+                <div className="col-md-6">
+                  <Link className="dropdown-item" onClick={onLinkClick}>Umbraco</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>Sitecore</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>Pantheon</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>AEM Development</Link>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="col-md-4">
-            <Link className="dropdown-item text-primary">Custom Development</Link>
-            <div className="row">
-              <div className="col-md-6">
-                {" "}
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/taxi-booking-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  PHP
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/real-estate-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Laravel
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/real-estate-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  ROR
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/real-estate-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Power Platform
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/real-estate-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  HTML5
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/real-estate-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  JavaScript
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/real-estate-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Zoho Creator
-                </Link>
-              </div>
-              <div className="col-md-6">
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/taxi-booking-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Python
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/real-estate-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  DotNet
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/real-estate-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  NodeJS
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/real-estate-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Angular
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/real-estate-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  Spring
-                </Link>
-                <Link
-                  className="dropdown-item"
-                  // to="/demo/real-estate-app"
-  
-                  onClick={onLinkClick}
-                >
-                  {/* <i
-                    className="bi bi-arrow-right arrow-right-icon bg-primary"
-                    style={{ fontSize: "10px" }}
-                  ></i>{" "} */}
-                  C#
-                </Link>
+            <div className="col-xxl-4 col-xl-6 col-md-12 col-12 mb-3">
+              <Link className="dropdown-item text-primary">Custom Development</Link>
+              <div className="row">
+                <div className="col-md-6">
+                  <Link className="dropdown-item" onClick={onLinkClick}>PHP</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>Laravel</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>ROR</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>Power Platform</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>HTML5</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>JavaScript</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>Zoho Creator</Link>
+                </div>
+                <div className="col-md-6">
+                  <Link className="dropdown-item" onClick={onLinkClick}>Python</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>DotNet</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>NodeJS</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>Angular</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>Spring</Link>
+                  <Link className="dropdown-item" onClick={onLinkClick}>C#</Link>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <hr />
-        <div className="row">
-          <div className="col-xxl-2">
-            <Link className="dropdown-item text-primary">Full Stack Development</Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/ai-agent/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Full Stack MERN
-            </Link>
-          </div>
-          <div className="col-xxl-2">
-            <Link className="dropdown-item text-primary">CRM</Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/ai-agent/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              ServiceNow
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/ai-agent/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Salesforce
-            </Link>
-          </div>
 
-          <div className="col-xxl-2">
-            <Link className="dropdown-item text-primary">Games</Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/ai-agent/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Unity
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/ai-agent/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Unreal
-            </Link>
+            <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">
+              <Link className="dropdown-item text-primary">Full Stack Development</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Full Stack MERN</Link>
+            </div>
+
+            <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">
+              <Link className="dropdown-item text-primary">CRM</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>ServiceNow</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Salesforce</Link>
+            </div>
+
+            <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">
+              <Link className="dropdown-item text-primary">Games</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Unity</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Unreal</Link>
+            </div>
+
+            <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">
+              <Link className="dropdown-item text-primary">Cloud</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>AWS</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Azure</Link>
+            </div>
+
+            <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">
+              <Link className="dropdown-item text-primary">Other</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>Golang</Link>
+              <Link className="dropdown-item" onClick={onLinkClick}>AR/VR</Link>
+            </div>
           </div>
-          <div className="col-xxl-2">
-            <Link className="dropdown-item text-primary">Cloud</Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/ai-agent/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              AWS
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/ai-agent/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Azure
-            </Link>
-          </div>
-          <div className="col-xxl-2">
-            <Link className="dropdown-item text-primary">Other</Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/ai-agent/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              Golang
-            </Link>
-            <Link
-              className="dropdown-item"
-              // to="/demo/ai-agent/"
-              onClick={onLinkClick}
-            >
-              {/* <i
-                className="bi bi-arrow-right arrow-right-icon bg-primary"
-                style={{ fontSize: "10px" }}
-              ></i>{" "} */}
-              AR/VR
-            </Link>
-          </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </li>
   );
 }

@@ -18,7 +18,7 @@ function HomeKeydiffer() {
               <div className="icon-box bg-success mb-3">
                 <i className="bi bi-arrow-repeat"></i>
               </div>
-              <h5 className="fw-bold text-start black">
+              <h5 className="fw-bold text-start text-black">
                  Agile Development Methodology
               </h5>
               <p className="text-start small mb-0 " style={{color:"#9b9494ff", fontWeight:"600",fontSize:"17px" }}>
@@ -32,7 +32,7 @@ function HomeKeydiffer() {
               <div className="icon-box bg-primary mb-3">
                 <i className="bi bi-person-badge"></i>
               </div>
-              <h5 className="fw-bold text-start black">
+              <h5 className="fw-bold text-start text-black">
                 Dedicated Project Manager
               </h5>
               <p className="text-start small mb-0" style={{color:"#9b9494ff", fontWeight:"600",fontSize:"17px" }}>
@@ -46,7 +46,7 @@ function HomeKeydiffer() {
               <div className="icon-box bg-purple mb-3">
                 <i className="bi bi-headset"></i>
               </div>
-              <h5 className="fw-bold text-start black">
+              <h5 className="fw-bold text-start text-black">
                 Post-Launch Support
               </h5>
               <p className="text-start small mb-0" style={{color:"#9b9494ff", fontWeight:"600",fontSize:"17px" }}>
@@ -60,7 +60,7 @@ function HomeKeydiffer() {
               <div className="icon-box bg-warning mb-3">
                 <i className="bi bi-sliders"></i>
               </div>
-              <h5 className="fw-bold text-start black">
+              <h5 className="fw-bold text-start text-black">
                  Technology-Agnostic Approach
               </h5>
               <p className="text-start small mb-0" style={{color:"#9b9494ff", fontWeight:"600",fontSize:"17px" }}>
