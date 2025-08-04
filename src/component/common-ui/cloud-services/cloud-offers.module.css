@@ -1,94 +1,169 @@
 .cloudOffersSection {
   background-color: #003459;
   color: #ffffff;
-  padding: 80px 5%;
-  font-family: 'Poppins', sans-serif;
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .sectionTitle {
   text-align: center;
   background-color: #00a8e8;
-  padding: 12px 36px;
+  padding: 0.8rem 2.5rem;
   border-radius: 40px;
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 600;
   color: #fff;
-  margin-bottom: 40px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 3rem;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 15px rgba(0, 168, 232, 0.3);
 }
-
 
 .contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.featureCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 168, 232, 0.2);
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  background: #00a8e8;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.featureText {
+  color: #003459;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.5;
+}
+.featureContent {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.featureList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex: 1 1 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.featureList li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.25rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 12px 18px;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.featureList li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .arrow {
   color: #00d1ff;
   font-size: 1.5rem;
   font-weight: bold;
+  min-width: 24px;
+  text-align: center;
+}
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #00a8e8, transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.featureCard:hover .progressBar {
+  transform: scaleX(1);
 }
 
 .imageContainer {
-  flex: 1 1 400px;
-  max-width: 480px;
-  border-radius: 12px;
+  position: relative;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  min-height: 400px;
 }
 
 .image {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 52, 89, 0.7) 0%, rgba(0, 168, 232, 0.3) 100%);
+  opacity: 0.7;
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .contentWrapper {
+    gap: 2rem;
+  }
+  
+  .featureCard {
+    padding: 1.25rem;
+  }
+}
+
 @media (max-width: 992px) {
   .contentWrapper {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    grid-template-columns: 1fr;
   }
-
-  .featureList li {
+  
+  .imageContainer {
+    min-height: 300px;
+    order: -1;
+  }
+  
+  .featureContent {
     justify-content: center;
-    gap: 10px;
+  }
+}
+
+/* Add this to your existing media query for mobile */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 0%;
+    padding: 0 1.5rem;
+  }
+  
+  .sectionTitle {
+    padding: 0.7rem 1rem; /* Reduced horizontal padding */
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden; /* Hides overflow */
+    text-overflow: ellipsis; /* Adds ... if text is too long */
+    max-width: 90vw; /* Limits width to viewport */
+    font-size: 1.3rem; /* Slightly smaller font */
+  }
+  
+  .featureCard {
+    padding: 1rem;
   }
 }

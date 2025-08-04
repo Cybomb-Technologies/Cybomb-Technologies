@@ -14,7 +14,6 @@
   flex-wrap: nowrap;
 }
 
-/* Left Column (70%) */
 .textContent {
   flex: 0 0 70%;
   text-align: left;
@@ -45,7 +44,11 @@
   font-weight: 500;
 }
 
-/* Right Column (30%) - Image */
+.arrow {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
 .imageWrapper {
   flex: 0 0 30%;
   display: flex;
@@ -54,25 +57,56 @@
 }
 
 .image {
-  height: 300px;      
+  height: 200px;
   width: auto;
   object-fit: contain;
   border-radius: 8px;
 }
 
-/* Responsive Stack */
-@media (max-width: 768px) {
+/* Tablet */
+@media (max-width: 1024px) {
   .container {
     flex-direction: column;
     text-align: center;
+    gap: 0;
   }
 
-  .textContent, .imageWrapper {
-    flex: 1 1 100%;
+  .textContent {
+    flex: 1;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .imageWrapper {
+    margin-top: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
   }
 
   .image {
     height: 160px;
-    margin-top: 2rem;
   }
 }
