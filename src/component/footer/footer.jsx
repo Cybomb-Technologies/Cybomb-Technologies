@@ -9,7 +9,7 @@ function Footer() {
           <div className="row">
             <div className="col-md-3" data-aos="fade-up">
               <img
-                src="/images/nav-logo.jpg"
+                src="/images/nav-logo.jpeg"
                 alt=""
                 style={{ height: "60px", width: "130px" }}
               />

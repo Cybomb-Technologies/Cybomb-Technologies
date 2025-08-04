@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Info.module.css';
+import styles from './info-stats.module.css';
 
 function InfoStats({ stats = [], caption, highlight }) {
   return (

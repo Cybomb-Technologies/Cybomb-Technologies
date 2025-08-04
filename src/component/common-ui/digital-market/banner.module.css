@@ -19,12 +19,13 @@
 }
 
 .subtext {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  max-width: 800px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
+  font-weight: normal;
 }
 
 .button {
@@ -45,22 +46,51 @@
 
 .note{
   font-size: 1rem;
-  padding-bottom: 0%;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
 }
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-.heading {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
+  .heading {
+    font-size: 2rem;
+  }
+
+  .subtext {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .note {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
 }
-.note{
-  margin-bottom: 0%;
-  padding-bottom: 0%;
-}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .subtext {
+    font-size: 1rem;
+  }
+
+  .button {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .note {
+    font-size: 0.85rem;
+  }
 }

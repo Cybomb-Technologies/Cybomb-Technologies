@@ -117,7 +117,7 @@ export default function AzureContent() {
       <InfoStats
       stats={statsData}
       caption="Partnered with Startups and"
-      highlight="Fortune 500"
+      highlight="Fortune 500 Companies"
     />
      <CloudOffers
       title="What You Can Achieve With Azure"
