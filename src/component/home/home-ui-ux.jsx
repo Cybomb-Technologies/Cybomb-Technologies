@@ -57,7 +57,6 @@ function HomeUIUX() {
               </div>
             ))}
         </div>
-
       </div>
     </section>
   );

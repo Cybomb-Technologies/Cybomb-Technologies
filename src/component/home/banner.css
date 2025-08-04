@@ -6,15 +6,14 @@
   align-items: center;
   color: white;
   padding: 80px 0px;
-
 }
+
 .home-banner::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/images/banner-2.jpg') no-repeat center center;
+  background: url('/images/banner-4.png') no-repeat center center;
   background-size: cover;
-  /* filter: blur(8px); */
   opacity: 1.5;
   z-index: 1;
 }
@@ -23,47 +22,162 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgb(0 0 0 / 37%);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
-
 
 .home-banner .container {
   position: relative;
   z-index: 3;
 }
 
-
 .gradient-text {
   color: #a1a3fe;
 }
+
 .banner-image {
   max-width: 90%;
   height: auto;
 }
-.banner-paragrap-content{
-    font-weight: 400 !important;
+
+.banner-paragrap-content {
+  font-weight: 400 !important;
 }
 
-.Explore-btn{
-   background:#007ea7 !important;
-   border-radius: 28px !important;
-   color: white !important;
-   position: relative;
+.Explore-btn {
+  background: #007ea7 !important;
+  border-radius: 28px !important;
+  color: white !important;
+  position: relative;
 }
 
-.Explore-btn:hover{
-background: transparent !important;
- border: 2px solid rgba(96, 165, 250, 1) !important;
-color: rgba(96, 165, 250, 1) !important;
-}
-.Consultation{  
+.Explore-btn:hover {
+  background: transparent !important;
   border: 2px solid rgba(96, 165, 250, 1) !important;
   color: rgba(96, 165, 250, 1) !important;
-   border-radius: 28px !important;
 }
-.Consultation:hover{
-    background: #007ea7 !important;
-    color: white !important;
-    border: none !important;
+
+.Consultation {
+  border: 2px solid rgba(96, 165, 250, 1) !important;
+  color: rgba(96, 165, 250, 1) !important;
+  border-radius: 28px !important;
+}
+
+.Consultation:hover {
+  background: #007ea7 !important;
+  color: white !important;
+  border: none !important;
+}
+
+/* Responsive Design */
+
+/* Extra Large Screens (Desktops 1200px+) */
+@media (min-width: 1200px) {
+  .home-banner h1 {
+    font-size: 3.5rem;
+  }
+
+  .home-banner .lead {
+    font-size: 1.5rem;
+  }
+
+  .home-banner .btn {
+    font-size: 1.125rem;
+  }
+}
+
+/* Large Screens and Below (Desktops/Tablets < 1200px) */
+@media (max-width: 1199.98px) {
+  .home-banner {
+    padding: 60px 0;
+  }
+
+  .home-banner h1 {
+    font-size: 3rem;
+  }
+
+  .home-banner .lead {
+    font-size: 1.25rem;
+  }
+}
+
+/* Medium Devices (Tablets < 992px) */
+@media (max-width: 991.98px) {
+  .home-banner {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .home-banner h1 {
+    font-size: 2.25rem;
+  }
+
+  .home-banner .lead {
+    font-size: 1.125rem;
+  }
+
+  .home-banner .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .home-banner .card {
+    margin-top: 2rem;
+  }
+}
+
+/* Small Devices (Phones < 768px) */
+@media (max-width: 767.98px) {
+  .home-banner {
+    min-height: auto;
+    padding: 30px 0;
+  }
+
+  .home-banner h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .home-banner .lead {
+    font-size: 1.5rem;
+  }
+
+  .Explore-btn,
+  .Consultation {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .home-banner .form-floating label {
+    font-size: 0.85rem;
+  }
+
+  .home-banner .form-control {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .home-banner .btn-lg {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Devices (<= 576px) */
+@media (max-width: 575.98px) {
+  .home-banner h1 {
+    font-size: 2rem;
+  }
+
+  .home-banner .lead {
+    font-size: 0.8rem;
+  }
+
+  .home-banner .card-body {
+    padding: 1rem;
+  }
+
+  .home-banner .btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
 }
