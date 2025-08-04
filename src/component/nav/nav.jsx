@@ -61,7 +61,7 @@ function Nav() {
       <nav className="navbar navbar-expand-xxl custom-navbar fixed-top">
         <div className="container">
           <Link className="navbar-brand text-white test" to="/">
-           <img src="/images/nav-logo.jpeg" alt="" style={{width:"150px", height:"60px"}}/>
+           <img src="/images/nav-logo.jpeg" alt="" style={{width:"130px", height:"60px"}}/>
           </Link>
           <button
             className="navbar-toggler"
