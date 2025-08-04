@@ -120,7 +120,7 @@ export default function GoogleCloudContent() {
       <InfoStats
       stats={statsData}
       caption="Partnered with Startups and"
-      highlight="Fortune 500"
+      highlight="Fortune 500 Companies"
     />
      <CloudOffers
       title="Why Google Cloud Platform Matters"
