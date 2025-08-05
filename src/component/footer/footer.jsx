@@ -102,6 +102,7 @@ function Footer() {
             <p className={styles.footerText}>
               Transforming Ideas into Digital reality with Cutting-Edge Mobile and web app development, AI integration, and SaaS solutions.
             </p>
+            <h4 className={styles.sectionTitle}>Follow Us</h4>
             <div className={styles.socials}>
               <a href="https://www.instagram.com/cybomb_tech/" target="_blank" rel="noreferrer">
                 <i className="bi bi-instagram"></i>
@@ -165,6 +166,7 @@ function Footer() {
             <p className={styles.footerText}>
               Transforming Ideas into Digital reality with Cutting-Edge development & SaaS solutions.
             </p>
+            <h4 className={styles.sectionTitle}>Follow Us</h4>
             <div className={styles.socials}>
               <a href="https://www.instagram.com/cybomb_tech/" target="_blank" rel="noreferrer">
                 <i className="bi bi-instagram"></i>
