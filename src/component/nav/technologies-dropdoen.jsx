@@ -41,7 +41,6 @@ function Technologiesdropdown({ onLinkClick, isMobile }) {
             {/* Each column can be placed inside its own <ul><li> */}
             <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">
               <Link className="dropdown-item text-primary">Mobile Apps</Link>
-<<<<<<< HEAD
               <Link to="/services/android-app" className="dropdown-item" onClick={onLinkClick}>Android</Link>
               <Link className="dropdown-item" onClick={onLinkClick}>React Native</Link>
               <Link className="dropdown-item" onClick={onLinkClick}>Ios</Link>
@@ -49,29 +48,6 @@ function Technologiesdropdown({ onLinkClick, isMobile }) {
               <Link className="dropdown-item" onClick={onLinkClick}>Swift</Link>
               <Link className="dropdown-item" onClick={onLinkClick}>Kotlin</Link>
               <Link className="dropdown-item" onClick={onLinkClick}>Xamarin</Link>
-=======
-              <Link className="dropdown-item" onClick={onLinkClick}>
-                Android
-              </Link>
-              <Link className="dropdown-item" onClick={onLinkClick}>
-                React Native
-              </Link>
-              <Link className="dropdown-item" onClick={onLinkClick}>
-                Ios
-              </Link>
-              <Link className="dropdown-item" onClick={onLinkClick}>
-                Flutter
-              </Link>
-              <Link className="dropdown-item" onClick={onLinkClick}>
-                Swift
-              </Link>
-              <Link className="dropdown-item" onClick={onLinkClick}>
-                Kotlin
-              </Link>
-              <Link className="dropdown-item" onClick={onLinkClick}>
-                Xamarin
-              </Link>
->>>>>>> 8a13ba03a8cc7355ea508fc67174e021e193a33e
             </div>
 
             <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">
