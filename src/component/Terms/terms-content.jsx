@@ -3,7 +3,7 @@ function Termscontent() {
   return (
     <>
       <section className="terms-content-bg">
-        <div className="container p-5" style={{border:"4px solid black"}}>
+        <div className="container p-5" >
           <h2 className="text-primary">
             Terms & Conditions – Cybomb Technologie
           </h2>

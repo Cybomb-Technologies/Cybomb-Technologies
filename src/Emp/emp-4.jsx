@@ -9,6 +9,9 @@ import SeoServices from "../component/pages-services/digital-market/Seo/Seo";
 import PerformanceServices from "../component/pages-services/digital-market/performance-optimization/performance";
 import PpcServices from "../component/pages-services/digital-market/pay-per-click/pay-per-clicks";
 import OrmServices from "../component/pages-services/digital-market/orm/online-orm";
+import Cookiepolicy from "../pages/cookie-policy";
+import AndroidApp from "../component/pages-services/technologies/mobile-apps/android-app-dev/android-apps";
+
 const emp4Routes = (
   <>
     <Route path="/services/api-development" element={<ApiDevelopment />} />
@@ -21,6 +24,8 @@ const emp4Routes = (
     <Route path="/services/performance-optimization" element={<PerformanceServices/>}/>
     <Route path="/services/pay-per-click" element={<PpcServices/>}/>
     <Route path="/services/ORM-services" element={<OrmServices/>}/>
+    <Route path="/cookie-policy" element={<Cookiepolicy />} />
+    <Route path="/services/android-app" element={<AndroidApp/>}/>
   </>
 );
 
