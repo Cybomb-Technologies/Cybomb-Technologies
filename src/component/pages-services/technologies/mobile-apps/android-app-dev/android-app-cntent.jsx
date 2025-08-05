@@ -8,6 +8,10 @@ import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import placeholderImage from './../../../../../assets/placeholder-image.webp';
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
+import awsImage from '../../../../../assets/aws.avif';
+import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+import HiringModels from "../../../../common-ui/mobile-app/hiring";
+
 
 const services = [
   
@@ -52,7 +56,18 @@ const services = [
       'Expand app capabilities to smart devices, wearables (e.g. smartwatches), and immersive AR/VR experiences.',
   },
 ];
-
+const hiringData = [
+  {
+    title: 'Bucket Hours:',
+    description:
+      'Prepay hours; use them up to six months as needed. Suitable for shared-resource usage.',
+  },
+  {
+    title: 'Dedicated Hiring:',
+    description:
+      'Assign one or more developers exclusively to your project for specified durations.',
+  },
+];
 
 
 const whychooseus = [
@@ -81,6 +96,8 @@ const whychooseus = [
     description: "bucket hours or dedicated full-time hires.",
   },
 ];
+
+
 
 
 
@@ -118,6 +135,14 @@ function AndroidAppContent() {
     <WhyChooseUs ChooseUs={whychooseus}/>
 
     <AndroidTechnologiesSection/>
+    <StillNotSure/>
+    
+     <HiringModels
+      title="Hiring Models"
+      cards={hiringData}
+      image={awsImage}
+    />
+    
     
 
 
