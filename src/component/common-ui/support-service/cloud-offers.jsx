@@ -4,32 +4,29 @@ import styles from './cloud-offers.module.css';
 const CloudOffers = ({ title, features = [], image }) => {
   return (
     <section className={styles.cloudOffersSection}>
-      <h2 className={styles.sectionTitle}>{title}</h2>
+      <div className={styles.container}>
+        <h2 className={styles.sectionTitle}>{title}</h2>
 
-      <div className={styles.contentWrapper}>
-        <ul className={styles.featureList}>
-          {features.map((feature, index) => (
-            <li key={index}>
-              {index % 2 === 0 ? (
-                <>
+        <div className={styles.contentWrapper}>
+          <div className={styles.featureGrid}>
+            {features.map((feature, index) => (
+              <div key={index} className={styles.featureCard}>
+                <div className={styles.featureContent}>
                   <span className={styles.arrow}>→</span>
-                  <span>{feature}</span>
-                </>
-              ) : (
-                <>
-                  <span>{feature}</span>
-                  <span className={styles.arrow}>←</span>
-                </>
-              )}
-            </li>
-          ))}
-        </ul>
-
-        {image && (
-          <div className={styles.imageContainer}>
-            <img src={image} alt="Cloud service illustration" className={styles.image} />
+                  <span className={styles.featureText}>{feature}</span>
+                </div>
+                <div className={styles.progressBar}></div>
+              </div>
+            ))}
           </div>
-        )}
+
+          {image && (
+            <div className={styles.imageContainer}>
+              <img src={image} alt="Cloud service illustration" className={styles.image} />
+              <div className={styles.imageOverlay}></div>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
