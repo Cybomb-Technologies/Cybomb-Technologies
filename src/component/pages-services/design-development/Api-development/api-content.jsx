@@ -1,4 +1,4 @@
-import ApiTechnologiesSection from "./api-dev-TechnologiesSection";
+
 
 
 import Banner from "../../../common-ui/design-and-development/banner";
@@ -9,47 +9,47 @@ import WhyChooseUs from "../../../common-ui/design-and-development/why-choose-us
 import OnlinePresence from "../../../common-ui/design-and-development/online-presence";
 import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
-
+import TechToolsSection from "./api-dev-TechnologiesSection";
 const services = [
   {
-    title: 'Custom Rest API Development',
+    title: 'Custom REST & GraphQL APIs',
     description:
-      'Build reliable and scalable RESTfull APIs that work seamlessly with your frontend, mobile app, or third-party platforms',
+      'We build bespoke APIs tailored to your needs, whether you prefer the robust simplicity of REST or the data-efficient flexibility of GraphQL. Our APIs serve as the reliable backbone for your web and mobile applications.',
   },
   {
-    title: 'GraphQL API Development',
+    title: 'Third-Party Integration & Automation',
     description:
-      'Give clients exactly the data they need-faster and more flexible than REST',
+      'Seamlessly connect your platform with essential services. We integrate payment gateways, CRMs, and marketing tools to automate workflows, streamline data syncing, and enhance your app\'s functionality without building everything from scratch.',
   },
   {
-    title: 'Third-Party API Integration',
+    title: 'API Security & Access Control',
     description:
-      'Seamlessly connect with payment gateways, CRMS, SMS/email providers, maps, analytics, and more',
+      'Protect your digital assets with our comprehensive security solutions. We implement OAuth2, JWT, and role-based access to ensure only authorized users and systems can access your data, giving you peace of mind.',
   },
   {
-    title: 'Internal APIs for Microservices',
+    title: 'Real-Time Data & WebSockets',
     description:
-      'Help your software components communicate effectively in modern distributed systems',
+      'Power interactive experiences like live chat, instant notifications, and real-time dashboards. Our use of WebSockets and streaming technologies creates a fluid, live connection for up-to-the-second data flow.',
   },
   {
-    title: 'Internal APIs for Microservices',
+    title: 'Legacy System API Enablement',
     description:
-      'Secure your app with login systems, OAuth2, JWT, and role-based access controls',
+      'Modernize your existing infrastructure by wrapping it in a new, clean API. This unlocks new possibilities for your legacy systems, allowing them to securely communicate with modern applications and services.',
   },
   {
-    title: 'API Gateway & Rate Limiting',
+    title: 'Microservices & Internal APIs',
     description:
-      'Protect your APIs with smart traffic control, caching, and usage limits',
+      'We design and build internal APIs that allow your software components to communicate efficiently. This helps you build a modular, scalable architecture that is easier to maintain and update as your business grows.',
   },
   {
-    title: 'Real-Time APIs (WebSocket, Streaming)',
+    title: 'Performance Optimization & Caching',
     description:
-      'Power chat apps, notifications, dashboards, or tracking systems with live data flow',
+      'We don\'t just build APIs; we optimize them for speed. By implementing smart caching strategies and rate limiting, we ensure your APIs deliver lightning-fast responses, even under heavy traffic.',
   },
   {
-    title: 'Real-Time APIs (WebSocket, Streaming)',
+    title: 'API Gateway Management & Documentation',
     description:
-      'Power chat apps, notifications, dashboards, or tracking systems with live data flow',
+      'We set up and manage API gateways to protect and control access to your services. Paired with clear, developer-friendly Swagger/OpenAPI documentation, we make it easy for other developers to integrate with your platform.',
   },
 ];
 
@@ -135,7 +135,7 @@ function ApiDevContent() {
     <ServicesOfferings 
     title = "Our API Development Services"
     Services={services}/>
-        <ApiTechnologiesSection/>
+        <TechToolsSection/>
 
     <WhyChooseUs ChooseUs={whychooseus}/>
     <OnlinePresence 

@@ -12,9 +12,9 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/images/banner-4.png') no-repeat center center;
+  background: url('/images/banner-5.png') no-repeat center center;
   background-size: cover;
-  opacity: 1.5;
+  opacity: 1.5; 
   z-index: 1;
 }
 

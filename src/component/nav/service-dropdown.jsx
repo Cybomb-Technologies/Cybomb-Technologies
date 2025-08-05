@@ -23,13 +23,18 @@ function Servicedropdown({ onLinkClick, isMobile }) {
         Services
       </Link>
 
-      <ul
-        className={`dropdown-menu mt-3 dropdown-click  ${isMobile && isDropdownOpen ? "show" : ""}`}
+<ul
+        className={`dropdown-menu mt-3 dropdown-click ${
+          isMobile && isDropdownOpen ? "show" : ""
+        }`}
         style={{
           display: isMobile ? (isDropdownOpen ? "block" : "none") : undefined,
-          width: !isMobile && window.innerWidth >= 1400 ? "1100px" : "100%",
-        
-  left: !isMobile && window.innerWidth >= 1400 ? "700px" : undefined,
+          width: !isMobile && window.innerWidth >= 1400 ? "1050px" : "100%",
+          left: "50%",
+          transform: "translateX(-50%)",
+          padding: 0,
+          position: "absolute",
+          right: "auto",
         }}
       >
         <li className="w-100">
