@@ -1,258 +1,240 @@
 import { Link } from "react-router-dom";
-import "./footer.css";
+import styles from "./footer.module.css";
 
 function Footer() {
+  const contactItems = [
+    {
+      icon: "bi-geo-alt-fill",
+      label: "Address",
+      // text: "Cybomb Technologies LLP, Hygee Works, Guindy, Chennai",
+      text: "Cybomb Technologies LLP, Hygee Works - PS Industrials, No.53, Jawaharlal Nehru Road, Guindy Chennai, Tamil Nadu, India",
+    },
+    {
+      icon: "bi-geo-alt-fill",
+      label: "Branch Address",
+      // text: "Prime Plaza, St.Thomas Mount, Chennai - 600016",
+      text: "Cybomb Technologies LLP, Hygee Works - Prime Plaza No.54/1, 1st street, Sripuram colony,Viralur, Chakrapani Colony, St.Thomas Mount Chennai - 600016, Tamil Nadu, India",
+    },
+    {
+      icon: "bi-telephone-fill",
+      label: "Phone",
+      text: <a href="tel:+919715092104">+91 9715092104</a>,
+    },
+    {
+      icon: "bi-envelope-fill",
+      label: "Email",
+      text: <a href="mailto:support@cybomb.com">support@cybomb.com</a>,
+    },
+  ];
+
   return (
-    <>
-      <footer style={{ padding: "60px 0px 0px", backgroundColor: "#003459" }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-3" data-aos="fade-up">
-              <img
-                src="/images/nav-logo.jpeg"
-                alt=""
-                style={{ height: "60px", width: "130px" }}
-              />
-              <p className="footer-para-color mt-4">
-                Transforming Ideas into Digital reality with Cutting-Ddge Mobile
-                and web app development, AI integration, and SaaS solutions.
-              </p>
-              <div className="d-flex ">
-                <a
-                  href="https://www.instagram.com/cybomb_tech/?hl=en"
-                  target="_blank"
-                >
-                  <i className="footer-para-color mx-3 bi bi-instagram fs-4"></i>
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/cybomb/"
-                  target="_blank"
-                >
-                  <i className="footer-para-color mx-3 bi bi-linkedin fs-4"></i>
-                </a>
-                <a href="https://x.com/CybombTech" target="_blank">
-                  <i className="footer-para-color mx-3 fa-brands fa-x-twitter fs-3 pt-1"></i>
-                </a>
-              </div>
-            </div>
-
-            <div className="col-md-3 ps-3 ps-lg-5" data-aos="fade-up">
-              <h4 className="text-primary">Quick Link</h4>
-              <ul className="list-unstyled">
-                <li className="mt-2">
-                  <Link
-                    className="text-decoration-none footer-para-color"
-                    to="/"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li className="mt-2">
-                  <Link
-                    className="text-decoration-none footer-para-color"
-                    to="/about"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li className="mt-2">
-                  <Link
-                    className="text-decoration-none footer-para-color"
-                    to="/services"
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li className="mt-2">
-                  <a className="text-decoration-none footer-para-color" href="">
-                    Blog
-                  </a>
-                </li>
-                <li className="mt-2">
-                  <Link
-                    className="text-decoration-none footer-para-color"
-                    to="/portfolio"
-                  >
-                    Portfolio
-                  </Link>
-                </li>
-                <li className="mt-2">
-                  <Link
-                    className="text-decoration-none footer-para-color"
-                    to="/career"
-                  >
-                    Career
-                  </Link>
-                </li>
-                <li className="mt-2">
-                  <Link
-                    className="text-decoration-none footer-para-color"
-                    to="/contact"
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-md-2 " data-aos="fade-up">
-              <h4 className="text-primary">Services</h4>
-              <ul className="list-unstyled">
-                <li className="mt-2">
-                  <Link
-                    className="text-decoration-none footer-para-color"
-                    to="/services/mobile-app"
-                  >
-                    Mobile Apps
-                  </Link>
-                </li>
-                <li className="mt-2">
-                  <Link
-                    className="text-decoration-none footer-para-color"
-                    to="/services/web-app"
-                  >
-                    Web Development
-                  </Link>
-                </li>
-                <li className="mt-2">
-                  <Link
-                    className="text-decoration-none footer-para-color"
-                    to="/services/saas-product"
-                  >
-                    SaaS Solutions
-                  </Link>
-                </li>
-                <li className="mt-2">
-                  <Link
-                    className="text-decoration-none footer-para-color"
-                    to="/services/ai-machine-learning"
-                  >
-                    AI Integration
-                  </Link>
-                </li>
-                <li className="mt-2">
-                  <Link
-                    className="text-decoration-none footer-para-color"
-                    to="/services/ui-ux"
-                  >
-                    UI/UX Design
-                  </Link>
-                </li>
-                <li className="mt-2">
-                  <Link
-                    className="text-decoration-none footer-para-color"
-                    to="/services/software-consulting-Strategy"
-                  >
-                    Tech Consulting
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-md-4" data-aos="zoom-out-right">
-              <h4 className="text-primary">Get in Touch</h4>
-              <div className="d-flex align-items-start">
-                <i class="bi bi-geo-alt-fill bg-primary p-1 px-2 rounded mt-1 text-white"></i>
-                <div className="ms-3">
-                  <p className="text-white mb-0">
-                    <b>Address</b>
-                  </p>
-                  <p className="text-white">
-                    Cybomb Technologies LLP, Hygee Works - PS Industrials,
-                    No.53, Jawaharlal Nehru Road, Guindy Chennai, Tamil Nadu,
-                    India
-                  </p>
-                </div>
-              </div>
-              <div className="d-flex align-items-start">
-                <i class="bi bi-geo-alt-fill bg-primary p-1 px-2 rounded mt-1 text-white"></i>
-                <div className="ms-3">
-                  <p className="text-white mb-0">
-                    <b>Branch Address</b>
-                  </p>
-                  <p className="text-white">
-                    Cybomb Technologies LLP, Hygee Works - Prime Plaza No.54/1,
-                    1st street, Sripuram colony,Viralur, Chakrapani Colony,
-                    St.Thomas Mount Chennai - 600016, Tamil Nadu, India
-                  </p>
-                </div>
-              </div>
-              <div className="d-flex align-items-start">
-                <i class="bi bi-telephone-fill bg-primary p-1 px-2 rounded mt-1 text-white"></i>
-                <div className="ms-3">
-                  <p className="text-white mb-0">
-                    <b>Phone</b>
-                  </p>
-                  <a
-                    href="tel:+919715092104"
-                    class="text-decoration-none contact-text-color"
-                  >
-                    +91 9715092104
-                  </a>
-                </div>
-              </div>
-              <div className="d-flex align-items-start">
-                <i class="bi bi-envelope-fill bg-primary p-1 px-2 rounded mt-1 text-white"></i>
-                <div className="ms-3">
-                  <p className="text-white mb-0">
-                    <b>Email</b>
-                  </p>
-                  <a
-                    href="mailto:support@cybomb.com"
-                    class="text-decoration-none contact-text-color"
-                  >
-                    support@cybomb.com
-                  </a>
-                </div>
-              </div>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        {/* ========== DESKTOP VIEW ========== */}
+        <div className={styles.desktopGrid}>
+          {/* Column 1: Logo + Socials */}
+          <div className={styles.logoCol}>
+            <img src="/images/nav-logo.jpeg" alt="logo" className={styles.logo} />
+            <p className={styles.footerText}>
+              Transforming Ideas into Digital reality with Cutting-Edge Mobile and web app development, AI integration, and SaaS solutions.
+            </p>
+            <h4 className={styles.sectionTitle}>Follow Us</h4>
+            <div className={styles.socials}>
+              <a href="https://www.instagram.com/cybomb_tech/" target="_blank" rel="noreferrer">
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/cybomb/" target="_blank" rel="noreferrer">
+                <i className="bi bi-linkedin"></i>
+              </a>
+              <a href="https://x.com/CybombTech" target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-x-twitter"></i>
+              </a>
             </div>
           </div>
-          <hr className="text-primary mt-5" />
 
-          <div className="d-flex justify-content-around">
-            <p className="footer-para-color">
-              © 2025 Cybomb Technologies LLP | All Rights Reserved
-            </p>
-
-            <ul className="list-unstyled d-flex justify-content-between">
-              <li className="mx-2">
-                <Link
-                  className="text-decoration-none footer-para-color"
-                  to="/privacy-policy"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li className="mx-2">
-                <Link
-                  className="text-decoration-none footer-para-color"
-                  to="/terms"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-              <li className="mx-2">
-                <Link
-                  className="text-decoration-none footer-para-color"
-                  to="/refund-policy"
-                >
-                  Refund Policy
-                </Link>
-              </li>
-              <li className="mx-2">
-                <a className="text-decoration-none footer-para-color" to="">
-                  Cookie Policy
-                </a>
-              </li>
+          {/* Column 2: Quick Links */}
+          <div className={styles.quickLinks}>
+            <h4 className={styles.sectionTitle}>Quick Links</h4>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/">Blog</Link></li>
+              <li><Link to="/portfolio">Portfolio</Link></li>
+              <li><Link to="/career">Career</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
+          </div>
 
-            <div>
-              {/* <p className="footer-para-color">Made with in Chennai, India</p> */}
+          {/* Column 3: Services */}
+          <div className={styles.services}>
+            <h4 className={styles.sectionTitle}>Services</h4>
+            <ul>
+              <li><Link to="/services/mobile-app-development">Mobile Apps</Link></li>
+              <li><Link to="/services/web-development">Web Development</Link></li>
+              <li><Link to="/services/saas-product">SaaS Solutions</Link></li>
+              <li><Link to="/services/ai-machine-learning">AI Integration</Link></li>
+              <li><Link to="/services/ui-ux">UI/UX Design</Link></li>
+              <li><Link to="/services/software-consulting-strategy">Tech Consulting</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Get in Touch */}
+          <div className={styles.getInTouch}>
+            <h4 className={styles.sectionTitle}>Get in Touch</h4>
+            {contactItems.map((item, i) => (
+              <div key={i} className={styles.contactItem}>
+                <i className={`bi ${item.icon} ${styles.icon}`}></i>
+                <div className={styles.contactTextBlock}>
+                  <p><strong>{item.label}</strong></p>
+                  <p>{item.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ========== TABLET VIEW ========== */}
+        <div className={styles.tabletView}>
+          {/* Row 1: Logo + Socials */}
+          <div className={styles.mobileTop}>
+            <img src="/images/nav-logo.jpeg" alt="logo" className={styles.logo} />
+            <p className={styles.footerText}>
+              Transforming Ideas into Digital reality with Cutting-Edge Mobile and web app development, AI integration, and SaaS solutions.
+            </p>
+            <div className={styles.socials}>
+              <a href="https://www.instagram.com/cybomb_tech/" target="_blank" rel="noreferrer">
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/cybomb/" target="_blank" rel="noreferrer">
+                <i className="bi bi-linkedin"></i>
+              </a>
+              <a href="https://x.com/CybombTech" target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          {/* Row 2: Quick Links + Services + Get in Touch */}
+          <div className={styles.tabletMiddle}>
+            <div className={styles.quickLinks}>
+              <h4 className={styles.sectionTitle}>Quick Links</h4>
+              <div className={styles.linkGroup}>
+                <Link to="/">Home</Link>
+                <Link to="/about-us">About Us</Link>
+                <Link to="/services">Services</Link>
+                <Link to="/blog">Blog</Link>
+                <Link to="/portfolio">Portfolio</Link>
+                <Link to="/career">Career</Link>
+                <Link to="/contact-us">Contact Us</Link>
+              </div>
+            </div>
+
+            <div className={styles.services}>
+              <h4 className={styles.sectionTitle}>Services</h4>
+              <div className={styles.linkGroup}>
+                <Link to="/mobile-apps">Mobile Apps</Link>
+                <Link to="/web-development">Web Development</Link>
+                <Link to="/saas-solutions">SaaS Solutions</Link>
+                <Link to="/ai-integration">AI Integration</Link>
+                <Link to="/ui-ux-design">UI/UX Design</Link>
+                <Link to="/tech-consulting">Tech Consulting</Link>
+              </div>
+            </div>
+
+            <div className={styles.mobileGetInTouch}>
+              <h4 className={styles.sectionTitle}>Get in Touch</h4>
+              {contactItems.map((item, i) => (
+                <div key={i} className={styles.contactItem}>
+                  <i className={`bi ${item.icon} ${styles.icon}`}></i>
+                  <div>
+                    <p><strong>{item.label}</strong></p>
+                    <p>{item.text}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </footer>
-    </>
+
+        {/* ========== MOBILE VIEW ========== */}
+        <div className={styles.mobileView}>
+          {/* Row 1: Logo + Socials */}
+          <div className={styles.mobileTop}>
+            <img src="/images/nav-logo.jpeg" alt="logo" className={styles.logo} />
+            <p className={styles.footerText}>
+              Transforming Ideas into Digital reality with Cutting-Edge development & SaaS solutions.
+            </p>
+            <div className={styles.socials}>
+              <a href="https://www.instagram.com/cybomb_tech/" target="_blank" rel="noreferrer">
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/cybomb/" target="_blank" rel="noreferrer">
+                <i className="bi bi-linkedin"></i>
+              </a>
+              <a href="https://x.com/CybombTech" target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          {/* Row 2: Quick Links + Services side-by-side */}
+          <div className={styles.mobileLinks}>
+            <div className={styles.quickLinks}>
+              <h4 className={styles.sectionTitle}>Quick Links</h4>
+              <div className={`${styles.linkGroup} ${styles.pageLinks}`}>
+                <Link to="/">Home</Link>
+                <Link to="/about-us">About Us</Link>
+                <Link to="/services">Services</Link>
+                <Link to="/blog">Blog</Link>
+                <Link to="/portfolio">Portfolio</Link>
+                <Link to="/career">Career</Link>
+                <Link to="/contact-us">Contact Us</Link>
+              </div>
+            </div>
+
+            <div className={styles.services}>
+              <h4 className={styles.sectionTitle}>Services</h4>
+              <div className={styles.linkGroup}>
+                <Link to="/mobile-apps">Mobile Apps</Link>
+                <Link to="/web-development">Web Development</Link>
+                <Link to="/saas-solutions">SaaS Solutions</Link>
+                <Link to="/ai-integration">AI Integration</Link>
+                <Link to="/ui-ux-design">UI/UX Design</Link>
+                <Link to="/tech-consulting">Tech Consulting</Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 3: Full-width Get in Touch */}
+          <div className={styles.mobileGetInTouch}>
+            <h4 className={styles.sectionTitle}>Get in Touch</h4>
+            {contactItems.map((item, i) => (
+              <div key={i} className={styles.contactItem}>
+                <i className={`bi ${item.icon} ${styles.icon}`}></i>
+                <div>
+                  <p><strong>{item.label}</strong></p>
+                  <p>{item.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ========== FOOTER BOTTOM ========== */}
+        <div className={styles.footerBottom}>
+          <div className={styles.legalLinks}>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-of-service">Terms of Service</Link>
+            <Link to="/refund-policy">Refund Policy</Link>
+            <Link to="/cookie-policy">Cookie Policy</Link>
+          </div>
+          <p>© 2025 Cybomb Technologies LLP | All Rights Reserved</p>
+        </div>
+
+
+      </div>
+    </footer>
   );
 }
 

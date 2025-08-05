@@ -35,7 +35,7 @@ const emp1Routes = (
     <Route path="/services/saas-product" element={<Saasproduct />} />
     <Route path="/services/ui-ux" element={<Uiuxservices />} />
     <Route
-      path="/services/software-consulting-Strategy"
+      path="/services/software-consulting-strategy"
       element={<Softwareconsulting />}
     />
     <Route path="/portfolio" element={<Prortfolio />} />
