@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./home-form.css";
 
 function Homeform() {
@@ -12,6 +12,16 @@ function Homeform() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+
+  // Clear submit status message after 5 seconds
+  useEffect(() => {
+    if (submitStatus) {
+      const timer = setTimeout(() => {
+        setSubmitStatus(null);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,7 +37,7 @@ function Homeform() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/send-email', {
+      const response = await fetch('http://localhost:5000/api/send-mail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,21 +45,27 @@ function Homeform() {
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        setSubmitStatus({ success: true, message: "Message sent successfully!" });
-        setFormData({
-          firstName: "",
-          email: "",
-          phone: "",
-          source: "",
-          message: ""
-        });
-      } else {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to send message');
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Failed to send message');
       }
+
+      setSubmitStatus({ success: true, message: data.message });
+      // Reset form fields after successful submission
+      setFormData({
+        firstName: "",
+        email: "",
+        phone: "",
+        source: "",
+        message: ""
+      });
+
     } catch (error) {
-      setSubmitStatus({ success: false, message: error.message });
+      setSubmitStatus({ 
+        success: false, 
+        message: error.message || 'Network error. Please check your connection.'
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -64,18 +80,13 @@ function Homeform() {
           <div className="col-md-6" data-aos="zoom-out-up">
             <h2 style={{ color: "#003459" }}>Let's Talk About Your Project</h2>
             <p className="text-black fs-5 mt-3">
-              Ready to transform your ideas into digital reality? Get in touch with our experts and let's discuss how we can bring your vision to life.
+              Ready to transform your ideas into digital reality? Get in touch with our experts.
             </p>
             <img
               src="images/form-img.jpg"
               className="img-fluid rounded mt-3"
               alt="Team Discussion"
             />
-            <div className="d-flex gap-3 mt-3">
-              <span className="text-success small">✔️ Privacy Protected</span>
-              <span className="text-danger small">🚫 No Spam</span>
-              <span className="text-primary small">🔄 Unsubscribe Anytime</span>
-            </div>
           </div>
 
           {/* Right Side Form */}
@@ -159,15 +170,21 @@ function Homeform() {
 
                 <button 
                   type="submit" 
-                  className="btn btn-gradient w-100 text-white"
+                  className="btn btn-gradient w-100 text-white py-3"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? (
+                    <>
+                      <span className="spinner-border spinner-border-sm me-2" role="status"></span>
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Message'
+                  )}
                 </button>
               </form>
             </div>
           </div>
-
         </div>
       </div>
     </section>

@@ -9,7 +9,7 @@ import SeoServices from "../component/pages-services/digital-market/Seo/Seo";
 import PerformanceServices from "../component/pages-services/digital-market/performance-optimization/performance";
 import PpcServices from "../component/pages-services/digital-market/pay-per-click/pay-per-clicks";
 import OrmServices from "../component/pages-services/digital-market/orm/online-orm";
-import Cookiepolicy from "../pages/cookie-policy";
+import Cookiepolicy from "../pages/cookie-info";
 import AndroidApp from "../component/pages-services/technologies/mobile-apps/android-app-dev/android-apps";
 import ReactApp from "../component/pages-services/technologies/mobile-apps/react-native/react-native";
 import IosApp from "../component/pages-services/technologies/mobile-apps/ios-app-dev/ios";

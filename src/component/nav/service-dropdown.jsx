@@ -50,6 +50,10 @@ function Servicedropdown({ onLinkClick, isMobile }) {
               <Link to="/services/bespoke-development" className="dropdown-item" onClick={onLinkClick}>Bespoke Development</Link>
               <Link to="/services/api-development" className="dropdown-item" onClick={onLinkClick}>API Development</Link>
               <Link to="/services/custom-software-integration-services" className="dropdown-item" onClick={onLinkClick}>Custom Software Integration</Link>
+              <Link to="/services/saas-solutions" className="dropdown-item" onClick={onLinkClick}>SaaS Solutions</Link>
+              <Link to="/services/ui-ux-design" className="dropdown-item" onClick={onLinkClick}>UI/UX Design</Link>
+              <Link to="/services/tech-consulting" className="dropdown-item" onClick={onLinkClick}>Tech Consulting</Link>
+              <Link to="/services/ai-integration" className="dropdown-item" onClick={onLinkClick}>AI Integration</Link>
             </div>
 
             {/* Column 2 */}

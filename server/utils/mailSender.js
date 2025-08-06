@@ -1,40 +1,37 @@
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 const sendMail = async ({ firstName, email, phone, source, message }) => {
+  if (!firstName || !email || !message) {
+    throw new Error("Missing required fields");
+  }
+
   const transporter = nodemailer.createTransport({
-    host: "smtp.hostinger.com",
-    port: 587,
-    secure: false,
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT), // Convert string to number
+    secure: true,
     auth: {
-      user: "sudesh.t@cybomb.com",
-      pass: "Cybomb@1234",
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
     },
   });
 
-  // 👇 Add this log check
-  transporter.verify((error, success) => {
-    if (error) {
-      console.error("❌ SMTP Connection Error:", error);
-    } else {
-      console.log("✅ SMTP Server is ready to take our messages");
-    }
-  });
-
   const mailOptions = {
-    from: `"Website Form" <sudesh.t@cybomb.com>`,
-    to: "sudesh.t@cybomb.com",
-    subject: `New Inquiry from ${firstName}`,
+    from: `"Cybomb Contact Form" <${process.env.SMTP_USER}>`,
+    to: process.env.RECEIVER_EMAIL,
+    subject: `New Contact Form Message from ${firstName}`,
     html: `
-      <h3>📩 New Contact Form Submission</h3>
-      <p><b>Name:</b> ${firstName}</p>
-      <p><b>Email:</b> ${email}</p>
-      <p><b>Phone:</b> ${phone || 'N/A'}</p>
-      <p><b>Source:</b> ${source || 'Website'}</p>
-      <p><b>Message:</b> ${message}</p>
+      <h3>New Contact Submission</h3>
+      <p><strong>Name:</strong> ${firstName}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone || 'Not Provided'}</p>
+      <p><strong>Source:</strong> ${source || 'Not Specified'}</p>
+      <p><strong>Message:</strong><br/>${message}</p>
     `,
   };
 
-  await transporter.sendMail(mailOptions);
+  const info = await transporter.sendMail(mailOptions);
+  return info;
 };
 
 module.exports = sendMail;

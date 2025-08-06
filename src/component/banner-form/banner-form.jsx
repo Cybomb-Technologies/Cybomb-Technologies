@@ -1,139 +1,115 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Bannerform.module.css";
 
 function Bannerform() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    company: "",
+    requirement: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      const res = await fetch("http://localhost:5000/api/banner-mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus("✅ Sent successfully!");
+        setFormData({
+          fullName: "",
+          phone: "",
+          email: "",
+          company: "",
+          requirement: "",
+        });
+      } else {
+        setStatus("❌ Failed to send email.");
+      }
+    } catch (error) {
+      console.error("Fetch error:", error);
+      setStatus("❌ Error sending form.");
+    }
+  };
+
   return (
     <div className={styles.formContainer}>
-      <form className={styles.requirementForm}>
-        {/* Name & Phone */}
+      <form className={styles.requirementForm} onSubmit={handleSubmit}>
         <div className={styles.inputGroup}>
           <input
             type="text"
+            name="fullName"
             className={styles.inputField}
             placeholder="Full Name"
             required
+            value={formData.fullName}
+            onChange={handleChange}
           />
           <input
             type="tel"
+            name="phone"
             className={styles.inputField}
             placeholder="Phone Number"
             required
+            value={formData.phone}
+            onChange={handleChange}
           />
         </div>
-
-        {/* Email & Company */}
         <div className={styles.inputGroup}>
           <input
             type="email"
+            name="email"
             className={styles.inputField}
             placeholder="Email"
             required
+            value={formData.email}
+            onChange={handleChange}
           />
           <input
             type="text"
+            name="company"
             className={styles.inputField}
             placeholder="Company Name"
             required
+            value={formData.company}
+            onChange={handleChange}
           />
         </div>
-
-        {/* Requirement TextArea */}
         <div className={styles.inputGroup}>
           <textarea
+            name="requirement"
             className={styles.textarea}
             rows="3"
             placeholder="Your Requirement"
             required
+            value={formData.requirement}
+            onChange={handleChange}
           ></textarea>
         </div>
-
         <button type="submit" className={styles.submitButton}>
           Submit Your Requirement
         </button>
+        <p>{status}</p>
       </form>
     </div>
   );
 }
 
 export default Bannerform;
-
-
-// import React from "react";
-// import styles from "./Bannerform.module.css";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
-// function Bannerform() {
-//   return (
-//     <div className={`${styles.formContainer} container py-5`}>
-//       <div className="row justify-content-center">
-//         <div className="col-lg-8">
-//           <form className={styles.requirementForm}>
-//             <div className="row">
-//               <div className="col-md-6 mb-4">
-//                 <input
-//                   type="text"
-//                   className={`form-control p-3 ${styles.formInput}`}
-//                   id="fullName"
-//                   placeholder="Full Name"
-//                   required
-//                 />
-//               </div>
-//               <div className="col-md-6 mb-4">
-//                 <input
-//                   type="tel"
-//                   className={`form-control p-3 ${styles.formInput}`}
-//                   id="phoneNumber"
-//                   placeholder="Phone Number"
-//                   required
-//                 />
-//               </div>
-//             </div>
-
-//             <div className="row">
-//               <div className="col-md-6 mb-4">
-//                 <input
-//                   type="email"
-//                   className={`form-control p-3 ${styles.formInput}`}
-//                   id="email"
-//                   placeholder="Email"
-//                   required
-//                 />
-//               </div>
-
-//               <div className="col-md-6 mb-4">
-//                 <input
-//                   type="text"
-//                   className={`form-control p-3 ${styles.formInput}`}
-//                   id="companyName"
-//                   placeholder="Company Name"
-//                   required
-//                 />
-//               </div>
-
-//               <div className="mb-4">
-//                 <textarea
-//                   className={`form-control p-3 ${styles.formInput}`}
-//                   id="requirement"
-//                   rows="3"
-//                   placeholder="Your Requirement"
-//                   required
-//                 ></textarea>
-//               </div>
-//             </div>
-
-//             <div className="text-center">
-//               <button
-//                 type="submit"
-//                 className={`btn ${styles.submitButton} w-100 bg-black text-white p-3`}
-//               >
-//                 Submit Your Requirement
-//               </button>
-//             </div>
-//           </form>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Bannerform;

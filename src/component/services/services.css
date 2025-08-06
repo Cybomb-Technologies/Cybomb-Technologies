@@ -5,39 +5,199 @@
   background-repeat: no-repeat;
   height: 260px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 110px 0 60px;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .services-card {
   background-color: #003459 !important;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.services-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
 .service-bg {
   background-color: #FFFFFF;
-  padding: 60px 0px 60px;
+  padding: 60px 0;
 }
 
-/* services main content */
-.services-main {
-  background-color: #e6ecef;
-  padding: 60px 0px;
-}
-.arrow-icon{
-  border-radius: 50%;
+.service-btn {
+  background-color: #0078d4;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-/* services aside */
-.services-aside-bg{
-  background-color: rgb(205 211 224) !important;
-
+.service-btn:hover {
+  background-color: #005a9e;
 }
-.services-aside ul li a {
-  color: rgb(94, 91, 91);
+
+/* Responsive adjustments */
+@media (max-width: 1199.98px) {
+  .banner-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .about-banner-img {
+    height: 220px;
+    padding: 90px 0 50px;
+  }
+  
+  .banner-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-banner-img {
+    height: 200px;
+    padding: 70px 0 40px;
+  }
+  
+  .banner-title {
+    font-size: 1.8rem;
+  }
+  
+  .service-image {
+    height: 150px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-banner-img {
+    height: 180px;
+    padding: 60px 0 30px;
+  }
+  
+  .banner-title {
+    font-size: 1.6rem;
+  }
+  
+  .col-sm-6 {
+    padding: 0 8px;
+  }
+  
+  .service-image {
+    height: 120px;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+  }
+  
+  .service-btn {
+    padding: 6px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Add these to your existing services.css */
+.section-title {
+  padding-bottom: 20px;
+}
+
+.services-main-title {
+  color: #003459;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.services-main-title::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #0078d4;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.services-subtitle {
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments for the title */
+@media (max-width: 767.98px) {
+  .services-main-title {
+    font-size: 1.8rem;
+  }
+  
+  .services-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .services-main-title {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+  
+  .services-main-title::after {
+    width: 60px;
+    height: 2px;
+  }
+  
+  .services-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+.view-all-btn {
+  padding: 10px 30px;
+  border: 2px solid #0078d4;
+  color: #0078d4;
   font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
-.services-aside ul li {
-  background-color: #e6ecef;
-  padding: 10px;
-  border-radius: 8px;
+
+.view-all-btn:hover {
+  background-color: #0078d4;
+  color: white;
+  transform: translateY(-2px);
 }
-.services-card{
-  background-color: gray;
+
+/* Animation for showing additional services */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.row > div:nth-child(n+5) {
+  animation: fadeIn 0.5s ease forwards;
 }
