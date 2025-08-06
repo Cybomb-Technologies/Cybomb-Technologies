@@ -9,6 +9,7 @@ import Homeform from "../component/home/home-form";
 import Homenewsletter from "../component/home/home-newsletter";
 import Homecontact from "../component/home/home-contact";
 import HomeUIUX from "../component/home/home-ui-ux";
+import Partners from "../component/home/partners";
 
 function Home() {
   const websiteUrl = "https://www.cybomb.com/";
@@ -93,6 +94,7 @@ function Home() {
       <Homeourexpertise />
       <Homeform />
       <Homenewsletter />
+      <Partners/>
       <Homecontact />
     </>
   );

@@ -16,11 +16,36 @@ function Nav1() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const isMobile = windowWidth < 1400;
 
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const handleDropdownToggle = (dropdownName) => {
+    setActiveDropdown((prev) => (prev === dropdownName ? null : dropdownName));
+  };
+
+  useEffect(() => {
+  setIsMobileMenuOpen(false);
+  setActiveDropdown(null);
+  }, [location.pathname]);
+
+  const handleNavItemClick = () => {
+  console.log("Link clicked - closing menu");
+  setIsMobileMenuOpen(false);     
+  setActiveDropdown(null);     
+  };
+
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     const navbar = document.querySelector(`.${styles.navbar}`);
@@ -63,11 +88,40 @@ function Nav1() {
 
             <div className={`${styles.menu} ${isMobileMenuOpen ? styles.open : ""}`}>
               <ul className={styles.navItems}>
-                <Servicedropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)} />
-                <Clouddropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)} />
-                <Datadropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)}/>
-                <Securitydropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)} />
-                <Industriesdropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)} />
+                <Servicedropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "services"}
+                  onToggle={() => handleDropdownToggle("services")}
+                  onLinkClick={handleNavItemClick}
+                />
+
+                <Clouddropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "cloud"}
+                  onToggle={() => handleDropdownToggle("cloud")}
+                  onLinkClick={() => setIsMobileMenuOpen(false)}
+                />
+
+                <Datadropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "data"}
+                  onToggle={() => handleDropdownToggle("data")}
+                  onLinkClick={() => setIsMobileMenuOpen(false)}
+                />
+
+                <Securitydropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "security"}
+                  onToggle={() => handleDropdownToggle("security")}
+                  onLinkClick={() => setIsMobileMenuOpen(false)}
+                />
+
+                <Industriesdropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "industries"}
+                  onToggle={() => handleDropdownToggle("industries")}
+                  onLinkClick={() => setIsMobileMenuOpen(false)}
+                />
 
                 <li className={styles.navItem}>
                   <Link
@@ -79,8 +133,22 @@ function Nav1() {
                   </Link>
                 </li>
 
-                <Technologiesdropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)}/>
-                <Successstoriesdropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)} />
+                <Technologiesdropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "technologies"}
+                  onToggle={() => handleDropdownToggle("technologies")}
+                  onLinkClick={() => setIsMobileMenuOpen(false)}
+                />
+
+                <Successstoriesdropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "success"}
+                  onToggle={() => handleDropdownToggle("success")}
+                  onLinkClick={() => setIsMobileMenuOpen(false)}
+                />
+
+
+                
               </ul>
             </div>
           </div>
