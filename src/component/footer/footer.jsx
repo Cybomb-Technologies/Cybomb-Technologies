@@ -72,10 +72,10 @@ function Footer() {
             <ul>
               <li><Link to="/services/mobile-app-development">Mobile Apps</Link></li>
               <li><Link to="/services/web-development">Web Development</Link></li>
-              <li><Link to="/services/saas-product">SaaS Solutions</Link></li>
-              <li><Link to="/services/ai-machine-learning">AI Integration</Link></li>
-              <li><Link to="/services/ui-ux">UI/UX Design</Link></li>
-              <li><Link to="/services/software-consulting-strategy">Tech Consulting</Link></li>
+              <li><Link to="/services/saas-solutions">SaaS Solutions</Link></li>
+              <li><Link to="/services/ai-integration">AI Integration</Link></li>
+              <li><Link to="/services/ui-ux-design">UI/UX Design</Link></li>
+              <li><Link to="/services/tech-consulting">Tech Consulting</Link></li>
             </ul>
           </div>
 
@@ -99,9 +99,9 @@ function Footer() {
           {/* Row 1: Logo + Socials */}
           <div className={styles.mobileTop}>
             <img src="/images/nav-logo.jpeg" alt="logo" className={styles.logo} />
-            <p className={styles.footerText}>
+            {/* <p className={styles.footerText}>
               Transforming Ideas into Digital reality with Cutting-Edge Mobile and web app development, AI integration, and SaaS solutions.
-            </p>
+            </p> */}
             <h4 className={styles.sectionTitle}>Follow Us</h4>
             <div className={styles.socials}>
               <a href="https://www.instagram.com/cybomb_tech/" target="_blank" rel="noreferrer">
@@ -134,12 +134,12 @@ function Footer() {
             <div className={styles.services}>
               <h4 className={styles.sectionTitle}>Services</h4>
               <div className={styles.linkGroup}>
-                <Link to="/mobile-apps">Mobile Apps</Link>
-                <Link to="/web-development">Web Development</Link>
-                <Link to="/saas-solutions">SaaS Solutions</Link>
-                <Link to="/ai-integration">AI Integration</Link>
-                <Link to="/ui-ux-design">UI/UX Design</Link>
-                <Link to="/tech-consulting">Tech Consulting</Link>
+                <Link to="/services/mobile-app-development">Mobile Apps</Link>
+                <Link to="/services/web-development">Web Development</Link>
+                <Link to="/services/saas-solutions">SaaS Solutions</Link>
+                <Link to="/services/ai-integration">AI Integration</Link>
+                <Link to="/services/ui-ux-design">UI/UX Design</Link>
+                <Link to="/services/tech-consulting">Tech Consulting</Link>
               </div>
             </div>
 
@@ -198,12 +198,12 @@ function Footer() {
             <div className={styles.services}>
               <h4 className={styles.sectionTitle}>Services</h4>
               <div className={styles.linkGroup}>
-                <Link to="/mobile-apps">Mobile Apps</Link>
-                <Link to="/web-development">Web Development</Link>
-                <Link to="/saas-solutions">SaaS Solutions</Link>
-                <Link to="/ai-integration">AI Integration</Link>
-                <Link to="/ui-ux-design">UI/UX Design</Link>
-                <Link to="/tech-consulting">Tech Consulting</Link>
+                <Link to="/services/mobile-app-development">Mobile Apps</Link>
+                <Link to="/services/web-development">Web Development</Link>
+                <Link to="/services/saas-solutions">SaaS Solutions</Link>
+                <Link to="/services/ai-integration">AI Integration</Link>
+                <Link to="/services/ui-ux-design">UI/UX Design</Link>
+                <Link to="/services/tech-consulting">Tech Consulting</Link>
               </div>
             </div>
           </div>
