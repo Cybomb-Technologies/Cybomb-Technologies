@@ -24,7 +24,7 @@ function Servicedropdown({ onLinkClick, isMobile }) {
       </Link>
 
 <ul
-        className={`dropdown-menu mt-3 dropdown-click ${
+        className={`dropdown-menu dropdown-click ${
           isMobile && isDropdownOpen ? "show" : ""
         }`}
         style={{
