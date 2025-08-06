@@ -30,7 +30,7 @@ function PopupForm() {
     const timer = setTimeout(() => {
       setShowModal(true);
       setTimeout(() => setIsVisible(true), 50);
-    }, 5000);
+    }, 15000);
     return () => clearTimeout(timer);
   }, []);
 
