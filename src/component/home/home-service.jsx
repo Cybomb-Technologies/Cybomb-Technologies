@@ -38,7 +38,7 @@ function HomeService() {
                   technologies like React Native, Flutter, and native
                   frameworks.
                 </p>
-                <a href="#" className="btn btn-gradient text-white fw-bold">
+                <a href="/services/mobile-app-development" className="btn btn-gradient text-white fw-bold">
                   Learn More →
                 </a>
               </div>
@@ -67,7 +67,7 @@ function HomeService() {
                   using modern frameworks like React, Next.js, and cutting-edge
                   web technologies.
                 </p>
-                <a href="#" className="btn btn-gradient text-white fw-bold">
+                <a href="/services/web-development" className="btn btn-gradient text-white fw-bold">
                   Learn More →
                 </a>
               </div>
@@ -88,15 +88,13 @@ function HomeService() {
               ></div>
               <div className="card-body custom-card-body p-4">
                 <h4 className="card-title display-7 fw-bold text-white">
-                  AI Integration & SaaS
+                  AI Integration 
                 </h4>
-                <h6 className="text-primary">Scalable AI & SaaS platforms</h6>
+                <h6 className="text-primary">Enhance-products,workflows and decisions.</h6>
                 <p className="card-text custom-card-text">
-                  Integrate artificial intelligence and build
-                  Software-as-a-Service solutions that scale with your business
-                  needs and enhance user experiences.
+                  Our AI integration services help you seamlessly embed artificial intelligence into your products, operations, and customer experiences.
                 </p>
-                <a href="#" className="btn btn-gradient text-white fw-bold">
+                <a href="/services/ai-integration" className="btn btn-gradient text-white fw-bold">
                   Learn More →
                 </a>
               </div>
