@@ -1,0 +1,160 @@
+import IosTechnologiesSection from "./ios-TechnologiesSection";
+
+
+import Banner from "../../../../common-ui/mobile-app/banner";
+import InfoStats from "../../../../common-ui/mobile-app/info-stats";
+import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
+import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
+import placeholderImage from './../../../../../assets/placeholder-image.webp';
+import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
+import { MdSchedule } from 'react-icons/md';
+import awsImage from '../../../../../assets/aws.avif';
+import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+import HiringModels from "../../../../common-ui/mobile-app/hiring";
+
+
+const services = [
+  
+  {
+    title: 'Custom Native App Development',
+    description:
+      'Full-fledged iPhone/iPad apps built in Swift or Objective‑C using Xcode',
+  },
+  {
+    title: 'API Integration & Backend Connectivity',
+    description:
+      'RESTful, GraphQL, cloud, and enterprise systems integration.',
+  },
+  {
+    title: 'User Interface & UX Design',
+    description:
+      'Designed per Apple’s Human Interface Guidelines (wireframes → prototypes → UI).',
+  },
+  {
+    title: 'Migration & Legacy Modernization',
+    description:
+      'Upgrade older platforms or hybrid apps to modern native iOS frameworks.',
+  },
+  {
+    title: 'Third-Party SDK & Framework Integrationt',
+    description:
+      'MapKit, HealthKit, ARKit, CoreData, Siri, Apple Pay, push notifications.',
+  },
+  {
+    title: 'SwiftUI & UIKit Development',
+    description:
+      'Declarative UI with SwiftUI alongside traditional UIKit for backwards compatibility.',
+  },
+  {
+    title: 'Testing & QA',
+    description:
+      'Unit/integration/UI/end-to-end testing using XCTest, XCUITest.',
+  },
+  {
+    title: 'App Store Preparation & Submission',
+    description:
+      'Compliance with App Store review criteria, metadata, screenshots, and policies.',
+  },
+];
+const hiringData = [
+  {
+    title: 'Project-Based:',
+    description:
+      'Fixed-scope deliverables with set timeline and budget.',
+  },
+  {
+    title: 'Dedicated Team / Outstaffing:',
+    description:
+      'Scale your team with experienced React developers.',
+  },
+  {
+    title: 'Time & Materials / Hourly:',
+    description:
+      'Flexible billing tailored to ongoing development needs.',
+  }
+];
+
+
+const whychooseus = [
+  {
+    title: 'Component-first Architecture',
+    description: "Facilitates reusable, maintainable, and scalable code.",
+  },
+  {
+    title: 'High Performance',
+    description: 'Thanks to Virtual DOM, SSR, code splitting, lazy loading.',
+  },
+  {
+    title: 'Cross-platform Efficiency',
+    description: 'Shared codebase for web and mobile via React Native.',
+  },
+  {
+    title: 'Broad Ecosystem',
+    description: 'Powerful integrations (Next.js, GraphQL, Material‑UI, Gatsby, Redux).',
+  },
+  {
+    title: 'Thorough Quality Assurance',
+    description: "Rigorous testing across all stages.",
+  },
+  {
+    title: 'Ongoing Support',
+    description: "Continuous maintenance, monitoring, and enhancements.",
+  },
+];
+
+
+
+
+
+function IosContent() {
+  return (
+   <section>
+    <Banner 
+        heading="iOS App Development Services"
+        subtext="Creating polished, high-performance iOS applications."
+        buttonText="Book Free Consultation"
+        note="Ideal for iPhone, iPad, Apple Watch, and even tvOS. From sleek consumer apps to enterprise-grade solutions."
+    />
+    <InfoStats
+        stats={[
+        { number: "900+", label: "In-house Expert Developer" },
+        { number: "70%", label: "Average Savings on Development Costs" },
+        { number: "20,000+", label: "Projects Delivered Successfully" }
+        ]}
+        caption="Partnered with Startups and"
+        highlight="Fortune 500 Companies"
+    />
+    <ServicesOfferings 
+    title = "Our IOS Service Offerings"
+    Services={services}/>
+        
+       
+        <ScheduleConsultation
+      heading="Stay Ahead Of The Competition With Our IOS Services"
+      buttonText="Schedule a Consultation!"
+      imageSrc={placeholderImage}
+      imageAlt="CRM Consultation"
+      Icon={MdSchedule}
+    />
+
+    <WhyChooseUs ChooseUs={whychooseus}/>
+
+    <IosTechnologiesSection/>
+    <StillNotSure/>
+    
+     <HiringModels
+      title="Hiring Models"
+      cards={hiringData}
+      image={awsImage}
+    />
+    
+    
+
+
+    
+    
+   </section>
+  );
+}
+
+export default IosContent;
