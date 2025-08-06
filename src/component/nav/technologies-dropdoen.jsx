@@ -42,8 +42,8 @@ function Technologiesdropdown({ onLinkClick, isMobile }) {
             <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">
               <Link className="dropdown-item text-primary">Mobile Apps</Link>
               <Link to="/services/android-app" className="dropdown-item" onClick={onLinkClick}>Android</Link>
-              <Link className="dropdown-item" onClick={onLinkClick}>React Native</Link>
-              <Link className="dropdown-item" onClick={onLinkClick}>Ios</Link>
+              <Link to="/services/react-native" className="dropdown-item" onClick={onLinkClick}>React Native</Link>
+              <Link to="/services/ios-app" className="dropdown-item" onClick={onLinkClick}>Ios</Link>
               <Link className="dropdown-item" onClick={onLinkClick}>Flutter</Link>
               <Link className="dropdown-item" onClick={onLinkClick}>Swift</Link>
               <Link className="dropdown-item" onClick={onLinkClick}>Kotlin</Link>

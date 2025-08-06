@@ -11,6 +11,8 @@ import PpcServices from "../component/pages-services/digital-market/pay-per-clic
 import OrmServices from "../component/pages-services/digital-market/orm/online-orm";
 import Cookiepolicy from "../pages/cookie-policy";
 import AndroidApp from "../component/pages-services/technologies/mobile-apps/android-app-dev/android-apps";
+import ReactApp from "../component/pages-services/technologies/mobile-apps/react-native/react-native";
+import IosApp from "../component/pages-services/technologies/mobile-apps/ios-app-dev/ios";
 
 const emp4Routes = (
   <>
@@ -26,6 +28,10 @@ const emp4Routes = (
     <Route path="/services/ORM-services" element={<OrmServices/>}/>
     <Route path="/cookie-policy" element={<Cookiepolicy />} />
     <Route path="/services/android-app" element={<AndroidApp/>}/>
+    <Route path="/services/react-native" element={<ReactApp/>}/>
+    <Route path="/services/ios-app" element={<IosApp/>}/>
+    
+  
   </>
 );
 
