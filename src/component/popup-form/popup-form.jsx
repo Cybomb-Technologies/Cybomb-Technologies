@@ -17,6 +17,7 @@ function PopupForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
 
+  // Set theme variables
   useEffect(() => {
     document.documentElement.style.setProperty('--primary', '#003459');
     document.documentElement.style.setProperty('--primaryLight', '#1a4d6e');
@@ -24,56 +25,69 @@ function PopupForm() {
     document.documentElement.style.setProperty('--textLight', '#ffffff');
   }, []);
 
+  // Show modal after 5 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowModal(true);
       setTimeout(() => setIsVisible(true), 50);
-    }, 10000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
 
+  // Close Modal
   const handleClose = () => {
     setIsVisible(false);
     setTimeout(() => {
       setShowModal(false);
-      setShowThankYou(false); // Reset thank you message when closing
+      setShowThankYou(false);
     }, 300);
   };
 
+  // Input Change Handler
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+  // Submit Handler
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  try {
-    const submissionData = {
-      ...formData,
-      subscribe,
-    };
+    try {
+      const submissionData = {
+        ...formData,
+        subscribe,
+      };
 
-    await fetch("/submit", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(submissionData),
-});
+      const response = await fetch("http://localhost:5000/api/popup-mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(submissionData),
+      });
 
+      const result = await response.json();
 
-    setShowThankYou(true); // Show thank you message
-    setTimeout(() => handleClose(), 5000); // Auto-close modal
-  } catch (error) {
-    console.error("Submission error:", error);
-    alert("There was a problem submitting your form. Please try again.");
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+      // Success only if mail was sent
+      if (response.ok && result.success) {
+        setShowThankYou(true);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setSubscribe(false);
+        setTimeout(() => handleClose(), 5000);
+      } else {
+        console.error("Mail not sent:", result);
+        alert("❌ Failed to send mail. Try again.");
+      }
 
+    } catch (error) {
+      console.error("Submit error:", error);
+      alert("❌ Server error. Please try later.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -81,8 +95,8 @@ function PopupForm() {
         <div className={`modal fade show d-block ${styles.modalOverlay}`}>
           <div className={`modal-dialog modal-dialog-centered modal-lg ${isVisible ? styles.modalDialogVisible : styles.modalDialog}`}>
             <div className={`modal-content border-0 ${styles.modalContent}`}>
-              
-              {/* Modal Header */}
+
+              {/* Header */}
               <div className={`modal-header ${styles.modalHeader}`}>
                 <div className="d-flex align-items-center">
                   <div className={styles.iconWrapper}>
@@ -90,15 +104,15 @@ function PopupForm() {
                   </div>
                   <h5 className="modal-title mb-0 ms-2">Get In Touch With Us</h5>
                 </div>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className={`btn-close btn-close-white position-absolute end-0 me-3 ${styles.closeButton}`}
                   onClick={handleClose}
                   aria-label="Close"
                 ></button>
               </div>
 
-              {/* Modal Body */}
+              {/* Body */}
               <div className="modal-body p-0">
                 {showThankYou ? (
                   <div className={`p-5 text-center ${styles.thankYouMessage}`}>
@@ -110,7 +124,8 @@ function PopupForm() {
                   </div>
                 ) : (
                   <div className="row g-0">
-                    {/* Left Panel */}
+
+                    {/* Left */}
                     <div className={`col-lg-5 d-none d-lg-block ${styles.leftPanel}`}>
                       <div className="h-100 d-flex flex-column justify-content-center">
                         <div className={styles.decorativeCircle1}></div>
@@ -140,13 +155,13 @@ function PopupForm() {
                       </div>
                     </div>
 
-                    {/* Form Section */}
+                    {/* Right */}
                     <div className="col-lg-7">
                       <div className={`p-4 p-md-5 ${styles.formWrapper}`}>
                         <form onSubmit={handleSubmit}>
                           <div className="row g-3">
-                            
-                            {/* Name Field */}
+
+                            {/* Name */}
                             <div className="col-12">
                               <label className="form-label fw-bold text-primary">
                                 Name <span className="text-danger">*</span>
@@ -169,7 +184,7 @@ function PopupForm() {
                               </div>
                             </div>
 
-                            {/* Email Field */}
+                            {/* Email */}
                             <div className="col-12">
                               <label className="form-label fw-bold text-primary">
                                 Email <span className="text-danger">*</span>
@@ -192,7 +207,7 @@ function PopupForm() {
                               </div>
                             </div>
 
-                            {/* Phone Input */}
+                            {/* Phone */}
                             <div className="col-12">
                               <label className="form-label fw-bold text-primary">
                                 Phone Number <span className="text-danger">*</span>
@@ -248,7 +263,7 @@ function PopupForm() {
                               </div>
                             </div>
 
-                            {/* Submit Button */}
+                            {/* Submit */}
                             <div className="col-12 mt-3">
                               <button
                                 type="submit"
@@ -261,19 +276,22 @@ function PopupForm() {
                                     Sending...
                                   </>
                                 ) : (
-                                  <button className={styles.submitButton}>
-  <i className="bi bi-send-fill"></i> Send Message
-</button>
+                                  <>
+                                    <i className="bi bi-send-fill"></i> Send Message
+                                  </>
                                 )}
                               </button>
                             </div>
+
                           </div>
                         </form>
                       </div>
                     </div>
+
                   </div>
                 )}
               </div>
+
             </div>
           </div>
         </div>
