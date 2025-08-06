@@ -8,6 +8,7 @@ import Homeform from "../component/home/home-form";
 import Homenewsletter from "../component/home/home-newsletter";
 import Homecontact from "../component/home/home-contact";
 import HomeUIUX from "../component/home/home-ui-ux";
+import Partners from "../component/home/partners";
 import Metatags from "../SEO/meta-tags";
 
 function Home() {
@@ -33,6 +34,7 @@ function Home() {
       <Homeourexpertise />
       <Homeform />
       <Homenewsletter />
+      <Partners/>
       <Homecontact />
     </>
   );
