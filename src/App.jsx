@@ -12,6 +12,7 @@ import emp1Routes from "./Emp/emp-1";
 import emp2Routes from "./Emp/emp-2";
 import emp3Routes from "./Emp/emp-3";
 import emp4Routes from "./Emp/emp-4";
+import emp5Routes from "./Emp/emp-5";
 
 import Nav1 from "./component/nav1/nav1";
 
@@ -30,6 +31,7 @@ function App() {
         {emp2Routes}
         {emp3Routes}
         {emp4Routes}
+        {emp5Routes}
       </Routes>
       <Popupform/>
       <Footer />

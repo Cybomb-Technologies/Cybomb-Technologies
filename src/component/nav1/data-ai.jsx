@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import styles from "./dropdown.module.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import {
@@ -12,101 +11,114 @@ import {
   FaPuzzlePiece,
   FaRegLightbulb,
   FaRobot,
-  FaNetworkWired,
   FaUserCog,
   FaCube
 } from "react-icons/fa";
-import { MdStorage, MdOutlineAutoGraph } from "react-icons/md";
+import { MdStorage } from "react-icons/md";
 import { SiGoogleanalytics } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
 
-function Datadropdown1({ onLinkClick, isMobile }) {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const handleToggleClick = (e) => {
-    if (isMobile) {
-      e.preventDefault();
-      setIsDropdownOpen((prev) => !prev);
-    }
-  };
-
+function Datadropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
   return (
-    <li className={styles.dropdownWrapper}>
+    <li
+      className={styles.dropdownWrapper}
+      onMouseEnter={() => !isMobile && onToggle(true)}
+      onMouseLeave={() => !isMobile && onToggle(false)}
+    >
       <Link
         className={styles.dropdownToggle}
         to="#"
         role="button"
-        aria-expanded={isDropdownOpen ? "true" : "false"}
-        onClick={handleToggleClick}
+        aria-expanded={isOpen ? "true" : "false"}
+        onClick={(e) => {
+          if (isMobile) {
+            e.preventDefault();
+            onToggle(); // toggle dropdown
+          }
+        }}
       >
         Data & AI
         <span className={styles.arrow}>
-          {isDropdownOpen ? <FaChevronUp size={10} /> : <FaChevronDown size={10} />}
+          {isOpen ? <FaChevronUp size={10} /> : <FaChevronDown size={10} />}
         </span>
       </Link>
 
       <ul
-        className={`${styles.dropdownMenu} ${isMobile && isDropdownOpen ? styles.show : ""}`}
-        style={{
-          display: isMobile ? (isDropdownOpen ? "block" : "none") : undefined,
-          width: !isMobile && window.innerWidth >= 1400 ? "650px" : "100%",
-        }}
+        className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
+        style={
+          !isMobile
+            ? {
+                display: isOpen ? "block" : "none",
+                position: "absolute",
+                top: "100%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "max-content",
+                maxWidth: "calc(100vw - 40px)"
+              }
+            : {
+                display: isOpen ? "block" : "none",
+                width: "100%"
+              }
+        }
       >
         <li>
-          <div className={styles.dropdownGrid}>
-            {/* Data Column */}
-            <div className={styles.dropdownColumn}>
-              <div className={styles.dropdownHeader}>Data</div>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <FaRegLightbulb className={styles.icon} /> Strategy Consulting
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <FaCogs className={styles.icon} /> Processing
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <FaClipboardCheck className={styles.icon} /> Governance Solution
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <MdStorage className={styles.icon} /> Storage Solution
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <FaProjectDiagram className={styles.icon} /> Quality Management
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <FaPuzzlePiece className={styles.icon} /> Modelling Design
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <FaDatabase className={styles.icon} /> Architecture
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <SiGoogleanalytics className={styles.icon} /> Analytics & Visualization
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <FaCloudUploadAlt className={styles.icon} /> Cloud Data Migration
-              </Link>
-            </div>
+          <div className="container">
+            <div className={styles.dropdownGrid}>
+              {/* Data Column */}
+              <div className={styles.dropdownColumn}>
+                <div className={styles.dropdownHeader}>Data</div>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <FaRegLightbulb className={styles.icon} /> Strategy Consulting
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <FaCogs className={styles.icon} /> Processing
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <FaClipboardCheck className={styles.icon} /> Governance Solution
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <MdStorage className={styles.icon} /> Storage Solution
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <FaProjectDiagram className={styles.icon} /> Quality Management
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <FaPuzzlePiece className={styles.icon} /> Modelling Design
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <FaDatabase className={styles.icon} /> Architecture
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <SiGoogleanalytics className={styles.icon} /> Analytics & Visualization
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <FaCloudUploadAlt className={styles.icon} /> Cloud Data Migration
+                </Link>
+              </div>
 
-            {/* AI Column */}
-            <div className={styles.dropdownColumn}>
-              <div className={styles.dropdownHeader}>AI</div>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <GiArtificialIntelligence className={styles.icon} /> Custom AI Development
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <FaRegLightbulb className={styles.icon} /> AI Consulting Strategy
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <FaChartPie className={styles.icon} /> AI Business Intelligence
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <FaRobot className={styles.icon} /> Large Language Models Solutions
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <FaUserCog className={styles.icon} /> AI Personalized Customer Experience
-              </Link>
-              <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
-                <FaCube className={styles.icon} /> Blockchain
-              </Link>
+              {/* AI Column */}
+              <div className={styles.dropdownColumn}>
+                <div className={styles.dropdownHeader}>AI</div>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <GiArtificialIntelligence className={styles.icon} /> Custom AI Development
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <FaRegLightbulb className={styles.icon} /> AI Consulting Strategy
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <FaChartPie className={styles.icon} /> AI Business Intelligence
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <FaRobot className={styles.icon} /> Large Language Models Solutions
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <FaUserCog className={styles.icon} /> AI Personalized Customer Experience
+                </Link>
+                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                  <FaCube className={styles.icon} /> Blockchain
+                </Link>
+              </div>
             </div>
           </div>
         </li>

@@ -35,9 +35,9 @@ function Footer() {
           {/* Column 1: Logo + Socials */}
           <div className={styles.logoCol}>
             <img src="/images/nav-logo.jpeg" alt="logo" className={styles.logo} />
-            <p className={styles.footerText}>
+            {/* <p className={styles.footerText}>
               Transforming Ideas into Digital reality with Cutting-Edge Mobile and web app development, AI integration, and SaaS solutions.
-            </p>
+            </p> */}
             <h4 className={styles.sectionTitle}>Follow Us</h4>
             <div className={styles.socials}>
               <a href="https://www.instagram.com/cybomb_tech/" target="_blank" rel="noreferrer">

@@ -23,7 +23,7 @@ function Technologiesdropdown({ onLinkClick, isMobile }) {
         Technologies
       </Link>
       <ul
-        className={`dropdown-menu mt-3 dropdown-click ${
+        className={`dropdown-menu dropdown-click ${
           isMobile && isDropdownOpen ? "show" : ""
         }`}
         style={{
@@ -44,8 +44,8 @@ function Technologiesdropdown({ onLinkClick, isMobile }) {
               <Link to="/services/android-app-development" className="dropdown-item" onClick={onLinkClick}>Android</Link>
               <Link to="/services/react-native-development" className="dropdown-item" onClick={onLinkClick}>React Native</Link>
               <Link to="/services/ios-app-development" className="dropdown-item" onClick={onLinkClick}>Ios</Link>
-              <Link className="dropdown-item" onClick={onLinkClick}>Flutter</Link>
-              <Link className="dropdown-item" onClick={onLinkClick}>Swift</Link>
+              <Link to="/services/flutter-app-development"className="dropdown-item" onClick={onLinkClick}>Flutter</Link>
+              <Link to="/services/swift-app-development" className="dropdown-item" onClick={onLinkClick}>Swift</Link>
               <Link className="dropdown-item" onClick={onLinkClick}>Kotlin</Link>
               <Link className="dropdown-item" onClick={onLinkClick}>Xamarin</Link>
             </div>

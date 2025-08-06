@@ -7,6 +7,7 @@ import DevelopmentProcess from "../../../common-ui/enterprise-services/developme
 import ScheduleConsultation from "../../../common-ui/enterprise-services/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
 import ServicesOfferings from "../../../common-ui/enterprise-services/services-offerings";
+import CloudPlatforms from "./CloudPlatforms";
 
 const offerings = [
   {
@@ -91,6 +92,8 @@ function CloudSolutionsContent() {
         title="🧩 What We Offer" 
         items={offerings}
       />
+
+      <CloudPlatforms/>
 
       <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our Cloud Services"
