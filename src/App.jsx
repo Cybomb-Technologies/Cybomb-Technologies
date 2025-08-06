@@ -13,6 +13,8 @@ import emp2Routes from "./Emp/emp-2";
 import emp3Routes from "./Emp/emp-3";
 import emp4Routes from "./Emp/emp-4";
 
+import Nav1 from "./component/nav1/nav1";
+
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: false });
@@ -21,7 +23,8 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Nav />
+      <Nav/>
+      {/* <Nav1/> */}
       <Routes>
         {emp1Routes}
         {emp2Routes}
