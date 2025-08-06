@@ -7,84 +7,84 @@ const services = [
     id: 1,
     title: "Website Development",
     description: "Professional website development with responsive design, SEO optimization, and cutting-edge technologies.",
-    image: "images/services-1.jpg",
+    image: "images/services/design-development/service-1.png",
     link: "/services/web-development"
   },
   {
     id: 2,
     title: "Mobile App Development",
     description: "Cross-platform mobile applications built with React Native or native technologies for iOS and Android.",
-    image: "images/services-2.jpg",
+    image: "images/services/design-development/service-2.png",
     link: "/services/mobile-app-development"
   },
   {
     id: 3,
     title: "E-commerce Development",
     description: "Custom e-commerce solutions with secure payment gateways, inventory management, and analytics.",
-    image: "images/services-3.jpg",
+    image: "images/services/design-development/service-3.png",
     link: "/services/ecommerce-development"
   },
   {
     id: 4,
     title: "Software Development",
     description: "Custom software solutions tailored to your business needs with scalable architecture.",
-    image: "images/services-4.jpg",
+    image: "images/services/design-development/service-4.png",
     link: "/services/software-development"
   },
   {
     id: 5,
     title: "Game Development",
     description: "Engaging 2D/3D game development for mobile, web, and desktop platforms.",
-    image: "images/services-5.jpg",
+    image: "images/services/design-development/service-5.png",
     link: "/services/game-development"
   },
   {
     id: 6,
     title: "Bespoke Development",
     description: "Fully customized solutions designed specifically for your unique business requirements.",
-    image: "images/services-6.jpg",
+    image: "images/services/design-development/service-6.png",
     link: "/services/bespoke-development"
   },
   {
     id: 7,
     title: "API Development",
     description: "Secure and scalable API development and integration services for seamless connectivity.",
-    image: "images/services-1.jpg",
+    image: "images/services/design-development/service-7.png",
     link: "/services/api-development"
   },
   {
     id: 8,
     title: "Custom Software Integration",
     description: "Integration of disparate systems to create unified workflows and data synchronization.",
-    image: "images/services-2.jpg",
+    image: "images/services/design-development/service-8.png",
     link: "/services/custom-software-integration-services"
   },
   {
     id: 9,
     title: "SaaS Solutions",
     description: "Cloud-based software solutions with subscription models and multi-tenant architecture.",
-    image: "images/services-3.jpg",
+    image: "images/services/design-development/service-9.png",
     link: "/services/saas-solutions"
   },
   {
     id: 10,
     title: "UI/UX Design",
     description: "User-centric design services focusing on usability, accessibility, and engaging experiences.",
-    image: "images/services-4.jpg",
+    image: "images/services/design-development/service-10.png",
     link: "/services/ui-ux-design"
   },
   {
     id: 11,
     title: "Tech Consulting",
     description: "Strategic technology consulting to align your IT infrastructure with business goals.",
-    image: "images/services-5.jpg",
+    image: "images/services/design-development/service-11.png",
     link: "/services/tech-consulting"
   },
   {
     id: 12,
     title: "AI Integration",
     description: "Implementing AI and machine learning solutions to automate processes and gain insights.",
-    image: "images/services-6.jpg",
+    image: "images/services/design-development/service-12.png",
     link: "/services/ai-integration"
   }
 ];
