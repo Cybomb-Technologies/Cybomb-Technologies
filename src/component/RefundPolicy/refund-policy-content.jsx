@@ -3,7 +3,7 @@ function Refundpolicycontent() {
 return(
     <>
       <section className="refund-policy">
-        <div className="container">
+        <div className="container p-5">
           <div className="d-flex align-items-start">
             <span className="count bg-primary">1</span>
             <div className="ms-2">

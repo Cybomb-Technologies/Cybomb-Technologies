@@ -3,7 +3,7 @@ function Privacypolicycontent() {
   return (
     <>
       <section className="privacy-policy-content">
-        <div className="container p-5" style={{border:"4px solid black"}}>
+        <div className="container p-5" >
           <h2 className="text-primary">Privacy Policy – Cybomb Technologies</h2>
           <h5 className="mt-3">A Legal Disclaimer</h5>
           <div className="mt-4">

@@ -9,6 +9,81 @@
     border-radius: 50%;
     font-size: 13px;
 }
+.refund-policy .container{
+    border:4px black solid;
+}
+
 /* .points::marker{
     background-color: red !important;
 } */
+
+.policy-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.policy-title-row h5 {
+  margin: 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .refund-policy {
+    padding: 40px 10px;
+  }
+
+  .refund-policy .container {
+    padding: 20px !important;
+    border: none;
+  }
+
+  .refund-policy h5 {
+    font-size: 1.05rem;
+  }
+
+  .refund-policy p,
+  .refund-policy li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .refund-policy ul.points {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .count {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .ms-2 {
+    margin-left: 0 !important;
+  }
+
+  .ms-2 p {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .refund-policy h5 {
+    font-size: 1rem;
+  }
+
+  .refund-policy p,
+  .refund-policy li {
+    font-size: 0.9rem;
+  }
+
+  .count {
+    font-size: 11px;
+    padding: 4px 7px;
+  }
+
+  .refund-policy .container {
+    padding: 15px !important;
+    border: none;
+  }
+}

@@ -11,14 +11,48 @@ const techData = {
   APIs: ["REST", "GraphQL", "MongoDB","Express.js","Django"],
 };
 
-const GameTechnologiesSection = () => {
+const TechLogos = {
+  "HTML5": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  "CSS3": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "React.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  "Tailwind": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+  "Shopify": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopify_logo_2018.svg/768px-Shopify_logo_2018.svg.png?20240107131458",
+  "WooCommerce": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/woocommerce/woocommerce-original.svg",
+  "Magento": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg",
+  "BigCommerce": "https://www.vectorlogo.zone/logos/bigcommerce/bigcommerce-icon.svg",
+  "Custom React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "Node": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  "Express.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  "PHP": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  "Laravel": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
+  "Django": "https://www.svgrepo.com/show/373554/django.svg",
+  "MongoDB": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  "Stripe": "https://www.vectorlogo.zone/logos/stripe/stripe-ar21~bgwhite.svg",
+  "PayPal": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/paypal-icon.png",
+  "Phonepe": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/phonepe-icon.png", // This is an example, you would need a proper logo link
+  "UPI": "https://www.vectorlogo.zone/logos/upi/upi-ar21.svg",
+  "WordPress": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
+  "Contentful": "https://www.svgrepo.com/show/353600/contentful.svg",
+  "Firebase": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  "Cloudinary": "https://www.svgrepo.com/show/353566/cloudinary.svg",
+  "REST": "https://cdn-icons-png.flaticon.com/512/907/907773.png",
+  "GraphQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+};
+
+
+const TechToolsSection = () => {
   const categories = Object.keys(techData);
   const [selected, setSelected] = useState(categories[0]);
 
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Technologies We Use</h2>
+        <h2 className={styles.title}>API Development Technologies</h2>
 
         {/* Tabs */}
         <div className={styles.tabWrapper}>
@@ -33,11 +67,16 @@ const GameTechnologiesSection = () => {
           ))}
         </div>
 
-        {/* Tech Cards (Text-only boxes) */}
+        {/* Tech Cards */}
         <div className={styles.cardGrid}>
           {techData[selected].map((item) => (
             <div key={item} className={styles.techCard}>
-              {item}
+              <img
+                src={TechLogos[item]}
+                alt={`${item} logo`}
+                className={styles.logo}
+              />
+              <span>{item}</span>
             </div>
           ))}
         </div>
@@ -46,4 +85,4 @@ const GameTechnologiesSection = () => {
   );
 };
 
-export default GameTechnologiesSection;
+export default TechToolsSection;
