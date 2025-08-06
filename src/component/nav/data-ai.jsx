@@ -25,7 +25,7 @@ function Datadropdown({ onLinkClick, isMobile }) {
       </Link>
 
       <ul
-        className={`dropdown-menu mt-3 dropdown-click datadropdown-ul ${isMobile && isDropdownOpen ? "show" : ""}`}
+        className={`dropdown-menu mt-2 dropdown-click datadropdown-ul ${isMobile && isDropdownOpen ? "show" : ""}`}
          style={{
     display: isMobile ? (isDropdownOpen ? "block" : "none") : undefined,
     width: !isMobile && window.innerWidth >= 1400 ? "650px" : "100%",
