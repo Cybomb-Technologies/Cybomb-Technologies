@@ -24,7 +24,7 @@ function Successstoriesdropdown({ onLinkClick, isMobile }) {
       </Link>
 
       <ul
-        className={`dropdown-menu mt-3 ${isMobile && isDropdownOpen ? "show" : ""}`}
+        className={`dropdown-menu mt-2 ${isMobile && isDropdownOpen ? "show" : ""}`}
         style={isMobile ? { display: isDropdownOpen ? "block" : "none" } : {}}
       >
         <li>
