@@ -27,9 +27,9 @@ const emp4Routes = (
     <Route path="/services/pay-per-click" element={<PpcServices/>}/>
     <Route path="/services/ORM-services" element={<OrmServices/>}/>
     <Route path="/cookie-policy" element={<Cookiepolicy />} />
-    <Route path="/services/android-app" element={<AndroidApp/>}/>
-    <Route path="/services/react-native" element={<ReactApp/>}/>
-    <Route path="/services/ios-app" element={<IosApp/>}/>
+    <Route path="/services/android-app-development" element={<AndroidApp/>}/>
+    <Route path="/services/react-native-development" element={<ReactApp/>}/>
+    <Route path="/services/ios-app-development" element={<IosApp/>}/>
     
   
   </>
