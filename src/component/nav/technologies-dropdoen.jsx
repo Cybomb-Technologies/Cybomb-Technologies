@@ -76,7 +76,7 @@ function Technologiesdropdown({ onLinkClick, isMobile }) {
               <Link className="dropdown-item text-primary">CMS</Link>
               <div className="row">
                 <div className="col-md-6">
-                  <Link className="dropdown-item" onClick={onLinkClick}>
+                  <Link to="/services/wordpress"className="dropdown-item" onClick={onLinkClick}>
                     Wordpress
                   </Link>
                   <Link className="dropdown-item" onClick={onLinkClick}>
