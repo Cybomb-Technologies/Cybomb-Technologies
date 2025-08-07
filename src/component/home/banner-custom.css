@@ -16,7 +16,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/images/banner-8.png') no-repeat center center;
+  background: url('/images/banner-11.png') no-repeat center center;
   background-size: cover;
   z-index: 1;
 }
@@ -51,7 +51,7 @@
 }
 
 .dynamic-text {
-  color: rgb(157, 157, 255); /* Light blue that stands out against wood tones */
+  color: #2c68ff; /* Light blue that stands out against wood tones */
   font-weight: 650;
   animation: fadeIn 0.8s ease;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -71,7 +71,7 @@
 
 /* Buttons */
 .explore-btn {
-  background: linear-gradient(135deg, #2a5d84 0%, #1a3a5a 100%) !important;
+  background: linear-gradient(135deg, #7c8992 0%, #1a3a5a 100%) !important;
   border: none !important;
   border-radius: 50px !important;
   color: white !important;
@@ -84,26 +84,30 @@
 .explore-btn::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: 0.6s ease;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #e0f7ff 0%, #7fd8ff 100%);
+  z-index: -1;
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .explore-btn:hover {
+   color: #1a3a5a !important;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(42, 93, 132, 0.3);
+  box-shadow: 0 6px 20px rgba(126, 216, 255, 0.3);
 }
 
 .explore-btn:hover::before {
-  left: 100%;
+  opacity: 1;
 }
 
 .consultation-btn {
-  border-color:#1a3a5a !important;
-  background: #1a3a5a!important;
+  border-color:#708aa4 !important;
+  background: linear-gradient(135deg, #7c8992 0%, #1a3a5a 100%) !important;
   background-clip: padding-box !important;
   color: #e0f7ff !important;
   border-radius: 50px !important;

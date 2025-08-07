@@ -29,35 +29,32 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  const [index, setIndex] = useState(1); // Start at first real slide
+  const [index, setIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const intervalRef = useRef(null);
-  const extendedSlides = [
-    testimonials[testimonials.length - 1], // Clone last
-    ...testimonials,
-    testimonials[0], // Clone first
-  ];
-  const slideCount = testimonials.length;
+  const slides = [...testimonials];
+  const slideCount = slides.length;
 
   const goToSlide = (i) => {
-    setIndex(i);
     setIsTransitioning(true);
+    setIndex(i);
   };
 
-  const [disabled, setDisabled] = useState(false);
-
   const next = () => {
-    if (disabled) return;
-    setDisabled(true);
-    goToSlide(index + 1);
-    setTimeout(() => setDisabled(false), 600); // matches transition duration
+    goToSlide((index + 1) % slideCount);
+    resetInterval();
   };
 
   const prev = () => {
-    if (disabled) return;
-    setDisabled(true);
-    goToSlide(index - 1);
-    setTimeout(() => setDisabled(false), 600);
+    goToSlide((index - 1 + slideCount) % slideCount);
+    resetInterval();
+  };
+
+  const resetInterval = () => {
+    clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      next();
+    }, 5000);
   };
 
   // Auto-loop every 5s
@@ -67,33 +64,6 @@ const Testimonials = () => {
     }, 5000);
     return () => clearInterval(intervalRef.current);
   }, [index]);
-
-  const handleTransitionEnd = () => {
-    if (index === extendedSlides.length - 1) {
-      // Jump from clone of first → real first
-      setIsTransitioning(false);
-      setTimeout(() => {
-        setIndex(1);
-      }, 20);
-    } else if (index === 0) {
-      // Jump from clone of last → real last
-      setIsTransitioning(false);
-      setTimeout(() => {
-        setIndex(slideCount);
-      }, 20);
-    }
-  };
-
-  // Re-enable transition after instant jump
-  useEffect(() => {
-    if (!isTransitioning) {
-      const id = setTimeout(() => {
-        setIsTransitioning(true);
-      }, 50); // Slightly more than above timeout to ensure proper DOM sync
-      return () => clearTimeout(id);
-    }
-  }, [isTransitioning]);
-
 
   return (
     <section className={styles.testimonialsSection}>
@@ -110,9 +80,8 @@ const Testimonials = () => {
               transform: `translateX(-${index * 100}%)`,
               transition: isTransitioning ? 'transform 0.6s ease-in-out' : 'none',
             }}
-            onTransitionEnd={handleTransitionEnd}
           >
-            {extendedSlides.map((testimonial, i) => (
+            {slides.map((testimonial, i) => (
               <div key={i} className={styles.card}>
                 <p className={styles.feedback}>"{testimonial.feedback}"</p>
                 <div className={styles.stars}>
@@ -136,11 +105,11 @@ const Testimonials = () => {
       </div>
 
       <div className={styles.dotsWrapper}>
-        {testimonials.map((_, dotIndex) => (
+        {slides.map((_, dotIndex) => (
           <span
             key={dotIndex}
-            className={`${styles.dot} ${dotIndex === index - 1 ? styles.activeDot : ''}`}
-            onClick={() => goToSlide(dotIndex + 1)}
+            className={`${styles.dot} ${dotIndex === index ? styles.activeDot : ''}`}
+            onClick={() => goToSlide(dotIndex)}
           />
         ))}
       </div>
