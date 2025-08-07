@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./blog.css";
+import "./blog.module.css";
 
 function Blogcontent() {
 const [selectedTopic, setSelectedTopic] = useState("Cloud Computing");

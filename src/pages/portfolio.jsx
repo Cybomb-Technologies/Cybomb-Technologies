@@ -1,4 +1,4 @@
-import Portfoliobanner from "../component/portfolio/portfolio-banner";
+
 import Portfoliocontent from "../component/portfolio/portfolio-content";
 import Metatags from "../SEO/meta-tags";
 
@@ -16,7 +16,7 @@ function Prortfolio() {
   return (
     <>
     <Metatags  metaProps={metaPropsData}/>
-      <Portfoliobanner />
+      
       <Portfoliocontent />
     </>
   );

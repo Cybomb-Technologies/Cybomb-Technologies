@@ -1,8 +1,21 @@
 .useCasesSection {
   background-color: white;
-  padding: 80px 5%;
+  padding: 80px 0;
   font-family: 'Poppins', sans-serif;
   text-align: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-top: 0%;
+}
+
+.titleContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .sectionTitle {
@@ -10,10 +23,22 @@
   color: white;
   font-size: 1.9rem;
   font-weight: 700;
-  padding: 14px 36px;
+  padding: 16px 40px;
   border-radius: 40px;
   display: inline-block;
-  margin: 0 auto 60px;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subTitle {
+  color: #001f3f;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0;
+  margin: 0 0 40px 0;
+  display: block;
+  line-height: 1.4;
 }
 
 .cardGrid {
@@ -22,6 +47,7 @@
   gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .card {
@@ -34,15 +60,8 @@
   min-height: 180px;
   transition: transform 0.2s ease;
   border: 4px solid transparent;
-  .card {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
 }
 
-}
-
-/* Shadow only on the right side */
 .card:hover {
   transform: translateY(-4px);
 }
@@ -80,19 +99,20 @@
   color: #000;
   text-align: center;
 }
+.sectionTitle,
+.subTitle {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-@media (max-width: 1200px) and (min-width: 993px) {
-   .cardGrid > .card:nth-last-child(-n+2):nth-child(odd) {
+@media (max-width: 1024px) {
+  .cardGrid > .card:nth-last-child(-n+2):nth-child(odd) {
     grid-column: span 1;
     justify-self: center; /* ✅ Center when only 2 cards in last row */
   }
-
-  
-
-  .card {
-    width: 100%;
-  }
 }
+
 @media (max-width: 992px) and (min-width: 768px) {
   .cardGrid {
     grid-template-columns: repeat(2, 1fr);

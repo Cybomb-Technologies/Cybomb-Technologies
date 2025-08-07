@@ -1,5 +1,5 @@
 import "./home-whychoose.css";
-
+import { Link } from "react-router-dom";
 function Homewhychoose() {
   return (
     <section className="why-choose-bg text-white text-center" style={{ padding: "60px 0px"}}>
@@ -60,12 +60,12 @@ function Homewhychoose() {
             Transform your business with our proven expertise and dedicated support
           </h2>
           <div className="d-flex flex-column flex-md-row justify-content-center gap-3 mt-4">
-            <a href="#" className="btn btn-light px-4 fw-semibold text-primary p-2">
+            <a href="#start-project" className="btn btn-light px-4 fw-semibold text-primary p-2">
               Start Your Project
             </a>
-            <a href="#" className="btn btn-outline-light px-4 fw-semibold p-2">
+            <Link to="/portfolio" className="btn btn-outline-light px-4 fw-semibold p-2">
               View Our Work
-            </a>
+            </Link>
           </div>
         </div>
       </div>
