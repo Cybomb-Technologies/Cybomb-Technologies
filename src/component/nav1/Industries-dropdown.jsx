@@ -18,15 +18,23 @@ import {
   FaBuilding,
   FaHeartbeat,
   FaShoppingCart,
+  FaBriefcase,
 } from "react-icons/fa";
 import { MdOutlineEnergySavingsLeaf } from "react-icons/md";
 
-function Industriesdropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
+function Industriesdropdown1({
+  onLinkClick,
+  isMobile,
+  isOpen,
+  onToggle,
+  onMouseEnter,
+  onMouseLeave,
+}) {
   return (
     <li
       className={styles.dropdownWrapper}
-      onMouseEnter={() => !isMobile && onToggle(true)}
-      onMouseLeave={() => !isMobile && onToggle(false)}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <Link
         to="#"
@@ -38,6 +46,8 @@ function Industriesdropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
           }
         }}
         aria-expanded={isOpen ? "true" : "false"}
+        onMouseEnter={() => !isMobile && onToggle(true)}
+        onMouseLeave={() => !isMobile && onToggle(false)}
       >
         Industries
         <span className={styles.arrow}>
@@ -47,6 +57,8 @@ function Industriesdropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
 
       <ul
         className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
+        onMouseEnter={() => !isMobile && onToggle(true)}
+        onMouseLeave={() => !isMobile && onToggle(false)}
         style={
           !isMobile
             ? {
@@ -66,6 +78,9 @@ function Industriesdropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
       >
         <li>
           <div className="container">
+            <div className={styles.dropdownHeader}>
+                <FaBriefcase className={styles.icon} /> Industries
+               </div>
             <div className={styles.dropdownGrid}>
               <div className={styles.dropdownColumn}>
                 <Link className={styles.dropdownItem} onClick={onLinkClick}>
