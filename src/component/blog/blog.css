@@ -1,23 +1,224 @@
-.blog-section{
-    background-color: #FFFFFF;
-}
-.featured-post {
-  border-radius: 12px;
-  transition: transform 0.3s ease;
+.blog-section {
+  background-color: #ffffff;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.featured-post:hover {
-  transform: translateY(-5px);
+.blog-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.blog-section p {
+  font-size: 16px;
+  color: #ffffff;
+  max-width: 750px;
+  margin: 0 auto;
 }
 
 .blog-card {
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  border-radius: 12px;
   background-color: #003459 !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2) !important;
 }
 
+.blog-card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blog-card .card-body {
+  padding: 20px;
+}
+
+.blog-card .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.blog-card .card-text {
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.blog-card .card-text.text-primary {
+  color: #023853 !important;
+  font-weight: 500;
+}
+
+.blog-card .btn-link {
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.blog-card .btn-link:hover {
+  color: #00aaff;
+  text-decoration: underline;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: #003459;
+  border-radius: 12px;
+  padding: 40px;
+  margin-top: 60px;
+  color: white;
+}
+
+.cta-section h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.cta-section .btn {
+  font-weight: 500;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-section .btn:hover {
+  background-color: #0077b6;
+}
+
+/* Responsive Typography */
+@media (max-width: 767px) {
+  .blog-section h2 {
+    font-size: 26px;
+  }
+
+  .cta-section {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .cta-section .btn {
+    margin-top: 20px;
+  }
+}
+/* Trending Topics */
+.trending-topics {
+  background-color: #f4f9fc;
+  padding: 20px 25px;
+  border-left: 5px solid #043953;
+  border-radius: 8px;
+}
+
+.trending-badge {
+  background-color: #003459;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.trending-badge:hover {
+  background-color: #0077b6;
+  cursor: pointer;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  background-color: #eaf4fb;
+  padding: 40px;
+  border-radius: 12px;
+  margin-top: 60px;
+}
+
+.newsletter-section h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.newsletter-section p {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.newsletter-section input.form-control {
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.newsletter-section .btn {
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 767px) {
+  .newsletter-section form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter-section input.form-control {
+    width: 100% !important;
+  }
+}
+.trending-badge.active-badge {
+  background-color: #0077b6;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 119, 182, 0.4);
+}
+/* Add these to your existing CSS */
+.load-more-btn {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #005f92;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhance card badges */
+.blog-card .badge {
+  font-size: 12px;
+  padding: 5px 10px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .blog-card .card-title {
+    font-size: 18px;
+  }
+  
+  .blog-card .card-text {
+    font-size: 14px;
+  }
+  
+  .trending-badge {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
