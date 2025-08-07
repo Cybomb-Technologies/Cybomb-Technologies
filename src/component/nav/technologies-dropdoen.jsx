@@ -46,8 +46,8 @@ function Technologiesdropdown({ onLinkClick, isMobile }) {
               <Link to="/services/ios-app-development" className="dropdown-item" onClick={onLinkClick}>Ios</Link>
               <Link to="/services/flutter-app-development"className="dropdown-item" onClick={onLinkClick}>Flutter</Link>
               <Link to="/services/swift-app-development" className="dropdown-item" onClick={onLinkClick}>Swift</Link>
-              <Link className="dropdown-item" onClick={onLinkClick}>Kotlin</Link>
-              <Link className="dropdown-item" onClick={onLinkClick}>Xamarin</Link>
+              <Link to="/services/kotlin-app-development" className="dropdown-item" onClick={onLinkClick}>Kotlin</Link>
+              <Link to="/services/xamarin-app-development" className="dropdown-item" onClick={onLinkClick}>Xamarin</Link>
             </div>
 
             <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">

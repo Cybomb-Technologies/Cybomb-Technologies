@@ -15,6 +15,8 @@ import ReactApp from "../component/pages-services/technologies/mobile-apps/react
 import IosApp from "../component/pages-services/technologies/mobile-apps/ios-app-dev/ios";
 import FlutterApp from "../component/pages-services/technologies/mobile-apps/flutter-app/flutter";
 import SwiftApp from "../component/pages-services/technologies/mobile-apps/swift-app-dev/swift";
+import KotlinApp from "../component/pages-services/technologies/mobile-apps/kotlin-app-dev/kotlin";
+import XamarinApp from "../component/pages-services/technologies/mobile-apps/xamarin-aap-dev/xamarin";
 
 const emp4Routes = (
   <>
@@ -22,7 +24,7 @@ const emp4Routes = (
     <Route path="/services/hosting-service" element={<HostingServices/>}/>
     <Route path="/services/support-service" element={<SupportServices/>}/>
     <Route path="/services/development-support" element={<DevelopmentSupport/>}/>
-    <Route path="/services/Staff-agumentation" element={<Staff/>}/>
+    <Route path="/services/staff-agumentation" element={<Staff/>}/>
     <Route path="/services/social-media-marketing" element={<SocialMarket/>}/>
     <Route path="/services/search-engine-optimization" element={<SeoServices/>}/>
     <Route path="/services/performance-optimization" element={<PerformanceServices/>}/>
@@ -34,6 +36,8 @@ const emp4Routes = (
     <Route path="/services/ios-app-development" element={<IosApp/>}/>
     <Route path="/services/flutter-app-development" element={<FlutterApp/>}/>
     <Route path="/services/swift-app-development" element={<SwiftApp/>}/>
+    <Route path="/services/kotlin-app-development" element={<KotlinApp/>}/>
+    <Route path="/services/xamarin-app-development" element={<XamarinApp/>}/>
     
   
   </>
