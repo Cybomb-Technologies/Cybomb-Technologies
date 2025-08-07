@@ -100,13 +100,13 @@ function SwiftContent() {
 
       <InfoStats
         stats={[
-          { number: "100+", label: "Swift Projects Delivered" },
-          { number: "4+", label: "Apple Platforms Covered" },
-          { number: "10+ yrs", label: "iOS Expertise" }
+        { number: "900+", label: "In-house Expert Developer" },
+        { number: "70%", label: "Average Savings on Development Costs" },
+        { number: "20,000+", label: "Projects Delivered Successfully" }
         ]}
-        caption="Powering apps for startups and"
-        highlight="Fortune 500 Enterprises"
-      />
+        caption="Partnered with Startups and"
+        highlight="Fortune 500 Companies"
+    />
 
       <ServicesOfferings 
         title="Our Swift Service Offerings"

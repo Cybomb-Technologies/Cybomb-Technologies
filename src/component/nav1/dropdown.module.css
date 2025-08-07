@@ -25,7 +25,7 @@
 .dropdownGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  column-gap: 2.5rem;
   border-top: 1px solid #eee;
   padding-top: 1rem;
   margin-top: 1rem;
@@ -42,7 +42,6 @@
   max-width: 280px;
 }
 
-
 .dropdownHeader {
   font-weight: 700;
   margin-bottom: 0.75rem;
@@ -54,17 +53,18 @@
   border-left: 3px solid #1c85cb;
   padding-left: 8px;
   width: 220px;
+  flex-wrap: wrap;
 }
 
 .dropdownItem {
   padding: 8px 12px;
   text-decoration: none;
-  color: #444;
+  color: #111;
   font-size: 15px;
   transition: all 0.3s ease;
   border-radius: 6px;
   margin-bottom: 4px;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   min-width: 200px;
   max-width: 240px;
   /* overflow: hidden;
@@ -73,7 +73,7 @@
 }
 
 .dropdownItem:hover {
-  color: #1c85cb;
+  color: #003459;
   background-color: rgba(28, 133, 203, 0.08);
   box-shadow: 0 0 0 2px rgba(28, 133, 203, 0.2);
 }
@@ -169,7 +169,7 @@
 }
 
 /* Grid-specific style for dropdown items inside subGrid2x */
-.subGrid2x .dropdownItem {
+.subGrid2x .dropdownItem .dropdownItem1 {
   min-width: unset;
   max-width: unset;
   white-space: normal;
@@ -182,7 +182,7 @@
   flex-direction: column;
   flex: 0 0 auto;
   width: auto;  
-  min-width: 180px;
+  min-width: 150px;
   max-width: 220px;
 }
 
@@ -195,16 +195,16 @@
 }
 
 .techColumn:nth-child(3) {
-  width: 30%;
+  width: 35%;
 }
 
 .techColumn:nth-child(4) {
-  width: 40%;
+  width: 35%;
 }
 
 /* Optional: Keep others flexible */
 .techColumn:nth-child(n+5) {
-  width: auto;
+  width: 16%;
 }
 
 @media screen and (max-width: 767px) {
@@ -214,12 +214,17 @@
     gap: 0.5rem !important;
   }
 
-  .subGrid2x .dropdownItem {
+  .subGrid2x .dropdownItem .dropdownItem1{
     width: 100% !important;
     min-width: 100% !important;
     max-width: 100% !important;
     white-space: normal !important;
     margin-bottom: 6px; /* Optional spacing between items */
+  }
+
+  .subColumnWrapper {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -257,17 +262,16 @@
 @media screen and (max-width: 1199px) and (min-width: 768px) {
   .dropdownMenu {
     position: static;
-    width: 100%;
+    width: 320px !important;
     max-width: none;
     box-shadow: none;
     border-radius: 0;
     padding: 1.5rem 1rem;
-    background-color: #f9f9f9;
   }
 
   .dropdownGrid {
     flex-direction: column;
-    gap: 2rem;
+    /* gap: 2rem; */
     border: none;
     padding-top: 0;
     margin-top: 0;
@@ -279,23 +283,23 @@
   }
 
   .dropdownHeader {
+    width: 400px;
     font-size: 1.1rem;
     padding-left: 6px;
     border-left: 3px solid #1c85cb;
     margin-bottom: 0.5rem;
+    flex-wrap: nowrap;
   }
 
-  .dropdownItem {
+  .dropdownItem .dropdownItem1 {
     padding: 10px 16px;
     min-width: auto;
     white-space: normal;
   }
-
+  
   .subColumnWrapper {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .subColumn {
@@ -312,7 +316,6 @@
     max-width: none;
     padding: 1.5rem 1rem;
     border-radius: 0;
-    background-color: #ffffff;
     box-shadow: none;
   }
 
@@ -336,11 +339,12 @@
     border-left: 3px solid #1c85cb;
   }
 
-  .dropdownItem {
+  .dropdownItem .dropdownItem1{
     padding: 10px 16px;
     font-size: 14px;
     white-space: normal;
     min-width: auto;
+    background-color: #f9f9f9;
   }
 
   .subColumnWrapper {
@@ -357,19 +361,20 @@
 /* Fix white text on mobile/tablet with white bg */
 @media screen and (max-width: 1199px) {
   .dropdownToggle {
-    color: #003459;
+    color: #ffffff;
+    font-size: 18px;
   }
 
   .dropdownToggle:hover {
     color: #1c85cb;
   }
 
-  .dropdownItem {
+  .dropdownItem .dropdownItem1 {
     color: #003459;
-    background-color: transparent;
+    background-color: #9bd0ff;
   }
 
-  .dropdownItem:hover {
+  .dropdownItem .dropdownItem1 :hover {
     background-color: rgba(28, 133, 203, 0.08);
     box-shadow: none;
     color: #1c85cb;
@@ -379,19 +384,15 @@
     color: #003459;
   }
 
-  .dropdownMenu {
-    background-color: #ffffff;
-  }
 }
 
 @media screen and (max-width: 1199px) {
   .dropdownMenu {
-    max-height: 60vh; /* adjust height as needed */
+    max-height: 50vh;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    padding-left: 1rem !important;
   }
 
-  /* Optional: customize scrollbar for better look */
   .dropdownMenu::-webkit-scrollbar {
     width: 6px;
   }
@@ -408,15 +409,71 @@
 
 @media screen and (max-width: 767px) {
   .dropdownMenu {
-    max-height: 70vh;
+    max-height: 50vh;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
-}
 
-@media screen and (max-width: 767px) {
-  .dropdownItem {
+   .dropdownItem .dropdownItem1 {
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .dropdownToggle {
+    color: #ffffff;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .dropdownGrid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .techColumn {
+    /* flex: 0 0 15%;  */
+    max-width: 25%;
+  }
+
+  .techColumn1 {
+    max-width: 25%;
+    position: relative;
+    left: 24px;
+  }
+  
+  .techColumn:nth-child(n + 5) {
+    margin-top: 2rem;
+  }
+}
+
+.subColumnWrapper {
+  display: flex;
+}
+
+.subColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 150px;
+}
+
+.dropdownItem1{
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #111;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    min-width: max-content;
+    max-width: 240px;
+}
+
+
+.dropdownItem1:hover {
+  color: #1c85cb;
+  background-color: rgba(28, 133, 203, 0.08);
+  box-shadow: 0 0 0 2px rgba(28, 133, 203, 0.2);
 }

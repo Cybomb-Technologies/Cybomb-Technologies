@@ -12,18 +12,26 @@ import {
   FaRegLightbulb,
   FaRobot,
   FaUserCog,
-  FaCube
+  FaCube,
+  FaBrain 
 } from "react-icons/fa";
 import { MdStorage } from "react-icons/md";
 import { SiGoogleanalytics } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
 
-function Datadropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
+function Datadropdown1({
+  onLinkClick,
+  isMobile,
+  isOpen,
+  onToggle,
+  onMouseEnter,
+  onMouseLeave
+}) {
   return (
     <li
       className={styles.dropdownWrapper}
-      onMouseEnter={() => !isMobile && onToggle(true)}
-      onMouseLeave={() => !isMobile && onToggle(false)}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <Link
         className={styles.dropdownToggle}
@@ -36,6 +44,8 @@ function Datadropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
             onToggle(); // toggle dropdown
           }
         }}
+        onMouseEnter={() => !isMobile && onToggle(true)}
+        onMouseLeave={() => !isMobile && onToggle(false)}
       >
         Data & AI
         <span className={styles.arrow}>
@@ -45,6 +55,8 @@ function Datadropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
 
       <ul
         className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
+        onMouseEnter={() => !isMobile && onToggle(true)}
+        onMouseLeave={() => !isMobile && onToggle(false)}
         style={
           !isMobile
             ? {
@@ -67,7 +79,7 @@ function Datadropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
             <div className={styles.dropdownGrid}>
               {/* Data Column */}
               <div className={styles.dropdownColumn}>
-                <div className={styles.dropdownHeader}>Data</div>
+                <div className={styles.dropdownHeader}><FaDatabase className={styles.icon} /> Data</div>
                 <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
                   <FaRegLightbulb className={styles.icon} /> Strategy Consulting
                 </Link>
@@ -99,7 +111,7 @@ function Datadropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
 
               {/* AI Column */}
               <div className={styles.dropdownColumn}>
-                <div className={styles.dropdownHeader}>AI</div>
+                <div className={styles.dropdownHeader}> <FaBrain className={styles.icon} /> AI</div>
                 <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
                   <GiArtificialIntelligence className={styles.icon} /> Custom AI Development
                 </Link>

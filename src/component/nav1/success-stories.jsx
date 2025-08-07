@@ -2,12 +2,19 @@ import { Link } from "react-router-dom";
 import styles from "./dropdown.module.css";
 import { FaBriefcase, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
-function Successstoriesdropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
+function Successstoriesdropdown1({
+  onLinkClick,
+  isMobile,
+  isOpen,
+  onToggle,
+  onMouseEnter,
+  onMouseLeave,
+}) {
   return (
     <li
       className={styles.dropdownWrapper}
-      onMouseEnter={() => !isMobile && onToggle(true)}
-      onMouseLeave={() => !isMobile && onToggle(false)}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <Link
         to="#"
@@ -19,6 +26,8 @@ function Successstoriesdropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
           }
         }}
         aria-expanded={isOpen ? "true" : "false"}
+        onMouseEnter={() => !isMobile && onToggle(true)}
+        onMouseLeave={() => !isMobile && onToggle(false)}
       >
         Success Stories
         <span className={styles.arrow}>
@@ -28,6 +37,8 @@ function Successstoriesdropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
 
       <ul
         className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
+        onMouseEnter={() => !isMobile && onToggle(true)}
+        onMouseLeave={() => !isMobile && onToggle(false)}
         style={
           !isMobile
             ? {
@@ -51,10 +62,18 @@ function Successstoriesdropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
                 <div className={styles.dropdownHeader}>
                   <FaBriefcase className={styles.icon} /> Our Work
                 </div>
-                <Link to="/case-studies" className={styles.dropdownItem} onClick={onLinkClick}>
+                <Link
+                  to="/case-studies"
+                  className={styles.dropdownItem}
+                  onClick={onLinkClick}
+                >
                   Case Studies
                 </Link>
-                <Link to="/portfolio" className={styles.dropdownItem} onClick={onLinkClick}>
+                <Link
+                  to="/portfolio"
+                  className={styles.dropdownItem}
+                  onClick={onLinkClick}
+                >
                   Portfolio
                 </Link>
               </div>
