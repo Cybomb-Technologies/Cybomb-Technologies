@@ -7,12 +7,29 @@ import {
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import styles from "./dropdown.module.css";
 
-function Servicedropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
+function Servicedropdown1({
+  onLinkClick,
+  isMobile,
+  isOpen,
+  onToggle,
+  onMouseEnter,
+  onMouseLeave
+}) {
   return (
     <li
       className={styles.dropdownWrapper}
-      onMouseEnter={() => !isMobile && onToggle(true)}
-      onMouseLeave={() => !isMobile && onToggle(false)}
+      onMouseEnter={(e) => {
+        if (!isMobile) {
+          onMouseEnter?.(e);
+          onToggle(true);
+        }
+      }}
+      onMouseLeave={(e) => {
+        if (!isMobile) {
+          onMouseLeave?.(e);
+          onToggle(false);
+        }
+      }}
     >
       <Link
         to="#"
@@ -52,7 +69,7 @@ function Servicedropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
                 <Link to="/services/mobile-app-development" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaMobileAlt className={styles.icon} /> Mobile App Development
                 </Link>
-                <Link to="/services/Ecommerce-development" className={styles.dropdownItem} onClick={onLinkClick}>
+                <Link to="/services/ecommerce-development" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaShoppingCart className={styles.icon} /> E-commerce Development
                 </Link>
                 <Link to="/services/software-development" className={styles.dropdownItem} onClick={onLinkClick}>
@@ -127,8 +144,8 @@ function Servicedropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
                   <FaCogs className={styles.icon} /> DevOps
                 </Link>
               </div>
-
-              {/* Column 4: Digital Marketing */}
+{/* 
+              Column 4: Digital Marketing
               <div className={styles.dropdownColumn}>
                 <div className={styles.dropdownHeader}>
                   <FaBullhorn className={styles.icon} /> Digital Marketing
@@ -148,7 +165,7 @@ function Servicedropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
                 <Link to="/services/performance-optimization" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaChartLine className={styles.icon} /> Performance Optimization
                 </Link>
-              </div>
+              </div> */}
 
             </div>
           </div>

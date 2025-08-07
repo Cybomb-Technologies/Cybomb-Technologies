@@ -7,15 +7,22 @@ import {
   FaMobileAlt,
   FaNetworkWired,
   FaCloud,
-  FaShieldAlt
+  FaShieldAlt,
 } from "react-icons/fa";
 
-function Securitydropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
+function Securitydropdown1({
+  onLinkClick,
+  isMobile,
+  isOpen,
+  onToggle,
+  onMouseEnter,
+  onMouseLeave,
+}) {
   return (
     <li
       className={styles.dropdownWrapper}
-      onMouseEnter={() => !isMobile && onToggle(true)}
-      onMouseLeave={() => !isMobile && onToggle(false)}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <Link
         to="#"
@@ -55,27 +62,29 @@ function Securitydropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
       >
         <li>
           <div className="container">
-            <div className={styles.dropdownColumn}>
-              <div className={styles.dropdownHeader}>
-                <FaLock className={styles.icon} /> Security Services
-              </div>
+            <div className={styles.dropdownGrid}>
+                <div className={styles.dropdownColumn}>
+                  <div className={styles.dropdownHeader}>
+                    <FaLock className={styles.icon} /> Security Services
+                  </div>
 
-              <Link className={styles.dropdownItem} onClick={onLinkClick}>
-                <FaShieldAlt className={styles.icon} /> AWS Web Application Security
-              </Link>
-              <Link className={styles.dropdownItem} onClick={onLinkClick}>
-                <FaMobileAlt className={styles.icon} /> Mobile Application Services
-              </Link>
-              <Link className={styles.dropdownItem} onClick={onLinkClick}>
-                <FaLock className={styles.icon} /> API Security
-              </Link>
-              <Link className={styles.dropdownItem} onClick={onLinkClick}>
-                <FaCloud className={styles.icon} /> Cloud Security Services
-              </Link>
-              <Link className={styles.dropdownItem} onClick={onLinkClick}>
-                <FaNetworkWired className={styles.icon} /> Network Penetration Testing
-              </Link>
-            </div>
+                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaShieldAlt className={styles.icon} /> AWS Web Application Security
+                  </Link>
+                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaMobileAlt className={styles.icon} /> Mobile Application Services
+                  </Link>
+                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaLock className={styles.icon} /> API Security
+                  </Link>
+                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaCloud className={styles.icon} /> Cloud Security Services
+                  </Link>
+                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaNetworkWired className={styles.icon} /> Network Penetration Testing
+                  </Link>
+                </div>
+              </div>
           </div>
         </li>
       </ul>

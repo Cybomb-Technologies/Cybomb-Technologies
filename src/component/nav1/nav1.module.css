@@ -168,8 +168,23 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .navInner {
+    width: auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .offcanvasMenu {
+    display: block;
+  }
+}
+
+
+
 /* Tablet: 768px to 1199px */
-@media screen and (max-width: 1199px) and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px)  {
   .navInner {
     flex-direction: row;
     align-items: center;
@@ -193,25 +208,34 @@
   width: 100%;
   max-height: calc(100vh - 70px); /* Adjust based on your navbar height */
   overflow-y: auto;
+  overflow-x: auto; 
   padding: 1rem;
   display: none;
   z-index: 999;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-  /* Optional smooth scroll on mobile */
-  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  
   scrollbar-width: thin;
+  white-space: nowrap;
   }
 
-  .menu::-webkit-scrollbar {
-    width: 6px;
+ .menu::-webkit-scrollbar {
+  width: 6px; 
+  height: 6px;
+  background-color: hsla(205, 100%, 17%, 0.9);
   }
 
   .menu::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    background-color: hsla(205, 100%, 17%, 0.9);
+    border-radius: 12px;
   }
 
+  .menu::-webkit-scrollbar:horizontal {
+    height: 6px;
+  }
+
+  .menu::-webkit-scrollbar-thumb:horizontal {
+    background-color: hsla(205, 100%, 17%, 0.9);
+    border-radius: 12px;
+  }
 
   .menu.open {
     display: flex;
@@ -221,16 +245,15 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    gap: 0.75rem;
     margin: 0;
   }
 
   .navLink {
-    color: #003459;
-    font-size: 1rem;
+    color: #ffffff;
+    font-size: 18px;
     padding: 0.75rem 1rem;
     width: 100%;
-    text-align: left;
+    text-align: left; 
   }
 }
 
@@ -257,22 +280,35 @@
     top: 100%;
     left: 0;
     width: 100%;
-    padding: 1rem;
-    display: none;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
     z-index: 999;
     overflow-y: auto;
     scrollbar-width: thin;
     scroll-behavior: smooth;
-    max-height: calc(100vh - 70px);
+    max-height: calc(100vh);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
   }
-
-  .menu::-webkit-scrollbar {
-    width: 6px;
+.menu::-webkit-scrollbar {
+  width: 6px; 
+  height: 6px;
+  background-color: hsla(205, 100%, 17%, 0.9);
   }
 
   .menu::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    background-color: hsla(205, 100%, 17%, 0.9);
+    border-radius: 12px;
+  }
+
+  .menu::-webkit-scrollbar:horizontal {
+    height: 6px;
+  }
+
+  .menu::-webkit-scrollbar-thumb:horizontal {
+    background-color: hsla(205, 100%, 17%, 0.9);
+    border-radius: 12px;
   }
 
   .menu.open {
@@ -283,11 +319,13 @@
     overflow: hidden;
   }
 
+  .open {
+    transform: translateX(0%);
+  }
 
   .navItems {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.75rem;
     width: 100%;
     margin: 0;
     overflow-y: auto;
@@ -295,27 +333,166 @@
     scroll-behavior: smooth;
   }
 
-  .navItems::-webkit-scrollbar {
-    width: 6px;
+  .menu::-webkit-scrollbar {
+  width: 6px; 
+  height: 6px;
+  background-color: hsla(205, 100%, 17%, 0.9);
   }
 
-  .navItems::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+  .menu::-webkit-scrollbar-thumb {
+    background-color: hsla(205, 100%, 17%, 0.9);
+    border-radius: 12px;
+  }
+
+  .menu::-webkit-scrollbar:horizontal {
+    height: 6px;
+  }
+
+  .menu::-webkit-scrollbar-thumb:horizontal {
+    background-color: hsla(205, 100%, 17%, 0.9);
+    border-radius: 12px;
   }
 
   .navLink {
-    color: #003459; /* or black if preferred */
-    font-size: 0.95rem;
+    color: #ffffff; /* or black if preferred */
+    font-size: 16px;
     padding: 0.75rem 1rem;
     width: 100%;
     text-align: left;
+  }
+  
+  .navLink:hover {
+    color: rgb(18, 213, 231);
   }
 
   .menuToggle {
     display: block;
   }
 }
+/* Offcanvas styles (common for all views) */
+.offcanvasOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #003357ad;
+  z-index: 998;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
 
+.offcanvasMenu.show {
+  transform: translateX(0);
+}
 
+.offcanvasClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+}
 
+.offcanvasMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  max-width: 100%;
+  background: #003357f5;
+  z-index: 999;
+  padding: 1.5rem 1rem;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+}
+
+/* ✅ Tablet View: 768px–1199px */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .offcanvasMenu {
+    width: 400px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .offcanvasMenu.open {
+    transform: translateX(0%);
+  }
+
+  .menuToggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+    .offcanvasMenu ul,
+  .offcanvasMenu ol {
+    padding-left: 0;
+    margin-left: 0;
+    list-style-position: inside;
+  }
+
+  .offcanvasMenu li {
+    padding-left: 1rem;
+  }
+
+}
+
+/* ✅ Mobile View: <768px */
+@media screen and (max-width: 767px) {
+  .offcanvasMenu {
+    width: 320px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .offcanvasMenu.open {
+    transform: translateX(0%);
+  }
+
+  .menuToggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+.offcanvasHeader {
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: start;
+}
+
+.offcanvasHeader .logo img {
+  width: 140px;
+  height: auto;
+  background: #fff;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.offcanvasMenu ul,
+.offcanvasMenu ol {
+  padding-left: 0; 
+  margin-left: 0;
+}
+
+.offcanvasMenu li {
+  padding-left: 0rem;
+}

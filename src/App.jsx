@@ -24,8 +24,8 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Nav/>
-      {/* <Nav1/> */}
+      {/* <Nav/> */}
+      <Nav1/>
       <Routes>
         {emp1Routes}
         {emp2Routes}
