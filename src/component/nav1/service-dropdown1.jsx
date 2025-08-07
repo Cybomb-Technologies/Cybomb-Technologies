@@ -131,7 +131,7 @@ function Servicedropdown1({
                 <Link to="/services/development-support" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaTools className={styles.icon} /> Dev Support
                 </Link>
-                <Link to="/services/Staff-augmentation" className={styles.dropdownItem} onClick={onLinkClick}>
+                <Link to="/services/staff-agumentation" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaUsersCog className={styles.icon} /> Staff Augmentation
                 </Link>
                 <Link to="/services/digital-fulfilment-support" className={styles.dropdownItem} onClick={onLinkClick}>
