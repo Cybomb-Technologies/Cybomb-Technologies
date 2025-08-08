@@ -280,9 +280,8 @@ function PopupForm() {
                                     Sending...
                                   </>
                                 ) : (
-                                  <>
-                                    <i className={`btn fw-bold ${styles.submitButton}`}></i> Send Message
-                                  </>
+                                 <button className={styles.submitButton}>   <i className="bi bi-send-fill"></i> Send Message </button>
+ 
                                 )}
                               </button>
                             </div>

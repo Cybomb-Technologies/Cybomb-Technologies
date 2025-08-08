@@ -28,7 +28,7 @@ const emp1Routes = (
     <Route path="/privacy-policy" element={<Privacypolicy />} />
     <Route path="/terms" element={<Terms />} />
     <Route path="/refund-policy" element={<Refundpolicy />} />
-    <Route path="/services/Ecommerce-development" element ={ <Ecommdev/>} />
+    <Route path="/services/ecommerce-development" element ={ <Ecommdev/>} />
     <Route path="*" element ={ <NotFoundPage/>} />
     
   </>

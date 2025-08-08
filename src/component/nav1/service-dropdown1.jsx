@@ -7,36 +7,58 @@ import {
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import styles from "./dropdown.module.css";
 
-function Servicedropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
+function Servicedropdown1({
+  onLinkClick,
+  isMobile,
+  isOpen,
+  onToggle,
+  onMouseEnter,
+  onMouseLeave,
+}) {
   return (
-    <li
-      className={styles.dropdownWrapper}
-      onMouseEnter={() => !isMobile && onToggle(true)}
-      onMouseLeave={() => !isMobile && onToggle(false)}
-    >
-      <Link
-        to="#"
-        className={styles.dropdownToggle}
-        onClick={(e) => {
-          if (isMobile) {
-            e.preventDefault();
-            onToggle(); // Toggle on mobile
-          }
-        }}
-        aria-expanded={isOpen ? "true" : "false"}
-      >
-        Services
-        <span className={styles.arrow}>
-          {isOpen ? <FaChevronUp size={12} /> : <FaChevronDown size={12} />}
-        </span>
-      </Link>
-
-      <ul
-        className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
-        style={{
-          display: isMobile ? (isOpen ? "block" : "none") : undefined,
-        }}
-      >
+   <li className={styles.dropdownWrapper}
+       onMouseEnter={onMouseEnter}
+         onMouseLeave={onMouseLeave}
+       >
+         <Link
+           to="#"
+           className={styles.dropdownToggle}
+           onClick={(e) => {
+             if (isMobile) {
+               e.preventDefault();
+               onToggle();
+             }
+           }}
+           aria-expanded={isOpen ? "true" : "false"}
+           onMouseEnter={() => !isMobile && onToggle(true)}
+           onMouseLeave={() => !isMobile && onToggle(false)}
+         >
+           Services
+           <span className={styles.arrow}>
+             {isOpen ? <FaChevronUp size={10} /> : <FaChevronDown size={10} />}
+           </span>
+         </Link>
+        <ul
+              className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
+              onMouseEnter={() => !isMobile && onToggle(true)}
+              onMouseLeave={() => !isMobile && onToggle(false)}
+              style={
+                !isMobile
+                  ? {
+                      display: isOpen ? "block" : "none",
+                      position: "absolute",
+                      top: "100%",
+                      left: "50%",
+                      transform: "translateX(-40%)",
+                      width: "max-content",
+                      maxWidth: "calc(100vw - 40px)",
+                    }
+                  : {
+                      display: isOpen ? "block" : "none",
+                      width: "100%",
+                    }
+              }
+        >
         <li>
           <div className="container">
             <div className={styles.dropdownGrid}>
@@ -52,7 +74,7 @@ function Servicedropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
                 <Link to="/services/mobile-app-development" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaMobileAlt className={styles.icon} /> Mobile App Development
                 </Link>
-                <Link to="/services/Ecommerce-development" className={styles.dropdownItem} onClick={onLinkClick}>
+                <Link to="/services/ecommerce-development" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaShoppingCart className={styles.icon} /> E-commerce Development
                 </Link>
                 <Link to="/services/software-development" className={styles.dropdownItem} onClick={onLinkClick}>
@@ -114,7 +136,7 @@ function Servicedropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
                 <Link to="/services/development-support" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaTools className={styles.icon} /> Dev Support
                 </Link>
-                <Link to="/services/Staff-augmentation" className={styles.dropdownItem} onClick={onLinkClick}>
+                <Link to="/services/staff-agumentation" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaUsersCog className={styles.icon} /> Staff Augmentation
                 </Link>
                 <Link to="/services/digital-fulfilment-support" className={styles.dropdownItem} onClick={onLinkClick}>
@@ -127,8 +149,8 @@ function Servicedropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
                   <FaCogs className={styles.icon} /> DevOps
                 </Link>
               </div>
-
-              {/* Column 4: Digital Marketing */}
+{/* 
+              Column 4: Digital Marketing
               <div className={styles.dropdownColumn}>
                 <div className={styles.dropdownHeader}>
                   <FaBullhorn className={styles.icon} /> Digital Marketing
@@ -148,7 +170,7 @@ function Servicedropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
                 <Link to="/services/performance-optimization" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaChartLine className={styles.icon} /> Performance Optimization
                 </Link>
-              </div>
+              </div> */}
 
             </div>
           </div>

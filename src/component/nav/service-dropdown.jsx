@@ -74,7 +74,7 @@ function Servicedropdown({ onLinkClick, isMobile }) {
               <Link to="/services/hosting-service" className="dropdown-item" onClick={onLinkClick}>Hosting</Link>
               <Link to="/services/support-service" className="dropdown-item" onClick={onLinkClick}>Server Support</Link>
               <Link to ="/services/development-support" className="dropdown-item" onClick={onLinkClick}>Development Support</Link>
-              <Link to="/services/Staff-augmentation" className="dropdown-item" onClick={onLinkClick}>Staff Augmentation</Link>
+              <Link to="/services/staff-agumentation" className="dropdown-item" onClick={onLinkClick}>Staff Augmentation</Link>
               <Link to="/services/digital-fulfilment-support" className="dropdown-item" onClick={onLinkClick}>Digital Fulfilment</Link>
               <Link to="/services/it-support" className="dropdown-item" onClick={onLinkClick}>IT Support Services</Link>
               <Link to="/services/devops-support" className="dropdown-item" onClick={onLinkClick}>DevOps</Link>

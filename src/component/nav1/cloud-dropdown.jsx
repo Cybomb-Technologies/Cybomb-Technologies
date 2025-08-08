@@ -6,27 +6,35 @@ import {
   FaAws,
   FaMicrosoft,
   FaGoogle,
-  FaCogs
+  FaCogs,
+  FaCloud
 } from "react-icons/fa";
 
-function Clouddropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
+function Clouddropdown1({  
+  onLinkClick,
+  isMobile,
+  isOpen,
+  onToggle,
+  onMouseEnter,
+  onMouseLeave,
+}) {
   return (
-    <li
-      className={styles.dropdownWrapper}
-      onMouseEnter={() => !isMobile && onToggle(true)}
-      onMouseLeave={() => !isMobile && onToggle(false)}
+    <li className={styles.dropdownWrapper}
+    onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <Link
-        className={styles.dropdownToggle}
         to="#"
-        role="button"
-        aria-expanded={isOpen ? "true" : "false"}
+        className={styles.dropdownToggle}
         onClick={(e) => {
           if (isMobile) {
             e.preventDefault();
-            onToggle(); // Toggle on mobile
+            onToggle();
           }
         }}
+        aria-expanded={isOpen ? "true" : "false"}
+        onMouseEnter={() => !isMobile && onToggle(true)}
+        onMouseLeave={() => !isMobile && onToggle(false)}
       >
         Cloud
         <span className={styles.arrow}>
@@ -36,6 +44,8 @@ function Clouddropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
 
       <ul
         className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
+        onMouseEnter={() => !isMobile && onToggle(true)}
+        onMouseLeave={() => !isMobile && onToggle(false)}
         style={
           !isMobile
             ? {
@@ -44,53 +54,57 @@ function Clouddropdown1({ onLinkClick, isMobile, isOpen, onToggle }) {
                 top: "100%",
                 left: "50%",
                 transform: "translateX(-50%)",
-                width: "max-content"
+                width: "max-content",
+                maxWidth: "calc(100vw - 40px)",
               }
             : {
                 display: isOpen ? "block" : "none",
-                width: "100%"
+                width: "100%",
               }
         }
       >
         <li>
           <div className="container">
             <div className={styles.dropdownGrid}>
-              <div className={styles.dropdownColumn}>
-                <div className={styles.dropdownHeader}>Cloud Services</div>
+                <div className={styles.dropdownColumn}>
+                  <div className={styles.dropdownHeader}>
+                    <FaCloud className={styles.icon} />
+                    Cloud Services
+                    </div>
 
-                <Link
-                  className={styles.dropdownItem}
-                  to="/Services/aws-cloud"
-                  onClick={onLinkClick}
-                >
-                  <FaAws className={styles.icon} /> AWS
-                </Link>
+                  <Link
+                    to="/Services/aws-cloud"
+                    className={styles.dropdownItem}
+                    onClick={onLinkClick}
+                  >
+                    <FaAws className={styles.icon} /> AWS
+                  </Link>
 
-                <Link
-                  className={styles.dropdownItem}
-                  to="/Services/azure-cloud"
-                  onClick={onLinkClick}
-                >
-                  <FaMicrosoft className={styles.icon} /> Azure
-                </Link>
+                  <Link
+                    to="/Services/azure-cloud"
+                    className={styles.dropdownItem}
+                    onClick={onLinkClick}
+                  >
+                    <FaMicrosoft className={styles.icon} /> Azure
+                  </Link>
 
-                <Link
-                  className={styles.dropdownItem}
-                  to="/Services/google-cloud"
-                  onClick={onLinkClick}
-                >
-                  <FaGoogle className={styles.icon} /> Google Cloud
-                </Link>
+                  <Link
+                    to="/Services/google-cloud"
+                    className={styles.dropdownItem}
+                    onClick={onLinkClick}
+                  >
+                    <FaGoogle className={styles.icon} /> Google Cloud
+                  </Link>
 
-                <Link
-                  className={styles.dropdownItem}
-                  to="/Services/devops"
-                  onClick={onLinkClick}
-                >
-                  <FaCogs className={styles.icon} /> DevOps
-                </Link>
+                  <Link
+                    to="/Services/devops"
+                    className={styles.dropdownItem}
+                    onClick={onLinkClick}
+                  >
+                    <FaCogs className={styles.icon} /> DevOps
+                  </Link>
+                </div>
               </div>
-            </div>
           </div>
         </li>
       </ul>
