@@ -37,7 +37,7 @@ function Datadropdown({ onLinkClick, isMobile }) {
             {/* Data Column */}
             <div className="col-xl-12 col-xxl-6 mb-3">
               <span className="dropdown-item text-primary fw-bold">Data</span>
-              <Link className="dropdown-item" to="#" onClick={onLinkClick}>Strategy Consulting</Link>
+              <Link to="/services/stratergy-consulting" className="dropdown-item"  onClick={onLinkClick}>Strategy Consulting</Link>
               <Link className="dropdown-item" to="#" onClick={onLinkClick}>Processing</Link>
               <Link className="dropdown-item" to="#" onClick={onLinkClick}>Governance Solution</Link>
               <Link className="dropdown-item" to="#" onClick={onLinkClick}>Storage Solution</Link>

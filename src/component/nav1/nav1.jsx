@@ -110,14 +110,14 @@ function Nav1() {
                   onMouseLeave={() => setActiveDropdown(null)}
                   onLinkClick={handleNavItemClick}
                 />
-{/* 
+
                 <Datadropdown1
                   isMobile={isMobile}
                   isOpen={activeDropdown === "data"}
                   onMouseEnter={() => setActiveDropdown("data")}
                   onMouseLeave={() => setActiveDropdown(null)}
                   onLinkClick={handleNavItemClick}
-                /> */}
+                />
 {/* 
                 <Securitydropdown1
                   isMobile={isMobile}
