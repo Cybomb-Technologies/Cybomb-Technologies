@@ -59,7 +59,7 @@ function Technologiesdropdown1({
                 left: "50%",
                 transform: "translateX(-80%)",
                 minWidth: "250px",
-                maxWidth: "calc(70vw - 16px)",
+                maxWidth: "calc(50vw - 16px)",
               }
         }
       >
@@ -78,8 +78,8 @@ function Technologiesdropdown1({
                 <Link to="/services/kotlin-app-development" className={styles.dropdownItem1} onClick={onLinkClick}><FaJava className={styles.icon} /> Kotlin</Link>
                 <Link to="/services/xamarin-app-development" className={styles.dropdownItem1} onClick={onLinkClick}><FaMicrosoft className={styles.icon} /> Xamarin</Link>
               </div>
-
-              {/* Ecommerce */}
+{/* 
+              Ecommerce
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaShoppingCart className={styles.icon} /> Ecommerce</div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaMagento className={styles.icon} /> Adobe Commerce</Link>
@@ -90,7 +90,7 @@ function Technologiesdropdown1({
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaMagento className={styles.icon} /> Magento</Link>
               </div>
 
-              {/* CMS */}
+              CMS
                 <div className={styles.techColumn}>
                   <div className={styles.dropdownHeader}><FaTools className={styles.icon} /> CMS</div>
                   <div className={styles.subColumnWrapper}>
@@ -111,7 +111,7 @@ function Technologiesdropdown1({
                   </div>
                 </div>
 
-                {/* Custom Development */}
+                Custom Development
                 <div className={styles.techColumn1}> 
                   <div className={styles.dropdownHeader}>
                     <FaLaptopCode className={styles.icon} /> Custom Development
@@ -138,39 +138,39 @@ function Technologiesdropdown1({
                 </div>
 
 
-              {/* Full Stack */}
+              Full Stack
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaServer className={styles.icon} /> Full Stack </div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaServer className={styles.icon} /> Full Stack MERN</Link>
               </div>
 
-              {/* CRM */}
+              CRM
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaCogs className={styles.icon} /> CRM</div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> ServiceNow</Link>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> Salesforce</Link>
               </div>
 
-              {/* Games */}
+              Games
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaGamepad className={styles.icon} /> Games</div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaUnity className={styles.icon} /> Unity</Link>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCube className={styles.icon} /> Unreal</Link>
               </div>
 
-              {/* Cloud */}
+              Cloud
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaCloud className={styles.icon} /> Cloud</div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaAws className={styles.icon} /> AWS</Link>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaAzure className={styles.icon} /> Azure</Link>
               </div>
 
-              {/* Other */}
+              Other
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaCode className={styles.icon} /> Other</div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaGofore className={styles.icon} /> Golang</Link>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaRocket className={styles.icon} /> AR/VR</Link>
-              </div>
+              </div> */}
 
             </div>
           </div>

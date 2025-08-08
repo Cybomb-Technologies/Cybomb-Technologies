@@ -13,47 +13,52 @@ function Servicedropdown1({
   isOpen,
   onToggle,
   onMouseEnter,
-  onMouseLeave
+  onMouseLeave,
 }) {
   return (
-    <li
-      className={styles.dropdownWrapper}
-      onMouseEnter={(e) => {
-        if (!isMobile) {
-          onMouseEnter?.(e);
-          onToggle(true);
-        }
-      }}
-      onMouseLeave={(e) => {
-        if (!isMobile) {
-          onMouseLeave?.(e);
-          onToggle(false);
-        }
-      }}
-    >
-      <Link
-        to="#"
-        className={styles.dropdownToggle}
-        onClick={(e) => {
-          if (isMobile) {
-            e.preventDefault();
-            onToggle(); // Toggle on mobile
-          }
-        }}
-        aria-expanded={isOpen ? "true" : "false"}
-      >
-        Services
-        <span className={styles.arrow}>
-          {isOpen ? <FaChevronUp size={12} /> : <FaChevronDown size={12} />}
-        </span>
-      </Link>
-
-      <ul
-        className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
-        style={{
-          display: isMobile ? (isOpen ? "block" : "none") : undefined,
-        }}
-      >
+   <li className={styles.dropdownWrapper}
+       onMouseEnter={onMouseEnter}
+         onMouseLeave={onMouseLeave}
+       >
+         <Link
+           to="#"
+           className={styles.dropdownToggle}
+           onClick={(e) => {
+             if (isMobile) {
+               e.preventDefault();
+               onToggle();
+             }
+           }}
+           aria-expanded={isOpen ? "true" : "false"}
+           onMouseEnter={() => !isMobile && onToggle(true)}
+           onMouseLeave={() => !isMobile && onToggle(false)}
+         >
+           Services
+           <span className={styles.arrow}>
+             {isOpen ? <FaChevronUp size={10} /> : <FaChevronDown size={10} />}
+           </span>
+         </Link>
+        <ul
+              className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
+              onMouseEnter={() => !isMobile && onToggle(true)}
+              onMouseLeave={() => !isMobile && onToggle(false)}
+              style={
+                !isMobile
+                  ? {
+                      display: isOpen ? "block" : "none",
+                      position: "absolute",
+                      top: "100%",
+                      left: "50%",
+                      transform: "translateX(-40%)",
+                      width: "max-content",
+                      maxWidth: "calc(100vw - 40px)",
+                    }
+                  : {
+                      display: isOpen ? "block" : "none",
+                      width: "100%",
+                    }
+              }
+        >
         <li>
           <div className="container">
             <div className={styles.dropdownGrid}>
