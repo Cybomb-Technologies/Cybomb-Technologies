@@ -1,0 +1,43 @@
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+      }
+      .nav-link-custom{
+        color:#332b2b;
+        font-weight: 18px;
+      }
+      .hero-banner {
+        background: url("./images/banner.jpg")
+          center/cover no-repeat;
+        color: white;
+        position: relative;
+        height:90dvh;
+      }
+      .hero-banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+      }
+      .hero-text {
+        position: relative;
+        z-index: 2;
+      }
+      .badge-sale {
+        background-color: #f87171;
+      }
+      .category-card img {
+        height: 150px;
+        object-fit: cover;
+      }
+      .bg-gradient {
+        background: linear-gradient(135deg, #f0fff4, #ecfeff);
+      }
+      .footer-dark {
+        background-color: #000000;
+        color: white;
+      }
+
+      .custom-card:hover{
+        transform: scale(1.1);
+      }

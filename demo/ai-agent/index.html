@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Workflow Supercharger</title>
+     <link rel="icon" type="image/png" href="./images/fav-con.png" />
+    <link rel="icon" type="image/png" href="./images/hrader-logo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top bg-white shadow-sm border-bottom"
+    >
+      <div class="container">
+        <a class="navbar-brand logo-font text-primary fs-3" href="#"><img src="./images/hrader-logo.png" alt=""></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-none d-lg-flex justify-content-end align-items-center"
+        >
+          <ul class="navbar-nav me-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#use-cases">Use Cases</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#resources">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+      <div class="offcanvas-header">
+       <img src="./images/hrader-logo.png" alt="">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#use-cases">Use Cases</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resources">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item mt-3">
+            <a href="#" class="btn btn-primary w-100">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Banner -->
+    <section class="banner d-flex align-items-center">
+      <div class="container text-white py-5">
+        <div class="row justify-content-end">
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold">Supercharge Your Workflow with AI</h1>
+            <p class="lead">Smarter, Faster, Better.</p>
+            <p class="mb-4">
+              Unlock the full potential of AI agents with proven tips, tricks,
+              and time-savers that transform how you work. Learn the secrets to
+              using AI like a pro.
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-3">
+              <a href="#" class="btn btn-primary px-4 py-2"
+                >Start Using Smarter AI</a
+              >
+              <a href="#" class="btn btn-outline-light px-4 py-2"
+                >Download Free Guide</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" style="padding: 75px 0px;">
+      <div class="container text-center mb-5">
+        <h2 class="fw-bold">Top AI Agent Hacks You Should Know</h2>
+        <p class="text-muted mt-3 fs-5">
+          Master these essential techniques to get more accurate results and
+          unlock your AI <br />
+          assistant's true potential.
+        </p>
+      </div>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-3">
+            <div class="card p-3 border-0 shadow custom-card">
+              <div class="section-icon">
+                <i class="ri-chat-3-line text-primary fs-2"></i>
+              </div>
+              <h5 class="fw-bold mt-2">Natural Language</h5>
+              <p class="mt-2">
+                Use conversational language to get more accurate and contextual
+                results.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card p-3 border-0 shadow custom-card">
+              <div class="section-icon">
+                <i class="ri-question-answer-line text-secondary fs-2"></i>
+              </div>
+              <h5 class="fw-bold mt-2">Follow‑up Questions</h5>
+              <p class="mt-2">
+                Ask clarifying questions to refine answers and get exactly what
+                you need.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card p-3 border-0 shadow custom-card">
+              <div class="section-icon">
+                <i class="ri-information-line text-success fs-2"></i>
+              </div>
+              <h5 class="fw-bold mt-2">Provide Context</h5>
+              <p class="mt-2">
+                Give background information to improve AI performance and
+                relevance.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card p-3 border-0 shadow custom-card">
+              <div class="section-icon">
+                <i class="ri-lightbulb-line text-warning fs-2"></i>
+              </div>
+              <h5 class="fw-bold mt-2">Multi‑Purpose Use</h5>
+              <p class="mt-2">
+                Leverage AI for summaries, scheduling, reminders, and creative
+                ideation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Productivity Power Moves -->
+    <section class="py-5 bg-light">
+      <div class="container text-center mb-5">
+        <h2 class="fw-bold">Productivity Power Moves</h2>
+        <p class="text-muted">
+          Transform your daily workflow with these game-changing automation
+          techniques.
+        </p>
+      </div>
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="d-flex mb-5">
+              <div
+                class="section-icon"
+                style="
+                  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+                  border-radius: 15px;
+                "
+              >
+                <i class="ri-mail-line text-white fs-4"></i>
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-bold">Automate Daily Tasks</h6>
+                <p class="mb-0" style="color: gray">
+                  Handle email replies, calendar booking, and routine
+                  communications effortlessly.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-5">
+              <div
+                class="section-icon"
+                style="
+                  background-color: rgb(139 92 246 / var(--tw-bg-opacity, 1));
+                  border-radius: 15px;
+                "
+              >
+                <i class="ri-flashlight-line text-white fs-4"></i>
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-bold">Instant Brainstorming</h6>
+                <p class="mb-0" style="color: gray">
+                  Generate content ideas, marketing concepts, and creative
+                  solutions in seconds.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-5">
+              <div
+                class="section-icon"
+                style="
+                  background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
+                  border-radius: 15px;
+                "
+              >
+                <i class="ri-file-text-line text-white fs-4"></i>
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-bold">Generate Reports</h6>
+                <p class="mb-0" style="color: gray">
+                  Create summaries, presentations, and detailed reports with
+                  minimal effort.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div
+                class="section-icon"
+                style="
+                  background-color: rgb(234 88 12 / var(--tw-bg-opacity, 1));
+                  border-radius: 15px;
+                "
+              >
+                <i class="ri-mic-line text-white fs-4"></i>
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-bold">Voice Commands</h6>
+                <p class="mb-0" style="color: gray">
+                  Use voice-to-text for hands-free operation and faster input.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img
+              style="border-radius: 30px"
+              src="images/image-2.jpg"
+              alt="Productivity automation"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Commands -->
+    <section class="py-5">
+      <div class="container text-center mb-5">
+        <h2 class="fw-bold">Quick Commands to Try</h2>
+        <p class="text-muted">
+          Copy these proven prompts and start seeing results immediately.
+        </p>
+      </div>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-6">
+            <div
+              class="custom-card card border-0 shadow py-3 border-start border-4 border-primary ps-3 py-4"
+            >
+              <p style="font-weight: 600; color: rgb(60, 60, 60)">
+                "Summarize this meeting transcript in 5 bullet points"
+              </p>
+              <small class="text-muted"
+                >Perfect for extracting key insights from long
+                discussions.</small
+              >
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="custom-card card border-0 shadow py-3 border-start border-4 border-secondary ps-3 py-4"
+            >
+              <p style="font-weight: 600; color: rgb(60, 60, 60)">
+                "Draft a polite follow‑up email to a client"
+              </p>
+              <small class="text-muted"
+                >Maintain professional relationships with thoughtful
+                communication.</small
+              >
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="custom-card card border-0 shadow py-3 border-start border-4 border-success ps-3 py-4"
+            >
+              <p style="font-weight: 600; color: rgb(60, 60, 60)">
+                "Plan my day with 3 major tasks and 2 breaks"
+              </p>
+              <small class="text-muted"
+                >Structure your time for maximum productivity and
+                well‑being.</small
+              >
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="custom-card card border-0 shadow py-3 border-start border-4 border-warning ps-3 py-4"
+            >
+              <p style="font-weight: 600; color: rgb(60, 60, 60)">
+                "Translate this message to Spanish with a friendly tone"
+              </p>
+              <small class="text-muted"
+                >Break language barriers while maintaining the right
+                tone.</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section id="use-cases" class="bg-light text-center" style="padding: 75px 0px;">
+      <div class="container mb-5">
+        <h2 class="fw-bold">AI Agent Use Cases</h2>
+        <p class="text-muted">
+          Discover how different professionals leverage AI to transform their
+          work.
+        </p>
+      </div>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-3">
+            <div
+              class="p-4 rounded usecaseSection"
+              style="background-color: #f3ecf2"
+            >
+              <div class="section-icon">
+                <i class="ri-palette-line text-purple fs-2"></i>
+              </div>
+              <h5 class="text-start fw-bold">For Creators</h5>
+              <ul class="list-unstyled text-start">
+                <li class="mt-2">
+                  <i class="ri-check-line text-purple-600"></i> Blog ideas &
+                  outlines
+                </li>
+                <li class="mt-2">
+                  <i class="ri-check-line text-purple-600"></i> Script writing
+                </li>
+                <li class="mt-2">
+                  <i class="ri-check-line text-purple-600"></i> Video concepts
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="p-4 rounded usecaseSection"
+              style="background-color: #edfbff"
+            >
+              <div class="section-icon">
+                <i class="ri-graduation-cap-line text-info fs-2"></i>
+              </div>
+              <h5 class="text-start fw-bold">For Students</h5>
+              <ul class="list-unstyled text-start">
+                <li class="mt-2">
+                  <i class="ri-check-line text-purple-600"></i> Study assistance
+                </li>
+                <li class="mt-2">
+                  <i class="ri-check-line text-purple-600"></i> Flashcard
+                  creation
+                </li>
+                <li class="mt-2">
+                  <i class="ri-check-line text-purple-600"></i> Research help
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="p-4 rounded usecaseSection"
+              style="background-color: #eefdf4"
+            >
+              <div class="section-icon">
+                <i class="ri-team-line text-success fs-2"></i>
+              </div>
+              <h5 class="text-start fw-bold">For Teams</h5>
+              <ul class="list-unstyled text-start">
+                <li class="mt-2">
+                  <i class="ri-check-line text-purple-600"></i> Meeting notes
+                </li>
+                <li class="mt-2">
+                  <i class="ri-check-line text-purple-600"></i> Project updates
+                </li>
+                <li class="mt-2">
+                  <i class="ri-check-line text-purple-600"></i> Team polls
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="p-4 rounded usecaseSection"
+              style="background-color: #fff5ef"
+            >
+              <div class="section-icon">
+                <i class="ri-briefcase-line text-warning fs-2"></i>
+              </div>
+              <h5 class="text-start fw-bold">For Professionals</h5>
+              <ul class="list-unstyled text-start">
+                <li class="mt-2">
+                  <i class="ri-check-line text-purple-600"></i> Email automation
+                </li>
+                <li class="mt-2">
+                  <i class="ri-check-line text-purple-600"></i> Data analysis
+                </li>
+                <li class="mt-2">
+                  <i class="ri-check-line text-purple-600"></i> Proposal drafts
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pro Tips -->
+    <section class="bg-light" id="resources" style="padding: 75px 0px;">
+      <div class="container text-center mb-5">
+        <h2 class="fw-bold">Pro Tips to Level Up</h2>
+        <p class="text-muted">
+          Advanced strategies to maximize your AI assistant's capabilities.
+        </p>
+      </div>
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="d-flex mb-5">
+              <div
+                class="section-icon text-white"
+                style="
+                  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+                  border-radius: 50%;
+                "
+              >
+                1
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-bold">Customize Your Prompts</h6>
+                <p class="mb-0" style="color: gray">
+                  Fine-tune your requests with specific parameters, tone, and
+                  format requirements for consistently better results.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-5">
+              <div
+                class="section-icon text-white"
+                style="
+                  background-color: rgb(139 92 246 / var(--tw-bg-opacity, 1));
+                  border-radius: 50%;
+                "
+              >
+                2
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-bold">Use Integrations</h6>
+                <p class="mb-0" style="color: gray">
+                  Connect with Slack, Notion, Gmail, and other tools to create
+                  seamless workflows across your entire tech stack.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-5">
+              <div
+                class="section-icon text-white"
+                style="
+                  background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
+                  border-radius: 50%;
+                "
+              >
+                3
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-bold">Save Templates</h6>
+                <p class="mb-0" style="color: gray">
+                  Create reusable prompt templates for recurring tasks to
+                  maintain consistency and save time.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div
+                class="section-icon text-white"
+                style="
+                  background-color: rgb(234 88 12 / var(--tw-bg-opacity, 1));
+                  border-radius: 50%;
+                "
+              >
+                4
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-bold">Multi-Device Access</h6>
+                <p class="mb-0" style="color: gray">
+                  Sync your AI agents across mobile, desktop, and browser for
+                  continuous productivity anywhere.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img
+              style="border-radius: 30px"
+              src="images/image-3.jpg"
+              alt="Productivity automation"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- CTA -->
+    <section id="pricing"
+      class="5 text-white text-center"
+      style="
+    background: 
+      linear-gradient(rgba(59, 130, 246, 0.8), rgba(139, 92, 246, 0.8)),
+      url('images/image-5.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 75px 0px;
+  "
+    >
+      <div class="container">
+        <h2 class="display-5 fw-bold">Ready to Transform Your Workflow?</h2>
+        <p class="lead mt-4">
+          Join thousands of professionals who've already supercharged their
+          productivity with AI.
+        </p>
+        <div class="d-flex justify-content-center gap-3 mt-4">
+          <a href="#" class="btn btn-light btn-lg" style="color:#3b82f6;">Start Using Smarter AI</a>
+          <a href="#" class="btn btn-outline-light btn-lg"
+            >Get Personalized Setup</a
+          >
+        </div>
+        <div class="d-flex justify-content-center mt-4 gap-4 text-white-50 mt-4">
+          <div><i class="ri-star-fill text-warning"></i> 4.9/5 rating</div>
+          <div><i class="ri-user-line"></i> 50,000+ users</div>
+          <div><i class="ri-time-line"></i> 2 min setup</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-5" style="background-color: rgb(0 0 0) !important;;">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-3">
+          <img src="./images/cybomb-white.png" alt="">
+            <p class="footer-text">
+              Supercharge your workflow with AI-powered productivity tools and
+              expert guidance.
+            </p>
+            <!-- <div class="d-flex gap-2 fs-4">
+              <a href="#" class="text-light"><i class="ri-twitter-line"></i></a>
+              <a href="#" class="text-light"
+                ><i class="ri-linkedin-line"></i
+              ></a>
+              <a href="#" class="text-light"><i class="ri-youtube-line"></i></a>
+            </div> -->
+          </div>
+          <div class="col-md-3">
+            <h6>Product</h6>
+            <ul class="list-unstyled text-muted">
+              <li class="footer-text">Features</li>
+              <li class="footer-text">Pricing</li>
+              <li class="footer-text">Integrations</li>
+              <li class="footer-text">API</li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6>Resources</h6>
+            <ul class="list-unstyled text-muted">
+              <li class="footer-text">Documentation</li>
+              <li class="footer-text">Tutorials</li>
+              <li class="footer-text">Blog</li>
+              <li class="footer-text">Community</li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6>Company</h6>
+            <ul class="list-unstyled text-muted">
+              <li class="footer-text">About</li>
+              <li class="footer-text">Careers</li>
+              <li class="footer-text">Contact</li>
+              <li class="footer-text">Privacy</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center mt-4 footer-text">
+          &copy; 2025 Cybomb. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Offcanvas auto-close when link clicked
+      document.querySelectorAll(".offcanvas .nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          const offcanvasEl = document.querySelector(".offcanvas.show");
+          const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+          if (offcanvas) offcanvas.hide();
+        });
+      });
+    </script>
+  </body>
+</html>

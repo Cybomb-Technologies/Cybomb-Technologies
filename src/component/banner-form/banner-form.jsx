@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./Bannerform.module.css";
 
+const API_URL = import.meta.env.VITE_API_BASE; 
+
 function Bannerform() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -21,7 +23,8 @@ function Bannerform() {
     setStatus("Sending...");
 
     try {
-      const res = await fetch("http://localhost:5000/api/banner-mail", {
+      const res = await fetch(`${API_URL}/api/banner-mail`, {
+      
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cybomb Tech - School Management System</title>
+    <link rel="icon" type="image/png" href="images/logo1.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      .logo-font {
+        font-family: "Pacifico", cursive;
+        font-size: 1.75rem;
+        color: #4f46e5;
+      }
+      .navbar-brand img {
+        transition: transform 0.3s ease;
+      }
+      .navbar-brand img:hover {
+        transform: scale(1.1);
+      }
+
+      .nav-link {
+        position: relative;
+        color: #495057 !important;
+        font-weight: 500;
+        margin: 0 0.5rem;
+        padding: 0.5rem 0 !important;
+      }
+
+      .nav-link:hover {
+        color: #4f46e5 !important;
+      }
+      .navbar-brand img.clicked {
+        transform: scale(0.9);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(90deg, #4f46e5, #6366f1);
+        transition: width 0.3s ease;
+        border-radius: 3px;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .hero-section {
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        padding-top: 4rem;
+      }
+
+      .gradient-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(79, 70, 229, 0.75),
+          rgba(99, 102, 241, 0.75)
+        );
+      }
+
+      .feature-card {
+        background: white;
+        border-radius: 12px;
+        border: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .feature-card:hover {
+        border-color: rgba(79, 70, 229, 0.2);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-icon {
+        width: 4rem;
+        height: 4rem;
+        background-color: rgba(79, 70, 229, 0.1);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #4f46e5;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      #module-tabs-container {
+        transition: height 0.3s ease-in-out;
+      }
+
+      .tab-btn {
+        background-color: transparent;
+        border: none;
+        font-size: 1rem;
+        color: #6c757d;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .tab-btn:hover,
+      .tab-btn.active {
+        color: #4f46e5;
+        border-bottom: 3px solid #4f46e5;
+        background-color: #f8f9fa;
+      }
+
+      .testimonial-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        height: 100%;
+      }
+
+      .star-rating {
+        color: #ffc107;
+      }
+
+      .cta-section {
+        background: linear-gradient(90deg, #8d88f2, #4f46e5);
+      }
+
+      .footer {
+        background-color: #212529;
+        align-items: center;
+      }
+
+      .footer-link {
+        align-items: center;
+        color: #adb5bd !important;
+        transition: color 0.3s ease;
+      }
+
+      .footer-link:hover {
+        color: white !important;
+        text-decoration: none;
+      }
+      .footer .row {
+        flex-wrap: wrap;
+      }
+      .footer .col-lg-2,
+      .footer .col-lg-4 {
+        min-width: 200px;
+      }
+      .footer-logo {
+        transition: transform 0.3s ease;
+      }
+      .footer-logo:hover {
+        transform: scale(1.1);
+      }
+
+      .newsletter-input {
+        background-color: #343a40;
+        border: none;
+        color: white;
+      }
+
+      .newsletter-input:focus {
+        background-color: #343a40;
+        color: white;
+        box-shadow: none;
+      }
+
+      .social-icon {
+        color: #adb5bd;
+        transition: color 0.3s ease;
+      }
+
+      .social-icon:hover {
+        color: white;
+      }
+
+      @media (max-width: 767.98px) {
+        .navbar-collapse {
+          background-color: white;
+          padding: 1rem;
+          border-top: 1px solid #e9ecef;
+        }
+
+        .nav-link {
+          margin: 0.5rem 0;
+          padding: 0.5rem 1rem !important;
+        }
+
+        .nav-link::after {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top"></div>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand logo-font" href="#top">
+          <img src="images/logo1.png" alt="SmartSchool" height="40" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#modules">Modules</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-primary rounded-2 px-4">
+              Sign In
+            </button>
+            <button class="btn btn-primary rounded-2 px-4">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="hero-section d-flex align-items-center position-relative"
+      style="background-image: url('images/favicon1.jpg')"
+    >
+      <div class="gradient-overlay"></div>
+      <div class="container position-relative text-white py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="display-4 fw-bold mb-4">
+              Empower Your School with Smart, Streamlined Management
+            </h1>
+            <p class="lead mb-5 opacity-75">
+              All-in-one platform to simplify admin, academics & communication
+              for modern educational institutions.
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-3">
+              <button
+                class="btn btn-light text-primary fw-semibold px-4 py-3 rounded-2"
+              >
+                Get Started Free
+              </button>
+              <button
+                class="btn btn-outline-light border-2 fw-semibold px-4 py-3 rounded-2"
+              >
+                Schedule Demo
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6 d-none d-lg-block">
+            <img
+              src="images/favicon1.jpg"
+              alt="School Management Dashboard"
+              class="img-fluid rounded-3 shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-5 bg-white">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">
+            Comprehensive School Management Features
+          </h2>
+          <p class="lead text-muted mx-auto" style="max-width: 700px">
+            Everything you need to run your school efficiently, from student
+            records to financial management.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card p-4 h-100">
+              <div class="feature-icon">
+                <i class="bi bi-person"></i>
+              </div>
+              <h3 class="h4 fw-semibold mb-3">Student Records</h3>
+              <p class="text-muted">
+                Comprehensive student information management with attendance
+                tracking, grade recording, and academic progress monitoring.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card p-4 h-100">
+              <div class="feature-icon">
+                <i class="bi bi-cash-coin"></i>
+              </div>
+              <h3 class="h4 fw-semibold mb-3">Fee Automation</h3>
+              <p class="text-muted">
+                Automated fee collection, payment reminders, and financial
+                reporting with multiple payment gateway integrations.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card p-4 h-100">
+              <div class="feature-icon">
+                <i class="bi bi-chat-left-text"></i>
+              </div>
+              <h3 class="h4 fw-semibold mb-3">Parent Communication</h3>
+              <p class="text-muted">
+                Real-time communication platform connecting teachers, parents,
+                and students with instant notifications and updates.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card p-4 h-100">
+              <div class="feature-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3 class="h4 fw-semibold mb-3">Staff Management</h3>
+              <p class="text-muted">
+                Complete HR solution for managing teacher profiles, schedules,
+                payroll, and performance evaluations.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card p-4 h-100">
+              <div class="feature-icon">
+                <i class="bi bi-camera-video"></i>
+              </div>
+              <h3 class="h4 fw-semibold mb-3">Online Classes</h3>
+              <p class="text-muted">
+                Integrated virtual classroom with video conferencing, assignment
+                distribution, and interactive learning tools.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card p-4 h-100">
+              <div class="feature-icon">
+                <i class="bi bi-bar-chart"></i>
+              </div>
+              <h3 class="h4 fw-semibold mb-3">Reports & Analytics</h3>
+              <p class="text-muted">
+                Detailed analytics and customizable reports for academic
+                performance, financial insights, and operational metrics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modules" class="py-5 bg-light">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">
+            Tailored Modules for Every User
+          </h2>
+          <p class="lead text-muted mx-auto" style="max-width: 700px">
+            Specialized interfaces designed for different roles in your
+            educational institution.
+          </p>
+        </div>
+
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+          <div class="d-flex flex-wrap border-bottom bg-white">
+            <button
+              class="tab-btn flex-fill py-3 fw-semibold text-center active"
+              data-bs-toggle="tab"
+              data-bs-target="#admin-tab"
+            >
+              Admin Dashboard
+            </button>
+            <button
+              class="tab-btn flex-fill py-3 fw-semibold text-center"
+              data-bs-toggle="tab"
+              data-bs-target="#teacher-tab"
+            >
+              Teacher Portal
+            </button>
+            <button
+              class="tab-btn flex-fill py-3 fw-semibold text-center"
+              data-bs-toggle="tab"
+              data-bs-target="#parent-tab"
+            >
+              Parent Access
+            </button>
+            <button
+              class="tab-btn flex-fill py-3 fw-semibold text-center"
+              data-bs-toggle="tab"
+              data-bs-target="#student-tab"
+            >
+              Student Hub
+            </button>
+          </div>
+
+          <div class="tab-content p-4 p-md-5 bg-white">
+            <!-- Admin -->
+            <div class="tab-pane fade show active" id="admin-tab">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                  <h3 class="h2 fw-bold mb-4">
+                    Complete Administrative Control
+                  </h3>
+                  <p class="text-muted mb-4">
+                    Comprehensive dashboard for school administrators to manage
+                    all aspects of the institution efficiently.
+                  </p>
+                  <ul class="list-unstyled">
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Student enrollment and records management
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Staff hiring and performance tracking
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Financial oversight and budget planning
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Comprehensive reporting and analytics
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <img
+                    src="images/admin.jpg"
+                    class="img-fluid rounded-4 shadow-sm"
+                    alt="Admin Dashboard"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Teacher -->
+            <div class="tab-pane fade" id="teacher-tab">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                  <h3 class="h2 fw-bold mb-4">Streamlined Teaching Tools</h3>
+                  <p class="text-muted mb-4">
+                    Interface designed for educators to manage classes,
+                    assignments, and student progress.
+                  </p>
+                  <ul class="list-unstyled">
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Class scheduling and attendance tracking
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Assignment creation and grading tools
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Parent communication and reports
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Virtual classroom integration
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <img
+                    src="images/teacher.jpg"
+                    class="img-fluid rounded-4 shadow-sm"
+                    alt="Teacher Portal"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Parent -->
+            <div class="tab-pane fade" id="parent-tab">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                  <h3 class="h2 fw-bold mb-4">
+                    Stay Connected with Your Child's Education
+                  </h3>
+                  <p class="text-muted mb-4">
+                    Real-time access to your child's academic progress and
+                    school activities.
+                  </p>
+                  <ul class="list-unstyled">
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Real-time grade and attendance monitoring
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Direct messaging with teachers
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Fee payment and tracking
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >School event updates
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <img
+                    src="images/parent.jpg"
+                    class="img-fluid rounded-4 shadow-sm"
+                    alt="Parent Portal"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Student -->
+            <div class="tab-pane fade" id="student-tab">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                  <h3 class="h2 fw-bold mb-4">Engaging Student Experience</h3>
+                  <p class="text-muted mb-4">
+                    Interactive portal to enhance learning and academic
+                    engagement.
+                  </p>
+                  <ul class="list-unstyled">
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Personal dashboard and tracking
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Assignment submission and feedback
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Virtual classroom access
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i
+                      >Peer collaboration tools
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <img
+                    src="images/students.jpg"
+                    class="img-fluid rounded-4 shadow-sm"
+                    alt="Student Hub"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-5 bg-white">
+      <div class="container py-5">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h2 class="display-5 fw-bold mb-4">
+              Smarter Tools for Smarter Schools
+            </h2>
+            <p class="lead text-muted mb-5">
+              We believe that technology should simplify education, not
+              complicate it. Our mission is to empower educational institutions
+              with intelligent, user-friendly tools that enhance learning
+              outcomes and operational efficiency.
+            </p>
+
+            <div class="d-flex flex-column gap-4">
+              <div class="d-flex">
+                <div
+                  class="bg-primary bg-opacity-10 rounded-lg d-flex align-items-center justify-content-center me-4"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-lightbulb text-primary"></i>
+                </div>
+                <div>
+                  <h3 class="h5 fw-semibold mb-2">Innovation-Driven</h3>
+                  <p class="text-muted mb-0">
+                    Cutting-edge technology solutions designed specifically for
+                    modern educational needs.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex">
+                <div
+                  class="bg-primary bg-opacity-10 rounded-lg d-flex align-items-center justify-content-center me-4"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-person-heart text-primary"></i>
+                </div>
+                <div>
+                  <h3 class="h5 fw-semibold mb-2">User-Centric Design</h3>
+                  <p class="text-muted mb-0">
+                    Intuitive interfaces crafted with educators, students, and
+                    parents in mind.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex">
+                <div
+                  class="bg-primary bg-opacity-10 rounded-lg d-flex align-items-center justify-content-center me-4"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-shield-check text-primary"></i>
+                </div>
+                <div>
+                  <h3 class="h5 fw-semibold mb-2">Secure & Reliable</h3>
+                  <p class="text-muted mb-0">
+                    Enterprise-grade security ensuring your data is always
+                    protected and accessible.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <img
+              src="images/smarttools.jpg"
+              alt="About SmartSchool"
+              class="img-fluid rounded-3 shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-5 bg-light">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">What Our Schools Say</h2>
+          <p class="lead text-muted mx-auto" style="max-width: 700px">
+            Trusted by educators and administrators across the globe for
+            transforming school management.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="testimonial-card p-4 h-100">
+              <div class="star-rating mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-muted mb-4 fst-italic">
+                "SmartSchool has revolutionized how we manage our institution.
+                The integrated approach to student records, communication, and
+                financial management has saved us countless hours and improved
+                our efficiency dramatically."
+              </p>
+              <div class="d-flex align-items-center">
+                <img
+                  src="images/testimonial1.jpg"
+                  alt="Dr. Sarah Mitchell"
+                  class="rounded-circle me-3"
+                  width="48"
+                  height="48"
+                />
+                <div>
+                  <h4 class="h6 fw-semibold mb-0">Dr. Sarah Mitchell</h4>
+                  <p class="small text-muted mb-0">
+                    Principal, Riverside Elementary
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="testimonial-card p-4 h-100">
+              <div class="star-rating mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-muted mb-4 fst-italic">
+                "As a parent, I love being able to track my daughter's progress
+                in real-time. The communication features have made it so much
+                easier to stay connected with her teachers and understand how
+                she's doing academically."
+              </p>
+              <div class="d-flex align-items-center">
+                <img
+                  src="images/testimonial2.jpg"
+                  alt="Michael Rodriguez"
+                  class="rounded-circle me-3"
+                  width="48"
+                  height="48"
+                />
+                <div>
+                  <h4 class="h6 fw-semibold mb-0">Michael Rodriguez</h4>
+                  <p class="small text-muted mb-0">
+                    Parent, Lincoln High School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="testimonial-card p-4 h-100">
+              <div class="star-rating mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-muted mb-4 fst-italic">
+                "The teacher portal has streamlined my workflow significantly.
+                From lesson planning to grade management, everything is
+                intuitive and efficient. My students love the interactive
+                features too!"
+              </p>
+              <div class="d-flex align-items-center">
+                <img
+                  src="images/testimonial3.jpg"
+                  alt="Emily Chen"
+                  class="rounded-circle me-3"
+                  width="48"
+                  height="48"
+                />
+                <div>
+                  <h4 class="h6 fw-semibold mb-0">Emily Chen</h4>
+                  <p class="small text-muted mb-0">
+                    Mathematics Teacher, Westfield Academy
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 cta-section">
+      <div class="container py-5 text-center">
+        <h2 class="display-5 fw-bold text-white mb-4">
+          Join 1000+ Schools Using Our Platform
+        </h2>
+        <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 700px">
+          Transform your educational institution with our comprehensive school
+          management system. Start your free trial today and experience the
+          difference.
+        </p>
+        <div
+          class="d-flex flex-column flex-sm-row gap-3 justify-content-center"
+        >
+          <button
+            class="btn btn-light text-primary fw-semibold px-4 py-3 rounded-2"
+          >
+            Start Free Trial
+          </button>
+          <button
+            class="btn btn-outline-light border-2 fw-semibold px-4 py-3 rounded-2"
+          >
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-5 bg-white">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Get In Touch</h2>
+            <p class="lead text-muted">
+              Have questions or ready to get started? Our team is here to help
+              you find the perfect solution for your school.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <div class="d-flex flex-column gap-4">
+              <div class="d-flex">
+                <div
+                  class="bg-primary bg-opacity-10 rounded-lg d-flex align-items-center justify-content-center me-4"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="bi bi-envelope text-primary fs-4"></i>
+                </div>
+                <div>
+                  <h3 class="h5 fw-semibold mb-2">Email Us</h3>
+                  <p class="text-muted mb-0">support@cybomb.com</p>
+                </div>
+              </div>
+
+              <div class="d-flex">
+                <div
+                  class="bg-primary bg-opacity-10 rounded-lg d-flex align-items-center justify-content-center me-4"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="bi bi-telephone text-primary fs-4"></i>
+                </div>
+                <div>
+                  <h3 class="h5 fw-semibold mb-2">Call Us</h3>
+                  <p class="text-muted mb-0">+91 9715092104</p>
+                  <p class="text-muted mb-0">Mon-Fri, 9am-5pm EST</p>
+                </div>
+              </div>
+
+              <div class="d-flex">
+                <div
+                  class="bg-primary bg-opacity-10 rounded-lg d-flex align-items-center justify-content-center me-4"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="bi bi-geo-alt text-primary fs-4"></i>
+                </div>
+                <div>
+                  <h3 class="h5 fw-semibold mb-2">Visit Us</h3>
+                  <p class="text-muted mb-0">
+                    Cybomb Technologies LLP, Hygee Works - PS Industrials,
+                    No.53, Jawaharlal Nehru Road, Guindy Chennai, Tamil Nadu,
+                    India
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Your email"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="school" class="form-label">School Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="school"
+                  placeholder="Your school"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Your phone"
+                />
+              </div>
+              <div class="col-12">
+                <label for="subject" class="form-label">Subject</label>
+                <select class="form-select" id="subject">
+                  <option selected>Choose a topic</option>
+                  <option>Sales Inquiry</option>
+                  <option>Technical Support</option>
+                  <option>Partnership</option>
+                  <option>Other Question</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Your message"
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <button
+                  type="submit"
+                  class="btn btn-primary px-4 py-3 rounded-2"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer text-white py-5">
+      <div class="container py-4">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <a class="d-inline-block mb-3" href="#">
+              <img
+                src="images/logo1.png"
+                alt="SmartSchool Logo"
+                height="40"
+                class="footer-logo"
+              />
+            </a>
+
+            <p class="text-muted mb-4">
+              Empowering educational institutions with innovative technology
+              solutions for better learning outcomes and operational efficiency.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="social-icon fs-5"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="social-icon fs-5"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a href="#" class="social-icon fs-5"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="#" class="social-icon fs-5"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="social-icon fs-5"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h3 class="h5 fw-semibold mb-3">Product</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#" class="footer-link">Features</a></li>
+              <li class="mb-2"><a href="#" class="footer-link">Modules</a></li>
+              <li class="mb-2"><a href="#" class="footer-link">Pricing</a></li>
+              <li class="mb-2">
+                <a href="#" class="footer-link">Integrations</a>
+              </li>
+              <li class="mb-2"><a href="#" class="footer-link">Updates</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h3 class="h5 fw-semibold mb-3">Resources</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="footer-link">Documentation</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="footer-link">Tutorials</a>
+              </li>
+              <li class="mb-2"><a href="#" class="footer-link">Blog</a></li>
+              <li class="mb-2"><a href="#" class="footer-link">Webinars</a></li>
+              <li class="mb-2">
+                <a href="#" class="footer-link">Help Center</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h3 class="h5 fw-semibold mb-3">Company</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#" class="footer-link">About Us</a></li>
+              <li class="mb-2"><a href="#" class="footer-link">Careers</a></li>
+              <li class="mb-2"><a href="#" class="footer-link">Partners</a></li>
+              <li class="mb-2"><a href="#" class="footer-link">Contact</a></li>
+              <li class="mb-2"><a href="#" class="footer-link">Press</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h3 class="h5 fw-semibold mb-3">Legal</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#" class="footer-link">Privacy</a></li>
+              <li class="mb-2"><a href="#" class="footer-link">Terms</a></li>
+              <li class="mb-2"><a href="#" class="footer-link">Security</a></li>
+              <li class="mb-2"><a href="#" class="footer-link">GDPR</a></li>
+              <li class="mb-2">
+                <a href="#" class="footer-link">Compliance</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="my-5 border-secondary" />
+
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="text-light mb-4">
+              &copy; 2025 Cybomb. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="d-flex flex-column flex-md-row justify-content-md-end gap-3 text-center text-md-end"
+            >
+              <a href="#" class="footer-link">Privacy Policy</a>
+              <a href="#" class="footer-link">Terms of Service</a>
+              <a href="#" class="footer-link">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .querySelector(".navbar-brand img")
+        .addEventListener("click", function () {
+          this.classList.add("clicked");
+          setTimeout(() => this.classList.remove("clicked"), 200);
+        });
+
+      // Tab functionality
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Remove active class from all buttons
+          document
+            .querySelectorAll(".tab-btn")
+            .forEach((b) => b.classList.remove("active"));
+          // Add active class to clicked button
+          btn.classList.add("active");
+
+          // Hide all tab panes
+          document
+            .querySelectorAll(".tab-pane")
+            .forEach((pane) => pane.classList.remove("show", "active"));
+          // Show the selected pane
+          const targetPane = document.querySelector(btn.dataset.bsTarget);
+          targetPane.classList.add("show", "active");
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const navbarHeight = document.querySelector(".navbar").offsetHeight;
+            const targetPosition =
+              targetElement.getBoundingClientRect().top +
+              window.pageYOffset -
+              navbarHeight;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+
+            // Close mobile menu if open
+            const navbarCollapse = document.querySelector(".navbar-collapse");
+            if (navbarCollapse.classList.contains("show")) {
+              const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false,
+              });
+              bsCollapse.hide();
+            }
+          }
+        });
+      });
+
+      // Add shadow to navbar on scroll
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("shadow-sm");
+        } else {
+          navbar.classList.remove("shadow-sm");
+        }
+      });
+      // Dynamic height adjustment for modules
+      function adjustTabHeight() {
+        const container = document.getElementById("module-tabs-container");
+        const activePane = container.querySelector(".tab-pane.show");
+        if (activePane) {
+          container.style.height = activePane.offsetHeight + "px";
+        }
+      }
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          setTimeout(adjustTabHeight, 200);
+        });
+      });
+      window.addEventListener("load", adjustTabHeight);
+    </script>
+  </body>
+</html>
