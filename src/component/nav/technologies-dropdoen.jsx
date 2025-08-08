@@ -41,55 +41,13 @@ function Technologiesdropdown({ onLinkClick, isMobile }) {
             {/* Each column can be placed inside its own <ul><li> */}
             <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">
               <Link className="dropdown-item text-primary">Mobile Apps</Link>
-              <Link
-                to="/services/android-app-development"
-                className="dropdown-item"
-                onClick={onLinkClick}
-              >
-                Android
-              </Link>
-              <Link
-                to="/services/react-native-development"
-                className="dropdown-item"
-                onClick={onLinkClick}
-              >
-                React Native
-              </Link>
-              <Link
-                to="/services/ios-app-development"
-                className="dropdown-item"
-                onClick={onLinkClick}
-              >
-                Ios
-              </Link>
-              <Link
-                to="/services/flutter-app-development"
-                className="dropdown-item"
-                onClick={onLinkClick}
-              >
-                Flutter
-              </Link>
-              <Link
-                to="/services/swift-app-development"
-                className="dropdown-item"
-                onClick={onLinkClick}
-              >
-                Swift
-              </Link>
-              <Link
-                to="/services/kotlin-app-development"
-                className="dropdown-item"
-                onClick={onLinkClick}
-              >
-                Kotlin
-              </Link>
-              <Link
-                to="/services/xamarin-app-development"
-                className="dropdown-item"
-                onClick={onLinkClick}
-              >
-                Xamarin
-              </Link>
+              <Link to="/services/android-app-development" className="dropdown-item" onClick={onLinkClick}>Android</Link>
+              <Link to="/services/react-native-development" className="dropdown-item" onClick={onLinkClick}>React Native</Link>
+              <Link to="/services/ios-app-development" className="dropdown-item" onClick={onLinkClick}>Ios</Link>
+              <Link to="/services/flutter-app-development"className="dropdown-item" onClick={onLinkClick}>Flutter</Link>
+              <Link to="/services/swift-app-development" className="dropdown-item" onClick={onLinkClick}>Swift</Link>
+              <Link to="/services/kotlin-app-development" className="dropdown-item" onClick={onLinkClick}>Kotlin</Link>
+              <Link to="/services/xamarin-app-development" className="dropdown-item" onClick={onLinkClick}>Xamarin</Link>
             </div>
 
             <div className="col-xxl-2 col-xl-12 col-md-6 col-12 mb-3">
@@ -118,55 +76,27 @@ function Technologiesdropdown({ onLinkClick, isMobile }) {
               <Link className="dropdown-item text-primary">CMS</Link>
               <div className="row">
                 <div className="col-md-6">
-                  <Link
-                    to="/services/wordpress"
-                    className="dropdown-item"
-                    onClick={onLinkClick}
-                  >
+                  <Link to="/services/wordpress"className="dropdown-item" onClick={onLinkClick}>
                     Wordpress
                   </Link>
-                  <Link
-                    to="/services/drupal"
-                    className="dropdown-item"
-                    onClick={onLinkClick}
-                  >
+                  <Link className="dropdown-item" onClick={onLinkClick}>
                     Drupal
                   </Link>
-                  <Link
-                    to="/services/craft"
-                    className="dropdown-item"
-                    onClick={onLinkClick}
-                  >
+                  <Link className="dropdown-item" onClick={onLinkClick}>
                     Craft
                   </Link>
-                  <Link
-                    to="/services/acquia"
-                    className="dropdown-item"
-                    onClick={onLinkClick}
-                  >
+                  <Link className="dropdown-item" onClick={onLinkClick}>
                     Acquia
                   </Link>
-                  <Link
-                    to="/services/joomla"
-                    className="dropdown-item"
-                    onClick={onLinkClick}
-                  >
+                  <Link className="dropdown-item" onClick={onLinkClick}>
                     Joomla
                   </Link>
-                  <Link
-                    to="/services/sharepoint"
-                    className="dropdown-item"
-                    onClick={onLinkClick}
-                  >
+                  <Link className="dropdown-item" onClick={onLinkClick}>
                     SharePoint
                   </Link>
                 </div>
                 <div className="col-md-6">
-                  <Link
-                    to="/services/umbraco"
-                    className="dropdown-item"
-                    onClick={onLinkClick}
-                  >
+                  <Link className="dropdown-item" onClick={onLinkClick}>
                     Umbraco
                   </Link>
                   <Link className="dropdown-item" onClick={onLinkClick}>
