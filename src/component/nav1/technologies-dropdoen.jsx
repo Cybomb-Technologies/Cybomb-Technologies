@@ -78,8 +78,8 @@ function Technologiesdropdown1({
                 <Link to="/services/kotlin-app-development" className={styles.dropdownItem1} onClick={onLinkClick}><FaJava className={styles.icon} /> Kotlin</Link>
                 <Link to="/services/xamarin-app-development" className={styles.dropdownItem1} onClick={onLinkClick}><FaMicrosoft className={styles.icon} /> Xamarin</Link>
               </div>
-{/* 
-              Ecommerce
+
+              {/* Ecommerce */}
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaShoppingCart className={styles.icon} /> Ecommerce</div>
                 <Link to="/services/adobe-commerce" className={styles.dropdownItem1} onClick={onLinkClick}><FaMagento className={styles.icon} /> Adobe Commerce</Link>
@@ -90,27 +90,27 @@ function Technologiesdropdown1({
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaMagento className={styles.icon} /> Magento</Link>
               </div>
 
-              CMS
+              {/* CMS */}
                 <div className={styles.techColumn}>
                   <div className={styles.dropdownHeader}><FaTools className={styles.icon} /> CMS</div>
                   <div className={styles.subColumnWrapper}>
                     <div className={styles.subColumn}>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaWordpress className={styles.icon} /> WordPress</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaDrupal className={styles.icon} /> Drupal</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaTools className={styles.icon} /> Craft</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaTools className={styles.icon} /> Acquia</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaTools className={styles.icon} /> Joomla</Link>
+                      <Link to="/services/wordpress" className={styles.dropdownItem1} onClick={onLinkClick}><FaWordpress className={styles.icon} /> WordPress</Link>
+                      <Link to="/services/drupal" className={styles.dropdownItem1} onClick={onLinkClick}><FaDrupal className={styles.icon} /> Drupal</Link>
+                      <Link to="/services/craft" className={styles.dropdownItem1} onClick={onLinkClick}><FaTools className={styles.icon} /> Craft</Link>
+                      <Link to="/services/acquia" className={styles.dropdownItem1} onClick={onLinkClick}><FaTools className={styles.icon} /> Acquia</Link>
+                      <Link to="/services/joomla" className={styles.dropdownItem1} onClick={onLinkClick}><FaTools className={styles.icon} /> Joomla</Link>
                     </div>
                     <div className={styles.subColumn}>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaMicrosoft className={styles.icon} /> SharePoint</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaTools className={styles.icon} /> Umbraco</Link>
+                      <Link to="/services/sharepoint" className={styles.dropdownItem1} onClick={onLinkClick}><FaMicrosoft className={styles.icon} /> SharePoint</Link>
+                      <Link to="/services/umbraco" className={styles.dropdownItem1} onClick={onLinkClick}><FaTools className={styles.icon} /> Umbraco</Link>
                       <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaTools className={styles.icon} /> Sitecore</Link>
                       <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaTools className={styles.icon} /> Pantheon</Link>
                       <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> AEM Development</Link>
                     </div>
                   </div>
                 </div>
-
+{/* 
                 Custom Development
                 <div className={styles.techColumn1}> 
                   <div className={styles.dropdownHeader}>
