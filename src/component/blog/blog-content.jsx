@@ -72,7 +72,7 @@ const blogPosts = [
     category: "AI & Machine Learning",
     image: "images/blog/ai-2.png",
   },
-  
+
   // {
   //   id: 9,
   //   title: "Responsible AI: Ethics and Transparency in 2025",
