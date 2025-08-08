@@ -110,14 +110,14 @@ function Nav1() {
                   onMouseLeave={() => setActiveDropdown(null)}
                   onLinkClick={handleNavItemClick}
                 />
-{/* 
+
                 <Datadropdown1
                   isMobile={isMobile}
                   isOpen={activeDropdown === "data"}
                   onMouseEnter={() => setActiveDropdown("data")}
                   onMouseLeave={() => setActiveDropdown(null)}
                   onLinkClick={handleNavItemClick}
-                /> */}
+                />
 {/* 
                 <Securitydropdown1
                   isMobile={isMobile}
@@ -135,15 +135,15 @@ function Nav1() {
                   onLinkClick={handleNavItemClick}
                 />
 
-                {/* <li className={styles.navItem}>
+                <li className={styles.navItem}>
                   <Link
-                    to="#"
+                    to="/hire-developers"
                     className={styles.navLink}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     On-Demand Developer
                   </Link>
-                </li> */}
+                </li>
 
                 <Technologiesdropdown1
                   isMobile={isMobile}
@@ -160,6 +160,17 @@ function Nav1() {
                   onMouseLeave={() => setActiveDropdown(null)}
                   onLinkClick={handleNavItemClick}
                 />
+
+                <li className={styles.navItem}>
+                  <Link
+                    to="/about-us"
+                    className={styles.navLink}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    About Us
+                  </Link>
+                </li>
+                
               </ul>
             </div>
           )}
