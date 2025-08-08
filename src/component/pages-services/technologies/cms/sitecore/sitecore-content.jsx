@@ -1,4 +1,4 @@
-import WordPressTechnologiesSection from "./wordpress-TechnologiesSection";
+import SitecoreTechnologiesSection from "./sitecore-TechnologiesSection";
 
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
@@ -99,7 +99,7 @@ const whychooseus = [
   },
 ];
 
-function WordPressContent() {
+function SitecoreContent() {
   return (
     <section>
       <Banner
@@ -132,7 +132,7 @@ function WordPressContent() {
 
       <WhyChooseUs ChooseUs={whychooseus} />
 
-      <WordPressTechnologiesSection />
+      <SitecoreTechnologiesSection />
       <StillNotSure />
 
       <HiringModels title="Hiring Models" cards={hiringData} image={awsImage} />
@@ -140,4 +140,4 @@ function WordPressContent() {
   );
 }
 
-export default WordPressContent;
+export default SitecoreContent;

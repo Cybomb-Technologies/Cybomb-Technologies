@@ -43,7 +43,7 @@ const techLogos = {
   "Git workflows": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
 };
 
-const WordPressTechnologiesSection = () => {
+const SitecoreTechnologiesSection = () => {
   const categories = Object.keys(techData);
   const [selected, setSelected] = useState(categories[0]);
 
@@ -85,4 +85,4 @@ const WordPressTechnologiesSection = () => {
   );
 };
 
-export default WordPressTechnologiesSection;
+export default SitecoreTechnologiesSection;

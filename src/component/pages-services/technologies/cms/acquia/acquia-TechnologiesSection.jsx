@@ -5,10 +5,20 @@ const techData = {
   "Back End": ["PHP", "Symfony", "MySQL", "Redis", "Varnish"],
   APIs: ["JSON:API", "GraphQL", "REST"],
   Tools: ["Composer", "Drush"],
-  Hosting: ["Acquia Cloud", "Pantheon", "Platform.sh"],
+  Hosting: ["Acquia Cloud Platform", "Acquia Cloud Site Factory (ACSF)"],
   Modules: ["Multilingual modules (Locale, Content Translation)"],
-  Security: ["Drupal Security Advisories", "OWASP standards"],
+  Security: [
+    "Acquia Edge Security & CDN",
+    "Drupal Security Advisories",
+    "OWASP standards",
+  ],
   DevOps: ["CI/CD", "Docker", "Git workflows"],
+  "Acquia Marketing & Experience": [
+    "Acquia DAM (Digital Asset Management)",
+    "Acquia CDP (Customer Data Platform)",
+    "Acquia Personalization (Lift)",
+  ],
+  "Acquia Migration & Development": ["Acquia Migrate & Site Studio"],
 };
 
 const techLogos = {
@@ -28,12 +38,12 @@ const techLogos = {
   Composer:
     "https://www.vectorlogo.zone/logos/getcomposer/getcomposer-icon.svg",
   Drush: "https://www.drupal.org/files/drush_logo.png",
-  "Acquia Cloud": "https://www.vectorlogo.zone/logos/acquia/acquia-icon.svg",
-  Pantheon: "https://www.vectorlogo.zone/logos/pantheon/pantheon-icon.svg",
-  "Platform.sh":
-    "https://www.vectorlogo.zone/logos/platformsh/platformsh-icon.svg",
-  "Multilingual modules (Locale, Content Translation)":
-    "https://www.drupal.org/files/styles/grid-2-2x/public/project-images/Translation_icon.svg.png?itok=zQ6K-o-O",
+  "Acquia Cloud Platform":
+    "https://www.acquia.com/sites/default/files/acquia-logo-black.png",
+  "Acquia Cloud Site Factory (ACSF)":
+    "https://www.acquia.com/sites/default/files/acquia-logo-black.png",
+  "Acquia Edge Security & CDN":
+    "https://www.acquia.com/sites/default/files/acquia-logo-black.png",
   "Drupal Security Advisories":
     "https://www.drupal.org/files/drupal_security_lock.png",
   "OWASP standards": "https://www.owasp.org/images/0/02/Owasp-logo-sm.png",
@@ -41,9 +51,17 @@ const techLogos = {
     "https://www.drupal.org/files/styles/grid-2-2x/public/project-images/GitLab-CI.png?itok=yT5B7f7L",
   Docker: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg",
   "Git workflows": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
+  "Acquia DAM (Digital Asset Management)":
+    "https://www.acquia.com/sites/default/files/acquia-logo-black.png",
+  "Acquia CDP (Customer Data Platform)":
+    "https://www.acquia.com/sites/default/files/acquia-logo-black.png",
+  "Acquia Personalization (Lift)":
+    "https://www.acquia.com/sites/default/files/acquia-logo-black.png",
+  "Acquia Migrate & Site Studio":
+    "https://www.acquia.com/sites/default/files/acquia-logo-black.png",
 };
 
-const WordPressTechnologiesSection = () => {
+const AcquiaTechnologiesSection = () => {
   const categories = Object.keys(techData);
   const [selected, setSelected] = useState(categories[0]);
 
@@ -85,4 +103,4 @@ const WordPressTechnologiesSection = () => {
   );
 };
 
-export default WordPressTechnologiesSection;
+export default AcquiaTechnologiesSection;
