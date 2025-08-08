@@ -1,6 +1,7 @@
 
 import Banner from "./hire-dev-section/banner";
 import InfoStats from "./hire-dev-section/info-stats";
+import WhyChooseUs from "./hire-dev-section/WhyChooseUs";
 
 function HireDevContent() {
   return (
@@ -20,6 +21,7 @@ function HireDevContent() {
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"
     />
+    <WhyChooseUs/>
 
     </>
   );

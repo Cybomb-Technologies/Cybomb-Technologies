@@ -80,7 +80,7 @@ function Datadropdown1({
               {/* Data Column */}
               <div className={styles.dropdownColumn}>
                 <div className={styles.dropdownHeader}><FaDatabase className={styles.icon} /> Data</div>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/stratergy-consulting" onClick={onLinkClick}>
                   <FaRegLightbulb className={styles.icon} /> Strategy Consulting
                 </Link>
                 <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
