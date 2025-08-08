@@ -28,16 +28,16 @@ function HomeBanner() {
           <div className="col-12 col-lg-8 text-center">
             <div className="banner-content-wrapper">
               <h1 className="display-3 display-lg-2 fw-bold mb-4">
-  <span className="gradient-text">Innovating Your Vision</span>
-  <br />
-  into <span className="dynamic-text-container">
-    <strong className="dynamic-text">{rotatingPhrases[currentPhraseIndex]}</strong>
-  </span>
-</h1>
+                  <span className="gradient-text">Innovating Your Vision</span>
+                  <br />
+                  into <span className="dynamic-text-container">
+                    <strong className="dynamic-text">{rotatingPhrases[currentPhraseIndex]}</strong>
+                  </span>
+                </h1>
               <p className="lead fs-5 banner-paragraph-content px-3 px-md-5">
                 We empower businesses with scalable mobile apps, intelligent AI systems, and seamless SaaS platforms — custom-built to fuel your growth.
               </p>
-              <div className="d-flex flex-column flex-sm-row gap-3 mt-5 justify-content-center">
+              <div className="d-flex flex-column flex-sm-row gap-3 mt-5 align-items-center justify-content-sm-center">
                 <Link
                   to="/services"
                   className="btn px-4 px-lg-5 py-3 fw-semibold explore-btn"

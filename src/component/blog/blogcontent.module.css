@@ -1,0 +1,249 @@
+.blogSection {
+  background: linear-gradient(to bottom, #f9f9fb 0%, #ffffff 100%);
+  padding: 60px 0;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003459;
+}
+
+.sectionHeader p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.trendingTopics {
+  background-color: #edf5fb;
+  border-left: 5px solid #003459;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.badgeWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.trendingBadge {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #003459;
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.trendingBadge:hover {
+  background-color: #0077b6;
+}
+
+.activeBadge {
+  background-color: #0077b6;
+  box-shadow: 0 4px 8px rgba(0, 119, 182, 0.4);
+  font-weight: 600;
+}
+
+.featuredPost {
+  background-color: #f2f7fb;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 52, 89, 0.1);
+}
+
+.featuredPost:hover {
+  box-shadow: 0 8px 24px rgba(0, 52, 89, 0.15);
+}
+
+.featuredPost h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #003459;
+}
+
+.featuredPost p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.featuredImage {
+  border-radius: 12px;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  max-height: 320px;
+}
+
+.blogCard {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.blogCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blogCard img {
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.blogCard .card-body {
+  padding: 20px;
+}
+
+.blogCard .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #003459;
+  margin-bottom: 10px;
+}
+
+.blogCard .card-text {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.ctaSection {
+  background-color: #003459;
+  color: #fff;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.ctaSection h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.ctaSection p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.newsletterSection {
+  background-color: #f2f7fb;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.newsletterSection h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #003459;
+}
+
+.newsletterSection p {
+  max-width: 700px;
+  font-size: 1rem;
+  color: #555;
+  margin: 0 auto;
+}
+
+.newsletterSection input {
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.newsletterSection button {
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sectionHeader h2 {
+    font-size: 1.75rem;
+  }
+
+  .featuredImage {
+    max-height: 240px;
+  }
+
+  .newsletterSection form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletterSection input {
+    width: 100% !important;
+  }
+}
+
+.featuredCreative {
+  background: linear-gradient(135deg, #f0f9ff, #ffffff);
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  z-index: 1;
+}
+
+.topicTag {
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.featuredTitle {
+  color: #1e293b;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.featuredExcerpt {
+  color: #475569;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.metaItem {
+  font-size: 0.95rem;
+  color: #64748b;
+  background-color: #f1f5f9;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+}
+
+.authorImage {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+}
+
+.imageWrap img {
+  transition: transform 0.4s ease;
+  border-radius: 1.5rem;
+}
+
+.imageWrap:hover img {
+  transform: scale(1.03);
+}
+
+/* Artistic Background Shape */
+.decorativeBlob {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at center, #dbeafe 10%, transparent 70%);
+  z-index: 0;
+  opacity: 0.5;
+  filter: blur(40px);
+}

@@ -44,7 +44,7 @@ function Footer({ socialLinks = defaultSocialLinks }) {
     { to: "/", label: "Home" },
     { to: "/about-us", label: "About Us" },
     { to: "/services", label: "Services" },
-    { to: "/blog", label: "Blog" },
+    // { to: "/blog", label: "Blog" },
     { to: "/portfolio", label: "Portfolio" },
     { to: "/career", label: "Career" },
     { to: "/contact-us", label: "Contact Us" },
