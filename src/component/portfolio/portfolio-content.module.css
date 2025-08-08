@@ -1,0 +1,35 @@
+.portfolioContainer {
+    padding: 0px 0px;
+    background: white;
+}
+/* Add to portfolio-content.module.css */
+.sectionHeading {
+  padding-top: 30px;
+  color: #003459;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sectionHeading::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: #00a8e8;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.industry-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.industry-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
