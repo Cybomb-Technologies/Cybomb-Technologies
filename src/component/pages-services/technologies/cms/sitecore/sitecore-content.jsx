@@ -13,89 +13,73 @@ import HiringModels from "../../../../common-ui/mobile-app/hiring";
 
 const services = [
   {
-    title: "Custom WordPress Development",
-    description:
-      "Build fully custom themes and plugins tailored to your brand, performance, and business goals.",
+    title: "Custom Sitecore Website Development",
+    description: "Tailor-made solutions aligned with your brand goals.",
   },
   {
-    title: "CMS Setup & Optimization",
-    description:
-      "Get a professionally configured WordPress setup with best practices for security, speed, and usability.",
+    title: "Sitecore Experience Platform (XP) Implementation",
+    description: "Unlock the full potential of personalization and analytics.",
   },
   {
-    title: "Content Architecture & Strategy",
-    description:
-      "Organize your content with structured post types, taxonomies, and navigation for optimal user experience.",
+    title: "Headless Sitecore Development",
+    description: "Build decoupled, future-proof digital experiences.",
   },
   {
-    title: "Headless WordPress Integration",
-    description:
-      "Combine WordPress as a backend with modern frontends (React, Next.js, Vue) via REST or GraphQL APIs.",
+    title: "Migration to Sitecore",
+    description: "Seamlessly transition from other CMS platforms.",
   },
   {
-    title: "WordPress Multisite Solutions",
-    description:
-      "Manage multiple sites under one dashboard—perfect for franchises, publishers, or multilingual platforms.",
+    title: "Sitecore Integration",
+    description: "Connect CRM, ERP, marketing tools, and third-party systems.",
   },
   {
-    title: "WooCommerce & eCommerce Integration",
-    description:
-      "Turn your CMS into a full eCommerce platform with seamless WooCommerce integration and custom features.",
-  },
-  {
-    title: "Performance & Security Audits",
-    description:
-      "Improve site load times, harden security, and comply with GDPR, HIPAA, or other standards.",
-  },
-  {
-    title: "Migration & Modernization",
-    description:
-      "Move from outdated CMS platforms or legacy WordPress sites to modern, clean, scalable setups.",
-  },
-];
-const hiringData = [
-  {
-    title: "WordPress Site Builds",
-    description: "Design and develop full websites from scratch",
-  },
-  {
-    title: "CMS Restructure & Cleanup",
-    description: "Fix bloated, plugin-heavy, or outdated installs",
-  },
-  {
-    title: "Headless/Hybrid CMS Projects",
-    description: "Power modern apps with WordPress as backend only",
-  },
-  {
-    title: "Monthly Support & Retainers",
-    description: "Continuous improvements, updates, and performance tuning",
+    title: "Sitecore Upgrade & Maintenance",
+    description: "Keep your platform updated, secure, and optimized.",
   },
 ];
 
+const hiringData = [
+  {
+    title: "Sitecore Site Builds",
+    description: "End-to-end delivery of enterprise websites",
+  },
+  {
+    title: "Platform Optimization",
+    description: "Improve performance, workflows, and personalization",
+  },
+  {
+    title: "Headless & Composable Projects",
+    description: "Future-proof with modern, API-first builds",
+  },
+  {
+    title: "Managed Support & Retainers",
+    description: "Continuous improvements and proactive maintenance",
+  },
+];
 const whychooseus = [
   {
-    title: "End-to-End WordPress Expertise",
-    description: "From UI to backend, we handle it all",
+    title: "Custom Sitecore Website Development",
+    description: "Tailor-made solutions aligned with your brand goals.",
   },
   {
-    title: "CMS Strategy, Not Just Dev",
-    description: "We think in terms of usability and scale",
+    title: "Sitecore Experience Platform (XP) Implementation",
+    description: "Unlock the full potential of personalization and analytics.",
   },
   {
-    title: "Performance-First Builds",
-    description: "Optimized for Core Web Vitals and SEO",
+    title: "Headless Sitecore Development",
+    description: "Build decoupled, future-proof digital experiences.",
   },
   {
-    title: "Security Built In",
-    description: "Updates, hardening, and secure configurations as standard",
+    title: "Migration to Sitecore",
+    description: "Seamlessly transition from other CMS platforms.",
   },
   {
-    title: "Multilingual & Scalable",
-    description: "Go global or enterprise with confidence",
+    title: "Sitecore Integration",
+    description: "Connect CRM, ERP, marketing tools, and third-party systems.",
   },
   {
-    title: "Ongoing Support",
-    description: "Continuous maintenance, monitoring, and enhancements.",
+    title: "Sitecore Upgrade & Maintenance",
+    description: "Keep your platform updated, secure, and optimized.",
   },
 ];
 
@@ -103,10 +87,10 @@ function SitecoreContent() {
   return (
     <section>
       <Banner
-        heading="WordPress CMS Solutions"
-        subtext="Powerful, flexible, and user-friendly content management"
+        heading="Sitecore CMS Solutions"
+        subtext="Enterprise-grade, scalable, and personalized content management"
         buttonText="Book Free Consultation"
-        note="WordPress powers over 40% of the web—and for good reason. It’s a robust CMS that balances simplicity with deep customization. Whether you're running a blog, a business site, or a full-scale digital platform, WordPress provides the tools and flexibility to manage your content efficiently and grow without limits."
+        note="Sitecore is a powerful digital experience platform designed for enterprises that demand personalization, scalability, and omnichannel delivery. From content creation to customer experience optimization, Sitecore empowers organizations to manage, deliver, and optimize content across every touchpoint with precision."
       />
       <InfoStats
         stats={[

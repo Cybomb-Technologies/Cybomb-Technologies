@@ -137,7 +137,7 @@ function Nav1() {
 
                 {/* <li className={styles.navItem}>
                   <Link
-                    to="#"
+                    to="/hire-developers"
                     className={styles.navLink}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -160,6 +160,17 @@ function Nav1() {
                   onMouseLeave={() => setActiveDropdown(null)}
                   onLinkClick={handleNavItemClick}
                 />
+
+                <li className={styles.navItem}>
+                  <Link
+                    to="/about-us"
+                    className={styles.navLink}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    About Us
+                  </Link>
+                </li>
+                
               </ul>
             </div>
           )}
@@ -205,25 +216,25 @@ function Nav1() {
                 onToggle={() => handleDropdownToggle("cloud")}
                 onLinkClick={handleNavItemClick}
               />
-              <Datadropdown1
+              {/* <Datadropdown1
                 isMobile
                 isOpen={activeDropdown === "data"}
                 onToggle={() => handleDropdownToggle("data")}
                 onLinkClick={handleNavItemClick}
-              />
-              <Securitydropdown1
+              /> */}
+              {/* <Securitydropdown1
                 isMobile
                 isOpen={activeDropdown === "security"}
                 onToggle={() => handleDropdownToggle("security")}
                 onLinkClick={handleNavItemClick}
-              />
+              /> */}
               <Industriesdropdown1
                 isMobile
                 isOpen={activeDropdown === "industries"}
                 onToggle={() => handleDropdownToggle("industries")}
                 onLinkClick={handleNavItemClick}
               />
-              <li className={styles.navItem}>
+              {/* <li className={styles.navItem}>
                 <Link
                   to="#"
                   className={styles.navLink}
@@ -231,7 +242,7 @@ function Nav1() {
                 >
                   On-Demand Developer
                 </Link>
-              </li>
+              </li> */}
               <Technologiesdropdown1
                 isMobile
                 isOpen={activeDropdown === "technologies"}
