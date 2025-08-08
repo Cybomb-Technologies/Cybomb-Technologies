@@ -71,16 +71,16 @@ function Cookiecontent() {
             </li>
             <li>
               🌐{" "}
-              <a href="https://cybotechnologies.com/">
-                Website: www.cybotechnologies.com
+              <a href="https://cybomb.com/">
+                Website: www.cybomb.com
               </a>
             </li>
           </ul>
 
           <p>
             By using{" "}
-            <a href="https://cybotechnologies.com/">
-              www.cybotechnologies.com
+            <a href="https://cybomb.com/">
+              www.cybomb.com
             </a>, you consent to our use of cookies as described in this Cookie Policy.
           </p>
         </div>
