@@ -82,12 +82,12 @@ function Technologiesdropdown1({
               {/* Ecommerce */}
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaShoppingCart className={styles.icon} /> Ecommerce</div>
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaMagento className={styles.icon} /> Adobe Commerce</Link>
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaShopify className={styles.icon} /> Shopify</Link>
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> Symfony</Link>
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaShoppingCart className={styles.icon} /> WooCommerce</Link>
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaShoppingCart className={styles.icon} /> BigCommerce</Link>
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaMagento className={styles.icon} /> Magento</Link>
+                <Link to="/services/adobe-commerce" className={styles.dropdownItem1} onClick={onLinkClick}><FaMagento className={styles.icon} /> Adobe Commerce</Link>
+                <Link to="/services/shopify" className={styles.dropdownItem1} onClick={onLinkClick}><FaShopify className={styles.icon} /> Shopify</Link>
+                <Link to="/services/symfony" className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> Symfony</Link>
+                <Link to="/services/woo-commerce" className={styles.dropdownItem1} onClick={onLinkClick}><FaShoppingCart className={styles.icon} /> WooCommerce</Link>
+                <Link to="/services/big-commerce" className={styles.dropdownItem1} onClick={onLinkClick}><FaShoppingCart className={styles.icon} /> BigCommerce</Link>
+                <Link to="/services/magento" className={styles.dropdownItem1} onClick={onLinkClick}><FaMagento className={styles.icon} /> Magento</Link>
               </div>
 
               {/* CMS */}
