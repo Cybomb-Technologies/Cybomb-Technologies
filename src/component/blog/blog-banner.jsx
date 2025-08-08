@@ -5,7 +5,7 @@ function Blogbanner() {
         className="blog-banner-wrapper d-flex align-items-center justify-content-center text-white"
         style={{
           padding: "120px 0 80px",
-          background: "linear-gradient(to right, #003459, #0077b6)",
+          background: "#003459",
           textAlign: "center",
           borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
         }}
