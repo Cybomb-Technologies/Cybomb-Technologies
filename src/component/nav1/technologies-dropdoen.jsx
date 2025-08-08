@@ -98,97 +98,18 @@ function Technologiesdropdown1({
             <div className={styles.dropdownGrid}>
               {/* Mobile Apps */}
               <div className={styles.techColumn}>
-                <div className={styles.dropdownHeader}>
-                  <FaMobileAlt className={styles.icon} /> Mobile Apps
-                </div>
-                <Link
-                  to="/services/android-app-development"
-                  className={styles.dropdownItem1}
-                  onClick={onLinkClick}
-                >
-                  <FaAndroid className={styles.icon} /> Android
-                </Link>
-                <Link
-                  to="/services/react-native-development"
-                  className={styles.dropdownItem1}
-                  onClick={onLinkClick}
-                >
-                  <FaReact className={styles.icon} /> React Native
-                </Link>
-                <Link
-                  to="/services/ios-app-development"
-                  className={styles.dropdownItem1}
-                  onClick={onLinkClick}
-                >
-                  <FaApple className={styles.icon} /> iOS
-                </Link>
-                <Link
-                  to="/services/flutter-app-development"
-                  className={styles.dropdownItem1}
-                  onClick={onLinkClick}
-                >
-                  <FaReact className={styles.icon} /> Flutter
-                </Link>
-                <Link
-                  to="/services/swift-app-development"
-                  className={styles.dropdownItem1}
-                  onClick={onLinkClick}
-                >
-                  <FaSwift className={styles.icon} /> Swift
-                </Link>
-                <Link
-                  to="/services/kotlin-app-development"
-                  className={styles.dropdownItem1}
-                  onClick={onLinkClick}
-                >
-                  <FaJava className={styles.icon} /> Kotlin
-                </Link>
-                <Link
-                  to="/services/xamarin-app-development"
-                  className={styles.dropdownItem1}
-                  onClick={onLinkClick}
-                >
-                  <FaMicrosoft className={styles.icon} /> Xamarin
-                </Link>
+                <div className={styles.dropdownHeader}> <FaMobileAlt className={styles.icon} /> Mobile Apps </div>
+                <Link to="/services/android-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaAndroid className={styles.icon} /> Android </Link>
+                <Link to="/services/react-native-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaReact className={styles.icon} /> React Native </Link>
+                <Link to="/services/ios-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaApple className={styles.icon} /> iOS </Link>
+                <Link to="/services/flutter-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaReact className={styles.icon} /> Flutter</Link>
+                <Link to="/services/swift-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaSwift className={styles.icon} /> Swift </Link>
+                <Link to="/services/kotlin-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaJava className={styles.icon} /> Kotlin </Link>
+                <Link to="/services/xamarin-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaMicrosoft className={styles.icon} /> Xamarin </Link>
               </div>
 
               {/* Ecommerce */}
               <div className={styles.techColumn}>
-<<<<<<< HEAD
-                <div className={styles.dropdownHeader}>
-                  <FaShoppingCart className={styles.icon} /> Ecommerce
-                </div>
-                <Link
-                  to="/services/adobe-commerce"
-                  className={styles.dropdownItem1}
-                  onClick={onLinkClick}
-                >
-                  <FaMagento className={styles.icon} /> Adobe Commerce
-                </Link>
-                <Link
-                  to="/services/shopify"
-                  className={styles.dropdownItem1}
-                  onClick={onLinkClick}
-                >
-                  <FaShopify className={styles.icon} /> Shopify
-                </Link>
-                <Link
-                  to="/services/symfony"
-                  className={styles.dropdownItem1}
-                  onClick={onLinkClick}
-                >
-                  <FaCode className={styles.icon} /> Symfony
-                </Link>
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}>
-                  <FaShoppingCart className={styles.icon} /> WooCommerce
-                </Link>
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}>
-                  <FaShoppingCart className={styles.icon} /> BigCommerce
-                </Link>
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}>
-                  <FaMagento className={styles.icon} /> Magento
-                </Link>
-=======
                 <div className={styles.dropdownHeader}><FaShoppingCart className={styles.icon} /> Ecommerce</div>
                 <Link to="/services/adobe-commerce" className={styles.dropdownItem1} onClick={onLinkClick}><FaMagento className={styles.icon} /> Adobe Commerce</Link>
                 <Link to="/services/shopify" className={styles.dropdownItem1} onClick={onLinkClick}><FaShopify className={styles.icon} /> Shopify</Link>
@@ -196,86 +117,25 @@ function Technologiesdropdown1({
                 <Link to="/services/woo-commerce" className={styles.dropdownItem1} onClick={onLinkClick}><FaShoppingCart className={styles.icon} /> WooCommerce</Link>
                 <Link to="/services/big-commerce" className={styles.dropdownItem1} onClick={onLinkClick}><FaShoppingCart className={styles.icon} /> BigCommerce</Link>
                 <Link to="/services/magento" className={styles.dropdownItem1} onClick={onLinkClick}><FaMagento className={styles.icon} /> Magento</Link>
->>>>>>> d89bea2d228fc803bcd106a14c316a35476b927f
               </div>
 
               {/* CMS */}
               <div className={styles.techColumn}>
-                <div className={styles.dropdownHeader}>
-                  <FaTools className={styles.icon} /> CMS
-                </div>
+                <div className={styles.dropdownHeader}> <FaTools className={styles.icon} /> CMS </div>
                 <div className={styles.subColumnWrapper}>
-                  <div className={styles.subColumn}>
-                    <Link
-                      to="/services/wordpress"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaWordpress className={styles.icon} /> WordPress
-                    </Link>
-                    <Link
-                      to="/services/drupal"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaDrupal className={styles.icon} /> Drupal
-                    </Link>
-                    <Link
-                      to="/services/craft"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaTools className={styles.icon} /> Craft
-                    </Link>
-                    <Link
-                      to="/services/acquia"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaTools className={styles.icon} /> Acquia
-                    </Link>
-                    <Link
-                      to="/services/joomla"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaTools className={styles.icon} /> Joomla
-                    </Link>
+                  <div className={styles.subColumn}> 
+                    <Link to="/services/wordpress" className={styles.dropdownItem1} onClick={onLinkClick}> <FaWordpress className={styles.icon} /> WordPress </Link>
+                    {/* <Link to="/services/drupal" className={styles.dropdownItem1} onClick={onLinkClick}> <FaDrupal className={styles.icon} /> Drupal </Link> */}
+                    <Link to="/services/craft" className={styles.dropdownItem1} onClick={onLinkClick}> <FaTools className={styles.icon} /> Craft </Link>
+                    <Link to="/services/acquia" className={styles.dropdownItem1} onClick={onLinkClick}> <FaTools className={styles.icon} /> Acquia </Link>
+                    <Link to="/services/joomla" className={styles.dropdownItem1} onClick={onLinkClick}> <FaTools className={styles.icon} /> Joomla </Link>
                   </div>
                   <div className={styles.subColumn}>
-                    <Link
-                      to="/services/sharepoint"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaMicrosoft className={styles.icon} /> SharePoint
-                    </Link>
-                    <Link
-                      to="/services/umbraco"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaTools className={styles.icon} /> Umbraco
-                    </Link>
-                    <Link
-                      to="/services/sitecore"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaTools className={styles.icon} /> Sitecore
-                    </Link>
-                    <Link
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaTools className={styles.icon} /> Pantheon
-                    </Link>
-                    <Link
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaCode className={styles.icon} /> AEM Development
-                    </Link>
+                    <Link to="/services/sharepoint" className={styles.dropdownItem1} onClick={onLinkClick}> <FaMicrosoft className={styles.icon} /> SharePoint </Link>
+                    <Link to="/services/umbraco"className={styles.dropdownItem1} onClick={onLinkClick}> <FaTools className={styles.icon} /> Umbraco </Link>
+                    <Link to="/services/sitecore" className={styles.dropdownItem1} onClick={onLinkClick}> <FaTools className={styles.icon} /> Sitecore </Link>
+                    <Link className={styles.dropdownItem1} onClick={onLinkClick}> <FaTools className={styles.icon} /> Pantheon </Link>
+                    <Link className={styles.dropdownItem1} onClick={onLinkClick}> <FaCode className={styles.icon} /> AEM Development </Link>
                   </div>
                 </div>
               </div>
