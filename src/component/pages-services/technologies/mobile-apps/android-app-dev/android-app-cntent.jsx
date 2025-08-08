@@ -125,7 +125,7 @@ function AndroidAppContent() {
         
        
         <ScheduleConsultation
-      heading="Stay Ahead Of The Competition With Our Hosting Services"
+      heading="Stay Ahead Of The Competition With Our android Services"
       buttonText="Schedule a Consultation!"
       imageSrc={placeholderImage}
       imageAlt="CRM Consultation"

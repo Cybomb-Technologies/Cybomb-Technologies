@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./blog.css";
+import styles from"./blogcontent.module.css";
 
 function Blogcontent() {
 const [selectedTopic, setSelectedTopic] = useState("Cloud Computing");
@@ -64,14 +64,15 @@ const blogPosts = [
     category: "AI & Machine Learning",
     image: "images/blog/ai-1.jpg",
   },
-  // {
-  //   id: 8,
-  //   title: "Top AI Use Cases for Enterprises",
-  //   excerpt: "From chatbots to fraud detection—AI in real-world business.",
-  //   date: "August 11, 2025",
-  //   category: "AI & Machine Learning",
-  //   image: "images/blog/ai-2.jpg",
-  // },
+  {
+    id: 8,
+    title: "Top AI Use Cases for Enterprises",
+    excerpt: "From chatbots to fraud detection—AI in real-world business.",
+    date: "August 11, 2025",
+    category: "AI & Machine Learning",
+    image: "images/blog/ai-2.png",
+  },
+  
   // {
   //   id: 9,
   //   title: "Responsible AI: Ethics and Transparency in 2025",
@@ -418,32 +419,30 @@ const trendingTopics = [
 ];
 
 const filteredPosts = blogPosts.filter((post) => post.category === selectedTopic);
-
+  const featuredPost = filteredPosts.length > 0 ? filteredPosts[0] : null;
+  const otherPosts = filteredPosts.slice(1);
 
   return (
-    <section className="blog-section">
+    <section className={styles.blogSection}>
       <div className="container">
-        {/* Title */}
-        <div className="row mb-5 text-center">
-          <div className="col">
-            <h2 className="text-primary fw-bold">
-              Insights, Trends & Solutions from IT Experts
-            </h2>
-            <p className="text-muted">
-              Curated knowledge on cloud, AI, DevOps, security & infrastructure modernization to power your business transformation.
-            </p>
-          </div>
+        {/* Header */}
+        <div className={`text-center mb-5 ${styles.sectionHeader}`}>
+          <h2>Insights, Trends & Solutions from IT Experts</h2>
+          <p>
+            Curated knowledge on cloud, AI, DevOps, security & infrastructure
+            modernization to power your business transformation.
+          </p>
         </div>
 
         {/* Trending Topics */}
-        <div className="trending-topics text-center mb-5">
-          <h4 className="text-dark fw-semibold mb-3">Trending Topics</h4>
-          <div className="d-flex flex-wrap justify-content-center gap-2">
+        <div className={`text-center mb-5 ${styles.trendingTopics}`}>
+          <h4 className="mb-3">Trending Topics</h4>
+          <div className={styles.badgeWrapper}>
             {trendingTopics.map((topic, index) => (
               <span
                 key={index}
-                className={`badge trending-badge ${
-                  selectedTopic === topic ? "active-badge" : ""
+                className={`${styles.trendingBadge} ${
+                  selectedTopic === topic ? styles.activeBadge : ""
                 }`}
                 onClick={() => setSelectedTopic(topic)}
               >
@@ -453,26 +452,81 @@ const filteredPosts = blogPosts.filter((post) => post.category === selectedTopic
           </div>
         </div>
 
+        {/* Featured Post */}
+        {featuredPost && (
+  <section className={`position-relative overflow-hidden py-5 px-3 px-md-5 rounded-4 ${styles.featuredCreative}`}>
+    {/* Artistic background gradient */}
+    <div className={styles.decorativeBlob}></div>
+
+    <div className="row align-items-center">
+      {/* Left Textual Content */}
+      <div className="col-lg-6 mb-5 mb-lg-0 z-2">
+        <span className={`badge rounded-pill mb-3 ${styles.topicTag}`}>
+          🔥 Trending Topic: {featuredPost.category}
+        </span>
+
+        <h2 className={`fw-bold display-6 mb-4 ${styles.featuredTitle}`}>
+          {featuredPost.title}
+        </h2>
+
+        <p className={`lead mb-4 ${styles.featuredExcerpt}`}>
+          {featuredPost.excerpt} This spotlight post decodes the strategic adoption of cloud technology and what it means for modern infrastructure.
+        </p>
+
+        {/* Metadata Row */}
+        <div className="d-flex flex-wrap align-items-center gap-4 mb-4">
+          <div className={styles.metaItem}>
+            📅 {featuredPost.date}
+          </div>
+          <div className={styles.metaItem}>
+            ⏱️ 6 min read
+          </div>
+          <div className={styles.metaItem}>
+            👁️ 2.3k Views
+          </div>
+        </div>
+
+        {/* Author CTA */}
+        <div className="d-flex align-items-center gap-3">
+          <img
+            src="images/authors/editorial-team.jpg"
+            alt="Author"
+            className={`${styles.authorImage}`}
+          />
+          <div>
+            <div className="fw-semibold">Editorial Team</div>
+            <div className="text-muted small">Senior Content Writers</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Side Image with Tilt Effect */}
+      <div className="col-lg-6 z-2">
+        <div className={`shadow rounded-4 overflow-hidden ${styles.imageWrap}`}>
+          <img
+            src={featuredPost.image}
+            alt={featuredPost.title}
+            className="img-fluid w-100"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+)}
+
         {/* Blog Cards */}
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          {filteredPosts.length > 0 ? (
-            filteredPosts.map((post) => (
+          {otherPosts.length > 0 ? (
+            otherPosts.map((post) => (
               <div className="col" key={post.id}>
-                <div className="card h-100 blog-card border-0 shadow-sm">
-                  <img
-                    src={post.image}
-                    className="card-img-top"
-                    alt={post.title}
-                  />
+                <div className={`card h-100 ${styles.blogCard}`}>
+                  <img src={post.image} className="card-img-top" alt={post.title} />
                   <div className="card-body">
-                    <h3 className="card-title text-white">{post.title}</h3>
-                    <p className="card-text text-primary small">
+                    <h5 className="card-title">{post.title}</h5>
+                    <p className={`card-text text-primary small mb-1`}>
                       {post.date} · {post.category}
                     </p>
-                    <p className="card-text text-white">{post.excerpt}</p>
-                  </div>
-                  <div className="pb-3 px-3">
-                    
+                    <p className="card-text">{post.excerpt}</p>
                   </div>
                 </div>
               </div>
@@ -482,8 +536,8 @@ const filteredPosts = blogPosts.filter((post) => post.category === selectedTopic
           )}
         </div>
 
-        {/* CTA & Newsletter (unchanged) */}
-        <div className="cta-section mt-5">
+        {/* CTA Section */}
+        <div className={`mt-5 ${styles.ctaSection}`}>
           <div className="row align-items-center">
             <div className="col-md-9">
               <h3>Looking for Expert Guidance?</h3>
@@ -493,20 +547,21 @@ const filteredPosts = blogPosts.filter((post) => post.category === selectedTopic
               </p>
             </div>
             <div className="col-md-3 text-md-end mt-4 mt-md-0">
-              <a href="#" className="btn btn-light px-4 py-2">
+              <a href="#" className="btn btn-light px-4 py-2 rounded-pill">
                 Schedule a Free Consultation
               </a>
             </div>
           </div>
         </div>
 
-        <div className="newsletter-section mt-5 text-center">
-          <h3 className="fw-bold">Stay Updated with the Latest Tech Insights</h3>
-          <p className="text-muted">
+        {/* Newsletter Section */}
+        <div className={`mt-5 text-center ${styles.newsletterSection}`}>
+          <h3>Stay Updated with the Latest Tech Insights</h3>
+          <p>
             Subscribe to our newsletter for monthly updates on enterprise
             technology, AI innovations, and cloud strategies.
           </p>
-          <form className="d-flex justify-content-center gap-2 mt-3">
+          <form className="d-flex justify-content-center gap-2 mt-3 flex-wrap">
             <input
               type="email"
               className="form-control w-50"
