@@ -21,11 +21,6 @@ function Footer({ socialLinks = defaultSocialLinks }) {
     {
       icon: "bi-geo-alt-fill",
       label: "Address",
-      text: "Cybomb Technologies LLP, Hygee Works - PS Industrials, No.53, Jawaharlal Nehru Road, Guindy Chennai, Tamil Nadu, India",
-    },
-    {
-      icon: "bi-geo-alt-fill",
-      label: "Branch Address",
       text: "Cybomb Technologies LLP, Hygee Works - Prime Plaza No.54/1, 1st street, Sripuram colony,Viralur, Chakrapani Colony, St.Thomas Mount Chennai - 600016, Tamil Nadu, India",
     },
     {
@@ -187,7 +182,7 @@ function Footer({ socialLinks = defaultSocialLinks }) {
         <div className={styles.footerBottom}>
           <div className={styles.legalLinks}>
             <Link to="/privacy-policy">Privacy Policy</Link>
-            <Link to="/terms-of-service">Terms of Service</Link>
+            <Link to="/terms">Terms of Service</Link>
             <Link to="/refund-policy">Refund Policy</Link>
             <Link to="/cookie-policy">Cookie Policy</Link>
           </div>
