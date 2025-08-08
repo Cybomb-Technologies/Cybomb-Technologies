@@ -1,4 +1,4 @@
-import Contactbanner from "../component/contact/contact-banner";
+
 import Contactcontent from "../component/contact/contact-content";
 import Metatags from "../SEO/meta-tags";
 
@@ -15,7 +15,7 @@ function Contact() {
   return (
     <>
     <Metatags  metaProps={metaPropsData}/>
-      <Contactbanner />
+      
       <Contactcontent />
     </>
   );

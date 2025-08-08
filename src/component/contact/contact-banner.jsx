@@ -1,4 +1,4 @@
-import "./contact.css"
+import "./contact.module.css"
 import { Link } from "react-router-dom";
 function Contactbanner() {
   return (

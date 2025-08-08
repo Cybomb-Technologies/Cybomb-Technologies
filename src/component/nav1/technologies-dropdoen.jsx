@@ -125,7 +125,7 @@ function Technologiesdropdown1({
                 <div className={styles.subColumnWrapper}>
                   <div className={styles.subColumn}> 
                     <Link to="/services/wordpress" className={styles.dropdownItem1} onClick={onLinkClick}> <FaWordpress className={styles.icon} /> WordPress </Link>
-                    {/* <Link to="/services/drupal" className={styles.dropdownItem1} onClick={onLinkClick}> <FaDrupal className={styles.icon} /> Drupal </Link> */}
+                    <Link to="/services/drupal" className={styles.dropdownItem1} onClick={onLinkClick}> <FaDrupal className={styles.icon} /> Drupal </Link>
                     <Link to="/services/craft" className={styles.dropdownItem1} onClick={onLinkClick}> <FaTools className={styles.icon} /> Craft </Link>
                     <Link to="/services/acquia" className={styles.dropdownItem1} onClick={onLinkClick}> <FaTools className={styles.icon} /> Acquia </Link>
                     <Link to="/services/joomla" className={styles.dropdownItem1} onClick={onLinkClick}> <FaTools className={styles.icon} /> Joomla </Link>
