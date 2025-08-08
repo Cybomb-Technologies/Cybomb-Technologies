@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import styles from "./nav1.module.css";
-// Clouddropdown1
+
+// Dropdowns
 import Servicedropdown1 from "./service-dropdown1";
 import Clouddropdown1 from "./cloud-dropdown";
 import Datadropdown1 from "./data-ai";
@@ -14,13 +15,39 @@ function Nav1() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const isMobile = windowWidth < 1400;
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const isMobileOrTablet = windowWidth < 1200;
+  const isMobile = windowWidth < 768;
+
+
+  const handleDropdownToggle = (dropdownName) => {
+    setActiveDropdown((prev) => (prev === dropdownName ? null : dropdownName));
+  };
+
+  const handleNavItemClick = () => {
+    setIsMobileMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setActiveDropdown(null);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     const navbar = document.querySelector(`.${styles.navbar}`);
@@ -54,22 +81,61 @@ function Nav1() {
               <img src="/images/logo-11.png" alt="Logo" />
             </Link>
 
-            <button
-              className={styles.menuToggle}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              <span className={styles.menuIcon}></span>
-            </button>
+            {isMobileOrTablet && (
+              <button
+                className={styles.menuToggle}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                <span className={styles.menuIcon}></span>
+              </button>
+            )}
+          </div>
 
-            <div className={`${styles.menu} ${isMobileMenuOpen ? styles.open : ""}`}>
+          {/* Desktop Menu */}
+          {!isMobileOrTablet && (
+            <div className={styles.menu}>
               <ul className={styles.navItems}>
-                <Servicedropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)} />
-                <Clouddropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)} />
-                <Datadropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)}/>
-                <Securitydropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)} />
-                <Industriesdropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)} />
+                <Servicedropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "services"}
+                  onMouseEnter={() => setActiveDropdown("services")}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  onLinkClick={handleNavItemClick}
+                />
 
-                <li className={styles.navItem}>
+                <Clouddropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "cloud"}
+                  onMouseEnter={() => setActiveDropdown("cloud")}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  onLinkClick={handleNavItemClick}
+                />
+{/* 
+                <Datadropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "data"}
+                  onMouseEnter={() => setActiveDropdown("data")}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  onLinkClick={handleNavItemClick}
+                /> */}
+{/* 
+                <Securitydropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "security"}
+                  onMouseEnter={() => setActiveDropdown("security")}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  onLinkClick={handleNavItemClick}
+                /> */}
+
+                <Industriesdropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "industries"}
+                  onMouseEnter={() => setActiveDropdown("industries")}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  onLinkClick={handleNavItemClick}
+                />
+
+                {/* <li className={styles.navItem}>
                   <Link
                     to="#"
                     className={styles.navLink}
@@ -77,16 +143,113 @@ function Nav1() {
                   >
                     On-Demand Developer
                   </Link>
-                </li>
+                </li> */}
 
-                <Technologiesdropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)}/>
-                <Successstoriesdropdown1 isMobile={isMobile} onLinkClick={() => setIsMobileMenuOpen(false)} />
+                <Technologiesdropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "technologies"}
+                  onMouseEnter={() => setActiveDropdown("technologies")}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  onLinkClick={handleNavItemClick}
+                />
+
+                <Successstoriesdropdown1
+                  isMobile={isMobile}
+                  isOpen={activeDropdown === "success"}
+                  onMouseEnter={() => setActiveDropdown("success")}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  onLinkClick={handleNavItemClick}
+                />
               </ul>
             </div>
-          </div>
+          )}
         </div>
+
+        {/* ✅ Offcanvas Overlay */}
+        {isMobileOrTablet && isMobileMenuOpen && (
+          <div
+            className={styles.offcanvasOverlay}
+            onClick={() => setIsMobileMenuOpen(false)}
+          ></div>
+        )}
+
+        {/* ✅ Offcanvas Menu */}
+        {isMobileOrTablet && (
+          <div
+            className={`${styles.offcanvasMenu} ${
+              isMobileMenuOpen ? styles.show : ""
+            }`}
+          >
+            <div className={styles.offcanvasHeader}>
+              <Link to="/" className={styles.logo} onClick={handleNavItemClick}>
+                <img src="/images/logo-11.png" alt="Logo" />
+              </Link>
+              <button
+                className={styles.offcanvasClose}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                &times;
+              </button>
+            </div>
+
+            <ul className={styles.navItems}>
+              <Servicedropdown1
+                isMobile
+                isOpen={activeDropdown === "services"}
+                onToggle={() => handleDropdownToggle("services")}
+                onLinkClick={handleNavItemClick}
+              />
+              <Clouddropdown1
+                isMobile
+                isOpen={activeDropdown === "cloud"}
+                onToggle={() => handleDropdownToggle("cloud")}
+                onLinkClick={handleNavItemClick}
+              />
+              <Datadropdown1
+                isMobile
+                isOpen={activeDropdown === "data"}
+                onToggle={() => handleDropdownToggle("data")}
+                onLinkClick={handleNavItemClick}
+              />
+              <Securitydropdown1
+                isMobile
+                isOpen={activeDropdown === "security"}
+                onToggle={() => handleDropdownToggle("security")}
+                onLinkClick={handleNavItemClick}
+              />
+              <Industriesdropdown1
+                isMobile
+                isOpen={activeDropdown === "industries"}
+                onToggle={() => handleDropdownToggle("industries")}
+                onLinkClick={handleNavItemClick}
+              />
+              <li className={styles.navItem}>
+                <Link
+                  to="#"
+                  className={styles.navLink}
+                  onClick={handleNavItemClick}
+                >
+                  On-Demand Developer
+                </Link>
+              </li>
+              <Technologiesdropdown1
+                isMobile
+                isOpen={activeDropdown === "technologies"}
+                onToggle={() => handleDropdownToggle("technologies")}
+                onLinkClick={handleNavItemClick}
+              />
+              <Successstoriesdropdown1
+                isMobile
+                isOpen={activeDropdown === "success"}
+                onToggle={() => handleDropdownToggle("success")}
+                onLinkClick={handleNavItemClick}
+              />
+            </ul>
+          </div>
+        )}
       </nav>
 
+      {/* Floating Call Button */}
       <div className={styles.floatingBtn}>
         <a href="tel:+919715092104" target="_blank" rel="noreferrer">
           <div className={styles.contactIcon}>

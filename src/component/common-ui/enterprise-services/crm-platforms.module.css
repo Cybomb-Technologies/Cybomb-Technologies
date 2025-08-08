@@ -22,6 +22,15 @@
   overflow: hidden;
   position: relative;
 }
+/* 
+.marquee:hover .track {
+  animation-play-state: paused;
+} */
+
+.track {
+  animation: scroll 60s linear infinite; /* slower than 30s */
+}
+
 
 .track {
   display: flex;

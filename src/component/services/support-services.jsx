@@ -7,49 +7,49 @@ const services = [
     id: 1,
     title: "Hosting Services",
     description: "Reliable and secure hosting solutions with 99.9% uptime guarantee and 24/7 monitoring.",
-    image: "images/support-1.jpg",
+    image: "images/services/support/support-1.png",
     link: "/services/hosting-service"
   },
   {
     id: 2,
     title: "Server Support",
     description: "Comprehensive server management, maintenance, and troubleshooting services.",
-    image: "images/support-2.jpg",
+    image: "images/services/support/support-2.png",
     link: "/services/support-service"
   },
   {
     id: 3,
     title: "Development Support",
     description: "Ongoing development support, maintenance, and feature enhancements for your applications.",
-    image: "images/support-3.jpg",
+    image: "images/services/support/support-3.png",
     link: "/services/development-support"
   },
   {
     id: 4,
     title: "Staff Augmentation",
     description: "Flexible staffing solutions to augment your team with skilled IT professionals.",
-    image: "images/support-4.jpg",
+    image: "images/services/support/support-4.png",
     link: "/services/staff-agumentation"
   },
   {
     id: 5,
     title: "Digital Fulfilment",
     description: "End-to-end digital solutions including content management and digital asset delivery.",
-    image: "images/support-5.jpg",
+    image: "images/services/support/support-5.png",
     link: "/services/digital-fulfilment-support"
   },
   {
     id: 6,
     title: "IT Support Services",
     description: "Comprehensive IT support including helpdesk, troubleshooting, and system administration.",
-    image: "images/support-6.jpg",
+    image: "images/services/support/support-6.png",
     link: "/services/it-support"
   },
   {
     id: 7,
     title: "DevOps Services",
     description: "Continuous integration, deployment, and infrastructure automation solutions.",
-    image: "images/support-7.jpg",
+    image: "images/services/support/support-7.png",
     link: "/services/devops-support"
   }
 ];

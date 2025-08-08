@@ -1,56 +1,90 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import styles from "./dropdown.module.css";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import {
+  FaChevronDown,
+  FaChevronUp,
+  FaLock,
+  FaMobileAlt,
+  FaNetworkWired,
+  FaCloud,
+  FaShieldAlt,
+} from "react-icons/fa";
 
-function Securitydropdown1({ onLinkClick, isMobile }) {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const handleToggleClick = (e) => {
-    if (isMobile) {
-      e.preventDefault();
-      setIsDropdownOpen((prev) => !prev);
-    }
-  };
-
+function Securitydropdown1({
+  onLinkClick,
+  isMobile,
+  isOpen,
+  onToggle,
+  onMouseEnter,
+  onMouseLeave,
+}) {
   return (
-    <li className={styles.dropdownWrapper}>
+    <li
+      className={styles.dropdownWrapper}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       <Link
         to="#"
         className={styles.dropdownToggle}
-        onClick={handleToggleClick}
-        aria-expanded={isDropdownOpen ? "true" : "false"}
+        onClick={(e) => {
+          if (isMobile) {
+            e.preventDefault();
+            onToggle();
+          }
+        }}
+        aria-expanded={isOpen ? "true" : "false"}
       >
         Security
         <span className={styles.arrow}>
-          {isDropdownOpen ? <FaChevronUp size={10} /> : <FaChevronDown size={10} />}
+          {isOpen ? <FaChevronUp size={10} /> : <FaChevronDown size={10} />}
         </span>
       </Link>
 
       <ul
-        className={`${styles.dropdownMenu} ${isMobile && isDropdownOpen ? styles.show : ""}`}
-        style={{
-          display: isMobile ? (isDropdownOpen ? "block" : "none") : undefined,
-          width: !isMobile && window.innerWidth >= 1400 ? "320px" : "100%",
-        }}
+        className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
+        style={
+          !isMobile
+            ? {
+                display: isOpen ? "block" : "none",
+                position: "absolute",
+                top: "100%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "max-content",
+                maxWidth: "calc(100vw - 40px)",
+              }
+            : {
+                display: isOpen ? "block" : "none",
+                width: "100%",
+              }
+        }
       >
         <li>
-          <div className={styles.dropdownColumn}>
-            <Link className={styles.dropdownItem} onClick={onLinkClick}>
-              AWS Web Application Security
-            </Link>
-            <Link className={styles.dropdownItem} onClick={onLinkClick}>
-              Mobile Application Services
-            </Link>
-            <Link className={styles.dropdownItem} onClick={onLinkClick}>
-              API Security
-            </Link>
-            <Link className={styles.dropdownItem} onClick={onLinkClick}>
-              Cloud Security Services
-            </Link>
-            <Link className={styles.dropdownItem} onClick={onLinkClick}>
-              Network Penetration Testing
-            </Link>
+          <div className="container">
+            <div className={styles.dropdownGrid}>
+                <div className={styles.dropdownColumn}>
+                  <div className={styles.dropdownHeader}>
+                    <FaLock className={styles.icon} /> Security Services
+                  </div>
+
+                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaShieldAlt className={styles.icon} /> AWS Web Application Security
+                  </Link>
+                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaMobileAlt className={styles.icon} /> Mobile Application Services
+                  </Link>
+                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaLock className={styles.icon} /> API Security
+                  </Link>
+                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaCloud className={styles.icon} /> Cloud Security Services
+                  </Link>
+                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaNetworkWired className={styles.icon} /> Network Penetration Testing
+                  </Link>
+                </div>
+              </div>
           </div>
         </li>
       </ul>

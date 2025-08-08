@@ -8,7 +8,7 @@ ul {
 /* === BASE STYLES === */
 .footer {
   padding: 60px 0 0;
-  background-color: #003459;
+  background-color: #00171f;
   color: white;
 }
 
@@ -20,8 +20,8 @@ ul {
 }
 
 .logo {
-  width: 130px;
-  height: 60px;
+  width: 150px;
+  height: 50px;
 }
 
 .footerText {
@@ -43,16 +43,29 @@ ul {
   justify-content: flex-start;
 }
 
-.socials i {
-  font-size: 1.25rem;
-  color: white;
-  vertical-align: middle;
-  line-height: 1;
-  display: inline-block;
-}
-
 .socials i.fa-x-twitter {
   margin-top: -8px;
+}
+
+.socials i {
+  font-size: 1.5rem;
+  color: white;
+  background-color: #3f3f3f;
+  padding: 1rem;
+  border-radius: 16%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  transition: background-color 0.3s ease;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.socials i:hover {
+  background-color: #3fc5ff;
+  color: #00171f;
 }
 
 
