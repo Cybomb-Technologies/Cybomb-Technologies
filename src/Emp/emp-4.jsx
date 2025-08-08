@@ -17,6 +17,7 @@ import FlutterApp from "../component/pages-services/technologies/mobile-apps/flu
 import SwiftApp from "../component/pages-services/technologies/mobile-apps/swift-app-dev/swift";
 import KotlinApp from "../component/pages-services/technologies/mobile-apps/kotlin-app-dev/kotlin";
 import XamarinApp from "../component/pages-services/technologies/mobile-apps/xamarin-aap-dev/xamarin";
+import StratergyServices from "../component/pages-dataui/data-page/stratergy-consulting/stratergy";
 
 const emp4Routes = (
   <>
@@ -38,7 +39,7 @@ const emp4Routes = (
     <Route path="/services/swift-app-development" element={<SwiftApp/>}/>
     <Route path="/services/kotlin-app-development" element={<KotlinApp/>}/>
     <Route path="/services/xamarin-app-development" element={<XamarinApp/>}/>
-    
+    <Route path="/services/stratergy-consulting" element={<StratergyServices/>}/>
   
   </>
 );

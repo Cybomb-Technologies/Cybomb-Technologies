@@ -8,6 +8,7 @@ import AIMLServices from "../component/pages-services/enterprise-services/ai-ml/
 import Salesforce from "../component/pages-services/enterprise-services/salesforce/salesforce";
 import HubSpot from "../component/pages-services/enterprise-services/hubspot/hubspot";
 import Zoho from "../component/pages-services/enterprise-services/zoho/zoho";
+import HireDev from "../component/pages-services/hire-dev/hire-dev";
 
 const emp3Routes = (
   <>
@@ -24,6 +25,7 @@ const emp3Routes = (
     <Route path="/services/salesforce-services" element={<Salesforce/>} />
     <Route path="/services/hubspot-services" element={<HubSpot/>} />
     <Route path="/services/zoho-services" element={<Zoho/>} />
+    <Route path="/hire-developers" element={<HireDev/>} />
    
   </>
 );

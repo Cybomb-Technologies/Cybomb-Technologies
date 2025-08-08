@@ -1,0 +1,93 @@
+.section {
+  background-color: #ffffff; /* White background for entire section */
+  padding: 4rem 1rem;
+}
+
+/* Inner colored block */
+.coloredBox {
+  background-color: #00171f;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Left content */
+.leftContent {
+  flex: 1 1 65%;
+  color: #ffffff;
+}
+
+/* Heading */
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+/* Button */
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  background-color: #007ea7;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #005f80;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Right image */
+.rightImage {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.rightImage img {
+  max-width: 100%;
+  height: 250px;
+  width: 250px;
+  border-radius: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .coloredBox {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .leftContent,
+  .rightImage {
+    flex: 1 1 100%;
+  }
+
+  .ctaButton {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+}

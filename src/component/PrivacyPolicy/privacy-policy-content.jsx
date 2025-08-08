@@ -165,15 +165,15 @@ function Privacypolicycontent() {
               </li>
               <li>
                 🌐{" "}
-                <a href="https://cybotechnologies.com/">
-                  Website: www.cybotechnologies.com
+                <a href="https://cybomb.com/">
+                  Website: www.cybomb.com
                 </a>
               </li>
             </ul>
             <p>
               By using{" "}
-              <a href="https://cybotechnologies.com/">
-                www.cybotechnologies.com
+              <a href="https://cybomb.com/">
+                www.cybomb.com
               </a>
               , you agree to this Privacy Policy. If you do not agree, please
               refrain from using our website and services.
