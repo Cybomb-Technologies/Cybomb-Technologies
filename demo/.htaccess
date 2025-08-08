@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+RewriteBase /demo/
+
+# If the request is not a real file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Then serve the index.html from the matching folder
+RewriteRule ^([^/]+)/?(.*)$ /demo/$1/index.html [L]

@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cybomb Tech - Your All-in-One Urban Mobility App</title>
+    <link rel="icon" type="image/png" href="images/logo1.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Remix Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+        background-color: #0f172a;
+        color: white;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+      }
+
+      /* Premium logo style */
+      .logo-font {
+        font-family: "Cinzel", serif;
+        font-weight: 700;
+        color: #f8f9fa;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        position: relative;
+      }
+
+      .logo-font::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .navbar-brand:hover .logo-font::after {
+        transform: scaleX(1);
+      }
+      /* Navigation link hover effects */
+      .nav-link-custom {
+        position: relative;
+        color: #cbd5e1 !important; /* text-gray-300 equivalent */
+        font-weight: 500;
+        padding: 0.5rem 0;
+        margin: 0 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link-custom span {
+        position: relative;
+        display: inline-block;
+      }
+
+      .nav-link-custom::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+      }
+
+      .nav-link-custom:hover {
+        color: #ffffff !important;
+      }
+
+      .nav-link-custom:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      /* Active state */
+      .nav-link-custom.active {
+        color: #ffffff !important;
+      }
+
+      .nav-link-custom.active::after {
+        transform: scaleX(1);
+      }
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      }
+
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .hero-bg {
+        background: linear-gradient(
+            to right,
+            rgba(30, 41, 59, 0.9),
+            rgba(15, 23, 42, 0.5)
+          ),
+          url("images/assets.jpg") center/cover no-repeat;
+        min-height: 100vh;
+        background-color: #1e293b;
+      }
+
+      .feature-card {
+        background: rgba(30, 41, 59, 0.95);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        transition: all 0.3s ease;
+        height: 100%;
+        padding: 2rem;
+        border-radius: 1rem;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(59, 130, 246, 0.5);
+        box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+      }
+
+      .glow-text {
+        text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+      }
+
+      .btn-primary {
+        background-color: #3b82f6;
+        border-color: #3b82f6;
+      }
+
+      .btn-primary:hover {
+        background-color: #2563eb;
+        border-color: #2563eb;
+      }
+
+      .bg-primary {
+        background-color: #3b82f6 !important;
+      }
+
+      .text-primary {
+        color: #3b82f6 !important;
+      }
+
+      .bg-slate-800 {
+        background-color: #1e293b;
+      }
+
+      .bg-slate-900 {
+        background-color: #0f172a;
+      }
+
+      .text-gray-300 {
+        color: #cbd5e1;
+      }
+
+      .text-gray-400 {
+        color: #94a3b8;
+      }
+
+      .border-slate-800 {
+        border-color: #1e293b;
+      }
+
+      .rounded-button {
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg glass-effect py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#top">
+          <div
+            class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-2"
+            style="width: 40px; height: 40px"
+          >
+            <i class="ri-taxi-line text-white fs-5"></i>
+          </div>
+          <h1 class="logo-font m-0">Cybomb Tech</h1>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="ri-menu-line text-white fs-4"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#features">
+                <span>Services</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#tech">
+                <span>Features</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#safety">
+                <span>Safety</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#pricing">
+                <span>Pricing</span>
+              </a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <button class="btn btn-primary rounded-button">
+                Download App
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-bg d-flex align-items-center position-relative"
+      id="top"
+    >
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-to-r"
+      ></div>
+      <div class="container position-relative z-index-1 py-5">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1 class="display-3 fw-bold mb-4 glow-text">
+              From People to Parcels <br />
+              <span class="text-primary">We Move It All</span>
+            </h1>
+            <p class="fs-5 text-gray-300 mb-5">
+              One app for taxi rides, bike taxis, auto rickshaws, vehicle
+              rentals, and parcel delivery. Experience the future of urban
+              mobility with AI-powered routing and eco-friendly options.
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-3">
+              <button
+                class="btn btn-primary btn-lg rounded-button d-flex align-items-center justify-content-center gap-2"
+              >
+                <i class="ri-smartphone-line"></i>
+                <span>Download for iOS</span>
+              </button>
+              <button
+                class="btn btn-outline-light btn-lg rounded-button d-flex align-items-center justify-content-center gap-2"
+              >
+                <i class="ri-google-play-line"></i>
+                <span>Download for Android</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-slate-800">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="display-4 fw-bold mb-3">
+            All Your Mobility Needs in One App
+          </h2>
+          <p class="fs-5 text-gray-400 mx-auto" style="max-width: 800px">
+            From quick rides to parcel delivery, RideFlex offers comprehensive
+            urban mobility solutions powered by smart technology.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Taxi Booking -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card rounded-3">
+              <div
+                class="bg-primary rounded-3 d-flex align-items-center justify-content-center mb-4"
+                style="width: 64px; height: 64px"
+              >
+                <i class="ri-taxi-line text-white fs-4"></i>
+              </div>
+              <h3 class="h2 fw-bold mb-3">Cab Booking</h3>
+              <p class="text-gray-400 mb-4">
+                Economy to luxury rides with driver bidding options. Choose your
+                preferred driver gender and vehicle type for maximum comfort.
+              </p>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="ri-check-line text-primary"></i>
+                  <span>Dynamic pricing with bidding</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="ri-check-line text-primary"></i>
+                  <span>Gender preference options</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-primary"></i>
+                  <span>Multiple vehicle categories</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bike Taxi -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card rounded-3">
+              <div
+                class="bg-success rounded-3 d-flex align-items-center justify-content-center mb-4"
+                style="width: 64px; height: 64px"
+              >
+                <i class="ri-motorbike-line text-white fs-4"></i>
+              </div>
+              <h3 class="h2 fw-bold mb-3">Bike Taxi</h3>
+              <p class="text-gray-400 mb-4">
+                Beat the traffic with quick and affordable bike rides. Perfect
+                for solo travelers and daily commuters with safety helmets
+                included.
+              </p>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="ri-check-line text-success"></i>
+                  <span>Traffic-cutting routes</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="ri-check-line text-success"></i>
+                  <span>Safety helmets provided</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-success"></i>
+                  <span>Super low wait times</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Auto Rickshaw -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card rounded-3">
+              <div
+                class="bg-warning rounded-3 d-flex align-items-center justify-content-center mb-4"
+                style="width: 64px; height: 64px"
+              >
+                <i class="ri-truck-line text-white fs-4"></i>
+              </div>
+              <h3 class="h2 fw-bold mb-3">Auto Rickshaw</h3>
+              <p class="text-gray-400 mb-4">
+                Traditional auto rides with modern booking. Share autos during
+                peak hours and enjoy fixed-price transparency.
+              </p>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="ri-check-line text-warning"></i>
+                  <span>Metered & fixed pricing</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="ri-check-line text-warning"></i>
+                  <span>Share auto options</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-warning"></i>
+                  <span>Digital payments</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Parcel Delivery -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card rounded-3">
+              <div
+                class="bg-purple rounded-3 d-flex align-items-center justify-content-center mb-4"
+                style="width: 64px; height: 64px"
+              >
+                <i class="ri-package-line text-white fs-4"></i>
+              </div>
+              <h3 class="h2 fw-bold mb-3">Parcel Delivery</h3>
+              <p class="text-gray-400 mb-4">
+                Instant delivery for small items via bikes or larger parcels
+                through autos and mini trucks with live tracking.
+              </p>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="ri-check-line text-purple"></i>
+                  <span>Live tracking with OTP</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="ri-check-line text-purple"></i>
+                  <span>Multiple vehicle sizes</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-purple"></i>
+                  <span>Door-to-door pickup</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Vehicle Rentals -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card rounded-3">
+              <div
+                class="bg-danger rounded-3 d-flex align-items-center justify-content-center mb-4"
+                style="width: 64px; height: 64px"
+              >
+                <i class="ri-car-line text-white fs-4"></i>
+              </div>
+              <h3 class="h2 fw-bold mb-3">Vehicle Rentals</h3>
+              <p class="text-gray-400 mb-4">
+                Hourly or daily rentals for cars, bikes, and scooters. Choose
+                self-drive or chauffeur options with doorstep delivery.
+              </p>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="ri-check-line text-danger"></i>
+                  <span>Self-drive & chauffeur</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="ri-check-line text-danger"></i>
+                  <span>Doorstep delivery</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-danger"></i>
+                  <span>Flexible duration</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- CommutePass -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card rounded-3">
+              <div
+                class="bg-indigo rounded-3 d-flex align-items-center justify-content-center mb-4"
+                style="width: 64px; height: 64px"
+              >
+                <i class="ri-calendar-line text-white fs-4"></i>
+              </div>
+              <h3 class="h2 fw-bold mb-3">CommutePass</h3>
+              <p class="text-gray-400 mb-4">
+                Affordable monthly subscriptions for daily office commutes with
+                fixed routes, drivers, and discounted pricing.
+              </p>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="ri-check-line text-indigo"></i>
+                  <span>Monthly subscriptions</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="ri-check-line text-indigo"></i>
+                  <span>Fixed routes & drivers</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-indigo"></i>
+                  <span>Discounted pricing</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Smart Technology Section -->
+    <section id="tech" class="py-5 bg-slate-900">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="display-4 fw-bold mb-3">Powered by Smart Technology</h2>
+          <p class="fs-5 text-gray-400 mx-auto" style="max-width: 800px">
+            AI-driven features that make your rides smarter, safer, and more
+            efficient.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 text-center">
+            <div
+              class="bg-gradient-blue-purple rounded-3 d-flex align-items-center justify-content-center mx-auto mb-4"
+              style="width: 80px; height: 80px"
+            >
+              <i class="ri-brain-line text-white fs-3"></i>
+            </div>
+            <h3 class="h4 fw-bold mb-3">AI Trip Planner</h3>
+            <p class="text-gray-400">
+              Smart multi-stop route optimization for efficient journeys.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 text-center">
+            <div
+              class="bg-gradient-green-teal rounded-3 d-flex align-items-center justify-content-center mx-auto mb-4"
+              style="width: 80px; height: 80px"
+            >
+              <i class="ri-leaf-line text-white fs-3"></i>
+            </div>
+            <h3 class="h4 fw-bold mb-3">Eco Mode</h3>
+            <p class="text-gray-400">
+              Prioritize electric vehicles and eco-friendly transportation
+              options.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 text-center">
+            <div
+              class="bg-gradient-orange-red rounded-3 d-flex align-items-center justify-content-center mx-auto mb-4"
+              style="width: 80px; height: 80px"
+            >
+              <i class="ri-time-line text-white fs-3"></i>
+            </div>
+            <h3 class="h4 fw-bold mb-3">Predictive ETA</h3>
+            <p class="text-gray-400">
+              Accurate arrival times based on real-time traffic analysis.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 text-center">
+            <div
+              class="bg-gradient-pink-purple rounded-3 d-flex align-items-center justify-content-center mx-auto mb-4"
+              style="width: 80px; height: 80px"
+            >
+              <i class="ri-footprint-line text-white fs-3"></i>
+            </div>
+            <h3 class="h4 fw-bold mb-3">Carbon Tracker</h3>
+            <p class="text-gray-400">
+              Monitor and gamify your environmental impact with every ride.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Family Safety Section -->
+    <section id="safety" class="py-5 bg-slate-800">
+      <div class="container py-5">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h2 class="display-4 fw-bold mb-4">Family Safety First</h2>
+            <p class="fs-5 text-gray-400 mb-5">
+              Advanced safety features and family controls to ensure peace of
+              mind for every journey.
+            </p>
+
+            <div class="d-flex flex-column gap-4">
+              <div class="d-flex gap-3">
+                <div
+                  class="bg-primary rounded-2 d-flex align-items-center justify-content-center flex-shrink-0"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-shield-check-line text-white fs-5"></i>
+                </div>
+                <div>
+                  <h3 class="h4 fw-bold mb-2">Real-time Tracking</h3>
+                  <p class="text-gray-400">
+                    Live location sharing with family members and emergency
+                    contacts.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3">
+                <div
+                  class="bg-success rounded-2 d-flex align-items-center justify-content-center flex-shrink-0"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-user-heart-line text-white fs-5"></i>
+                </div>
+                <div>
+                  <h3 class="h4 fw-bold mb-2">Family Dashboard</h3>
+                  <p class="text-gray-400">
+                    Track kids' rides, set geofences, and approve ride requests.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3">
+                <div
+                  class="bg-danger rounded-2 d-flex align-items-center justify-content-center flex-shrink-0"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-alarm-warning-line text-white fs-5"></i>
+                </div>
+                <div>
+                  <h3 class="h4 fw-bold mb-2">Emergency SOS</h3>
+                  <p class="text-gray-400">
+                    One-tap emergency alerts with location sharing to
+                    authorities.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3">
+                <div
+                  class="bg-purple rounded-2 d-flex align-items-center justify-content-center flex-shrink-0"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-verified-badge-line text-white fs-5"></i>
+                </div>
+                <div>
+                  <h3 class="h4 fw-bold mb-2">Verified Drivers</h3>
+                  <p class="text-gray-400">
+                    Background-checked drivers with facial recognition and
+                    ratings.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <img src="images/safety.jpg" class="img-fluid rounded-3" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-slate-900">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="display-4 fw-bold mb-3">Transparent Pricing</h2>
+          <p class="fs-5 text-gray-400 mx-auto" style="max-width: 800px">
+            No hidden fees, no surprises. Choose the plan that works best for
+            your mobility needs.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Pay Per Ride -->
+          <div class="col-md-4">
+            <div class="feature-card rounded-3 text-center h-100">
+              <div
+                class="bg-blue rounded-3 d-flex align-items-center justify-content-center mx-auto mb-4"
+                style="width: 64px; height: 64px"
+              >
+                <i class="ri-money-dollar-circle-line text-white fs-4"></i>
+              </div>
+              <h3 class="h2 fw-bold mb-3">Pay Per Ride</h3>
+              <p class="text-gray-400 mb-4">
+                Perfect for occasional riders with transparent pricing.
+              </p>
+              <div class="d-flex flex-column gap-3 mb-5">
+                <div class="d-flex justify-content-between">
+                  <span class="text-gray-400">Bike Taxi</span>
+                  <span class="fw-semibold">$1-5</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span class="text-gray-400">Auto Rickshaw</span>
+                  <span class="fw-semibold">$2-8</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span class="text-gray-400">Cab Rides</span>
+                  <span class="fw-semibold">$3-20</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span class="text-gray-400">Parcel Delivery</span>
+                  <span class="fw-semibold">$2-10</span>
+                </div>
+              </div>
+              <button
+                class="btn btn-blue w-100 py-3 rounded-button fw-semibold"
+              >
+                Start Riding
+              </button>
+            </div>
+          </div>
+
+          <!-- CommutePass -->
+          <div class="col-md-4">
+            <div
+              class="feature-card rounded-3 text-center h-100 border-primary border-2 position-relative"
+            >
+              <div class="position-absolute top-0 start-50 translate-middle">
+                <span
+                  class="badge bg-primary text-white px-3 py-2 rounded-pill fw-semibold"
+                  >Most Popular</span
+                >
+              </div>
+              <div
+                class="bg-primary rounded-3 d-flex align-items-center justify-content-center mx-auto mb-4"
+                style="width: 64px; height: 64px"
+              >
+                <i class="ri-calendar-check-line text-white fs-4"></i>
+              </div>
+              <h3 class="h2 fw-bold mb-3">CommutePass</h3>
+              <p class="text-gray-400 mb-4">
+                Monthly subscription for daily commuters with fixed routes.
+              </p>
+              <div class="text-center mb-4">
+                <span class="display-4 fw-bold">$25</span>
+                <span class="text-gray-400">/month</span>
+              </div>
+              <div class="d-flex flex-column gap-2 mb-5 text-start">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-primary"></i>
+                  <span class="small">Unlimited daily commute rides</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-primary"></i>
+                  <span class="small">Fixed routes and drivers</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-primary"></i>
+                  <span class="small">50% off weekend rides</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-primary"></i>
+                  <span class="small">Priority booking</span>
+                </div>
+              </div>
+              <button
+                class="btn btn-primary w-100 py-3 rounded-button fw-semibold"
+              >
+                Subscribe Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Premium -->
+          <div class="col-md-4">
+            <div class="feature-card rounded-3 text-center h-100">
+              <div
+                class="bg-purple rounded-3 d-flex align-items-center justify-content-center mx-auto mb-4"
+                style="width: 64px; height: 64px"
+              >
+                <i class="ri-vip-crown-line text-white fs-4"></i>
+              </div>
+              <h3 class="h2 fw-bold mb-3">Premium</h3>
+              <p class="text-gray-400 mb-4">
+                All-inclusive plan with luxury rides and premium features.
+              </p>
+              <div class="text-center mb-4">
+                <span class="display-4 fw-bold">$99</span>
+                <span class="text-gray-400">/month</span>
+              </div>
+              <div class="d-flex flex-column gap-2 mb-5 text-start">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-purple"></i>
+                  <span class="small">Everything in CommutePass</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-purple"></i>
+                  <span class="small">Luxury vehicle access</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-purple"></i>
+                  <span class="small">Free parcel delivery</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <i class="ri-check-line text-purple"></i>
+                  <span class="small">24/7 priority support</span>
+                </div>
+              </div>
+              <button
+                class="btn btn-purple w-100 py-3 rounded-button fw-semibold"
+              >
+                Go Premium
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="py-5 bg-gradient-primary">
+      <div class="container py-5">
+        <div class="text-center mx-auto" style="max-width: 800px">
+          <h2 class="display-3 fw-bold mb-4">
+            Ready to Transform Your Commute?
+          </h2>
+          <p class="fs-5 mb-5 opacity-90">
+            Join millions of users who trust RideFlex for their daily mobility
+            needs. Download now and get your first ride free!
+          </p>
+          <div
+            class="d-flex flex-column flex-sm-row gap-3 justify-content-center"
+          >
+            <button
+              class="btn btn-light text-primary px-5 py-3 rounded-button fw-semibold d-flex align-items-center justify-content-center gap-2"
+            >
+              <i class="ri-apple-line fs-4"></i>
+              <div class="text-start">
+                <div class="small">Download on the</div>
+                <div class="fw-bold">App Store</div>
+              </div>
+            </button>
+            <button
+              class="btn btn-light text-primary px-5 py-3 rounded-button fw-semibold d-flex align-items-center justify-content-center gap-2"
+            >
+              <i class="ri-google-play-line fs-4"></i>
+              <div class="text-start">
+                <div class="small">Get it on</div>
+                <div class="fw-bold">Google Play</div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-slate-900">
+      <div class="container py-4">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="d-flex align-items-center gap-2 mb-4">
+              <div
+                class="bg-primary rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 40px; height: 40px"
+              >
+                <i class="ri-taxi-line text-white fs-5"></i>
+              </div>
+              <h3 class="logo-font m-0">Cybomb Tech</h3>
+            </div>
+            <p class="text-gray-400 mb-4">
+              Your all-in-one urban mobility solution. From people to parcels,
+              we move it all with smart technology and safety first.
+            </p>
+            <div class="d-flex gap-3">
+              <a
+                href="#"
+                class="bg-slate-800 rounded-2 d-flex align-items-center justify-content-center"
+                style="width: 40px; height: 40px"
+              >
+                <i class="ri-facebook-line text-gray-400"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-slate-800 rounded-2 d-flex align-items-center justify-content-center"
+                style="width: 40px; height: 40px"
+              >
+                <i class="ri-twitter-line text-gray-400"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-slate-800 rounded-2 d-flex align-items-center justify-content-center"
+                style="width: 40px; height: 40px"
+              >
+                <i class="ri-instagram-line text-gray-400"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-slate-800 rounded-2 d-flex align-items-center justify-content-center"
+                style="width: 40px; height: 40px"
+              >
+                <i class="ri-linkedin-line text-gray-400"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h4 class="h5 fw-semibold mb-4">Services</h4>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Cab Booking</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Bike Taxi</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Auto Rickshaw</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Parcel Delivery</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Vehicle Rentals</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >CommutePass</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h4 class="h5 fw-semibold mb-4">Company</h4>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Careers</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Press</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Investors</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h4 class="h5 fw-semibold mb-4">Support</h4>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Safety</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-top border-slate-800 mt-5 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center"
+        >
+          <p class="text-gray-400 small mb-3 mb-md-0">
+            © 2025 Cybomb. All rights reserved.
+          </p>
+          <div class="d-flex align-items-center gap-4">
+            <i class="ri-visa-line text-gray-400 fs-4"></i>
+            <i class="ri-mastercard-line text-gray-400 fs-4"></i>
+            <i class="ri-paypal-line text-gray-400 fs-4"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const nav = document.querySelector(".navbar");
+        if (window.scrollY > 100) {
+          nav.style.background = "rgba(30, 41, 59, 0.95)";
+          nav.style.backdropFilter = "blur(20px)";
+        } else {
+          nav.style.background = "rgba(255, 255, 255, 0.1)";
+          nav.style.backdropFilter = "blur(10px)";
+        }
+      });
+
+      // Add gradient classes
+      document.addEventListener("DOMContentLoaded", function () {
+        // These are utility classes we defined in the style tag
+        const style = document.createElement("style");
+        style.textContent = `
+                .bg-gradient-blue-purple { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); }
+                .bg-gradient-green-teal { background: linear-gradient(135deg, #10b981 0%, #0d9488 100%); }
+                .bg-gradient-orange-red { background: linear-gradient(135deg, #f97316 0%, #ef4444 100%); }
+                .bg-gradient-pink-purple { background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); }
+                .bg-gradient-primary { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); }
+                .bg-gradient-to-r { background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.5)); }
+                .bg-blue { background-color: #3b82f6; }
+                .btn-blue { background-color: #3b82f6; color: white; }
+                .btn-blue:hover { background-color: #2563eb; color: white; }
+                .bg-purple { background-color: #8b5cf6; }
+                .text-purple { color: #8b5cf6; }
+                .btn-purple { background-color: #8b5cf6; color: white; }
+                .btn-purple:hover { background-color: #7c3aed; color: white; }
+                .bg-indigo { background-color: #6366f1; }
+                .text-indigo { color: #6366f1; }
+                .z-index-1 { z-index: 1; }
+                .hover\:text-white:hover { color: white !important; }
+            `;
+        document.head.appendChild(style);
+      });
+    </script>
+  </body>
+</html>
