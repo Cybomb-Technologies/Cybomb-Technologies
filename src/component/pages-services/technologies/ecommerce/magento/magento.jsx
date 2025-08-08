@@ -1,12 +1,12 @@
-import WooCommerceContent from './woo-commerce-content';
+
 import AgileProcess from '../../../../common-ui/agile-process/agile-process';
-;
+import MagentoContent from './magento-content';
 
 
-function WooCommerce() {
+function Magento() {
   return (
     <>
-      <WooCommerceContent/>
+      <MagentoContent/>
       <AgileProcess/>
       
       
@@ -14,4 +14,4 @@ function WooCommerce() {
   );
 }
 
-export default WooCommerce;
+export default Magento;
