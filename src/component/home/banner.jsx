@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "./banner-custom.css";
 
 function HomeBanner() {
@@ -11,7 +11,7 @@ function HomeBanner() {
   ];
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const rotatingRef = useRef(null);
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
