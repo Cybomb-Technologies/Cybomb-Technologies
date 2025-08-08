@@ -62,13 +62,13 @@ function Successstoriesdropdown1({
                 <div className={styles.dropdownHeader}>
                   <FaBriefcase className={styles.icon} /> Our Work
                 </div>
-                <Link
+                {/* <Link
                   to="/case-studies"
                   className={styles.dropdownItem}
                   onClick={onLinkClick}
                 >
                   Case Studies
-                </Link>
+                </Link> */}
                 <Link
                   to="/portfolio"
                   className={styles.dropdownItem}
