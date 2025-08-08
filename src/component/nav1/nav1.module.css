@@ -8,7 +8,8 @@
 }
 
 .transparent {
-  background-color: rgba(120, 120, 120, 0.2);
+  background-color: rgb(20 20 20 / 50%);
+  /* background-color: rgba(120, 120, 120, 0.2); */
 }
 
 .scrolled {
@@ -22,12 +23,13 @@
   z-index: 1000;
 }
 
+/* Updated container layout */
 .container {
   width: 100%;
   padding: 0 1rem;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .navInner {
