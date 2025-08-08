@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react";
-import "./contact.css";
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/bootstrap.css';
+import styles from './contact.module.css';
 
 function Contactcontent() {
   const [formData, setFormData] = useState({
-    firstName: "",
+    name: "",
     email: "",
     phone: "",
-    source: "",
     message: "",
   });
 
+  const [subscribe, setSubscribe] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [showSuccess, setShowSuccess] = useState(false);
 
-  // Auto-clear alert after 5s
   useEffect(() => {
     if (submitStatus) {
       const timer = setTimeout(() => setSubmitStatus(null), 5000);
@@ -26,6 +28,10 @@ function Contactcontent() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handlePhoneChange = (value, country, e, formattedValue) => {
+    setFormData(prev => ({ ...prev, phone: value }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -35,7 +41,7 @@ function Contactcontent() {
       const res = await fetch("http://localhost:5000/api/send-mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({...formData, subscribe}),
       });
 
       const data = await res.json();
@@ -43,13 +49,14 @@ function Contactcontent() {
       if (!res.ok) throw new Error(data.message || "Failed to send message");
 
       setSubmitStatus({ success: true, message: data.message });
+      setShowSuccess(true);
       setFormData({
-        firstName: "",
+        name: "",
         email: "",
         phone: "",
-        source: "",
         message: "",
       });
+      setSubscribe(false);
     } catch (error) {
       setSubmitStatus({ success: false, message: error.message });
     } finally {
@@ -58,195 +65,331 @@ function Contactcontent() {
   };
 
   return (
-    <>
-      <section className="contacts">
-        <div className="container">
-          <div className="row">
-            {/* Left Contact Details */}
-            <div className="col-sm-6" data-aos="zoom-out-up">
-              <div className="card p-4 contact-card h-100 border-0 shadow">
-                <h3 className="text-primary">Contact Information</h3>
-                {/* Address */}
-                <div className="d-flex mt-3 align-items-start">
-                  <div className="pt-3">
-                    <i className="bi bi-geo-alt-fill contact-icon"></i>
+    <div className="bg-light">
+      {/* Hero Section */}
+      <div className={styles.hero}>
+        <div className="container mt-5">
+          <h1>Get in Touch</h1>
+          <p className="lead">
+            We're here to help and answer any questions you might have. 
+            Reach out and we'll respond as soon as possible.
+          </p>
+        </div>
+      </div>
+
+      <div className="container">
+        {/* Contact Methods */}
+        <div className={`row g-4 ${styles.contactMethods}`}>
+          {[
+            {
+              icon: "bi-geo-alt-fill",
+              title: "Visit Us",
+              content: "Cybomb Technologies – Prime Plaza, St. Thomas Mount, Chennai",
+              link: "https://maps.app.goo.gl/wNjfo2WgKsKnZLty8",
+              target:"_blank",
+              btnText: "Get Directions",
+              bgClass: "bg-primary bg-opacity-10 text-primary"
+            },
+            {
+              icon: "bi-telephone-fill",
+              title: "Call Us",
+              content: "+91 97150 92104",
+              link: "tel:+919715092104",
+              btnText: "Call Now",
+              bgClass: "bg-success bg-opacity-10 text-success"
+            },
+            {
+              icon: "bi-envelope-fill",
+              title: "Email Us",
+              content: "support@cybomb.com",
+              link: "mailto:support@cybomb.com",
+              btnText: "Send Email",
+              bgClass: "bg-info bg-opacity-10 text-info"
+            }
+          ].map((item, index) => (
+            <div className="col-md-4" key={index}>
+              <div className={`card h-100 border-0 ${styles.contactMethodCard}`}>
+                <div className="card-body text-center">
+                  <div className={`${styles.iconContainer} ${item.bgClass}`}>
+                    <i className={`bi ${item.icon}`}></i>
                   </div>
-                  <div className="ms-3">
-                    <p className="contact-text-color mb-0"><b>Address</b></p>
-                    <p className="mb-0 fs-6 contact-text-color">
-                      Cybomb Technologies LLP<br />
-                      Hygee Works – PS Industrials<br />
-                      Guindy, Chennai, India
-                    </p>
-                  </div>
-                </div>
-                {/* Phone */}
-                <div className="d-flex mt-5 align-items-start">
-                  <div className="pt-3">
-                    <i className="bi bi-telephone-fill contact-icon" style={{ backgroundColor: "#16A34A" }}></i>
-                  </div>
-                  <div className="ms-3">
-                    <p className="mb-0 text-white"><b className="contact-text-color">Phone</b></p>
-                    <p className="mb-0">
-                      <a href="tel:+919715092104" className="text-decoration-none contact-text-color">+91 9715092104</a>
-                    </p>
-                  </div>
-                </div>
-                {/* Email */}
-                <div className="d-flex mt-5 align-items-start">
-                  <div className="pt-3">
-                    <i className="bi bi-envelope-fill contact-icon" style={{ backgroundColor: "#9333EA" }}></i>
-                  </div>
-                  <div className="ms-3">
-                    <p className="mb-0 contact-text-color"><b>Email</b></p>
-                    <p className="mb-0">
-                      <a href="mailto:support@cybomb.com" className="text-decoration-none contact-text-color">
-                        support@cybomb.com
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                {/* Hours */}
-                <div className="d-flex mt-5 align-items-start">
-                  <div className="pt-3">
-                    <i className="bi bi-clock-fill contact-icon" style={{ backgroundColor: "#EA5800C" }}></i>
-                  </div>
-                  <div className="ms-3">
-                    <p className="mb-0 contact-text-color"><b>Working Hours</b></p>
-                    <p className="mb-0 contact-text-color">Mon-Fri: 9:00 AM – 6:00 PM</p>
-                    <p className="mb-0 contact-text-color">Saturday: 10:00 AM – 4:00 PM</p>
-                    <p className="mb-0 contact-text-color">Sunday: Closed</p>
-                  </div>
-                </div>
-                <hr />
-                {/* Social Icons */}
-                <div className="d-flex">
-                  <a href="https://www.instagram.com/cybomb_tech/?hl=en" target="_blank" rel="noreferrer">
-                    <i className="footer-para-color mx-3 bi bi-instagram fs-4"></i>
-                  </a>
-                  <a href="https://www.linkedin.com/company/cybomb/" target="_blank" rel="noreferrer">
-                    <i className="footer-para-color mx-3 bi bi-linkedin fs-4"></i>
-                  </a>
-                  <a href="https://x.com/CybombTech" target="_blank" rel="noreferrer">
-                    <i className="footer-para-color mx-3 fa-brands fa-x-twitter fs-3 pt-1"></i>
+                  <h5 className="mb-3">{item.title}</h5>
+                  <p className="text-muted mb-4">{item.content}</p>
+                  <a href={item.link} className="btn btn-primary px-4">
+                    {item.btnText}
                   </a>
                 </div>
               </div>
             </div>
+          ))}
+        </div>
 
-            {/* Form */}
-            <div className="col-md-6" data-aos="zoom-out-up">
-              <div className="card h-100 p-5 rounded-4 shadow-sm text-white border-0 form mt-1">
+        {/* Main Content */}
+        <div className="row g-4 my-5">
+          {/* Contact Info */}
+          <div className="col-lg-5">
+            <div className="card h-100 border-0 shadow-sm bg-primary text-white">
+              <div className="card-body p-4 p-md-5">
+                <h3 className="mb-4">Contact Information</h3>
+                
+                <div className={styles.contactInfoItem}>
+  <div className={`${styles.contactInfoIcon} bg-white text-primary`}>
+    <i className="bi bi-geo-alt-fill"></i>
+  </div>
+ 
+  <div className={styles.contactInfoText}>
+    <h5>Address</h5>
+    <p>
+      Cybomb Technologies LLP<br />
+      Prime Plaza – No.54/1, Ist street, Sripuram Colony<br />
+     St. Thomas Mount, Chennai, India
+    </p>
+  </div>
+</div>
+
+
+                {/* Working Hours */}
+<div className={styles.contactInfoItem}>
+  <div className={`${styles.contactInfoIcon} bg-white text-primary`}>
+    <i className="bi bi-clock-fill"></i>
+  </div>
+  <div className={styles.contactInfoText}>
+    <h5>Working Hours</h5>
+    <p>Mon-Fri: 9:00 AM – 6:00 PM</p>
+    <p>Saturday: 10:00 AM – 4:00 PM</p>
+    <p>Sunday: Closed</p>
+  </div>
+</div>
+ {/* New Visit Our Office Block */}
+<div className={`${styles.contactInfoTextBlock} mt-4`}>
+  <h5>Visit Our Office</h5>
+  <p className="mb-0">
+    Located in the heart of Chennai's tech hub, our office is easily accessible
+    and equipped with modern facilities for client meetings and collaboration.
+  </p>
+</div>
+                <hr className="my-4 bg-white opacity-25" />
+
+                <h5 className="mb-3">Follow Us</h5>
+                <div className="d-flex">
+  {[
+    { icon: "bi-instagram", url: "https://www.instagram.com/cybomb_tech/" },
+    { icon: "bi-linkedin", url: "https://www.linkedin.com/company/cybomb/" }
+  ].map((social, i) => (
+    <a 
+      key={i}
+      href={social.url} 
+      target="_blank" 
+      rel="noreferrer"
+      className="btn btn-outline-light rounded-circle me-2"
+    >
+      <i className={`bi ${social.icon}`}></i>
+    </a>
+  ))}
+
+  {/* X Logo */}
+  <a 
+    href="https://x.com/CybombTech"
+    target="_blank"
+    rel="noreferrer"
+    className="btn btn-outline-light rounded-circle me-2"
+    style={{ padding: "0.45rem" }}
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 1200 1227">
+      <path d="M714.163 519.284L1160.89 0H1055.2L675.85 442.798 370.346 0H0l468.127 684.109L0 1226.2h105.685l401.507-474.692L829.654 1226.2H1200z"/>
+    </svg>
+  </a>
+</div>
+
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="col-lg-7">
+            <div className="card h-100 border-0 shadow-sm">
+              <div className="card-body p-4 p-md-5">
                 {submitStatus && (
-                  <div className={`alert alert-${submitStatus.success ? "success" : "danger"}`}>
+                  <div className={`alert alert-${submitStatus.success ? "success" : "danger"} mb-4`}>
                     {submitStatus.message}
                   </div>
                 )}
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-3">
-                    <label className="form-label fs-7 text-secondary fw-bold">First Name *</label>
-                    <input
-                      type="text"
-                      className="form-control forminput"
-                      placeholder="Enter your first name"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
 
-                  <div className="mb-3">
-                    <label className="form-label fs-7 text-secondary fw-bold">Email *</label>
-                    <input
-                      type="email"
-                      className="form-control forminput"
-                      placeholder="Enter your email address"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-
-                  <div className="mb-3">
-                    <label className="form-label fs-7 text-secondary fw-bold">Phone (+91)</label>
-                    <input
-                      type="tel"
-                      className="form-control forminput"
-                      placeholder="Enter your phone number"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                    />
-                  </div>
-
-                  <div className="mb-3">
-                    <label className="form-label fs-7 text-secondary fw-bold">Where did you find us?</label>
-                    <select
-                      className="form-select forminput"
-                      name="source"
-                      value={formData.source}
-                      onChange={handleChange}
+                {showSuccess ? (
+                  <div className="text-center py-4">
+                    <svg className={styles.successAnimation} viewBox="0 0 52 52">
+                      <circle className="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                      <path className="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    </svg>
+                    <h4 className="text-success mt-3">Message Sent!</h4>
+                    <p>We'll get back to you within 24 hours.</p>
+                    <button 
+                      className="btn btn-outline-primary mt-2"
+                      onClick={() => setShowSuccess(false)}
                     >
-                      <option value="">Select an option</option>
-                      <option value="Google">Google</option>
-                      <option value="LinkedIn">LinkedIn</option>
-                      <option value="Referral">Referral</option>
-                      <option value="Others">Others</option>
-                    </select>
+                      Send Another Message
+                    </button>
                   </div>
+                ) : (
+                  <>
+                    <h3 className="mb-4 text-primary">Send Us a Message</h3>
+                    <form onSubmit={handleSubmit}>
+                      <div className="row g-3">
+                        <div className="col-12">
+                          <label className="form-label fw-bold">
+                            Name <span className="text-danger">*</span>
+                          </label>
+                          <div className="input-group">
+                            <span className="input-group-text bg-light">
+                              <i className="bi bi-person-fill text-primary"></i>
+                            </span>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Your name"
+                              name="name"
+                              value={formData.name}
+                              onChange={handleChange}
+                              required
+                            />
+                          </div>
+                        </div>
 
-                  <div className="mb-3">
-                    <label className="form-label fs-7 text-secondary fw-bold">Message *</label>
-                    <textarea
-                      className="form-control forminput"
-                      rows="4"
-                      maxLength="500"
-                      placeholder="Tell us about your project..."
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                    ></textarea>
-                    <small className="text-muted float-end">{formData.message.length}/500</small>
-                  </div>
+                        <div className="col-12">
+                          <label className="form-label fw-bold">
+                            Email <span className="text-danger">*</span>
+                          </label>
+                          <div className="input-group">
+                            <span className="input-group-text bg-light">
+                              <i className="bi bi-envelope-fill text-primary"></i>
+                            </span>
+                            <input
+                              type="email"
+                              className="form-control"
+                              placeholder="your.email@example.com"
+                              name="email"
+                              value={formData.email}
+                              onChange={handleChange}
+                              required
+                            />
+                          </div>
+                        </div>
 
-                  <button
-                    type="submit"
-                    className="btn btn-gradient w-100 text-white py-3"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <span className="spinner-border spinner-border-sm me-2" role="status"></span>
-                        Sending...
-                      </>
-                    ) : (
-                      "Send Message"
-                    )}
-                  </button>
-                </form>
+                        <div className="col-12">
+                          <label className="form-label fw-bold">
+                            Phone Number <span className="text-danger">*</span>
+                          </label>
+                        <PhoneInput
+  country="in"
+  value={formData.phone}
+  onChange={handlePhoneChange}
+  inputProps={{
+    name: 'phone',
+    required: true,
+  }}
+  containerClass="react-tel-input w-100"
+  inputClass={styles.phoneInput} // custom class
+/>
+
+                        </div>
+
+                        <div className="col-12">
+                          <label className="form-label fw-bold">
+                            Message <span className="text-danger">*</span>
+                          </label>
+                          <div className="input-group">
+                            <span className="input-group-text bg-light align-items-start">
+                              <i className="bi bi-chat-left-text-fill text-primary mt-1"></i>
+                            </span>
+                            <textarea
+                              className="form-control"
+                              rows="4"
+                              placeholder="Tell us how we can help..."
+                              name="message"
+                              value={formData.message}
+                              onChange={handleChange}
+                              required
+                            ></textarea>
+                          </div>
+                        </div>
+
+                        <div className="col-12">
+                          <div className="form-check">
+                            <input
+                              type="checkbox"
+                              className="form-check-input"
+                              id="newsletter"
+                              checked={subscribe}
+                              onChange={(e) => setSubscribe(e.target.checked)}
+                            />
+                            <label className="form-check-label" htmlFor="newsletter">
+                              Subscribe to our newsletter
+                            </label>
+                          </div>
+                        </div>
+
+                        <div className="col-12 mt-3">
+                          <button
+                            type="submit"
+                            className="btn btn-primary w-100 py-3"
+                            disabled={isSubmitting}
+                          >
+                            {isSubmitting ? (
+                              <>
+                                <span className="spinner-border spinner-border-sm me-2" role="status"></span>
+                                Sending...
+                              </>
+                            ) : (
+                              <>
+                                <i className="bi bi-send-fill me-2"></i> Send Message
+                              </>
+                            )}
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </>
+                )}
               </div>
             </div>
           </div>
         </div>
 
-        {/* Google Map */}
-        <div className="mt-5">
+        
+      </div>
+{/* Map Section */}
+        <div className={styles.mapContainer}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=..."
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.4279204989957!2d80.19743463488764!3d13.008399400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52679b4aace7c3%3A0x3a52679b4aace7c3!2sHygee%20Works%20%E2%80%93%20PS%20Industrials!5e0!3m2!1sen!2sin!4v1712345678901!5m2!1sen!2sin"
             width="100%"
-            height="400px"
+            height="100%"
+            style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="grayscale hover:grayscale-0 transition-all duration-300"
             title="Cybomb Location"
-          ></iframe>
+          />
+          <div className={styles.mapOverlay}>
+            <a 
+              href="https://maps.app.goo.gl/wNjfo2WgKsKnZLty8" 
+              target="_blank" 
+              rel="noreferrer"
+              className="btn btn-primary shadow"
+            >
+              <i className="bi bi-arrow-up-right-circle me-2"></i> Open in Maps
+            </a>
+          </div>
         </div>
-      </section>
-    </>
+      {/* Floating Action Button */}
+      <a 
+        href="https://wa.me/919715092104" 
+        target="_blank" 
+        rel="noreferrer"
+        className={`btn btn-success rounded-circle shadow-lg ${styles.floatingBtn}`}
+      >
+        <i className="bi bi-whatsapp fs-4"></i>
+      </a>
+    </div>
   );
 }
 
