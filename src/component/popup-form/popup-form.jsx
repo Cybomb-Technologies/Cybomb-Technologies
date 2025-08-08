@@ -4,7 +4,11 @@ import 'react-phone-input-2/lib/bootstrap.css';
 import logo from "../../assets/logo.png";
 import styles from './PopupForm.module.css';
 
+
+const API_URL = import.meta.env.VITE_API_BASE;
+
 function PopupForm() {
+
   const [showModal, setShowModal] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
@@ -60,7 +64,7 @@ function PopupForm() {
         subscribe,
       };
 
-      const response = await fetch("http://localhost:5000/api/popup-mail", {
+      const response = await fetch(`${API_URL}/api/popup-mail`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -277,7 +281,7 @@ function PopupForm() {
                                   </>
                                 ) : (
                                   <>
-                                    <i className="bi bi-send-fill"></i> Send Message
+                                    <i className={`btn fw-bold ${styles.submitButton}`}></i> Send Message
                                   </>
                                 )}
                               </button>

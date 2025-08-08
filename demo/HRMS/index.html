@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Human Resource Management System</title>
+      <link rel="icon" type="image/png" href="./images/fav-con.png" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Remix Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-3">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="./images/cybomb-white.png" alt=""></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#testimonials"
+                  >Testimonials</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#contact">Contact</a>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center">
+              <button class="btn btn-link text-white text-decoration-none me-3">
+                Sign In
+              </button>
+              <button class="btn btn-primary-custom rounded-2 px-4 py-2">
+                Get Started Free
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="hero-bg particle-bg min-vh-100 d-flex align-items-center position-relative overflow-hidden"
+        style="
+          background-image: url('./images/banner.jpg');
+          background-repeat: no-repeat;
+          background-image: url('./images/banner.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          width: 100%;
+        "
+      >
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100"
+          style="
+            background: linear-gradient(
+              to right,
+              rgb(0 0 0 / 96%),
+              rgba(0, 0, 0, 0.2)
+            );
+          "
+        ></div>
+        <div class="container position-relative z-3">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="mb-5">
+                <h1 class="display-4 fw-bold mb-4">
+                  Simplify Your HR.<br />
+                  <span
+                    class="text-glow gradient-purple bg-clip-text text-transparent"
+                    >Empower Your People.</span
+                  >
+                </h1>
+                <p class="lead text-muted-custom mb-4">
+                  An intuitive, all-in-one HR platform to manage people,
+                  processes, and compliance—from hire to retire. Scale your
+                  operations with powerful automation.
+                </p>
+              </div>
+              <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+                <button
+                  class="btn btn-primary-custom px-4 py-3 rounded-2 fw-semibold"
+                >
+                  <i class="ri-rocket-line me-2"></i>
+                  Get Started Free
+                </button>
+                <button
+                  class="btn btn-outline-custom px-4 py-3 rounded-2 fw-semibold"
+                >
+                  <i class="ri-play-circle-line me-2"></i>
+                  Watch Demo
+                </button>
+              </div>
+              <div class="d-flex flex-wrap gap-4 text-light-custom small">
+                <div class="d-flex align-items-center">
+                  <i class="ri-check-line text-primary me-2"></i>
+                  <span>No Credit Card Required</span>
+                </div>
+                <div class="d-flex align-items-center">
+                  <i class="ri-time-line text-primary me-2"></i>
+                  <span>Setup in 5 Minutes</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+              <div class="floating-element">
+                <div
+                  class="bg-gray-dark p-4 rounded-3 shadow-lg border border-custom card-glow"
+                >
+                  <div
+                    class="mb-4 d-flex justify-content-between align-items-center"
+                  >
+                    <h3 class="h5 fw-semibold mb-0">Employee Dashboard</h3>
+                    <i class="ri-dashboard-line text-primary fs-5"></i>
+                  </div>
+                  <div class="d-flex flex-column gap-3">
+                    <div
+                      class="d-flex justify-content-between p-3 bg-dark-custom rounded-2"
+                    >
+                      <span class="text-muted-custom">Active Employees</span>
+                      <span class="fw-semibold">1,247</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between p-3 bg-dark-custom rounded-2"
+                    >
+                      <span class="text-muted-custom">Pending Reviews</span>
+                      <span class="text-primary fw-semibold">23</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between p-3 bg-dark-custom rounded-2"
+                    >
+                      <span class="text-muted-custom">Leave Requests</span>
+                      <span class="fw-semibold">8</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="py-5 bg-gray-dark">
+        <div class="container py-5">
+          <div class="text-center mb-5">
+            <h2 class="display-4 fw-bold mb-3">
+              Powerful Features for Modern HR
+            </h2>
+            <p class="lead text-muted-custom mx-auto" style="max-width: 700px">
+              Everything you need to manage your workforce efficiently, from
+              recruitment to retirement
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card p-4 rounded-3 h-100">
+                <div
+                  class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-2 mb-4"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-money-dollar-circle-line text-white fs-4"></i>
+                </div>
+                <h3 class="h4 fw-semibold mb-3">Payroll Management</h3>
+                <p class="text-muted-custom">
+                  Automate salaries, taxes, and payouts with zero errors. Handle
+                  complex payroll calculations effortlessly.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card p-4 rounded-3 h-100">
+                <div
+                  class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-2 mb-4"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-calendar-check-line text-white fs-4"></i>
+                </div>
+                <h3 class="h4 fw-semibold mb-3">Leave & Attendance</h3>
+                <p class="text-muted-custom">
+                  Track time-off requests and employee hours with full
+                  visibility and automated approval workflows.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card p-4 rounded-3 h-100">
+                <div
+                  class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-2 mb-4"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-team-line text-white fs-4"></i>
+                </div>
+                <h3 class="h4 fw-semibold mb-3">Recruitment Module</h3>
+                <p class="text-muted-custom">
+                  Manage hiring pipelines, screen resumes, and onboard new
+                  employees with streamlined processes.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card p-4 rounded-3 h-100">
+                <div
+                  class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-2 mb-4"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-star-line text-white fs-4"></i>
+                </div>
+                <h3 class="h4 fw-semibold mb-3">Performance Reviews</h3>
+                <p class="text-muted-custom">
+                  Monitor progress with 360° feedback and goal tracking. Set
+                  objectives and measure achievements.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card p-4 rounded-3 h-100">
+                <div
+                  class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-2 mb-4"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-database-2-line text-white fs-4"></i>
+                </div>
+                <h3 class="h4 fw-semibold mb-3">Employee Database</h3>
+                <p class="text-muted-custom">
+                  Maintain a centralized, searchable employee record system with
+                  comprehensive profiles.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card p-4 rounded-3 h-100">
+                <div
+                  class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-2 mb-4"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-bar-chart-box-line text-white fs-4"></i>
+                </div>
+                <h3 class="h4 fw-semibold mb-3">HR Analytics</h3>
+                <p class="text-muted-custom">
+                  Make data-driven decisions with comprehensive KPIs, insights,
+                  and customizable reports.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="py-5 bg-dark-custom">
+        <div class="container py-5">
+          <div class="text-center mb-5">
+            <h2 class="display-4 fw-bold mb-3">Trusted by Industry Leaders</h2>
+            <p class="lead text-muted-custom">
+              Join thousands of companies streamlining their HR operations
+            </p>
+          </div>
+          <div class="row g-4 mb-5">
+            <div class="col-md-4">
+              <div class="testimonial-card p-4 rounded-3 h-100">
+                <div class="d-flex align-items-center mb-4">
+                  <img
+                    src="./images/testimonial-1.jpg"
+                    alt="Sarah Chen"
+                    class="rounded-circle me-3"
+                    style="
+                      width: 48px;
+                      height: 48px;
+                      object-fit: cover;
+                      border: 2px solid #7b61ff;
+                    "
+                  />
+                  <div>
+                    <h4 class="h6 fw-semibold mb-0">Sarah Chen</h4>
+                    <p class="text-light-custom small mb-0">
+                      CEO, TechFlow Solutions
+                    </p>
+                  </div>
+                </div>
+                <p class="text-muted-custom mb-3">
+                  "HRPro transformed our entire HR workflow. We reduced
+                  administrative time by 60% and improved employee satisfaction
+                  significantly. The automation features are game-changing."
+                </p>
+                <div class="d-flex">
+                  <i class="ri-star-fill text-primary me-1"></i>
+                  <i class="ri-star-fill text-primary me-1"></i>
+                  <i class="ri-star-fill text-primary me-1"></i>
+                  <i class="ri-star-fill text-primary me-1"></i>
+                  <i class="ri-star-fill text-primary"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-card p-4 rounded-3 h-100">
+                <div class="d-flex align-items-center mb-4">
+                  <img
+                    src="./images/testimonial-2.jpg"
+                    alt="Michael Rodriguez"
+                    class="rounded-circle me-3"
+                    style="
+                      width: 48px;
+                      height: 48px;
+                      object-fit: cover;
+                      border: 2px solid #7b61ff;
+                    "
+                  />
+                  <div>
+                    <h4 class="h6 fw-semibold mb-0">Michael Rodriguez</h4>
+                    <p class="text-light-custom small mb-0">
+                      HR Director, Global Dynamics
+                    </p>
+                  </div>
+                </div>
+                <p class="text-muted-custom mb-3">
+                  "The recruitment module streamlined our hiring process
+                  completely. We can now track candidates efficiently and
+                  onboard new employees seamlessly. Highly recommended!"
+                </p>
+                <div class="d-flex">
+                  <i class="ri-star-fill text-primary me-1"></i>
+                  <i class="ri-star-fill text-primary me-1"></i>
+                  <i class="ri-star-fill text-primary me-1"></i>
+                  <i class="ri-star-fill text-primary me-1"></i>
+                  <i class="ri-star-fill text-primary"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-card p-4 rounded-3 h-100">
+                <div class="d-flex align-items-center mb-4">
+                  <img
+                    src="./images/testimonial-3.jpg"
+                    alt="Emily Watson"
+                    class="rounded-circle me-3"
+                    style="
+                      width: 48px;
+                      height: 48px;
+                      object-fit: cover;
+                      border: 2px solid #7b61ff;
+                    "
+                  />
+                  <div>
+                    <h4 class="h6 fw-semibold mb-0">Emily Watson</h4>
+                    <p class="text-light-custom small mb-0">
+                      Operations Manager, InnovateCorp
+                    </p>
+                  </div>
+                </div>
+                <p class="text-muted-custom mb-3">
+                  "Outstanding platform with excellent customer support. The
+                  analytics dashboard provides insights we never had before.
+                  It's intuitive and powerful at the same time."
+                </p>
+                <div class="d-flex">
+                  <i class="ri-star-fill text-primary me-1"></i>
+                  <i class="ri-star-fill text-primary me-1"></i>
+                  <i class="ri-star-fill text-primary me-1"></i>
+                  <i class="ri-star-fill text-primary me-1"></i>
+                  <i class="ri-star-fill text-primary"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-4 align-items-center opacity-75">
+            <div class="col-6 col-md-4 col-lg-2">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <i class="ri-microsoft-fill fs-5"></i>
+                <span class="fw-semibold">Microsoft</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <i class="ri-google-fill fs-5"></i>
+                <span class="fw-semibold">Google</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <i class="ri-amazon-fill fs-5"></i>
+                <span class="fw-semibold">Amazon</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <i class="ri-apple-fill fs-5"></i>
+                <span class="fw-semibold">Apple</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <i class="ri-netflix-fill fs-5"></i>
+                <span class="fw-semibold">Netflix</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <i class="ri-spotify-fill fs-5"></i>
+                <span class="fw-semibold">Spotify</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-gray-dark">
+        <div class="container py-5">
+          <div class="text-center mb-5">
+            <h2 class="display-4 fw-bold mb-3">
+              Enterprise-Grade Security & Compliance
+            </h2>
+            <p class="lead text-muted-custom">
+              Your data is protected with industry-leading security standards
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div
+                  class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3"
+                  style="width: 64px; height: 64px"
+                >
+                  <i class="ri-shield-check-line text-white fs-3"></i>
+                </div>
+                <h3 class="h5 fw-semibold mb-2">GDPR Compliant</h3>
+                <p class="text-light-custom small">
+                  Full compliance with European data protection regulations
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div
+                  class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3"
+                  style="width: 64px; height: 64px"
+                >
+                  <i class="ri-lock-line text-white fs-3"></i>
+                </div>
+                <h3 class="h5 fw-semibold mb-2">256-bit Encryption</h3>
+                <p class="text-light-custom small">
+                  Bank-level security for all your sensitive HR data
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div
+                  class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3"
+                  style="width: 64px; height: 64px"
+                >
+                  <i class="ri-time-line text-white fs-3"></i>
+                </div>
+                <h3 class="h5 fw-semibold mb-2">99.9% Uptime</h3>
+                <p class="text-light-custom small">
+                  Reliable service with guaranteed availability
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div
+                  class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3"
+                  style="width: 64px; height: 64px"
+                >
+                  <i class="ri-cloud-line text-white fs-3"></i>
+                </div>
+                <h3 class="h5 fw-semibold mb-2">Cloud Backup</h3>
+                <p class="text-light-custom small">
+                  Automatic backups with disaster recovery
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-darker">
+        <div class="container py-5 text-center">
+          <h2 class="display-4 fw-bold mb-4">
+            Ready to Transform Your HR Operations?
+          </h2>
+          <p
+            class="lead text-muted-custom mb-5 mx-auto"
+            style="max-width: 700px"
+          >
+            Join thousands of companies already using HRPro to streamline their
+            workforce management. Start your free trial today.
+          </p>
+          <div
+            class="d-flex flex-column flex-sm-row gap-3 justify-content-center mb-5"
+          >
+            <button
+              class="btn btn-primary-custom px-4 py-3 rounded-2 fw-semibold"
+            >
+              <i class="ri-rocket-line me-2"></i>
+              Start Free Trial
+            </button>
+            <button
+              class="btn btn-outline-custom px-4 py-3 rounded-2 fw-semibold"
+            >
+              <i class="ri-phone-line me-2"></i>
+              Schedule Demo
+            </button>
+          </div>
+          <div
+            class="d-flex flex-wrap gap-4 justify-content-center text-light-custom small"
+          >
+            <div class="d-flex align-items-center">
+              <i class="ri-check-line text-primary me-2"></i>
+              <span>14-day Free Trial</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="ri-check-line text-primary me-2"></i>
+              <span>No Setup Fees</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="ri-check-line text-primary me-2"></i>
+              <span>Cancel Anytime</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-top border-custom py-5" style="background-color: #000000;">
+      <div class="container py-4">
+        <div class="row g-4 mb-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="font-['Pacifico'] fs-3 mb-3"><img src="./images/cybomb-white.png" alt=""></div>
+            <p class="text-light-custom mb-4">
+              Modern HR management system designed for growing businesses.
+              Streamline your workforce operations with powerful automation.
+            </p>
+            <div class="d-flex gap-3">
+              <a
+                href="#"
+                class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-2"
+                style="width: 40px; height: 40px"
+              >
+                <i class="ri-twitter-x-line text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-2"
+                style="width: 40px; height: 40px"
+              >
+                <i class="ri-linkedin-line text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-gradient-purple d-flex align-items-center justify-content-center rounded-2"
+                style="width: 40px; height: 40px"
+              >
+                <i class="ri-facebook-line text-white"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h3 class="h5 fw-semibold mb-3">Product</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="text-light-custom text-decoration-none hover:text-white"
+                  >Features</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="text-light-custom text-decoration-none hover:text-white"
+                  >Pricing</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="text-light-custom text-decoration-none hover:text-white"
+                  >Integrations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-light-custom text-decoration-none hover:text-white"
+                  >API</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h3 class="h5 fw-semibold mb-3">Company</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="text-light-custom text-decoration-none hover:text-white"
+                  >About</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="text-light-custom text-decoration-none hover:text-white"
+                  >Careers</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="text-light-custom text-decoration-none hover:text-white"
+                  >Press</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-light-custom text-decoration-none hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h3 class="h5 fw-semibold mb-3">Stay Updated</h3>
+            <p class="text-light-custom mb-3">
+              Get the latest HR insights and product updates.
+            </p>
+            <div class="d-flex">
+              <input
+                type="email"
+                class="form-control bg-gray-dark border-custom text-white rounded-end-0"
+                placeholder="Enter your email"
+              />
+              <button class="btn btn-primary-custom rounded-start-0 px-3">
+                <i class="ri-send-plane-line"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-top border-custom pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center"
+        >
+          <p class="text-light-custom small mb-3 mb-md-0">
+            © 2025 Cybomb. All rights reserved.
+          </p>
+          <div class="d-flex gap-4">
+            <a
+              href="#"
+              class="text-light-custom small text-decoration-none hover:text-white"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-light-custom small text-decoration-none hover:text-white"
+              >Terms of Service</a
+            >
+            <a
+              href="#"
+              class="text-light-custom small text-decoration-none hover:text-white"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Smooth scroll for anchor links
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+              targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      });
+
+      // Floating animation delay
+      document.addEventListener("DOMContentLoaded", function () {
+        const floatingElements = document.querySelectorAll(".floating-element");
+        floatingElements.forEach((element, index) => {
+          element.style.animationDelay = `${index * 0.5}s`;
+        });
+      });
+    </script>
+  </body>
+</html>

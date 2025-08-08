@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import "./home-form.css";
 
+const API_URL = import.meta.env.VITE_API_BASE;
+
 function Homeform() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -37,7 +39,7 @@ function Homeform() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/send-mail', {
+      const response = await fetch(`${API_URL}/api/send-mail`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
