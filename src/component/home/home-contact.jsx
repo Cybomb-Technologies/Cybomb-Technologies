@@ -3,7 +3,7 @@ import "./home-contact.css";
 function Homecontact() {
   return (
     <section style={{ padding: "60px 20px", backgroundColor: "#FFFFFF" }}>
-      <div className="container" style={{ padding: "0px" }}>
+      <div className="container" id="home-contact" style={{ padding: "0px" }}>
         <h2
           className="text-center"
           data-aos="zoom-out-right"
@@ -35,9 +35,9 @@ function Homecontact() {
                     <b>Address</b>
                   </p>
                   <p className="mb-0 fs-6 contact-text-color">
-                    Cybomb Technologies LLP <br /> Hygee Works – PS Industrials
+                    Cybomb Technologies LLP <br /> Hygee Works – Prime Plaza
                     <br />
-                    Guindy, Chennai, India
+                    St.Thomas Mount, Chennai, India
                   </p>
                 </div>
               </div>

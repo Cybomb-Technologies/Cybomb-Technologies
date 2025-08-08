@@ -3,10 +3,10 @@ import styles from "../../../../common-ui/design-and-development/development-tec
 
 const techData = {
   "Languages & Tools": ["PHP", "MySQL", "JavaScript", "Knockout.js", "LESS", "CSS3", "HTML5"],
-  "Platforms": ["Adobe Commerce (Magento)", "Magento Open Source"],
-  "Cloud & Hosting": ["Adobe Commerce Cloud", "AWS", "Azure"],
-  "Integrations": ["REST APIs", "GraphQL", "ERP & CRM integrations", "Payment Gateways (PayPal, Stripe, Authorize.Net)"],
-  "DevOps & CI/CD": ["Jenkins", "GitHub Actions", "Bitbucket Pipelines"],
+  "Platforms": ["Magento Open Source", "Magento Commerce"],
+  "Cloud & Hosting": ["Magento Commerce Cloud", "AWS", "Azure"],
+  "Integrations": ["REST APIs", "GraphQL", "ERP/CRM", "Payment Gateways (PayPal, Stripe, Authorize.Net)"],
+  "DevOps & CI/CD": ["GitHub Actions", "Jenkins", "Bitbucket Pipelines"],
   "UI Libraries & Frameworks": ["Bootstrap", "Tailwind CSS"],
 };
 
@@ -18,22 +18,22 @@ const techLogos = {
   LESS: "https://www.vectorlogo.zone/logos/lesscss/lesscss-icon.svg",
   CSS3: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg",
   HTML5: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg",
-  "Adobe Commerce (Magento)": "https://icon.icepanel.io/Technology/svg/Adobe-Commerce-%28Magneto%29.svg",
   "Magento Open Source": "https://www.svgrepo.com/show/303592/magento-2-logo.svg",
-  "Adobe Commerce Cloud": "https://www.adobe.com/content/dam/cc/icons/adobe_wordmark_red.svg",
+  "Magento Commerce": "https://www.svgrepo.com/show/303592/magento-2-logo.svg",
+  "Magento Commerce Cloud": "https://www.svgrepo.com/show/303592/magento-2-logo.svg",
   AWS: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",
   Azure: "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg",
   "REST APIs": "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
   GraphQL: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
-  "ERP & CRM integrations": "https://www.vectorlogo.zone/logos/sap/sap-icon.svg",
+  "ERP/CRM": "https://www.vectorlogo.zone/logos/sap/sap-icon.svg",
   "Payment Gateways (PayPal, Stripe, Authorize.Net)": "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
-  Jenkins: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg",
   "GitHub Actions": "https://www.vectorlogo.zone/logos/github/github-icon.svg",
+  Jenkins: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg",
   "Bitbucket Pipelines": "https://www.vectorlogo.zone/logos/bitbucket/bitbucket-icon.svg",
   Bootstrap: "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg",
   "Tailwind CSS": "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
 };
-const AdobeTechnologiesSection = () => {
+const MagentoTechnologiesSection = () => {
   const categories = Object.keys(techData);
   const [selected, setSelected] = useState(categories[0]);
 
@@ -75,4 +75,4 @@ const AdobeTechnologiesSection = () => {
   );
 };
 
-export default AdobeTechnologiesSection;
+export default MagentoTechnologiesSection;

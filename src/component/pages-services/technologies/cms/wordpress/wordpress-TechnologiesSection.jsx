@@ -14,7 +14,7 @@ const techData = {
 const techLogos = {
   "Drupal 10": "https://www.drupal.org/files/druplicon-small.png",
   Twig: "https://icons.veryicon.com/png/o/business/vscode-program-item-icon/twig-1.png",
-  CKEditor: "https://www.tiny.cloud/images/tinymce-alternatives/ckeditor.png",
+  CKEditor: "https://www.vectorlogo.zone/logos/ckeditor/ckeditor-icon.svg",
   PHP: "https://www.vectorlogo.zone/logos/php/php-icon.svg",
   Symfony: "https://www.vectorlogo.zone/logos/symfony/symfony-icon.svg",
   MySQL:

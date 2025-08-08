@@ -17,6 +17,9 @@ import AiIntegration from "../component/pages-services/design-development/ai-int
 import AdobeCommerce from "../component/pages-services/technologies/ecommerce/adobe-commerce/adobe-commerce";
 import Shopify from "../component/pages-services/technologies/ecommerce/shopify/shopify";
 import Symfony from "../component/pages-services/technologies/ecommerce/symfony/symfony";
+import WooCommerce from "../component/pages-services/technologies/ecommerce/woo-commerce/woo-commerce";
+import BigCommerce from "../component/pages-services/technologies/ecommerce/big-commerce/big-commerce";
+import Magento from "../component/pages-services/technologies/ecommerce/magento/magento";
 
 // Just return <Route />s. Don't wrap in <Routes>
 const emp2Routes = (
@@ -42,6 +45,9 @@ const emp2Routes = (
     <Route path="/services/adobe-commerce" element={<AdobeCommerce/>}/>
     <Route path="/services/shopify" element={<Shopify/>}/>
     <Route path="/services/symfony" element={<Symfony/>}/>
+    <Route path="/services/woo-commerce" element={<WooCommerce/>}/>
+    <Route path="/services/big-commerce" element={<BigCommerce/>}/>
+    <Route path="/services/magento" element={<Magento/>}/>
   </>
 );
 

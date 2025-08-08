@@ -2,38 +2,39 @@ import React, { useState } from "react";
 import styles from "../../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const techData = {
-  "Languages & Tools": ["PHP", "MySQL", "JavaScript", "Knockout.js", "LESS", "CSS3", "HTML5"],
-  "Platforms": ["Adobe Commerce (Magento)", "Magento Open Source"],
-  "Cloud & Hosting": ["Adobe Commerce Cloud", "AWS", "Azure"],
-  "Integrations": ["REST APIs", "GraphQL", "ERP & CRM integrations", "Payment Gateways (PayPal, Stripe, Authorize.Net)"],
-  "DevOps & CI/CD": ["Jenkins", "GitHub Actions", "Bitbucket Pipelines"],
-  "UI Libraries & Frameworks": ["Bootstrap", "Tailwind CSS"],
+  "Languages & Tools": ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "jQuery"],
+  "Platforms": ["WooCommerce", "WordPress"],
+  "Cloud & Hosting": ["AWS", "Google Cloud", "WP Engine", "Kinsta"],
+  "Integrations": ["REST APIs", "GraphQL", "ERP/CRM", "Payment Gateways (PayPal, Stripe, Razorpay)"],
+  "DevOps & CI/CD": ["GitHub Actions", "Bitbucket Pipelines", "Docker"],
+  "UI Libraries & Frameworks": ["Bootstrap", "Tailwind CSS", "React for custom storefronts"],
 };
 
 const techLogos = {
   PHP: "https://www.vectorlogo.zone/logos/php/php-icon.svg",
   MySQL: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg",
   JavaScript: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
-  "Knockout.js": "https://cdn.worldvectorlogo.com/logos/knockout.svg",
-  LESS: "https://www.vectorlogo.zone/logos/lesscss/lesscss-icon.svg",
-  CSS3: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg",
   HTML5: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg",
-  "Adobe Commerce (Magento)": "https://icon.icepanel.io/Technology/svg/Adobe-Commerce-%28Magneto%29.svg",
-  "Magento Open Source": "https://www.svgrepo.com/show/303592/magento-2-logo.svg",
-  "Adobe Commerce Cloud": "https://www.adobe.com/content/dam/cc/icons/adobe_wordmark_red.svg",
+  CSS3: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg",
+  jQuery: "https://www.vectorlogo.zone/logos/jquery/jquery-icon.svg",
+  WooCommerce: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/woocommerce-icon.png",
+  WordPress: "https://www.vectorlogo.zone/logos/wordpress/wordpress-icon.svg",
   AWS: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",
-  Azure: "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg",
+  "Google Cloud": "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg",
+  "WP Engine": "https://www.svgrepo.com/show/331650/wp-engine.svg",
+  Kinsta: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Kinsta_logo.svg/768px-Kinsta_logo.svg.png?20240518022442",
   "REST APIs": "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
   GraphQL: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
-  "ERP & CRM integrations": "https://www.vectorlogo.zone/logos/sap/sap-icon.svg",
-  "Payment Gateways (PayPal, Stripe, Authorize.Net)": "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
-  Jenkins: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg",
+  "ERP/CRM": "https://www.vectorlogo.zone/logos/sap/sap-icon.svg",
+  "Payment Gateways (PayPal, Stripe, Razorpay)": "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
   "GitHub Actions": "https://www.vectorlogo.zone/logos/github/github-icon.svg",
   "Bitbucket Pipelines": "https://www.vectorlogo.zone/logos/bitbucket/bitbucket-icon.svg",
+  Docker: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg",
   Bootstrap: "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg",
   "Tailwind CSS": "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+  "React for custom storefronts": "https://www.svgrepo.com/show/452092/react.svg",
 };
-const AdobeTechnologiesSection = () => {
+const WooCommerceTechnologiesSection = () => {
   const categories = Object.keys(techData);
   const [selected, setSelected] = useState(categories[0]);
 
@@ -75,4 +76,4 @@ const AdobeTechnologiesSection = () => {
   );
 };
 
-export default AdobeTechnologiesSection;
+export default WooCommerceTechnologiesSection;
