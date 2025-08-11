@@ -1,0 +1,24 @@
+.banner {
+  height: 100vh;
+  min-height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 70vh;
+    min-height: 400px;
+  }
+  
+  .overlay {
+    padding: 2rem 1rem;
+  }
+}
