@@ -7,8 +7,8 @@ function HireDev() {
   return (
     <>
       <HireDevContent/>
-      <AgileProcess/>
-      <StillNotSure/>
+      {/* <AgileProcess/>
+      <StillNotSure/> */}
     </>
   );
 }

@@ -135,15 +135,16 @@ function Nav1() {
                   onLinkClick={handleNavItemClick}
                 />
 
-                {/* <li className={styles.navItem}>
+                <li className={styles.navItem}>
                   <Link
                     to="/hire-developers"
                     className={styles.navLink}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    On-Demand Developer
+                    Hire Developer
+                    {/* On-Demand Developer */}
                   </Link>
-                </li> */}
+                </li>
 
                 <Technologiesdropdown1
                   isMobile={isMobile}
