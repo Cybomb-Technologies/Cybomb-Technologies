@@ -47,9 +47,9 @@
 }
 
 .rightContent .image {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
+  /* width: 100%; */
+  /* max-width: 500px; */
+  height: 500px !important;
 }
 
 /* Responsive Styles */
