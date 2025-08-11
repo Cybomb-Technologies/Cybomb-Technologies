@@ -139,15 +139,15 @@ function Technologiesdropdown1({
                   </div>
                 </div>
               </div>
-              {/* 
-                Custom Development
-                <div className={styles.techColumn1}> 
+              
+                {/* Custom Development */}
+                {/* <div className={styles.techColumn1}> 
                   <div className={styles.dropdownHeader}>
                     <FaLaptopCode className={styles.icon} /> Custom Development
                   </div>
                   <div className={styles.subColumnWrapper}>
                     <div className={styles.subColumn}>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaPhp className={styles.icon} /> PHP</Link>
+                      <Link to="/services/php-application" className={styles.dropdownItem1} onClick={onLinkClick}><FaPhp className={styles.icon} /> PHP</Link>
                       <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaLaravel className={styles.icon} /> Laravel</Link>
                       <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> ROR</Link>
                       <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaMicrosoft className={styles.icon} /> Power Platform</Link>
@@ -164,10 +164,10 @@ function Technologiesdropdown1({
                       <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> C#</Link>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
 
-              Full Stack
+              {/* Full Stack
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaServer className={styles.icon} /> Full Stack </div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaServer className={styles.icon} /> Full Stack MERN</Link>

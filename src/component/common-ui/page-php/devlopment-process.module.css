@@ -1,0 +1,153 @@
+.section {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: #000000 1px solid;
+  border-radius: 16px;
+  padding: 3rem 1rem;
+  box-shadow: 4px 12px 4px rgba(46, 44, 44, 0.8);
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 0.75rem 2.5rem;
+  border-radius: 32px;
+  text-align: center;
+  margin: 0;
+}
+
+.cardsWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #000000;
+  flex: 0 0 auto;
+  width: 200px;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.cardText {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ============================= */
+/* RESPONSIVE BREAKPOINTS */
+/* ============================= */
+
+/* Large Desktops (1440px and above) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+    padding: 4rem 2rem;
+  }
+  .title {
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+  }
+  .card {
+    width: 220px;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Laptops & Small Desktops (1024px–1439px) */
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .container {
+    padding: 3rem 1.5rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .card {
+    width: 210px;
+  }
+}
+
+/* Tablets (768px–1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .title {
+    font-size: 1.3rem;
+    padding: 0.6rem 2rem;
+  }
+  .cardsWrapper {
+    gap: 1.2rem;
+  }
+  .card {
+    width: 180px;
+  }
+}
+
+/* Mobiles (480px–767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 24px;
+  }
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+  .cardsWrapper {
+    gap: 1rem;
+  }
+  .cardText {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra Small Phones (<480px) */
+@media (max-width: 479px) {
+  .section {
+    padding: 2rem 0.5rem;
+  }
+  .container {
+    padding: 2rem 1rem;
+  }
+  .title {
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+  }
+  .card {
+    width: 100%;
+    padding: 1rem;
+    min-height: auto;
+  }
+  .cardText {
+    font-size: 0.9rem;
+  }
+}

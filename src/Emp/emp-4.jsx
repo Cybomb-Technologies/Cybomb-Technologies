@@ -18,6 +18,21 @@ import SwiftApp from "../component/pages-services/technologies/mobile-apps/swift
 import KotlinApp from "../component/pages-services/technologies/mobile-apps/kotlin-app-dev/kotlin";
 import XamarinApp from "../component/pages-services/technologies/mobile-apps/xamarin-aap-dev/xamarin";
 import StratergyServices from "../component/pages-dataui/data-page/stratergy-consulting/stratergy";
+import ProcessingServices from "../component/pages-dataui/data-page/processing/processings";
+import GovernanceSolution from "../component/pages-dataui/data-page/governance-solution/governance";
+import StorageServices from "../component/pages-dataui/data-page/storage-solution/storage";
+import QualityServices from "../component/pages-dataui/data-page/quality-management/quality";
+import ModelingServices from "../component/pages-dataui/data-page/modeling-design/modeling";
+import ArchitectureData from "../component/pages-dataui/data-page/architecturedata/architecture";
+import AnalyticsandVisualization from "../component/pages-dataui/data-page/anlyticsandvisualization/analytics";
+import CloudData from "../component/pages-dataui/data-page/cloud-data-migration/cloud-data";
+import CustomAiServices from "../component/pages-dataui/ui-page/custom-ai-development/customAi";
+import AiConsultingServices from "../component/pages-dataui/ui-page/ai-consulting/ai-consuting-service";
+import AiBusinessServices from "../component/pages-dataui/ui-page/ai-business/ai-business-service";
+import LargeLanguageServices from "../component/pages-dataui/ui-page/large-language-model/large-language-service";
+import AiPersolizedServices from "../component/pages-dataui/ui-page/ai-persolized-customer/ai-persolized-service";
+import BlockChainServices from "../component/pages-dataui/ui-page/blockchain/blockchain-service";
+import PHPApp from "../component/pages-services/technologies/custom-development/page-php/php";
 
 const emp4Routes = (
   <>
@@ -40,6 +55,22 @@ const emp4Routes = (
     <Route path="/services/kotlin-app-development" element={<KotlinApp/>}/>
     <Route path="/services/xamarin-app-development" element={<XamarinApp/>}/>
     <Route path="/services/stratergy-consulting" element={<StratergyServices/>}/>
+    <Route path="/services/processing" element={<ProcessingServices/>}/>
+    <Route path="/services/governance-solution" element={<GovernanceSolution/>}/>
+    <Route path="/services/storage-solution" element={<StorageServices/>}/>
+    <Route path="/services/quality-management" element={<QualityServices/>}/>
+    <Route path="/services/modeling-design" element={<ModelingServices/>}/>
+    <Route path="/services/architecture" element={<ArchitectureData/>}/>
+    <Route path="/services/analyticsandvisualization" element={<AnalyticsandVisualization/>}/>
+    <Route path="/services/cloud-data-migration" element={<CloudData/>}/>
+    <Route path="/services/custom-ai-development" element={<CustomAiServices/>}/>
+    <Route path="/services/ai-consulting-strategy" element={<AiConsultingServices/>}/>
+    <Route path="/services/ai-business-intelligence" element={<AiBusinessServices/>}/>
+    <Route path="/services/large-language-model" element={<LargeLanguageServices/>}/>
+    <Route path="/services/ai-persolized-customer-experience" element={<AiPersolizedServices/>}/>
+    <Route path="/services/blockchain" element={<BlockChainServices/>}/>
+    <Route path="/services/php-application" element={<PHPApp/>}/>
+    
   
   </>
 );
