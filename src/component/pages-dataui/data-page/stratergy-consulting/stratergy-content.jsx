@@ -10,81 +10,80 @@ import DevelopmentProcess from "../../../common-ui/dataui/development-process";
 
 const WhatWeOffers = [
   {
-    title: "Reputation Audits",
+    title: "Digital Transformation Planning",
     description:
-      "We evaluate your brand’s digital footprint, sentiment, and search visibility.",
+      "Roadmaps to modernize legacy systems, adopt cloud, and digitize operations",
   },
   {
-    title: "Review & Rating Management",
+    title: "Product & Platform Strategy",
     description:
-      "Monitor, respond to, and improve reviews across platforms like Google, Yelp, Trustpilot, Glassdoor, etc.",
+      "Define the right features, tech stack, and market approach for digital products.",
   },
   {
-    title: "Negative Content Suppression",
+    title: "Technology Audits",
     description:
-      "Push down negative search results through strategic SEO and content development.",
+      "Evaluate current tools and architecture with clear upgrade paths.",
   },
   {
-    title: "Social Media Monitoring & Engagement",
+    title: "Go-to-Market Strategy",
     description:
-      "We track mentions and help you maintain a consistent, positive brand tone.",
+      "Position your software, app, or service for competitive success.",
   },
   {
-    title: "Brand Sentiment Analysis",
+    title: "Process Optimization Consulting",
     description:
-      "AI-powered insights to understand how people feel about your brand online.",
+      "Improve workflows, reduce redundancies, and scale operations effectively.",
   },
   {
-    title: "Proactive Reputation Building",
+    title: "Growth & Innovation Advisory",
     description:
-      "Publish positive press, success stories, and customer testimonials to enhance brand image.",
+      "Identify new revenue streams, market trends, and emerging technologies.",
   },
 ];
 
 const whychooseus = [
   {
-    title: "Strategic, Long-Term Focus",
+    title: "Business & Tech Alignment",
     description:
-      "We don’t just react — we build a proactive reputation strategy for future-proof credibility.",
+      "We bridge the gap between C-level vision and real-world tech execution.",
   },
   {
-    title: "Transparency & Reporting",
+    title: "Industry-Agnostic Expertise",
     description:
-      "Regular updates, sentiment trends, and actions taken — so you're always in the loop.",
+      "consultants work across fintech, healthcare, SaaS, e-commerce, and more.",
   },
   {
-    title: "Crisis Management Ready",
+    title: "Data-Driven Insights",
     description:
-      "Swift response systems to minimize damage during reputation incidents.",
+      "recommendation is backed by research, KPIs, and feasibility analysis.",
   },
   {
-    title: "Cross-Platform Expertise",
+    title: "Execution-Ready Plans",
     description:
-      "From Google search results to Reddit threads, we manage your brand everywhere it lives.",
+      "Our strategy goes beyond theory - it's built for immediate implementation.",
   },
   {
-    title: "Tailored for You",
+    title: "Collaborative Approach",
     description:
-      "Custom ORM approaches based on your industry, goals, and audience behavior.",
+      "work closely with your teams to ensure buy-in and clarity at every level.",
   },
 ];
 
 const useCases = [
-  "Managing online reviews after a product or service mishap",
-  "Building personal reputation for thought leaders or CEOs",
-  "Suppressing outdated or negative news articles",
-  "Monitoring brand mentions and sentiments across social media",
-  "Restoring trust after a PR or social media crisis"
+  "Optimizing costs with cloud migration and automation",
+  "Designing a scalable product roadmap before launch",
+  "Revamping internal processes for better productivity",
+  "Creating a 2-year digital transformation roadmap",
+  "Evaluating whether to build or buy a software platform"
 ];
 function Stratergycontent(){
     return(
     <section>
     <Banner 
-        heading="Online Reputation Management (ORM)"
-        subtext="Protect your brand. Build trust. Shape perception."
+        heading="Strategy Consultancy"
+        subtext="Empower smarter decision. Build a future-proof roadmap."
         buttonText="Book Free Consultation"
-        note="In today’s digital world, your reputation is everything. We help monitor, manage, and enhance your online presence so your audience sees the best version of your brand — always.
-Whether you're a business, entrepreneur, or public figure, we provide tailored ORM strategies that keep you in control of your narrative."
+        note="Our stratergy consultancy services help businesses align their technology, operations, and growth initiatives with a clear, actionable plan - tailored for today's fast-changing digital world. Whether you're scaling a startup or optimizing an enterprises, we offer strategic insights and hands-on expertise to guide your next move."
     />
     <InfoStats
         stats={[
@@ -98,7 +97,7 @@ Whether you're a business, entrepreneur, or public figure, we provide tailored O
     <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
     
     <ScheduleConsultation
-      heading="Stay Ahead Of The Competition With Our Online Reputation Management Services"
+      heading="Stay Ahead Of The Competition With Our Strategy Consultancy Services"
       buttonText="Schedule a Consultation!"
       imageSrc={placeholderImage}
       imageAlt="CRM Consultation"
@@ -106,7 +105,7 @@ Whether you're a business, entrepreneur, or public figure, we provide tailored O
     />
      <WhyChooseUs ChooseUs={whychooseus}/>
       <OnlinePresence 
-               title = "Let's Find the Online Reputation Management Services right for your business."
+               title = "Let's Find the Strategy Consultancy Services right for your business."
                buttonText = "CONTACT US"
                buttonLink = "#"
                imageSrc = {placeholderImage}

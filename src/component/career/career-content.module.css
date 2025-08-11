@@ -1,0 +1,266 @@
+/* Base Styles */
+.careerSection {
+  padding: 80px 0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background-color: #f8fafc;
+}
+/* Typography */
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+/* Intro Section */
+.benefitCard {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+/* Stats Box */
+.statItem h3 {
+  font-size: 2.2rem;
+  color: #3b82f6;
+  margin-bottom: 5px;
+}
+.statItem p {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.statItem small {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+/* Filter Bar
+.filterBar {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+.resetButton:hover {
+  background: #e2e8f0;
+} */
+/* Job Listings */
+.jobCard {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.jobCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.jobMeta span {
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #f1f5f9;
+  color: #64748b;
+}
+/* No Results */
+/* Gallery Section */
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.galleryItem {
+  height: 180px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.galleryOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+.galleryItem:hover .galleryOverlay {
+  transform: translateY(0);
+}
+/* Testimonials */
+.testimonialContainer {
+  position: relative;
+  min-height: 200px;
+}
+.testimonialBox {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.testimonialBox
+.testimonialQuote {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #334155 !important;
+}
+.testimonialAuthor {
+  display: flex;
+  flex-direction: column;
+}
+.testimonialAuthor strong {
+  color: #1e293b;
+}
+.testimonialAuthor span {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+.testimonialAuthor small {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+.testimonialControls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 220px;
+}
+.testimonialDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.processStack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center; /* Center the whole stack */
+}
+
+.processStepStack {
+  display: flex;
+  flex-direction: row; /* Stack step number & text vertically */
+  align-items: center; /* Center contents */
+  text-align: center; /* Center text */
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 700px; /* Keep a nice readable width */
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.processStepStack:hover {
+  transform: translateY(-3px);
+}
+
+.stepCircle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent-color, #0d6efd);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem; /* Space between circle and text */
+}
+
+.stepContent{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.stepContent h5{
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  justify-content: start;
+  padding-left: 12px;
+}
+
+.stepContent p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #6c757d;
+  text-align: left;
+  padding-left: 10px;
+}
+
+
+/* Modal Styles */
+.modalJobMeta span {
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #f1f5f9;
+  color: #64748b;
+}
+.responsibilitiesList li {
+  margin-bottom: 8px;
+  color: #475569;
+}
+.benefitsList li {
+  margin-bottom: 8px;
+  color: #475569;
+}
+/* Apply Modal */
+.formStep
+.primaryButton:hover {
+  background: #2563eb;
+}
+.primaryButton:disabled {
+  background: #bfdbfe;
+  cursor: not-allowed;
+}
+.secondaryButton:hover {
+  background: #e2e8f0;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .careerSection {
+    padding: 40px 0;
+  }
+  .jobCard {
+    flex-direction: column;
+  }
+  
+}
+@media (max-width: 576px) {
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  .filterBar .row > div {
+    margin-bottom: 15px;
+  }
+  .filterBar .row > div:last-child {
+    margin-bottom: 0;
+  }
+  .testimonialControls {
+    margin-top: 250px;
+  }
+}

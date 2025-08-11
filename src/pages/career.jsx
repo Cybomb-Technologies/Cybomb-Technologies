@@ -1,9 +1,8 @@
-import Careerbanner from "../component/career/career-banner";
-import Careercontent from "../component/career/career-content";
+import CareerContent from "../component/career/career-content";
 import Metatags from "../SEO/meta-tags";
 
-function Career() {
-  const metaPropsData = {
+export default function Career() {
+    const metaPropsData = {
   title: "Careers - Join Cybomb Technologies | Build Your Future with Us",
   description:
     "Explore exciting career opportunities at Cybomb Technologies. We’re hiring passionate developers, designers, and digital experts to innovate and grow with us.",
@@ -15,10 +14,7 @@ function Career() {
   return (
     <>
     <Metatags  metaProps={metaPropsData}/>
-      <Careerbanner />
-      <Careercontent />
+      <CareerContent />
     </>
   );
 }
-
-export default Career;

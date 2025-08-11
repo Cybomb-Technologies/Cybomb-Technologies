@@ -1,0 +1,181 @@
+.hiringModelsSection {
+  background: #007ea7;
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.textColumn {
+  flex: 0 0 65%;
+}
+
+.imageColumn {
+  flex: 0 0 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.titleBlock {
+  background: rgba(0, 52, 89, 0.9);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin: 0 auto 2rem auto;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+}
+
+.modelBlock {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.bucketHoursBlock {
+  background-color: aliceblue;
+}
+
+.dedicatedBlock {
+  background-color: aliceblue;
+}
+
+.modelTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #003459;
+  margin-bottom: 0.5rem;
+  padding-top: 4px;
+}
+
+.modelDescription {
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 1.6;
+}
+
+p.modelDescription {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.modelHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: #003459;
+}
+
+.modelsRow {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.modelBlock {
+  flex: 1 1 calc(50% - 1.5rem);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .row {
+    gap: 1.5rem;
+  }
+
+  .textColumn {
+    flex: 0 0 100%;
+  }
+
+  .imageColumn {
+    display: none;
+  }
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .modelTitle {
+    font-size: 1.4rem;
+  }
+
+  .modelDescription {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .textColumn {
+    flex: 0 0 100%;
+  }
+
+  .imageColumn {
+    display: none;
+  }
+
+  .sectionTitle {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .modelsRow {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .modelBlock {
+    flex: 1 1 100%;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+
+  .modelTitle {
+    font-size: 1.3rem;
+  }
+
+  .modelDescription {
+    font-size: 1rem;
+  }
+
+  .titleBlock {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}
