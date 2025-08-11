@@ -1,0 +1,297 @@
+.techSection {
+  padding: 4rem 1rem;
+  background: #007ea7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.productsRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.productCard {
+  background: white;
+  border: 2px solid #003459;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  width: 180px;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.productCard .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.productCard:hover {
+  background: #003459;
+  color: white;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.productCard.active {
+  background: #003459;
+  color: white;
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 
+.productCard {
+  background: white;
+  border: 2px solid #003459;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  width: auto; 
+  min-width: 220px; 
+  text-align: left;
+  transition: all 0.3s ease;
+  display: flex; 
+  align-items: center;
+  gap: 0.75rem; 
+}
+.productCard .icon {
+  font-size: 1.5rem;
+  margin: 0; 
+} */
+
+
+.techDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.techGroup h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #003459;
+}
+
+.techItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.techDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.techCategory {
+  flex: 0 0 250px;
+}
+
+.techCategory h3 {
+  background: #003459; 
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 6px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.techItemsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.techCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+.techCard img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.techCard span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.techCard:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Tablet & Mobile: Row layout */
+/*
+@media (max-width: 1024px) {
+  /* .productCard {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 350px;
+  }
+}
+*/
+
+/* Desktop - keep row layout */
+.techRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Mobile */
+@media (max-width: 687px) {
+  .techRow {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .techCategory {
+    width: 100%;
+  }
+
+  .techItemsRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .techCard {
+    width: 100%;
+    max-width: 180px;
+    justify-content: center;
+    min-width: calc(50% - 0.5rem);
+  }
+
+  .productCard {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .techCategory{
+    flex: none;
+    width: 100%;
+    text-align:center;
+  }
+
+    .techCard img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        }
+
+    .techCard span {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .sectionTitle{
+        font-size: 1.8rem;
+        color: #ffffff;
+    }
+}
+
+/* Tablet*/
+@media (min-width: 689px) and (max-width: 1024px) {
+
+    .productCard {
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+        gap: 0.5rem;
+        /* width: 60%; */
+        padding: 0.5rem 1rem;
+        max-width: calc(50% - 0.5rem);
+        min-width: 250px;
+    }
+
+  .techRow {
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .techItemsRow {
+    /* display: grid;
+    grid-template-columns: repeat(5, 1fr); */
+        gap: 0.5rem;
+        justify-items: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    
+  }
+
+  .techCard {
+    width: 100%;
+    max-width: 220px;
+    justify-content: center;
+  }
+
+  .techCategory{
+    flex: none;
+    width: 50%;
+    text-align:center;
+  }
+
+  .techCard img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    }
+
+    .techCard span {
+    font-size: 1rem;
+    font-weight: 400;
+    }
+
+    .sectionTitle{
+        font-size: 2.5rem;
+        color: #ffffff;
+    }
+}
+
+

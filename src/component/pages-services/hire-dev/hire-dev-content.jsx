@@ -2,6 +2,11 @@
 import Banner from "./hire-dev-section/banner";
 import InfoStats from "./hire-dev-section/info-stats";
 import WhyChooseUs from "./hire-dev-section/WhyChooseUs";
+import HiringModels from "./hire-dev-section/hiring-models";
+import WhatSetsUsApart from "./hire-dev-section/what-sets-us-apart";
+import HireDevBtn from "./hire-dev-section/hire-dev-btn";
+import FreeConsultation from "../../common-ui/free-consultation/free-consultation";
+import ChooseYourTech from "./hire-dev-section/choose-your-tech";
 
 function HireDevContent() {
   return (
@@ -22,6 +27,11 @@ function HireDevContent() {
         highlight="Fortune 500 Companies"
     />
     <WhyChooseUs/>
+    <HiringModels/>
+    <WhatSetsUsApart/>
+    <ChooseYourTech/>
+    <HireDevBtn/>
+    {/* <FreeConsultation/> */}
 
     </>
   );
