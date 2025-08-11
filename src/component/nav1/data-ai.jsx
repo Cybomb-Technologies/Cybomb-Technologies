@@ -83,28 +83,28 @@ function Datadropdown1({
                 <Link className={styles.dropdownItem} to="/services/stratergy-consulting" onClick={onLinkClick}>
                   <FaRegLightbulb className={styles.icon} /> Strategy Consulting
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/processing" onClick={onLinkClick}>
                   <FaCogs className={styles.icon} /> Processing
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/governance-solution" onClick={onLinkClick}>
                   <FaClipboardCheck className={styles.icon} /> Governance Solution
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/storage-solution" onClick={onLinkClick}>
                   <MdStorage className={styles.icon} /> Storage Solution
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/quality-management" onClick={onLinkClick}>
                   <FaProjectDiagram className={styles.icon} /> Quality Management
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/modeling-design" onClick={onLinkClick}>
                   <FaPuzzlePiece className={styles.icon} /> Modelling Design
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/architecture" onClick={onLinkClick}>
                   <FaDatabase className={styles.icon} /> Architecture
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/analyticsandvisualization" onClick={onLinkClick}>
                   <SiGoogleanalytics className={styles.icon} /> Analytics & Visualization
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/cloud-data-migration" onClick={onLinkClick}>
                   <FaCloudUploadAlt className={styles.icon} /> Cloud Data Migration
                 </Link>
               </div>
@@ -112,22 +112,22 @@ function Datadropdown1({
               {/* AI Column */}
               <div className={styles.dropdownColumn}>
                 <div className={styles.dropdownHeader}> <FaBrain className={styles.icon} /> AI</div>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/custom-ai-development" onClick={onLinkClick}>
                   <GiArtificialIntelligence className={styles.icon} /> Custom AI Development
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/ai-consulting-strategy" onClick={onLinkClick}>
                   <FaRegLightbulb className={styles.icon} /> AI Consulting Strategy
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/ai-business-intelligence" onClick={onLinkClick}>
                   <FaChartPie className={styles.icon} /> AI Business Intelligence
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="services/large-language-model" onClick={onLinkClick}>
                   <FaRobot className={styles.icon} /> Large Language Models Solutions
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/ai-persolized-customer-experience" onClick={onLinkClick}>
                   <FaUserCog className={styles.icon} /> AI Personalized Customer Experience
                 </Link>
-                <Link className={styles.dropdownItem} to="#" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/blockchain" onClick={onLinkClick}>
                   <FaCube className={styles.icon} /> Blockchain
                 </Link>
               </div>
