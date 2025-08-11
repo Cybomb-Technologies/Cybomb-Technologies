@@ -12,20 +12,17 @@ function Metatags({ metaProps }) {
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "PS Industrials",
-      addressLocality: "Guindy",
-      postalCode: "600032",
+      streetAddress:
+        "Hygee Works - Prime Plaza No.54/1, 1st Street, Sripuram Colony, Viralur, Chakrapani Colony",
+      addressLocality: "St. Thomas Mount, Chennai",
+      postalCode: "600016",
+      addressRegion: "Tamil Nadu",
       addressCountry: "IN",
     },
+
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-      ],
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "09:00",
       closes: "18:00",
     },
@@ -58,9 +55,7 @@ function Metatags({ metaProps }) {
       <meta name="twitter:image" content={metaProps.image} />
 
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(jsonLd)}
-      </script>
+      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Helmet>
   );
 }
