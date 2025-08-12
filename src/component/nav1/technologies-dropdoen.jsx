@@ -141,30 +141,30 @@ function Technologiesdropdown1({
               </div>
               
                 {/* Custom Development */}
-                {/* <div className={styles.techColumn1}> 
+                <div className={styles.techColumn1}> 
                   <div className={styles.dropdownHeader}>
                     <FaLaptopCode className={styles.icon} /> Custom Development
                   </div>
                   <div className={styles.subColumnWrapper}>
                     <div className={styles.subColumn}>
-                      <Link to="/services/php-application" className={styles.dropdownItem1} onClick={onLinkClick}><FaPhp className={styles.icon} /> PHP</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaLaravel className={styles.icon} /> Laravel</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> ROR</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaMicrosoft className={styles.icon} /> Power Platform</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaHtml5 className={styles.icon} /> HTML5</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaJs className={styles.icon} /> JavaScript</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> Zoho Creator</Link>
+                      <Link to="/services/php-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaPhp className={styles.icon} /> PHP</Link>
+                      <Link to="/services/laravel development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaLaravel className={styles.icon} /> Laravel</Link>
+                      <Link to="/services/ror-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> ROR</Link>
+                      <Link to="/services/power-platform-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaMicrosoft className={styles.icon} /> Power Platform</Link>
+                      <Link to="/services/html5-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaHtml5 className={styles.icon} /> HTML5</Link>
+                      <Link to="/services/javascript-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaJs className={styles.icon} /> JavaScript</Link>
+                      <Link to="/services/zohocreator-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> Zoho Creator</Link>
                     </div>
                     <div className={styles.subColumn}>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaPython className={styles.icon} /> Python</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaMicrosoft className={styles.icon} /> DotNet</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaNodeJs className={styles.icon} /> NodeJS</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaAngular className={styles.icon} /> Angular</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> Spring</Link>
-                      <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> C#</Link>
+                      <Link to="/services/python-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaPython className={styles.icon} /> Python</Link>
+                      <Link to="/services/dotnet-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaMicrosoft className={styles.icon} /> DotNet</Link>
+                      <Link to="/services/nodejs-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaNodeJs className={styles.icon} /> NodeJS</Link>
+                      <Link to="/services/angular-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaAngular className={styles.icon} /> Angular</Link>
+                      {/* <Link to="/services/spring-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> Spring</Link>
+                      <Link to="/services/csharp-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> C#</Link> */}
                     </div>
                   </div>
-                </div> */}
+                </div>
 
 
               {/* Full Stack
