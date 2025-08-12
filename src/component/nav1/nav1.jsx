@@ -229,12 +229,12 @@ function Nav1() {
                 onToggle={() => handleDropdownToggle("security")}
                 onLinkClick={handleNavItemClick}
               />
-              {/* <Industriesdropdown1
+              <Industriesdropdown1
                 isMobile
                 isOpen={activeDropdown === "industries"}
                 onToggle={() => handleDropdownToggle("industries")}
                 onLinkClick={handleNavItemClick}
-              /> */}
+              /> 
 
               <li className={styles.navItem}>
                 <Link
