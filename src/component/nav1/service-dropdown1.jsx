@@ -49,7 +49,7 @@ function Servicedropdown1({
                       position: "absolute",
                       top: "100%",
                       left: "50%",
-                      transform: "translateX(-40%)",
+                      transform: "translateX(-25%)",
                       width: "max-content",
                       maxWidth: "calc(100vw - 40px)",
                     }

@@ -15,6 +15,7 @@ import emp4Routes from "./Emp/emp-4";
 import emp5Routes from "./Emp/emp-5";
 
 import Nav1 from "./component/nav1/nav1";
+import Footer1 from "./component/footer/footer1";
 
 function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
       </Routes>
       <Popupform />
       <Footer />
+      {/* <Footer1/> */}
     </Router>
   );
 }
