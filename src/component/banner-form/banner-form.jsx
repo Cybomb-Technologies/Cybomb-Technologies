@@ -23,8 +23,8 @@ function Bannerform() {
     setStatus("Sending...");
 
     try {
-      const res = await fetch(`https://cybomb.com/api/banner-mail`, {
-      
+      const res = await fetch(`${API_URL}/api/banner-mail`, {
+
         method: "POST",
         headers: {
           "Content-Type": "application/json",
