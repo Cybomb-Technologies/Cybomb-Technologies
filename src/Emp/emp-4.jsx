@@ -33,6 +33,18 @@ import LargeLanguageServices from "../component/pages-dataui/ui-page/large-langu
 import AiPersolizedServices from "../component/pages-dataui/ui-page/ai-persolized-customer/ai-persolized-service";
 import BlockChainServices from "../component/pages-dataui/ui-page/blockchain/blockchain-service";
 import PHPApp from "../component/pages-services/technologies/custom-development/page-php/php";
+import LaravelApp from "../component/pages-services/technologies/custom-development/page-laravel/laravel";
+import RORApp from "../component/pages-services/technologies/custom-development/page-ROR/ror";
+import PowerPlatformApp from "../component/pages-services/technologies/custom-development/page-power-platform/power";
+import HTML5App from "../component/pages-services/technologies/custom-development/page-html5/html5";
+import JavaScriptApp from "../component/pages-services/technologies/custom-development/page-javascript/javascript";
+import ZohoCreatorApp from "../component/pages-services/technologies/custom-development/paga-zohocreator/zohocreator";
+import PythonApp from "../component/pages-services/technologies/custom-development/page-python/python";
+import DotnetApp from "../component/pages-services/technologies/custom-development/page-dotnet/dotnet";
+import NodeJSApp from "../component/pages-services/technologies/custom-development/page-nodejs/nodejs";
+import AngularApp from "../component/pages-services/technologies/custom-development/page-angular/angular";
+import SpringApp from "../component/pages-services/technologies/custom-development/page-spring/spring";
+import CSharpApp from "../component/pages-services/technologies/custom-development/page-csharp/csharp";
 
 const emp4Routes = (
   <>
@@ -69,8 +81,19 @@ const emp4Routes = (
     <Route path="/services/large-language-model" element={<LargeLanguageServices/>}/>
     <Route path="/services/ai-persolized-customer-experience" element={<AiPersolizedServices/>}/>
     <Route path="/services/blockchain" element={<BlockChainServices/>}/>
-    <Route path="/services/php-application" element={<PHPApp/>}/>
-    
+    <Route path="/services/php-development-service" element={<PHPApp/>}/>
+    <Route path="/services/laravel development-service" element={<LaravelApp/>}/>
+    <Route path="/services/ror-development-service" element={<RORApp/>}/>
+    <Route path="/services/power-platform-development-service" element={<PowerPlatformApp/>}/>
+    <Route path="/services/html5-development-service" element={<HTML5App/>}/>
+    <Route path="/services/javascript-development-service" element={<JavaScriptApp/>}/>
+    <Route path="/services/zohocreator-development-service" element={<ZohoCreatorApp/>}/>
+    <Route path="/services/python-development-service" element={<PythonApp/>}/>
+    <Route path="/services/dotnet-development-service" element={<DotnetApp/>}/>
+    <Route path="/services/nodejs-development-service" element={<NodeJSApp/>}/>
+    <Route path="/services/angular-development-service" element={<AngularApp/>}/>
+    <Route path="/services/spring-development-service" element={<SpringApp/>}/>
+    <Route path="/services/csharp-development-service" element={<CSharpApp/>}/>
   
   </>
 );
