@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import CareerFilters from "./career-filters";
 import CareerCard from "./career-card";
-// import Testimonials from "./testimonials";
+import Testimonials from "./testimonials";
 import styles from "./career-content.module.css";
+import Gallery from './gallery';
 
 const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
   const [search, setSearch] = useState("");
@@ -44,29 +45,29 @@ const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
         clearFilters={clearFilters}
       />
 
-      {/* Job Listings */}
-      <div className="mb-5">
-        <h3 className={`mb-4 mt-3 ${styles.sectionTitle}`}>Current Openings</h3>
-        {filteredJobs.length > 0 ? (
-          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            {filteredJobs.map((job) => (
-              <div key={job.id} className="col">
-                <CareerCard job={job} onView={onViewJob} onApply={onApplyJob} />
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-5">
-            <h4 className="text-muted mb-3">No jobs match your criteria</h4>
-            <button
-              className="btn btn-outline-primary"
-              onClick={clearFilters}
-            >
-              Clear Filters
-            </button>
-          </div>
-        )}
-      </div>
+    
+<div className="mb-5">
+  <h3 className={`mb-4 mt-4 ${styles.sectionTitle}`}>Current Openings</h3>
+  {filteredJobs.length > 0 ? (
+    <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      {filteredJobs.map((job) => (
+        <div key={job.id} className="col">
+          <CareerCard job={job} onView={onViewJob} onApply={onApplyJob} />
+        </div>
+      ))}
+    </div>
+  ) : (
+    <div className="text-center py-5">
+      <h4 className="text-muted mb-3">No jobs match your criteria</h4>
+      <button
+        className="btn btn-outline-primary"
+        onClick={clearFilters}
+      >
+        Clear Filters
+      </button>
+    </div>
+  )}
+</div>
 
       {/* Why Join Us */}
       <section className="my-5 py-4">
@@ -179,27 +180,9 @@ const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
 </section>
 
       {/* Testimonials */}
-      {/* <Testimonials /> */}
+       <Testimonials />
 
-      {/* Gallery */}
-      {/* <section className="my-5 py-4">
-        <h3 className={`mb-5 text-center ${styles.sectionTitle}`}>
-          Life at Our Company
-        </h3>
-        <div className={styles.galleryGrid}>
-          {[1, 2, 3, 4, 5, 6].map((num) => (
-            <div
-              key={num}
-              className={styles.galleryItem}
-              style={{ backgroundImage: `url(/images/life${num}.jpg)` }}
-            >
-              <div className={styles.galleryOverlay}>
-                <small>Company Event {num}</small>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
+      <Gallery/>
     </div>
   );
 };
