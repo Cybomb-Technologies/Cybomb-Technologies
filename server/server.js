@@ -1,16 +1,13 @@
 require('dotenv').config();
-const fs = require('fs');
-const https = require('https');
-const http = require('http');
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const os = require('os');
  
-// Express app
+// Create Express app
 const app = express();
  
-// CORS setup
+// Allowed CORS origins
 const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
@@ -21,7 +18,13 @@ const allowedOrigins = [
  
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
+    if (!origin) return callback(null, true); // allow non-browser requests
+ 
+    const isAllowed = allowedOrigins.includes(origin) ||
+                      /^http:\/\/localhost(:\d+)?$/.test(origin) ||
+                      /^http:\/\/127\.0\.0\.1(:\d+)?$/.test(origin);
+ 
+    if (isAllowed) {
       callback(null, true);
     } else {
       callback(new Error(`Not allowed by CORS: ${origin}`));
@@ -31,6 +34,7 @@ app.use(cors({
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
+ 
  
 // Body parsers
 app.use(express.json());
@@ -73,7 +77,7 @@ app.use((err, req, res, next) => {
   });
 });
  
-// Get local IP
+// Get local IP for logs
 const getLocalIp = () => {
   const interfaces = os.networkInterfaces();
   for (const name in interfaces) {
@@ -86,26 +90,11 @@ const getLocalIp = () => {
   return 'localhost';
 };
  
-// SSL certificate paths
-const options = {
-    key: fs.readFileSync('/etc/letsencrypt/live/www.cybomb.com/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/www.cybomb.com/fullchain.pem'),
-  // key: fs.readFileSync('privkey.pem'),
-  // cert: fs.readFileSync('fullchain.pem')
-};
- 
-// HTTP → HTTPS redirect server
-http.createServer((req, res) => {
-  res.writeHead(301, { Location: `https://${req.headers.host}${req.url}` });
-  res.end();
-}).listen(80, () => {
-  console.log("🌐 HTTP server running on port 80 (redirecting to HTTPS)");
-});
- 
-// HTTPS server
-https.createServer(options, app).listen(443, () => {
-  console.log("🔒 HTTPS server running on port 443");
-  console.log(`➡️  Local:   https://localhost`);
-  console.log(`➡️  Network: https://${getLocalIp()}`);
+// Start server on internal port (nginx will proxy to this)
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`➡️  Local:   http://localhost:${PORT}`);
+  console.log(`➡️  Network: http://${getLocalIp()}:${PORT}`);
 });
  
