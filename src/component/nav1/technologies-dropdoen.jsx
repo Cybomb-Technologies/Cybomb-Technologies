@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./dropdown.module.css";
+import { useRef, useEffect, useState } from "react";
+
 
 import {
   FaMobileAlt,
@@ -37,6 +39,8 @@ import {
   FaGofore,
   FaRocket,
 } from "react-icons/fa";
+import { SiFlutter } from "react-icons/si";
+
 
 function Technologiesdropdown1({
   onLinkClick,
@@ -46,6 +50,18 @@ function Technologiesdropdown1({
   onMouseEnter,
   onMouseLeave,
 }) {
+
+  const dropdownRef = useRef(null);
+  const [columnCount, setColumnCount] = useState(0);
+
+  useEffect(() => {
+    if (dropdownRef.current) {
+      // Count only the top-level headers (direct techColumn children)
+      const columns = dropdownRef.current.querySelectorAll(`.${styles.techColumn}`);
+      setColumnCount(columns.length);
+    }
+  }, [isOpen]);
+
   return (
     <li
       className={styles.dropdownWrapper}
@@ -74,35 +90,36 @@ function Technologiesdropdown1({
           isMobile && isOpen ? styles.show : ""
         }`}
         style={
-          isMobile
-            ? {
-                display: isOpen ? "block" : "none",
-                position: "static",
-                width: "100%",
-                transform: "none",
-                padding: "0.5rem 1rem",
-              }
-            : {
-                display: isOpen ? "block" : "none",
-                position: "absolute",
-                top: "100%",
-                left: "50%",
-                transform: "translateX(-80%)",
-                minWidth: "250px",
-                maxWidth: "calc(50vw - 16px)",
-              }
-        }
+            isMobile
+              ? {
+                  display: isOpen ? "block" : "none",
+                  position: "static",
+                  width: "100%",
+                  transform: "none",
+                  padding: "0.5rem 1rem",
+                }
+              : {
+                  display: isOpen ? "block" : "none",
+                  position: "absolute",
+                  top: "100%",
+                  left: "50%",
+                  transform: "translateX(-70%)",
+                  minWidth: "750px",
+                  maxWidth: "1200px",
+                  width: `${Math.min(columnCount, 4) * 220}px`,
+                }
+          }
       >
         <li>
           <div className="container">
-            <div className={styles.dropdownGrid}>
+            <div className={styles.dropdownGrid} ref={dropdownRef}>
               {/* Mobile Apps */}
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}> <FaMobileAlt className={styles.icon} /> Mobile Apps </div>
                 <Link to="/services/android-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaAndroid className={styles.icon} /> Android </Link>
                 <Link to="/services/react-native-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaReact className={styles.icon} /> React Native </Link>
                 <Link to="/services/ios-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaApple className={styles.icon} /> iOS </Link>
-                <Link to="/services/flutter-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaReact className={styles.icon} /> Flutter</Link>
+                <Link to="/services/flutter-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <SiFlutter className={styles.icon} /> Flutter</Link>
                 <Link to="/services/swift-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaSwift className={styles.icon} /> Swift </Link>
                 <Link to="/services/kotlin-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaJava className={styles.icon} /> Kotlin </Link>
                 <Link to="/services/xamarin-app-development" className={styles.dropdownItem1} onClick={onLinkClick}> <FaMicrosoft className={styles.icon} /> Xamarin </Link>
@@ -167,39 +184,40 @@ function Technologiesdropdown1({
                 </div> */}
 
 
-              {/* Full Stack
-              <div className={styles.techColumn}>
+              {/* Full Stack */}
+              {/* <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaServer className={styles.icon} /> Full Stack </div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaServer className={styles.icon} /> Full Stack MERN</Link>
-              </div>
+              </div> */}
 
-              CRM
-              <div className={styles.techColumn}>
+             {/*  CRM */}
+              {/* <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaCogs className={styles.icon} /> CRM</div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> ServiceNow</Link>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> Salesforce</Link>
-              </div>
+              </div> */}
 
-              Games
-              <div className={styles.techColumn}>
+              {/* Games */}
+              {/* <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaGamepad className={styles.icon} /> Games</div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaUnity className={styles.icon} /> Unity</Link>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCube className={styles.icon} /> Unreal</Link>
-              </div>
+              </div> */}
 
-              Cloud
-              <div className={styles.techColumn}>
+              {/* Cloud */}
+              {/* <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaCloud className={styles.icon} /> Cloud</div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaAws className={styles.icon} /> AWS</Link>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaAzure className={styles.icon} /> Azure</Link>
-              </div>
+              </div> */}
 
-              Other
-              <div className={styles.techColumn}>
+              {/* Other*/}
+              {/* <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaCode className={styles.icon} /> Other</div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaGofore className={styles.icon} /> Golang</Link>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaRocket className={styles.icon} /> AR/VR</Link>
               </div> */}
+
             </div>
           </div>
         </li>
