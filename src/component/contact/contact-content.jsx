@@ -88,34 +88,32 @@ function Contactcontent() {
               link: "https://maps.app.goo.gl/wNjfo2WgKsKnZLty8",
               target:"_blank",
               btnText: "Get Directions",
-              bgClass: "bg-primary bg-opacity-10 text-primary"
+           
             },
             {
               icon: "bi-telephone-fill",
               title: "Call Us",
               content: "+91 97150 92104",
               link: "tel:+919715092104",
-              btnText: "Call Now",
-              bgClass: "bg-success bg-opacity-10 text-success"
+              btnText: "Call Now"
             },
             {
               icon: "bi-envelope-fill",
               title: "Email Us",
               content: "support@cybomb.com",
               link: "mailto:support@cybomb.com",
-              btnText: "Send Email",
-              bgClass: "bg-info bg-opacity-10 text-info"
+              btnText: "Send Email"
             }
           ].map((item, index) => (
             <div className="col-md-4" key={index}>
               <div className={`card h-100 border-0 ${styles.contactMethodCard}`}>
                 <div className="card-body text-center">
-                  <div className={`${styles.iconContainer} ${item.bgClass}`}>
+                  <div className={styles.iconContainer}>
                     <i className={`bi ${item.icon}`}></i>
                   </div>
                   <h5 className="mb-3">{item.title}</h5>
                   <p className="text-muted mb-4">{item.content}</p>
-                  <a href={item.link} className="btn btn-primary px-4">
+                  <a href={item.link} target={item.target} className="btn btn-primary px-4" style={{ backgroundColor: "#003459" }}>
                     {item.btnText}
                   </a>
                 </div>
@@ -128,79 +126,78 @@ function Contactcontent() {
         <div className="row g-4 my-5">
           {/* Contact Info */}
           <div className="col-lg-5">
-            <div className="card h-100 border-0 shadow-sm bg-primary text-white">
+            <div className="card h-100 border-0 shadow-sm text-white" style={{ backgroundColor: "#003459" }}>
               <div className="card-body p-4 p-md-5">
                 <h3 className="mb-4">Contact Information</h3>
                 
                 <div className={styles.contactInfoItem}>
-  <div className={`${styles.contactInfoIcon} bg-white text-primary`}>
-    <i className="bi bi-geo-alt-fill"></i>
-  </div>
- 
-  <div className={styles.contactInfoText}>
-    <h5>Address</h5>
-    <p>
-      Cybomb Technologies LLP<br />
-      Prime Plaza – No.54/1, Ist street, Sripuram Colony<br />
-     St. Thomas Mount, Chennai, India
-    </p>
-  </div>
-</div>
-
+                  <div className={styles.contactInfoIcon}>
+                    <i className="bi bi-geo-alt-fill"></i>
+                  </div>
+                  <div className={styles.contactInfoText}>
+                    <h5>Address</h5>
+                    <p>
+                      Cybomb Technologies LLP<br />
+                      Prime Plaza – No.54/1, Ist street, Sripuram Colony<br />
+                      St. Thomas Mount, Chennai, India
+                    </p>
+                  </div>
+                </div>
 
                 {/* Working Hours */}
-<div className={styles.contactInfoItem}>
-  <div className={`${styles.contactInfoIcon} bg-white text-primary`}>
-    <i className="bi bi-clock-fill"></i>
-  </div>
-  <div className={styles.contactInfoText}>
-    <h5>Working Hours</h5>
-    <p>Mon-Fri: 9:00 AM – 6:00 PM</p>
-    <p>Saturday: 10:00 AM – 4:00 PM</p>
-    <p>Sunday: Closed</p>
-  </div>
-</div>
- {/* New Visit Our Office Block */}
-<div className={`${styles.contactInfoTextBlock} mt-4`}>
-  <h5>Visit Our Office</h5>
-  <p className="mb-0">
-    Located in the heart of Chennai's tech hub, our office is easily accessible
-    and equipped with modern facilities for client meetings and collaboration.
-  </p>
-</div>
+                <div className={styles.contactInfoItem}>
+                  <div className={styles.contactInfoIcon}>
+                    <i className="bi bi-clock-fill"></i>
+                  </div>
+                  <div className={styles.contactInfoText}>
+                    <h5>Working Hours</h5>
+                    <p>Mon-Fri: 9:00 AM – 6:00 PM</p>
+                    <p>Saturday: 10:00 AM – 4:00 PM</p>
+                    <p>Sunday: Closed</p>
+                  </div>
+                </div>
+
+                {/* Visit Our Office Block */}
+                <div className={`${styles.contactInfoTextBlock} mt-4`}>
+                  <h5>Visit Our Office</h5>
+                  <p className="mb-0">
+                    Located in the heart of Chennai's tech hub, our office is easily accessible
+                    and equipped with modern facilities for client meetings and collaboration.
+                  </p>
+                </div>
+
                 <hr className="my-4 bg-white opacity-25" />
 
                 <h5 className="mb-3">Follow Us</h5>
                 <div className="d-flex">
-  {[
-    { icon: "bi-instagram", url: "https://www.instagram.com/cybomb_tech/" },
-    { icon: "bi-linkedin", url: "https://www.linkedin.com/company/cybomb/" }
-  ].map((social, i) => (
-    <a 
-      key={i}
-      href={social.url} 
-      target="_blank" 
-      rel="noreferrer"
-      className="btn btn-outline-light rounded-circle me-2"
-    >
-      <i className={`bi ${social.icon}`}></i>
-    </a>
-  ))}
+                  {[
+                    { icon: "bi-instagram", url: "https://www.instagram.com/cybomb_tech/" },
+                    { icon: "bi-linkedin", url: "https://www.linkedin.com/company/cybomb/" }
+                  ].map((social, i) => (
+                    <a 
+                      key={i}
+                      href={social.url} 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="btn btn-outline-light rounded-circle me-2"
+                    >
+                      <i className={`bi ${social.icon}`}></i>
+                    </a>
+                  ))}
 
-  {/* X Logo */}
-  <a 
-    href="https://x.com/CybombTech"
-    target="_blank"
-    rel="noreferrer"
-    className="btn btn-outline-light rounded-circle me-2"
-    style={{ padding: "0.45rem" }}
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 1200 1227">
-      <path d="M714.163 519.284L1160.89 0H1055.2L675.85 442.798 370.346 0H0l468.127 684.109L0 1226.2h105.685l401.507-474.692L829.654 1226.2H1200z"/>
-    </svg>
-  </a>
-</div>
-
+                  {/* X Logo */}
+                  <a 
+                    href="https://x.com/CybombTech"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-outline-light rounded-circle me-2"
+                    style={{ padding: "0.45rem" }}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 1200 1227">
+                      <path d="M714.163 519.284L1160.89 0H1055.2L675.85 442.798 370.346 0H0l468.127 684.109L0 1226.2h105.685l401.507-474.692L829.654 1226.2H1200z"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -232,7 +229,7 @@ function Contactcontent() {
                   </div>
                 ) : (
                   <>
-                    <h3 className="mb-4 text-primary">Send Us a Message</h3>
+                    <h3 className="mb-4" style={{ color: "#003459" }}>Send Us a Message</h3>
                     <form onSubmit={handleSubmit}>
                       <div className="row g-3">
                         <div className="col-12">
@@ -241,7 +238,7 @@ function Contactcontent() {
                           </label>
                           <div className="input-group">
                             <span className="input-group-text bg-light">
-                              <i className="bi bi-person-fill text-primary"></i>
+                              <i className="bi bi-person-fill" style={{ color: "#003459" }}></i>
                             </span>
                             <input
                               type="text"
@@ -261,7 +258,7 @@ function Contactcontent() {
                           </label>
                           <div className="input-group">
                             <span className="input-group-text bg-light">
-                              <i className="bi bi-envelope-fill text-primary"></i>
+                              <i className="bi bi-envelope-fill" style={{ color: "#003459" }}></i>
                             </span>
                             <input
                               type="email"
@@ -279,18 +276,17 @@ function Contactcontent() {
                           <label className="form-label fw-bold">
                             Phone Number <span className="text-danger">*</span>
                           </label>
-                        <PhoneInput
-  country="in"
-  value={formData.phone}
-  onChange={handlePhoneChange}
-  inputProps={{
-    name: 'phone',
-    required: true,
-  }}
-  containerClass="react-tel-input w-100"
-  inputClass={styles.phoneInput} // custom class
-/>
-
+                          <PhoneInput
+                            country="in"
+                            value={formData.phone}
+                            onChange={handlePhoneChange}
+                            inputProps={{
+                              name: 'phone',
+                              required: true,
+                            }}
+                            containerClass="react-tel-input w-100"
+                            inputClass={styles.phoneInput}
+                          />
                         </div>
 
                         <div className="col-12">
@@ -299,7 +295,7 @@ function Contactcontent() {
                           </label>
                           <div className="input-group">
                             <span className="input-group-text bg-light align-items-start">
-                              <i className="bi bi-chat-left-text-fill text-primary mt-1"></i>
+                              <i className="bi bi-chat-left-text-fill mt-1" style={{ color: "#003459" }}></i>
                             </span>
                             <textarea
                               className="form-control"
@@ -331,7 +327,7 @@ function Contactcontent() {
                         <div className="col-12 mt-3">
                           <button
                             type="submit"
-                            className="btn btn-primary w-100 py-3"
+                            className="btn btn-primary w-100 py-3" style={{ backgroundColor: "#003459" }}
                             disabled={isSubmitting}
                           >
                             {isSubmitting ? (
@@ -354,32 +350,32 @@ function Contactcontent() {
             </div>
           </div>
         </div>
-
-        
       </div>
-{/* Map Section */}
-        <div className={styles.mapContainer}>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.4279204989957!2d80.19743463488764!3d13.008399400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52679b4aace7c3%3A0x3a52679b4aace7c3!2sHygee%20Works%20%E2%80%93%20PS%20Industrials!5e0!3m2!1sen!2sin!4v1712345678901!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Cybomb Location"
-          />
-          <div className={styles.mapOverlay}>
-            <a 
-              href="https://maps.app.goo.gl/wNjfo2WgKsKnZLty8" 
-              target="_blank" 
-              rel="noreferrer"
-              className="btn btn-primary shadow"
-            >
-              <i className="bi bi-arrow-up-right-circle me-2"></i> Open in Maps
-            </a>
-          </div>
+
+      {/* Map Section */}
+      <div className={styles.mapContainer}>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.4279204989957!2d80.19743463488764!3d13.008399400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52679b4aace7c3%3A0x3a52679b4aace7c3!2sHygee%20Works%20%E2%80%93%20PS%20Industrials!5e0!3m2!1sen!2sin!4v1712345678901!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Cybomb Location"
+        />
+        <div className={styles.mapOverlay}>
+          <a 
+            href="https://maps.app.goo.gl/wNjfo2WgKsKnZLty8" 
+            target="_blank" 
+            rel="noreferrer"
+            className="btn btn-primary shadow" style={{ backgroundColor: "#003459" }} 
+          >
+            <i className="bi bi-arrow-up-right-circle me-2"></i> Open in Maps
+          </a>
         </div>
+      </div>
+
       {/* Floating Action Button */}
       <a 
         href="https://wa.me/919715092104" 
