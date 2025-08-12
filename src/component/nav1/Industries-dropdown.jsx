@@ -141,14 +141,14 @@ function Industriesdropdown1({
                   <FaShoppingCart className={styles.icon} /> Retail/FMCG
                 </Link>
               </div>
-
+{/* 
               <div className={styles.dropdownColumn}>
                 
               </div>
 
               <div className={styles.dropdownColumn}>
                 
-              </div>
+              </div> */}
             </div>
           </div>
         </li>

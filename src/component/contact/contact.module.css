@@ -9,7 +9,9 @@
   position: relative;
   overflow: hidden;
 }
-
+.btn.btn-primary{
+  background-color: #003459 !important;
+}
 .hero::before {
   content: "";
   position: absolute;
@@ -59,7 +61,7 @@
 
 .contactMethodCard:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,168,232,0.2);
+  box-shadow: 0 12px 30px rgba(0,52,89,0.2);
 }
 
 .iconContainer {
@@ -71,6 +73,8 @@
   justify-content: center;
   font-size: 1.8rem;
   margin: 0 auto 1.5rem;
+  background-color: #003459;
+  color: white;
 }
 
 /* === FORM STYLING === */
@@ -81,8 +85,8 @@
 }
 
 .form-control:focus {
-  border-color: #00a8e8;
-  box-shadow: 0 0 0 0.25rem rgba(0,168,232,0.25);
+  border-color: #003459;
+  box-shadow: 0 0 0 0.25rem rgba(0,52,89,0.25);
 }
 
 /* Match phone input to other fields */
@@ -95,20 +99,41 @@
   height: 48px !important;
   border-radius: 12px !important;
   border: 2px solid #e0e0e0 !important;
-  padding-left: 52px !important; /* space for flag dropdown */
+  padding-left: 52px !important;
   font-size: 1rem !important;
   box-shadow: none !important;
 }
 
 .react-tel-input .form-control:focus {
-  border-color: #00a8e8 !important;
-  box-shadow: 0 0 0 0.25rem rgba(0,168,232,0.25) !important;
+  border-color: #003459 !important;
+  box-shadow: 0 0 0 0.25rem rgba(0,52,89,0.25) !important;
 }
 
 .react-tel-input .flag-dropdown {
   border-radius: 12px 0 0 12px !important;
   border: 2px solid #e0e0e0 !important;
   border-right: none !important;
+}
+
+/* === BUTTON STYLES === */
+.btn-primary {
+  background-color: #003459;
+  border-color: #003459;
+}
+
+.btn-primary:hover {
+  background-color: #00253d;
+  border-color: #00253d;
+}
+
+.btn-outline-primary {
+  color: #003459;
+  border-color: #003459;
+}
+
+.btn-outline-primary:hover {
+  background-color: #003459;
+  color: white;
 }
 
 /* === MAP SECTION === */
@@ -161,25 +186,29 @@
   background-color: #128C7E;
   color: white;
 }
+
 .phoneInput {
   width: 100% !important;
   border-radius: 12px !important;
   border: 2px solid #e0e0e0 !important;
-  padding-left: 52px !important; /* space for flag */
+  padding-left: 52px !important;
   height: 48px !important;
 }
+
 .phoneInput:focus {
-  border-color: #00a8e8 !important;
-  box-shadow: 0 0 0 0.25rem rgba(0,168,232,0.25) !important;
+  border-color: #003459 !important;
+  box-shadow: 0 0 0 0.25rem rgba(0,52,89,0.25) !important;
 }
+
 .react-tel-input .flag-dropdown {
   border-radius: 12px 0 0 12px !important;
 }
+
 /* Contact info icon container */
 .contactInfoItem {
   display: flex;
-  align-items: center; /* ensures vertical alignment */
-  gap: 1rem; /* even space between icon and text */
+  align-items: center;
+  gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -192,6 +221,8 @@
   justify-content: center;
   font-size: 1.25rem;
   flex-shrink: 0;
+  background-color: #003459;
+  color: white;
 }
 
 .contactInfoText h5 {
@@ -203,6 +234,7 @@
   margin-bottom: 0;
   line-height: 1.4;
 }
+
 /* Extra spacing for Visit Our Office block */
 .contactInfoTextBlock h5 {
   color: white;
@@ -256,7 +288,7 @@
 
 @media (max-width: 576px) {
   .hero {
-    padding: 2rem 1rem; /* reduced from 3rem */
-    margin-top: 56px; /* matches typical navbar height */
+    padding: 2rem 1rem;
+    margin-top: 56px;
   }
 }

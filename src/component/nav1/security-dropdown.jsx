@@ -68,19 +68,19 @@ function Securitydropdown1({
                     <FaLock className={styles.icon} /> Security Services
                   </div>
 
-                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                  <Link to="/services/aws-web-app-security" className={styles.dropdownItem} onClick={onLinkClick}>
                     <FaShieldAlt className={styles.icon} /> AWS Web Application Security
                   </Link>
-                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                  <Link to="/services/mobile-application-services" className={styles.dropdownItem} onClick={onLinkClick}>
                     <FaMobileAlt className={styles.icon} /> Mobile Application Services
                   </Link>
-                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                  <Link to="/services/api-security" className={styles.dropdownItem} onClick={onLinkClick}>
                     <FaLock className={styles.icon} /> API Security
                   </Link>
-                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                  <Link to="/services/cloud-security-services" className={styles.dropdownItem} onClick={onLinkClick}>
                     <FaCloud className={styles.icon} /> Cloud Security Services
                   </Link>
-                  <Link className={styles.dropdownItem} onClick={onLinkClick}>
+                  <Link to="/services/network-penetration-testing" className={styles.dropdownItem} onClick={onLinkClick}>
                     <FaNetworkWired className={styles.icon} /> Network Penetration Testing
                   </Link>
                 </div>

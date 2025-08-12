@@ -24,12 +24,7 @@ const CareerFilters = ({
   const locations = [
     "All Locations",
     "Remote",
-    "San Francisco",
-    "New York",
-    "London",
-    "Berlin",
-    "Tokyo",
-    "Singapore"
+    "Chennai"
   ];
 
   return (

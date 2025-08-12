@@ -62,6 +62,7 @@
   display: block;
   position: relative;
 }
+
 .menuIcon::before,
 .menuIcon::after {
   content: "";
@@ -72,9 +73,11 @@
   left: 0;
   /* transition: 0.3s; */
 }
+
 .menuIcon::before {
   top: -8px;
 }
+
 .menuIcon::after {
   top: 8px;
 }
@@ -82,16 +85,17 @@
 .menu {
   display: flex;
   justify-content: flex-end;
+  font-size: 16px;
 }
 
 .navItems {
-    display: flex;
-    list-style: none;
-    /* gap: 1rem; */
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    margin: 1rem 0rem;
+  display: flex;
+  list-style: none;
+  /* gap: 1rem; */
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
 }
 
 .navItem {
@@ -115,7 +119,7 @@
 .navLink:hover {
   color: rgb(18, 213, 231);
 }
-
+/* 
 @media screen and (max-width: 1400px) {
   .menuToggle {
     display: block;
@@ -140,7 +144,7 @@
   .navLink {
     color: black;
   }
-}
+} */
 
 /* Floating Button */
 .floatingBtn {
@@ -169,23 +173,26 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1099px) {
   .navInner {
     width: auto;
     padding: 0;
   }
-}
 
-@media (max-width: 1199px) {
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+  }  
+
   .offcanvasMenu {
     display: block;
   }
+
 }
 
-
-
 /* Tablet: 768px to 1199px */
-@media (min-width: 768px) and (max-width: 1199px)  {
+@media (min-width: 768px) and (max-width: 1199px) {
   .navInner {
     flex-direction: row;
     align-items: center;
@@ -200,28 +207,29 @@
   }
 
   .menu {
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: white;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  max-height: calc(100vh - 70px); /* Adjust based on your navbar height */
-  overflow-y: auto;
-  overflow-x: auto; 
-  padding: 1rem;
-  display: none;
-  z-index: 999;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  
-  scrollbar-width: thin;
-  white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 70px); /* Adjust based on your navbar height */
+    overflow-y: auto;
+    overflow-x: auto;
+    padding: 1rem;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    scrollbar-width: thin;
+    white-space: nowrap;
   }
 
- .menu::-webkit-scrollbar {
-  width: 6px; 
-  height: 6px;
-  background-color: hsla(205, 100%, 17%, 0.9);
+  .menu::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: hsla(205, 100%, 17%, 0.9);
   }
 
   .menu::-webkit-scrollbar-thumb {
@@ -254,7 +262,7 @@
     font-size: 18px;
     padding: 0.75rem 1rem;
     width: 100%;
-    text-align: left; 
+    text-align: left;
   }
 }
 
@@ -292,10 +300,11 @@
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
   }
-.menu::-webkit-scrollbar {
-  width: 6px; 
-  height: 6px;
-  background-color: hsla(205, 100%, 17%, 0.9);
+
+  .menu::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: hsla(205, 100%, 17%, 0.9);
   }
 
   .menu::-webkit-scrollbar-thumb {
@@ -334,34 +343,14 @@
     scroll-behavior: smooth;
   }
 
-  .menu::-webkit-scrollbar {
-  width: 6px; 
-  height: 6px;
-  background-color: hsla(205, 100%, 17%, 0.9);
-  }
-
-  .menu::-webkit-scrollbar-thumb {
-    background-color: hsla(205, 100%, 17%, 0.9);
-    border-radius: 12px;
-  }
-
-  .menu::-webkit-scrollbar:horizontal {
-    height: 6px;
-  }
-
-  .menu::-webkit-scrollbar-thumb:horizontal {
-    background-color: hsla(205, 100%, 17%, 0.9);
-    border-radius: 12px;
-  }
-
   .navLink {
-    color: #ffffff; /* or black if preferred */
+    color: #ffffff;
     font-size: 16px;
     padding: 0.75rem 1rem;
     width: 100%;
     text-align: left;
   }
-  
+
   .navLink:hover {
     color: rgb(18, 213, 231);
   }
@@ -370,6 +359,7 @@
     display: block;
   }
 }
+
 /* Offcanvas styles (common for all views) */
 .offcanvasOverlay {
   position: fixed;
@@ -416,7 +406,7 @@
   box-shadow: 2px 0 8px rgba(0,0,0,0.1);
 }
 
-/* ✅ Tablet View: 768px–1199px */
+/* Tablet View: 768px–1199px */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .offcanvasMenu {
     width: 400px;
@@ -437,7 +427,7 @@
     overflow: hidden;
   }
 
-    .offcanvasMenu ul,
+  .offcanvasMenu ul,
   .offcanvasMenu ol {
     padding-left: 0;
     margin-left: 0;
@@ -447,10 +437,9 @@
   .offcanvasMenu li {
     padding-left: 1rem;
   }
-
 }
 
-/* ✅ Mobile View: <768px */
+/* Mobile View: <768px */
 @media screen and (max-width: 767px) {
   .offcanvasMenu {
     width: 320px;
@@ -486,14 +475,49 @@
   background: #fff;
   padding: 6px;
   border-radius: 4px;
-}
+} 
 
 .offcanvasMenu ul,
 .offcanvasMenu ol {
-  padding-left: 0; 
+  padding-left: 0;
   margin-left: 0;
 }
 
 .offcanvasMenu li {
   padding-left: 0rem;
+}
+
+/*Low-Resolution Desktop: 992px–1199px */
+@media screen and (min-width: 992px) and (max-width: 1098px) {
+  .navInner {
+    max-width: 1000px;
+    padding: 0 1rem;
+  }
+
+  .logo img {
+    width: 135px;
+    height: auto;
+    padding: 6px;
+  }
+
+  .navItems {
+    gap: 0.5rem;
+  }
+
+  .navLink {
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+/* 
+  .menuToggle {
+    display: none;
+  } */
+
+  .menu {
+    gap: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+  }
+
 }

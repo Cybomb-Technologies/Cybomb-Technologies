@@ -102,10 +102,10 @@ function PHPAppContent() {
   return (
    <section>
     <Banner 
-        heading="PHP"
-        subtext="Discover top-tier PHP development services."
+        heading="PHP Development service"
+        subtext="Build dynamic, scalable, and secure web applications with the power of PHP."
         buttonText="Book Free Consultation"
-        note="Fill Out Form and Our Experts Will Contact You Within 24 Hrs."
+        note="Our PHP development expertise helps businesses create fast, feature-rich, and cost-effective web solutions from small websites to enterprise-grade platforms. Whether it's custom development, CMS integration, or API-driven solutions, we deliver high-performance results tailored to your needs."
     />
     <InfoStats
         stats={[

@@ -1,0 +1,117 @@
+.androidServicesSection {
+  background-color: #003459;
+  padding: 4rem 2rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
+.sectionLayer {
+  background-color: #ffffff;
+  padding: 4rem 4rem;
+  border-radius: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #007ea7;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  transition: transform 0.2s ease;
+  box-shadow: 10px 6px 6px rgba(0, 126, 167, 10); 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.6;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+  .sectionLayer {
+    padding: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .cardTitle {
+    font-size: 1.3rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .cardDescription {
+    font-size: 0.95rem;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .sectionLayer {
+    padding: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .cardDescription {
+    font-size: 0.9rem;
+  }
+}

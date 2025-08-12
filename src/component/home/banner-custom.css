@@ -16,7 +16,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/images/banner-11.png') no-repeat center center;
+  background: url('/images/banner-12.png') no-repeat center center;
   background-size: cover;
   z-index: 1;
 }
@@ -25,7 +25,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgb(17 17 17 / 70%);
+  background: rgb(17 17 17 / 35%);
   z-index: 2;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .dynamic-text {
-  color: #2c68ff; /* Light blue that stands out against wood tones */
+  color: #6dc2ff; /* Light blue that stands out against wood tones */
   font-weight: 650;
   animation: fadeIn 0.8s ease;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -69,8 +69,8 @@
 
 /* Buttons */
 .explore-btn {
-  background: linear-gradient(135deg, #7c8992 0%, #1a3a5a 100%) !important;
-  border-color:#708aa4 !important;
+  background: #ffffff25 100% !important;
+  border-color:#ffffff !important;
   border-radius: 50px !important;
   color: white !important;
   position: relative;
@@ -105,8 +105,8 @@
 }
 
 .consultation-btn {
-  border-color:#708aa4 !important;
-  background: linear-gradient(135deg, #7c8992 0%, #1a3a5a 100%) !important;
+  border-color:#ffffff !important;
+  background: #ffffff25 100% !important;
   background-clip: padding-box !important;
   color: #e0f7ff !important;
   border-radius: 50px !important;
