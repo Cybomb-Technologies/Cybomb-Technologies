@@ -1,13 +1,14 @@
-import React from 'react';
 import styles from './hiring-models.module.css';
 
 const HiringModels = ({ title, cards = [], image }) => {
   return (
-    <section className={styles.hiringSection}>
-      <div className={styles.container}>
-        <div className={styles.leftContent}>
+  <section className={`${styles.hiringSection}`}>
+  <div className="container">
+    <div className="row d-flex flex-wrap">
+      {/* Left Column (Content) */}
+      <div className="col-md-6">
+        <div className={`${styles.leftContent}`}>
           <h2 className={styles.sectionTitle}>{title}</h2>
-
           {cards.map((card, index) => (
             <div className={styles.card} key={index}>
               <h3 className={styles.cardTitle}>{card.title}</h3>
@@ -15,12 +16,21 @@ const HiringModels = ({ title, cards = [], image }) => {
             </div>
           ))}
         </div>
+      </div>
 
-        <div className={styles.rightContent}>
-          <img src={image} alt="Hiring discussion" className={styles.image} />
+      {/* Right Column (Image) */}
+      <div className="col-md-6">
+        <div className={`${styles.rightContent}`}>
+          <img 
+            src={image} 
+            alt="Hiring discussion" 
+            className={`${styles.image} w-100 h-100 object-fit-cover`} 
+          />
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   );
 };
 
