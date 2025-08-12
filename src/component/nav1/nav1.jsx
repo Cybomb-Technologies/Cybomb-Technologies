@@ -222,14 +222,14 @@ function Nav1() {
                 isOpen={activeDropdown === "data"}
                 onToggle={() => handleDropdownToggle("data")}
                 onLinkClick={handleNavItemClick}
-              /> */}
+              />
               <Securitydropdown1
                 isMobile
                 isOpen={activeDropdown === "security"}
                 onToggle={() => handleDropdownToggle("security")}
                 onLinkClick={handleNavItemClick}
-              /> */}
-              <Industriesdropdown1
+              />
+              {/* <Industriesdropdown1
                 isMobile
                 isOpen={activeDropdown === "industries"}
                 onToggle={() => handleDropdownToggle("industries")}
@@ -242,7 +242,7 @@ function Nav1() {
                   className={styles.navLink}
                   onClick={handleNavItemClick}
                 >
-                  On-Demand Developer
+                  Hire Developer
                 </Link>
               </li>
 
