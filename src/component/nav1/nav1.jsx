@@ -118,14 +118,14 @@ function Nav1() {
                   onMouseLeave={() => setActiveDropdown(null)}
                   onLinkClick={handleNavItemClick}
                 />
-             
-            {/*    <Securitydropdown1
+
+                <Securitydropdown1
                   isMobile={isMobile}
                   isOpen={activeDropdown === "security"}
                   onMouseEnter={() => setActiveDropdown("security")}
                   onMouseLeave={() => setActiveDropdown(null)}
                   onLinkClick={handleNavItemClick}
-                /> */}
+                />
 
                 {/* <Industriesdropdown1
                   isMobile={isMobile}
@@ -222,14 +222,13 @@ function Nav1() {
                 isOpen={activeDropdown === "data"}
                 onToggle={() => handleDropdownToggle("data")}
                 onLinkClick={handleNavItemClick}
-              />
-              {/* <Securitydropdown1
+              /> */}
+              <Securitydropdown1
                 isMobile
                 isOpen={activeDropdown === "security"}
                 onToggle={() => handleDropdownToggle("security")}
                 onLinkClick={handleNavItemClick}
               /> */}
-{/*               
               <Industriesdropdown1
                 isMobile
                 isOpen={activeDropdown === "industries"}
