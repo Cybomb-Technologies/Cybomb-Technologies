@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./footer.module.css";
+import styles from "./footer1.module.css";
 
 const defaultSocialLinks = [
   {
@@ -16,7 +16,17 @@ const defaultSocialLinks = [
   },
 ];
 
-function Footer({ socialLinks = defaultSocialLinks }) {
+const defaultLegalLinks = [
+  { to: "/privacy-policy", label: "Privacy Policy" },
+  { to: "/terms", label: "Terms of Service" },
+  { to: "/refund-policy", label: "Refund Policy" },
+  { to: "/cookie-policy", label: "Cookie Policy" },
+];
+
+function Footer1({ 
+  socialLinks = defaultSocialLinks, 
+  legalLinks = defaultLegalLinks 
+}) {
   const contactItems = [
     {
       icon: "bi-geo-alt-fill",
@@ -39,7 +49,6 @@ function Footer({ socialLinks = defaultSocialLinks }) {
     { to: "/", label: "Home" },
     { to: "/about-us", label: "About Us" },
     { to: "/services", label: "Services" },
-    // { to: "/blog", label: "Blog" },
     { to: "/portfolio", label: "Portfolio" },
     { to: "/career", label: "Career" },
     { to: "/contact-us", label: "Contact Us" },
@@ -74,41 +83,69 @@ function Footer({ socialLinks = defaultSocialLinks }) {
         <i className={item.iconClass}></i>
       </a>
     ));
-
+// #ffffffcf #00171f1f
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
+        
         {/* DESKTOP */}
-        <div className={styles.desktopGrid}>
-          <div className={styles.logoCol}>
-            <img src="/images/logo-1-white.png" alt="logo" className={styles.logo} />
-            <h4 className={`${styles.sectionTitle} mt-4`}>Follow Us</h4>
-            <div className={styles.socials}>{renderSocialIcons()}</div>
+        <div className={styles.desktopLayout}>
+          {/* Row 1 */}
+          <div className={styles.footerTopRow1}>
+            
+            <div className={styles.subscribeSection}>
+              <h4 className={styles.subTitle}>Subscribe</h4>
+              <p>Stay updated with our latest news and offers.</p>
+              <form>
+                <input type="email" placeholder="Enter your email" />
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+
+            <div className={styles.logoCol}>
+              <img src="/images/logo-1-white.png" alt="logo" className={styles.logo} />
+              {/* <h4 className={`${styles.sectionTitle} mt-4`}>Follow Us</h4> */}
+              <div className={styles.socials}>{renderSocialIcons()}</div>
+            </div>
           </div>
 
-          <div className={styles.quickLinks}>
-            <h4 className={styles.sectionTitle}>Quick Links</h4>
-            <ul>{renderListLinks(quickLinks)}</ul>
-          </div>
+          {/* Row 2 */}
+          <div className={styles.footerTopRow2}>
+            
+            <div className={styles.quickLinks}>
+              <h4 className={styles.sectionTitle}>Quick Links</h4>
+              <ul>{renderListLinks(quickLinks)}</ul>
+            </div>
 
-          <div className={styles.services}>
-            <h4 className={styles.sectionTitle}>Services</h4>
-            <ul>{renderListLinks(servicesLinks)}</ul>
-          </div>
+            <div className={styles.services}>
+              <h4 className={styles.sectionTitle}>Services</h4>
+              <ul>{renderListLinks(servicesLinks)}</ul>
+            </div>
+            
+            <div className={styles.quickLinks}>
+              <h4 className={styles.sectionTitle}>Legal</h4>
+              <ul>{renderListLinks(legalLinks)}</ul>
+            </div>
 
-          <div className={styles.getInTouch}>
-            <h4 className={styles.sectionTitle}>Get in Touch</h4>
-            {contactItems.map((item, i) => (
-              <div key={i} className={styles.contactItem}>
-                <i className={`bi ${item.icon} ${styles.icon}`}></i>
-                <div className={styles.contactTextBlock}>
-                  <p><strong>{item.label}</strong></p>
-                  <p>{item.text}</p>
+            <div className={styles.getInTouch}>
+              <h4 className={styles.sectionTitle}>Get in Touch</h4>
+              {contactItems.map((item, i) => (
+                <div key={i} className={styles.contactItem}>
+                  <i className={`bi ${item.icon} ${styles.icon}`}></i>
+                  <div className={styles.contactTextBlock}>
+                    <p><strong>{item.label}</strong></p>
+                    <p>{item.text}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* Footer Bottom */}
+        {/* <div className={styles.footerBottom}>
+          <p>© 2025 Cybomb Technologies LLP | All Rights Reserved</p>
+        </div> */}
 
         {/* TABLET */}
         <div className={styles.tabletView}>
@@ -180,17 +217,15 @@ function Footer({ socialLinks = defaultSocialLinks }) {
 
         {/* BOTTOM */}
         <div className={styles.footerBottom}>
-          <div className={styles.legalLinks}>
-            <Link to="/privacy-policy">Privacy Policy</Link>
-            <Link to="/terms">Terms of Service</Link>
-            <Link to="/refund-policy">Refund Policy</Link>
-            <Link to="/cookie-policy">Cookie Policy</Link>
-          </div>
+          {/* <div className={styles.legalLinks}>
+            {renderLinks(legalLinks)}
+          </div> */}
           <p>© 2025 Cybomb Technologies LLP | All Rights Reserved</p>
         </div>
+
       </div>
     </footer>
   );
 }
 
-export default Footer;
+export default Footer1;
