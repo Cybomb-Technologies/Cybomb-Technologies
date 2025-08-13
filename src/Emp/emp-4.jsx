@@ -82,7 +82,7 @@ const emp4Routes = (
     <Route path="/services/ai-persolized-customer-experience" element={<AiPersolizedServices/>}/>
     <Route path="/services/blockchain" element={<BlockChainServices/>}/>
     <Route path="/services/php-development-service" element={<PHPApp/>}/>
-    <Route path="/services/laravel development-service" element={<LaravelApp/>}/>
+    <Route path="/services/laravel-development-service" element={<LaravelApp/>}/>
     <Route path="/services/ror-development-service" element={<RORApp/>}/>
     <Route path="/services/power-platform-development-service" element={<PowerPlatformApp/>}/>
     <Route path="/services/html5-development-service" element={<HTML5App/>}/>
