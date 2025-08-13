@@ -79,7 +79,7 @@ function Successstoriesdropdown1({
               <div className={styles.dropdownGrid}>
 
                 {/* Column 1: Our Work */}
-                {/* <div className={styles.dropdownColumn}>
+                <div className={styles.dropdownColumn}>
                   <div className={styles.dropdownHeader}>
                     <FaBriefcase className={styles.icon} /> Our Work
                   </div>
@@ -87,9 +87,9 @@ function Successstoriesdropdown1({
                     Portfolio
                   </Link>
                 </div>
- */}
+
                 {/* Column 2: Industries We Serve — Part 1*/}
-                <div className={styles.dropdownColumn}>
+                {/* <div className={styles.dropdownColumn}>
                   <div className={styles.dropdownHeader}> 
                     <Link to="/portfolio"  className={styles.dropdownItem} onClick={onLinkClick}> <FaBriefcase className={styles.icon} /> Portfolio </Link>
                   </div>
@@ -103,12 +103,12 @@ function Successstoriesdropdown1({
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaBuilding className={styles.icon} /> Real Estate </Link>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaHeartbeat className={styles.icon} /> Healthcare </Link>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaShoppingCart className={styles.icon} /> Retail/FMCG </Link>
-                </div>
+                </div> */}
 
                 {/* Column 3 */}
-                <div className={styles.dropdownColumn}>
+                {/* <div className={styles.dropdownColumn}>
                   <div className={styles.dropdownHeader}>
-                    {/* <FaIndustry className={styles.icon} /> More Industries */}
+                    {/* <FaIndustry className={styles.icon} /> More Industries }
                   </div>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaHardHat className={styles.icon} /> Construction </Link>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaOilCan className={styles.icon} /> Oil & Gas </Link>
@@ -116,7 +116,7 @@ function Successstoriesdropdown1({
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaCar className={styles.icon} /> Automotive </Link>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaFutbol className={styles.icon} /> Sports </Link>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaUniversity className={styles.icon} /> Banking & Payment </Link>
-                </div>
+                </div> */}
 
               </div>
             </div>
