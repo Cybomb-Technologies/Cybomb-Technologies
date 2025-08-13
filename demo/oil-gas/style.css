@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  letter-spacing: 0.5px;
+}
+
+.card {
+  border-radius: 8px;
+}
+
+.list-group-item {
+  font-size: 1rem;
+}
+
+section {
+  scroll-margin-top: 80px; /* For smooth nav scrolling if added later */
+}
+.logo-img {
+  height: 35px;
+  width: 100px;
+}
+
+
+.card {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Services Card Styling */
+.services-card {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.services-icon {
+  font-size: 2rem;
+  color: #2C2A29;
+}
+
+.services-card h5 {
+  color: #2C2A29;
+}
+
+.services-card:hover {
+  background-color: #C1B2A1;
+  transform: translateY(-5px);
+}
+
+.services-card:hover h5 {
+  color: #2C2A29; /* Keep heading dark on hover */
+}
+
+.services-card:hover .services-icon {
+  color: #2C2A29; /* Keep icon dark on hover */
+}
+
+/* Accordion */
+.accordion-button::after {
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+/* Approach Section */
+.approach-section {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  background-color: #f8f9fa;
+}
+
+.approach-img {
+  width: 100%;
+  max-width: 450px;   /* limits width */
+  height: auto;       /* keeps proportions */
+  max-height: 320px;  /* prevents tall zoom */
+  object-fit: cover;  /* avoids stretching */
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .approach-img {
+    max-width: 100%;
+    max-height: 250px; /* smaller on mobile */
+  }
+}
+
+/* Card Image */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('environmental-pollution-industry-exterior-daylight.jpg') center/cover no-repeat;
+  min-height: 500px; /* Force minimum height */
+  display: flex;
+  align-items: center; /* Vertically center text */
+}
+
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+}
