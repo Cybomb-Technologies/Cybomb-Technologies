@@ -126,8 +126,8 @@ function Nav1() {
                   onMouseLeave={() => setActiveDropdown(null)}
                   onLinkClick={handleNavItemClick}
                 />
-
-                {/* <Industriesdropdown1
+            
+              {/*   <Industriesdropdown1
                   isMobile={isMobile}
                   isOpen={activeDropdown === "industries"}
                   onMouseEnter={() => setActiveDropdown("industries")}
@@ -164,7 +164,7 @@ function Nav1() {
 
                 <li className={styles.navItem}>
                   <Link
-                    to="/about-us"
+                    to="/aboutus"
                     className={styles.navLink}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

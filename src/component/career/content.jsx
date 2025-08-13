@@ -180,9 +180,9 @@ const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
 </section>
 
       {/* Testimonials */}
-       <Testimonials />
+       {/* <Testimonials /> */}
 
-      <Gallery/>
+      {/* <Gallery/> */}
     </div>
   );
 };

@@ -1,0 +1,646 @@
+/* Custom Styles for Cybomb Technologies Media & Entertainment Page */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f0f2f5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* Navbar shrink and shadow on scroll */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.navbar.scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  color: #333 !important;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #0d6efd;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-brand img {
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)),
+    url("images/heroes/hero-banner.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  filter: brightness(1.1) contrast(1.05); /* make it pop slightly */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); /* reduced overlay darkness */
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-section p.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  animation: fadeInUp 1s ease-in-out 0.5s forwards;
+  opacity: 0;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-in-out 1s forwards;
+  opacity: 0;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.py-5 {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+/* Fade-in animation for sections on scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* General Section Styling */
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  color: #1a1d20;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #0d6efd;
+  margin-top: 10px;
+}
+
+.text-center h2::after {
+  margin: 10px auto 0;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card i {
+  color: #0d6efd;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover i {
+  transform: scale(1.1);
+}
+
+/* Introduction Section */
+.intro-section {
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.intro-section h2 {
+  color: #0d6efd;
+  margin-bottom: 1rem;
+}
+
+.intro-section h2::after {
+  background: #0d6efd;
+}
+
+/* Trending Now Section */
+#trending-now {
+  background-color: #ffffff;
+}
+
+#trending-now .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+/* Video Section Styles */
+#video-experiences {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url("images/sections/video-bg.jpg") no-repeat center center/cover;
+}
+
+#video-experiences h2,
+#video-experiences p {
+  color: #fff;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-container .video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-container:hover .video-overlay {
+  opacity: 1;
+}
+
+.video-overlay h4 {
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Services Section */
+#services .card {
+  background-color: #fff;
+  border-top: 5px solid #0d6efd;
+}
+
+/* Challenges Section */
+#challenges .card {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+/* Case Studies Section */
+#case-studies .card {
+  background-color: #e9f5ff;
+  border-left: 5px solid #0d6efd;
+}
+
+/* Tech Stack Section */
+#tech-stack {
+  background-color: #ffffff;
+}
+
+.tech-stack-item {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tech-stack-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 5px solid #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-stack-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Industries Served Section */
+#industries-served .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Testimonials Section */
+#testimonials .card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: 1px solid #e9ecef;
+  padding: 2rem;
+  box-shadow: none;
+}
+
+#testimonials em {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Insights Section */
+#insights .card {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+}
+
+#insights h6 {
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+/* CTA Section */
+#cta {
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  padding: 80px 0;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#cta h2 {
+  font-weight: 700;
+  color: #fff;
+}
+
+#cta h2::after {
+  background-color: #fff;
+}
+
+#cta .btn-light {
+  color: #0d6efd;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+}
+
+#cta .btn-light:hover {
+  background-color: #f0f2f5;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: #1a1d20;
+  color: #adb5bd;
+  padding: 60px 0 20px;
+}
+
+.footer-title {
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 2px solid #0d6efd;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* ===== Align footer headings (fix the Get in Touch misalignment) ===== */
+.main-footer .footer-title,
+.main-footer .footer-info .footer-title,
+.main-footer .footer-links .footer-title,
+.main-footer .footer-contact .footer-title {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  line-height: 1.2;
+}
+
+/* Remove extra top margin for Get in Touch column */
+.footer-contact h4 {
+  margin-top: 0 !important;
+}
+
+/* Fix top spacing for first footer column heading */
+.footer-col:first-child h4 {
+  margin-top: 0;
+}
+
+.footer-links a {
+  transition: color 0.3s ease;
+  color: #adb5bd;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #0d6efd;
+}
+
+.social-links a {
+  background-color: #343a40;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* same height/width for perfect circle buttons */
+  height: 40px;
+  margin: 0 8px; /* horizontal spacing between icons */
+  border-radius: 50%;
+  color: #adb5bd; /* icon color */
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  background-color: #0d6efd;
+  transform: translateY(-3px);
+  color: #fff; /* NEW - make icon white on hover */
+  text-decoration: none;
+}
+
+/* Space between icons and text in Get in Touch section */
+.contact-info i {
+  color: #0d6efd;
+  margin-right: 10px; /* adjust spacing as needed */
+}
+
+/* Pulse animation for contact icons */
+.contact-info i.animate-pulse:hover {
+  animation: pulse 1s infinite;
+}
+
+/* Keyframes for new animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.4);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(13, 110, 253, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .navbar-nav .nav-link::after {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Enable smooth scrolling globally */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .navbar-brand img {
+    height: 32px;
+  }
+  section {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Hero section heading and subheading styling */
+.hero-section h1 {
+  color: #0d6efd; /* Brand blue */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Strong shadow for contrast */
+}
+
+.hero-section p.lead {
+  color: #ffffff; /* Keep subheading white */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Soft shadow for clarity */
+}
+
+/* Media Usage Statistics Section */
+#media-usage {
+  background: #f8f9fa;
+}
+
+#media-usage .card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+#media-usage .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#media-usage i {
+  color: #007bff;
+}
+
+#media-usage h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #343a40;
+}
+
+#media-usage p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Align footer headings consistently */
+.footer-contact h4 {
+  margin-top: 0 !important;
+}
+
+.footer-title {
+  margin-top: 0 !important;
+}
+
+/* === Responsive Enhancements === */
+
+/* Ensure images and videos scale */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive typography */
+html {
+  font-size: 100%;
+}
+@media (max-width: 768px) {
+  html { font-size: 90%; }
+}
+@media (max-width: 480px) {
+  html { font-size: 85%; }
+}
+
+/* Navbar adjustments for smaller devices */
+@media (max-width: 1024px) {
+  .navbar-brand img {
+    height: 35px;
+  }
+  .hero-section {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-brand img {
+    height: 30px;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+/* Ensure containers don't overflow */
+.container, .container-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Make sections stack on smaller screens */
+@media (max-width: 768px) {
+  .row > [class*='col-'] {
+    margin-bottom: 1rem;
+  }
+}

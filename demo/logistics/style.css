@@ -1,0 +1,44 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('images/bck.jpg') center/cover no-repeat;
+  min-height: 70vh;
+  display: flex;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+footer ul li {
+  margin-bottom: 6px;
+}
+
+/* Reduce height of service cards */
+.card.h-100 {
+  height: auto !important;
+  min-height: 280px;
+}
+
+.card-img-top {
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Specific styling for service cards */
+.card.border-0.shadow-sm {
+  transition: transform 0.3s ease;
+}
+
+.card.border-0.shadow-sm:hover {
+  transform: translateY(-3px);
+}

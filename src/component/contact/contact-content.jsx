@@ -28,9 +28,9 @@ function Contactcontent() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handlePhoneChange = (value, country, e, formattedValue) => {
-    setFormData(prev => ({ ...prev, phone: value }));
-  };
+  // const handlePhoneChange = (value, country, e, formattedValue) => {
+  //   setFormData(prev => ({ ...prev, phone: value }));
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -138,7 +138,7 @@ function Contactcontent() {
                     <h5>Address</h5>
                     <p>
                       Cybomb Technologies LLP<br />
-                      Prime Plaza – No.54/1, Ist street, Sripuram Colony<br />
+                      Prime Plaza – No.54/1, 1st street, Sripuram Colony<br />
                       St. Thomas Mount, Chennai, India
                     </p>
                   </div>
@@ -279,7 +279,7 @@ function Contactcontent() {
                           <PhoneInput
                             country="in"
                             value={formData.phone}
-                            onChange={handlePhoneChange}
+                            // onChange={handlePhoneChange}
                             inputProps={{
                               name: 'phone',
                               required: true,
