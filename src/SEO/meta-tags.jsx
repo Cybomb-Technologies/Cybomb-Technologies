@@ -4,7 +4,7 @@ function Metatags({ metaProps }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Cybomb Technologies",
+    name: "Cybomb Technologies LLP",
     image: metaProps.image,
     "@id": "",
     url: metaProps.url,
@@ -13,7 +13,7 @@ function Metatags({ metaProps }) {
     address: {
       "@type": "PostalAddress",
       streetAddress:
-        "Hygee Works - Prime Plaza No.54/1, 1st Street, Sripuram Colony, Viralur, Chakrapani Colony",
+        "Prime Plaza No.54/1, 1st street, Sripuram colony",
       addressLocality: "St. Thomas Mount, Chennai",
       postalCode: "600016",
       addressRegion: "Tamil Nadu",
