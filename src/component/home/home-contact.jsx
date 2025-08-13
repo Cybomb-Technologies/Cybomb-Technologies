@@ -35,7 +35,7 @@ function Homecontact() {
                     <b>Address</b>
                   </p>
                   <p className="mb-0 fs-6 contact-text-color">
-                    Cybomb Technologies LLP <br /> Hygee Works – Prime Plaza
+                    Cybomb Technologies LLP <br />  Prime Plaza No.54/1, 1st street, Sripuram colony,
                     <br />
                     St.Thomas Mount, Chennai, India
                   </p>

@@ -99,9 +99,9 @@ function Industriesdropdown1({
                   <FaHandHoldingUsd className={styles.icon} /> Mortgage & Lending
                 </Link>
 
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}>
+                <a href="/demo/aviation/" target="_blank" className={styles.dropdownItem1} onClick={onLinkClick}>
                   <FaPlane className={styles.icon} /> Aviation
-                </Link>
+                </a>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}>
                   <FaHardHat className={styles.icon} /> Construction
                 </Link>
@@ -111,7 +111,6 @@ function Industriesdropdown1({
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}>
                   <FaBook className={styles.icon} /> Publishing
                 </Link>
-                
               </div>
 
               <div className={styles.dropdownColumn}>

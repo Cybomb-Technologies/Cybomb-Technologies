@@ -11,7 +11,7 @@ function Aboutourjourney() {
               <div className="card p-4 journey-card h-100" data-aos="zoom-in-left">
                 <h6 className="text-white fs-5">✅ 2021 - Foundation</h6>
                 <p className="mt-2 text-white">
-                  Cybomb Tecnology was founded by a tech enthusiast with a 
+                  Cybomb Tecnology was founded by a tech enthusiast with a
                   vision of creating impactful digital solutions. Starting with
                   a small office and a team of 5, we began our journey
                   developing mobile applications for local businesses.
@@ -44,7 +44,7 @@ function Aboutourjourney() {
               <div className="card p-4 journey-card h-100" data-aos="zoom-in-right">
                 <h6 className="text-white fs-5">✅ 2025 - Today</h6>
                 <p className="mt-2 text-white">
-                  Now a team of 30+ experts, we've successfully delivered over
+                  Now a team of 80+ experts, we've successfully delivered over
                   300+ projects across various industries. Our client base spans
                   from innovative startups to established SMEs looking for
                   digital transformation.

@@ -64,7 +64,7 @@ function Successstoriesdropdown1({
                 position: "absolute",
                 top: "100%",
                 left: "50%",
-                transform: "translateX(-50%)",
+                transform: "translateX(-80%)",
                 width: "max-content",
                 maxWidth: "calc(-40px + 100vw)",
               }
@@ -88,10 +88,11 @@ function Successstoriesdropdown1({
                   </Link>
                 </div>
 
-{/* 
-                {/* Column 2: Industries We Serve — Part 1
-                <div className={styles.dropdownColumn}>
-                  <div className={styles.dropdownHeader}> <FaIndustry className={styles.icon} /> Industries We Serve</div>
+                {/* Column 2: Industries We Serve — Part 1*/}
+                {/* <div className={styles.dropdownColumn}>
+                  <div className={styles.dropdownHeader}> 
+                    <Link to="/portfolio"  className={styles.dropdownItem} onClick={onLinkClick}> <FaBriefcase className={styles.icon} /> Portfolio </Link>
+                  </div>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaHotel className={styles.icon} /> Travel & Hospitality </Link>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaFilm className={styles.icon} /> Media & Entertainment </Link>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaTruck className={styles.icon} /> Logistics </Link>
@@ -102,12 +103,12 @@ function Successstoriesdropdown1({
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaBuilding className={styles.icon} /> Real Estate </Link>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaHeartbeat className={styles.icon} /> Healthcare </Link>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaShoppingCart className={styles.icon} /> Retail/FMCG </Link>
-                </div>
+                </div> */}
 
-                {/* Column 3 
-                <div className={styles.dropdownColumn}>
+                {/* Column 3 */}
+                {/* <div className={styles.dropdownColumn}>
                   <div className={styles.dropdownHeader}>
-                    {/* <FaIndustry className={styles.icon} /> More Industries 
+                    {/* <FaIndustry className={styles.icon} /> More Industries }
                   </div>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaHardHat className={styles.icon} /> Construction </Link>
                   <Link className={styles.dropdownItem} onClick={onLinkClick}> <FaOilCan className={styles.icon} /> Oil & Gas </Link>
