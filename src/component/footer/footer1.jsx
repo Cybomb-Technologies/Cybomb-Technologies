@@ -76,7 +76,7 @@ function Footer1({
         <i className={item.iconClass}></i>
       </a>
     ));
-// #ffffffcf #00171f1f
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -125,13 +125,22 @@ function Footer1({
               {contactItems.map((item, i) => (
                 <div key={i} className={styles.contactItem}>
                   <i className={`bi ${item.icon} ${styles.icon}`}></i>
-                  <div className={styles.contactTextBlock}>
+                  {/* <div className={styles.contactTextBlock}>
                     <p><strong>{item.label}</strong></p>
                     <p>{item.text}</p>
+                  </div> */}
+
+                  <div className={styles.contactTextBlock}>
+                    <p><strong>{item.label}</strong></p>
+                    <p className={item.label === "Address" ? styles.addressText : ""}>
+                      {item.label !== "Address" && item.text}
+                    </p>
                   </div>
+
                 </div>
               ))}
             </div>
+
           </div>
         </div>
 

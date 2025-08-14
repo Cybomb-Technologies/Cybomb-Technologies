@@ -11,7 +11,7 @@ function ApiDevelopment() {
     keyword:
       "API Development, REST API, GraphQL API, Backend Development, API Integration, Cybomb Technologies, Web Services, Custom API Solutions",
     url: "https://www.cybomb.com/services/api-development",
-    image: "https://www.cybomb.com/images/banner-2.jpg", // Replace with actual banner if available
+    image: "https://www.cybomb.com/images/logo-11.png", // Replace with actual banner if available
   };
 
   return (

@@ -7,6 +7,7 @@ import DevelopmentProcess from "../../../common-ui/enterprise-services/developme
 import ScheduleConsultation from "../../../common-ui/enterprise-services/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
 import ServicesOfferings from "../../../common-ui/enterprise-services/services-offerings";
+import AIMLPlatforms from "./AIMLPlatforms";
 
 const offerings = [
   {
@@ -90,6 +91,7 @@ function AIMLContent() {
         title="What We Offer"
         items={offerings}
       />
+      <AIMLPlatforms/>
       <ScheduleConsultation
         heading="Bring Your AI Vision to Life with Our Expertise"
         buttonText="Schedule a Consultation!"

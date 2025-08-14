@@ -44,8 +44,8 @@ function Successstoriesdropdown1({
           }
         }}
         aria-expanded={isOpen ? "true" : "false"}
-        onMouseEnter={() => !isMobile && onToggle(true)}
-        onMouseLeave={() => !isMobile && onToggle(false)}
+        // onMouseEnter={() => !isMobile && onToggle(true)}
+        // onMouseLeave={() => !isMobile && onToggle(false)}
       >
         Success Stories
         <span className={styles.arrow}>
@@ -55,8 +55,8 @@ function Successstoriesdropdown1({
 
       <ul
         className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
-        onMouseEnter={() => !isMobile && onToggle(true)}
-        onMouseLeave={() => !isMobile && onToggle(false)}
+        // onMouseEnter={() => !isMobile && onToggle(true)}
+        // onMouseLeave={() => !isMobile && onToggle(false)}
         style={
           !isMobile
             ? {

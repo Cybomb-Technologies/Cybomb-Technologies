@@ -7,6 +7,7 @@ import DevelopmentProcess from "../../../common-ui/enterprise-services/developme
 import ScheduleConsultation from "../../../common-ui/enterprise-services/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
 import ServicesOfferings from "../../../common-ui/enterprise-services/services-offerings";
+import HubSpotPlatforms from "./HubSpotPlatforms";
 
 const offerings = [
   {
@@ -98,6 +99,7 @@ function HubspotContent() {
         title="What We Offer"
         items={offerings}
       />
+      <HubSpotPlatforms/>
       <ScheduleConsultation
         heading="Get the Most Out of HubSpot With Our CRM Services"
         buttonText="Schedule a Consultation!"

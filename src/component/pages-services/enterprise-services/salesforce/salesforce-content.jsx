@@ -7,6 +7,7 @@ import DevelopmentProcess from "../../../common-ui/enterprise-services/developme
 import ScheduleConsultation from "../../../common-ui/enterprise-services/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
 import ServicesOfferings from "../../../common-ui/enterprise-services/services-offerings";
+import SalesforcePlatforms from "./SalesforcePlatforms";
 
 const offerings = [
   {
@@ -98,6 +99,7 @@ function SalesforceContent() {
         title="What We Offer"
         items={offerings}
       />
+      <SalesforcePlatforms/>
       <ScheduleConsultation
         heading="Unlock the Full Potential of Salesforce With Our Experts"
         buttonText="Schedule a Consultation!"
