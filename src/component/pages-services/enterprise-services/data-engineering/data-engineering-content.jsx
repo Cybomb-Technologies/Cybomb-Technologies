@@ -7,6 +7,7 @@ import DevelopmentProcess from "../../../common-ui/enterprise-services/developme
 import ScheduleConsultation from "../../../common-ui/enterprise-services/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
 import ServicesOfferings from "../../../common-ui/enterprise-services/services-offerings";
+import DataEngineeringPlatforms from "./DataEngineeringPlatforms";
 
 const offerings = [
   {
@@ -89,6 +90,8 @@ function DataEngineeringContent() {
         title="What We Offer"
         items={offerings}
       />
+      <DataEngineeringPlatforms/>
+
       <ScheduleConsultation
         heading="Build Future-Ready Data Infrastructure with Our Data Engineering Services"
         buttonText="Schedule a Consultation!"

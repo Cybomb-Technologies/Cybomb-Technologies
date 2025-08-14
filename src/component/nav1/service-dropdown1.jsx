@@ -15,10 +15,13 @@ function Servicedropdown1({
   onMouseEnter,
   onMouseLeave,
 }) {
+
+  // console.log("dropdown")
+
   return (
-   <li className={styles.dropdownWrapper}
-       onMouseEnter={onMouseEnter}
-         onMouseLeave={onMouseLeave}
+      <li className={styles.dropdownWrapper}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
        >
          <Link
            to="#"
@@ -30,8 +33,8 @@ function Servicedropdown1({
              }
            }}
            aria-expanded={isOpen ? "true" : "false"}
-           onMouseEnter={() => !isMobile && onToggle(true)}
-           onMouseLeave={() => !isMobile && onToggle(false)}
+          //  onMouseEnter={() => !isMobile && onToggle(true)}
+          //  onMouseLeave={() => !isMobile && onToggle(false)}
          >
            Services
            <span className={styles.arrow}>
@@ -40,8 +43,8 @@ function Servicedropdown1({
          </Link>
         <ul
               className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
-              onMouseEnter={() => !isMobile && onToggle(true)}
-              onMouseLeave={() => !isMobile && onToggle(false)}
+              // onMouseEnter={() => !isMobile && onToggle(true)}
+              // onMouseLeave={() => !isMobile && onToggle(false)}
               style={
                 !isMobile
                   ? {

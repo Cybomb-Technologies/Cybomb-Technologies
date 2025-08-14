@@ -309,7 +309,6 @@ ul {
   color: rgba(255, 255, 255, 0.8);
 }
 
-
 .desktopGrid {
   display: none;
 }
@@ -361,7 +360,9 @@ ul {
     grid-template-columns: 20% 20% 20% 40%;
     align-items: start;
     gap: 2rem;
-    padding: 1rem;
+    padding: 1rem ;
+    padding: 1rem 0.5rem;
+    margin-right: 8rem;
   }
 
   .desktopGrid {
@@ -614,7 +615,7 @@ ul {
     flex-direction: column-reverse;
     gap: 2rem;
     background-color: #003459;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 16px;
     margin-bottom: 1rem;
   }
@@ -792,6 +793,47 @@ ul {
     display: none;
   }
   .mobileOnly {
+    display: block;
+  }
+}
+
+.addressText {
+  white-space: pre-line;
+}
+
+@media (min-width: 1200px) {
+  .addressText {
+    white-space: pre-line;
+    display: block;
+  }
+
+  .addressText::before {
+    content: "Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street, Sripuram colony,\A St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India";
+    white-space: pre;
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .addressText {
+    white-space: pre-line;
+  }
+
+  .addressText::before {
+    content: "Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street,\A Sripuram colony, St. Thomas Mount,\A Chennai, Tamil Nadu - 600 016, India";
+    white-space: pre;
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .addressText {
+    white-space: pre-line;
+  }
+
+  .addressText::before {
+    content: "Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street,\A Sripuram colony, St. Thomas Mount,\A Chennai, Tamil Nadu - 600 016, India";
+    white-space: pre;
     display: block;
   }
 }

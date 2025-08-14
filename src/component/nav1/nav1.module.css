@@ -83,13 +83,12 @@
   z-index: 1000;
 }
 
-/* Updated container layout */
 .container {
   width: 100%;
   padding: 0 1rem;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .navInner {
@@ -102,11 +101,11 @@
 }
 
 .logo img {
-  width: 180px;
-  height: 60px;
+  width: 150px;
+  height: 50px;
   background: #fff;
-  padding: 8px 24px;
-  border-radius: 40px;
+  padding: 8px 12px;
+  border-radius: 12px;
 }
 
 .menuToggle {
@@ -262,8 +261,10 @@
 
   .logo img {
     width: 130px;
-    height: auto;
-    padding: 6px;
+    height: 40px;
+    background: #fff;
+    padding: 4px 8px;
+    border-radius: 12px;
   }
 
   .menu {
@@ -337,8 +338,10 @@
 
   .logo img {
     width: 120px;
-    height: auto;
-    padding: 5px;
+    height: 40px;
+    background: #fff;
+    padding: 4px 8px;
+    border-radius: 8px;
   }
 
   .menu {

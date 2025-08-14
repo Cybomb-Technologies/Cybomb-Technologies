@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../../../common-ui/enterprise-services/crm-platforms.module.css';
 
 const platforms = [

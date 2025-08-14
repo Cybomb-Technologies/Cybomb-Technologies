@@ -61,6 +61,12 @@
 
 /* Mobile: 2 cards in center on screens ≤ 768px */
 @media (max-width: 768px) {
+
+  .devProcessSection {
+    background-color: #003459;
+    padding: 2rem 1rem;
+  }
+
   .title {
     font-size: 1.5rem;
     margin-bottom: 1.75rem;
@@ -79,3 +85,5 @@
     padding: 1rem;
   }
 }
+
+
