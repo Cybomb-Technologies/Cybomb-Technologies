@@ -43,7 +43,9 @@ function Aboutourteam() {
           
           {/* Carousel Section */}
           <div className="row mt-4" data-aos="fade-right">
-            <div className="col-lg-8 mx-auto">
+            <h2 className="text-primary">Gallery
+</h2>
+            <div className="col-lg-8 mx-auto mt-3">
               <div 
                 id="aboutCarousel" 
                 className="carousel slide" 

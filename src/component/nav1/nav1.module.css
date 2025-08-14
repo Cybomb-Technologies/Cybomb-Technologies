@@ -1,21 +1,81 @@
 .navbar {
-  background-color: #003459;
+  background-color: #FFFFFF;
   /* transition: background-color 0.3s ease; */
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
+ 
 }
 
 .transparent {
-  background-color: rgb(20 20 20 / 50%);
+  /* background-color: rgb(20 20 20 / 50%); */
   /* background-color: rgba(120, 120, 120, 0.2); */
 }
 
 .scrolled {
-  background-color: #003459;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px #afb0b1;
 }
 
+.chatWidget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+ 
+.chatToggle {
+  display: none;
+}
+ 
+.chatButton {
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+ 
+.chatButton:hover {
+  transform: scale(1.1);
+}
+ 
+.chatWindow {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+  transform: scale(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+ 
+.chatToggle:checked ~ .chatWindow {
+  transform: scale(1);
+}
+ 
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .chatWindow {
+    width: 90vw;
+    height: 80vh;
+    bottom: 70px;
+    right: 0;
+  }
+}
 .fixedTop {
   position: fixed;
   top: 0;
@@ -58,7 +118,7 @@
 .menuIcon {
   width: 30px;
   height: 2px;
-  background-color: white;
+  background-color: rgb(26, 25, 25);
   display: block;
   position: relative;
 }
@@ -68,7 +128,7 @@
   content: "";
   width: 30px;
   height: 2px;
-  background-color: white;
+  background-color: rgb(13, 13, 13);
   position: absolute;
   left: 0;
   /* transition: 0.3s; */
@@ -108,7 +168,7 @@
 .navLink {
   display: block;
   width: 100%;
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   padding: 10px 16px;
