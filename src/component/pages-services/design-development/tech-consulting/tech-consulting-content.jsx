@@ -4,7 +4,7 @@ import ServicesOfferings from "../../../common-ui/design-and-development/service
 import DevelopmentProcess from "../../../common-ui/design-and-development/development-process";
 import WhyChooseUs from "../../../common-ui/design-and-development/why-choose-us";
 import OnlinePresence from "../../../common-ui/design-and-development/online-presence";
-import placeholderImage from './../../../../assets/laptop-preview.png';
+import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
 import TechToolsSection from "./TechToolsSection";
 const services = [

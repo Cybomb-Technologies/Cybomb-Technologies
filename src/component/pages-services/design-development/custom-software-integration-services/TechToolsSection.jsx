@@ -37,7 +37,7 @@ const techLogos = {
   "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   "MongoDB": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-  "Firebase": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Firebase_Logo.svg/768px-Firebase_Logo.svg.png?20200221081546",
+  "Firebase": "https://img.icons8.com/?size=160&id=ROMfFZ1tMhpk&format=png",
 
   // Middleware
   "Zapier": "https://cdn.iconscout.com/icon/free/png-512/zapier-2-555599.png",

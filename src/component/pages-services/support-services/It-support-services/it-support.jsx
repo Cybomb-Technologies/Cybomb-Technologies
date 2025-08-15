@@ -1,23 +1,25 @@
 import ITSupportContent from './it-support-content';
 import StillNotSure from '../../../common-ui/stillnotsure/StillNotSure';
 import Metatags from '../../../../SEO/meta-tags';
+import Metatags from '../../../../SEO/meta-tags';
 
 function ITSupport() {
   const metaPropsData = {
-    title: "IT Support Services - Cybomb Technologies | Reliable Technical Assistance",
-    description:
-      "Cybomb Technologies provides professional IT support services, including troubleshooting, system maintenance, network management, and helpdesk solutions to keep your business running smoothly.",
-    keyword:
-      "IT Support, Technical Support, Helpdesk Services, Network Management, System Maintenance, IT Assistance, Troubleshooting, Cybomb Technologies",
-    url: "https://www.cybomb.com/services/digital-fulfilment-support",
-    image: "https://www.cybomb.com/images/banner-2.jpg", // Replace with actual banner if available
-  };
+  title: "IT Support Services - Cybomb Technologies | Reliable & Proactive IT Assistance",
+  description:
+    "Cybomb Technologies delivers IT Support Services to keep your business systems running smoothly. We provide helpdesk support, troubleshooting, system monitoring, and proactive maintenance for uninterrupted operations.",
+  keyword:
+    "IT Support Services, Business IT Support, Remote IT Support, IT Helpdesk Services, IT Maintenance, IT Troubleshooting, IT Support Solutions, Managed IT Services, IT Support India",
+  url: "https://www.cybomb.com/services/it-support",
+  image: "https://www.cybomb.com", 
+};
 
   return (
     <>
-      <Metatags metaProps={metaPropsData} />
-      <ITSupportContent />
-      <StillNotSure />
+      <ITSupportContent/>
+      
+      <StillNotSure/>
+      <Metatags  metaProps={metaPropsData}/>
     </>
   );
 }

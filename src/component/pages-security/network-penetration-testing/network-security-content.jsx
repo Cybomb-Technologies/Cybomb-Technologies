@@ -4,7 +4,7 @@ import ServicesOfferings from "../../common-ui/security/services-offerings";
 import DevelopmentProcess from '../../common-ui/security/development-process';
 import WhyChooseUs from "../../common-ui/security/why-choose-us";
 import OnlinePresence from "../../common-ui/security/online-presence";
-import placeholderImage from '../../../assets/laptop-preview.png';
+import placeholderImage from '../../../assets/placeholder-image.webp';
 import TechToolsSection from "./network-technologies";
 
 const services = [

@@ -12,7 +12,7 @@ export default function CareerPage() {
       id: "ui-ux-1",
       title: "Senior UI/UX Designer",
       type: "Full-time",
-      location: "Remote / San Francisco",
+      location: "Remote / Chennai",
       experience: "5+ years",
       department: "Design",
       short: "Lead the design of innovative product experiences, creating wireframes, prototypes, and high-fidelity designs for our platform.",
