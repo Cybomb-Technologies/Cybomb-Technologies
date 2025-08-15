@@ -29,12 +29,12 @@ const techData = {
 };
 
 const techLogos = {
-  "Kong Gateway": "https://konghq.com/wp-content/uploads/2020/06/kong-logo.svg",
-  "Apigee": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Apigee_logo.svg",
-  "AWS API Gateway": "https://d1.awsstatic.com/logos/aws_logo_smile_1200x630.7d2b4b1dcdc8b38b0cb4b9912107a9b4f7c1f6ae.png",
+  "Kong Gateway": "https://www.svgrepo.com/show/353978/kong-icon.svg",
+  "Apigee": "https://www.svgrepo.com/show/375537/apigee-api-platform.svg",
+  "AWS API Gateway": "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg",
   "Azure API Management": "https://learn.microsoft.com/en-us/media/logos/logo-ms-social.png",
   "OAuth 2.0": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Oauth_logo.svg",
-  "OpenID Connect": "https://openid.net/images/logo/openid-icon-100x100.png",
+  "OpenID Connect": "https://img.icons8.com/?size=512&id=21051&format=png",
   "JWT": "https://jwt.io/img/pic_logo.svg",
   "Auth0": "https://cdn.auth0.com/styleguide/components/1.0.8/media/logos/img/badge.png",
   "API Firewall": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
@@ -46,7 +46,6 @@ const techLogos = {
   "GDPR": "https://cdn-icons-png.flaticon.com/512/2965/2965278.png",
   "API Observability Tools": "https://cdn-icons-png.flaticon.com/512/3135/3135768.png"
 };
-
 const TechToolsSection = () => {
   const categories = Object.keys(techData);
   const [selected, setSelected] = useState(categories[0]);

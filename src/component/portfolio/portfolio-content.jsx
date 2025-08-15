@@ -1,36 +1,21 @@
-// pages/PortfolioContent.jsx
-
+import { useState } from "react";
 import Banner from "../common-ui/design-and-development/banner";
 import PortfolioItem from "./portfolio-items.jsx";
 import styles from "./portfolio-content.module.css";
-import PortfolioUseCase from "./portfolio-usecase.jsx"
-import styless from "./portfolio-usecase.module.css"
+import PortfolioUseCase from "./portfolio-usecase.jsx";
+import styless from "./portfolio-usecase.module.css";
 import Testimonials from './portfolio-testimonial.jsx';
 import IndustryVerticals from "./portfolio-industry.jsx";
 import ScheduleConsultation from "../common-ui/mobile-app/schedule-consultation.jsx";
 import placeholderImage from './../../assets/placeholder-image.webp';
 import { MdSchedule } from 'react-icons/md';
+
 const useCases = [
-  {
-    text: "Requirement Analysis – Deep dive into your goals",
-    className: styless.cardBlue
-  },
-  {
-    text: "Launch a serverless app backed by Lambda and DynamoDB",
-    className: styless.cardNavy
-  },
-  {
-    text: "Archive company files securely with automated backups",
-    className: styless.cardCyan
-  },
-  {
-    text: "Connect a mobile app to AWS backend with GraphQL (AppSync)",
-    className: styless.cardDark
-  },
-  {
-    text: "Create CI/CD pipelines that deploy automatically on push",
-    className: styless.cardLightBlue
-  }
+  { text: "Requirement Analysis – Deep dive into your goals", className: styless.cardBlue },
+  { text: "Launch a serverless app backed by Lambda and DynamoDB", className: styless.cardNavy },
+  { text: "Archive company files securely with automated backups", className: styless.cardCyan },
+  { text: "Connect a mobile app to AWS backend with GraphQL (AppSync)", className: styless.cardDark },
+  { text: "Create CI/CD pipelines that deploy automatically on push", className: styless.cardLightBlue }
 ];
 
 const portfolioItems = [
@@ -183,6 +168,11 @@ const portfolioItems = [
   }
 ];
 function PortfolioContent() {
+  const [showAll, setShowAll] = useState(false);
+
+  // Show either first 3 items or all items
+  const displayedItems = showAll ? portfolioItems : portfolioItems.slice(0, 3);
+
   return (
     <>
       <Banner 
@@ -192,12 +182,11 @@ function PortfolioContent() {
         note="From startups to enterprises, we've helped clients across industries bring their digital vision to life. Explore some of our recent projects that reflect our versatility, expertise, and commitment to excellence."
       />
     
-    
       <section className={styles.portfolioContainer}>
-  <div className="container">
-    <h2 className={styles.sectionHeading}>Featured Projects</h2>
+        <div className="container">
+          <h2 className={styles.sectionHeading}>Featured Projects</h2>
            
-          {portfolioItems.map((item) => (
+          {displayedItems.map((item) => (
             <PortfolioItem
               key={item.id}
               title={item.title}
@@ -211,23 +200,33 @@ function PortfolioContent() {
             />
           ))}
 
+          {/* Toggle View All / View Less */}
+        <div className="text-center mt-4">
+  <button
+    className={styles.toggleButton}
+    onClick={() => setShowAll(!showAll)}
+  >
+    {showAll ? "View Less" : "View All Projects"}
+  </button>
+</div>
+
+
           <IndustryVerticals/>
-                 <ScheduleConsultation
-      heading="Stay Ahead Of The Competition With Our Portfolio's"
-      buttonText="Schedule a Consultation!"
-      imageSrc={placeholderImage}
-      imageAlt="CRM Consultation"
-      Icon={MdSchedule}
-    />
+          <ScheduleConsultation
+            heading="Stay Ahead Of The Competition With Our Portfolio's"
+            buttonText="Schedule a Consultation!"
+            imageSrc={placeholderImage}
+            imageAlt="CRM Consultation"
+            Icon={MdSchedule}
+          />
           <PortfolioUseCase
-             title="Our Process"
-             subtitle="From Concept to Code—Flawlessly Executed"
-              useCases={useCases}
-              />
-              <Testimonials/>
+            title="Our Process"
+            subtitle="From Concept to Code—Flawlessly Executed"
+            useCases={useCases}
+          />
+          <Testimonials/>
         </div>
       </section>
-      
     </>
   );
 }
