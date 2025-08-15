@@ -7,6 +7,8 @@ import Joomla from "../component/pages-services/technologies/cms/joomla/joomla";
 import SharePoint from "../component/pages-services/technologies/cms/sharepoint/sharepoint";
 import Umbraco from "../component/pages-services/technologies/cms/umbraco/umbraco";
 import Sitecore from "../component/pages-services/technologies/cms/sitecore/sitecore";
+import Pantheon from "../component/pages-services/technologies/cms/pantheon/pantheon";
+import Aem from "../component/pages-services/technologies/cms/aem/aem";
 const emp5Routes = (
   <>
     <Route path="/services/wordpress" element={<WordPress />} />
@@ -17,6 +19,9 @@ const emp5Routes = (
     <Route path="/services/sharepoint" element={<SharePoint />} />
     <Route path="/services/umbraco" element={<Umbraco />} />
     <Route path="/services/sitecore" element={<Sitecore />} />
+    <Route path="/services/pantheon" element={<Pantheon />} />
+    <Route path="/services/aem" element={<Aem />} />
+
     {/* <Route path="/services/api-development" element={<ApiDevelopment />} />
      <Route path="/services/hosting-service" element={<HostingServices />} /> */}
   </>

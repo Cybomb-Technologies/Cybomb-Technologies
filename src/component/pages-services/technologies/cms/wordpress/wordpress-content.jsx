@@ -53,6 +53,7 @@ const services = [
       "Move from outdated CMS platforms or legacy WordPress sites to modern, clean, scalable setups.",
   },
 ];
+
 const hiringData = [
   {
     title: "WordPress Site Builds",
