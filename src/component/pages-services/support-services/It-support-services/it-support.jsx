@@ -1,7 +1,7 @@
 import ITSupportContent from './it-support-content';
 import StillNotSure from '../../../common-ui/stillnotsure/StillNotSure';
 import Metatags from '../../../../SEO/meta-tags';
-import Metatags from '../../../../SEO/meta-tags';
+ 
 
 function ITSupport() {
   const metaPropsData = {
