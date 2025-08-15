@@ -44,8 +44,8 @@ function Datadropdown1({
             onToggle(); // toggle dropdown
           }
         }}
-        onMouseEnter={() => !isMobile && onToggle(true)}
-        onMouseLeave={() => !isMobile && onToggle(false)}
+        // onMouseEnter={() => !isMobile && onToggle(true)}
+        // onMouseLeave={() => !isMobile && onToggle(false)}
       >
         Data & AI
         <span className={styles.arrow}>
@@ -55,8 +55,8 @@ function Datadropdown1({
 
       <ul
         className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
-        onMouseEnter={() => !isMobile && onToggle(true)}
-        onMouseLeave={() => !isMobile && onToggle(false)}
+        // onMouseEnter={() => !isMobile && onToggle(true)}
+        // onMouseLeave={() => !isMobile && onToggle(false)}
         style={
           !isMobile
             ? {

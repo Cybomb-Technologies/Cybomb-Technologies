@@ -33,8 +33,8 @@ function Clouddropdown1({
           }
         }}
         aria-expanded={isOpen ? "true" : "false"}
-        onMouseEnter={() => !isMobile && onToggle(true)}
-        onMouseLeave={() => !isMobile && onToggle(false)}
+        // onMouseEnter={() => !isMobile && onToggle(true)}
+        // onMouseLeave={() => !isMobile && onToggle(false)}
       >
         Cloud
         <span className={styles.arrow}>

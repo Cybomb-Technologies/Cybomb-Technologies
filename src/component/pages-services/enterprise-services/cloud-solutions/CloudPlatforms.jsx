@@ -8,7 +8,7 @@ const platforms = [
   },
   {
     name: 'Microsoft Azure',
-    logo: 'https://cdn.worldvectorlogo.com/logos/microsoft-azure-1.svg',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/2048px-Microsoft_Azure.svg.png',
   },
   {
     name: 'Google Cloud Platform (GCP)',
@@ -16,11 +16,11 @@ const platforms = [
   },
   {
     name: 'DigitalOcean',
-    logo: 'https://cdn.worldvectorlogo.com/logos/digital-ocean-2.svg',
+    logo: 'https://assets.wheelhouse.com/media/_solution_logo_09222023_11957561.png',
   },
   {
     name: 'Oracle Cloud',
-    logo: 'https://cdn.worldvectorlogo.com/logos/oracle-6.svg',
+    logo: 'https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png',
   },
   {
     name: 'Heroku',

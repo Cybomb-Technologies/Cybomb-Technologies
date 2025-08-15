@@ -7,7 +7,7 @@
   max-width: 100%;
   margin: 0 auto;
   background-color: #003459;
-  padding: 0rem 4rem 4rem 4rem;
+  padding: 0rem 4rem 4rem;
   border-radius: 16px;
 }
 
@@ -15,7 +15,7 @@
 .sectionTitle {
   background-color: #003459;
   color: #ffffff;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 2rem); /* Responsive font size */
   font-weight: 700;
   text-align: center;
   padding: 1rem 2rem;
@@ -26,7 +26,7 @@
 /* Card Layout */
 .cardsWrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-fit for better scaling */
   gap: 3.2rem;
 }
 
@@ -36,7 +36,12 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 8px 8px 4px rgba(0, 126, 167, 100%);
+  box-shadow: 8px 8px 4px rgba(0, 126, 167, 0.8);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
 }
 
 /* Title (Colored Area) */
@@ -46,7 +51,7 @@
 }
 
 .cardTitle {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
   font-weight: 600;
   margin: 0;
   color: #00171f;
@@ -61,34 +66,28 @@
 }
 
 .cardDescription {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1vw, 1rem);
   color: #1e293b;
   line-height: 1.5;
   text-align: center;
 }
 
-/* Responsive */
+/* Tablet adjustments */
 @media (max-width: 1024px) {
-  .cardsWrapper {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  .container {
+    padding: 0rem 2rem 3rem;
   }
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
+  .section {
+    padding: 0rem 1.5rem 2rem;
+  }
+  .container {
+    padding: 0rem 1.5rem 2.5rem;
+  }
   .sectionTitle {
-    font-size: 1.6rem;
     padding: 0.75rem 1.5rem;
-  }
-
-  .cardTitle {
-    font-size: 1.1rem;
-  }
-
-  .cardDescription {
-    font-size: 0.95rem;
-  }
-
-  .cardsWrapper {
-    grid-template-columns: 1fr; /* 1 per row on mobile */
   }
 }

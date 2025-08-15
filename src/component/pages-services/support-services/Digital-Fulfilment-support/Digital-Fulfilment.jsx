@@ -1,6 +1,7 @@
 import DigitalFulfilmentSupportContent from './Digital-Fulfilment-content';
 import StillNotSure from '../../../common-ui/stillnotsure/StillNotSure';
 import Metatags from '../../../../SEO/meta-tags';
+import Metatags from '../../../../SEO/meta-tags';
 
 function DigitalFulfilmentSupport() {
   const metaPropsData = {

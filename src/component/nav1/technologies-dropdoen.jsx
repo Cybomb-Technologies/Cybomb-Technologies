@@ -165,7 +165,7 @@ function Technologiesdropdown1({
                   <div className={styles.subColumnWrapper}>
                     <div className={styles.subColumn}>
                       <Link to="/services/php-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaPhp className={styles.icon} /> PHP</Link>
-                      <Link to="/services/laravel development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaLaravel className={styles.icon} /> Laravel</Link>
+                      <Link to="/services/laravel-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaLaravel className={styles.icon} /> Laravel</Link>
                       <Link to="/services/ror-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> ROR</Link>
                       <Link to="/services/power-platform-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaMicrosoft className={styles.icon} /> Power Platform</Link>
                       <Link to="/services/html5-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaHtml5 className={styles.icon} /> HTML5</Link>
@@ -177,8 +177,8 @@ function Technologiesdropdown1({
                       <Link to="/services/dotnet-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaMicrosoft className={styles.icon} /> DotNet</Link>
                       <Link to="/services/nodejs-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaNodeJs className={styles.icon} /> NodeJS</Link>
                       <Link to="/services/angular-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaAngular className={styles.icon} /> Angular</Link>
-                      {/* <Link to="/services/spring-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> Spring</Link>
-                      <Link to="/services/csharp-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> C#</Link> */}
+                      <Link to="/services/spring-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> Spring</Link>
+                      <Link to="/services/csharp-development-service" className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> C#</Link>
                     </div>
                   </div>
                 </div>

@@ -31,7 +31,7 @@ function Footer1({
     {
       icon: "bi-geo-alt-fill",
       label: "Address",
-      text: "Cybomb Technologies LLP, Hygee Works - Prime Plaza No.54/1, 1st street, Sripuram colony, St.Thomas Mount, Chennai - 600016, Tamil Nadu, India",
+      text: "Cybomb Technologies LLP, Prime Plaza No.54/1, 1st street, Sripuram colony, St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India",
     },
     {
       icon: "bi-telephone-fill",
@@ -47,7 +47,7 @@ function Footer1({
 
   const quickLinks = [
     { to: "/", label: "Home" },
-    { to: "/about-us", label: "About Us" },
+    { to: "/aboutus", label: "About Us" },
     { to: "/services", label: "Services" },
     { to: "/portfolio", label: "Portfolio" },
     { to: "/career", label: "Career" },
@@ -63,13 +63,6 @@ function Footer1({
     { to: "/services/tech-consulting", label: "Tech Consulting" },
   ];
 
-  const renderLinks = (links) =>
-    links.map((link, i) => (
-      <Link key={i} to={link.to}>
-        {link.label}
-      </Link>
-    ));
-
   const renderListLinks = (links) =>
     links.map((link, i) => (
       <li key={i}>
@@ -83,7 +76,7 @@ function Footer1({
         <i className={item.iconClass}></i>
       </a>
     ));
-// #ffffffcf #00171f1f
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -96,7 +89,7 @@ function Footer1({
             <div className={styles.subscribeSection}>
               <h4 className={styles.subTitle}>Subscribe</h4>
               <p>Stay updated with our latest news and offers.</p>
-              <form>
+              <form className={styles.rowAlign}>
                 <input type="email" placeholder="Enter your email" />
                 <button type="submit">Subscribe</button>
               </form>
@@ -113,114 +106,78 @@ function Footer1({
           <div className={styles.footerTopRow2}>
             
             <div className={styles.quickLinks}>
-              <h4 className={styles.sectionTitle}>Quick Links</h4>
+              <h4 className={`${styles.sectionTitle} ${styles.footerQuickLinks}`}>Quick Links</h4>
               <ul>{renderListLinks(quickLinks)}</ul>
             </div>
 
             <div className={styles.services}>
-              <h4 className={styles.sectionTitle}>Services</h4>
+              <h4 className={`${styles.sectionTitle} ${styles.footerServices}`}>Services</h4>
               <ul>{renderListLinks(servicesLinks)}</ul>
             </div>
             
             <div className={styles.quickLinks}>
-              <h4 className={styles.sectionTitle}>Legal</h4>
+              <h4 className={`${styles.sectionTitle} ${styles.footerLegalLinks}`}>Legal</h4>
               <ul>{renderListLinks(legalLinks)}</ul>
             </div>
 
             <div className={styles.getInTouch}>
-              <h4 className={styles.sectionTitle}>Get in Touch</h4>
+              <h4 className={`${styles.sectionTitle} ${styles.footerGetInTouch}`}>Get in Touch</h4>
               {contactItems.map((item, i) => (
                 <div key={i} className={styles.contactItem}>
                   <i className={`bi ${item.icon} ${styles.icon}`}></i>
+                  {/* <div className={styles.contactTextBlock}>
+                    <p><strong>{item.label}</strong></p>
+                    <p>{item.text}</p>
+                  </div> */}
+
                   <div className={styles.contactTextBlock}>
                     <p><strong>{item.label}</strong></p>
-                    <p>{item.text}</p>
+                    <p className={item.label === "Address" ? styles.addressText : ""}>
+                      {item.label !== "Address" && item.text}
+                    </p>
                   </div>
+
                 </div>
               ))}
             </div>
-          </div>
-        </div>
 
-        {/* Footer Bottom */}
-        {/* <div className={styles.footerBottom}>
-          <p>© 2025 Cybomb Technologies LLP | All Rights Reserved</p>
-        </div> */}
-
-        {/* TABLET */}
-        <div className={styles.tabletView}>
-          <div className={styles.mobileTop}>
-            <img src="/images/logo-1-white.png" alt="logo" className={styles.logo} />
-            <h4 className={`${styles.sectionTitle} mt-4`}>Follow Us</h4>
-            <div className={styles.socials}>{renderSocialIcons()}</div>
-          </div>
-
-          <div className={styles.tabletMiddle}>
-            <div className={styles.quickLinks}>
-              <h4 className={styles.sectionTitle}>Quick Links</h4>
-              <div className={styles.linkGroup}>{renderLinks(quickLinks)}</div>
-            </div>
-
-            <div className={styles.services}>
-              <h4 className={styles.sectionTitle}>Services</h4>
-              <div className={styles.linkGroup}>{renderLinks(servicesLinks)}</div>
-            </div>
-
-            <div className={styles.mobileGetInTouch}>
-              <h4 className={styles.sectionTitle}>Get in Touch</h4>
-              {contactItems.map((item, i) => (
-                <div key={i} className={styles.contactItem}>
-                  <i className={`bi ${item.icon} ${styles.icon}`}></i>
-                  <div>
-                    <p><strong>{item.label}</strong></p>
-                    <p>{item.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* MOBILE */}
-        <div className={styles.mobileView}>
-          <div className={styles.mobileTop}>
-            <img src="/images/logo-1-white.png" alt="logo" className={styles.logo} />
-            <h4 className={`${styles.sectionTitle} mt-4`}>Follow Us</h4>
-            <div className={styles.socials}>{renderSocialIcons()}</div>
-          </div>
-
-          <div className={styles.mobileLinks}>
-            <div className={styles.quickLinks}>
-              <h4 className={styles.sectionTitle}>Quick Links</h4>
-              <div className={`${styles.linkGroup} ${styles.pageLinks}`}>{renderLinks(quickLinks)}</div>
-            </div>
-
-            <div className={styles.services}>
-              <h4 className={styles.sectionTitle}>Services</h4>
-              <div className={styles.linkGroup}>{renderLinks(servicesLinks)}</div>
-            </div>
-          </div>
-
-          <div className={styles.mobileGetInTouch}>
-            <h4 className={styles.sectionTitle}>Get in Touch</h4>
-            {contactItems.map((item, i) => (
-              <div key={i} className={styles.contactItem}>
-                <i className={`bi ${item.icon} ${styles.icon}`}></i>
-                <div>
-                  <p><strong>{item.label}</strong></p>
-                  <p>{item.text}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
 
         {/* BOTTOM */}
         <div className={styles.footerBottom}>
-          {/* <div className={styles.legalLinks}>
-            {renderLinks(legalLinks)}
-          </div> */}
-          <p>© 2025 Cybomb Technologies LLP | All Rights Reserved</p>
+
+          <div className={styles.copyrightSection}>
+            <p>© {new Date().getFullYear()} Cybomb Technologies LLP. All rights reserved.</p>
+          </div>
+
+          <div className={styles.certificateSection}>
+            <div className={styles.certificateItem}>
+              <img
+                src="/images/footer/dpiit-logo.png"
+                alt="Certificate 1"
+                className={styles.certificateLogo}
+              />
+              <div className={styles.certificateText}>
+                <span className={styles.certificateLabel}>Cert ID:</span>
+                <span className={styles.certificateValue}>#DIPP115093</span>
+              </div>
+            </div>
+
+            <div className={styles.certificateItem}>
+              <img
+                src="/images/footer/dgft-logo.png"
+                alt="Certificate 2"
+                className={styles.certificateLogo}
+              />
+              <div className={styles.certificateText}>
+                <span className={styles.certificateLabel}>Cert ID:</span>
+                <span className={styles.certificateValue}>IEC - #AARFC1378G</span>
+              </div>
+            </div>
+          </div>
+
+          
         </div>
 
       </div>
