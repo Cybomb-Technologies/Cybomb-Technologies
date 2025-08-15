@@ -4,7 +4,7 @@ import styles from "../../common-ui/security/security-technologies.module.css";
 const techData = {
   "Mobile App Protection": [
     "AppArmor",
-    "OWASP Mobile Security Testing Guide (MSTG)",
+    "OWASP(MSTG)",
     "ZAP Proxy",
     "Burp Suite"
   ],
@@ -29,12 +29,12 @@ const techData = {
 };
 
 const techLogos = {
-  "AppArmor": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/AppArmor_Logo.svg/2560px-AppArmor_Logo.svg.png",
-  "OWASP Mobile Security Testing Guide (MSTG)": "https://owasp.org/assets/images/logo.png",
-  "ZAP Proxy": "https://www.zaproxy.org/images/zap-logo.svg",
-  "Burp Suite": "https://portswigger.net/burp/images/burp-icon-64x64.png",
+  "AppArmor": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_RyrD2y_OKP2NZKM0vS7hT2YC0a9Hv_LouA&s",
+  "OWASP(MSTG)": "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/owasp-31nws7v8m3nvamfvza9koq.png/owasp-ykjifjb8kusnnarhfxcbf.png?_a=DATAg1AAZAA0",
+  "ZAP Proxy": "https://avatars.githubusercontent.com/u/6716868?v=4",
+  "Burp Suite": "https://www.svgrepo.com/show/454430/burpsuite-security-software.svg",
   "Mobile Device Management (MDM)": "https://cdn-icons-png.flaticon.com/512/888/888859.png",
-  "Firebase App Check": "https://firebase.google.com/static/images/brand-guidelines/logo-built_black.png",
+  "Firebase App Check": "https://miro.medium.com/v2/resize:fit:300/1*R4c8lHBHuH5qyqOtZb3h-w.png",
   "SSL Pinning": "https://cdn-icons-png.flaticon.com/512/3064/3064197.png",
   "Code Obfuscation Tools": "https://cdn-icons-png.flaticon.com/512/2991/2991148.png",
   "End-to-End Encryption": "https://cdn-icons-png.flaticon.com/512/2910/2910768.png",
