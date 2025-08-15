@@ -6,14 +6,13 @@ function Homecontact() {
       <div className="container" id="home-contact" style={{ padding: "0px" }}>
         <h2
           className="text-center"
-          data-aos="zoom-out-right"
           style={{ color: "#003459", borderRadius: "8px" }}
         >
           Get in Touch
         </h2>
         <p
           className="text-secondary fs-5 text-center mt-3"
-          data-aos="zoom-out-left"
+          
         >
           Ready to start your project? We're here to help you every step of the
           way
@@ -21,7 +20,7 @@ function Homecontact() {
 
         <div className="contact-flex-container">
           {/* Left Card */}
-          <div className="contact-card-wrapper" data-aos="zoom-out-up">
+          <div className="contact-card-wrapper">
             <div className="card p-4 contact-card border-0 shadow">
               <h3 className="text-white">Contact Information</h3>
 
@@ -121,14 +120,14 @@ function Homecontact() {
                   <i className="mx-3 bi bi-instagram fs-4 text-white"></i>
                 </a>
                 <a
-                  href="https://x.com/CybombTech"
+                  href=" https://www.linkedin.com/company/cybomb/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <i className="mx-3 bi bi-linkedin fs-4 text-white"></i>
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/cybomb/"
+                  href="https://x.com/CybombTech"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -141,7 +140,7 @@ function Homecontact() {
           {/* Right Card (Map) */}
           <div
               className="contact-card-wrapper"
-              data-aos="zoom-out-down"
+              
               style={{ color: "#003459" }}
             >
               <div

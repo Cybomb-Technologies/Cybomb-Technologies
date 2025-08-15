@@ -26,12 +26,12 @@ function HomeBanner() {
         <Carousel.Item>
           <img
             className="d-block w-100 custom-banner-img"
-            src="/images/banner/banner-1.jpg" 
+            src="/images/banner/banner-1.jpg"
             alt="First slide"
           />
           <Carousel.Caption className="custom-caption">
             <div className="row">
-              <div className="col-xl-6">
+              <div className="col-xl-7">
                 <div className="caption-box">
                   <h1>Innovating Your Vision Into AI-Powered Platforms</h1>
                   <p>
@@ -40,9 +40,9 @@ function HomeBanner() {
                     fuel your growth.
                   </p>
                   <div style={{ textAlign: "left" }}>
-                    <a href="#services" className="btn btn-primary btn-lg">
+                    <Link to="/services" className="btn btn-primary btn-lg">
                       Explore Services →
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -61,18 +61,17 @@ function HomeBanner() {
           </div>
           <Carousel.Caption className="custom-caption">
             <div className="row">
-              <div className="col-xl-6">
+              <div className="col-xl-7">
                 <div className="caption-box">
-                  <h1>Innovating Your Vision Into AI-Powered Platforms</h1>
+                  <h1>Transforming Ideas Into Digital Excellence</h1>
                   <p>
-                    We empower businesses with scalable mobile apps, intelligent
-                    AI systems, and seamless SaaS platforms — custom-built to
-                    fuel your growth.
+                    From concept to launch, we craft user-focused solutions that
+                    merge sleek design with powerful technology
                   </p>
                   <div style={{ textAlign: "left" }}>
-                    <a href="#services" className="btn btn-primary btn-lg">
+                    <Link to="/services" className="btn btn-primary btn-lg">
                       Explore Services →
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -87,18 +86,18 @@ function HomeBanner() {
           />
           <Carousel.Caption className="custom-caption">
             <div className="row">
-              <div className="col-xl-6">
+              <div className="col-xl-7">
                 <div className="caption-box">
-                  <h1>Innovating Your Vision Into AI-Powered Platforms</h1>
+                  <h1>Driving Growth Through Smart Technology</h1>
                   <p>
-                    We empower businesses with scalable mobile apps, intelligent
-                    AI systems, and seamless SaaS platforms — custom-built to
-                    fuel your growth.
+                    Our expertise in AI, cloud solutions, and cross-platform
+                    development enables businesses to streamline operations,
+                    enhance customer engagement, and unlock new revenue streams.
                   </p>
                   <div style={{ textAlign: "left" }}>
-                    <a href="#services" className="btn btn-primary btn-lg">
+                    <Link to="/services" className="btn btn-primary btn-lg">
                       Explore Services →
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

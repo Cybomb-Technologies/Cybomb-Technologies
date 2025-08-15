@@ -44,7 +44,6 @@ app.use(express.urlencoded({ extended: true }));
 const sendMailRoutes = require("./routes/sendMailRoute");
 const popupMailRoute = require("./routes/popupMailRoute");
 const bannerMailRoute = require("./routes/bannerMail");
-const careerMailRoute = require("./routes/careerMailRoute");
  
 // Health check route
 app.get('/api/health', (req, res) => {
@@ -59,7 +58,6 @@ app.get('/api/health', (req, res) => {
 app.use("/api/send-mail", sendMailRoutes);
 app.use("/api/popup-mail", popupMailRoute);
 app.use("/api/banner-mail", bannerMailRoute);
-app.use("/api/career", careerMailRoute);
  
 // Serve frontend in production
 if (process.env.NODE_ENV === 'production') {
