@@ -2,22 +2,24 @@ import DigitalFulfilmentSupportContent from './Digital-Fulfilment-content';
 import StillNotSure from '../../../common-ui/stillnotsure/StillNotSure';
 import Metatags from '../../../../SEO/meta-tags';
 
+
 function DigitalFulfilmentSupport() {
   const metaPropsData = {
-    title: "Digital Fulfilment Support - Cybomb Technologies | End-to-End Digital Solutions",
-    description:
-      "Cybomb Technologies offers complete digital fulfilment support services, including content management, e-commerce operations, digital asset delivery, and process automation to streamline your business.",
-    keyword:
-      "Digital Fulfilment, E-commerce Support, Content Management, Digital Asset Delivery, Process Automation, Online Store Management, Cybomb Technologies",
-    url: "https://www.cybomb.com/services/digital-fulfilment-support",
-    image: "https://www.cybomb.com/images/banner-2.jpg", // Replace with actual banner if available
-  };
+  title: "Digital Fulfilment Support Services - Cybomb Technologies | End-to-End Digital Delivery",
+  description:
+    "Cybomb Technologies offers Digital Fulfilment Support Services to manage, deliver, and optimize your digital products and services. We ensure smooth operations, timely delivery, and exceptional customer experiences.",
+  keyword:
+    "Digital Fulfilment Support, Digital Product Delivery, Digital Service Management, End-to-End Digital Support, Digital Operations, Content Fulfilment, Digital Delivery Solutions, Digital Support Services India",
+  url: "https://www.cybomb.com/Services/digital-fulfilment-support",
+  image: "https://www.cybomb.com",
+};
 
   return (
     <>
-      <Metatags metaProps={metaPropsData} />
-      <DigitalFulfilmentSupportContent />
-      <StillNotSure />
+      <DigitalFulfilmentSupportContent/>
+      
+      <StillNotSure/>
+      <Metatags  metaProps={metaPropsData}/>
     </>
   );
 }
