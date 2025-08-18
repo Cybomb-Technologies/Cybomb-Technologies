@@ -8,7 +8,7 @@ import placeholderImage from './../../../../assets/placeholder-image.webp';
 import CloudOffers from '../../../common-ui/support-service/cloud-offers';
 import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
-import OnlinePresence from "../../../common-ui/enterprise-services/online-presence";
+import OnlinePresence from "../../../common-ui/support-service/online-presence";
 
 
 const whychooseus = [
@@ -105,7 +105,7 @@ From frontend glitches to backend bottlenecks, we’re your technical co-pilot."
       
       <ScheduleConsultation
             heading="Reliable, secure, and scalable server management you can count on."
-            buttonText="Our server support services ensure that your critical systems stay online, optimized, and protected — 24/7. We help businesses maintain, monitor, and secure their servers across cloud, virtual, and dedicated environments with proactive expertise."
+            buttonText="Schedule a Consultation!"
             imageSrc={placeholderImage}
             imageAlt="CRM Consultation"
             Icon={MdSchedule}
