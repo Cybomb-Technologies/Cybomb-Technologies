@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./banner-custom.css";
-
+import { Carousel } from "react-bootstrap";
 function HomeBanner() {
   const rotatingPhrases = [
     "Powerful Digital Solutions",
     "Scalable Mobile Apps",
     "AI-Powered Platforms",
-    "Custom SaaS Systems"
+    "Custom SaaS Systems",
   ];
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,38 +22,89 @@ function HomeBanner() {
 
   return (
     <section className="home-banner text-white d-flex align-items-center">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12 col-lg-8 text-center">
-            <div className="banner-content-wrapper">
-              <h1 className="display-3 display-lg-2 fw-bold mb-4">
-                  <span className="gradient-text">Innovating Your Vision</span>
-                  <br />
-                  into <span className="dynamic-text-container">
-                    <strong className="dynamic-text">{rotatingPhrases[currentPhraseIndex]}</strong>
-                  </span>
-                </h1>
-              <p className="lead fs-5 banner-paragraph-content px-3 px-md-5">
-                We empower businesses with scalable mobile apps, intelligent AI systems, and seamless SaaS platforms — custom-built to fuel your growth.
-              </p>
-              <div className="d-flex flex-column flex-sm-row gap-3 mt-5 align-items-center justify-content-sm-center">
-                <Link
-                  to="/services"
-                  className="btn px-4 px-lg-5 py-3 fw-semibold explore-btn"
-                >
-                  Explore Services <i className="ms-2 bi bi-arrow-right"></i>
-                </Link>
-                <a
-                  href="#consultation"
-                  className="btn btn-outline-light px-4 px-lg-5 py-3 fw-semibold consultation-btn"
-                >
-                  Let's Build Together
-                </a>
+      <Carousel fade interval={3000} controls={false} indicators={true}>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 custom-banner-img"
+            src="/images/banner/banner-1.jpg"
+            alt="First slide"
+          />
+          <Carousel.Caption className="custom-caption">
+            <div className="row">
+              <div className="col-xl-7">
+                <div className="caption-box">
+                  <h1>Innovating Your Vision Into AI-Powered Platforms</h1>
+                  <p>
+                    We empower businesses with scalable mobile apps, intelligent
+                    AI systems, and seamless SaaS platforms — custom-built to
+                    fuel your growth.
+                  </p>
+                  <div style={{ textAlign: "left" }}>
+                    <Link to="/services" className="btn btn-primary btn-lg">
+                      Explore Services →
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <img
+            className="d-block w-100 custom-banner-img"
+            src="/images/banner/banner-2.jpg"
+            alt="Second slide"
+          />
+          <div className="row">
+            <div className="col-sm-5"></div>
           </div>
-        </div>
-      </div>
+          <Carousel.Caption className="custom-caption">
+            <div className="row">
+              <div className="col-xl-7">
+                <div className="caption-box">
+                  <h1>Transforming Ideas Into Digital Excellence</h1>
+                  <p>
+                    From concept to launch, we craft user-focused solutions that
+                    merge sleek design with powerful technology
+                  </p>
+                  <div style={{ textAlign: "left" }}>
+                    <Link to="/services" className="btn btn-primary btn-lg">
+                      Explore Services →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 custom-banner-img"
+            src="/images/banner/banner-3.jpg"
+            alt="Third slide"
+          />
+          <Carousel.Caption className="custom-caption">
+            <div className="row">
+              <div className="col-xl-7">
+                <div className="caption-box">
+                  <h1>Driving Growth Through Smart Technology</h1>
+                  <p>
+                    Our expertise in AI, cloud solutions, and cross-platform
+                    development enables businesses to streamline operations,
+                    enhance customer engagement, and unlock new revenue streams.
+                  </p>
+                  <div style={{ textAlign: "left" }}>
+                    <Link to="/services" className="btn btn-primary btn-lg">
+                      Explore Services →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     </section>
   );
 }

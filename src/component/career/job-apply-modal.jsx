@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { FiUpload, FiCheckCircle } from "react-icons/fi";
+import { FiUpload } from "react-icons/fi";
+
+const API_URL = import.meta.env.VITE_API_BASE; 
 
 const QuickApplyModal = ({ job, onClose, onApply }) => {
   const [formData, setFormData] = useState({
@@ -33,12 +35,12 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
   const validate = () => {
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Full name is required";
-    if (
-      !formData.email.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
-    )
+    if (!formData.email.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/))
       newErrors.email = "Valid email is required";
     if (
-      !formData.phone.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)
+      !formData.phone.match(
+        /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+      )
     )
       newErrors.phone = "Valid phone number is required";
     if (!formData.resume) newErrors.resume = "Resume is required";
@@ -53,8 +55,26 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
     setIsSubmitting(true);
 
     try {
-      // Simulated API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("phone", formData.phone);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("resume", formData.resume);
+
+      // Add job title to form data
+      if (job?.title) {
+        formDataToSend.append("jobTitle", job.title);
+      }
+
+      const res = await fetch(`${API_URL}/api/career`, {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to submit application");
+      }
+
       setSubmitSuccess(true);
       setTimeout(() => {
         onApply?.();
@@ -67,25 +87,6 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
       setIsSubmitting(false);
     }
   };
-
-  if (submitSuccess) {
-    return (
-      <div className="modal fade show" style={{ display: "block" }} tabIndex="-1">
-        <div className="modal-dialog modal-md modal-dialog-centered">
-          <div className="modal-content text-center py-5">
-            <FiCheckCircle className="text-success mb-4" style={{ fontSize: "4rem" }} />
-            <h3 className="mb-3">Application Submitted!</h3>
-            <p className="text-muted">
-              Thank you for applying for {job?.title}. We will get back to you soon.
-            </p>
-            <button className="btn btn-primary" onClick={onClose}>
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="modal fade show" style={{ display: "block" }} tabIndex="-1">
@@ -178,16 +179,10 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
                 )}
               </div>
 
-              {errors.submit && (
-                <div className="alert alert-danger">{errors.submit}</div>
-              )}
+              {errors.submit && <div className="alert alert-danger">{errors.submit}</div>}
 
               <div className="col-12 text-end">
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                  disabled={isSubmitting}
-                >
+                <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
                   {isSubmitting ? (
                     <>
                       <span className="spinner-border spinner-border-sm me-2"></span>

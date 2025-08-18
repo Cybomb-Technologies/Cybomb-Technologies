@@ -1,26 +1,28 @@
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
-(async () => {
+async function testEmail() {
   try {
     const transporter = nodemailer.createTransport({
-      host: "smtp.hostinger.com",
-      port: 465,
+      host: process.env.SMTP_HOST,
+      port: parseInt(process.env.SMTP_PORT),
       secure: true,
       auth: {
-        user: "sudesh.t@cybomb.com",
-        pass: "Cybomb@1234", // check password
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
+      tls: {
+        rejectUnauthorized: false, // <- ignore self-signed cert
+      },
+      logger: true,
+      debug: true,
     });
 
-    await transporter.sendMail({
-      from: "sudesh.t@cybomb.com",
-      to: "sudesh.t@cybomb.com",
-      subject: "Test Email",
-      text: "This is a test email from Node.js",
-    });
-
-    console.log("✅ Email sent!");
-  } catch (err) {
-    console.error("❌ Error:", err);
+    await transporter.verify();
+    console.log("SMTP credentials are correct ✅");
+  } catch (error) {
+    console.error("SMTP verification failed ❌", error);
   }
-})();
+}
+
+testEmail();

@@ -5,6 +5,7 @@ import Aboutourjourne from "../component/about/about-our-journey";
 import Aboutourmission from "../component/about/about-our-mission";
 import Aboutourvision from "../component/about/about-our-vision";
 import Aboutourteam from "../component/about/about-ourteam";
+import TeamMember from "../component/about/team-member";
 import Metatags from "../SEO/meta-tags";
 
 function About() {
@@ -27,6 +28,7 @@ function About() {
       <Aboutourjourne />
       <Aboutourcore />
       <Aboutourteam />
+      <TeamMember/>
       <Aboutnewsletter />
     </>
   );

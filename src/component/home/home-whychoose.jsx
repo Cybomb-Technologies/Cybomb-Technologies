@@ -5,15 +5,15 @@ function Homewhychoose() {
     <section className="why-choose-bg text-white text-center" style={{ padding: "60px 0px"}}>
       <div className="container">
         {/* Heading */}
-        <h2 className="fw-bold mb-2 text-white" data-aos="zoom-out-right">
+        <h2 className="fw-bold mb-2 text-white">
           Why Choose Cybomb Technologies
         </h2>
-        <p className="text-white mb-5" data-aos="zoom-out-left">Numbers that speak for our commitment to excellence</p>
+        <p className="text-white mb-5">Numbers that speak for our commitment to excellence</p>
 
         {/* Stats Row */}
         <div className="row g-4">
           <div className="col-6 col-md-3">
-            <div className="card stat-card p-4 h-100 text-center border-0 rounded-4" data-aos="zoom-out-down">
+            <div className="card stat-card p-4 h-100 text-center border-0 rounded-4">
               <div className="icon-box bg-primary mx-auto mb-2">
                 <i className="bi bi-trophy-fill"></i>
               </div>
@@ -23,7 +23,7 @@ function Homewhychoose() {
           </div>
 
           <div className="col-6 col-md-3">
-            <div className="card stat-card p-4 h-100 text-center border-0 rounded-4" data-aos="zoom-out-down">
+            <div className="card stat-card p-4 h-100 text-center border-0 rounded-4">
               <div className="icon-box bg-success mx-auto mb-2">
                 <i className="bi bi-heart-fill"></i>
               </div>
@@ -33,7 +33,7 @@ function Homewhychoose() {
           </div>
 
           <div className="col-6 col-md-3">
-            <div className="card stat-card p-4 h-100 text-center border-0 rounded-4" data-aos="zoom-out-down">
+            <div className="card stat-card p-4 h-100 text-center border-0 rounded-4">
               <div className="icon-box bg-purple mx-auto mb-2">
                 <i className="bi bi-calendar-event-fill"></i>
               </div>
@@ -43,7 +43,7 @@ function Homewhychoose() {
           </div>
 
           <div className="col-6 col-md-3">
-            <div className="card stat-card p-4 h-100 text-center border-0 rounded-4 border-orange" data-aos="zoom-out-down">
+            <div className="card stat-card p-4 h-100 text-center border-0 rounded-4 border-orange">
               <div className="icon-box bg-warning mx-auto mb-2">
                 <i className="bi bi-people-fill"></i>
               </div>
@@ -54,7 +54,7 @@ function Homewhychoose() {
         </div>
 
         {/* CTA Gradient Box */}
-        <div className="cta-box mt-5 p-4 rounded-4 text-white" data-aos="zoom-out-up">
+        <div className="cta-box mt-5 p-4 rounded-4 text-white">
           <h2 className="fw-bold mb-1">Ready to Join Our Success Stories?</h2>
           <h2 className="text-light small mt-4">
             Transform your business with our proven expertise and dedicated support
