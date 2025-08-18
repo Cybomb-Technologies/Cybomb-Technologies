@@ -95,8 +95,8 @@ section {
 /* Hero Section */
 .hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-              url('environmental-pollution-industry-exterior-daylight.jpg') center/cover no-repeat;
-  min-height: 500px; /* Force minimum height */
+              url('images/environmental-pollution-industry-exterior-daylight.jpg') center/cover no-repeat;
+  height: 100vh ;/* Force minimum height */
   display: flex;
   align-items: center; /* Vertically center text */
 }
