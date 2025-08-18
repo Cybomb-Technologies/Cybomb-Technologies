@@ -91,3 +91,57 @@
     padding: 0.75rem 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .section {
+    padding: 0rem 1rem 1.5rem;
+  }
+
+  .container {
+    padding: 0rem 1rem 2rem;
+    border-radius: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 32px;
+  }
+
+  .cardsWrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 0.95rem;
+  }
+
+  .cardDescription {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 360px) {
+  .section {
+    padding: 0rem 0.75rem 1rem;
+  }
+
+  .container {
+    padding: 0rem 0.75rem 1.25rem;
+  }
+
+  .sectionTitle {
+    font-size: 1rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .cardTitle {
+    font-size: 0.9rem;
+  }
+
+  .cardDescription {
+    font-size: 0.8rem;
+  }
+}

@@ -11,7 +11,7 @@
 .titleWrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .title {
@@ -70,6 +70,10 @@
 
 /* Tablet (768px–1199px) */
 @media (max-width: 1199px) and (min-width: 768px) {
+  .section{
+    padding: 1.5rem 2rem;
+  }
+
   .title {
     font-size: 1.8rem;
     padding: 1.2rem 3rem;
