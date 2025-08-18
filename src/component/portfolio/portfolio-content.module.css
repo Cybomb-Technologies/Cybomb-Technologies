@@ -33,30 +33,63 @@
   transform: translateY(-6px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
-/* Portfolio toggle button (View All / View Less) */
-.toggleButton {
-  display: inline-block;
-  margin: 30px auto 50px auto; /* space above and below */
-  padding: 12px 28px;
+/* Enhanced Pagination styles */
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 40px 0 50px;
+  flex-wrap: wrap;
+}
+
+.paginationButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #007ea7;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.paginationButton:hover:not(:disabled) {
+  background-color: #005f8a;
+  transform: scale(1.1);
+}
+
+.paginationButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.pageNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #007ea7;
+  background-color: white;
+  color: #007ea7;
   font-size: 1rem;
   font-weight: 600;
-  color: #ffffff;
-  background: #007ea7; /* primary blue */
-  border: none;
-  border-radius: 8px;
   cursor: pointer;
-  text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-.toggleButton:hover {
-  background: #005f8a; /* darker blue on hover */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+.pageNumber:hover {
+  background-color: #f0f9ff;
 }
 
-.toggleButton:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0,168,232,0.4); /* focus ring */
+.activePage {
+  background-color: #007ea7;
+  color: white;
+  border-color: #007ea7;
 }

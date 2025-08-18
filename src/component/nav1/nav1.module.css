@@ -232,23 +232,6 @@
   }
 }
 
-@media screen and (min-width: 1099px) {
-  .navInner {
-    width: auto;
-    padding: 0;
-  }
-
-  .menu {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 14px;
-  }  
-
-  .offcanvasMenu {
-    display: block;
-  }
-
-}
 
 /* Tablet: 768px to 1199px */
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -319,7 +302,7 @@
   }
 
   .navLink {
-    color: #ffffff;
+    color: #9bd0ff;
     font-size: 18px;
     padding: 0.75rem 1rem;
     width: 100%;
@@ -407,7 +390,7 @@
   }
 
   .navLink {
-    color: #ffffff;
+    color: #9bd0ff;
     font-size: 16px;
     padding: 0.75rem 1rem;
     width: 100%;
@@ -581,6 +564,24 @@
     display: flex;
     justify-content: flex-end;
     font-size: 14px;
+  }
+
+}
+
+@media screen and (min-width: 1199px) {
+  .navInner {
+    width: auto;
+    padding: 0;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+  }  
+
+  .offcanvasMenu {
+    display: block;
   }
 
 }

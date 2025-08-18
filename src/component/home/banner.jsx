@@ -10,7 +10,7 @@ function HomeBanner() {
     "Custom SaaS Systems",
   ];
 
-  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [setCurrentPhraseIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
