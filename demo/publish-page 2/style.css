@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #2c2a29; /* Dark text for readability */
+  line-height: 1.6;
+  background-color: #f4f0e6; /* Soft parchment background */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: #3e2c1c; /* All headings are a consistent dark brown */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #3e2c1c !important;
+  color: #f8f4f0 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand img {
+  margin-left: 15px; /* Adds space to the left of the logo */
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #f8f4f0 !important;
+  transition: color 0.3s ease;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffdd99 !important; /* Lighter gold on hover */
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/hero.jpg") center/cover no-repeat;
+  color: #f8f4f0; /* Light text over image */
+}
+
+.hero h1 {
+  color: #ffffff; /* White for this specific heading */
+}
+
+/* Button Styles */
+.btn-warning {
+  background-color: #3e2c1c; /* Dark brown color from navbar */
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #7e2a3a; /* Maroon color on hover */
+  color: #ffffff;
+}
+
+/* Section Backgrounds */
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+section:nth-of-type(odd) {
+  background-color: #f4f0e6; /* Parchment */
+}
+
+section:nth-of-type(even) {
+  background-color: #ffffff; /* White */
+}
+
+/* Service Section */
+#services h5,
+#services p {
+  color: #181818; /* The new, darker color */
+}
+
+#services .fa-3x {
+  color: #c97a40 !important; /* Golden brown for icons */
+}
+
+/* Portfolio Section */
+#portfolio .card {
+  background-color: #7e2a3a; /* Maroon card background */
+  border: 1px solid #e0d9c6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#portfolio .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#portfolio .card-body h5 {
+  color: #ffdd99 !important; /* Light gold title */
+}
+
+#portfolio .card-body p {
+  color: #f8f4f0 !important; /* Light parchment text */
+}
+
+/* Where We Serve Section */
+#where h2,
+#where p,
+#where ul,
+#where li,
+#where strong {
+  color: #181818; /* The new, darker color for this section */
+}
+
+#where img {
+  max-height: 360px;
+  object-fit: cover;
+  width: 100%;
+}
+
+#where ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#where li {
+  margin-bottom: 1rem;
+}
+
+/* New style for the compact content */
+.compact-content ul {
+  margin-bottom: 0.5rem;
+}
+
+.compact-content li {
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.compact-content p {
+  margin-top: 0.5rem;
+}
+
+/* Statistics Section */
+.stat-card {
+  background-color: #7e2a3a; /* Maroon background */
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.stat-card:hover {
+  background-color: #993344;
+  transform: translateY(-3px);
+}
+
+.stat-number {
+  font-size: 2.25rem;
+  color: #ffdd99; /* Light gold for numbers */
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stat-card p {
+  color: #ffffff; /* White text for description */
+}
+
+/* Team Section */
+#team h4,
+#team p {
+  color: #181818; /* Updated to the new, darker color */
+}
+
+#team img {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Testimonials Section */
+#testimonials img {
+  border: 4px solid #c97a40; /* Golden brown border for images */
+}
+
+/* Blog Section */
+#blog h5,
+#blog p {
+  color: #181818; /* Updated to the new, darker color */
+}
+
+#blog img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #3e2c1c; /* Dark brown footer */
+  color: #f8f4f0;
+}
+
+footer a {
+  text-decoration: none !important;
+  color: #f8f4f0;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffdd99 !important; /* Light gold on hover */
+}
+
+footer hr {
+  border-top: 2px solid #ffdd99 !important; /* Light gold hr */
+}
+
+/* Footer Headings */
+footer h5 {
+  color: #ffdd99; /* Light gold for footer headings */
+}
+
+footer .list-unstyled li {
+  margin-bottom: 0.6rem; /* adds vertical gap */
+}
+
+/* Utility Class */
+.text-warning {
+  color: #c97a40 !important; /* Ensures warning color is consistent */
+}
+
+/* Accessibility */
+html {
+  scroll-padding-top: 90px;
+}
+
+/* === Testimonials: rounded-square profile style === */
+#testimonials img.testimonial-photo {
+  width: 140px; /* smaller size */
+  height: 140px; /* equal height = square */
+  object-fit: cover;
+  border-radius: 15px; /* rounded square */
+  border: 4px solid #c97a40; /* keep golden brown border */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#testimonials .col-md-4 {
+  margin-bottom: 2rem;
+}
+
+#testimonials p {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social-icon {
+  font-size: 1.5rem; /* same size for all icons */
+  width: 32px; /* make equal width */
+  height: 32px; /* make equal height */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Change hamburger icon color only on mobile view */
+@media (max-width: 991px) {
+  .navbar-toggler {
+    border-color: #ffffff; /* white border for mobile */
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+}
+
+.testimonial-img {
+  width: 120px; /* fixed width */
+  height: 120px; /* fixed height */
+  object-fit: cover; /* crop nicely instead of stretching */
+  border-radius: 15px; /* rounded square */
+  display: block;
+  margin: 0 auto 15px; /* center image + spacing below */
+}
