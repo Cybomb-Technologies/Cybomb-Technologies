@@ -112,6 +112,8 @@ function Datadropdown1({
               {/* AI Column */}
               <div className={styles.dropdownColumn}>
                 <div className={styles.dropdownHeader}> <FaBrain className={styles.icon} /> AI</div>
+                <Link to="/services/ai-integration" className={styles.dropdownItem} onClick={onLinkClick}> <FaBrain className={styles.icon} /> AI Integration </Link>
+
                 <Link className={styles.dropdownItem} to="/services/custom-ai-development" onClick={onLinkClick}>
                   <GiArtificialIntelligence className={styles.icon} /> Custom AI Development
                 </Link>
