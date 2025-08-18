@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import {
   FaCode, FaCloud, FaCogs, FaBullhorn, FaMobileAlt, FaShoppingCart,
   FaTools, FaProjectDiagram, FaHeadset, FaUsersCog, FaServer, FaChartLine,
-  FaSearch, FaFacebook, FaGoogle, FaThumbsUp, FaRocket
+  FaSearch, FaFacebook, FaGoogle, FaThumbsUp, FaRocket, FaChalkboardTeacher
 } from "react-icons/fa";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { MdOutlineCloudQueue, MdDesignServices } from "react-icons/md";
 import styles from "./dropdown.module.css";
 
 function Servicedropdown1({
@@ -71,6 +72,7 @@ function Servicedropdown1({
                 <div className={styles.dropdownHeader}>
                   <FaCode className={styles.icon} /> Design & Development
                 </div>
+                <Link to="/services/ui-ux-design" className={styles.dropdownItem} onClick={onLinkClick}> <MdDesignServices className={styles.icon} /> UI/UX Design </Link>
                 <Link to="/services/web-development" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaProjectDiagram className={styles.icon} /> Website Development
                 </Link>
@@ -94,7 +96,8 @@ function Servicedropdown1({
                 </Link>
                 <Link to="/services/custom-software-integration-services" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaUsersCog className={styles.icon} /> Software Integration
-                </Link>
+                </Link>                
+
               </div>
 
               {/* Column 2: Enterprise Services */}
@@ -123,6 +126,7 @@ function Servicedropdown1({
                 <Link to="/services/zoho-services" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaCogs className={styles.icon} /> Zoho
                 </Link>
+                <Link to="services/saas-solutions" className={styles.dropdownItem} onClick={onLinkClick}> <MdOutlineCloudQueue className={styles.icon} /> SAAS Solutions </Link>
               </div>
 
               {/* Column 3: Support Services */}
@@ -151,6 +155,7 @@ function Servicedropdown1({
                 <Link to="/services/devops-support" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaCogs className={styles.icon} /> DevOps
                 </Link>
+                <Link  to="/services/tech-consulting" className={styles.dropdownItem} onClick={onLinkClick}> <FaChalkboardTeacher className={styles.icon} /> Tech Consulting </Link>
               </div>
 {/* 
               Column 4: Digital Marketing

@@ -8,7 +8,7 @@ import placeholderImage from './../../../../assets/placeholder-image.webp';
 import CloudOffers from '../../../common-ui/support-service/cloud-offers';
 import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
-import OnlinePresence from "../../../common-ui/enterprise-services/online-presence";
+import OnlinePresence from "../../../common-ui/support-service/online-presence";
 
 
 const whychooseus = [

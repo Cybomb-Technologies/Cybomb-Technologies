@@ -71,9 +71,13 @@
 
 /* ✅ Mobile (≤768px) */
 @media (max-width: 768px) {
+  .section{
+    padding: 1rem;
+  }
   .heading {
     font-size: 2rem;
     padding-bottom: 0rem;
+    margin-bottom: 1.5rem;
   }
 
   .row {

@@ -36,6 +36,14 @@
 }
 
 @media (max-width: 768px) {
+  .uiuxSection {
+    padding: 2rem 1rem;
+  }
+  .containerUiux{
+    padding: 2rem;
+
+  }
+
   .servicesGridUiux {
     grid-template-columns: repeat(1, 1fr);
   }
