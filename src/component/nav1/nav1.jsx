@@ -257,6 +257,17 @@ function Nav1() {
                 onToggle={() => handleDropdownToggle("success")}
                 onLinkClick={handleNavItemClick}
               />
+
+              <li className={styles.navItem}>
+                  <Link
+                    to="/aboutus"
+                    className={styles.navLink}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    About Us
+                  </Link>
+              </li>
+
             </ul>
           </div>
         )}
