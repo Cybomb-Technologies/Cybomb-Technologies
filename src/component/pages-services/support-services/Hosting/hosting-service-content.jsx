@@ -8,7 +8,7 @@ import placeholderImage from './../../../../assets/placeholder-image.webp';
 import CloudOffers from '../../../common-ui/support-service/cloud-offers';
 import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
-import OnlinePresence from "../../../common-ui/enterprise-services/online-presence";
+import OnlinePresence from "../../../common-ui/support-service/online-presence";
 
 
 const whychooseus = [
@@ -103,7 +103,7 @@ function HostingServicesContent() {
         />  
       
       <ScheduleConsultation
-            heading="Stay Ahead Of The Competition With Our CRM Development Services"
+            heading="Stay Ahead Of The Competition With Our Hosting Development Services"
             buttonText="Schedule a Consultation!"
             imageSrc={placeholderImage}
             imageAlt="CRM Consultation"

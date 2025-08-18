@@ -8,7 +8,7 @@ import placeholderImage from './../../../../assets/placeholder-image.webp';
 import CloudOffers from '../../../common-ui/support-service/cloud-offers';
 import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
-import OnlinePresence from "../../../common-ui/enterprise-services/online-presence";
+import OnlinePresence from "../../../common-ui/support-service/online-presence";
 
 
 const whychooseus = [
@@ -104,14 +104,14 @@ Whether you need one developer or an entire squad, we provide the right professi
         />  
       
       <ScheduleConsultation
-            heading="Reliable, secure, and scalable server management you can count on."
-            buttonText="Our server support services ensure that your critical systems stay online, optimized, and protected — 24/7. We help businesses maintain, monitor, and secure their servers across cloud, virtual, and dedicated environments with proactive expertise."
+            heading="Reliable, secure, and scalable Staff Agumentation management you can count on."
+            buttonText="Schedule a consultant"
             imageSrc={placeholderImage}
             imageAlt="CRM Consultation"
             Icon={MdSchedule}
           />
       <CloudOffers
-      title="Why Server Support Matters"
+      title="Why Staff Augmentation Matters"
       features={features}
       image={awsImage}
     />
