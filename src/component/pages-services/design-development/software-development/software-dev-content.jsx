@@ -7,6 +7,7 @@ import OnlinePresence from "../../../common-ui/design-and-development/online-pre
 import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
 import TechToolsSection from "./TechToolsSection";
+
 const services = [
  {
     title: 'Custom Software Development',
@@ -123,9 +124,9 @@ export default function SoftwareDevContent() {
     />
     <InfoStats
         stats={[
-        { number: "80+", label: "In-house Expert Developers" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "200+", label: "Projects Delivered Successfully" }
+          { number: "80+", label: "Expert developers available for scalable teams" },
+          { number: "70%", label: "Average savings on development costs with outsourcing" },
+          { number: "95%", label: "Client satisfaction rate in custom software projects" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

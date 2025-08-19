@@ -80,9 +80,9 @@ function AIMLContent() {
       />
       <InfoStats
         stats={[
-          { number: "900+", label: "AI/ML Engineers & Data Scientists" },
-          { number: "50+", label: "ML Models in Production" },
-          { number: "30%", label: "Average Uplift in Decision Accuracy" }
+          { number: "50+", label: "Machine learning models commonly used in production" },
+          { number: "30%", label: "Boost in decision accuracy through AI adoption" },
+          { number: "80%", label: "Of enterprises are investing in AI solutions" }
         ]}
         caption="Empowering organizations with"
         highlight="AI-Driven Intelligence"

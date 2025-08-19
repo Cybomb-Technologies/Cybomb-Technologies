@@ -10,7 +10,6 @@ import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
 import OnlinePresence from "../../../common-ui/support-service/online-presence";
 
-
 const whychooseus = [
   {
     title: 'End-to-End Fulfillment Expertise',
@@ -60,6 +59,7 @@ const offerings = [
     description: 'Track downloads, user activity, and fulfillment success in real time.',
   },
 ];
+
 const features = [
   'Enables instant delivery of digital products',
   'Reduces operational costs with automation',
@@ -67,6 +67,7 @@ const features = [
   'Ensures secure transactions and licensing',
   'Supports global delivery and compliance',
 ];
+
 const useCases = [
   "Delivering digital downloads like eBooks, templates, software, and assets",
   "Managing licenses for SaaS or subscription-based tools",
@@ -74,8 +75,6 @@ const useCases = [
   "Fulfilling virtual event tickets and onboarding packages",
   "Handling customer entitlements for cloud-based services",
 ];
-
-
 
 function DigitalFulfilmentSupportContent() {
   return (
@@ -89,12 +88,12 @@ From SaaS subscriptions to digital downloads, we streamline every step of your d
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developers" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "2×", label: "Faster delivery of digital assets" },
+          { number: "Automated", label: "Workflows reduce operational costs" },
+          { number: "Streamlined", label: "Processes for content, ads & campaigns" }
         ]}
-        caption="Partnered with Startups and"
-        highlight="Fortune 500 Companies"
+      caption="Partnered with Startups and"
+      highlight="Fortune 500 Companies"
     /> 
      <ServicesOfferings 
           title="What We Offer" 

@@ -1,6 +1,4 @@
 import AndroidTechnologiesSection from "./android-app-TechnologiesSection";
-
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -14,7 +12,6 @@ import HiringModels from "../../../../common-ui/mobile-app/hiring";
 
 
 const services = [
-  
   {
     title: 'Custom Android App Development',
     description:
@@ -56,6 +53,7 @@ const services = [
       'Expand app capabilities to smart devices, wearables (e.g. smartwatches), and immersive AR/VR experiences.',
   },
 ];
+
 const hiringData = [
   {
     title: 'Bucket Hours:',
@@ -68,7 +66,6 @@ const hiringData = [
       'Assign one or more developers exclusively to your project for specified durations.',
   },
 ];
-
 
 const whychooseus = [
   {
@@ -97,10 +94,6 @@ const whychooseus = [
   },
 ];
 
-
-
-
-
 function AndroidAppContent() {
   return (
    <section>
@@ -112,9 +105,9 @@ function AndroidAppContent() {
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developer" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "85%", label: "Users prefer apps over mobile websites" },
+          { number: "70%", label: "Apps updated monthly to stay secure" },
+          { number: "65%", label: "Adopt modern UI/UX frameworks" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

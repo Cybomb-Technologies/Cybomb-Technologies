@@ -7,6 +7,7 @@ import OnlinePresence from "../../../common-ui/design-and-development/online-pre
 import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
 import TechToolsSection from "./TechToolsSection";
+
 const services = [
   {
     title: 'Product Discovery & Research',
@@ -39,6 +40,7 @@ const services = [
       'WCAG-compliant designs that are inclusive to users with diverse abilities, ensuring a wider reach.',
   },
 ];
+
 const process = [
   {
     title: 'Discovery & Research',
@@ -104,7 +106,6 @@ const engagementOptions = [
   },
 ];
 
-
 export default function UiUxDesignContent() {
   return (
     <section>
@@ -117,9 +118,9 @@ export default function UiUxDesignContent() {
     />
     <InfoStats
         stats={[
-        { number: "80+", label: "In-house Expert Developers" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "200+", label: "Projects Delivered Successfully" }
+          { number: "94%", label: "First impressions influenced by design quality" },
+          { number: "200%", label: "Higher conversion with user-focused design" },
+          { number: "88%", label: "Users less likely to return after bad UX" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

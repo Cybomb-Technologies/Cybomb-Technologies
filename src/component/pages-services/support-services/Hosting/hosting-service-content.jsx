@@ -10,7 +10,6 @@ import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
 import OnlinePresence from "../../../common-ui/support-service/online-presence";
 
-
 const whychooseus = [
   {
     title: 'End-to-End Setup & Migration',
@@ -77,8 +76,6 @@ const useCases = [
   "CON-based static content delivery for global users"
 ];
 
-
-
 function HostingServicesContent() {
   return (
    <section>
@@ -90,9 +87,9 @@ function HostingServicesContent() {
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developers" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "99.99%", label: "Uptime SLA with secure hosting" },
+          { number: "Hybrid", label: "Cloud + hybrid models supported" },
+          { number: "Cost effective", label: "Managed services for scalability" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

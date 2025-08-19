@@ -80,9 +80,9 @@ function CloudSolutionsContent() {
 
       <InfoStats
         stats={[
-          { number: "1000+", label: "Cloud Deployments" },
-          { number: "99.99%", label: "Uptime Guaranteed" },
-          { number: "200+", label: "Certified Cloud Engineers" }
+          { number: "99.99%", label: "Uptime guaranteed with cloud-native architectures" },
+          { number: "40%", label: "Cost savings possible with cloud adoption" },
+          { number: "Multi-cloud", label: "Strategies improve resilience & flexibility" }
         ]}
         caption="Trusted by Enterprises &"
         highlight="Innovative Startups"

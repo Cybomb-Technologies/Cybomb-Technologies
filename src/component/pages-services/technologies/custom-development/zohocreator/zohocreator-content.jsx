@@ -54,9 +54,9 @@ function ZohoCreatorPage() {
       />
       <InfoStats
         stats={[
-          { number: "80%", label: "Faster Development" },
-          { number: "50+", label: "Zoho Apps Built" },
-          { number: "100%", label: "Zoho Certified" }
+          { number: "70%", label: "Adopted for business workflows" },
+          { number: "65%", label: "Custom app development platform" },
+          { number: "60%", label: "Cloud-based low-code adoption" }
         ]}
         caption="Trusted by"
         highlight="Zoho Partners Worldwide"

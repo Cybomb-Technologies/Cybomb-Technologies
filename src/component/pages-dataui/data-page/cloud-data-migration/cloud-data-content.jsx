@@ -89,9 +89,9 @@ function CloudDataMigrationContent() {
 
       <InfoStats
         stats={[
-          { number: "94%", label: "of enterprises already use a cloud service" },
-          { number: "60%", label: "report cost savings after cloud migration" },
-          { number: "3x", label: "faster deployment of new services post-migration" }
+          { number: "94%", label: "Of enterprises already use cloud services" },
+          { number: "60%", label: "Report cost savings after migration" },
+          { number: "3×", label: "Faster service deployment post-migration" }
         ]}
         caption="Trusted by Enterprises and"
         highlight="Innovation-Driven Startups"

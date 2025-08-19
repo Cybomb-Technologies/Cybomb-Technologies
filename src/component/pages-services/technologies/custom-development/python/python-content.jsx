@@ -54,9 +54,9 @@ function PythonPage() {
       />
       <InfoStats
         stats={[
-          { number: "10+", label: "Years Experience" },
-          { number: "500+", label: "Python Projects" },
-          { number: "95%", label: "Client Retention" }
+          { number: "90%", label: "Top language for AI/ML apps" },
+          { number: "80%", label: "Popular for backend frameworks" },
+          { number: "75%", label: "Strong scientific computing usage" }
         ]}
         caption="Trusted by"
         highlight="Startups to Enterprises"

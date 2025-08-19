@@ -89,9 +89,9 @@ function GovernanceContent() {
 
       <InfoStats
         stats={[
-          { number: "85%", label: "of businesses see governance as critical for data-driven success" },
-          { number: "100%", label: "compliance achieved for clients in regulated industries" },
-          { number: "60%", label: "reduction in data-related operational risks" }
+          { number: "85%", label: "Of enterprises recognize governance as critical" },
+          { number: "100%", label: "Compliance achievable in regulated industries" },
+          { number: "60%", label: "Reduction in data-related risks" }
         ]}
         caption="Trusted by Enterprises in"
         highlight="Highly Regulated Sectors"
