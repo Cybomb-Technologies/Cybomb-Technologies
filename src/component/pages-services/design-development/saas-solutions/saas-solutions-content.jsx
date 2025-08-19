@@ -7,6 +7,7 @@ import OnlinePresence from "../../../common-ui/design-and-development/online-pre
 import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
 import TechToolsSection from "./TechToolsSection";
+
 const services = [
   {
     title: 'Product Strategy & MVP Planning',
@@ -95,6 +96,7 @@ const whychooseus = [
     description: 'Transparent pricing, fast iterations, and ongoing collaboration',
   },
 ];
+
 const engagementOptions = [
   {
     title: 'MVP Development',
@@ -122,9 +124,9 @@ export default function SaaSSolutionsContent() {
     />
     <InfoStats
         stats={[
-        { number: "80+", label: "In-house Expert Developers" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "200+", label: "Projects Delivered Successfully" }
+          { number: "65%", label: "Businesses run on at least one SaaS application" },
+          { number: "20-40%", label: "Average IT cost savings after SaaS adoption" },
+          { number: "99.9%", label: "Typical uptime guarantee for SaaS platforms" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

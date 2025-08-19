@@ -10,7 +10,7 @@ function Contact() {
   keyword:
     "Contact Cybomb Technologies, Get in Touch, IT Company India Contact, Web Development Inquiry, Software Solutions Chennai, React Developer Contact, Digital Services Support",
   url: "https://www.cybomb.com/contact",
-  image: "https://www.cybomb.com/images/contact-banner.jpg", // Replace with your actual contact page banner image if available
+  image: "https://www.cybomb.com/images/contact-banner.jpg", 
 };
   return (
     <>

@@ -7,6 +7,7 @@ import OnlinePresence from "../../../common-ui/design-and-development/online-pre
 import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
 import TechToolsSection from "./TechToolsSection";
+
 const services = [
   {
     title: 'Digital Transformation Strategy',
@@ -118,43 +119,42 @@ const engagementOptions = [
 export default function TechConsultingContent() {
   return (
     <section>
-    
-    <Banner 
-        heading="Technology Consulting Services"
-        subtext="Strategic tech guidance to unlock your business potential"
-        buttonText="Book Free Consultation"
-        note="Technology is more than tools—it's a growth enabler. Our tech consulting services help you choose, plan, and implement the right solutions to future-proof your business, streamline operations, and fuel innovation. Whether you're launching a new product, scaling up, or modernizing your infrastructure—we guide you every step of the way."
-    />
-    <InfoStats
-        stats={[
-        { number: "80+", label: "In-house Expert Developers" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "200+", label: "Projects Delivered Successfully" }
-        ]}
-        caption="Partnered with Startups and"
-        highlight="Fortune 500 Companies"
-    />
-    <ServicesOfferings 
-    title = "Our Technology Consulting Services"
-    Services={services}/>
-    <TechToolsSection/>
-    <WhyChooseUs ChooseUs={whychooseus}/>
-    <OnlinePresence 
-          title = "Craft a Captivating Online Presence for Your Brand!"
-          description = "Our custom Technology Consulting services turn your vision into a compelling online presence."
-          buttonText = "Request a Free Quote Today!"
-          buttonLink = "#"
-          imageSrc = {placeholderImage}
-          imageAlt = "Technology Consulting Services"
+      <Banner 
+          heading="Technology Consulting Services"
+          subtext="Strategic tech guidance to unlock your business potential"
+          buttonText="Book Free Consultation"
+          note="Technology is more than tools—it's a growth enabler. Our tech consulting services help you choose, plan, and implement the right solutions to future-proof your business, streamline operations, and fuel innovation. Whether you're launching a new product, scaling up, or modernizing your infrastructure—we guide you every step of the way."
       />
-    <DevelopmentProcess 
-      title="Our Technology Consulting Process"
-      Process={process}
+      <InfoStats
+          stats={[
+            { number: "70%", label: "Digital transformation projects require expert consulting" },
+            { number: "2-3x", label: "Faster ROI with proper tech consulting" },
+            { number: "55%", label: "Organizations that fail due to lack of strategy" }
+          ]}
+          caption="Partnered with Startups and"
+          highlight="Fortune 500 Companies"
       />
-    <EngagementOptions
-      title="How We Can Collaborate"
-      options={engagementOptions}
-    />
+      <ServicesOfferings 
+      title = "Our Technology Consulting Services"
+      Services={services}/>
+      <TechToolsSection/>
+      <WhyChooseUs ChooseUs={whychooseus}/>
+      <OnlinePresence 
+            title = "Craft a Captivating Online Presence for Your Brand!"
+            description = "Our custom Technology Consulting services turn your vision into a compelling online presence."
+            buttonText = "Request a Free Quote Today!"
+            buttonLink = "#"
+            imageSrc = {placeholderImage}
+            imageAlt = "Technology Consulting Services"
+        />
+      <DevelopmentProcess 
+        title="Our Technology Consulting Process"
+        Process={process}
+        />
+      <EngagementOptions
+        title="How We Can Collaborate"
+        options={engagementOptions}
+      />
    </section>
   );
 }

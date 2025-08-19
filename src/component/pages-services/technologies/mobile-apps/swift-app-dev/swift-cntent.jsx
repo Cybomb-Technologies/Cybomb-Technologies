@@ -100,9 +100,9 @@ function SwiftContent() {
 
       <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developer" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "85%", label: "Apple-first language for iOS dev" },
+          { number: "70%", label: "Safer memory management" },
+          { number: "60%", label: "Supports modern concurrency" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

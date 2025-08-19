@@ -21,7 +21,7 @@ const TechToolsSection = () => {
   const categories = Object.keys(techData);
   const [selected, setSelected] = useState(categories[0]);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const itemsPerSlide = 5;
+  const itemsPerSlide = 4;
   const totalSlides = Math.ceil(techData[selected].length / itemsPerSlide);
 
   useEffect(() => {

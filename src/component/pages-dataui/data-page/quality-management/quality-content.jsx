@@ -89,9 +89,9 @@ function QualityManagementContent() {
 
       <InfoStats
         stats={[
-          { number: "95%", label: "average improvement in data accuracy for our clients" },
-          { number: "60%", label: "reduction in duplicate and inconsistent records" },
-          { number: "100%", label: "compliance-ready datasets delivered" }
+          { number: "95%", label: "Improvement in data accuracy after cleanup" },
+          { number: "60%", label: "Less duplication with master data management" },
+          { number: "Compliance-ready", label: "Datasets across industries" }
         ]}
         caption="Helping Businesses Achieve"
         highlight="Data Excellence Worldwide"

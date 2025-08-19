@@ -127,14 +127,6 @@ function Technologiesdropdown1({
                   <FaAndroid className={styles.icon} /> Android{" "}
                 </Link>
                 <Link
-                  to="/services/react-native-development"
-                  className={styles.dropdownItem1}
-                  onClick={onLinkClick}
-                >
-                  {" "}
-                  <FaReact className={styles.icon} /> React Native{" "}
-                </Link>
-                <Link
                   to="/services/ios-app-development"
                   className={styles.dropdownItem1}
                   onClick={onLinkClick}
@@ -149,6 +141,14 @@ function Technologiesdropdown1({
                 >
                   {" "}
                   <SiFlutter className={styles.icon} /> Flutter
+                </Link>
+                <Link
+                  to="/services/react-native-development"
+                  className={styles.dropdownItem1}
+                  onClick={onLinkClick}
+                >
+                  {" "}
+                  <FaReact className={styles.icon} /> React Native{" "}
                 </Link>
                 <Link
                   to="/services/swift-app-development"

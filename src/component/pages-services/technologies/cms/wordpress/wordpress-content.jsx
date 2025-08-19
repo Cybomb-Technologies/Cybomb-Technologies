@@ -1,5 +1,4 @@
 import WordPressTechnologiesSection from "./wordpress-TechnologiesSection";
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -111,9 +110,9 @@ function WordPressContent() {
       />
       <InfoStats
         stats={[
-          { number: "900+", label: "In-house Expert Developer" },
-          { number: "70%", label: "Average Savings on Development Costs" },
-          { number: "20,000+", label: "Projects Delivered Successfully" },
+          { number: "80%", label: "Powers 40%+ of global websites" },
+          { number: "70%", label: "Large plugin ecosystem" },
+          { number: "65%", label: "Strong CMS + CRM integration" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

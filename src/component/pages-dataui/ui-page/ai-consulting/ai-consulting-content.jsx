@@ -89,9 +89,9 @@ function AIConsultingStrategyContent() {
 
       <InfoStats
         stats={[
-          { number: "84%", label: "of enterprises believe AI gives them a competitive edge" },
-          { number: "2x", label: "increase in efficiency with AI-led process improvements" },
-          { number: "75%", label: "of executives see AI as a critical factor in future growth" }
+          { number: "84%", label: "Of businesses see AI as a competitive advantage" },
+          { number: "2×", label: "Efficiency gains with AI-driven automation" },
+          { number: "75%", label: "Of executives view AI as critical for growth" }
         ]}
         caption="Partnered with Innovative Startups and"
         highlight="Global Enterprises"

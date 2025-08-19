@@ -89,9 +89,9 @@ function ModelingDesignContent() {
 
       <InfoStats
         stats={[
-          { number: "40%", label: "average performance improvement after optimized modeling" },
-          { number: "100%", label: "alignment of models with business requirements" },
-          { number: "75%", label: "reduction in redundant or duplicate data structures" }
+          { number: "40%", label: "Performance gains after optimized modeling" },
+          { number: "100%", label: "Models aligned with business KPIs" },
+          { number: "75%", label: "Reduction in redundant structures" }
         ]}
         caption="Trusted by Enterprises and"
         highlight="High-Growth Startups"

@@ -5,6 +5,7 @@ import ServicesOfferings from "../../../common-ui/design-and-development/service
 import WhyChooseUs from "../../../common-ui/design-and-development/why-choose-us";
 import StillNotSure from "../../../common-ui/stillnotsure/StillNotSure";
 import placeholderImage from './../../../../assets/placeholder-image.webp';
+
  const services = [
   {
     title: 'Custom E-Commerce Website Development',
@@ -38,6 +39,7 @@ import placeholderImage from './../../../../assets/placeholder-image.webp';
   },
 
 ];
+
 const process = [
   {
     title: 'Single Vendor Store',
@@ -57,6 +59,7 @@ const process = [
   },
 
 ];
+
 const whychooseus = [
   {
     title: 'Strategy-Driven Approach',
@@ -79,12 +82,13 @@ const whychooseus = [
     description: "From bug fixes to feature upgrades, we’ve got your store covered long-term.",
   },
 ];
+
 function Ecommcontent() {
   return (
     <>
       <ServicesOfferings Services={services} title={"What We Offer"}/>
       <WhyChooseUs ChooseUs={whychooseus}/>
-     <OnlinePresence 
+      <OnlinePresence 
           title = "Craft a Captivating Online Presence for Your Brand!"
           description = "Our custom E-commerce Development  turn your vision into a compelling online presence."
           buttonText = "Request a Free Quote Today!"
@@ -102,4 +106,5 @@ function Ecommcontent() {
     </>
   );
 }
+
 export default Ecommcontent;
