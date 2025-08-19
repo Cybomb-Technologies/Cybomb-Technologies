@@ -343,7 +343,7 @@ const portfolioItems = [
     
   ],
   "previewLink": "/demo/aviation/",
-  "animationDirection": "fade-up",
+  "animationDirection": "fade-right",
   "imagePosition": "left",
   "style": {
     "--card-bg": "linear-gradient(135deg, #0a1a35 0%, #1a3a8f 100%)",
@@ -351,6 +351,30 @@ const portfolioItems = [
     "--accent-hover": "#e0a800",
     "--title-color": "#ffffff",
     "--text-color": "#f8f9fa"
+  }
+},
+{
+  "id": 16,
+  "title": "FinTech Solutions Platform",
+  "image": "/images/portfolio/fintech.png",
+  "altText": "Cybomb FinTech Solutions Platform",
+  "features": [
+    "Digital banking solutions with enhanced customer experience",
+    "Secure payment gateway integrations for global transactions",
+    "Cross-border payment solutions with compliance management",
+    "Open banking APIs and seamless financial integrations",
+    "Advanced digital wallets with KYC and spending controls",
+    
+  ],
+  "previewLink": "/demo/Fin-Tech/",
+  "animationDirection": "fade-right",
+  "imagePosition": "right",
+  "style": {
+    "--card-bg": "linear-gradient(135deg, #0b2545 0%, #1a3a8f 100%)",
+    "--accent-color": "#00b4d8",
+    "--accent-hover": "#0096c7",
+    "--title-color": "#ffffff",
+    "--text-color": "#e8f4ff"
   }
 }
 ];
