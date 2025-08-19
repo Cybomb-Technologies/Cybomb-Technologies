@@ -89,9 +89,9 @@ function StorageContent() {
 
       <InfoStats
         stats={[
-          { number: "99.999%", label: "data durability with leading storage providers" },
-          { number: "PB+", label: "data under management for global clients" },
-          { number: "50%", label: "average cost savings with optimized storage strategies" }
+          { number: "99.999%", label: "Durability with enterprise-grade storage" },
+          { number: "50%", label: "Cost savings with tiered strategies" },
+          { number: "Petabyte-scale", label: "Data storage management supported" }
         ]}
         caption="Trusted by Enterprises for"
         highlight="Secure & Scalable Storage"

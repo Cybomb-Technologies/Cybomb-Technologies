@@ -88,9 +88,9 @@ function SalesforceContent() {
       />
       <InfoStats
         stats={[
-          { number: "100+", label: "Salesforce-Certified Experts" },
-          { number: "150+", label: "Custom Salesforce Projects Delivered" },
-          { number: "99.9%", label: "Uptime & Data Integrity Assurance" }
+          { number: "35%", label: "Improvement in sales efficiency with tailored CRM solutions" },
+          { number: "99.9%", label: "Uptime and strong data integrity assurance" },
+          { number: "Custom", label: "CRM workflows streamline operations" }
         ]}
         caption="Trusted by Global Enterprises for"
         highlight="Salesforce Excellence"

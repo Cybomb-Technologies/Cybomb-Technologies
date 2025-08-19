@@ -1,5 +1,4 @@
 import PantheonTechnologiesSection from "./pantheon-TechnologiesSection";
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -119,9 +118,9 @@ function PantheonContent() {
       />
       <InfoStats
         stats={[
-          { number: "900+", label: "In-house Expert Developer" },
-          { number: "70%", label: "Average Savings on Development Costs" },
-          { number: "20,000+", label: "Projects Delivered Successfully" },
+          { number: "75%", label: "Cloud platform for WordPress & Drupal" },
+          { number: "65%", label: "Focus on CI/CD workflows" },
+          { number: "70%", label: "Enterprise-grade scaling" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

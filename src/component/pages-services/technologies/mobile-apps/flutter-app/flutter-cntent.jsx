@@ -1,5 +1,4 @@
 import FlutterTechnologiesSection from "./flutter-TechnologiesSection";
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -96,9 +95,9 @@ function FlutterContent() {
 
       <InfoStats
         stats={[
-          { number: "500K+", label: "Flutter Apps on Play Store" },
-          { number: "50%", label: "Faster Dev Time with Single Codebase" },
-          { number: "46%", label: "Global Developer Adoption" }
+          { number: "75%", label: "Cross-platform adoption rising" },
+          { number: "65%", label: "Fast UI rendering with widgets" },
+          { number: "80%", label: "Used for MVP & prototyping" },
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

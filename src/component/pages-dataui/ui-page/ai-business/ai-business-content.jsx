@@ -89,9 +89,9 @@ function AIBusinessIntelligenceContent() {
 
       <InfoStats
         stats={[
-          { number: "70%", label: "of businesses say AI improves decision-making speed" },
-          { number: "2.5 quintillion", label: "bytes of data created daily worldwide" },
-          { number: "3x", label: "more likely to outperform peers using AI-powered BI" }
+          { number: "70%", label: "Of businesses report faster decisions with AI BI" },
+          { number: "3×", label: "More competitive companies using AI BI" },
+          { number: "2.5Q", label: "Bytes of global data analyzed daily" }
         ]}
         caption="Trusted by Data-Driven Startups and"
         highlight="Global Enterprises"

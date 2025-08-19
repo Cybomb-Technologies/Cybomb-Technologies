@@ -1,6 +1,6 @@
 .section {
   background-color: #f9fafb;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .container {
@@ -67,6 +67,9 @@
   .card {
     flex: 1 1 calc(45% - 1.5rem);
   }
+  .section{
+    padding: 1rem 1.5rem;
+  }
 }
 
 /* ✅ Mobile (≤768px) */
@@ -93,5 +96,8 @@
 
   .card p {
     font-size: 1rem;
+  }
+  .section{
+    padding: 1rem 1.5rem;
   }
 }

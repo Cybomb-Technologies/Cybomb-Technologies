@@ -1,6 +1,4 @@
 import IosTechnologiesSection from "./ios-TechnologiesSection";
-
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -12,9 +10,7 @@ import awsImage from '../../../../../assets/aws.avif';
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 
-
 const services = [
-  
   {
     title: 'Custom Native App Development',
     description:
@@ -56,6 +52,7 @@ const services = [
       'Compliance with App Store review criteria, metadata, screenshots, and policies.',
   },
 ];
+
 const hiringData = [
   {
     title: 'Project-Based:',
@@ -73,7 +70,6 @@ const hiringData = [
       'Flexible billing tailored to ongoing development needs.',
   }
 ];
-
 
 const whychooseus = [
   {
@@ -102,10 +98,6 @@ const whychooseus = [
   },
 ];
 
-
-
-
-
 function IosContent() {
   return (
    <section>
@@ -117,9 +109,9 @@ function IosContent() {
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developer" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "90%", label: "High user engagement on iOS apps" },
+          { number: "70%", label: "Swift adopted for new builds" },
+          { number: "85%", label: "Regular OS-driven app updates" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

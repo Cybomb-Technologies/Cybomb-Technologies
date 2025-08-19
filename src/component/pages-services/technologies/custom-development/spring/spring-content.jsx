@@ -54,9 +54,9 @@ function SpringPage() {
       />
       <InfoStats
         stats={[
-          { number: "12+", label: "Years Experience" },
-          { number: "700+", label: "Spring Projects" },
-          { number: "98%", label: "Client Satisfaction" }
+          { number: "80%", label: "Java enterprise framework" },
+          { number: "70%", label: "Preferred for microservices" },
+          { number: "65%", label: "Stable, long-term adoption" }
         ]}
         caption="Trusted by"
         highlight="Global Enterprises"

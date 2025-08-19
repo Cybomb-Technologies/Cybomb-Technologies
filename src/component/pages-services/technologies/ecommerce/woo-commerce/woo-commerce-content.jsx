@@ -1,6 +1,4 @@
 import WooCommerceTechnologiesSection from "./woo-commerce-TechnologiesSection";
-
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -11,7 +9,6 @@ import { MdSchedule } from 'react-icons/md';
 import awsImage from '../../../../../assets/aws.avif';
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
-
 
 const services = [
   {
@@ -94,10 +91,6 @@ const whychooseus = [
   },
 ];
 
-
-
-
-
 function WooCommerceContent() {
   return (
    <section>
@@ -109,9 +102,9 @@ function WooCommerceContent() {
     />
     <InfoStats
         stats={[
-        { number: "100+", label: "certified WooCommerce developers" },
-        { number: "120+", label: "WooCommerce projects delivered globally" },
-        { number: "55%", label: "average increase in online sales after migration to WooCommerce" }
+          { number: "85%", label: "Popular plugin for WordPress" },
+          { number: "70%", label: "Low barrier to entry for sellers" },
+          { number: "65%", label: "Supports global payment gateways" }
         ]}
         caption="Trusted by startups to"
         highlight="Fortune 500 enterprises"

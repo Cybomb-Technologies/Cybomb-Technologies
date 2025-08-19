@@ -1,6 +1,4 @@
 import ShopifyTechnologiesSection from "./shopify-TechnologiesSection";
-
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -11,7 +9,6 @@ import { MdSchedule } from 'react-icons/md';
 import awsImage from '../../../../../assets/aws.avif';
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
-
 
 const services = [
   {
@@ -67,7 +64,6 @@ const hiringData = [
   },
 ];
 
-
 const whychooseus = [
   {
     title: 'Certified Shopify Experts',
@@ -95,10 +91,6 @@ const whychooseus = [
   },
 ];
 
-
-
-
-
 function ShopifyContent() {
   return (
    <section>
@@ -110,9 +102,9 @@ function ShopifyContent() {
     />
     <InfoStats
         stats={[
-        { number: "400+", label: "certified Shopify developers" },
-        { number: "12,000+", label: "successful Shopify stores launched" },
-        { number: "65%", label: "average improvement in store conversions" }
+          { number: "90%", label: "Preferred by small & mid businesses" },
+          { number: "75%", label: "Extensive plugin ecosystem" },
+          { number: "65%", label: "Focus on mobile-first commerce" }
         ]}
         caption="Trusted by startups to"
         highlight="Fortune 500 enterprises"

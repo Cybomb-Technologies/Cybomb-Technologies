@@ -54,9 +54,9 @@ function AngularPage() {
       />
       <InfoStats
         stats={[
-          { number: "8+", label: "Years Experience" },
-          { number: "150+", label: "Angular Projects" },
-          { number: "4.9/5", label: "Client Satisfaction" }
+          { number: "80%", label: "Backed by Google" },
+          { number: "70%", label: "Enterprise-scale SPA framework" },
+          { number: "65%", label: "Adopted for structured dev" }
         ]}
         caption="Trusted by"
         highlight="Enterprise Clients"

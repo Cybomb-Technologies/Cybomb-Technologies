@@ -54,9 +54,9 @@ function DotNetPage() {
       />
       <InfoStats
         stats={[
-          { number: "15+", label: "Years Experience" },
-          { number: "300+", label: ".NET Projects" },
-          { number: "99.9%", label: "Uptime" }
+          { number: "80%", label: "Enterprise backend framework" },
+          { number: "70%", label: "Cross-platform support via .NET 6+" },
+          { number: "65%", label: "Integration with Microsoft tools" }
         ]}
         caption="Trusted by"
         highlight="Fortune 500 Companies"

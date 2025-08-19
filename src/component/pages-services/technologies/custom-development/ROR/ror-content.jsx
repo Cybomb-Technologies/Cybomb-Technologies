@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import Banner from "../../../../common-ui/page-php/banner";
 import InfoStats from "../../../../common-ui/page-php/info-stats";
 import HiringModels from "../../../../common-ui/page-php/hiring";
@@ -8,7 +8,6 @@ import ServicesOfferings from "../../../../common-ui/page-php/services-offerings
 import DevelopmentProcess from "../../../../common-ui/page-php/development-process";
 import OnlinePresence from "../../../../common-ui/page-php/online-presence";
 import RailsTechnologiesTools from "./ror-technology";
-import styles from "../../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 // Main content data
 const hiringData = [
@@ -97,7 +96,6 @@ const useCases = [
 ];
 
 
-
 // Main Component
 function RORAppContent() {
   return (
@@ -110,9 +108,9 @@ function RORAppContent() {
       />
       <InfoStats
         stats={[
-          { number: "150+", label: "Rails Projects Delivered" },
-          { number: "10+", label: "Years Rails Experience" },
-          { number: "5x", label: "Faster Time-to-Market" }
+          { number: "70%", label: "Used for rapid web prototyping" },
+          { number: "65%", label: "Emphasizes convention over config" },
+          { number: "60%", label: "Still adopted in startups" }
         ]}
         caption="Trusted by"
         highlight="Startups and Scaleups Worldwide"

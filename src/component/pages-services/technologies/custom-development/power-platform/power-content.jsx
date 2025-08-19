@@ -105,9 +105,9 @@ function PowerPlatformContent() {
       />
       <InfoStats
         stats={[
-          { number: "80%", label: "Faster Development" },
-          { number: "200+", label: "Power Apps Built" },
-          { number: "5x", label: "ROI on Average" }
+          { number: "75%", label: "Microsoft-led low-code solution" },
+          { number: "65%", label: "Integrates with Office & Dynamics" },
+          { number: "70%", label: "Adopted for automation & apps" }
         ]}
         caption="Trusted by"
         highlight="Enterprises and SMBs"

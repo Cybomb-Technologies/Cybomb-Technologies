@@ -108,6 +108,9 @@ function Servicedropdown1({
                 <Link to="/services/crm-services" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaUsersCog className={styles.icon} /> CRM Solutions
                 </Link>
+                <Link to="/services/zoho-services" className={styles.dropdownItem} onClick={onLinkClick}>
+                  <FaCogs className={styles.icon} /> Zoho
+                </Link>
                 <Link to="/services/cloud-solution" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaCloud className={styles.icon} /> Cloud Solutions
                 </Link>
@@ -122,9 +125,6 @@ function Servicedropdown1({
                 </Link>
                 <Link to="/services/hubspot-services" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaBullhorn className={styles.icon} /> HubSpot
-                </Link>
-                <Link to="/services/zoho-services" className={styles.dropdownItem} onClick={onLinkClick}>
-                  <FaCogs className={styles.icon} /> Zoho
                 </Link>
                 <Link to="services/saas-solutions" className={styles.dropdownItem} onClick={onLinkClick}> <MdOutlineCloudQueue className={styles.icon} /> SAAS Solutions </Link>
               </div>

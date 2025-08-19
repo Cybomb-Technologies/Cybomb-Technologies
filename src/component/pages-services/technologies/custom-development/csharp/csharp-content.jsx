@@ -54,9 +54,9 @@ function CSharpPage() {
       />
       <InfoStats
         stats={[
-          { number: "15+", label: "Years Experience" },
-          { number: "800+", label: "C# Projects" },
-          { number: "97%", label: "Client Retention" }
+          { number: "85%", label: "Backbone of Microsoft dev" },
+          { number: "70%", label: "Core for .NET ecosystem" },
+          { number: "65%", label: "Used in games, apps & web" }
         ]}
         caption="Trusted by"
         highlight="Enterprises Worldwide"
