@@ -113,9 +113,9 @@ function AemContent() {
       />
       <InfoStats
         stats={[
-          { number: "900+", label: "In-house Expert Developer" },
-          { number: "70%", label: "Average Savings on Development Costs" },
-          { number: "20,000+", label: "Projects Delivered Successfully" },
+          { number: "85%", label: "Adobe-backed enterprise CMS" },
+          { number: "70%", label: "Seamless marketing integration" },
+          { number: "65%", label: "Strong digital asset management" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

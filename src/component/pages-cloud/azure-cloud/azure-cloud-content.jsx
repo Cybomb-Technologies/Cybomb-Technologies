@@ -10,9 +10,9 @@ import styles from '../../common-ui/cloud-services/cloud-usecase.module.css';
 import awsImage from '../../../assets/aws.avif';
 
 const statsData = [
-  { number: '100%', label: 'Aligned with your business—not a generic solution' },
-  { number: '80%', label: 'Scales as your company evolves' },
-  { number: '200+', label: 'No unnecessary features, subscriptions, or limitations' },
+  { number: "99.95%", label: "Global availability through Microsoft data centers" },
+  { number: "70%", label: "Improved productivity with Azure DevOps integration" },
+  { number: "85%", label: "Hybrid cloud flexibility adoption rate" }
 ];
 const features = [
   'Host web, mobile, and enterprise apps with global scalability',
@@ -21,7 +21,6 @@ const features = [
   'Move legacy software to the cloud with zero downtime',
   'Secure data, users, and workloads with enterprise-grade tools',
 ];
-
 
 const services = [
   {

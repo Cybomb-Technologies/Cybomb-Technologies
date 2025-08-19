@@ -1,6 +1,4 @@
 import BigCommerceTechnologiesSection from "./big-commerce-TechnologiesSection";
-
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -11,7 +9,6 @@ import { MdSchedule } from 'react-icons/md';
 import awsImage from '../../../../../assets/aws.avif';
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
-
 
 const services = [
   {
@@ -55,6 +52,7 @@ const services = [
       'Ensure your BigCommerce store stays updated, secure, and high-performing at all times.',
   },
 ];
+
 const hiringData = [
   {
     title: 'Bucket Hours',
@@ -65,6 +63,7 @@ const hiringData = [
     description: 'Hire full-time BigCommerce experts for large-scale or ongoing projects.',
   },
 ];
+
 const whychooseus = [
   {
     title: 'Certified BigCommerce Experts',
@@ -92,10 +91,6 @@ const whychooseus = [
   },
 ];
 
-
-
-
-
 function BigCommerceContent() {
   return (
    <section>
@@ -107,9 +102,9 @@ function BigCommerceContent() {
     />
     <InfoStats
         stats={[
-        { number: "100+", label: "certified BigCommerce developers" },
-        { number: "120+", label: "BigCommerce projects delivered globally" },
-        { number: "55%", label: "faster go-to-market compared to traditional eCommerce builds" }
+          { number: "80%", label: "Cloud-based, SaaS-first solution" },
+          { number: "65%", label: "Headless commerce support" },
+          { number: "70%", label: "Focus on SEO & marketing tools" }
         ]}
         caption="Trusted by startups to"
         highlight="Fortune 500 enterprises"

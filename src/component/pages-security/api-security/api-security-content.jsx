@@ -68,9 +68,9 @@ const whychooseus = [
 ];
 
 const stats = [
-  { number: "99.9%", label: "uptime with robust API protection strategies" },
-  { number: "60%", label: "reduction in API-related incidents with secure design and monitoring" },
-  { number: "24/7", label: "real-time API monitoring and threat detection" }
+  { number: "99.9%", label: "API uptime with proper security" },
+  { number: "60%", label: "Lower API-related incidents with monitoring" },
+  { number: "24/7", label: "Real-time API protection" },
 ];
 
 export default function APISecurityContent() {

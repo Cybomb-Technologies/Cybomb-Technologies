@@ -82,9 +82,9 @@ const whychooseus = [
 ];
 
 const stats = [
-  { number: "99.9%", label: "uptime guaranteed with proper AWS security configuration" },
-  { number: "50%", label: "reduction in security incidents with AWS best practices" },
-  { number: "24/7", label: "monitoring and threat detection with AWS services" }
+  { number: "99.9%", label: "Uptime with secure AWS configurations" },
+  { number: "50%", label: "Fewer incidents using AWS security best practices" },
+  { number: "24/7", label: "Threat monitoring and detection" },
 ];
 
 export default function AWSSecurityContent() {

@@ -89,9 +89,9 @@ function ArchitectureContent() {
 
       <InfoStats
         stats={[
-          { number: "60%", label: "reduction in data silos with integrated architectures" },
-          { number: "99.99%", label: "uptime achievable with cloud-native designs" },
-          { number: "3x", label: "faster analytics with optimized data pipelines" }
+          { number: "60%", label: "Fewer data silos after modernization" },
+          { number: "99.99%", label: "Uptime achievable with cloud-native designs" },
+          { number: "3×", label: "Faster analytics with optimized architecture" }
         ]}
         caption="Trusted by Leading Enterprises and"
         highlight="High-Growth Innovators"

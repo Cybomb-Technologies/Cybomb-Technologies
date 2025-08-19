@@ -31,7 +31,7 @@ const hiringData = [
   },
 ];
 
-export const offerData = [
+const offerData = [
   {
     title: 'Custom PHP Web Development',
     description: 'Tailored web applications designed to meet unique business goals.'
@@ -57,6 +57,7 @@ export const offerData = [
     description: 'Continuous monitoring, bug fixes, and feature enhancements.'
   }
 ];
+
 const offerings = [
   {
     title: 'Experienced PHP Developers',
@@ -89,6 +90,7 @@ const offerings = [
       'Improve existing CRM workflows, lead tracking, and reporting using automation.',
   },
 ];
+
 const useCases = [
   "Corporate Websites – Professional, responsive, and brand-focused sites.",
   "E-Commerce Platforms – Scalable online stores with advanced features.",
@@ -96,7 +98,6 @@ const useCases = [
   "SaaS Applications – Subscription-based software solutions.",
   "Community Platforms – Forums, social networks, and membership sites."
 ];
-
 
 function PHPAppContent() {
   return (
@@ -109,9 +110,9 @@ function PHPAppContent() {
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developer" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+            { number: "75%", label: "Widely used in legacy web apps" },
+            { number: "65%", label: "Still powers major platforms" },
+            { number: "60%", label: "Large open-source ecosystem" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

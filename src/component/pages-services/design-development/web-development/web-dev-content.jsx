@@ -7,6 +7,7 @@ import OnlinePresence from "../../../common-ui/design-and-development/online-pre
 import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
 import TechToolsSection from "./TechToolsSection";
+
 const services = [
  {
     title: 'Custom Website Design',
@@ -123,9 +124,9 @@ export default function WebDevContent() {
     />
     <InfoStats
         stats={[
-        { number: "94+", label: "of first impressions relate to website design" },
-        { number: "75%", label: "of trust increased after delivering well-built website" },
-        { number: "50%", label: "of web traffic comes from mobile devices—mobile-first is a must!" }
+        { number: "94%", label: "of first impressions relate to website design" },
+        { number: "75%", label: "of users trust a business more if the website is well-designed" },
+        { number: "50% +", label: "of web traffic comes from mobile devices → mobile-first is critical." }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

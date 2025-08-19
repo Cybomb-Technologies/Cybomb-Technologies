@@ -68,9 +68,9 @@ const whychooseus = [
 ];
 
 const stats = [
-  { number: "99.9%", label: "uptime and secure app availability with proactive protection" },
-  { number: "50%", label: "reduction in mobile vulnerabilities with secure coding and best practices" },
-  { number: "24/7", label: "monitoring, threat detection, and rapid response" }
+  { number: "99.9%", label: "Secure app uptime with proactive measures" },
+  { number: "50%", label: "Reduction in mobile vulnerabilities" },
+  { number: "24/7", label: "Threat monitoring and rapid response" }
 ];
 
 export default function MobileSecurityContent() {

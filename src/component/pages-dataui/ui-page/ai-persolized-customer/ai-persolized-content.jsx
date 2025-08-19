@@ -89,9 +89,9 @@ function AIPersonalizedCustomerExperienceContent() {
 
       <InfoStats
         stats={[
-          { number: "80%", label: "of consumers are more likely to buy from brands offering personalized experiences" },
-          { number: "5x", label: "increase in engagement with AI-powered recommendations" },
-          { number: "60%", label: "reduction in churn with targeted retention strategies" }
+          { number: "80%", label: "Of customers buy more with personalization" },
+          { number: "5×", label: "Boost in engagement with AI recommendations" },
+          { number: "60%", label: "Reduction in churn with retention strategies" }
         ]}
         caption="Trusted by Leading Brands and"
         highlight="Customer Experience Innovators"

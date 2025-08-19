@@ -1,5 +1,4 @@
 import KotlinTechnologiesSection from "./kotlin-TechnologiesSection";
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -92,9 +91,9 @@ function KotlinContent() {
 
       <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developer" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "80%", label: "Google-endorsed for Android dev" },
+          { number: "65%", label: "Interoperable with Java" },
+          { number: "70%", label: "Supports multi-platform apps" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

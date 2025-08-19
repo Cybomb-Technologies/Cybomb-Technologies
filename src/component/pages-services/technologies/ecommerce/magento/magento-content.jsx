@@ -1,6 +1,4 @@
 import MagentoTechnologiesSection from "./magento-TechnologiesSection";
-
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -11,7 +9,6 @@ import { MdSchedule } from 'react-icons/md';
 import awsImage from '../../../../../assets/aws.avif';
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
-
 
 const services = [
   {
@@ -55,6 +52,7 @@ const services = [
       'Ensure PCI compliance, data encryption, and advanced security measures to protect customer information.',
   },
 ];
+
 const hiringData = [
   {
     title: 'Bucket Hours',
@@ -93,10 +91,6 @@ const whychooseus = [
   },
 ];
 
-
-
-
-
 function MagentoContent() {
   return (
    <section>
@@ -108,9 +102,9 @@ function MagentoContent() {
     />
     <InfoStats
         stats={[
-        { number: "10+", label: "certified Magento developers" },
-        { number: "120+", label: "Magento projects delivered globally" },
-        { number: "65%", label: "average boost in store performance after migration to Magento" }
+          { number: "75%", label: "Open-source ecommerce flexibility" },
+          { number: "65%", label: "High scalability for enterprise" },
+          { number: "70%", label: "Large developer ecosystem" }
         ]}
         caption="Trusted by startups to"
         highlight="Fortune 500 enterprises"

@@ -1,5 +1,4 @@
 import AcquiaTechnologiesSection from "./acquia-TechnologiesSection";
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -107,9 +106,9 @@ function AcquiaContent() {
       />
       <InfoStats
         stats={[
-          { number: "900+", label: "In-house Expert Developer" },
-          { number: "70%", label: "Average Savings on Development Costs" },
-          { number: "20,000+", label: "Projects Delivered Successfully" },
+          { number: "75%", label: "Enterprise cloud for Drupal" },
+          { number: "65%", label: "Security & scalability focus" },
+          { number: "70%", label: "Strong digital experience platform" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

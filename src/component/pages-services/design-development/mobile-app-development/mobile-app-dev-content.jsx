@@ -100,8 +100,8 @@ function MobileAppDevContent() {
     />
     <InfoStats
         stats={[
-        { number: "90%", label: "Of mobile time inside apps, not browsers" },
-        { number: "6.8 billion", label: "Smartphone users worldwide" },
+        { number: "90%", label: "of mobile time is spent inside apps, not browsers" },
+        { number: "6.8 Billion+", label: "smartphone users worldwide" },
         { number: "50%", label: "A well-built mobile app boosts engagement, loyalty, and sales" }
         ]}
         caption="Partnered with Startups and"

@@ -1,5 +1,4 @@
 import SitecoreTechnologiesSection from "./sitecore-TechnologiesSection";
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -56,6 +55,7 @@ const hiringData = [
     description: "Continuous improvements and proactive maintenance",
   },
 ];
+
 const whychooseus = [
   {
     title: "Custom Sitecore Website Development",
@@ -94,9 +94,9 @@ function SitecoreContent() {
       />
       <InfoStats
         stats={[
-          { number: "900+", label: "In-house Expert Developer" },
-          { number: "70%", label: "Average Savings on Development Costs" },
-          { number: "20,000+", label: "Projects Delivered Successfully" },
+          { number: "80%", label: "Enterprise-grade digital experience" },
+          { number: "70%", label: "Supports personalization & AI" },
+          { number: "65%", label: "Headless and composable ready" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

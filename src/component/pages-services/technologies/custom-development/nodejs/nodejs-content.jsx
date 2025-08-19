@@ -54,9 +54,9 @@ function NodeJSPage() {
       />
       <InfoStats
         stats={[
-          { number: "10x", label: "Faster Development" },
-          { number: "200+", label: "Node Projects" },
-          { number: "5M+", label: "Daily Requests" }
+          { number: "85%", label: "Event-driven, non-blocking I/O" },
+          { number: "75%", label: "Preferred for scalable APIs" },
+          { number: "70%", label: "Strong npm ecosystem" }
         ]}
         caption="Trusted by"
         highlight="High-Growth Startups"

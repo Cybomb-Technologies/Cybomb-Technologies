@@ -1,5 +1,4 @@
 import XamarinTechnologiesSection from "./xamarin-TechnologiesSection";
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -96,9 +95,9 @@ function XamarinContent() {
 
       <InfoStats
         stats={[
-          { number: "900+", label: "Xamarin Developers" },
-          { number: "20,000+", label: "Mobile Solutions Delivered" },
-          { number: "70%", label: "Avg Cost Savings" }
+          { number: "70%", label: "Cross-platform via .NET ecosystem" },
+          { number: "60%", label: "Code reuse between iOS & Android" },
+          { number: "65%", label: "Integration with Microsoft stack" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

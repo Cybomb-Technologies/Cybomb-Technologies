@@ -1,5 +1,4 @@
 import JoomlaTechnologiesSection from "./joomla-TechnologiesSection";
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -104,9 +103,9 @@ function JoomlaContent() {
       />
       <InfoStats
         stats={[
-          { number: "900+", label: "In-house Expert Developer" },
-          { number: "70%", label: "Average Savings on Development Costs" },
-          { number: "20,000+", label: "Projects Delivered Successfully" },
+          { number: "70%", label: "Popular open-source CMS" },
+          { number: "60%", label: "Extensible via community modules" },
+          { number: "65%", label: "Supports multilingual sites" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

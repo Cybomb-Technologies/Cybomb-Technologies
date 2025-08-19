@@ -89,9 +89,9 @@ function LLMSolutionsContent() {
 
       <InfoStats
         stats={[
-          { number: "175B+", label: "parameters in state-of-the-art LLMs like GPT-4" },
-          { number: "90%", label: "reduction in manual document review time with LLMs" },
-          { number: "50+", label: "languages supported for translation and localization" }
+          { number: "175B+", label: "Parameters in state-of-the-art LLMs" },
+          { number: "90%", label: "Reduction in document review time with AI" },
+          { number: "50+", label: "Languages supported for global markets" }
         ]}
         caption="Trusted by AI Innovators and"
         highlight="Global Enterprises"

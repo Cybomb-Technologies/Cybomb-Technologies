@@ -89,9 +89,9 @@ function AnalyticsVisualizationContent() {
 
       <InfoStats
         stats={[
-          { number: "70%", label: "of business leaders say dashboards improve decision-making" },
-          { number: "5x", label: "faster reporting with automated visualization tools" },
-          { number: "80%", label: "higher engagement when insights are presented visually" }
+          { number: "70%", label: "Of leaders rely on dashboards for decisions" },
+          { number: "5×", label: "Faster reporting with automation" },
+          { number: "80%", label: "Higher engagement with visual insights" }
         ]}
         caption="Trusted by Enterprises and"
         highlight="High-Growth Startups"

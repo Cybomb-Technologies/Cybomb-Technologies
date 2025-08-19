@@ -31,7 +31,7 @@ const hiringData = [
   },
 ];
 
-export const offerData = [
+const offerData = [
   {
     title: 'Custom Laravel Development',
     description: 'Tailored web applications built with Laravel framework.'
@@ -104,9 +104,9 @@ function LaravelAppContent() {
       />
       <InfoStats
         stats={[
-          { number: "200+", label: "Laravel Projects Completed" },
-          { number: "10+", label: "Certified Laravel Developers" },
-          { number: "98%", label: "Client Satisfaction Rate" }
+          { number: "80%", label: "Popular PHP framework" },
+          { number: "70%", label: "MVC architecture adoption" },
+          { number: "65%", label: "Strong community support" }
         ]}
         caption="Trusted by"
         highlight="Laravel Development Teams Worldwide"
