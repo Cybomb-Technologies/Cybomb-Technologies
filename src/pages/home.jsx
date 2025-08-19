@@ -14,11 +14,11 @@ import Metatags from "../SEO/meta-tags";
 function Home() {
 
   const metaPropsData = {
-    title: "Cybomb Technologies | Elevating Your Digital Presence",
+    title: "Cybomb Technologies | Mobile App and Web Delopment in Chennai",
     description:"Cybomb Technologies is a top IT company offering expert web development, mobile app development, UI/UX design, and digital solutions for startups and enterprises.",
     keyword:"Cybomb Technologies, Web Development, Mobile App Development, UI UX Design, React Developer, Chennai IT Company, Software Services India",
     url: "https://www.cybomb.com/",
-    image: "https://www.cybomb.com/images/banner-2.jpg",
+    image: "https://www.cybomb.com/images/logo-11.png",
   };
 
   return (
