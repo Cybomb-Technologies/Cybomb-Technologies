@@ -4,20 +4,27 @@ function TeamMember() {
   return (
     <section className="teammember">
       <div className="container">
-        <h1 className="text-center mb-5">Team Members</h1>
+        <h1 className="text-center mb-5">Core Team Members</h1>
 
         {/* Row 1 */}
         <div className="row mt-4 d-flex justify-content-center mt-5">
-         <div className="col-md-4 col-lg-4">
+          <div className="col-md-4 col-lg-4">
             <div className="team-card">
               <div className="profile-pic">
                 <img src="/images/about-team/team-1.png" alt="Santhosh K" />
               </div>
               <h5 className="team-name text-black">Santhosh K</h5>
-              <p className="team-role">Full Stack Developer</p>
+              <p className="team-role">Web App Developer</p>
+
+              <a
+                href=" https://www.linkedin.com/in/santhosh-k-b8bab724a"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
+              </a>
             </div>
           </div>
-
 
           <div className="col-md-4 col-lg-4">
             <div className="team-card">
@@ -26,6 +33,13 @@ function TeamMember() {
               </div>
               <h5 className="team-name text-black">Manoj M R</h5>
               <p className="team-role">UI & UX Designer</p>
+               <a
+                href="https://www.linkedin.com/in/manoj-m-r/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -41,7 +55,14 @@ function TeamMember() {
                 />
               </div>
               <h5 className="team-name text-black">Divyadharshini Subramani</h5>
-              <p className="team-role">Full Stack Developer</p>
+              <p className="team-role">Website Developer</p>
+              <a
+                href=" https://www.linkedin.com/in/divyadharshini-s-80a177348"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
+              </a>
             </div>
           </div>
           <div className="col-md-4 col-lg-4">
@@ -53,7 +74,15 @@ function TeamMember() {
                 />
               </div>
               <h5 className="team-name text-black">Divya Baskaran</h5>
-              <p className="team-role">Full Stack Developer</p>
+              <p className="team-role">Mobile App Developer</p>
+              <a
+                href="https://www.linkedin.com/in/divya-baskaran-765572283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+ "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
+              </a>
             </div>
           </div>
           <div className="col-md-4 col-lg-4">
@@ -62,7 +91,15 @@ function TeamMember() {
                 <img src="/images/about-team/team-8.png" alt="Divya Baskaran" />
               </div>
               <h5 className="team-name text-black">Devashree Salunke</h5>
-              <p className="team-role">Full Stack Developer</p>
+              <p className="team-role">IOS Developer</p>
+               <a
+                href=" https://www.linkedin.com/in/devashree-salunke-1b0308247"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
+              </a>
+               
             </div>
           </div>
         </div>
