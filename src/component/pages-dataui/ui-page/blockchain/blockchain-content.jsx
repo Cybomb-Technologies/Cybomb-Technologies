@@ -89,9 +89,9 @@ function BlockchainSolutionsContent() {
 
       <InfoStats
         stats={[
-          { number: "90%", label: "of executives believe blockchain will disrupt their industry" },
-          { number: "3x", label: "faster transaction verification with AI-enhanced blockchain" },
-          { number: "70%", label: "increase in operational efficiency using blockchain automation" }
+          { number: "90%", label: "Of executives expect blockchain disruption" },
+          { number: "3×", label: "Faster transaction verification" },
+          { number: "70%", label: "Efficiency gains with blockchain + AI automation" }
         ]}
         caption="Trusted by Innovators and"
         highlight="Blockchain-First Enterprises"

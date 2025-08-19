@@ -10,7 +10,6 @@ import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
 import OnlinePresence from "../../../common-ui/support-service/online-presence";
 
-
 const whychooseus = [
   {
     title: 'Culture-Fit Hiring',
@@ -77,8 +76,6 @@ const useCases = [
   "Supplementing in-house teams for faster time-to-market"
 ];
 
-
-
 function StaffServicesContent() {
   return (
    <section>
@@ -91,9 +88,9 @@ Whether you need one developer or an entire squad, we provide the right professi
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developers" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "30–50%", label: "Cost savings compared to traditional hiring" },
+          { number: "On-demand", label: "Scalable teams with specialized engineers" },
+          { number: "50+", label: "Technology stacks covered by experts" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

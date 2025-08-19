@@ -1,6 +1,4 @@
 import AdobeTechnologiesSection from "./adobe-TechnologiesSection";
-
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -11,7 +9,6 @@ import { MdSchedule } from 'react-icons/md';
 import awsImage from '../../../../../assets/aws.avif';
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
-
 
 const services = [
   {
@@ -55,6 +52,7 @@ const services = [
       'Ensure your store remains up-to-date, secure, and bug-free with ongoing monitoring and quick issue resolution.',
   },
 ];
+
 const hiringData = [
   {
     title: 'Bucket Hours',
@@ -93,10 +91,6 @@ const whychooseus = [
   },
 ];
 
-
-
-
-
 function AdobeCommerceContent() {
   return (
    <section>
@@ -108,9 +102,9 @@ function AdobeCommerceContent() {
     />
     <InfoStats
         stats={[
-        { number: "500+", label: "certified Adobe Commerce developers" },
-        { number: "15,000+", label: "successful eCommerce projects delivered" },
-        { number: "60%", label: "average increase in online sales for our clients" }
+          { number: "80%", label: "Supports scalable enterprise stores" },
+          { number: "65%", label: "High customization via modules" },
+          { number: "70%", label: "Omnichannel commerce integration" }
         ]}
         caption="Trusted by startups to "
         highlight="Fortune 500 enterprises"

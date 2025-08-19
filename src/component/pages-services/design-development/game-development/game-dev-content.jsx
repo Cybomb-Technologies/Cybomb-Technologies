@@ -125,10 +125,10 @@ function GameDevContent() {
     />
     <InfoStats
         stats={[
-        { number: "$200+", label: "The global gaming industry is worth" },
-        { number: "50%", label: "Mobile gaming alone accounts for" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
-        ]}
+            { number: "$200B+", label: "Global gaming industry market value" },
+            { number: "50%+", label: "Revenue comes from mobile gaming" },
+            { number: "3x", label: "Faster user acquisition with gamified apps" }
+          ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"
     />

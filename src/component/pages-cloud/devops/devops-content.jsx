@@ -10,9 +10,9 @@ import styles from '../../common-ui/cloud-services/cloud-usecase.module.css';
 import awsImage from '../../../assets/aws.avif';
 
 const statsData = [
-  { number: '100%', label: 'Aligned with your business—not a generic solution' },
-  { number: '80%', label: 'Scales as your company evolves' },
-  { number: '200+', label: 'No unnecessary features, subscriptions, or limitations' },
+  { number: "60%", label: "Faster release cycles with CI/CD pipelines" },
+  { number: "70%", label: "Infrastructure automated with IaC" },
+  { number: "50%", label: "Reduction in post-release issues" },
 ];
 const features = [
   'Faster release cycles without compromising quality',

@@ -7,6 +7,7 @@ import OnlinePresence from "../../../common-ui/design-and-development/online-pre
 import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
 import TechToolsSection from "./TechToolsSection";
+
 const services = [
  {
     title: 'Custom Business Applications',
@@ -116,9 +117,9 @@ export default function BespokeDevContent() {
     />
     <InfoStats
         stats={[
-        { number: "100%", label: "Aligned with your business—not a generic solution" },
-        { number: "80%", label: "Scales as your company evolves" },
-        { number: "200+", label: "No unnecessary features, subscriptions, or limitations" }
+          { number: "100%", label: "Tailored to unique business needs (no generic templates)" },
+          { number: "80%", label: "Better scalability as your company grows" },
+          { number: "0%", label: "Unnecessary subscriptions or limitations" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

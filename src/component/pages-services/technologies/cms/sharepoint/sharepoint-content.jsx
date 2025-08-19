@@ -1,5 +1,4 @@
 import SharePointTechnologiesSection from "./sharepoint-TechnologiesSection";
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -107,9 +106,9 @@ function SharePointContent() {
       />
       <InfoStats
         stats={[
-          { number: "900+", label: "In-house Expert Developer" },
-          { number: "70%", label: "Average Savings on Development Costs" },
-          { number: "20,000+", label: "Projects Delivered Successfully" },
+            { number: "80%", label: "Microsoft-backed enterprise CMS" },
+            { number: "70%", label: "Collaboration & intranet leader" },
+            { number: "65%", label: "Integration with Office 365" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

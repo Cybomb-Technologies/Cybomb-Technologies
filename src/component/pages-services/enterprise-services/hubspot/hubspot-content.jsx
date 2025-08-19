@@ -88,9 +88,9 @@ function HubspotContent() {
       />
       <InfoStats
         stats={[
-          { number: "75+", label: "HubSpot Projects Delivered" },
-          { number: "50%", label: "Reduction in Manual Marketing Efforts" },
-          { number: "30%", label: "Increase in Lead Conversions" }
+          { number: "50%", label: "Reduction in manual marketing operations via automation" },
+          { number: "30%", label: "Increase in lead-to-customer conversions" },
+          { number: "Seamless", label: "Alignment achieved between sales & marketing" }
         ]}
         caption="Trusted by B2B and B2C Brands for"
         highlight="HubSpot Success"

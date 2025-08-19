@@ -68,9 +68,9 @@ const whychooseus = [
 ];
 
 const stats = [
-  { number: "99.99%", label: "uptime with secure cloud architecture and monitoring" },
-  { number: "65%", label: "reduction in cloud-related security incidents" },
-  { number: "24/7", label: "real-time cloud monitoring and threat detection" }
+  { number: "99.99%", label: "Cloud service availability with secure design" },
+  { number: "65%", label: "Reduction in cloud-related incidents" },
+  { number: "24/7", label: "Real-time cloud monitoring" },
 ];
 
 export default function CloudSecurityContent() {

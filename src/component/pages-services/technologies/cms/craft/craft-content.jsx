@@ -1,5 +1,4 @@
 import CraftTechnologiesSection from "./craft-TechnologiesSection";
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -114,9 +113,9 @@ function CraftContent() {
       />
       <InfoStats
         stats={[
-          { number: "900+", label: "In-house Expert Developer" },
-          { number: "70%", label: "Average Savings on Development Costs" },
-          { number: "20,000+", label: "Projects Delivered Successfully" },
+          { number: "70%", label: "Adopted for content-first projects" },
+          { number: "60%", label: "Developer-friendly templating" },
+          { number: "65%", label: "Supports headless builds" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

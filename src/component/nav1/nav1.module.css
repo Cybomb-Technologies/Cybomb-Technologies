@@ -565,7 +565,6 @@
     justify-content: flex-end;
     font-size: 14px;
   }
-
 }
 
 @media screen and (min-width: 1199px) {
@@ -579,9 +578,4 @@
     justify-content: flex-end;
     font-size: 14px;
   }  
-
-  .offcanvasMenu {
-    display: block;
-  }
-
 }

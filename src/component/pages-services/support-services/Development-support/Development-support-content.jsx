@@ -10,7 +10,6 @@ import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
 import OnlinePresence from "../../../common-ui/support-service/online-presence";
 
-
 const whychooseus = [
   {
     title: 'Full-Stack Proficiency',
@@ -77,8 +76,6 @@ const useCases = [
   "Providing extra bandwidth during product launches or code freezes"
 ];
 
-
-
 function DevelopmentSupportContent() {
   return (
    <section>
@@ -91,9 +88,9 @@ From frontend glitches to backend bottlenecks, we’re your technical co-pilot."
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developers" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "3×", label: "Faster deployments with CI/CD pipelines" },
+          { number: "99.9%", label: "Uptime achieved with proactive monitoring" },
+          { number: "40%", label: "Cost reduction through automation" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

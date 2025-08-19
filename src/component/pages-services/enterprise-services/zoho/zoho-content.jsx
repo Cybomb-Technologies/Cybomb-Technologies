@@ -87,9 +87,9 @@ function ZohoContent() {
       />
       <InfoStats
         stats={[
-          { number: "100+", label: "Zoho CRM Projects Delivered" },
-          { number: "40%", label: "Increase in Sales Process Efficiency" },
-          { number: "99.9%", label: "Data Accuracy After Migration" }
+          { number: "40%", label: "Improvement in sales efficiency with Zoho CRM" },
+          { number: "99.9%", label: "Data accuracy achievable after migration" },
+          { number: "25%", label: "Reduction in admin time with custom workflows" }
         ]}
         caption="Empowering startups & enterprises with"
         highlight="Zoho CRM Excellence"

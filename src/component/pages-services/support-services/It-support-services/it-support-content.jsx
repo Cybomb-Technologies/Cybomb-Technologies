@@ -10,7 +10,6 @@ import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
 import OnlinePresence from "../../../common-ui/support-service/online-presence";
 
-
 const whychooseus = [
   {
     title: 'Business-Aligned IT Strategy',
@@ -60,6 +59,7 @@ const offerings = [
     description: 'Ensure data continuity and quick restoration in case of failures or attacks.',
   },
 ];
+
 const features = [
   'Minimizes downtime and boosts employee productivity',
   'Ensures security through timely patches and updates',
@@ -76,8 +76,6 @@ const useCases = [
   "Supporting hybrid/remote workforce with secure IT environments"
 ];
 
-
-
 function ITSupportContent() {
   return (
    <section>
@@ -90,9 +88,9 @@ From small businesses to large enterprises, we offer scalable support tailored t
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developers" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "24/7", label: "Helpdesk coverage worldwide" },
+          { number: "95%+", label: "First-contact resolution rate" },
+          { number: "ITSM", label: "Aligned with ServiceNow & Jira" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

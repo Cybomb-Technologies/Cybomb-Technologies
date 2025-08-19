@@ -32,33 +32,37 @@ import AiBusinessServices from "../component/pages-dataui/ui-page/ai-business/ai
 import LargeLanguageServices from "../component/pages-dataui/ui-page/large-language-model/large-language-service";
 import AiPersolizedServices from "../component/pages-dataui/ui-page/ai-persolized-customer/ai-persolized-service";
 import BlockChainServices from "../component/pages-dataui/ui-page/blockchain/blockchain-service";
-import PHPApp from "../component/pages-services/technologies/custom-development/page-php/php";
-import LaravelApp from "../component/pages-services/technologies/custom-development/page-laravel/laravel";
-import RORApp from "../component/pages-services/technologies/custom-development/page-ROR/ror";
-import PowerPlatformApp from "../component/pages-services/technologies/custom-development/page-power-platform/power";
-import HTML5App from "../component/pages-services/technologies/custom-development/page-html5/html5";
-import JavaScriptApp from "../component/pages-services/technologies/custom-development/page-javascript/javascript";
-import ZohoCreatorApp from "../component/pages-services/technologies/custom-development/paga-zohocreator/zohocreator";
-import PythonApp from "../component/pages-services/technologies/custom-development/page-python/python";
-import DotnetApp from "../component/pages-services/technologies/custom-development/page-dotnet/dotnet";
-import NodeJSApp from "../component/pages-services/technologies/custom-development/page-nodejs/nodejs";
-import AngularApp from "../component/pages-services/technologies/custom-development/page-angular/angular";
-import SpringApp from "../component/pages-services/technologies/custom-development/page-spring/spring";
-import CSharpApp from "../component/pages-services/technologies/custom-development/page-csharp/csharp";
+import PHPApp from "../component/pages-services/technologies/custom-development/php/php";
+import LaravelApp from "../component/pages-services/technologies/custom-development/laravel/laravel";
+import RORApp from "../component/pages-services/technologies/custom-development/ROR/ror";
+import PowerPlatformApp from "../component/pages-services/technologies/custom-development/power-platform/power";
+import HTML5App from "../component/pages-services/technologies/custom-development/html5/html5";
+import JavaScriptApp from "../component/pages-services/technologies/custom-development/javascript/javascript";
+import ZohoCreatorApp from "../component/pages-services/technologies/custom-development/zohocreator/zohocreator";
+import PythonApp from "../component/pages-services/technologies/custom-development/python/python";
+import DotnetApp from "../component/pages-services/technologies/custom-development/dotnet/dotnet";
+import NodeJSApp from "../component/pages-services/technologies/custom-development/nodejs/nodejs";
+import AngularApp from "../component/pages-services/technologies/custom-development/angular/angular";
+import SpringApp from "../component/pages-services/technologies/custom-development/spring/spring";
+import CSharpApp from "../component/pages-services/technologies/custom-development/csharp/csharp";
 
 const emp4Routes = (
   <>
     <Route path="/services/api-development" element={<ApiDevelopment />} />
+
     <Route path="/services/hosting-service" element={<HostingServices/>}/>
     <Route path="/services/support-service" element={<SupportServices/>}/>
     <Route path="/services/development-support" element={<DevelopmentSupport/>}/>
     <Route path="/services/staff-agumentation" element={<Staff/>}/>
+
     <Route path="/services/social-media-marketing" element={<SocialMarket/>}/>
     <Route path="/services/search-engine-optimization" element={<SeoServices/>}/>
     <Route path="/services/performance-optimization" element={<PerformanceServices/>}/>
     <Route path="/services/pay-per-click" element={<PpcServices/>}/>
     <Route path="/services/ORM-services" element={<OrmServices/>}/>
+
     <Route path="/cookie-policy" element={<Cookiepolicy />} />
+
     <Route path="/services/android-app-development" element={<AndroidApp/>}/>
     <Route path="/services/react-native-development" element={<ReactApp/>}/>
     <Route path="/services/ios-app-development" element={<IosApp/>}/>
@@ -66,21 +70,24 @@ const emp4Routes = (
     <Route path="/services/swift-app-development" element={<SwiftApp/>}/>
     <Route path="/services/kotlin-app-development" element={<KotlinApp/>}/>
     <Route path="/services/xamarin-app-development" element={<XamarinApp/>}/>
-    <Route path="/services/stratergy-consulting" element={<StratergyServices/>}/>
-    <Route path="/services/processing" element={<ProcessingServices/>}/>
-    <Route path="/services/governance-solution" element={<GovernanceSolution/>}/>
-    <Route path="/services/storage-solution" element={<StorageServices/>}/>
-    <Route path="/services/quality-management" element={<QualityServices/>}/>
-    <Route path="/services/modeling-design" element={<ModelingServices/>}/>
-    <Route path="/services/architecture" element={<ArchitectureData/>}/>
-    <Route path="/services/analyticsandvisualization" element={<AnalyticsandVisualization/>}/>
+
+    <Route path="/services/data-strategy-consulting" element={<StratergyServices/>}/>
+    <Route path="/services/data-processing" element={<ProcessingServices/>}/>
+    <Route path="/services/data-governance-solution" element={<GovernanceSolution/>}/>
+    <Route path="/services/data-storage-solution" element={<StorageServices/>}/>
+    <Route path="/services/data-quality-management" element={<QualityServices/>}/>
+    <Route path="/services/data-modelling-design" element={<ModelingServices/>}/>
+    <Route path="/services/data-architecture" element={<ArchitectureData/>}/>
+    <Route path="/services/data-analytics-visualization" element={<AnalyticsandVisualization/>}/>
     <Route path="/services/cloud-data-migration" element={<CloudData/>}/>
+
     <Route path="/services/custom-ai-development" element={<CustomAiServices/>}/>
     <Route path="/services/ai-consulting-strategy" element={<AiConsultingServices/>}/>
     <Route path="/services/ai-business-intelligence" element={<AiBusinessServices/>}/>
-    <Route path="/services/large-language-model" element={<LargeLanguageServices/>}/>
-    <Route path="/services/ai-persolized-customer-experience" element={<AiPersolizedServices/>}/>
-    <Route path="/services/blockchain" element={<BlockChainServices/>}/>
+    <Route path="/services/ai-large-language-model" element={<LargeLanguageServices/>}/>
+    <Route path="/services/ai-persolized-experience" element={<AiPersolizedServices/>}/>
+    <Route path="/services/ai-blockchain-integration" element={<BlockChainServices/>}/>
+
     <Route path="/services/php-development-service" element={<PHPApp/>}/>
     <Route path="/services/laravel-development-service" element={<LaravelApp/>}/>
     <Route path="/services/ror-development-service" element={<RORApp/>}/>

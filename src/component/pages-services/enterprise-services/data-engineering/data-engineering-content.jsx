@@ -79,9 +79,9 @@ function DataEngineeringContent() {
       />
       <InfoStats
         stats={[
-          { number: "900+", label: "In-house Expert Developers" },
-          { number: "70%", label: "Average Savings on Development Costs" },
-          { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "70%", label: "Reduction in processing time with optimized pipelines" },
+          { number: "99.9%", label: "Uptime for real-time data flows" },
+          { number: "Petabyte-scale", label: "Analytics supported with scalable architectures" }
         ]}
         caption="Trusted by Data-Driven Enterprises and"
         highlight="Leading Innovators"

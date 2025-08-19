@@ -10,7 +10,6 @@ import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
 import OnlinePresence from "../../../common-ui/support-service/online-presence";
 
-
 const whychooseus = [
   {
     title: 'Security First Approach',
@@ -77,8 +76,6 @@ const useCases = [
   "Optimizing resource allocation for high-traffic or seasonal loads"
 ];
 
-
-
 function SupportServicesContent() {
   return (
    <section>
@@ -91,9 +88,9 @@ From frontend glitches to backend bottlenecks, we’re your technical co-pilot."
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developers" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "24/7", label: "Monitoring with proactive incident response" },
+          { number: "40%", label: "Average downtime reduction with managed support" },
+          { number: "Cross platform", label: "Linux, Windows & Kubernetes expertise" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

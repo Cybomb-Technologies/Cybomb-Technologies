@@ -10,9 +10,9 @@ import styles from '../../common-ui/cloud-services/cloud-usecase.module.css';
 import awsImage from '../../../assets/aws.avif';
 
 const statsData = [
-  { number: '100%', label: 'Aligned with your business—not a generic solution' },
-  { number: '80%', label: 'Scales as your company evolves' },
-  { number: '200+', label: 'No unnecessary features, subscriptions, or limitations' },
+  { number: "99.95%", label: "Service uptime backed by Google infrastructure" },
+  { number: "75%", label: "Workload efficiency with Kubernetes/GKE" },
+  { number: "80%", label: "Improved data analytics performance" }
 ];
 const features = [
   'Built on the same infrastructure that powers Google Search, Gmail & YouTube',
