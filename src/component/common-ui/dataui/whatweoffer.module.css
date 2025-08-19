@@ -1,6 +1,6 @@
 .uiuxSection {
   background-color: #003459;
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   align-items: center;
   text-align: center;
   margin: 0 auto;
@@ -27,6 +27,7 @@
   text-align: center;
   color: #ffffff;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .servicesGridUiux {
@@ -40,7 +41,7 @@
     padding: 2rem 1rem;
   }
   .containerUiux{
-    padding: 2rem;
+    padding: 2.5rem 0.8rem 1rem;
 
   }
 
@@ -52,6 +53,12 @@
 @media (min-width: 769px) and (max-width: 1024px) {
   .servicesGridUiux {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .containerUiux{
+    padding: 2rem 1rem;
+
   }
 }
 
