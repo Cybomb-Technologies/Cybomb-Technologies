@@ -19,9 +19,9 @@ function HireDevContent() {
     />
     <InfoStats
         stats={[
-        { number: "90%", label: "Of mobile time inside apps, not browsers" },
-        { number: "6.8", label: "billion Smartphone worldwide" },
-        { number: "50%", label: "A well-built mobile app boosts engagement, loyalty, and sales" }
+          { number: "On-Time", label: "Delivery Guarantee" },
+          { number: "80+", label: "Skilled Developers on Cross-platform & Native Expertise" },
+          { number: "24/7", label: "Project Support & Agile Development Approach" },
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

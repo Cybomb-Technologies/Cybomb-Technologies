@@ -54,9 +54,9 @@ function HTML5Page() {
       />
       <InfoStats
         stats={[
-          { number: "300+", label: "Web Projects" },
-          { number: "100%", label: "Mobile Friendly" },
-          { number: "4.9/5", label: "Client Satisfaction" }
+          { number: "90%", label: "Universal web standard" },
+          { number: "80%", label: "Responsive design enabler" },
+          { number: "70%", label: "Essential for modern UI" }
         ]}
         caption="Trusted by"
         highlight="Businesses Worldwide"

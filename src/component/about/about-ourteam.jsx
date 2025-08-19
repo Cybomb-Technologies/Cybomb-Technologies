@@ -16,9 +16,9 @@ function Aboutourteam() {
 
   return (
     <>
-      <section className="our-team" style={{ padding: "60px 0px" }}>
+      <section className="our-team" style={{ padding: "10px 0px 60px" }}>
         <div className="container text-center">
-          <h2 className="text-primary">Meet our Leadership Team</h2>
+          {/* <h2 className="text-primary">Meet our Leadership Team</h2>
           <div className="row" data-aos="fade-left">
            
             <div className="col-lg-4 mx-auto mt-4">
@@ -39,7 +39,7 @@ function Aboutourteam() {
             </div>
          
           
-          </div>
+          </div> */}
           
           {/* Carousel Section */}
           <div className="row mt-4" data-aos="fade-right">

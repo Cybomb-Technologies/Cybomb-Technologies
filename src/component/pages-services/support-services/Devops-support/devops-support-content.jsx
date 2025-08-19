@@ -10,7 +10,6 @@ import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
 import OnlinePresence from "../../../common-ui/support-service/online-presence";
 
-
 const whychooseus = [
   {
     title: 'Full-Cycle DevOps Expertise',
@@ -60,6 +59,7 @@ const offerings = [
     description: 'Embed security into the DevOps lifecycle with automated vulnerability scans and policy enforcement.',
   },
 ];
+
 const features = [
   'Reduces deployment time and manual errors',
   'Increases release frequency and software quality',
@@ -77,7 +77,6 @@ const useCases = [
 ];
 
 
-
 function DevOpsSupportContent() {
   return (
    <section>
@@ -90,9 +89,9 @@ Whether you’re a startup adopting CI/CD or an enterprise looking to optimize w
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developers" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "Full-stack", label: "Support across frontend, backend & DevOps" },
+          { number: "Real-time", label: "Monitoring for faster bug resolution" },
+          { number: "50%", label: "Lower Mean Time to Repair (MTTR)" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

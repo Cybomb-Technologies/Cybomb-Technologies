@@ -76,6 +76,7 @@ const useCases = [
   "Creating a 2-year digital transformation roadmap",
   "Evaluating whether to build or buy a software platform"
 ];
+
 function Stratergycontent(){
     return(
     <section>
@@ -87,9 +88,9 @@ function Stratergycontent(){
     />
     <InfoStats
         stats={[
-        { number: "90%", label: "of mobile time inside apps, not browsers " },
-        { number: "6.8 billion", label: "Smartphone users worldwide" },
-        { number: "50%", label: "A well-built mobile app boost engagement, loyalty, and sales" }
+          { number: "90%", label: "Of enterprises investing in digital transformation" },
+          { number: "Mobile-first", label: "Adoption now the new standard" },
+          { number: "50%", label: "Efficiency boost with AI-led analytics" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

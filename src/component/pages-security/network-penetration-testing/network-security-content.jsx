@@ -68,9 +68,9 @@ const whychooseus = [
 ];
 
 const stats = [
-  { number: "95%", label: "of clients detected critical vulnerabilities before attackers could exploit them" },
-  { number: "70%", label: "reduction in exploitable network weaknesses post-engagement" },
-  { number: "100%", label: "customized testing tailored to your business environment" }
+  { number: "95%", label: "Critical risks identified before exploitation" },
+  { number: "70%", label: "Weaknesses mitigated post-assessment" },
+  { number: "100%", label: "Tailored testing for business environments" },
 ];
 
 export default function NetworkPenTestContent() {

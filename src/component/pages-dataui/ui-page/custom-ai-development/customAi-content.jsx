@@ -89,9 +89,9 @@ function CustomAIDevelopmentContent() {
 
       <InfoStats
         stats={[
-          { number: "80%", label: "of enterprises are investing in AI solutions" },
-          { number: "3x", label: "faster decision-making with AI-powered analytics" },
-          { number: "$15.7 trillion", label: "estimated AI contribution to the global economy by 2030" }
+          { number: "84%", label: "Of businesses see AI as a competitive advantage" },
+          { number: "2×", label: "Efficiency gains with AI-driven automation" },
+          { number: "75%", label: "Of executives view AI as critical for growth" }
         ]}
         caption="Trusted by Startups and"
         highlight="Industry Leaders Worldwide"

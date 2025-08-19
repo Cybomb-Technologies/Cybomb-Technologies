@@ -7,6 +7,7 @@ import OnlinePresence from "../../../common-ui/design-and-development/online-pre
 import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
 import TechToolsSection from "./TechToolsSection";
+
 const services = [
   {
     title: 'API-Based Integrations',
@@ -113,9 +114,9 @@ export default function SwIntDevContent() {
     />
     <InfoStats
         stats={[
-        { number: "100%", label: "Aligned with your business—not a generic solution" },
-        { number: "80%", label: "Scales as your company evolves" },
-        { number: "200+", label: "No unnecessary features, subscriptions, or limitations" }
+          { number: "80%", label: "Improvement in workflow efficiency with integrations" },
+          { number: "40%", label: "Reduction in costs by eliminating redundant tools" },
+          { number: "3x", label: "Faster decision-making across departments" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

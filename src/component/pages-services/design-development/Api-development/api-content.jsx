@@ -10,6 +10,7 @@ import OnlinePresence from "../../../common-ui/design-and-development/online-pre
 import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
 import TechToolsSection from "./api-dev-TechnologiesSection";
+
 const services = [
   {
     title: 'Custom REST & GraphQL APIs',
@@ -125,9 +126,9 @@ function ApiDevContent() {
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developer" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+            { number: "70%", label: "Reduction in integration overheads with APIs" },
+            { number: "20K+", label: "Requests handled per second in enterprise-scale APIs" },
+            { number: "3x", label: "Improved system interoperability" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

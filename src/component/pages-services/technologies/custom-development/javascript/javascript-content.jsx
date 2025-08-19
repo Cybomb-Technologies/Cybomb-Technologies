@@ -54,9 +54,9 @@ function JavaScriptPage() {
       />
       <InfoStats
         stats={[
-          { number: "15+", label: "Years Experience" },
-          { number: "200+", label: "Java Projects" },
-          { number: "99.9%", label: "Uptime" }
+          { number: "95%", label: "Used in most modern web apps" },
+          { number: "85%", label: "Core for front-end frameworks" },
+          { number: "75%", label: "Drives full-stack dev (Node.js)" }
         ]}
         caption="Trusted by"
         highlight="Fortune 500 Companies"

@@ -80,9 +80,9 @@ function CrmServicesContent() {
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developers" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "65%", label: "Of businesses adopt CRM within 5 years of launch" },
+          { number: "3×", label: "Higher customer retention with proper CRM adoption" },
+          { number: "20–30%", label: "Faster sales cycle through automation" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

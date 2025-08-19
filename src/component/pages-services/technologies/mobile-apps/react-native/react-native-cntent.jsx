@@ -1,6 +1,4 @@
 import ReactTechnologiesSection from "./react-native-TechnologiesSection";
-
-
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
@@ -12,9 +10,7 @@ import awsImage from '../../../../../assets/aws.avif';
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 
-
 const services = [
-  
   {
     title: 'Custom React App Development',
     description:
@@ -74,7 +70,6 @@ const hiringData = [
   }
 ];
 
-
 const whychooseus = [
   {
     title: 'Component-first Architecture',
@@ -102,10 +97,6 @@ const whychooseus = [
   },
 ];
 
-
-
-
-
 function ReactNativeContent() {
   return (
    <section>
@@ -117,9 +108,9 @@ function ReactNativeContent() {
     />
     <InfoStats
         stats={[
-        { number: "900+", label: "In-house Expert Developer" },
-        { number: "70%", label: "Average Savings on Development Costs" },
-        { number: "20,000+", label: "Projects Delivered Successfully" }
+          { number: "80%", label: "Cross-platform saves dev time" },
+          { number: "60%", label: "Apps reuse single codebase" },
+          { number: "75%", label: "Projects integrate with native APIs" }
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"

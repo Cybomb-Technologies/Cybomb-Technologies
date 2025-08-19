@@ -89,9 +89,9 @@ function ProcessingContent() {
 
       <InfoStats
         stats={[
-          { number: "2 TB+", label: "Average data processed daily for our clients" },
-          { number: "99.9%", label: "Uptime for our cloud-based data pipelines" },
-          { number: "70%", label: "Reduction in data processing time with optimized pipelines" }
+          { number: "2TB+", label: "Of data processed daily across pipelines" },
+          { number: "99.9%", label: "Uptime for optimized cloud data flows" },
+          { number: "70%", label: "Faster processing with modern architectures" }
         ]}
         caption="Trusted by Businesses Across"
         highlight="Industries Worldwide"
