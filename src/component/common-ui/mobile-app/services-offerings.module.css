@@ -1,6 +1,6 @@
 .androidServicesSection {
   background-color: #003459;
-  padding: 4rem 2rem;
+  padding: 0rem;
 }
 
 .sectionTitle {
@@ -32,7 +32,7 @@
   border-radius: 1rem;
   padding: 2.5rem;
   transition: transform 0.2s ease;
-  box-shadow: 10px 6px 6px rgba(0, 126, 167, 10); 
+  box-shadow: 10px 6px 6px rgba(0, 126, 167, 10);
 }
 
 .card:hover {
@@ -56,6 +56,9 @@
 
 /* Tablet (<= 1024px) */
 @media (max-width: 1024px) {
+  .androidServicesSection {
+    padding: 2rem 1rem;
+  }
   .sectionLayer {
     padding: 2rem;
   }
@@ -65,7 +68,7 @@
   }
 
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
   }
 
@@ -88,11 +91,15 @@
 
 /* Mobile (<= 768px) */
 @media (max-width: 768px) {
+  .androidServicesSection {
+    padding: 1rem;
+  }
   .sectionLayer {
     padding: 1rem;
   }
 
   .sectionTitle {
+    margin-bottom: 1rem;
     font-size: 1.5rem;
     text-align: center;
     align-items: center;
@@ -102,7 +109,7 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .card {
     padding: 1.5rem;
   }
