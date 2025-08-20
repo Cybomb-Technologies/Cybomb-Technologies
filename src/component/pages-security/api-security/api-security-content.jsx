@@ -4,8 +4,8 @@ import ServicesOfferings from "../../common-ui/security/services-offerings";
 import DevelopmentProcess from '../../common-ui/security/development-process';
 import WhyChooseUs from "../../common-ui/security/why-choose-us";
 import OnlinePresence from "../../common-ui/security/online-presence";
-import placeholderImage from '../../../assets/placeholder-image.webp';
 import TechToolsSection from "./api-technologies";
+import contactUsImg from './../../../assets/contact/contact-us-img1.jpg';
 
 const services = [
   {
@@ -98,7 +98,7 @@ export default function APISecurityContent() {
         description="Don’t wait for a data breach to take action. Get complete API security with our proven methodologies."
         buttonText="Contact Us Now"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactUsImg}
         imageAlt="API Security"
       />
       <DevelopmentProcess 

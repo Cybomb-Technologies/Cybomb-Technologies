@@ -3,12 +3,13 @@ import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
-import placeholderImage from "./../../../../../assets/placeholder-image.webp";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import awsImage from "../../../../../assets/aws.avif";
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
+
+import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import hireUsImg from './../../../../../assets/contact/hiring-model-img3.svg';
 
 const services = [
   {
@@ -55,20 +56,12 @@ const services = [
 
 const hiringData = [
   {
-    title: "WordPress Site Builds",
-    description: "Design and develop full websites from scratch",
+    title: "Bucket Hours",
+    description: "Prepay a pack of development hours for up to 6 months — ideal for ongoing updates, small enhancements, page edits, or WordPress maintenance tasks.",
   },
   {
-    title: "CMS Restructure & Cleanup",
-    description: "Fix bloated, plugin-heavy, or outdated installs",
-  },
-  {
-    title: "Headless/Hybrid CMS Projects",
-    description: "Power modern apps with WordPress as backend only",
-  },
-  {
-    title: "Monthly Support & Retainers",
-    description: "Continuous improvements, updates, and performance tuning",
+    title: "Dedicated WordPress Developers",
+    description: "Hire full-time WordPress experts exclusively for your project — ensuring focused attention, faster turnaround, and seamless collaboration.",
   },
 ];
 
@@ -125,7 +118,7 @@ function WordPressContent() {
       <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our WordPress Services"
         buttonText="Schedule a Consultation!"
-        imageSrc={placeholderImage}
+        imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
@@ -135,7 +128,7 @@ function WordPressContent() {
       <WordPressTechnologiesSection />
       <StillNotSure />
 
-      <HiringModels title="Hiring Models" cards={hiringData} image={awsImage} />
+      <HiringModels title="Hiring Models" cards={hiringData} image={hireUsImg} />
     </section>
   );
 }

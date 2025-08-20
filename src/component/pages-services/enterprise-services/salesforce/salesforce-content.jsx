@@ -2,12 +2,13 @@ import Banner from "../../../common-ui/enterprise-services/banner";
 import InfoStats from "../../../common-ui/enterprise-services/info-stats";
 import WhyChooseUs from "../../../common-ui/enterprise-services/why-choose-us";
 import OnlinePresence from "../../../common-ui/enterprise-services/online-presence";
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import DevelopmentProcess from "../../../common-ui/enterprise-services/development-process";
 import ScheduleConsultation from "../../../common-ui/enterprise-services/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
 import ServicesOfferings from "../../../common-ui/enterprise-services/services-offerings";
 import SalesforcePlatforms from "./SalesforcePlatforms";
+import salesforceImg from './../../../../assets/technologies/salesforce-crm-services.jpg';
+import contactUsImg from './../../../../assets/contact/contact-us-img1.jpg';
 
 const offerings = [
   {
@@ -103,7 +104,7 @@ function SalesforceContent() {
       <ScheduleConsultation
         heading="Unlock the Full Potential of Salesforce With Our Experts"
         buttonText="Schedule a Consultation!"
-        imageSrc={placeholderImage}
+        imageSrc={salesforceImg}
         imageAlt="Salesforce Consultation"
         Icon={MdSchedule}
       />
@@ -112,7 +113,7 @@ function SalesforceContent() {
         title="Let’s Make Salesforce Work For Your Business"
         buttonText="CONTACT US"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactUsImg}
         imageAlt="Salesforce Services"
       />
       <DevelopmentProcess 

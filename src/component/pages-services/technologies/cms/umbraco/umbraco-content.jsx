@@ -3,12 +3,13 @@ import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
-import placeholderImage from "./../../../../../assets/placeholder-image.webp";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import awsImage from "../../../../../assets/aws.avif";
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
+
+import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import hireUsImg from './../../../../../assets/contact/hiring-model-img3.svg';
 
 const services = [
   {
@@ -49,17 +50,12 @@ const services = [
 
 const hiringData = [
   {
-    title: "Dedicated Umbraco Development Team",
-    description: "Full-time experts for your projects.",
+    title: "Bucket Hours",
+    description: "Prepay development hours for up to 6 months — ideal for site updates, UI tweaks, bug fixing, and ongoing Umbraco CMS maintenance.",
   },
   {
-    title: "Fixed Price Model",
-    description: "Ideal for well-defined projects with clear deliverables.",
-  },
-  {
-    title: "Hourly Model",
-    description:
-      "Flexible engagement for ongoing development and enhancements.",
+    title: "Dedicated Umbraco Developers",
+    description: "Hire full-time Umbraco experts exclusively for your project — ensuring focused delivery, faster turnaround, and customized solutions built on the Umbraco CMS framework.",
   },
 ];
 
@@ -112,7 +108,7 @@ function UmbracoContent() {
       <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our Umbraco Services"
         buttonText="Schedule a Consultation!"
-        imageSrc={placeholderImage}
+        imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
@@ -122,7 +118,7 @@ function UmbracoContent() {
       <UmbracoTechnologiesSection />
       <StillNotSure />
 
-      <HiringModels title="Hiring Models" cards={hiringData} image={awsImage} />
+      <HiringModels title="Hiring Models" cards={hiringData} image={hireUsImg} />
     </section>
   );
 }

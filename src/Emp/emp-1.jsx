@@ -14,11 +14,10 @@ import Faq from "../pages/faq";
 import Ecommdev from "../component/pages-services/design-development/Ecommerce-development/Ecomm-dev";
 
 
-
 const emp1Routes = (
   <>
     <Route path="/" element={<Home />} />
-    <Route path="/aboutus" element={<About />} />
+    <Route path="/about-us" element={<About />} />
     <Route path="/services" element={<Services />} />
     <Route path="/portfolio" element={<Prortfolio />} />
     <Route path="/career" element={<Career />} />
@@ -30,7 +29,6 @@ const emp1Routes = (
     <Route path="/refund-policy" element={<Refundpolicy />} />
     <Route path="/services/ecommerce-development" element ={ <Ecommdev/>} />
     <Route path="*" element ={ <NotFoundPage/>} />
-    
   </>
 );
 

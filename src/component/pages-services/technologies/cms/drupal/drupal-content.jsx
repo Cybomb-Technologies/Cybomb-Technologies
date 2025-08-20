@@ -3,12 +3,13 @@ import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
-import placeholderImage from "./../../../../../assets/placeholder-image.webp";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import awsImage from "../../../../../assets/aws.avif";
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
+
+import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import hireUsImg from './../../../../../assets/contact/hiring-model-img3.svg';
 
 const services = [
   {
@@ -55,20 +56,12 @@ const services = [
 
 const hiringData = [
   {
-    title: "Drupal Website Builds",
-    description: "Full design, architecture, and implementation",
+    title: "Bucket Hours",
+    description: "Prepay development hours for up to 6 months — ideal for minor updates, security patches, performance optimization, and ongoing Drupal site enhancements.",
   },
   {
-    title: "Legacy Migrations & Upgrades",
-    description: "Move from outdated CMS systems or older Drupal versions",
-  },
-  {
-    title: "Drupal as Headless CMS",
-    description: "Integrate with SPAs, native apps, or JAMstack frontends",
-  },
-  {
-    title: "Ongoing Maintenance & Support",
-    description: "Retainers for updates, support, and optimization",
+    title: "Dedicated Drupal Developers",
+    description: "Hire full-time Drupal experts to work exclusively on your project — ensuring personalized attention, faster delivery, and deep technical expertise in Drupal architecture and modules.",
   },
 ];
 
@@ -121,7 +114,7 @@ function DrupalContent() {
       <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our Drupal Services"
         buttonText="Schedule a Consultation!"
-        imageSrc={placeholderImage}
+        imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
@@ -131,7 +124,7 @@ function DrupalContent() {
       <DrupalTechnologiesSection />
       <StillNotSure />
 
-      <HiringModels title="Hiring Models" cards={hiringData} image={awsImage} />
+      <HiringModels title="Hiring Models" cards={hiringData} image={hireUsImg} />
     </section>
   );
 }

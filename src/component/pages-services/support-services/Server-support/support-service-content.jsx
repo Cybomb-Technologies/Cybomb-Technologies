@@ -4,11 +4,14 @@ import WhyChooseUs from "../../../common-ui/support-service/why-choose-us";
 import ServicesOfferings from "../../../common-ui/support-service/services-offerings";
 import ScheduleConsultation from "../../../common-ui/support-service/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import CloudOffers from '../../../common-ui/support-service/cloud-offers';
-import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
 import OnlinePresence from "../../../common-ui/support-service/online-presence";
+
+import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import contactUsImg from './../../../../assets/contact/contact-us-img1.jpg';
+import serverSupportImg from './../../../../assets/technologies/server-support-matters-img.jpg';
+
 
 const whychooseus = [
   {
@@ -103,14 +106,14 @@ From frontend glitches to backend bottlenecks, we’re your technical co-pilot."
       <ScheduleConsultation
             heading="Reliable, secure, and scalable server management you can count on."
             buttonText="Schedule a Consultation!"
-            imageSrc={placeholderImage}
+            imageSrc={scheduleConsultImg}
             imageAlt="CRM Consultation"
             Icon={MdSchedule}
           />
       <CloudOffers
       title="Why Server Support Matters"
       features={features}
-      image={awsImage}
+      image={serverSupportImg}
     />
     
     <WhyChooseUs ChooseUs={whychooseus}/>
@@ -123,7 +126,7 @@ From frontend glitches to backend bottlenecks, we’re your technical co-pilot."
               title = "Let's Find the right Server Support for your business."
               buttonText = "CONTACT US"
               buttonLink = "#"
-              imageSrc = {placeholderImage}
+              imageSrc = {contactUsImg}
               imageAlt = "CRM services"
           />
 

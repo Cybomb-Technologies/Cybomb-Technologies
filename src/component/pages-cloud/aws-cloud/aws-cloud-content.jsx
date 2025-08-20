@@ -7,7 +7,8 @@ import OnlinePresence from '../../common-ui/cloud-services/Online-Presence';
 import CloudUseCase from '../../common-ui/cloud-services/cloud-usecase';
 import EngagementOptions from '../../common-ui/cloud-services/engagement-options';
 import styles from '../../common-ui/cloud-services/cloud-usecase.module.css';
-import awsImage from '../../../assets/aws.avif';
+import awsImage from '../../../assets/technologies/amazon-web-services-img.jpg';
+import contactUsImg from './../../../assets/contact/contact-us-img2.jpg';
 
 const statsData = [
   { number: "99.99%", label: "Service availability with AWS infrastructure" },
@@ -65,6 +66,7 @@ const services = [
       'Set up IAM roles, VPCs, encryption, and security groups to protect your cloud assets',
   },
 ];
+
 const useCases = [
   {
     text: "Host a global e-commerce platform that auto-scales during sales",
@@ -133,7 +135,7 @@ export default function AWSContent() {
       description="Our custom AWS integrations ensure scalability, security, and cost-efficiency."
       buttonText="Request with our AWS Experts!"
       // onButtonClick={handleRequestClick}
-      imageSrc={awsImage}
+      imageSrc={contactUsImg}
       imageAlt="Illustration of AWS cloud solutions"
     />
       <CloudUseCase
