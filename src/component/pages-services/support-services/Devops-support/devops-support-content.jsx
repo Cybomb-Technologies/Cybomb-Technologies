@@ -4,11 +4,13 @@ import WhyChooseUs from "../../../common-ui/support-service/why-choose-us";
 import ServicesOfferings from "../../../common-ui/support-service/services-offerings";
 import ScheduleConsultation from "../../../common-ui/support-service/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import CloudOffers from '../../../common-ui/support-service/cloud-offers';
-import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
 import OnlinePresence from "../../../common-ui/support-service/online-presence";
+import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import contactUsImg from './../../../../assets/contact/contact-us-img1.jpg';
+
+import devOpsSupportImage from './../../../../assets/technologies/devops-matters-img.jpg';
 
 const whychooseus = [
   {
@@ -76,7 +78,6 @@ const useCases = [
   "Setting up auto-scaling and monitoring for critical services"
 ];
 
-
 function DevOpsSupportContent() {
   return (
    <section>
@@ -104,14 +105,14 @@ Whether you’re a startup adopting CI/CD or an enterprise looking to optimize w
       <ScheduleConsultation
             heading="Stay Ahead Of The Competition With Our DevOps Services"
             buttonText="Schedule a Consultation!"
-            imageSrc={placeholderImage}
+            imageSrc={scheduleConsultImg}
             imageAlt="DevOps Consultation"
             Icon={MdSchedule}
           />
       <CloudOffers
       title="Why DevOps Matters"
       features={features}
-      image={awsImage}
+      image={devOpsSupportImage}
     />
     
     <WhyChooseUs ChooseUs={whychooseus}/>
@@ -124,7 +125,7 @@ Whether you’re a startup adopting CI/CD or an enterprise looking to optimize w
               title = "Let's Find the right DevOps Services for your business."
               buttonText = "CONTACT US"
               buttonLink = "#"
-              imageSrc = {placeholderImage}
+              imageSrc = {contactUsImg}
               imageAlt = "DevOps services"
           />
 

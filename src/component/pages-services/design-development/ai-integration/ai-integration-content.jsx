@@ -4,9 +4,9 @@ import ServicesOfferings from "../../../common-ui/design-and-development/service
 import DevelopmentProcess from "../../../common-ui/design-and-development/development-process";
 import WhyChooseUs from "../../../common-ui/design-and-development/why-choose-us";
 import OnlinePresence from "../../../common-ui/design-and-development/online-presence";
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
 import TechToolsSection from "./TechToolsSection";
+import aiIntegrationImg from "./../../../../assets/technologies/ai-integration.jpg";
 
 const services = [
   {
@@ -154,7 +154,7 @@ export default function AiIntegrationContent() {
           description = "Our custom AI Integration services turn your vision into a compelling online presence."
           buttonText = "Request a Free Quote Today!"
           buttonLink = "#"
-          imageSrc = {placeholderImage}
+          imageSrc = {aiIntegrationImg}
           imageAlt = "AI Integration Services"
       />
     <DevelopmentProcess 

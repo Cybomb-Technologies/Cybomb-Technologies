@@ -20,7 +20,7 @@ function Clouddropdown1({
 }) {
   return (
     <li className={styles.dropdownWrapper}
-    onMouseEnter={onMouseEnter}
+      onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       <Link
@@ -44,8 +44,8 @@ function Clouddropdown1({
 
       <ul
         className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
-        onMouseEnter={() => !isMobile && onToggle(true)}
-        onMouseLeave={() => !isMobile && onToggle(false)}
+        // onMouseEnter={() => !isMobile && onToggle(true)}
+        // onMouseLeave={() => !isMobile && onToggle(false)}
         style={
           !isMobile
             ? {

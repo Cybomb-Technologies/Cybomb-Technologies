@@ -46,8 +46,8 @@ function Industriesdropdown1({
           }
         }}
         aria-expanded={isOpen ? "true" : "false"}
-        onMouseEnter={() => !isMobile && onToggle(true)}
-        onMouseLeave={() => !isMobile && onToggle(false)}
+        // onMouseEnter={() => !isMobile && onToggle(true)}
+        // onMouseLeave={() => !isMobile && onToggle(false)}
       >
         Industries We Serve 
         <span className={styles.arrow}>
@@ -57,8 +57,8 @@ function Industriesdropdown1({
 
       <ul
         className={`${styles.dropdownMenu} ${isMobile && isOpen ? styles.show : ""}`}
-        onMouseEnter={() => !isMobile && onToggle(true)}
-        onMouseLeave={() => !isMobile && onToggle(false)}
+        // onMouseEnter={() => !isMobile && onToggle(true)}
+        // onMouseLeave={() => !isMobile && onToggle(false)}
         style={
           !isMobile
             ? {

@@ -3,12 +3,13 @@ import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
-import placeholderImage from "./../../../../../assets/placeholder-image.webp";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import awsImage from "../../../../../assets/aws.avif";
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
+
+import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import hireUsImg from './../../../../../assets/contact/hiring-model-img3.svg';
 
 const services = [
   {
@@ -55,25 +56,12 @@ const services = [
 
 const hiringData = [
   {
-    title: "End-to-End Website Design & Development",
-    description: "UI/UX, content modeling, custom development",
+    title: "Bucket Hours",
+    description: "Prepay development hours for up to 6 months — ideal for content updates, design tweaks, performance optimization, and ongoing Craft CMS maintenance.",
   },
   {
-    title: "Plugin & API Integration",
-    description: "Extend core capabilities with secure, scalable integrations",
-  },
-  {
-    title: "Migration to Craft",
-    description: "From WordPress, Drupal, or legacy CMS platforms",
-  },
-  {
-    title: "Headless CMS Builds",
-    description: "Craft backend + React, Vue, or static frontends",
-  },
-  {
-    title: "Ongoing Maintenance & Support",
-    description:
-      "Monthly support, performance tuning, updates, and feature development",
+    title: "Dedicated Craft CMS Developers",
+    description: "Hire full-time Craft CMS experts who work exclusively on your project — ensuring focused attention, high code quality, and faster delivery of custom Craft solutions.",
   },
 ];
 
@@ -128,7 +116,7 @@ function CraftContent() {
       <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our Craft Services"
         buttonText="Schedule a Consultation!"
-        imageSrc={placeholderImage}
+        imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
@@ -138,7 +126,7 @@ function CraftContent() {
       <CraftTechnologiesSection />
       <StillNotSure />
 
-      <HiringModels title="Hiring Models" cards={hiringData} image={awsImage} />
+      <HiringModels title="Hiring Models" cards={hiringData} image={hireUsImg} />
     </section>
   );
 }

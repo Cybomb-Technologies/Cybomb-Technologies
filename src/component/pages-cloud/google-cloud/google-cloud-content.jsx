@@ -7,13 +7,15 @@ import OnlinePresence from '../../common-ui/cloud-services/Online-Presence';
 import CloudUseCase from '../../common-ui/cloud-services/cloud-usecase';
 import EngagementOptions from '../../common-ui/cloud-services/engagement-options';
 import styles from '../../common-ui/cloud-services/cloud-usecase.module.css';
-import awsImage from '../../../assets/aws.avif';
+import gcpImg from '../../../assets/technologies/google-cloud-platform-img.jpg';
+import contactUsImg from './../../../assets/contact/contact-us-img2.jpg';
 
 const statsData = [
   { number: "99.95%", label: "Service uptime backed by Google infrastructure" },
   { number: "75%", label: "Workload efficiency with Kubernetes/GKE" },
   { number: "80%", label: "Improved data analytics performance" }
 ];
+
 const features = [
   'Built on the same infrastructure that powers Google Search, Gmail & YouTube',
   'Advanced AI/ML capabilities with prebuilt models and tools',
@@ -21,7 +23,6 @@ const features = [
   'Powerful analytics with BigQuery and real-time data processing',
   'Trusted security with built-in identity and access control',
 ];
-
 
 const services = [
   {
@@ -66,7 +67,6 @@ const services = [
   },
 ];
 
-
 const useCases = [
   {
     text: "Build and scale a global SaaS platform using GKE",
@@ -90,7 +90,6 @@ const useCases = [
   },
 ];
 
-
 const engagementOptions = [
   {
     title: "Startup Cloud Launch Kits",
@@ -105,8 +104,6 @@ const engagementOptions = [
     description: "From backend architecture to frontend deployment on GCP.",
   },
 ];
-
-
 
 export default function GoogleCloudContent() {
   return (
@@ -125,7 +122,7 @@ export default function GoogleCloudContent() {
      <CloudOffers
       title="Why Google Cloud Platform Matters"
       features={features}
-      image={awsImage}
+      image={gcpImg}
     />
     <ServicesSection
       title="Our Google Cloud Platform Services Include"
@@ -137,7 +134,7 @@ export default function GoogleCloudContent() {
       description="Our custom Google Cloud Platform integrations ensure scalability, security, and cost-efficiency."
       buttonText="Request with our Google Cloud Platform Experts!"
       // onButtonClick={handleRequestClick}
-      imageSrc={awsImage}
+      imageSrc={contactUsImg}
       imageAlt="Illustration of Google Cloud solutions"
     />
       <CloudUseCase

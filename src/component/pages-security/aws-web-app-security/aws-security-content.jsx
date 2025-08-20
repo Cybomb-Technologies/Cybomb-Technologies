@@ -4,8 +4,8 @@ import ServicesOfferings from "../../common-ui/security/services-offerings";
 import DevelopmentProcess from '../../common-ui/security/development-process';
 import WhyChooseUs from "../../common-ui/security/why-choose-us";
 import OnlinePresence from "../../common-ui/security/online-presence";
-import placeholderImage from '../../../assets/placeholder-image.webp';
 import TechToolsSection from "./aws-technologies";
+import contactUsImg from './../../../assets/contact/contact-us-img1.jpg';
 
 const services = [
   {
@@ -40,6 +40,7 @@ const services = [
     isNew: true // Additional flag to highlight new service
   },
 ];
+
 const process = [
   {
     description: "Evaluate your current security posture and identify vulnerabilities",
@@ -112,7 +113,7 @@ export default function AWSSecurityContent() {
         description="Don't wait for a breach to take action. Get AWS-powered protection and our expert team."
         buttonText="Contact Us Now"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactUsImg}
         imageAlt="AWS Security"
       />
       <DevelopmentProcess 

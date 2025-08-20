@@ -4,11 +4,13 @@ import WhyChooseUs from "../../../common-ui/support-service/why-choose-us";
 import ServicesOfferings from "../../../common-ui/support-service/services-offerings";
 import ScheduleConsultation from "../../../common-ui/support-service/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import CloudOffers from '../../../common-ui/support-service/cloud-offers';
-import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
 import OnlinePresence from "../../../common-ui/support-service/online-presence";
+
+import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import contactUsImg from './../../../../assets/contact/contact-us-img1.jpg';
+import itSupportImg from './../../../../assets/technologies/it-support-matters-img.jpg';
 
 const whychooseus = [
   {
@@ -103,14 +105,14 @@ From small businesses to large enterprises, we offer scalable support tailored t
       <ScheduleConsultation
             heading="Stay Ahead Of The Competition With Our IT Support Services"
             buttonText="Schedule a Consultation!"
-            imageSrc={placeholderImage}
+            imageSrc={scheduleConsultImg}
             imageAlt="DevOps Consultation"
             Icon={MdSchedule}
           />
       <CloudOffers
       title="Why IT Support Services Matters"
       features={features}
-      image={awsImage}
+      image={itSupportImg}
     />
     
     <WhyChooseUs ChooseUs={whychooseus}/>
@@ -123,7 +125,7 @@ From small businesses to large enterprises, we offer scalable support tailored t
               title = "Let's Find the right IT Support Services for your business."
               buttonText = "CONTACT US"
               buttonLink = "#"
-              imageSrc = {placeholderImage}
+              imageSrc = {contactUsImg}
               imageAlt = "IT support services"
           />
 

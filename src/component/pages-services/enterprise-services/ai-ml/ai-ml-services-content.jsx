@@ -2,12 +2,13 @@ import Banner from "../../../common-ui/enterprise-services/banner";
 import InfoStats from "../../../common-ui/enterprise-services/info-stats";
 import WhyChooseUs from "../../../common-ui/enterprise-services/why-choose-us";
 import OnlinePresence from "../../../common-ui/enterprise-services/online-presence";
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import DevelopmentProcess from "../../../common-ui/enterprise-services/development-process";
 import ScheduleConsultation from "../../../common-ui/enterprise-services/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
 import ServicesOfferings from "../../../common-ui/enterprise-services/services-offerings";
 import AIMLPlatforms from "./AIMLPlatforms";
+import crmImg from './../../../../assets/technologies/crm-services-img.jpg';
+import contactUsImg from './../../../../assets/contact/contact-us-img1.jpg';
 
 const offerings = [
   {
@@ -95,7 +96,7 @@ function AIMLContent() {
       <ScheduleConsultation
         heading="Bring Your AI Vision to Life with Our Expertise"
         buttonText="Schedule a Consultation!"
-        imageSrc={placeholderImage}
+        imageSrc={crmImg}
         imageAlt="AI & ML Consultation"
         Icon={MdSchedule}
       />
@@ -104,7 +105,7 @@ function AIMLContent() {
         title="Let’s Create AI That Works For You"
         buttonText="CONTACT US"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactUsImg}
         imageAlt="AI Services"
       />
       <DevelopmentProcess 
