@@ -5,8 +5,9 @@ import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultatio
 import { MdSchedule } from 'react-icons/md';
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
 import OnlinePresence from "../../../common-ui/dataui/online-presence";
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
+import contactUsImg from './../../../../assets/contact/contact-us-img1.jpg';
+import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img2.jpg';
 
 const WhatWeOffers = [
   {
@@ -102,7 +103,7 @@ function AIPersonalizedCustomerExperienceContent() {
       <ScheduleConsultation
         heading="Transform Customer Journeys with AI Personalization"
         buttonText="Schedule a Consultation!"
-        imageSrc={placeholderImage}
+        imageSrc={scheduleConsultImg}
         imageAlt="AI Customer Experience"
         Icon={MdSchedule}
       />
@@ -113,7 +114,7 @@ function AIPersonalizedCustomerExperienceContent() {
         title="Let's Build Personalized Experiences for Your Customers."
         buttonText="CONTACT US"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactUsImg}
         imageAlt="Personalized AI Solutions"
       />
 

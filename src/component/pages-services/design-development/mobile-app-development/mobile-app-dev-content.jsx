@@ -5,8 +5,8 @@ import ServicesOfferings from "../../../common-ui/design-and-development/service
 import DevelopmentProcess from "../../../common-ui/design-and-development/development-process";
 import WhyChooseUs from "../../../common-ui/design-and-development/why-choose-us";
 import OnlinePresence from "../../../common-ui/design-and-development/online-presence";
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import MobileAppTechnologiesSection from "./mobile-app-TechnologiesSection";
+import MobileAppImg from "./../../../../assets/technologies/mobile-apps.jpg";
 
 const services = [
   {
@@ -91,39 +91,39 @@ const whychooseus = [
 
 function MobileAppDevContent() {
   return (
-   <section>
-    <Banner 
-        heading="Mobile App Development"
-        subtext="We turn your app idea into a powerful, user-friendly experience."
-        buttonText="Book Free Consultation"
-        note="Fill out the form and our experts will contact you within 24 hours."
-    />
-    <InfoStats
-        stats={[
-        { number: "90%", label: "of mobile time is spent inside apps, not browsers" },
-        { number: "6.8 Billion+", label: "smartphone users worldwide" },
-        { number: "50%", label: "A well-built mobile app boosts engagement, loyalty, and sales" }
-        ]}
-        caption="Partnered with Startups and"
-        highlight="Fortune 500 Companies"
-    />
-    <ServicesOfferings 
-      title = "Our Mobile App Services"
-      Services={services}/>
-    <MobileAppTechnologiesSection/>
-    <WhyChooseUs ChooseUs={whychooseus}/>
-    <OnlinePresence 
-          title = "Craft a Captivating Online Presence for Your Brand!"
-          description = "Our custom web development services turn your vision into a compelling online presence."
-          buttonText = "Request a Free Quote Today!"
-          buttonLink = "#"
-          imageSrc = {placeholderImage}
-          imageAlt = "Mobile App Development"
+    <section>
+      <Banner 
+          heading="Mobile App Development"
+          subtext="We turn your app idea into a powerful, user-friendly experience."
+          buttonText="Book Free Consultation"
+          note="Fill out the form and our experts will contact you within 24 hours."
       />
-    <DevelopmentProcess title="Our Mobile App Development Process"
-      Process={process}
+      <InfoStats
+          stats={[
+          { number: "90%", label: "of mobile time is spent inside apps, not browsers" },
+          { number: "6.8 Billion+", label: "smartphone users worldwide" },
+          { number: "50%", label: "A well-built mobile app boosts engagement, loyalty, and sales" }
+          ]}
+          caption="Partnered with Startups and"
+          highlight="Fortune 500 Companies"
       />
-   </section>
+      <ServicesOfferings 
+        title = "Our Mobile App Services"
+        Services={services}/>
+      <MobileAppTechnologiesSection/>
+      <WhyChooseUs ChooseUs={whychooseus}/>
+      <OnlinePresence 
+            title = "Craft a Captivating Online Presence for Your Brand!"
+            description = "Our custom web development services turn your vision into a compelling online presence."
+            buttonText = "Request a Free Quote Today!"
+            buttonLink = "#"
+            imageSrc = {MobileAppImg}
+            imageAlt = "Mobile App Development"
+        />
+      <DevelopmentProcess title="Our Mobile App Development Process"
+        Process={process}
+      />
+    </section>
   );
 }
 

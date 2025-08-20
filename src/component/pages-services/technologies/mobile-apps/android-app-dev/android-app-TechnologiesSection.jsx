@@ -13,7 +13,7 @@ const techLogos = {
   "React Native":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/768px-React-icon.svg.png?20220125121207",
   Xamarin:"https://www.svgrepo.com/show/306994/xamarin.svg",
   
-  Kotlin: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kotlin_Icon.svg/768px-Kotlin_Icon.svg.png?20171012085709",
+  Kotlin: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
   Firebase: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
   "cloud services":"https://uxwing.com/wp-content/themes/uxwing/download/domain-hosting/cloud-services-icon.png",
   DevOps:"https://www.svgrepo.com/show/339133/devops.svg",

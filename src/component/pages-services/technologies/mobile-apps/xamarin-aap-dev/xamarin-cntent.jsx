@@ -3,12 +3,12 @@ import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
-import placeholderImage from './../../../../../assets/placeholder-image.webp';
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
-import awsImage from '../../../../../assets/aws.avif';
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
+import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import hireUsImg from './../../../../../assets/contact/hiring-model-img1.png';
 
 const services = [
   {
@@ -111,7 +111,7 @@ function XamarinContent() {
       <ScheduleConsultation
         heading="Accelerate Your App Strategy with Xamarin"
         buttonText="Schedule a Consultation!"
-        imageSrc={placeholderImage}
+        imageSrc={scheduleConsultImg}
         imageAlt="Xamarin App Consultation"
         Icon={MdSchedule}
       />
@@ -124,7 +124,7 @@ function XamarinContent() {
       <HiringModels
         title="Xamarin Developer Hiring Models"
         cards={hiringData}
-        image={awsImage}
+        image={hireUsImg}
       />
     </section>
   );

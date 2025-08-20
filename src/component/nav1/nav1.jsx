@@ -164,7 +164,7 @@ function Nav1() {
 
                 <li className={styles.navItem}>
                   <Link
-                    to="/aboutus"
+                    to="/about-us"
                     className={styles.navLink}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -260,7 +260,7 @@ function Nav1() {
 
               <li className={styles.navItem}>
                   <Link
-                    to="/aboutus"
+                    to="/about-us"
                     className={styles.navLink}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
