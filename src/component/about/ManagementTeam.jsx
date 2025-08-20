@@ -34,6 +34,13 @@ function ManagementTeam() {
                  </div>
                  <h5 className="manage-name text-black">Meenaskhi Sundaram</h5>
                  <p className="manage-role">COO</p>
+                   <a
+                href="https://www.linkedin.com/in/ms1670/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
+              </a>
                </div>
              </div>
                <div className="col-md-4 col-lg-4">
@@ -43,6 +50,13 @@ function ManagementTeam() {
                  </div>
                  <h5 className="manage-name text-black">Pavan Pradeep Naik</h5>
                  <p className="manage-role">CTO</p>
+                 <a
+                href="https:www.linkedin.com/in/pavannaikindia"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
+              </a>
                </div>
              </div>
              <div className="col-md-4 col-lg-4">
@@ -52,6 +66,13 @@ function ManagementTeam() {
                  </div>
                  <h5 className="manage-name text-black">Sudesh T</h5>
                  <p className="manage-role">VP</p>
+                   <a
+                href="https://www.linkedin.com/in/sudesh-t-317b14276/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
+              </a>
                </div>
              </div>
          </div>

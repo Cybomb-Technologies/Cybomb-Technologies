@@ -4,22 +4,11 @@
   min-height: 100vh;
   z-index: 0;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   color: white;
 }
 
-/* Background Image */
-.home-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* background: url('/images/banner-12.png') no-repeat center center; */
-  background-size: cover;
-  z-index: 1;
-}
+ 
 
 .home-banner::after {
   content: "";
@@ -27,7 +16,7 @@
   inset: 0;
   background: rgba(29, 29, 29, 0.205);
   z-index: 2;
-   pointer-events: none;
+  pointer-events: none;
 }
 
 .home-banner .container {
@@ -48,7 +37,7 @@
 }
 
 .custom-caption {
-  position: absolute;
+  position: relative;
   top: 0;
   bottom: 0;
   left: 5% !important;
