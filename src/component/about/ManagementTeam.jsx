@@ -21,6 +21,13 @@ function ManagementTeam() {
                 leadership, Dev drives our strategic vision and growth
                 initiatives.
               </p>
+              <a
+                href="https://in.linkedin.com/in/dev-venkatesan"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -30,7 +37,7 @@ function ManagementTeam() {
              <div className="col-md-4 col-lg-4">
                <div className="manage-card">
                  <div className="manage-profile-pic">
-                   <img src="/images/about-team/team-2.png" alt="Manoj M R" />
+                   <img src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755750329/team-2_l8ay7a.png" alt="Manoj M R" />
                  </div>
                  <h5 className="manage-name text-black">Meenaskhi Sundaram</h5>
                  <p className="manage-role">COO</p>
@@ -46,7 +53,7 @@ function ManagementTeam() {
                <div className="col-md-4 col-lg-4">
                <div className="manage-card">
                  <div className="manage-profile-pic">
-                   <img src="/images/about-team/team-7.png" alt="Manoj M R" />
+                   <img src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755692170/team-7_jenwou.png" alt="Manoj M R" />
                  </div>
                  <h5 className="manage-name text-black">Pavan Pradeep Naik</h5>
                  <p className="manage-role">CTO</p>
@@ -62,7 +69,7 @@ function ManagementTeam() {
              <div className="col-md-4 col-lg-4">
                <div className="manage-card">
                  <div className="manage-profile-pic">
-                   <img src="/images/about-team/team-4.jpg" alt="Manoj M R" />
+                   <img src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755750407/team-4_apufd7.jpg" alt="Manoj M R" />
                  </div>
                  <h5 className="manage-name text-black">Sudesh T</h5>
                  <p className="manage-role">VP</p>

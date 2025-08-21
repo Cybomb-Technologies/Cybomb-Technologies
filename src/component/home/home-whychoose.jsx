@@ -47,7 +47,7 @@ function Homewhychoose() {
               <div className="icon-box bg-warning mx-auto mb-2">
                 <i className="bi bi-people-fill"></i>
               </div>
-              <h4 className="text-warning fw-bold mb-0">25+</h4>
+              <h4 className="text-warning fw-bold mb-0">80+</h4>
               <h6 className="mb-0 text-secondary">Industry Experts</h6>
             </div>
           </div>

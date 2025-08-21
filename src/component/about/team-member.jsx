@@ -11,7 +11,7 @@ function TeamMember() {
           <div className="col-md-4 col-lg-4">
             <div className="team-card">
               <div className="profile-pic">
-                <img src="/images/about-team/team-1.png" alt="Santhosh K" />
+                <img src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755750259/team-1_rkkmff.png" alt="Santhosh K" />
               </div>
               <h5 className="team-name text-black">Santhosh K</h5>
               <p className="team-role">Web App Developer</p>
@@ -29,7 +29,7 @@ function TeamMember() {
           <div className="col-md-4 col-lg-4">
             <div className="team-card">
               <div className="profile-pic">
-                <img src="/images/about-team/team-3.png" alt="Manoj M R" />
+                <img src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755750368/team-3_ayj93s.png" alt="Manoj M R" />
               </div>
               <h5 className="team-name text-black">Manoj M R</h5>
               <p className="team-role">UI & UX Designer</p>
@@ -50,7 +50,7 @@ function TeamMember() {
             <div className="team-card">
               <div className="profile-pic">
                 <img
-                  src="/images/about-team/team-5.jpg"
+                  src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755750475/team-5_mttqoe.jpg"
                   alt="Divyadharshini Subramani"
                 />
               </div>
@@ -69,7 +69,7 @@ function TeamMember() {
             <div className="team-card">
               <div className="profile-pic">
                 <img
-                  src="/images/about-team/team-6.jpeg"
+                  src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755750535/team-6_i9yrye.jpg"
                   alt="Divya Baskaran"
                 />
               </div>
@@ -88,7 +88,7 @@ function TeamMember() {
           <div className="col-md-4 col-lg-4">
             <div className="team-card">
               <div className="profile-pic">
-                <img src="/images/about-team/team-8.png" alt="Divya Baskaran" />
+                <img src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755750572/team-8_hpix5t.png" alt="Divya Baskaran" />
               </div>
               <h5 className="team-name text-black">Devashree Salunke</h5>
               <p className="team-role">IOS Developer</p>
