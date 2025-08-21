@@ -3,11 +3,10 @@ import InfoStats from "../../../common-ui/design-and-development/info-stats";
 import ServicesOfferings from "./services-offerings";
 import WhyChooseUs from "./why-choose-us";
 import OnlinePresence from "../../../common-ui/design-and-development/online-presence";
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "./engagement-options";
 import TechToolsSection from "./TechToolsSection";
 import uiuxDesignImg from "./../../../../assets/technologies/ui-ux-design.jpg";
-
+import UiUxWhyMatters from "./uiux-why-matters"
 const services = [
   {
     title: 'Product Discovery & Research',
