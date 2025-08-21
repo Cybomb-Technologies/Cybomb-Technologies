@@ -59,7 +59,7 @@ const ReactTechnologiesSection = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Game Development Technologies</h2>
+        <h2 className={styles.title}>Technologies and Development</h2>
 
         {/* Tabs */}
         <div className={styles.tabWrapper}>

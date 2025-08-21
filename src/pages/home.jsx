@@ -5,10 +5,10 @@ import Homewhychoose from "../component/home/home-whychoose";
 import Hometestimonial from "../component/home/home-testimonial";
 import Homeourexpertise from "../component/home/home-our-expertise";
 import Homeform from "../component/home/home-form";
-import Homenewsletter from "../component/home/home-newsletter";
+// import Homenewsletter from "../component/home/home-newsletter";
 import Homecontact from "../component/home/home-contact";
 import HomeUIUX from "../component/home/home-ui-ux";
-import Partners from "../component/home/partners";
+import HomePartners from "../component/home/home-partners";
 import Metatags from "../SEO/meta-tags";
 
 function Home() {
@@ -33,8 +33,8 @@ function Home() {
       <Hometestimonial />
       <Homeourexpertise />
       <Homeform />
-      <Homenewsletter />
-      <Partners/>
+      {/* <Homenewsletter /> */}
+      <HomePartners/>
       <Homecontact />
     </>
   );

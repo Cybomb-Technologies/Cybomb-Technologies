@@ -1,4 +1,4 @@
-import AgileProcess from "../../../common-ui/agile-process/agile-process";
+
 import DevelopmentProcess from "../../../common-ui/design-and-development/development-process";
 import OnlinePresence from "../../../common-ui/design-and-development/online-presence";
 import ServicesOfferings from "../../../common-ui/design-and-development/services-offerings";
@@ -101,7 +101,7 @@ function Ecommcontent() {
       Process={process}
       
       />
-      <AgileProcess/>
+      
       <StillNotSure/>
     </>
   );
