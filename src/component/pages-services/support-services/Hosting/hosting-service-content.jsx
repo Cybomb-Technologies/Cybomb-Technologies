@@ -4,11 +4,13 @@ import WhyChooseUs from "../../../common-ui/support-service/why-choose-us";
 import ServicesOfferings from "../../../common-ui/support-service/services-offerings";
 import ScheduleConsultation from "../../../common-ui/support-service/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import CloudOffers from '../../../common-ui/support-service/cloud-offers';
-import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
 import OnlinePresence from "../../../common-ui/support-service/online-presence";
+
+import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import contactUsImg from './../../../../assets/contact/contact-us-img1.jpg';
+import hostSupportImg from './../../../../assets/technologies/hosting-matters-img.jpg';
 
 const whychooseus = [
   {
@@ -102,14 +104,14 @@ function HostingServicesContent() {
       <ScheduleConsultation
             heading="Stay Ahead Of The Competition With Our Hosting Development Services"
             buttonText="Schedule a Consultation!"
-            imageSrc={placeholderImage}
+            imageSrc={scheduleConsultImg}
             imageAlt="CRM Consultation"
             Icon={MdSchedule}
           />
       <CloudOffers
       title="Why Hosting Matters"
       features={features}
-      image={awsImage}
+      image={hostSupportImg}
     />
     
     <WhyChooseUs ChooseUs={whychooseus}/>
@@ -122,7 +124,7 @@ function HostingServicesContent() {
               title = "Let's Find the right Hosting Services for your business."
               buttonText = "CONTACT US"
               buttonLink = "#"
-              imageSrc = {placeholderImage}
+              imageSrc = {contactUsImg}
               imageAlt = "CRM services"
           />
 

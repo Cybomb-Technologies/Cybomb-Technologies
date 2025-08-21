@@ -3,12 +3,12 @@ import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/mobile-app/info-stats";
 import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerings";
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
-import placeholderImage from "./../../../../../assets/placeholder-image.webp";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import awsImage from "../../../../../assets/aws.avif";
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
+import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import hireUsImg from './../../../../../assets/contact/hiring-model-img3.svg';
 
 const services = [
   {
@@ -55,28 +55,12 @@ const services = [
 
 const hiringData = [
   {
-    title: "Pantheon Site Builds",
-    description: "From scratch or rebuilds optimized for the platform",
+    title: "Bucket Hours",
+    description: "Prepay development hours for up to 6 months — ideal for Pantheon environment updates, performance tuning, workflow configuration, and ongoing Drupal/WordPress maintenance on the Pantheon platform.",
   },
   {
-    title: "Migration Projects",
-    description: "Move from other hosts or CMS setups to Pantheon",
-  },
-  {
-    title: "Performance & Security Audits",
-    description: "Identify and resolve bottlenecks",
-  },
-  {
-    title: "Retainers & Ongoing Support",
-    description: "Continuous improvements and updates",
-  },
-  {
-    title: "DevOps & Workflow Consulting",
-    description: "Maximize efficiency with Git and Multidev",
-  },
-  {
-    title: "Headless CMS Projects",
-    description: "Power modern apps with WordPress as a backend only CMS",
+    title: "Dedicated Pantheon Developers",
+    description: "Hire full-time Pantheon-experienced developers who focus solely on your project — ensuring optimized deployments, faster delivery, and deep expertise with Pantheon workflows and DevOps.",
   },
 ];
 
@@ -133,7 +117,7 @@ function PantheonContent() {
       <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our Pantheon Services"
         buttonText="Schedule a Consultation!"
-        imageSrc={placeholderImage}
+        imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
@@ -143,7 +127,7 @@ function PantheonContent() {
       <PantheonTechnologiesSection />
       <StillNotSure />
 
-      <HiringModels title="Hiring Models" cards={hiringData} image={awsImage} />
+      <HiringModels title="Hiring Models" cards={hiringData} image={hireUsImg} />
     </section>
   );
 }

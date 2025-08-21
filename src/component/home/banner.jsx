@@ -21,7 +21,7 @@ function HomeBanner() {
   }, []);
 
   return (
-    <section className="home-banner text-white d-flex align-items-center">
+    <section className="home-banner">
       <Carousel fade interval={3000} controls={false} indicators={true}>
         <Carousel.Item>
           <img
@@ -29,17 +29,18 @@ function HomeBanner() {
             src="/images/banner/banner-1.jpg"
             alt="First slide"
           />
+
           <Carousel.Caption className="custom-caption">
-            <div className="row">
-              <div className="col-xl-7">
-                <div className="caption-box">
-                  <h1>Innovating Your Vision Into AI-Powered Platforms</h1>
-                  <p>
-                    We empower businesses with scalable mobile apps, intelligent
-                    AI systems, and seamless SaaS platforms — custom-built to
-                    fuel your growth.
-                  </p>
-                  <div style={{ textAlign: "left" }}>
+            <div className="container">
+              <div className="row">
+                <div className="col-xl-7 col-lg-8 col-md-10">
+                  <div className="caption-box text-start">
+                    <h1>Innovating Your Vision Into AI-Powered Platforms</h1>
+                    <p>
+                      We empower businesses with scalable mobile apps,
+                      intelligent AI systems, and seamless SaaS platforms —
+                      custom-built to fuel your growth.
+                    </p>
                     <Link to="/services" className="btn btn-primary btn-lg">
                       Explore Services →
                     </Link>
@@ -56,19 +57,17 @@ function HomeBanner() {
             src="/images/banner/banner-2.jpg"
             alt="Second slide"
           />
-          <div className="row">
-            <div className="col-sm-5"></div>
-          </div>
+
           <Carousel.Caption className="custom-caption">
-            <div className="row">
-              <div className="col-xl-7">
-                <div className="caption-box">
-                  <h1>Transforming Ideas Into Digital Excellence</h1>
-                  <p>
-                    From concept to launch, we craft user-focused solutions that
-                    merge sleek design with powerful technology
-                  </p>
-                  <div style={{ textAlign: "left" }}>
+            <div className="container">
+              <div className="row">
+                <div className="col-xl-7 col-lg-8 col-md-10">
+                  <div className="caption-box text-start">
+                    <h1>Transforming Ideas Into Digital Excellence</h1>
+                    <p>
+                      From concept to launch, we craft user-focused solutions
+                      that merge sleek design with powerful technology
+                    </p>
                     <Link to="/services" className="btn btn-primary btn-lg">
                       Explore Services →
                     </Link>
@@ -78,6 +77,7 @@ function HomeBanner() {
             </div>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item>
           <img
             className="d-block w-100 custom-banner-img"
@@ -85,16 +85,17 @@ function HomeBanner() {
             alt="Third slide"
           />
           <Carousel.Caption className="custom-caption">
-            <div className="row">
-              <div className="col-xl-7">
-                <div className="caption-box">
-                  <h1>Driving Growth Through Smart Technology</h1>
-                  <p>
-                    Our expertise in AI, cloud solutions, and cross-platform
-                    development enables businesses to streamline operations,
-                    enhance customer engagement, and unlock new revenue streams.
-                  </p>
-                  <div style={{ textAlign: "left" }}>
+            <div className="container">
+              <div className="row">
+                <div className="col-xl-7 col-lg-8 col-md-10">
+                  <div className="caption-box text-start">
+                    <h1>Driving Growth Through Smart Technology</h1>
+                    <p>
+                      Our expertise in AI, cloud solutions, and cross-platform
+                      development enables businesses to streamline operations,
+                      enhance customer engagement, and unlock new revenue
+                      streams.
+                    </p>
                     <Link to="/services" className="btn btn-primary btn-lg">
                       Explore Services →
                     </Link>

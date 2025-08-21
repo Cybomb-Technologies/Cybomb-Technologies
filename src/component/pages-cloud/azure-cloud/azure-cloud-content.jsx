@@ -7,7 +7,8 @@ import OnlinePresence from '../../common-ui/cloud-services/Online-Presence';
 import CloudUseCase from '../../common-ui/cloud-services/cloud-usecase';
 import EngagementOptions from '../../common-ui/cloud-services/engagement-options';
 import styles from '../../common-ui/cloud-services/cloud-usecase.module.css';
-import awsImage from '../../../assets/aws.avif';
+import azureImg from '../../../assets/technologies/azure-cloud-services-img.jpg';
+import contactUsImg from './../../../assets/contact/contact-us-img2.jpg';
 
 const statsData = [
   { number: "99.95%", label: "Global availability through Microsoft data centers" },
@@ -121,7 +122,7 @@ export default function AzureContent() {
      <CloudOffers
       title="What You Can Achieve With Azure"
       features={features}
-      image={awsImage}
+      image={azureImg}
     />
     <ServicesSection
       title="Our Azure Services Include"
@@ -133,7 +134,7 @@ export default function AzureContent() {
       description="Our custom Azure integrations ensure scalability, security, and cost-efficiency."
       buttonText="Request with our Azure Experts!"
       // onButtonClick={handleRequestClick}
-      imageSrc={awsImage}
+      imageSrc={contactUsImg}
       imageAlt="Illustration of Azure cloud solutions"
     />
       <CloudUseCase

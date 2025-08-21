@@ -4,7 +4,7 @@ import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
 
 function FlutterApp() {
   const metaPropsData = {
-    title: "Flutter App Development - Cybomb Technologies | Cross-Platform Mobile Solutions",
+    title: "Flutter App Development | Cross Platform App Solutions - Cybomb",
     description:
       "Cybomb Technologies offers expert Flutter app development services, building high-performance, cross-platform mobile applications with a single codebase for Android and iOS.",
     keyword:

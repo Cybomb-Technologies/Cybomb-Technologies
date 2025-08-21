@@ -4,11 +4,13 @@ import WhyChooseUs from "../../../common-ui/support-service/why-choose-us";
 import ServicesOfferings from "../../../common-ui/support-service/services-offerings";
 import ScheduleConsultation from "../../../common-ui/support-service/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import CloudOffers from '../../../common-ui/support-service/cloud-offers';
-import awsImage from './../../../../assets/aws.avif';
 import DevelopmentProcess from "../../../common-ui/support-service/development-process";
 import OnlinePresence from "../../../common-ui/support-service/online-presence";
+
+import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import contactUsImg from './../../../../assets/contact/contact-us-img1.jpg';
+import staffAugImg from './../../../../assets/technologies/staff-augmentation-matters-img.jpg';
 
 const whychooseus = [
   {
@@ -103,14 +105,14 @@ Whether you need one developer or an entire squad, we provide the right professi
       <ScheduleConsultation
             heading="Reliable, secure, and scalable Staff Agumentation management you can count on."
             buttonText="Schedule a consultant"
-            imageSrc={placeholderImage}
+            imageSrc={scheduleConsultImg}
             imageAlt="CRM Consultation"
             Icon={MdSchedule}
           />
       <CloudOffers
       title="Why Staff Augmentation Matters"
       features={features}
-      image={awsImage}
+      image={staffAugImg}
     />
     
     <WhyChooseUs ChooseUs={whychooseus}/>
@@ -123,7 +125,7 @@ Whether you need one developer or an entire squad, we provide the right professi
               title = "Let's Find the right Staff Augumentation Services for your business."
               buttonText = "CONTACT US"
               buttonLink = "#"
-              imageSrc = {placeholderImage}
+              imageSrc = {contactUsImg}
               imageAlt = "CRM services"
           />
 

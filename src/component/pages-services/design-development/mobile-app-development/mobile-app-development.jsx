@@ -6,8 +6,8 @@ import AgileProcess1 from '../../../common-ui/agile-process/agile-process1';
 
 function MobileAppDevelopment() {
 
-  const websiteUrl = "https://www.cybomb.com/";
-  const imageUrl = "https://www.cybomb.com/images/banner-2.jpg";
+  const websiteUrl = "https://www.cybomb.com/services/mobile-app-development";
+  const imageUrl = "https://www.cybomb.com/images/logo-11.png";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -214,11 +214,11 @@ function MobileAppDevelopment() {
     <>
       <Helmet>
         <title>
-          Mobile App Development - 
+          Mobile App Development in Chennai | Native and Cross Platform - Cybomb Technologies 
         </title>
         <meta
           name="description"
-          content="Cybomb Technologies is a top IT company offering expert web development, mobile app development, UI/UX design, and digital solutions for startups and enterprises."
+          content="Cybomb Technologies is a leading IT company offering expert mobile app development, UI/UX design, Web Delopment and digital solutions for startups and enterprises."
         />
         <meta
           name="keywords"

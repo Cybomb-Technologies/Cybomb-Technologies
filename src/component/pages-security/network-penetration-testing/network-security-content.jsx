@@ -4,8 +4,8 @@ import ServicesOfferings from "../../common-ui/security/services-offerings";
 import DevelopmentProcess from '../../common-ui/security/development-process';
 import WhyChooseUs from "../../common-ui/security/why-choose-us";
 import OnlinePresence from "../../common-ui/security/online-presence";
-import placeholderImage from '../../../assets/placeholder-image.webp';
 import TechToolsSection from "./network-technologies";
+import contactUsImg from './../../../assets/contact/contact-us-img1.jpg';
 
 const services = [
   {
@@ -98,7 +98,7 @@ export default function NetworkPenTestContent() {
         description="Don’t wait for a breach—get proactive with our in-depth penetration testing."
         buttonText="Contact Us Now"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactUsImg}
         imageAlt="Network Penetration Testing"
       />
       <DevelopmentProcess 
