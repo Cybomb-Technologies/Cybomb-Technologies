@@ -13,6 +13,7 @@ function DevelopmentSupport() {
     image: "https://www.cybomb.com/images/banner-2.jpg", // Replace with actual banner if available
   };
 
+
   return (
     <>
       <Metatags metaProps={metaPropsData} />

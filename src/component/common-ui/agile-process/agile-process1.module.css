@@ -1,0 +1,211 @@
+.agileProcessSection {
+  background-color: #003459;
+  padding: 4rem 0;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tabContent {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-top: 1rem;
+  color: #003459;
+}
+
+.tabContent h3 {
+  color: #1c85cb;
+  margin-bottom: 1rem;
+}
+
+.tabContent p.lead {
+  color: #003459;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.cardTitle {
+  color: #003459;
+  font-weight: 600;
+}
+
+.cardText {
+  color: #495057;
+}
+
+/* Tabs Navigation with Arrows */
+.tabsNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tabsContainer {
+  overflow: hidden;
+  width: 200px; /* Fixed width to show only one tab */
+}
+
+.arrowButton {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.arrowButton:hover {
+  opacity: 0.8;
+}
+
+.arrowButton:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+/* Custom tab styling */
+.navTabs {
+  border-bottom: none;
+  display: flex;
+  transition: transform 0.3s ease;
+  width: max-content;
+}
+
+.navItem {
+  flex-shrink: 0;
+  width: 200px; /* Same as container width */
+  text-align: center;
+}
+
+.hiddenTab {
+  display: none;
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.7) !important;
+  border: none !important;
+  background: transparent !important;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+}
+
+.navLink:hover {
+  color: white !important;
+}
+
+.navLinkActive {
+  color: white !important;
+  font-weight: 700 !important;
+  border-bottom: 3px solid #1c85cb !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .agileProcessSection {
+    padding: 2rem 0;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .navLink {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .tabContent {
+    padding: 1.5rem;
+  }
+  
+  .tabsContainer {
+    width: 200px;
+  }
+  
+  .navItem {
+    width: 200px;
+  }
+}
+
+/* Between 768px and 998px - show 2 navlinks */
+@media (min-width: 768px) and (max-width: 998px) {
+  .tabsContainer {
+    width: 400px; /* Show 2 tabs (200px each) */
+  }
+    .navLink {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .navItem {
+    width: 400px;
+  }
+  
+  /* .hiddenTab {
+    display: inline;
+  }
+   */
+  .arrowButton {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+
+/* Desktop view (1024px and above) */
+@media (min-width: 768px) {
+  .tabsNavigation {
+    display: block;
+  }
+  
+  .tabsContainer {
+    width: 100%;
+    overflow: visible;
+  }
+  
+  .arrowButton {
+    display: none;
+  }
+  
+  .navTabs {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .navItem {
+    width: auto;
+    display: block;
+  }
+  
+  .hiddenTab {
+    display: block;
+  }
+}

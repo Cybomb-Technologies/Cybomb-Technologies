@@ -12,7 +12,7 @@ import hireUsImg from './../../../../../assets/contact/hiring-model-img1.png';
 
 const services = [
   {
-    title: 'Custom React App Development',
+    title: 'Custom React Native Development',
     description:
       'Tailored SPAs, dashboards, enterprise portals with reusable component architecture',
   },
@@ -62,7 +62,7 @@ const hiringData = [
   {
     title: 'Dedicated Team / Outstaffing:',
     description:
-      'Scale your team with experienced React developers.',
+      'Scale your team with experienced React Native developers.',
   },
   {
     title: 'Time & Materials / Hourly:',
@@ -102,7 +102,7 @@ function ReactNativeContent() {
   return (
    <section>
     <Banner 
-        heading="React App Development Services"
+        heading="React Native Development Services"
         subtext="Delivering high-performance, scalable React applications."
         buttonText="Book Free Consultation"
         note="Ideal for dynamic web apps, SPAs, PWAs, and cross-platform mobile via React Native."

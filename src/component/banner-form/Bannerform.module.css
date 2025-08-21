@@ -55,8 +55,9 @@
 }
 
 .submitButton:hover {
-  background-color: #0b5ed7;
-  transform: translateY(-2px);
+  background: linear-gradient(to right, #063970, #0284a8);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* Responsive Tweaks */
