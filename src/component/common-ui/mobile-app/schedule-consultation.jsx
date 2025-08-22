@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './schedule-consultation.module.css';
 
 function ScheduleConsultation({ 
@@ -13,10 +13,10 @@ function ScheduleConsultation({
       <div className={styles.coloredBox}>
         <div className={styles.leftContent}>
           <h2 className={styles.heading}>{heading}</h2>
-          <button className={styles.ctaButton}>
+          <Link to="/contact-us" className={styles.ctaButton}>
             {Icon && <Icon className={styles.icon} />}
             {buttonText}
-          </button>
+          </Link>
         </div>
         <div className={styles.rightImage}>
           <img src={imageSrc} alt={imageAlt} />
