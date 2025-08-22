@@ -45,7 +45,7 @@ const sendMailRoutes = require("./routes/sendMailRoute");
 const popupMailRoute = require("./routes/popupMailRoute");
 const bannerMailRoute = require("./routes/bannerMail");
 const careerMailRoute = require("./routes/careerMailRoute");
- 
+const footerMailRoute = require("./routes/footermail")
 // Health check route
 app.get('/api/health', (req, res) => {
   res.status(200).json({
@@ -60,6 +60,7 @@ app.use("/api/send-mail", sendMailRoutes);
 app.use("/api/popup-mail", popupMailRoute);
 app.use("/api/banner-mail", bannerMailRoute);
 app.use("/api/career", careerMailRoute);
+app.use("/api/footer-mail",footerMailRoute)
  
 // Serve frontend in production
 if (process.env.NODE_ENV === 'production') {
