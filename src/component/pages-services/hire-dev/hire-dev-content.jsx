@@ -7,6 +7,7 @@ import WhatSetsUsApart from "./hire-dev-section/what-sets-us-apart";
 import HireDevBtn from "./hire-dev-section/hire-dev-btn";
 import FreeConsultation from "../../common-ui/free-consultation/free-consultation";
 import ChooseYourTech from "./hire-dev-section/choose-your-tech";
+import FeaturesCards from "./hire-dev-section/features-cards";
 
 function HireDevContent() {
   return (
@@ -27,6 +28,7 @@ function HireDevContent() {
         highlight="Fortune 500 Companies"
     />
     <WhyChooseUs/>
+    <FeaturesCards/>
     <HiringModels/>
     <WhatSetsUsApart/>
     <ChooseYourTech/>

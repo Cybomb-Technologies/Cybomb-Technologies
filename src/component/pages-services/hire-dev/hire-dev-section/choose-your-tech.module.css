@@ -235,7 +235,7 @@
 }
 
 /* Tablet*/
-@media (min-width: 689px) and (max-width: 1024px) {
+@media (min-width: 688px) and (max-width: 1024px) {
 
     .productCard {
         flex-direction: row;
@@ -293,5 +293,6 @@
         color: #ffffff;
     }
 }
+
 
 
