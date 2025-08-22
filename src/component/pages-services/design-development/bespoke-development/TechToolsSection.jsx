@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
+import { Link } from "react-router-dom";
 
 const techData = {
   Frontend: ["React.js", "Vue.js", "Angular", "Tailwind CSS"],
@@ -41,6 +42,42 @@ const techLogos = {
   Encryption: "https://cdn-icons-png.flaticon.com/512/3064/3064197.png",
 };
 
+const techUrls = {
+  // Frontend
+  "React.js": "",
+  "Vue.js": "",
+  Angular: "/services/angular-development-service",
+  "Tailwind CSS": "",
+  
+  // Backend
+  "Node.js": "/services/nodejs-development-service",
+  "Python (Django/Flask)": "/services/python-development-service",
+  "Java (Spring Boot)": "",
+  "PHP (Laravel)": "/services/php-development-service",
+  
+  // Databases
+  MySQL: "",
+  PostgreSQL: "",
+  MongoDB: "",
+  Firebase: "",
+  
+  // Cloud
+  AWS: "/Services/aws-cloud",
+  Azure: "/Services/azure-cloud",
+  "Google Cloud": "/Services/google-cloud",
+  
+  // DevOps & CI/CD
+  Docker: "",
+  "GitHub Actions": "",
+  Jenkins: "",
+  
+  // APIs & Security
+  REST: "",
+  GraphQL: "",
+  OAuth2: "",
+  JWT: "",
+  Encryption: "",
+};
 
 const TechToolsSection = () => {
   const categories = Object.keys(techData);
@@ -67,14 +104,20 @@ const TechToolsSection = () => {
         {/* Tech Cards */}
         <div className={styles.cardGrid}>
           {techData[selected].map((item) => (
-            <div key={item} className={styles.techCard}>
-              <img
-                src={techLogos[item]}
-                alt={`${item} logo`}
-                className={styles.logo}
-              />
-              <span>{item}</span>
-            </div>
+            <Link 
+              key={item} 
+              to={techUrls[item]} 
+              className="text-decoration-none"
+            >
+              <div className={styles.techCard}>
+                <img
+                  src={techLogos[item]}
+                  alt={`${item} logo`}
+                  className={styles.logo}
+                />
+                <span>{item}</span>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./home-our-expertise.module.css";
+import { Link } from "react-router-dom";
 
 const techData = {
   Frontend: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind CSS"],
@@ -49,6 +50,57 @@ const techImages = {
   "Canva": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
 };
 
+const techUrls = {
+  // Frontend
+  "HTML5": "/services/html5-development-service",
+  "CSS3": "",
+  "JavaScript": "/services/javascript-development-service",
+  "Bootstrap": "",
+  "Tailwind CSS": "",
+  
+  // Frameworks
+  "React": "",
+  "Vue.js": "",
+  "Angular": "/services/angular-development-service",
+  "Next.js": "/services/javascript-development-service",
+  "Svelte": "",
+  
+  // CMS Platforms
+  "WordPress": "/services/wordpress",
+  "Webflow": "",
+  "Drupal": "/cms/drupa/services/drupal",
+  "Ghost": "",
+  "Strapi": "",
+  
+  // eCommerce
+  "Shopify": "/services/shopify",
+  "WooCommerce": "/services/woo-commerce",
+  "Magento": "/services/magento",
+  "BigCommerce": "/services/big-commerce",
+  "Ecwid": "",
+  
+  // Backend
+  "Node.js": "/services/nodejs-development-service",
+  "Express.js": "",
+  "Spring Boot": "/services/spring-development-service",
+  "PHP": "/services/php-development-service",
+  "Python Django": "",
+  
+  // Hosting
+  "Vercel": "",
+  "Netlify": "",
+  "Hostinger": "",
+  "AWS": "/Services/aws-cloud",
+  "DigitalOcean": "",
+  
+  // Design Tools
+  "Figma": "/services/ui-ux-design",
+  "Adobe XD": "",
+  "Photoshop": "",
+  "Illustrator": "",
+  "Canva": "/services/ui-ux-design"
+};
+
 function HomeOurExpertise() {
   const [activeTab, setActiveTab] = useState("Frontend");
 
@@ -73,18 +125,24 @@ function HomeOurExpertise() {
         {/* Tech Cards */}
         <div className={styles.cardGrid}>
           {techData[activeTab].map((tech) => (
-            <div key={tech} className={styles.techCard}>
-              <img
-                src={techImages[tech]}
-                alt={tech}
-                className={styles.logo}
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = "https://via.placeholder.com/40?text=Tech";
-                }}
-              />
-              <span>{tech}</span>
-            </div>
+            <Link 
+              key={tech} 
+              to={techUrls[tech] || "/technologies"} 
+              className="text-decoration-none"
+            >
+              <div className={styles.techCard}>
+                <img
+                  src={techImages[tech]}
+                  alt={tech}
+                  className={styles.logo}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://via.placeholder.com/40?text=Tech";
+                  }}
+                />
+                <span>{tech}</span>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
