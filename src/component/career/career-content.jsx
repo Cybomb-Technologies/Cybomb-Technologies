@@ -1,10 +1,8 @@
-
-
-
 import React, { useState } from "react";
 import CareerBanner from "./career-banner";
 import CareerContent from "./content";
 import JobDetailModal from "./job-detail-modal";
+import StillNotSure from './../common-ui/stillnotsure/StillNotSure';
 
 export default function CareerPage() {
   const [jobs] = useState([
@@ -103,7 +101,9 @@ export default function CareerPage() {
           onClose={handleCloseModal}
           onApply={handleApplicationSubmit}
         />
+        
       )}
+      <StillNotSure/>
     </>
   );
 }
