@@ -28,7 +28,6 @@ function FreeConsultation() {
                     alt="Consultation"
                     className={styles.image}
                     />
-
             </div>
 
             </div>
