@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './still-not-sure.module.css';
 
 function StillNotSure() {
@@ -7,9 +8,9 @@ function StillNotSure() {
       <div className={styles.container}>
         <div className={styles.card}>
           <h2 className={styles.title}>Still not sure what you are looking for?</h2>
-          <button className={styles.ctaButton}>
+          <Link to="/contact-us" className={styles.ctaButton}>
             Talk to Our Experts <span className={styles.arrow}>&rarr;</span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>
