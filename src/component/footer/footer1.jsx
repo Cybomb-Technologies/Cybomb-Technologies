@@ -18,7 +18,7 @@ const defaultSocialLinks = [
 
 const defaultLegalLinks = [
   { to: "/privacy-policy", label: "Privacy Policy" },
-  { to: "/terms", label: "Terms of Service" },
+  { to: "/terms", label: "Terms of Services" },
   { to: "/refund-policy", label: "Refund Policy" },
   { to: "/cookie-policy", label: "Cookie Policy" },
 ];

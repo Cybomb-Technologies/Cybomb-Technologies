@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
+import { Link } from "react-router-dom";
 
 const techData = {
-   Languages: ["Python", "Java", "Dart", "JavaScript", "C#", "PHP"],
+  Languages: ["Python", "Java", "Dart", "JavaScript", "C#", "PHP"],
   Frontend: ["React", "Vue.js", "Angular"],
   Backend: ["Node.js", "Express.js", "Django", "Springboot", ".Net"],
   Databases: ["MongoDB", "MySQL", "PostgreSQL", "SQL Server"],
@@ -56,6 +57,51 @@ const techLogos = {
   gRPC: "https://grpc.io/img/logos/grpc-icon-color.png",
 };
 
+const techUrls = {
+  // Languages
+  Python: "/services/python-development-service",
+  Java: "",
+  Dart: "/services/flutter-app-development",
+  JavaScript: "/services/javascript-development-service",
+  "C#": "/services/csharp-development-service",
+  PHP: "/services/php-development-service",
+
+  // Frontend
+  React: "",
+  "Vue.js": "",
+  Angular: "/services/angular-development-service",
+
+  // Backend
+  "Node.js": "/services/nodejs-development-service",
+  "Express.js": "/services/nodejs-development-service",
+  Django: "/services/python-development-service",
+  Springboot: "/services/spring-development-service",
+  ".Net": "/services/dotnet-development-service",
+
+  // Databases
+  MongoDB: "",
+  MySQL: "",
+  PostgreSQL: "",
+  "SQL Server": "",
+
+  // Cloud & DevOps
+  AWS: "/Services/aws-cloud",
+  Azure: "/Services/azure-cloud",
+  Docker: "",
+  "GitHub Actions": "",
+  "CI/CD": "",
+
+  // Desktop
+  "Electron.js": "",
+  JavaFX: "",
+  ".NET MAUI": "",
+  Flutter: "/services/flutter-app-development",
+
+  // APIs
+  REST: "",
+  GraphQL: "",
+  gRPC: "",
+};
 
 const TechToolsSection = () => {
   const categories = Object.keys(techData);
@@ -82,14 +128,20 @@ const TechToolsSection = () => {
         {/* Tech Cards */}
         <div className={styles.cardGrid}>
           {techData[selected].map((item) => (
-            <div key={item} className={styles.techCard}>
-              <img
-                src={techLogos[item]}
-                alt={`${item} logo`}
-                className={styles.logo}
-              />
-              <span>{item}</span>
-            </div>
+            <Link 
+              key={item} 
+              to={techUrls[item]} 
+              className="text-decoration-none"
+            >
+              <div className={styles.techCard}>
+                <img
+                  src={techLogos[item]}
+                  alt={`${item} logo`}
+                  className={styles.logo}
+                />
+                <span>{item}</span>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
