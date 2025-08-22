@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import styles from './online-presence.module.css';
 
 function OnlinePresence({
   title,
+  description,
   buttonText,
-  buttonLink,
   imageSrc,
   imageAlt,
 }) {
@@ -13,12 +14,12 @@ function OnlinePresence({
 
         <div className={styles.textContent}>
           <h2 className={styles.title}>{title}</h2>
-          <a href={buttonLink}>
-            <button className={styles.button}>
-              {buttonText}
-              <span className={styles.arrow}>&rarr;</span>
-            </button>
-          </a>
+          <p className={styles.description}>{description}</p>
+          
+          <Link to="/contact-us" className={styles.button}>
+            {buttonText}
+            <span className={styles.arrow}>&rarr;</span>
+          </Link>
         </div>
 
         <div className={styles.imageWrapper}>
