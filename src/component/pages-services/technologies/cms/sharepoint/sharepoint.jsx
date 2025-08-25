@@ -11,7 +11,7 @@ function SharePoint() {
     keyword:
       "SharePoint Development, SharePoint Intranet, Document Management, Workflow Automation, Enterprise Collaboration, Cybomb Technologies, SharePoint Solutions, Microsoft SharePoint",
     url: "https://www.cybomb.com/services/sharepoint-development",
-    image: "https://www.cybomb.com/images/logo-11.png", // Replace with actual banner if available
+    image: "https://www.cybomb.com/images/logo-11.png",
   };
 
   return (
