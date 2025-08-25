@@ -65,11 +65,12 @@ function TeamMember() {
               </a>
             </div>
           </div>
+
           <div className="col-md-4 col-lg-4">
             <div className="team-card">
               <div className="profile-pic">
                 <img
-                  src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755750535/team-6_i9yrye.jpg"
+                  src="https://res.cloudinary.com/duomzq5mm/image/upload/v1756106400/divya_daydeb.jpg"
                   alt="Divya Baskaran"
                 />
               </div>
@@ -85,6 +86,7 @@ function TeamMember() {
               </a>
             </div>
           </div>
+
           <div className="col-md-4 col-lg-4">
             <div className="team-card">
               <div className="profile-pic">
