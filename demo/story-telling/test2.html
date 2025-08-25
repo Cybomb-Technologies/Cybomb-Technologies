@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magical Stories - Where Kids Become Story Heroes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600;700&family=Chewy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="text-gray-800">
+    <!-- Floating bubbles for background -->
+    <div
+      class="kid-bubble"
+      style="width: 80px; height: 80px; top: 10%; left: 5%; animation-delay: 0s"
+    ></div>
+    <div
+      class="kid-bubble"
+      style="
+        width: 60px;
+        height: 60px;
+        top: 20%;
+        right: 10%;
+        animation-delay: 2s;
+      "
+    ></div>
+    <div
+      class="kid-bubble"
+      style="
+        width: 100px;
+        height: 100px;
+        bottom: 15%;
+        left: 15%;
+        animation-delay: 4s;
+      "
+    ></div>
+    <div
+      class="kid-bubble"
+      style="
+        width: 70px;
+        height: 70px;
+        bottom: 25%;
+        right: 5%;
+        animation-delay: 6s;
+      "
+    ></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm"></nav>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="#home" class="flex items-center gap-2">
+              <!-- <img src="/images/logo.png" alt="Logo" class="h-10 w-10" /> -->
+              <span class="text-2xl font-bold text-purple-600 title-font">
+                Magical Stories
+              </span>
+            </a>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-center space-x-8">
+              <a
+                href="#home"
+                class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium"
+                >Home</a
+              >
+              <a
+                href="#stories"
+                class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium"
+                >Stories</a
+              >
+              <a
+                href="#characters"
+                class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium"
+                >Characters</a
+              >
+              <a
+                href="#features"
+                class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium"
+                >Features</a
+              >
+              <button
+                class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Start Free Trial
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Toggle -->
+          <div class="md:hidden">
+            <button
+              type="button"
+              id="mobile-menu-button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-600 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-4 pt-4 pb-6 space-y-2 sm:px-6">
+          <a
+            href="#home"
+            class="mobile-link block text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 px-3 py-2 rounded-md"
+            >Home</a
+          >
+          <a
+            href="#characters"
+            class="mobile-link block text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 px-3 py-2 rounded-md"
+            >Characters</a
+          >
+          <a
+            href="#stories"
+            class="mobile-link block text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 px-3 py-2 rounded-md"
+            >Stories</a
+          >
+          <a
+            href="#features"
+            class="mobile-link block text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 px-3 py-2 rounded-md"
+            >Features</a
+          >
+          <button
+            class="w-full mt-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
+            Start Free Trial
+          </button>
+        </div>
+      </div>
+    </nav>
+<!-- Hero section -->
+    <section
+  class="relative w-full py-20 md:py-28 border-y-4 border-purple-300 overflow-hidden"
+  data-aos="fade-up"
+  data-aos-duration="800"
+  style="background: linear-gradient(135deg, #ffc6ff 0%, #bdb2ff 50%, #a0c4ff 100%);"
+>
+  <!-- Foreground Content -->
+  <div
+    class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+  >
+    <!-- Section Heading -->
+    <div class="max-w-3xl mx-auto mb-16">
+      <h2
+        class="text-4xl md:text-5xl font-extrabold text-purple-800 drop-shadow-md"
+      >
+        Trusted by Experts Worldwide
+      </h2>
+      <p
+        class="text-lg md:text-xl text-gray-700 leading-relaxed drop-shadow-sm"
+      >
+        Our platform has been featured in top parenting & educational media
+        for revolutionizing how kids learn through storytelling.
+      </p>
+    </div>
+
+    <!-- Floating Cards Grid - Updated with Bigger Images & Fun Enhancements -->
+    <div
+      class="grid gap-10 md:grid-cols-2 xl:grid-cols-4 place-items-center"
+    >
+      <!-- Card 1 -->
+      <div
+        class="group w-72 h-[22rem] bg-white rounded-3xl border-2 border-purple-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 p-6 flex flex-col items-center justify-center text-center relative overflow-hidden"
+        data-aos="zoom-in"
+      >
+        <div class="w-full h-40 flex items-center justify-center mb-4 relative">
+          <img
+            src="images/parenting-magazine.avif"
+            alt="Parenting Magazine"
+            class="max-h-full max-w-full object-contain rounded-lg"
+          />
+          <!-- Icon overlay positioned top right of image -->
+          <div
+            class="absolute -top-2 -right-2 w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-xl font-bold shadow-sm z-10"
+          >
+            🏆
+          </div>
+        </div>
+
+        <h3 class="text-lg font-extrabold text-purple-800 drop-shadow-sm">
+          Parenting Magazine
+        </h3>
+        <p class="text-sm text-gray-700 mt-2">
+          Top 10 Educational Tools 2023
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="group w-72 h-[22rem] bg-white rounded-3xl border-2 border-yellow-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 p-6 flex flex-col items-center justify-center text-center relative overflow-hidden"
+        data-aos="zoom-in"
+        data-aos-delay="100"
+      >
+        <div class="w-full h-40 flex items-center justify-center mb-4 relative">
+          <img
+            src="images/kids-tech.jpg"
+            alt="Kids Tech"
+            class="max-h-full max-w-full object-contain rounded-lg"
+          />
+          <!-- Icon overlay positioned top right of image -->
+          <div
+            class="absolute -top-2 -right-2 w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 text-xl font-bold shadow-sm z-10"
+          >
+            🌟
+          </div>
+        </div>
+
+        <h3 class="text-lg font-extrabold text-purple-800 drop-shadow-sm">
+          Kids Tech
+        </h3>
+        <p class="text-sm text-gray-700 mt-2">Best Learning Innovation</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="group w-72 h-[22rem] bg-white rounded-3xl border-2 border-pink-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 p-6 flex flex-col items-center justify-center text-center relative overflow-hidden"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+      >
+        <div class="w-full h-40 flex items-center justify-center mb-4 relative">
+          <img
+            src="images/education-today.avif"
+            alt="Education Today"
+            class="max-h-full max-w-full object-contain rounded-lg"
+          />
+          <!-- Icon overlay positioned top right of image -->
+          <div
+            class="absolute -top-2 -right-2 w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 text-xl font-bold shadow-sm z-10"
+          >
+            📚
+          </div>
+        </div>
+
+        <h3 class="text-lg font-extrabold text-purple-800 drop-shadow-sm">
+          Education Today
+        </h3>
+        <p class="text-sm text-gray-700 mt-2">
+          Revolutionizing Early Education
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div
+        class="group w-72 h-[22rem] bg-white rounded-3xl border-2 border-blue-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 p-6 flex flex-col items-center justify-center text-center relative overflow-hidden"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+      >
+        <div class="w-full h-40 flex items-center justify-center mb-4 relative">
+          <img
+            src="images/fam.avif"
+            alt="Family Life"
+            class="max-h-full max-w-full object-contain rounded-lg"
+          />
+          <!-- Icon overlay positioned top right of image -->
+          <div
+            class="absolute -top-2 -right-2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl font-bold shadow-sm z-10"
+          >
+            🧸
+          </div>
+        </div>
+
+        <h3 class="text-lg font-extrabold text-purple-800 drop-shadow-sm">
+          Family Life
+        </h3>
+        <p class="text-sm text-gray-700 mt-2">
+          Parent's Choice Award Winner
+        </p>
+      </div>
+    </div>
+
+    <!-- Testimonial -->
+    <div
+      class="max-w-4xl mx-auto mt-20 px-6 py-8 bg-white bg-opacity-95 rounded-3xl shadow-lg border border-purple-200"
+      data-aos="fade-up"
+      data-aos-delay="600"
+    >
+      <blockquote
+        class="text-gray-700 italic text-base sm:text-lg leading-relaxed"
+      >
+        "This platform has set a new standard in educational technology for
+        children, combining innovative design with proven pedagogical
+        approaches that truly engage young minds."
+      </blockquote>
+      <div class="mt-4 flex items-center justify-center space-x-3">
+        <div
+          class="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 text-purple-600"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="text-left">
+          <p class="text-sm font-medium text-gray-900">Dr. Sarah Johnson</p>
+          <p class="text-xs text-gray-500">Child Development Specialist</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </body>
+</html>
