@@ -46,6 +46,10 @@ import AngularApp from "../component/pages-services/technologies/custom-developm
 import SpringApp from "../component/pages-services/technologies/custom-development/spring/spring";
 import CSharpApp from "../component/pages-services/technologies/custom-development/csharp/csharp";
 
+
+
+import DatabaseApp from "../component/pages-services/technologies/custom-development/database/database";
+import VersionControlApp from "../component/pages-services/technologies/custom-development/versioncontrol/versioncontrolapp";
 const emp4Routes = (
   <>
     <Route path="/services/api-development" element={<ApiDevelopment />} />
@@ -102,6 +106,13 @@ const emp4Routes = (
     <Route path="/services/spring-development-service" element={<SpringApp/>}/>
     <Route path="/services/csharp-development-service" element={<CSharpApp/>}/>
   
+
+
+
+
+
+  <Route path="/services/database-development-service" element={<DatabaseApp/>}/>
+    <Route path="/services/versioncontrol-development-service" element={<VersionControlApp/>}/>
   </>
 );
 
