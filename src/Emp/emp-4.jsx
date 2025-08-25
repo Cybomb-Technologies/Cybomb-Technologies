@@ -11,7 +11,7 @@ import PpcServices from "../component/pages-services/digital-market/pay-per-clic
 import OrmServices from "../component/pages-services/digital-market/orm/online-orm";
 import Cookiepolicy from "../pages/cookie-info";
 import AndroidApp from "../component/pages-services/technologies/mobile-apps/android-app-dev/android-apps";
-import ReactApp from "../component/pages-services/technologies/mobile-apps/react-native/react-native";
+import ReactNative from "../component/pages-services/technologies/mobile-apps/react-native/react-native";
 import IosApp from "../component/pages-services/technologies/mobile-apps/ios-app-dev/ios";
 import FlutterApp from "../component/pages-services/technologies/mobile-apps/flutter-app/flutter";
 import SwiftApp from "../component/pages-services/technologies/mobile-apps/swift-app-dev/swift";
@@ -45,6 +45,7 @@ import NodeJSApp from "../component/pages-services/technologies/custom-developme
 import AngularApp from "../component/pages-services/technologies/custom-development/angular/angular";
 import SpringApp from "../component/pages-services/technologies/custom-development/spring/spring";
 import CSharpApp from "../component/pages-services/technologies/custom-development/csharp/csharp";
+import ReactApp from "../component/pages-services/technologies/custom-development/react/reactpage";
 
 const emp4Routes = (
   <>
@@ -64,7 +65,7 @@ const emp4Routes = (
     <Route path="/cookie-policy" element={<Cookiepolicy />} />
 
     <Route path="/services/android-app-development" element={<AndroidApp/>}/>
-    <Route path="/services/react-native-development" element={<ReactApp/>}/>
+    <Route path="/services/react-native-development" element={<ReactNative/>}/>
     <Route path="/services/ios-app-development" element={<IosApp/>}/>
     <Route path="/services/flutter-app-development" element={<FlutterApp/>}/>
     <Route path="/services/swift-app-development" element={<SwiftApp/>}/>
@@ -101,6 +102,7 @@ const emp4Routes = (
     <Route path="/services/angular-development-service" element={<AngularApp/>}/>
     <Route path="/services/spring-development-service" element={<SpringApp/>}/>
     <Route path="/services/csharp-development-service" element={<CSharpApp/>}/>
+    <Route path="/services/react-development-service" element={<ReactApp/>}/>
   
   </>
 );
