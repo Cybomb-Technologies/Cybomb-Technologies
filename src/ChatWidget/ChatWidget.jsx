@@ -20,7 +20,7 @@ export default function ChatWidget() {
 
     try {
       const res = await fetch(
-        "https://sudesh.app.n8n.cloud/webhook/01e0542c-9729-4200-b7a3-891147ae0062",
+        "https://n8n.cybomb.com/webhook/80bcb73f-a9f6-49ea-91a4-724feb1ff13c/chat",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -31,36 +31,10 @@ export default function ChatWidget() {
       const data = await res.json();
       console.log("n8n response:", data);
 
-      // Check if this is the webhook echo (the current issue)
-      if (data.body && data.body.question === input) {
-        // This means your n8n workflow is not properly configured
-        // The webhook is just echoing back your request
-        setMessages((prev) => [
-          ...prev,
-          { 
-            sender: "bot", 
-            text: "The chatbot service is not responding correctly. Please check the n8n workflow configuration."
-          }
-        ]);
-      } else {
-        // Try to extract response from various possible structures
-        let botText = "Sorry, I couldn't process that request.";
-        
-        // Check different possible response structures
-        if (data.response) {
-          botText = data.response;
-        } else if (data.answer) {
-          botText = data.answer;
-        } else if (data.message) {
-          botText = data.message;
-        } else if (data.text) {
-          botText = data.text;
-        } else if (typeof data === "string") {
-          botText = data;
-        }
-        
-        setMessages((prev) => [...prev, { sender: "bot", text: botText }]);
-      }
+      // Extract bot response from n8n
+      const botText = data.output || "Sorry, I couldn't process that request.";
+
+      setMessages((prev) => [...prev, { sender: "bot", text: botText }]);
     } catch (error) {
       console.error("Error connecting to AI:", error);
       setMessages((prev) => [
