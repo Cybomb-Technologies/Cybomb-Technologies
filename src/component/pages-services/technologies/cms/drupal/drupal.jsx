@@ -11,7 +11,7 @@ function Drupal() {
     keyword:
       "Drupal Development, Drupal CMS, Drupal Customization, Drupal Module Development, Drupal Theme Development, Enterprise Drupal Solutions, Cybomb Technologies",
     url: "https://www.cybomb.com/services/drupal-development",
-    image: "https://www.cybomb.com/images/logo-11.png", // Replace with actual Drupal banner if available
+    image: "https://www.cybomb.com/images/logo-11.png",
   };
 const tabsData = [
   {

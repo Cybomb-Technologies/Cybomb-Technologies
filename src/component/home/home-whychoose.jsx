@@ -44,10 +44,10 @@ function Homewhychoose() {
 
           <div className="col-6 col-md-3">
             <div className="card stat-card p-4 h-100 text-center border-0 rounded-4 border-orange">
-              <div className="icon-box bg-warning mx-auto mb-2">
-                <i className="bi bi-people-fill"></i>
+              <div className="icon-box mx-auto mb-2" style={{backgroundColor:"#007ea7"}}>
+                <i className="bi bi-people-fill" ></i>
               </div>
-              <h4 className="text-warning fw-bold mb-0">80+</h4>
+              <h4 className="fw-bold mb-0" style={{color:"#007ea7"}}>80+</h4>
               <h6 className="mb-0 text-secondary">Industry Experts</h6>
             </div>
           </div>
