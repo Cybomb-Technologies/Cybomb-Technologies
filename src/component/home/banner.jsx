@@ -26,7 +26,7 @@ function HomeBanner() {
         <Carousel.Item>
           <img
             className="d-block w-100 custom-banner-img"
-            src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755758111/banner-1_vnvgcw.jpg"
+            src="/images/banner/banner-1.jpg"
             alt="First slide"
           />
 
@@ -54,7 +54,7 @@ function HomeBanner() {
         <Carousel.Item>
           <img
             className="d-block w-100 custom-banner-img"
-            src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755758160/banner-2_mx3wo6.jpg"
+            src="/images/banner/banner-2.jpg"
             alt="Second slide"
           />
 
@@ -81,7 +81,7 @@ function HomeBanner() {
         <Carousel.Item>
           <img
             className="d-block w-100 custom-banner-img"
-            src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755758232/banner-3_giylyo.jpg"
+            src="/images/banner/banner-3.jpg"
             alt="Third slide"
           />
           <Carousel.Caption className="custom-caption">

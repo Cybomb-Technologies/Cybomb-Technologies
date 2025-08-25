@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './services-offerings.module.css';
+import React from "react";
+import styles from "./services-offerings.module.css";
 
 function ServicesOfferings({ title, items }) {
   return (

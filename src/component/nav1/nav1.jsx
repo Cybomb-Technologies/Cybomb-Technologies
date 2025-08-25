@@ -10,7 +10,7 @@ import Industriesdropdown1 from "./Industries-dropdown";
 import Securitydropdown1 from "./security-dropdown";
 import Successstoriesdropdown1 from "./success-stories";
 import Technologiesdropdown1 from "./technologies-dropdoen";
-import ChatWidget from "../../ChatWidget/ChatWidget";
+// import ChatWidget from "../../ChatWidget/ChatWidget";
 
 function Nav1() {
   const location = useLocation();
@@ -146,6 +146,17 @@ function Nav1() {
                   </Link>
                 </li>
 
+                 <li className={styles.navItem}>
+                  <Link
+                    to="/pricing-page"
+                    className={styles.navLink}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Pricing
+                    {/* On-Demand Developer */}
+                  </Link>
+                </li>
+
                 <Technologiesdropdown1
                   isMobile={isMobile}
                   isOpen={activeDropdown === "technologies"}
@@ -242,6 +253,16 @@ function Nav1() {
                   onClick={handleNavItemClick}
                 >
                   Hire Developer
+                </Link>
+              </li>
+
+               <li className={styles.navItem}>
+                <Link
+                  to="/pricing-page"
+                  className={styles.navLink}
+                  onClick={handleNavItemClick}
+                >
+                  Pricing
                 </Link>
               </li>
 

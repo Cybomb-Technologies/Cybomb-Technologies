@@ -2,7 +2,7 @@ import ReactNativeContent from './react-native-cntent';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
 
-function ReactApp() {
+function ReactNative() {
   const metaPropsData = {
     title: "React Native App Development - Cybomb Technologies | Cross-Platform Mobile Apps",
     description:
@@ -198,4 +198,4 @@ const tabsData = [
   );
 }
 
-export default ReactApp;
+export default ReactNative;

@@ -8,7 +8,7 @@ function Aboutourmission() {
           <div className="row">
             <div className="col-sm-7 mx-auto">
               <h2 className="text-center text-primary">🚀Our Mission</h2>
-              <div className="card mt-5 ourmission-card border-0 shadow" data-aos="zoom-in">
+              <div className="card mt-5 ourmission-card border-0 shadow">
                 <p className="p-4 mb-0 text-white fs-5">
                   To empower businesses through innovative technology solutions
                   that drive growth and efficiency. We're committed to
