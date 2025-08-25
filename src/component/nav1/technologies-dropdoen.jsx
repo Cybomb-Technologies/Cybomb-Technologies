@@ -361,6 +361,13 @@ function Technologiesdropdown1({
                     >
                       <FaHtml5 className={styles.icon} /> HTML5
                     </Link>
+                     <Link
+                      to="/services/css"
+                      className={styles.dropdownItem1}
+                      onClick={onLinkClick}
+                    >
+                      <FaHtml5 className={styles.icon} /> CSS 3
+                    </Link>
                     <Link
                       to="/services/javascript-development-service"
                       className={styles.dropdownItem1}
@@ -419,6 +426,27 @@ function Technologiesdropdown1({
                     >
                       <FaCode className={styles.icon} /> C#
                     </Link>
+                    <Link
+                      to="/services/react-development-service"
+                      className={styles.dropdownItem1}
+                      onClick={onLinkClick}
+                    >
+                      <FaCode className={styles.icon} /> React
+                    </Link>
+                      <Link
+                      to="/services/database-development-service"
+                      className={styles.dropdownItem1}
+                      onClick={onLinkClick}
+                    >
+                      <FaCode className={styles.icon} /> Database
+                    </Link>
+                     {/* <Link
+                      to="/services/versioncontrol-development-service"
+                      className={styles.dropdownItem1}
+                      onClick={onLinkClick}
+                    >
+                      <FaCode className={styles.icon} /> Version Control
+                    </Link> */}
                     
                   </div>
                 </div>

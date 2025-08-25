@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StorySpark - Where Kids Become Story Heroes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600;700&family=Chewy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <a href="#home"
+                ><span class="text-2xl font-bold text-purple-600 title-font"
+                  >Magical Stories</span
+                >
+              </a>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-center space-x-8">
+              <a
+                href="#home"
+                class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium"
+                >Home</a
+              >
+              <a
+                href="#stories"
+                class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium"
+                >Stories</a
+              >
+              <a
+                href="#characters"
+                class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium"
+                >Characters</a
+              >
+              <a
+                href="#features"
+                class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium"
+                >Features</a
+              >
+              <button
+                class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 interactive-btn"
+              >
+                Start Free Trial
+              </button>
+            </div>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <button
+              type="button"
+              id="mobile-menu-button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-600 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
+            >Home</a
+          >
+          <a
+            href="#characters"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
+            >Characters</a
+          >
+          <a
+            href="#stories"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
+            >Stories</a
+          >
+
+          <a
+            href="#features"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
+            >Features</a
+          >
+          <button
+            class="w-full mt-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-medium interactive-btn"
+          >
+            Start Free Trial
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero section -->
+    <section
+      class="relative overflow-hidden pt-28 pb-20 bg-gradient-to-br from-sky-100 to-pink-50"
+      id="home"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
+        <!-- LEFT: Text -->
+        <div class="z-10">
+          <h1
+            class="text-5xl lg:text-6xl font-extrabold text-gray-800 leading-tight"
+          >
+            <span class="text-purple-600">Magical stories</span> where your
+            child is the <span class="text-pink-500">hero</span>
+          </h1>
+          <p class="mt-6 text-lg text-gray-600 max-w-md">
+            Personalized adventures that grow with your child. Perfect for ages
+            2–10.
+          </p>
+          <div
+            class="mt-8 flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0"
+          >
+            <button
+              class="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-full font-bold hover:shadow-xl transition hover:scale-105"
+            >
+              🚀 Start Reading Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Image Container -->
+        <div class="relative w-full max-w-xl mx-auto lg:mx-0">
+          <!-- Main Hero Image with card frame -->
+          <div
+            class="rounded-3xl bg-white shadow-xl p-3 ring-2 ring-pink-200 animate-float-slow"
+          >
+            <img
+              src="images/kids-reading-books.jpg"
+              alt="Kids reading"
+              class="rounded-2xl w-full h-auto object-contain"
+            />
+          </div>
+
+          <!-- 4 Animated Circular Clouds -->
+          <img
+            src="images/clouds.avif"
+            alt="Cloud 1"
+            class="absolute top-0 left-0 w-24 h-24 rounded-full opacity-90 animate-cloud-left"
+          />
+
+          <img
+            src="images/clouds.avif"
+            alt="Cloud 2"
+            class="absolute top-4 right-0 w-20 h-20 rounded-full opacity-90 animate-cloud-right"
+          />
+
+          <img
+            src="images/clouds.avif"
+            alt="Cloud 3"
+            class="absolute top-1/2 left-[-30px] w-28 h-28 rounded-full opacity-90 animate-cloud-diagonal"
+          />
+
+          <img
+            src="images/clouds.avif"
+            alt="Cloud 4"
+            class="absolute bottom-0 right-0 w-32 h-32 rounded-full opacity-90 animate-cloud-up"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Brand Logos Section with Larger Images -->
+    <section
+      class="py-20 md:py-28 bg-gradient-to-b from-white via-purple-50 to-white border-y border-purple-100"
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-3xl mx-auto mb-12">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            Trusted by Experts Worldwide
+          </h2>
+          <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+            Recognized and featured across leading parenting magazines,
+            educational platforms, and family-focused media for our innovative
+            approach to child development
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-12 items-center justify-center"
+        >
+          <!-- LOGO ITEM 1 -->
+          <div
+            class="flex flex-col items-center space-y-4 group"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-32 h-32 sm:w-36 sm:h-36 bg-white border border-gray-200 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-lg transition-all duration-300 transform group-hover:-translate-y-2 hover:border-purple-200"
+            >
+              <img
+                src="images/parenting-magazine.avif"
+                alt="Parenting Magazine"
+                class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <span class="text-gray-700 font-medium text-center"
+              >Parenting Magazine</span
+            >
+            <p
+              class="text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              Featured in "Top 10 Educational Tools 2023"
+            </p>
+          </div>
+
+          <!-- LOGO ITEM 2 -->
+          <div
+            class="flex flex-col items-center space-y-4 group"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-32 h-32 sm:w-36 sm:h-36 bg-white border border-gray-200 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-lg transition-all duration-300 transform group-hover:-translate-y-2 hover:border-purple-200"
+            >
+              <img
+                src="images/kids-tech.jpg"
+                alt="Kids Tech"
+                class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <span class="text-gray-700 font-medium text-center">Kids Tech</span>
+            <p
+              class="text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              Awarded "Best Learning Innovation"
+            </p>
+          </div>
+
+          <!-- LOGO ITEM 3 -->
+          <div
+            class="flex flex-col items-center space-y-4 group"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-32 h-32 sm:w-36 sm:h-36 bg-white border border-gray-200 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-lg transition-all duration-300 transform group-hover:-translate-y-2 hover:border-purple-200"
+            >
+              <img
+                src="images/education-today.avif"
+                alt="Education Today"
+                class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <span class="text-gray-700 font-medium text-center"
+              >Education Today</span
+            >
+            <p
+              class="text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              "Revolutionizing Early Education"
+            </p>
+          </div>
+
+          <!-- LOGO ITEM 4 -->
+          <div
+            class="flex flex-col items-center space-y-4 group"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div
+              class="w-32 h-32 sm:w-36 sm:h-36 bg-white border border-gray-200 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-lg transition-all duration-300 transform group-hover:-translate-y-2 hover:border-purple-200"
+            >
+              <img
+                src="images/family-life.jpg"
+                alt="Family Life"
+                class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <span class="text-gray-700 font-medium text-center"
+              >Family Life</span
+            >
+            <p
+              class="text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              "Parent's Choice Award Winner"
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial Quote -->
+        <div
+          class="max-w-4xl mx-auto mt-16 px-6 py-6 bg-white rounded-xl shadow-sm border border-gray-100"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
+          <blockquote class="text-gray-700 italic">
+            "This platform has set a new standard in educational technology for
+            children, combining innovative design with proven pedagogical
+            approaches that truly engage young minds."
+          </blockquote>
+          <div class="mt-4 flex items-center justify-center space-x-3">
+            <div
+              class="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-purple-600"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="text-left">
+              <p class="text-sm font-medium text-gray-900">Dr. Sarah Johnson</p>
+              <p class="text-xs text-gray-500">Child Development Specialist</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Enhanced Interactive Character Section with AOS -->
+    <section
+      id="characters"
+      class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-pink-50"
+      data-aos="fade-up"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="text-center mb-12 sm:mb-16 lg:mb-20 px-4"
+          data-aos="fade-up"
+          data-aos-delay="50"
+        >
+          <h2
+            class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 title-font"
+          >
+            Meet Our <span class="text-purple-600">Magical</span> Friends
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            Tap on characters to hear them speak and learn about their
+            adventures!
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-0"
+        >
+          <!-- Character 1 -->
+          <div
+            class="character-card bg-white p-4 sm:p-6 rounded-2xl shadow-md text-center transition-all duration-300 cursor-pointer hover:shadow-lg relative overflow-hidden group hover:-translate-y-1 hover:shadow-purple-200/50"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 mx-auto mb-4 rounded-full bg-purple-100 flex items-center justify-center relative border-4 border-white group-hover:border-purple-200 transition-all duration-300 group-hover:ring-4 group-hover:ring-purple-100/50 overflow-hidden"
+            >
+              <img
+                src="images/wizard.avif"
+                alt="Wizard"
+                class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+              />
+              <button
+                class="character-speak absolute bottom-0 right-0 bg-yellow-400 text-white rounded-full w-8 h-8 flex items-center justify-center transform translate-x-2 translate-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 hover:shadow-md"
+              >
+                <i class="ri-volume-up-line"></i>
+              </button>
+            </div>
+            <h3
+              class="text-lg sm:text-xl font-bold text-gray-800 mb-2 kid-font"
+            >
+              Wizzy the Wizard
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-sm">
+              Loves teaching magic spells
+            </p>
+            <div class="mt-3 flex justify-center space-x-1">
+              <span
+                class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full group-hover:bg-purple-200 transition-colors"
+                >Magic</span
+              >
+              <span
+                class="px-2 py-1 bg-pink-100 text-pink-800 text-xs rounded-full group-hover:bg-pink-200 transition-colors"
+                >Funny</span
+              >
+            </div>
+            <div
+              class="absolute inset-0 border-2 border-transparent group-hover:border-purple-200 rounded-2xl pointer-events-none transition-all duration-300"
+            ></div>
+          </div>
+
+          <!-- Character 2 -->
+          <div
+            class="character-card bg-white p-4 sm:p-6 rounded-2xl shadow-md text-center transition-all duration-300 cursor-pointer hover:shadow-lg relative overflow-hidden group hover:-translate-y-1 hover:shadow-pink-200/50"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center relative border-4 border-white group-hover:border-pink-200 transition-all duration-300 group-hover:ring-4 group-hover:ring-pink-100/50 overflow-hidden"
+            >
+              <img
+                src="images/unicorn.jpg"
+                alt="Unicorn"
+                class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+              />
+              <button
+                class="character-speak absolute bottom-0 right-0 bg-yellow-400 text-white rounded-full w-8 h-8 flex items-center justify-center transform translate-x-2 translate-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 hover:shadow-md"
+              >
+                <i class="ri-volume-up-line"></i>
+              </button>
+            </div>
+            <h3
+              class="text-lg sm:text-xl font-bold text-gray-800 mb-2 kid-font"
+            >
+              Stella the Unicorn
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-sm">
+              Spreads kindness everywhere
+            </p>
+            <div class="mt-3 flex justify-center space-x-1">
+              <span
+                class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full group-hover:bg-purple-200 transition-colors"
+                >Rainbows</span
+              >
+              <span
+                class="px-2 py-1 bg-pink-100 text-pink-800 text-xs rounded-full group-hover:bg-pink-200 transition-colors"
+                >Kind</span
+              >
+            </div>
+            <div
+              class="absolute inset-0 border-2 border-transparent group-hover:border-pink-200 rounded-2xl pointer-events-none transition-all duration-300"
+            ></div>
+          </div>
+
+          <!-- Character 3 -->
+          <div
+            class="character-card bg-white p-4 sm:p-6 rounded-2xl shadow-md text-center transition-all duration-300 cursor-pointer hover:shadow-lg relative overflow-hidden group hover:-translate-y-1 hover:shadow-yellow-200/50"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 mx-auto mb-4 rounded-full bg-yellow-100 flex items-center justify-center relative border-4 border-white group-hover:border-yellow-200 transition-all duration-300 group-hover:ring-4 group-hover:ring-yellow-100/50 overflow-hidden"
+            >
+              <img
+                src="images/dragon.jpg"
+                alt="Dragon"
+                class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+              />
+              <button
+                class="character-speak absolute bottom-0 right-0 bg-yellow-400 text-white rounded-full w-8 h-8 flex items-center justify-center transform translate-x-2 translate-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 hover:shadow-md"
+              >
+                <i class="ri-volume-up-line"></i>
+              </button>
+            </div>
+            <h3
+              class="text-lg sm:text-xl font-bold text-gray-800 mb-2 kid-font"
+            >
+              Danny the Dragon
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-sm">
+              Friendly fire-breathing buddy
+            </p>
+            <div class="mt-3 flex justify-center space-x-1">
+              <span
+                class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full group-hover:bg-purple-200 transition-colors"
+                >Adventure</span
+              >
+              <span
+                class="px-2 py-1 bg-pink-100 text-pink-800 text-xs rounded-full group-hover:bg-pink-200 transition-colors"
+                >Brave</span
+              >
+            </div>
+            <div
+              class="absolute inset-0 border-2 border-transparent group-hover:border-yellow-200 rounded-2xl pointer-events-none transition-all duration-300"
+            ></div>
+          </div>
+
+          <!-- Character 4 -->
+          <div
+            class="character-card bg-white p-4 sm:p-6 rounded-2xl shadow-md text-center transition-all duration-300 cursor-pointer hover:shadow-lg relative overflow-hidden group hover:-translate-y-1 hover:shadow-blue-200/50"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div
+              class="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center relative border-4 border-white group-hover:border-blue-200 transition-all duration-300 group-hover:ring-4 group-hover:ring-blue-100/50 overflow-hidden"
+            >
+              <img
+                src="images/mermaid.jpg"
+                alt="Mermaid"
+                class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+              />
+              <button
+                class="character-speak absolute bottom-0 right-0 bg-yellow-400 text-white rounded-full w-8 h-8 flex items-center justify-center transform translate-x-2 translate-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 hover:shadow-md"
+              >
+                <i class="ri-volume-up-line"></i>
+              </button>
+            </div>
+            <h3
+              class="text-lg sm:text-xl font-bold text-gray-800 mb-2 kid-font"
+            >
+              Mira the Mermaid
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-sm">
+              Ocean explorer and friend to sea creatures
+            </p>
+            <div class="mt-3 flex justify-center space-x-1">
+              <span
+                class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full group-hover:bg-purple-200 transition-colors"
+                >Ocean</span
+              >
+              <span
+                class="px-2 py-1 bg-pink-100 text-pink-800 text-xs rounded-full group-hover:bg-pink-200 transition-colors"
+                >Curious</span
+              >
+            </div>
+            <div
+              class="absolute inset-0 border-2 border-transparent group-hover:border-blue-200 rounded-2xl pointer-events-none transition-all duration-300"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          class="text-center mt-12 sm:mt-16 px-4"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          <button
+            class="border-2 border-purple-500 text-purple-600 px-6 sm:px-8 py-2 sm:py-3 rounded-full font-bold hover:bg-purple-50 transition-all duration-300 interactive-btn hover:shadow-lg hover:shadow-purple-200/30 hover:-translate-y-0.5"
+          >
+            Meet All Characters
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Interactive Story Cards Section with AOS -->
+    <section
+      id="stories"
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-white"
+      data-aos="fade-up"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up" data-aos-delay="50">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 title-font">
+            Choose Your <span class="text-pink-500">Adventure</span>
+          </h2>
+          <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Interactive stories that adapt to your child's choices and grow with
+            them.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Story Card 1 -->
+          <div
+            class="story-card relative rounded-2xl overflow-hidden shadow-md h-96 cursor-pointer group transition-all duration-500 hover:shadow-xl hover:shadow-pink-100/50"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="images/sky-castle-adventure.jpg"
+              alt="Adventure in the Sky"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"
+            ></div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-end p-6 transition-all duration-500"
+            >
+              <div
+                class="text-center mb-4 transform group-hover:-translate-y-2 transition-transform duration-300"
+              >
+                <div class="flex justify-center mb-2">
+                  <span
+                    class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full shadow-sm"
+                    >Ages 4-8</span
+                  >
+                </div>
+                <h3
+                  class="text-white text-2xl font-bold mb-2 title-font drop-shadow-lg"
+                >
+                  Sky Castle Adventure
+                </h3>
+                <p class="text-white/90 text-sm sm:text-base drop-shadow-md">
+                  Help Wizzy recover the stolen cloud crystals from the
+                  mischievous sky pirates!
+                </p>
+              </div>
+              <div
+                class="flex space-x-3 w-full transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                <button
+                  class="flex-1 bg-white text-purple-600 px-4 py-2 rounded-full font-medium hover:bg-purple-100 transition-all hover:shadow-md hover:-translate-y-0.5 interactive-btn"
+                >
+                  Read Now
+                </button>
+                <button
+                  class="w-10 h-10 bg-white/20 text-white rounded-full flex items-center justify-center hover:bg-white/30 transition-all hover:shadow-md hover:-translate-y-0.5 interactive-btn"
+                >
+                  <i class="ri-heart-line"></i>
+                </button>
+              </div>
+            </div>
+            <div class="absolute top-4 left-4">
+              <span
+                class="px-2 py-1 bg-white text-purple-600 text-xs font-bold rounded-full shadow-md"
+                >NEW</span
+              >
+            </div>
+            <div
+              class="absolute top-4 right-4 flex items-center text-white drop-shadow-md"
+            >
+              <i class="ri-star-fill text-yellow-400 mr-1"></i>
+              <span>4.7</span>
+            </div>
+            <div
+              class="absolute inset-0 ring-4 ring-transparent group-hover:ring-pink-200/50 transition-all duration-500 rounded-2xl pointer-events-none"
+            ></div>
+          </div>
+
+          <!-- Story Card 2 -->
+          <div
+            class="story-card relative rounded-2xl overflow-hidden shadow-md h-96 cursor-pointer group transition-all duration-500 hover:shadow-xl hover:shadow-purple-100/50"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="images/enchanted-library.jpg"
+              alt="Castle of Dreams"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"
+            ></div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-end p-6 transition-all duration-500"
+            >
+              <div
+                class="text-center mb-4 transform group-hover:-translate-y-2 transition-transform duration-300"
+              >
+                <div class="flex justify-center mb-2">
+                  <span
+                    class="px-3 py-1 bg-green-100 text-green-800 text-xs rounded-full shadow-sm"
+                    >Ages 5-9</span
+                  >
+                </div>
+                <h3
+                  class="text-white text-2xl font-bold mb-2 title-font drop-shadow-lg"
+                >
+                  The Enchanted Library
+                </h3>
+                <p class="text-white/90 text-sm sm:text-base drop-shadow-md">
+                  Books are coming to life! Help organize the magical library
+                  before the stories get mixed up forever.
+                </p>
+              </div>
+              <div
+                class="flex space-x-3 w-full transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                <button
+                  class="flex-1 bg-white text-purple-600 px-4 py-2 rounded-full font-medium hover:bg-purple-100 transition-all hover:shadow-md hover:-translate-y-0.5 interactive-btn"
+                >
+                  Read Now
+                </button>
+                <button
+                  class="w-10 h-10 bg-white/20 text-white rounded-full flex items-center justify-center hover:bg-white/30 transition-all hover:shadow-md hover:-translate-y-0.5 interactive-btn"
+                >
+                  <i class="ri-heart-line"></i>
+                </button>
+              </div>
+            </div>
+            <div
+              class="absolute top-4 right-4 flex items-center text-white drop-shadow-md"
+            >
+              <i class="ri-star-fill text-yellow-400 mr-1"></i>
+              <span>4.9</span>
+            </div>
+            <div
+              class="absolute inset-0 ring-4 ring-transparent group-hover:ring-purple-200/50 transition-all duration-500 rounded-2xl pointer-events-none"
+            ></div>
+          </div>
+
+          <!-- Story Card 3 -->
+          <div
+            class="story-card relative rounded-2xl overflow-hidden shadow-md h-96 cursor-pointer group transition-all duration-500 hover:shadow-xl hover:shadow-blue-100/50"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <img
+              src="images/mermaids-tressure.avif"
+              alt="Ocean Explorer"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"
+            ></div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-end p-6 transition-all duration-500"
+            >
+              <div
+                class="text-center mb-4 transform group-hover:-translate-y-2 transition-transform duration-300"
+              >
+                <div class="flex justify-center mb-2">
+                  <span
+                    class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full shadow-sm"
+                    >Ages 3-7</span
+                  >
+                </div>
+                <h3
+                  class="text-white text-2xl font-bold mb-2 title-font drop-shadow-lg"
+                >
+                  Mermaid's Treasure
+                </h3>
+                <p class="text-white/90 text-sm sm:text-base drop-shadow-md">
+                  Dive deep with Mira to find the lost treasure and solve the
+                  ocean's mysteries!
+                </p>
+              </div>
+              <div
+                class="flex space-x-3 w-full transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                <button
+                  class="flex-1 bg-white text-purple-600 px-4 py-2 rounded-full font-medium hover:bg-purple-100 transition-all hover:shadow-md hover:-translate-y-0.5 interactive-btn"
+                >
+                  Read Now
+                </button>
+                <button
+                  class="w-10 h-10 bg-white/20 text-white rounded-full flex items-center justify-center hover:bg-white/30 transition-all hover:shadow-md hover:-translate-y-0.5 interactive-btn"
+                >
+                  <i class="ri-heart-line"></i>
+                </button>
+              </div>
+            </div>
+            <div class="absolute top-4 left-4 flex items-center drop-shadow-md">
+              <span
+                class="px-2 py-1 bg-purple-600 text-white text-xs font-bold rounded-full shadow-md"
+                >POPULAR</span
+              >
+            </div>
+            <div
+              class="absolute top-4 right-4 flex items-center text-white drop-shadow-md"
+            >
+              <i class="ri-star-fill text-yellow-400 mr-1"></i>
+              <span>4.5</span>
+            </div>
+            <div
+              class="absolute inset-0 ring-4 ring-transparent group-hover:ring-blue-200/50 transition-all duration-500 rounded-2xl pointer-events-none"
+            ></div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <button
+            class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg hover:shadow-pink-300/50 transition-all duration-300 hover:-translate-y-0.5 interactive-btn"
+          >
+            Explore All Stories
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Interactive Features Section -->
+    <section
+      id="features"
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-pink-50"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 title-font">
+            Magical <span class="text-purple-600">Features</span>
+          </h2>
+          <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Designed to make reading fun, engaging, and educational
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="feature-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden group hover:-translate-y-1"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
+            <div
+              class="absolute -right-10 -top-10 w-32 h-32 bg-purple-100 rounded-full opacity-10 group-hover:opacity-20 transition-all duration-500 group-hover:scale-110"
+            ></div>
+            <div
+              class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 shadow-md group-hover:shadow-lg transition-shadow"
+            >
+              <i class="ri-magic-line"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Personalized Stories
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Your child becomes the hero! Add their name, appearance, and
+              interests for a truly custom experience.
+            </p>
+            <button
+              class="text-purple-600 font-medium flex items-center group-hover:text-purple-700 transition-all duration-300 hover:translate-x-1"
+            >
+              Try it now
+              <i
+                class="ri-arrow-right-line ml-1 transition-all duration-300 group-hover:translate-x-1"
+              ></i>
+            </button>
+            <div
+              class="absolute inset-0 border-2 border-transparent group-hover:border-purple-200 rounded-2xl pointer-events-none transition-all duration-300"
+            ></div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="feature-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden group hover:-translate-y-1"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="absolute -right-10 -top-10 w-32 h-32 bg-pink-100 rounded-full opacity-10 group-hover:opacity-20 transition-all duration-500 group-hover:scale-110"
+            ></div>
+            <div
+              class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-pink-500 to-yellow-400 rounded-xl flex items-center justify-center text-white text-2xl mb-6 shadow-md group-hover:shadow-lg transition-shadow"
+            >
+              <i class="ri-book-mark-line"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Interactive Reading
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Tap, swipe, and play with elements on each page. Discover hidden
+              animations and sounds!
+            </p>
+            <button
+              class="text-purple-600 font-medium flex items-center group-hover:text-purple-700 transition-all duration-300 hover:translate-x-1"
+            >
+              See example
+              <i
+                class="ri-arrow-right-line ml-1 transition-all duration-300 group-hover:translate-x-1"
+              ></i>
+            </button>
+            <div
+              class="absolute inset-0 border-2 border-transparent group-hover:border-pink-200 rounded-2xl pointer-events-none transition-all duration-300"
+            ></div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="feature-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden group hover:-translate-y-1"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <div
+              class="absolute -right-10 -top-10 w-32 h-32 bg-yellow-100 rounded-full opacity-10 group-hover:opacity-20 transition-all duration-500 group-hover:scale-110"
+            ></div>
+            <div
+              class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl flex items-center justify-center text-white text-2xl mb-6 shadow-md group-hover:shadow-lg transition-shadow"
+            >
+              <i class="ri-gamepad-line"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Choose Your Path
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Decision points let kids shape the story. Over 50 possible endings
+              across our adventure books!
+            </p>
+            <button
+              class="text-purple-600 font-medium flex items-center group-hover:text-purple-700 transition-all duration-300 hover:translate-x-1"
+            >
+              Explore stories
+              <i
+                class="ri-arrow-right-line ml-1 transition-all duration-300 group-hover:translate-x-1"
+              ></i>
+            </button>
+            <div
+              class="absolute inset-0 border-2 border-transparent group-hover:border-yellow-200 rounded-2xl pointer-events-none transition-all duration-300"
+            ></div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div
+            class="feature-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden group hover:-translate-y-1"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="absolute -right-10 -top-10 w-32 h-32 bg-blue-100 rounded-full opacity-10 group-hover:opacity-20 transition-all duration-500 group-hover:scale-110"
+            ></div>
+            <div
+              class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-500 to-teal-400 rounded-xl flex items-center justify-center text-white text-2xl mb-6 shadow-md group-hover:shadow-lg transition-shadow"
+            >
+              <i class="ri-headphone-line"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Professional Narration
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Every story comes alive with expressive voice acting, sound
+              effects, and music.
+            </p>
+            <button
+              class="text-purple-600 font-medium flex items-center group-hover:text-purple-700 transition-all duration-300 hover:translate-x-1"
+            >
+              Listen to sample
+              <i
+                class="ri-arrow-right-line ml-1 transition-all duration-300 group-hover:translate-x-1"
+              ></i>
+            </button>
+            <div
+              class="absolute inset-0 border-2 border-transparent group-hover:border-blue-200 rounded-2xl pointer-events-none transition-all duration-300"
+            ></div>
+          </div>
+
+          <!-- Feature 5 -->
+          <div
+            class="feature-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden group hover:-translate-y-1"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            <div
+              class="absolute -right-10 -top-10 w-32 h-32 bg-green-100 rounded-full opacity-10 group-hover:opacity-20 transition-all duration-500 group-hover:scale-110"
+            ></div>
+            <div
+              class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-green-500 to-emerald-400 rounded-xl flex items-center justify-center text-white text-2xl mb-6 shadow-md group-hover:shadow-lg transition-shadow"
+            >
+              <i class="ri-leaf-line"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Educational Values
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Stories teach kindness, courage, problem-solving and more through
+              engaging adventures.
+            </p>
+            <button
+              class="text-purple-600 font-medium flex items-center group-hover:text-purple-700 transition-all duration-300 hover:translate-x-1"
+            >
+              Learn more
+              <i
+                class="ri-arrow-right-line ml-1 transition-all duration-300 group-hover:translate-x-1"
+              ></i>
+            </button>
+            <div
+              class="absolute inset-0 border-2 border-transparent group-hover:border-green-200 rounded-2xl pointer-events-none transition-all duration-300"
+            ></div>
+          </div>
+
+          <!-- Feature 6 -->
+          <div
+            class="feature-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden group hover:-translate-y-1"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="absolute -right-10 -top-10 w-32 h-32 bg-purple-100 rounded-full opacity-10 group-hover:opacity-20 transition-all duration-500 group-hover:scale-110"
+            ></div>
+            <div
+              class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-600 to-indigo-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 shadow-md group-hover:shadow-lg transition-shadow"
+            >
+              <i class="ri-user-smile-line"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Progress Tracking
+            </h3>
+            <p class="text-gray-600 mb-4">
+              See your child's reading progress, favorite stories, and how their
+              choices reflect their personality.
+            </p>
+            <button
+              class="text-purple-600 font-medium flex items-center group-hover:text-purple-700 transition-all duration-300 hover:translate-x-1"
+            >
+              View dashboard
+              <i
+                class="ri-arrow-right-line ml-1 transition-all duration-300 group-hover:translate-x-1"
+              ></i>
+            </button>
+            <div
+              class="absolute inset-0 border-2 border-transparent group-hover:border-indigo-200 rounded-2xl pointer-events-none transition-all duration-300"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Enhanced Testimonials Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 title-font">
+            What <span class="text-pink-500">Families</span> Say
+          </h2>
+          <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Don't just take our word for it - hear from parents and kids who
+            love StorySpark!
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-purple-100 relative transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
+            <div
+              class="absolute -top-5 -left-5 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white text-xl shadow-lg transform group-hover:scale-110 transition-transform"
+            >
+              <i class="ri-double-quotes-l"></i>
+            </div>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+              <span class="text-sm text-gray-500">2 days ago</span>
+            </div>
+            <p
+              class="text-gray-700 mb-6 italic text-base sm:text-lg leading-relaxed"
+            >
+              "My 5-year-old was so excited to see herself as the princess in
+              the story! She asks to read it every night and loves making
+              different choices to see how the story changes."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/43.jpg"
+                alt="Sarah J."
+                class="w-12 h-12 rounded-full mr-4 border-2 border-white shadow-sm group-hover:border-purple-200 transition-colors"
+              />
+              <div>
+                <h4 class="font-bold text-gray-800">Sarah J.</h4>
+                <p class="text-sm text-gray-600">Mom of Lily, age 5</p>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 border-2 border-transparent rounded-2xl pointer-events-none group-hover:border-purple-200 transition-all duration-300"
+            ></div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-purple-100 relative transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="absolute -top-5 -left-5 w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white text-xl shadow-lg transform group-hover:scale-110 transition-transform"
+            >
+              <i class="ri-double-quotes-l"></i>
+            </div>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+              <span class="text-sm text-gray-500">1 week ago</span>
+            </div>
+            <p
+              class="text-gray-700 mb-6 italic text-base sm:text-lg leading-relaxed"
+            >
+              "As a teacher, I'm impressed by how StorySpark makes reading
+              interactive while teaching valuable lessons. My students beg for
+              story time!"
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Mark T."
+                class="w-12 h-12 rounded-full mr-4 border-2 border-white shadow-sm group-hover:border-pink-200 transition-colors"
+              />
+              <div>
+                <h4 class="font-bold text-gray-800">Mark T.</h4>
+                <p class="text-sm text-gray-600">Kindergarten Teacher</p>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 border-2 border-transparent rounded-2xl pointer-events-none group-hover:border-pink-200 transition-all duration-300"
+            ></div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-purple-100 relative transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <div
+              class="absolute -top-5 -left-5 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white text-xl shadow-lg transform group-hover:scale-110 transition-transform"
+            >
+              <i class="ri-double-quotes-l"></i>
+            </div>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-half-fill"></i>
+              </div>
+              <span class="text-sm text-gray-500">3 weeks ago</span>
+            </div>
+            <p
+              class="text-gray-700 mb-6 italic text-base sm:text-lg leading-relaxed"
+            >
+              "The dragon story helped my son overcome his fear of the dark. Now
+              he pretends to breathe 'bravery fire' like Danny the Dragon at
+              bedtime. Thank you!"
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/65.jpg"
+                alt="Priya K."
+                class="w-12 h-12 rounded-full mr-4 border-2 border-white shadow-sm group-hover:border-yellow-200 transition-colors"
+              />
+              <div>
+                <h4 class="font-bold text-gray-800">Priya K.</h4>
+                <p class="text-sm text-gray-600">Mom of Arjun, age 4</p>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 border-2 border-transparent rounded-2xl pointer-events-none group-hover:border-yellow-200 transition-all duration-300"
+            ></div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="200">
+          <button
+            class="border-2 border-purple-500 text-purple-600 px-6 sm:px-8 py-2 sm:py-3 rounded-full font-bold hover:bg-purple-50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-200/30 hover:-translate-y-0.5 interactive-btn"
+          >
+            Read More Reviews
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced CTA Section -->
+    <section
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-pink-600 text-white"
+      data-aos="fade-up"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h2
+          class="text-3xl md:text-4xl font-bold mb-6 title-font"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Ready for <span class="text-yellow-300">Magical</span> Storytime?
+        </h2>
+        <p
+          class="text-xl mb-10 opacity-90 max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          Join thousands of families creating unforgettable reading experiences
+        </p>
+        <div
+          class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <button
+            class="bg-white text-purple-600 px-8 py-4 rounded-full font-bold hover:bg-purple-50 hover:shadow-xl transition-all duration-300 transform hover:scale-105 interactive-btn shadow-lg hover:shadow-purple-200/50"
+          >
+            Start 7-Day Free Trial
+          </button>
+          <button
+            class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all duration-300 interactive-btn hover:shadow-lg hover:shadow-white/20"
+          >
+            <i class="ri-play-circle-line mr-2"></i> Watch Demo
+          </button>
+        </div>
+        <p
+          class="mt-6 text-sm opacity-80"
+          data-aos="fade-up"
+          data-aos-delay="250"
+        >
+          No credit card required • Cancel anytime • Safe for kids
+        </p>
+      </div>
+    </section>
+
+    <!-- Enhanced FAQ Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-800 title-font"
+            data-aos="fade-up"
+          >
+            Frequently <span class="text-purple-600">Asked</span> Questions
+          </h2>
+          <p
+            class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
+            Everything you need to know about StorySpark
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div
+            class="border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <button
+              class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-purple-50 transition-colors duration-300"
+            >
+              <h3 class="text-lg font-medium text-gray-800">
+                What age group is StorySpark for?
+              </h3>
+              <i
+                class="ri-arrow-down-s-line text-purple-600 text-xl transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-content px-6 pb-6 hidden">
+              <p class="text-gray-600">
+                StorySpark is designed for children ages 2-10. Our content
+                automatically adjusts to your child's age and reading level,
+                with:
+              </p>
+              <ul class="mt-2 space-y-2 pl-5 list-disc text-gray-600">
+                <li>
+                  Simple interactive picture books for toddlers (ages 2-4)
+                </li>
+                <li>Early reader stories with basic choices (ages 4-6)</li>
+                <li>
+                  Chapter-style adventures with multiple paths (ages 6-10)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div
+            class="border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <button
+              class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-purple-50 transition-colors duration-300"
+            >
+              <h3 class="text-lg font-medium text-gray-800">
+                How does the personalization work?
+              </h3>
+              <i
+                class="ri-arrow-down-s-line text-purple-600 text-xl transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-content px-6 pb-6 hidden">
+              <p class="text-gray-600">
+                Our personalization engine lets you create a profile for your
+                child with:
+              </p>
+              <ul class="mt-2 space-y-2 pl-5 list-disc text-gray-600">
+                <li>Name and nickname that appears in stories</li>
+                <li>Appearance (hair color, skin tone, glasses, etc.)</li>
+                <li>Favorite colors, animals, and interests</li>
+                <li>Reading level and preferred story themes</li>
+              </ul>
+              <p class="mt-3 text-gray-600">
+                These details are woven naturally into our stories, making your
+                child the protagonist of their own adventures!
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div
+            class="border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <button
+              class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-purple-50 transition-colors duration-300"
+            >
+              <h3 class="text-lg font-medium text-gray-800">
+                Is StorySpark safe for my child?
+              </h3>
+              <i
+                class="ri-arrow-down-s-line text-purple-600 text-xl transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-content px-6 pb-6 hidden">
+              <p class="text-gray-600">
+                Absolutely! Safety is our top priority:
+              </p>
+              <ul class="mt-2 space-y-2 pl-5 list-disc text-gray-600">
+                <li>No ads or external links</li>
+                <li>COPPA-compliant data practices</li>
+                <li>All content created by child development experts</li>
+                <li>Parental controls and progress tracking</li>
+                <li>Positive messaging in every story</li>
+              </ul>
+              <p class="mt-3 text-gray-600">
+                We're proud to be certified by KidSafe and Common Sense Media.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div
+            class="border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            <button
+              class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-purple-50 transition-colors duration-300"
+            >
+              <h3 class="text-lg font-medium text-gray-800">
+                How often do you add new stories?
+              </h3>
+              <i
+                class="ri-arrow-down-s-line text-purple-600 text-xl transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-content px-6 pb-6 hidden">
+              <p class="text-gray-600">
+                We add new content every month! Our subscription includes:
+              </p>
+              <ul class="mt-2 space-y-2 pl-5 list-disc text-gray-600">
+                <li>2-3 brand new stories each month</li>
+                <li>Seasonal and holiday special editions</li>
+                <li>Weekly creative challenges and activities</li>
+                <li>Regular updates to existing stories with new choices</li>
+              </ul>
+              <p class="mt-3 text-gray-600">
+                Plus, our library already has over 100 interactive stories to
+                explore!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="300">
+          <button
+            class="text-purple-600 font-medium hover:text-purple-700 transition-colors inline-flex items-center"
+          >
+            View all FAQs
+            <i
+              class="ri-arrow-right-line ml-1 transition-transform duration-300 group-hover:translate-x-1"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer
+      class="bg-gray-900 text-white pt-16 pb-8 px-4 sm:px-6 lg:px-8"
+      data-aos="fade-up"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10">
+          <div class="col-span-2" data-aos="fade-up" data-aos-delay="50">
+            <h3 class="text-2xl font-bold title-font mb-4">StorySpark</h3>
+            <p class="text-gray-400 mb-6">
+              Making reading magical for the next generation of adventurers,
+              dreamers, and thinkers.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-purple-600 hover:text-white transition-colors duration-300"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-pink-500 hover:text-white transition-colors duration-300"
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-blue-400 hover:text-white transition-colors duration-300"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <i class="ri-twitter-x-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-red-500 hover:text-white transition-colors duration-300"
+                data-aos="fade-up"
+                data-aos-delay="250"
+              >
+                <i class="ri-youtube-fill"></i>
+              </a>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100">
+            <h4 class="text-lg font-bold mb-4">Explore</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >All Stories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Characters</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Age Groups</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Themes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >New Releases</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="150">
+            <h4 class="text-lg font-bold mb-4">Company</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Press</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h4 class="text-lg font-bold mb-4">Support</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Cookie Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Accessibility</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+          data-aos="fade-up"
+        >
+          <p class="text-gray-500 text-sm mb-4 md:mb-0">
+            © 2023 StorySpark. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-gray-500 hover:text-white text-sm transition-colors duration-300"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 hover:text-white text-sm transition-colors duration-300"
+              >Terms of Service</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 hover:text-white text-sm transition-colors duration-300"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Floating Action Button -->
+    <button
+      id="fab"
+      class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-lg flex items-center justify-center text-2xl z-50 hover:shadow-xl transition-all duration-300 transform hover:scale-110 interactive-btn"
+    >
+      <i class="ri-chat-smile-2-line"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // FAQ toggle functionality
+      document.querySelectorAll(".faq-toggle").forEach((button) => {
+        button.addEventListener("click", () => {
+          const content = button.nextElementSibling;
+          const icon = button.querySelector("i");
+
+          content.classList.toggle("hidden");
+          icon.classList.toggle("rotate-180");
+        });
+      });
+
+      // Create sparkles effect
+      function createSparkles() {
+        const container = document.getElementById("sparkles-container");
+        const colors = ["#FCD34D", "#7C3AED", "#F9A8D4", "#FFFFFF"];
+
+        for (let i = 0; i < 20; i++) {
+          const sparkle = document.createElement("div");
+          sparkle.className = "sparkle";
+
+          // Random properties
+          const size = Math.random() * 20 + 10;
+          const posX = Math.random() * 100;
+          const posY = Math.random() * 100;
+          const delay = Math.random() * 5;
+          const duration = Math.random() * 3 + 2;
+          const color = colors[Math.floor(Math.random() * colors.length)];
+
+          sparkle.style.width = `${size}px`;
+          sparkle.style.height = `${size}px`;
+          sparkle.style.left = `${posX}vw`;
+          sparkle.style.top = `${posY}vh`;
+          sparkle.style.animationDelay = `${delay}s`;
+          sparkle.style.animationDuration = `${duration}s`;
+          sparkle.style.filter = `drop-shadow(0 0 5px ${color})`;
+
+          // Random animation
+          if (Math.random() > 0.5) {
+            sparkle.style.animationName = "sparkleFade";
+          } else {
+            sparkle.style.animationName = "sparkleTwinkle";
+          }
+
+          container.appendChild(sparkle);
+        }
+      }
+
+      // Character speak effect
+      document.querySelectorAll(".character-speak").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const card = button.closest(".character-card");
+          card.classList.add("animate__animated", "animate__pulse");
+
+          // Remove animation after it completes
+          setTimeout(() => {
+            card.classList.remove("animate__animated", "animate__pulse");
+          }, 1000);
+
+          // In a real app, this would play audio
+          console.log(`${card.querySelector("h3").textContent} says hello!`);
+        });
+      });
+
+      // Interactive button effects
+      document.querySelectorAll(".interactive-btn").forEach((button) => {
+        button.addEventListener("mousedown", () => {
+          button.classList.add("animate__animated", "animate__headShake");
+        });
+
+        button.addEventListener("mouseup", () => {
+          button.classList.remove("animate__animated", "animate__headShake");
+        });
+
+        button.addEventListener("mouseleave", () => {
+          button.classList.remove("animate__animated", "animate__headShake");
+        });
+      });
+
+      // Initialize sparkles when page loads
+      window.addEventListener("load", createSparkles);
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
