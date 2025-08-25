@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
+import { Link } from "react-router-dom";
 
 const techData = {
   "Game Engines": ["Unity", "Unreal Engine", "Phaser.js", "Godot", "Cocos2d"],
@@ -45,6 +46,47 @@ const techLogos = {
   Illustrator: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
 };
 
+const techUrls = {
+  // Game Engines
+  Unity: "",
+  "Unreal Engine": "",
+  "Phaser.js": "",
+  Godot: "",
+  Cocos2d: "",
+
+  // Platforms
+  Android: "/platforms/androi/services/android-app-development",
+  iOS: "/services/ios-app-development",
+  WebGL: "",
+  PC: "",
+  "Console (indie)": "",
+
+  // Languages
+  "C#": "/services/csharp-development-service",
+  JavaScript: "/services/javascript-development-service",
+  TypeScript: "/languages/typescrip",
+  Dart: "/services/flutter-app-development",
+  "C++": "",
+
+  // Multiplayer
+  Photon: "",
+  Mirror: "",
+  Firebase: "",
+  WebSockets: "",
+
+  // AR/VR
+  ARCore: "",
+  ARKit: "",
+  "Unity XR": "",
+
+  // Design Tools
+  Blender: "",
+  Figma: "/services/ui-ux-design",
+  Spine: "",
+  Photoshop: "",
+  Illustrator: "/services/ui-ux-design",
+};
+
 const GameTechnologiesSection = () => {
   const categories = Object.keys(techData);
   const [selected, setSelected] = useState(categories[0]);
@@ -70,14 +112,20 @@ const GameTechnologiesSection = () => {
         {/* Tech Cards */}
         <div className={styles.cardGrid}>
           {techData[selected].map((item) => (
-            <div key={item} className={styles.techCard}>
-              <img
-                src={techLogos[item]}
-                alt={`${item} logo`}
-                className={styles.logo}
-              />
-              <span>{item}</span>
-            </div>
+            <Link 
+              key={item} 
+              to={techUrls[item]} 
+              className="text-decoration-none"
+            >
+              <div className={styles.techCard}>
+                <img
+                  src={techLogos[item]}
+                  alt={`${item} logo`}
+                  className={styles.logo}
+                />
+                <span>{item}</span>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

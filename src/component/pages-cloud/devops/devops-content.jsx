@@ -7,13 +7,15 @@ import OnlinePresence from '../../common-ui/cloud-services/Online-Presence';
 import CloudUseCase from '../../common-ui/cloud-services/cloud-usecase';
 import EngagementOptions from '../../common-ui/cloud-services/engagement-options';
 import styles from '../../common-ui/cloud-services/cloud-usecase.module.css';
-import awsImage from '../../../assets/aws.avif';
+import devOpsImg from '../../../assets/technologies/do-with-devops-img.jpg';
+import contactUsImg from './../../../assets/contact/contact-us-img2.jpg';
 
 const statsData = [
   { number: "60%", label: "Faster release cycles with CI/CD pipelines" },
   { number: "70%", label: "Infrastructure automated with IaC" },
   { number: "50%", label: "Reduction in post-release issues" },
 ];
+
 const features = [
   'Faster release cycles without compromising quality',
   'Automated testing, deployment, and scaling',
@@ -21,7 +23,6 @@ const features = [
   'Continuous feedback loops for better user experience',
   'Reduced downtime and quicker incident recovery',
 ];
-
 
 const services = [
   {
@@ -108,7 +109,6 @@ const engagementOptions = [
   },
 ];
 
-
 export default function DevopsContent() {
   return (
     <section>
@@ -126,7 +126,7 @@ export default function DevopsContent() {
      <CloudOffers
       title="Why DevOps Matters"
       features={features}
-      image={awsImage}
+      image={devOpsImg}
     />
     <ServicesSection
       title="Our DevOps Services Include"
@@ -138,7 +138,7 @@ export default function DevopsContent() {
       description="Our custom DevOps integrations ensure scalability, security, and cost-efficiency."
       buttonText="Request with our DevOps Experts!"
       // onButtonClick={handleRequestClick}
-      imageSrc={awsImage}
+      imageSrc={contactUsImg}
       imageAlt="Illustration of DevOps solutions"
     />
       <CloudUseCase

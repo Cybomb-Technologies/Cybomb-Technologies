@@ -80,28 +80,28 @@ function Datadropdown1({
               {/* Data Column */}
               <div className={styles.dropdownColumn}>
                 <div className={styles.dropdownHeader}><FaDatabase className={styles.icon} /> Data</div>
-                <Link className={styles.dropdownItem} to="/services/stratergy-consulting" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/data-strategy-consulting" onClick={onLinkClick}>
                   <FaRegLightbulb className={styles.icon} /> Strategy Consulting
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/processing" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/data-processing" onClick={onLinkClick}>
                   <FaCogs className={styles.icon} /> Processing
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/governance-solution" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/data-governance-solution" onClick={onLinkClick}>
                   <FaClipboardCheck className={styles.icon} /> Governance Solution
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/storage-solution" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/data-storage-solution" onClick={onLinkClick}>
                   <MdStorage className={styles.icon} /> Storage Solution
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/quality-management" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/data-quality-management" onClick={onLinkClick}>
                   <FaProjectDiagram className={styles.icon} /> Quality Management
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/modeling-design" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/data-modelling-design" onClick={onLinkClick}>
                   <FaPuzzlePiece className={styles.icon} /> Modelling Design
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/architecture" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/data-architecture" onClick={onLinkClick}>
                   <FaDatabase className={styles.icon} /> Architecture
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/analyticsandvisualization" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/data-analytics-visualization" onClick={onLinkClick}>
                   <SiGoogleanalytics className={styles.icon} /> Analytics & Visualization
                 </Link>
                 <Link className={styles.dropdownItem} to="/services/cloud-data-migration" onClick={onLinkClick}>
@@ -123,13 +123,13 @@ function Datadropdown1({
                 <Link className={styles.dropdownItem} to="/services/ai-business-intelligence" onClick={onLinkClick}>
                   <FaChartPie className={styles.icon} /> AI Business Intelligence
                 </Link>
-                <Link className={styles.dropdownItem} to="services/large-language-model" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="services/ai-large-language-model" onClick={onLinkClick}>
                   <FaRobot className={styles.icon} /> Large Language Models Solutions
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/ai-persolized-customer-experience" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/ai-persolized-experience" onClick={onLinkClick}>
                   <FaUserCog className={styles.icon} /> AI Personalized Customer Experience
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/blockchain" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem} to="/services/ai-blockchain-integration" onClick={onLinkClick}>
                   <FaCube className={styles.icon} /> Blockchain
                 </Link>
               </div>

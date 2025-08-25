@@ -1,0 +1,80 @@
+.hiringSection {
+  background-color: #034472;
+  padding: 3rem 1.5rem;
+  color: #000;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sectionTitle {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.leftContent {
+  flex: 1;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.cardText {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.rightContent {
+  flex: 0.6;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leftContent {
+    text-align: center;
+  }
+
+  .rightContent .image {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1301px) {
+  .container {
+    padding: 0 2rem;
+  }
+}

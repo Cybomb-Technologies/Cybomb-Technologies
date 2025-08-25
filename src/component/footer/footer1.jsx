@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./footer1.module.css";
+
+const API_URL = import.meta.env.VITE_API_BASE; 
 
 const defaultSocialLinks = [
   {
@@ -18,7 +21,7 @@ const defaultSocialLinks = [
 
 const defaultLegalLinks = [
   { to: "/privacy-policy", label: "Privacy Policy" },
-  { to: "/terms", label: "Terms of Service" },
+  { to: "/terms", label: "Terms of Services" },
   { to: "/refund-policy", label: "Refund Policy" },
   { to: "/cookie-policy", label: "Cookie Policy" },
 ];
@@ -27,6 +30,32 @@ function Footer1({
   socialLinks = defaultSocialLinks, 
   legalLinks = defaultLegalLinks 
 }) {
+  const [email, setEmail] = useState();
+  const [status, setStatus] = useState("");
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      const res = await fetch(`${API_URL}/api/footer-mail`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        setStatus("✅ Subscription successful!");
+        setEmail("");
+      } else {
+        setStatus("❌ Failed to subscribe. Try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus("⚠️ Server error.");
+    }
+  };
+
   const contactItems = [
     {
       icon: "bi-geo-alt-fill",
@@ -80,31 +109,36 @@ function Footer1({
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        
         {/* DESKTOP */}
         <div className={styles.desktopLayout}>
           {/* Row 1 */}
           <div className={styles.footerTopRow1}>
-            
             <div className={styles.subscribeSection}>
               <h4 className={styles.subTitle}>Subscribe</h4>
               <p>Stay updated with our latest news and offers.</p>
-              <form className={styles.rowAlign}>
-                <input type="email" placeholder="Enter your email" />
+
+              <form className={styles.rowAlign} onSubmit={handleSubscribe}>
+                <input                   
+                  type="email" 
+                  placeholder="Enter your email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)} 
+                  required
+                />
                 <button type="submit">Subscribe</button>
               </form>
+
+              {status && <p className={styles.statusMsg}>{status}</p>}
             </div>
 
             <div className={styles.logoCol}>
               <img src="/images/logo-1-white.png" alt="logo" className={styles.logo} />
-              {/* <h4 className={`${styles.sectionTitle} mt-4`}>Follow Us</h4> */}
               <div className={styles.socials}>{renderSocialIcons()}</div>
             </div>
           </div>
 
           {/* Row 2 */}
           <div className={styles.footerTopRow2}>
-            
             <div className={styles.quickLinks}>
               <h4 className={`${styles.sectionTitle} ${styles.footerQuickLinks}`}>Quick Links</h4>
               <ul>{renderListLinks(quickLinks)}</ul>
@@ -114,7 +148,7 @@ function Footer1({
               <h4 className={`${styles.sectionTitle} ${styles.footerServices}`}>Services</h4>
               <ul>{renderListLinks(servicesLinks)}</ul>
             </div>
-            
+
             <div className={styles.quickLinks}>
               <h4 className={`${styles.sectionTitle} ${styles.footerLegalLinks}`}>Legal</h4>
               <ul>{renderListLinks(legalLinks)}</ul>
@@ -125,28 +159,20 @@ function Footer1({
               {contactItems.map((item, i) => (
                 <div key={i} className={styles.contactItem}>
                   <i className={`bi ${item.icon} ${styles.icon}`}></i>
-                  {/* <div className={styles.contactTextBlock}>
-                    <p><strong>{item.label}</strong></p>
-                    <p>{item.text}</p>
-                  </div> */}
-
                   <div className={styles.contactTextBlock}>
                     <p><strong>{item.label}</strong></p>
                     <p className={item.label === "Address" ? styles.addressText : ""}>
-                      {item.label !== "Address" && item.text}
+                      {item.label === "Address" ? item.text : item.text}
                     </p>
                   </div>
-
                 </div>
               ))}
             </div>
-
           </div>
         </div>
 
         {/* BOTTOM */}
         <div className={styles.footerBottom}>
-
           <div className={styles.copyrightSection}>
             <p>© {new Date().getFullYear()} Cybomb Technologies LLP. All rights reserved.</p>
           </div>
@@ -176,10 +202,7 @@ function Footer1({
               </div>
             </div>
           </div>
-
-          
         </div>
-
       </div>
     </footer>
   );

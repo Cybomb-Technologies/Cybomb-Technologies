@@ -5,7 +5,7 @@ function Termsbanner(){
         <>
         <div className="about-banner-img" style={{ padding: "135px 0px 60px" }}>
         <div className="container">
-          <h1 className="text-white text-center">Terms of Service</h1>
+          <h1 className="text-white text-center">Terms & Conditions</h1>
         </div>
       </div>
         </>

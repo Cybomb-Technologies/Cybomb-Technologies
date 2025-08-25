@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
+import { Link } from "react-router-dom";
 
 const techData = {
   Frontend: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind CSS"],
@@ -45,6 +46,40 @@ const techLogos = {
   Canva: "https://static.canva.com/static/images/favicon.ico"
 };
 
+const techUrls = {
+  HTML5: "/services/html5-development-service",
+  CSS3: "",
+  JavaScript: "/services/javascript-development-service",
+  Bootstrap: "",
+  "Tailwind CSS": "",
+  React: "",
+  "Next.js": "/services/javascript-development-service",
+  "Vue.js": "/services/javascript-development-service",
+  jQuery: "/services/javascript-development-service",
+  WordPress: "/services/wordpress",
+  Webflow: "",
+  Ghost: "",
+  Strapi: "",
+  WooCommerce: "/services/woo-commerce",
+  Shopify: "/services/shopify",
+  BigCommerce: "/services/big-commerce",
+  "Node.js": "/services/nodejs-development-service",
+  PHP: "/services/php-development-service",
+  Python: "/services/python-development-service",
+  MySQL: "",
+  MongoDB: "",
+  Vercel: "",
+  Netlify: "",
+  Hostinger: "",
+  AWS: "/hosting/aws",
+  GoDaddy: "",
+  "GitHub Pages": "",
+  Figma: "/services/ui-ux-design",
+  "Adobe XD": "/services/ui-ux-design",
+  Photoshop: "/services/ui-ux-design",
+  Canva: "/services/ui-ux-design"
+};
+
 const TechToolsSection = () => {
   const categories = Object.keys(techData);
   const [selected, setSelected] = useState(categories[0]);
@@ -70,14 +105,19 @@ const TechToolsSection = () => {
         {/* Tech Cards */}
         <div className={styles.cardGrid}>
           {techData[selected].map((item) => (
-            <div key={item} className={styles.techCard}>
+           <Link 
+              key={item} 
+              to={techUrls[item]} 
+              className="text-decoration-none"
+            >
+           <div key={item} className={styles.techCard}>
               <img
                 src={techLogos[item]}
                 alt={`${item} logo`}
                 className={styles.logo}
               />
               <span>{item}</span>
-            </div>
+            </div></Link>
           ))}
         </div>
       </div>

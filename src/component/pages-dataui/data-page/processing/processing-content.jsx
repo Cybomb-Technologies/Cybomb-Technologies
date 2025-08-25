@@ -5,8 +5,9 @@ import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultatio
 import { MdSchedule } from 'react-icons/md';
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
 import OnlinePresence from "../../../common-ui/dataui/online-presence";
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
+import contactUsImg from './../../../../assets/contact/contact-us-img2.jpg';
+import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
 
 const WhatWeOffers = [
   {
@@ -102,7 +103,7 @@ function ProcessingContent() {
       <ScheduleConsultation
         heading="Unlock the Power of Your Data with Our Processing Expertise"
         buttonText="Schedule a Consultation!"
-        imageSrc={placeholderImage}
+        imageSrc={scheduleConsultImg}
         imageAlt="Data Processing Consultation"
         Icon={MdSchedule}
       />
@@ -113,7 +114,7 @@ function ProcessingContent() {
         title="Let’s Build the Right Data Processing Solution for Your Business."
         buttonText="CONTACT US"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactUsImg}
         imageAlt="Data Processing Services"
       />
 

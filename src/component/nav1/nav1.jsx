@@ -164,7 +164,7 @@ function Nav1() {
 
                 <li className={styles.navItem}>
                   <Link
-                    to="/aboutus"
+                    to="/about-us"
                     className={styles.navLink}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -260,7 +260,7 @@ function Nav1() {
 
               <li className={styles.navItem}>
                   <Link
-                    to="/aboutus"
+                    to="/about-us"
                     className={styles.navLink}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -274,15 +274,15 @@ function Nav1() {
       </nav>
 
       {/* Floating Call Button */}
-      {/* <div className={styles.floatingBtn}>
+      <div className={styles.floatingBtn}>
         <a href="tel:+919715092104" target="_blank" rel="noreferrer">
           <div className={styles.contactIcon}>
             <i className="bi bi-telephone-fill"></i>
           </div>
         </a>
-      </div> */}
+      </div>
       {/* Floating Chat Widget */}
-      <div className={styles.chatWidget}>
+      {/* <div className={styles.chatWidget}>
         <input type="checkbox" id="chatToggle" className={styles.chatToggle} />
 
         <label htmlFor="chatToggle" className={styles.chatButton}>
@@ -297,7 +297,7 @@ function Nav1() {
             style={{ border: "none", borderRadius: "12px" }}
           ></iframe>
         </div>
-      </div>
+      </div> */}
 
       {/* <ChatWidget/> */}
     </>

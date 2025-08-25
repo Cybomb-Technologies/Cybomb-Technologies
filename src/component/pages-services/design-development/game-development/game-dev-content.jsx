@@ -1,14 +1,12 @@
-
 import GameTechnologiesSection from "./game-dev-TechnologiesSection";
-
 import Banner from "../../../common-ui/design-and-development/banner";
 import InfoStats from "../../../common-ui/design-and-development/info-stats";
 import ServicesOfferings from "../../../common-ui/design-and-development/services-offerings";
 import DevelopmentProcess from "../../../common-ui/design-and-development/development-process";
 import WhyChooseUs from "../../../common-ui/design-and-development/why-choose-us";
 import OnlinePresence from "../../../common-ui/design-and-development/online-presence";
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
+import WebAppDevImg from "./../../../../assets/technologies/game-development.jpg";
 
 const services = [
   {
@@ -142,7 +140,7 @@ function GameDevContent() {
           description = "Our custom web development services turn your vision into a compelling online presence."
           buttonText = "Request a Free Quote Today!"
           buttonLink = "#"
-          imageSrc = {placeholderImage}
+          imageSrc = {WebAppDevImg}
           imageAlt = "Web Development"
       />
     <DevelopmentProcess 

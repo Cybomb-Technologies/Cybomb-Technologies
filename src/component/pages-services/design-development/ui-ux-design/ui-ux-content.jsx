@@ -1,13 +1,12 @@
-import Banner from "../../../common-ui/design-and-development/banner";
+import UiUxBanner from "./ui-ux-banner";
 import InfoStats from "../../../common-ui/design-and-development/info-stats";
-import ServicesOfferings from "../../../common-ui/design-and-development/services-offerings";
-import DevelopmentProcess from "../../../common-ui/design-and-development/development-process";
-import WhyChooseUs from "../../../common-ui/design-and-development/why-choose-us";
+import ServicesOfferings from "./services-offerings";
+import WhyChooseUs from "./why-choose-us";
 import OnlinePresence from "../../../common-ui/design-and-development/online-presence";
-import placeholderImage from './../../../../assets/placeholder-image.webp';
-import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
+import EngagementOptions from "./engagement-options";
 import TechToolsSection from "./TechToolsSection";
-
+import uiuxDesignImg from "./../../../../assets/technologies/ui-ux-design.jpg";
+import UiUxWhyMatters from "./uiux-why-matters"
 const services = [
   {
     title: 'Product Discovery & Research',
@@ -110,12 +109,7 @@ export default function UiUxDesignContent() {
   return (
     <section>
     
-    <Banner 
-        heading="UI/UX Design Services"
-        subtext="Intuitive, beautiful, and user-first design experiences"
-        buttonText="Book Free Consultation"
-        note="Your product deserves more than just good looks—it needs to be functional, frictionless, and delightful. Our UI/UX design services are centered around your users, delivering intuitive digital interfaces that drive engagement, retention, and satisfaction."
-    />
+    <UiUxBanner/>
     <InfoStats
         stats={[
           { number: "94%", label: "First impressions influenced by design quality" },
@@ -125,6 +119,7 @@ export default function UiUxDesignContent() {
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"
     />
+    <UiUxWhyMatters/>
     <ServicesOfferings 
     title = "Our UI/UX Design Services"
     Services={services}/>
@@ -135,15 +130,12 @@ export default function UiUxDesignContent() {
           description = "Our custom UI/UX Design services turn your vision into a compelling online presence."
           buttonText = "Request a Free Quote Today!"
           buttonLink = "#"
-          imageSrc = {placeholderImage}
+          imageSrc = {uiuxDesignImg}
           imageAlt = "UI/UX Design"
       />
-    <DevelopmentProcess 
-      title="Our UI/UX Design Process"
-      Process={process}
-      />
+    
     <EngagementOptions
-      title="How We Can Collaborate"
+      title="Engagement Options"
       options={engagementOptions}
     />
    </section>

@@ -5,8 +5,9 @@ import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultatio
 import { MdSchedule } from 'react-icons/md';
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
 import OnlinePresence from "../../../common-ui/dataui/online-presence";
-import placeholderImage from './../../../../assets/placeholder-image.webp';
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
+import contactUsImg from './../../../../assets/contact/contact-us-img1.jpg';
+import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img2.jpg';
 
 const WhatWeOffers = [
   {
@@ -102,7 +103,7 @@ function AIBusinessIntelligenceContent() {
       <ScheduleConsultation
         heading="Make Every Decision Smarter with AI BI"
         buttonText="Schedule a Consultation!"
-        imageSrc={placeholderImage}
+        imageSrc={scheduleConsultImg}
         imageAlt="AI Business Intelligence"
         Icon={MdSchedule}
       />
@@ -113,7 +114,7 @@ function AIBusinessIntelligenceContent() {
         title="Let’s Build Your AI-Driven BI System."
         buttonText="CONTACT US"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactUsImg}
         imageAlt="AI BI Solutions"
       />
 

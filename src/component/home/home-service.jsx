@@ -8,10 +8,10 @@ function HomeService() {
       style={{ padding: "60px 0px" }}
     >
       <div className="container text-center">
-        <h2 className="fw-bold mb-2" data-aos="zoom-out-left" style={{color:"#003459"}}>
+        <h2 className="fw-bold mb-2" data-aos="zoom-in-left" style={{color:"#003459"}}>
           Our Services
         </h2>
-        <p className="black fs-6" data-aos="zoom-out-right">
+        <p className="black fs-6" data-aos="zoom-in-right">
           Comprehensive digital solutions tailored to your business needs
         </p>
 
@@ -20,7 +20,7 @@ function HomeService() {
           <div className="col-md-6 col-lg-4 mb-4">
             <div
               className="card h-100 shadow-sm service-card text-start border-0 custom-card"
-              data-aos="zoom-out-left"
+              data-aos="zoom-in-left"
             >
               <div
                 className="card-img-top service-img"
@@ -49,7 +49,7 @@ function HomeService() {
           <div className="col-md-6 col-lg-4 mb-4">
             <div
               className="card h-100 shadow-sm service-card text-start border-0 custom-card"
-              data-aos="zoom-out-up"
+              data-aos="zoom-in-up"
             >
               <div
                 className="card-img-top service-img"
@@ -78,7 +78,7 @@ function HomeService() {
           <div className="col-md-12 col-lg-4 mb-4">
             <div
               className="card h-100 shadow-sm service-card text-start border-0 custom-card"
-              data-aos="zoom-out-right"
+              data-aos="zoom-in-right"
             >
               <div
                 className="card-img-top service-img"
@@ -102,7 +102,7 @@ function HomeService() {
           </div>
         </div>
 
-        <div className="text-center mt-5" data-aos="zoom-out-up">
+        <div className="text-center mt-5" data-aos="zoom-in-up">
           <Link to="services" className="btn btn-gradient text-white fw-bold">
             View All Services
           </Link>
