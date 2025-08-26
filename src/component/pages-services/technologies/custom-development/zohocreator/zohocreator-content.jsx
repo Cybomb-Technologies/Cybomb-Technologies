@@ -62,17 +62,17 @@ function ZohoCreatorPage() {
         highlight="Zoho Partners Worldwide"
       />
       <HiringModels
-        title="Why Zoho Creator"
+        title="Why Choose Zoho Creator"
         cards={hiringData}
         image={placeholderImage}
       />
       <WhatWeOffer
-        title="Our Zoho Services"
+        title="What We Offer"
         items={offerData}
         image={placeholderImage}
       />
       <ServicesOfferings 
-        title="Our Approach" 
+        title="Zoho Creator Features" 
         items={offerings}
       /> 
       <ZohoCreatorTechnologies/>

@@ -62,17 +62,17 @@ function DotNetPage() {
         highlight="Fortune 500 Companies"
       />
       <HiringModels
-        title="Why .NET"
+        title="Why Choose .NET"
         cards={hiringData}
         image={placeholderImage}
       />
       <WhatWeOffer
-        title="Our .NET Services"
+        title="What We Offer"
         items={offerData}
         image={placeholderImage}
       />
       <ServicesOfferings 
-        title="Our Expertise" 
+        title=".Net Features" 
         items={offerings}
       /> 
       <DotNetTechnologies/>

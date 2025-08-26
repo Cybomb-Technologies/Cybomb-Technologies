@@ -62,17 +62,17 @@ function PythonPage() {
         highlight="Startups to Enterprises"
       />
       <HiringModels
-        title="Why Python"
+        title="Why Choose Python"
         cards={hiringData}
         image={placeholderImage}
       />
       <WhatWeOffer
-        title="Our Python Services"
+        title="What We Offer"
         items={offerData}
         image={placeholderImage}
       />
       <ServicesOfferings 
-        title="Our Expertise" 
+        title="Python Features" 
         items={offerings}
       /> 
       <PythonTechnologies/>

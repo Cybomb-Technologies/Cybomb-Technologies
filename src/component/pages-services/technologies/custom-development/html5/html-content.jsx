@@ -62,17 +62,17 @@ function HTML5Page() {
         highlight="Businesses Worldwide"
       />
       <HiringModels
-        title="Why HTML5"
+        title="Why Choose HTML5"
         cards={hiringData}
         image={placeholderImage}
       />
       <WhatWeOffer
-        title="Our HTML5 Services"
+        title="What We Offer"
         items={offerData}
         image={placeholderImage}
       />
       <ServicesOfferings 
-        title="Our Expertise" 
+        title="HTML5 Features" 
         items={offerings}
       /> 
       <HTML5Technologies/>

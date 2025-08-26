@@ -67,12 +67,12 @@ function CSharpPage() {
         image={placeholderImage}
       />
       <WhatWeOffer
-        title="Our C# Services"
+        title="What We Offer"
         items={offerData}
         image={placeholderImage}
       />
       <ServicesOfferings 
-        title="Our Expertise" 
+        title="C# Features" 
         items={offerings}
       /> 
       <CSharpTechnologies/>

@@ -2,55 +2,55 @@ import React from "react";
 import Banner from "../../../../common-ui/custom-development/banner";
 import InfoStats from "../../../../common-ui/custom-development/info-stats";
 import HiringModels from "../../../../common-ui/custom-development/hiring";
-import placeholderImage from './../../../../../assets/placeholder-image.webp';
+import placeholderImage from "./../../../../../assets/placeholder-image.webp";
 import WhatWeOffer from "../../../../common-ui/custom-development/whatweoffer";
 import ServicesOfferings from "../../../../common-ui/custom-development/services-offerings";
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
-import JavaCreatorTechnologies from "./javascript-technology";
+import JavaScriptTechnologies from "./javascript-technology";
 
 const hiringData = [
-  { title: 'Enterprise Grade', description: 'Rock-solid applications for mission-critical systems.' },
-  { title: 'Performance', description: 'High-throughput, low-latency solutions.' },
-  { title: 'Security', description: 'Built with enterprise security standards.' },
-  { title: 'Scalability', description: 'Handles growing user loads with ease.' },
-  { title: 'Ecosystem', description: 'Largest selection of libraries and frameworks.' }
+  { title: "Flexibility", description: "Works across front-end, back-end, and full-stack applications." },
+  { title: "Performance", description: "Fast, event-driven, and optimized for real-time apps." },
+  { title: "Security", description: "Robust libraries and practices to secure modern apps." },
+  { title: "Scalability", description: "Handles millions of requests using Node.js and modern frameworks." },
+  { title: "Ecosystem", description: "Largest ecosystem of open-source libraries via npm." }
 ];
 
 const offerData = [
-  { title: 'Custom Java Applications', description: 'Tailored solutions for your business needs.' },
-  { title: 'Spring Boot Microservices', description: 'Cloud-native microservice architectures.' },
-  { title: 'Enterprise Integration', description: 'Connect legacy and modern systems.' },
-  { title: 'API Development', description: 'RESTful and GraphQL APIs.' },
-  { title: 'Legacy Modernization', description: 'Update and refactor older Java systems.' },
-  { title: 'Performance Tuning', description: 'Optimize existing Java applications.' }
+  { title: "Custom JavaScript Applications", description: "Tailored web and mobile apps for your business." },
+  { title: "Front-End Development", description: "Interactive UIs using React, Angular, or Vue.js." },
+  { title: "Back-End Development", description: "Scalable APIs and services using Node.js and Express." },
+  { title: "Full-Stack Solutions", description: "End-to-end solutions using modern JavaScript frameworks." },
+  { title: "Legacy Modernization", description: "Upgrade jQuery or old JavaScript apps to modern frameworks." },
+  { title: "Performance Tuning", description: "Optimize code, bundle size, and runtime performance." }
 ];
 
 const offerings = [
-  { title: 'Java Architects', description: 'Experts in system design and architecture.' },
-  { title: 'Spring Specialists', description: 'Deep knowledge of Spring ecosystem.' },
-  { title: 'Cloud Native', description: 'Deployment to AWS, Azure and GCP.' },
-  { title: 'CI/CD Pipelines', description: 'Automated testing and deployment.' },
-  { title: 'Code Quality', description: 'Clean, maintainable code practices.' },
-  { title: 'Agile Development', description: 'Iterative delivery with Scrum/Kanban.' }
+  { title: "React & Vue Experts", description: "Skilled in building dynamic SPAs with reusable components." },
+  { title: "Node.js Specialists", description: "Expertise in creating scalable, event-driven backends." },
+  { title: "Cross-Platform Apps", description: "Build once and deploy across web, mobile, and desktop." },
+  { title: "CI/CD Pipelines", description: "Automated testing, bundling, and deployment workflows." },
+  { title: "Code Quality", description: "Clean, modular, and maintainable JavaScript practices." },
+  { title: "Agile Development", description: "Iterative delivery with Scrum and Kanban methodologies." }
 ];
 
 const useCases = [
-  "Banking Systems - Secure financial applications.",
-  "E-Commerce Platforms - High-volume transaction systems.",
-  "Healthcare Solutions - HIPAA compliant applications.",
-  "Telecom Systems - High-concurrency solutions.",
-  "IoT Backends - Process device data at scale."
+  "E-Commerce Platforms - Fast, scalable shopping experiences.",
+  "Real-Time Apps - Chat, video streaming, and collaboration tools.",
+  "Single Page Applications - Interactive UIs with React or Vue.",
+  "IoT Dashboards - Manage and visualize connected devices.",
+  "Progressive Web Apps - Installable, offline-ready applications."
 ];
 
 function JavaScriptPage() {
   return (
     <section>
-      <Banner 
-        heading="Java Development Services"
-        subtext="Enterprise-grade Java solutions for mission-critical applications."
+      <Banner
+        heading="JavaScript Development Services"
+        subtext="Modern JavaScript solutions for dynamic, scalable, and high-performance applications."
         buttonText="Consult Our Experts"
-        note="Our Java architects and developers build robust, scalable applications using the Java ecosystem including Spring Boot, Microservices, and cloud-native architectures for enterprises worldwide."
+        note="Our JavaScript developers craft robust front-end, back-end, and full-stack applications using React, Node.js, Vue.js, and modern frameworks to power businesses worldwide."
       />
       <InfoStats
         stats={[
@@ -59,33 +59,19 @@ function JavaScriptPage() {
           { number: "75%", label: "Drives full-stack dev (Node.js)" }
         ]}
         caption="Trusted by"
-        highlight="Fortune 500 Companies"
+        highlight="Global Enterprises"
       />
-      <HiringModels
-        title="Why Java"
-        cards={hiringData}
-        image={placeholderImage}
-      />
-      <WhatWeOffer
-        title="Our Java Services"
-        items={offerData}
-        image={placeholderImage}
-      />
-      <ServicesOfferings 
-        title="Our Expertise" 
-        items={offerings}
-      /> 
-      <JavaCreatorTechnologies/>
-      <DevelopmentProcess 
-        title="Common Use Cases"
-        Process={useCases}
-      />
-      <OnlinePresence 
-        title="Ready to Build Your Java Solution?"
+      <HiringModels title="Why Choose JavaScript" cards={hiringData} image={placeholderImage} />
+      <WhatWeOffer title="What We Offer" items={offerData} image={placeholderImage} />
+      <ServicesOfferings title="Java Script Features" items={offerings} />
+      <JavaScriptTechnologies />
+      <DevelopmentProcess title="Common Use Cases" Process={useCases} />
+      <OnlinePresence
+        title="Ready to Build Your JavaScript Solution?"
         buttonText="CONTACT OUR TEAM"
         buttonLink="#"
         imageSrc={placeholderImage}
-        imageAlt="Java development services"
+        imageAlt="JavaScript development services"
       />
     </section>
   );

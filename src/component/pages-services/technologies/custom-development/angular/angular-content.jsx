@@ -62,17 +62,17 @@ function AngularPage() {
         highlight="Enterprise Clients"
       />
       <HiringModels
-        title="Why Angular"
+        title="Why Choose Angular"
         cards={hiringData}
         image={placeholderImage}
       />
       <WhatWeOffer
-        title="Our Angular Services"
+        title="What We Offer"
         items={offerData}
         image={placeholderImage}
       />
       <ServicesOfferings 
-        title="Our Expertise" 
+        title="Angular Features" 
         items={offerings}
       /> 
       <AngularTechnologies/>

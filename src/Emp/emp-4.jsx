@@ -56,7 +56,7 @@ const emp4Routes = (
     <Route path="/services/api-development" element={<ApiDevelopment />} />
 
     <Route path="/services/hosting-service" element={<HostingServices/>}/>
-    <Route path="/services/support-service" element={<SupportServices/>}/>
+    <Route path="/services/server-support" element={<SupportServices/>}/>
     <Route path="/services/development-support" element={<DevelopmentSupport/>}/>
     <Route path="/services/staff-agumentation" element={<Staff/>}/>
 
