@@ -121,12 +121,12 @@ function RORAppContent() {
         image={placeholderImage}
       />
       <WhatWeOffer
-        title="Our Rails Services"
+        title="What We Offer"
         items={offerData}
         image={placeholderImage}
       />
       <ServicesOfferings 
-        title="Our Rails Expertise" 
+        title="Rails Features" 
         items={offerings}
       /> 
       <RailsTechnologiesTools/>

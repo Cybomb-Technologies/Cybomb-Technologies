@@ -60,36 +60,37 @@ const offerData = [
 
 const offerings = [
   {
-    title: 'Experienced PHP Developers',
+    title: 'Open Source',
     description:
-      'Improve existing CRM workflows, lead tracking, and reporting using automation.',
+      'PHP is free to use and supported by a large community of developers worldwide.',
   },
   {
-    title: 'Full-Cycle Development',
+    title: 'Cross-Platform',
     description:
-      'Improve existing CRM workflows, lead tracking, and reporting using automation.',
+      'Runs smoothly on major operating systems like Windows, Linux, and macOS.',
   },
   {
-    title: 'Responsive & Secure',
+    title: 'Database Integration',
     description:
-      'Improve existing CRM workflows, lead tracking, and reporting using automation.',
+      'Seamlessly connects with MySQL, PostgreSQL, MongoDB, and other databases.',
   },
   {
-    title: 'Agile Methodology',
+    title: 'Object-Oriented Support',
     description:
-      'Improve existing CRM workflows, lead tracking, and reporting using automation.',
+      'Supports OOP concepts such as classes, inheritance, and interfaces for modular development.',
   },
   {
-    title: 'Global Client Base',
+    title: 'Built-in Functions',
     description:
-      'Improve existing CRM workflows, lead tracking, and reporting using automation.',
+      'Provides thousands of ready-to-use functions for string, array, file handling, and more.',
   },
   {
-    title: 'Global Client Base',
+    title: 'Security Features',
     description:
-      'Improve existing CRM workflows, lead tracking, and reporting using automation.',
+      'Offers features like data encryption, hashing, and secure session handling.',
   },
 ];
+
 
 const useCases = [
   "Corporate Websites – Professional, responsive, and brand-focused sites.",
@@ -119,7 +120,7 @@ function PHPAppContent() {
     />
 
  <HiringModels
-      title="Hiring Models"
+      title="Why Choose PHP"
       cards={hiringData}
       image={placeholderImage}
     />
@@ -129,7 +130,7 @@ function PHPAppContent() {
       image={placeholderImage}
     />
      <ServicesOfferings 
-          title="What We Offer" 
+          title="PHP Features" 
           items={offerings}
         /> 
         <TechnologiesToolsSection/>
