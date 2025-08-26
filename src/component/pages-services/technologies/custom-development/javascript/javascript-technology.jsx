@@ -1,33 +1,48 @@
 import React, { useState } from "react";
 import styles from "../../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
-const JavaCreatorTechnologies = () => {
+const JavaScriptTechnologies = () => {
   const techData = {
-    "Java Ecosystem": ["Java SE", "Java EE", "Spring Boot", "Jakarta EE", "GraalVM"],
-    "Frameworks": ["Spring MVC", "Hibernate", "Struts", "Play", "Vaadin"],
-    "Build Tools": ["Maven", "Gradle", "Ant", "JUnit"],
-    "Deployment": ["Tomcat", "WildFly", "Docker", "Kubernetes"]
+    "Core JavaScript": ["JavaScript (ES6+)", "TypeScript", "Node.js", "Deno", "Bun"],
+    "Front-End Frameworks": ["React", "Vue.js", "Angular", "Svelte", "Next.js"],
+    "Back-End Frameworks": ["Express.js", "NestJS", "AdonisJS"],
+    "Build & Testing Tools": ["Webpack", "Vite", "Babel", "Jest", "Mocha"],
+    "Deployment & DevOps": ["Docker", "Kubernetes", "Vercel", "Netlify", "AWS Lambda"]
   };
 
   const techLogos = {
-    "Java SE": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-    "Java EE": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg",
-    "Spring Boot": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
-    "Jakarta EE": "https://jakarta.ee/images/jakarta/jakarta-ee-logo-color.svg",
-    "GraalVM": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/GraalVM_Logo_RGB.svg/228px-GraalVM_Logo_RGB.svg.png?20241126120655",
-    "Spring MVC": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg",
-    "Hibernate": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-original-wordmark.svg",
-    "Struts": "https://www.svgrepo.com/show/354402/struts.svg",
-    "Play": "https://www.playframework.com/assets/images/logos/play_full_color.png",
-    "Vaadin": "https://vaadin.com/images/trademark/vaadin-logo.svg",
-    "Maven": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg",
-    "Gradle": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg",
-    "Ant": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/antdesign/antdesign-original.svg",
-    "JUnit": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/junit/junit-original-wordmark.svg",
-    "Tomcat": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original-wordmark.svg",
-    "WildFly": "https://images.seeklogo.com/logo-png/39/1/wildfly-logo-png_seeklogo-398694.png",
+    // Core JS
+    "JavaScript (ES6+)": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    "Deno": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/denojs/denojs-original.svg",
+    "Bun": "https://bun.sh/logo.svg",
+
+    // Frontend
+    "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "Vue.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    "Angular": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+    "Svelte": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
+    "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+
+    // Backend
+    "Express.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    "NestJS": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
+    "AdonisJS": "https://avatars.githubusercontent.com/u/13810373?s=200&v=4",
+
+    // Tools
+    "Webpack": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg",
+    "Vite": "https://vitejs.dev/logo.svg",
+    "Babel": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg",
+    "Jest": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+    "Mocha": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg",
+
+    // Deployment
     "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-    "Kubernetes": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+    "Kubernetes": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+    "Vercel": "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
+    "Netlify": "https://www.netlify.com/v3/static/favicon/favicon.ico",
+    "AWS Lambda": "https://cdn.worldvectorlogo.com/logos/aws-lambda-1.svg"
   };
 
   const categories = Object.keys(techData);
@@ -36,7 +51,7 @@ const JavaCreatorTechnologies = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Java Technologies</h2>
+        <h2 className={styles.title}>JavaScript Technologies</h2>
         <div className={styles.tabWrapper}>
           {categories.map((cat) => (
             <button
@@ -55,7 +70,9 @@ const JavaCreatorTechnologies = () => {
                 src={techLogos[item]}
                 alt={`${item} logo`}
                 className={styles.logo}
-                onError={(e) => { e.target.src = "https://via.placeholder.com/50"; }}
+                onError={(e) => {
+                  e.target.src = "https://via.placeholder.com/50";
+                }}
               />
               <span>{item}</span>
             </div>
@@ -66,4 +83,4 @@ const JavaCreatorTechnologies = () => {
   );
 };
 
-export default JavaCreatorTechnologies;
+export default JavaScriptTechnologies;

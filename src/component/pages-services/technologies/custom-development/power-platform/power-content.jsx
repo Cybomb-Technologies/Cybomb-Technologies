@@ -113,17 +113,17 @@ function PowerPlatformContent() {
         highlight="Enterprises and SMBs"
       />
       <HiringModels
-        title="Why Power Platform"
+        title="Why Choose Power Platform"
         cards={hiringData}
         image={placeholderImage}
       />
       <WhatWeOffer
-        title="Our Power Platform Services"
+        title="What We Offer"
         items={offerData}
         image={placeholderImage}
       />
       <ServicesOfferings 
-        title="Our Approach" 
+        title="Power Platform Features" 
         items={offerings}
       /> 
       <PowerPlatformTechnologies/>

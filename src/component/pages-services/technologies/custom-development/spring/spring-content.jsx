@@ -47,7 +47,7 @@ function SpringPage() {
   return (
     <section>
       <Banner 
-        heading="Spring Development Services"
+        heading="Spring Boot Development Services"
         subtext="Build enterprise-grade, scalable, and secure applications with the Spring ecosystem."
         buttonText="Start Your Project"
         note="Our Spring developers deliver high-performance solutions using Spring Framework, Spring Boot, Spring Cloud, and more for enterprises across domains."
@@ -62,17 +62,17 @@ function SpringPage() {
         highlight="Global Enterprises"
       />
       <HiringModels
-        title="Why Choose Spring"
+        title="Why Choose Spring Boot"
         cards={hiringData}
         image={placeholderImage}
       />
       <WhatWeOffer
-        title="Our Spring Services"
+        title="What We offer"
         items={offerData}
         image={placeholderImage}
       />
       <ServicesOfferings 
-        title="Our Expertise" 
+        title="Spring Boot Features" 
         items={offerings}
       /> 
       <SpringTechnologies/>
