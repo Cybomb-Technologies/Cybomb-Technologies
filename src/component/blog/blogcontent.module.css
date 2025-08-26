@@ -247,3 +247,19 @@
   opacity: 0.5;
   filter: blur(40px);
 }
+
+
+.truncateTwoLines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* show only 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.readMore {
+  color: #0d6efd;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 5px;
+}

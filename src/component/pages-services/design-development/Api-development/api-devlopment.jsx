@@ -2,6 +2,7 @@ import ApiDevContent from './api-content';
 import StillNotSure from '../../../common-ui/stillnotsure/StillNotSure';
 import Metatags from '../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../common-ui/agile-process/agile-process1';
+import PaymentGateways from '../../../common-ui/design-and-development/PaymentGateways';
 
 function ApiDevelopment() {
   const metaPropsData = {
@@ -179,10 +180,20 @@ const tabsData = [
         title: 'Security Updates',
         description:
           'We apply patches, strengthen authentication, and maintain compliance with security standards.'
-      }
+      },
     ]
   }
 ];
+
+const paymentAPIs = [
+  { name: "Stripe", description: "Popular payment gateway for global businesses.", icon: "💳" },
+  { name: "PayPal", description: "Secure online payments worldwide.", icon: "🅿️" },
+  { name: "PhonePe", description: "India’s digital payment platform.", icon: "📱" },
+  { name: "UPI", description: "Unified Payments Interface for instant bank transfers.", icon: "🏦" },
+  { name: "Razorpay", description: "Full-stack payment solution for Indian businesses.", icon: "💰" },
+  { name: "GPay", description: "Google Pay integration for fast and secure payments.", icon: "🟢" }
+];
+
 
   return (
     <>
@@ -195,6 +206,7 @@ const tabsData = [
         accentColor="#1c85cb"
         cardView={true}
       />
+     <PaymentGateways tools={paymentAPIs} />
       <StillNotSure />
     </>
   );
