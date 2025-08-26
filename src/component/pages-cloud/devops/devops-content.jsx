@@ -9,6 +9,7 @@ import EngagementOptions from '../../common-ui/cloud-services/engagement-options
 import styles from '../../common-ui/cloud-services/cloud-usecase.module.css';
 import devOpsImg from '../../../assets/technologies/do-with-devops-img.jpg';
 import contactUsImg from './../../../assets/contact/contact-us-img2.jpg';
+import DevOpsTools from '../../common-ui/cloud-services/DevOpsTools';
 
 const statsData = [
   { number: "60%", label: "Faster release cycles with CI/CD pipelines" },
@@ -141,6 +142,7 @@ export default function DevopsContent() {
       imageSrc={contactUsImg}
       imageAlt="Illustration of DevOps solutions"
     />
+    <DevOpsTools/>
       <CloudUseCase
       title="Use Cases"
       useCases={useCases}
