@@ -44,14 +44,6 @@ const useCases = [
   "Startups – Cloud-native, scalable database-backed apps."
 ];
 
-  // const iconColors = [
-  //   , // Original purple
-  //   "linear-gradient(135deg, #f9e1a0ff, #fede9fff)", // Blue
-  //   "linear-gradient(135deg, #beedf6ff, #c7e7fbff)", // Pink
-  //   "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)", // Green
-  //   "linear-gradient(135deg, #f5c7c7d8, #fad6d6cb)", // Orange
-  //   "linear-gradient(135deg, #959393ff, #092e2048)", // Lavender
-  // ];
 
 const databaseDescription = [
   {

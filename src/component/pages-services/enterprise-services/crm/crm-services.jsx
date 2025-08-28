@@ -1,6 +1,7 @@
 import CrmServicesContent from './crm-services-content';
 import StillNotSure from '../../../common-ui/stillnotsure/StillNotSure';
 import AgileProcess1 from '../../../common-ui/agile-process/agile-process1';
+import CRMTools from '../../../common-ui/enterprise-services/CRMTools';
 
 function CRMServices() {
   const tabsData = [
@@ -173,6 +174,18 @@ function CRMServices() {
     ]
   }
 ];
+const crmTools = [
+  {
+    name: "SAP",
+    description: "Enterprise-level CRM and business management solution.",
+    // url: "https://www.sap.com"
+  },
+  {
+    name: "QuickBooks",
+    description: "Accounting and CRM solution for small to medium businesses.",
+    // url: "https://quickbooks.intuit.com/"
+  }
+];
 
   return (
     <>
@@ -184,6 +197,7 @@ function CRMServices() {
         accentColor="#1c85cb"
         cardView={true}
       />
+      <CRMTools tools={crmTools}/>
       <StillNotSure/>
     </>
   );
