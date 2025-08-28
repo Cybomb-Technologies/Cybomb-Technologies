@@ -26,6 +26,8 @@ import ApiSecurity from "../component/pages-security/api-security/api-security";
 import CloudSecurity from "../component/pages-security/cloud-security-services/cloud-security";
 import NetworkPen from "../component/pages-security/network-penetration-testing/network-security";
 import PricingPage from "../component/page-pricing/pricing/pricing";
+import UnityGames from "../component/pages-services/technologies/games/unity/unity";
+import UnrealGames from "../component/pages-services/technologies/games/unreal/unreal";
 
 // Just return <Route />s. Don't wrap in <Routes>
 const emp2Routes = (
@@ -60,6 +62,8 @@ const emp2Routes = (
     <Route path="/services/cloud-security-services" element={<CloudSecurity/>}/>
     <Route path="/services/network-penetration-testing" element={<NetworkPen/>}/>
     <Route path="/pricing-page" element={<PricingPage/>}/>
+    <Route path="/services/unity" element={<UnityGames/>}/>
+    <Route path="/services/unreal" element={<UnrealGames/>}/>
   </>
 );
 
