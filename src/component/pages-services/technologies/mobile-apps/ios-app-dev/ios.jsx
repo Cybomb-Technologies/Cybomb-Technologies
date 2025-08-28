@@ -1,4 +1,4 @@
-import IosContent from './ios-cntent';
+import IosContent from './ios-content';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
 

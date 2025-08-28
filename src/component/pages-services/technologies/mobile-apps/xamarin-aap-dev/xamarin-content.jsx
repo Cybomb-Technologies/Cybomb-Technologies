@@ -9,7 +9,7 @@ import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img1.png';
-
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 const services = [
   {
     title: 'Custom Xamarin App Development',
@@ -76,12 +76,47 @@ const whychooseus = [
   {
     title: 'Flexible Engagement Models',
     description: 'Choose between fixed scope or ongoing collaboration models.',
-  },
-  {
-    title: 'Post-Launch Partnership',
-    description: 'Ongoing updates, enhancements, and support after launch.',
   }
 ];
+const xamarinTechDescription = [
+  {
+    name: "C#",
+    description: "Primary programming language used for building Xamarin applications with strong type safety, OOP principles, and cross-platform support.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+    iconColors: "linear-gradient(135deg, #d7f0ff, #b1e1ff)"
+  },
+  {
+    name: ".NET MAUI",
+    description: "The evolution of Xamarin.Forms, enabling developers to build native cross-platform apps with a single project and shared UI codebase.",
+    icon: "https://icon.icepanel.io/Technology/svg/.NET.svg",
+    iconColors: "linear-gradient(135deg, #e0dfff, #c4c3ff)"
+  },
+  {
+    name: "Xamarin",
+    description: "A cross-platform mobile app development framework that allows developers to create native iOS, Android, and Windows apps with shared C# code.",
+    icon: "https://cdn.iconscout.com/icon/free/png-512/free-xamarin-282427.png?f=webp&w=512",
+    iconColors: "linear-gradient(135deg, #d9faff, #b5f0ff)"
+  },
+  {
+    name: "Microsoft Azure",
+    description: "Cloud platform to integrate Xamarin apps with backend services, authentication, storage, and scalable APIs.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+    iconColors: "linear-gradient(135deg, #e1f1ff, #b8e0ff)"
+  },
+  {
+    name: "Firebase",
+    description: "Provides backend services such as real-time databases, authentication, and push notifications for Xamarin apps.",
+    icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+    iconColors: "linear-gradient(135deg, #fff3d6, #ffd27f)"
+  },
+  {
+    name: "REST APIs",
+    description: "Integration of RESTful services to enable communication between Xamarin apps and external systems or databases.",
+    icon: "https://www.vectorlogo.zone/logos/json/json-icon.svg",
+    iconColors: "linear-gradient(135deg, #f0faff, #d9f0ff)"
+  }
+];
+
 
 function XamarinContent() {
   return (
@@ -119,6 +154,7 @@ function XamarinContent() {
       <WhyChooseUs ChooseUs={whychooseus} />
 
       <XamarinTechnologiesSection />
+      <AboutTech technologies={xamarinTechDescription} />
       <StillNotSure />
 
       <HiringModels
