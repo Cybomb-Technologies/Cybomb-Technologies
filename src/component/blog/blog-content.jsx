@@ -50,6 +50,29 @@ function Blogcontent() {
     fetchPosts();
   }, [selectedTopic]);
 
+  // 🔹 Excerpt with "Read More" toggle
+  const ExcerptWithToggle = ({ text }) => {
+    const [expanded, setExpanded] = useState(false);
+
+    return (
+      <p className="card-text">
+        {expanded ? (
+          text
+        ) : (
+          <span className={styles.truncateTwoLines}>{text}</span>
+        )}
+        {text.length > 100 && (
+          <span
+            className={styles.readMore}
+            onClick={() => setExpanded(!expanded)}
+          >
+            {expanded ? " Show Less" : "... Read More"}
+          </span>
+        )}
+      </p>
+    );
+  };
+
   return (
     <section className={styles.blogSection}>
       <div className="container">
@@ -62,7 +85,7 @@ function Blogcontent() {
           </p>
         </div>
 
-  {/* Trending Topics */}
+        {/* Trending Topics */}
         <div className={`text-center mb-5 ${styles.trendingTopics}`}>
           <h4 className="mb-3">Trending Topics</h4>
           <div className={styles.badgeWrapper}>
@@ -79,6 +102,7 @@ function Blogcontent() {
             ))}
           </div>
         </div>
+
         {/* Blog Cards - Dynamic from API */}
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
           {loading ? (
@@ -89,11 +113,15 @@ function Blogcontent() {
                 <div className={`card h-100 ${styles.blogCard}`}>
                   <img src={post.image} className="card-img-top" alt={post.title} />
                   <div className="card-body">
-                    <h5 className="card-title">{post.title}</h5>
+                    {/* Title clamp */}
+                    <h5 className={`card-title ${styles.truncateTwoLines}`}>
+                      {post.title}
+                    </h5>
                     <p className={`card-text text-primary small mb-1`}>
                       {post.date} · {post.category}
                     </p>
-                    <p className="card-text">{post.excerpt}</p>
+                    {/* Excerpt with toggle */}
+                    <ExcerptWithToggle text={post.excerpt} />
                   </div>
                 </div>
               </div>

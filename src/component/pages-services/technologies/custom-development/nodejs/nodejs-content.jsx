@@ -62,17 +62,17 @@ function NodeJSPage() {
         highlight="High-Growth Startups"
       />
       <HiringModels
-        title="Why Node.js"
+        title="Why Choose Node.js"
         cards={hiringData}
         image={placeholderImage}
       />
       <WhatWeOffer
-        title="Our Node.js Services"
+        title="What We Offer"
         items={offerData}
         image={placeholderImage}
       />
       <ServicesOfferings 
-        title="Our Expertise" 
+        title="Node.js Features" 
         items={offerings}
       /> 
       <NodeJSTechnologies/>

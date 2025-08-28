@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./choose-your-tech.module.css";
-import { FaGlobe, FaMobileAlt, FaCloud, FaRobot, FaCogs } from "react-icons/fa";
+import { FaGlobe, FaMobileAlt, FaCloud, FaRobot, FaCogs, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const products = [
   { id: "web", title: "Web Development", icon: <FaGlobe /> },
@@ -219,55 +219,139 @@ const techData = {
 };
 
 function ChooseYourTech() {
-  const [selectedProduct, setSelectedProduct] = useState("web");
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev === 0 ? products.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev === products.length - 1 ? 0 : prev + 1));
+  };
+
+  const activeProduct = products[activeIndex];
+  const activeTechData = techData[activeProduct.id];
 
   return (
     <section className={styles.techSection}>
       <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>Choose Your Tech</h2>
+        <h2 className={styles.sectionTitle}>CHOOSE YOUR TECH</h2>
 
-        {/* Product Cards */}
-        <div className={styles.productsRow}>
-          {products.map((product) => (
-            <div
+        {/* Desktop Tabs */}
+        <div className={styles.desktopTabs}>
+          {products.map((product, index) => (
+            <button
               key={product.id}
-              className={`${styles.productCard} ${
-                selectedProduct === product.id ? styles.active : ""
+              className={`${styles.tabButton} ${
+                index === activeIndex ? styles.activeTab : ""
               }`}
-              onClick={() => setSelectedProduct(product.id)}
+              onClick={() => setActiveIndex(index)}
             >
-              <div className={styles.icon}>{product.icon}</div>
-              <span>{product.title}</span>
-            </div>
+              <span className={styles.tabIcon}>{product.icon}</span>
+              <span className={styles.tabLabel}>{product.title}</span>
+            </button>
           ))}
         </div>
 
-        {/* Tech Details - Row with Tech Cards */}
-          <div className={styles.techDetails}>
-            {techData[selectedProduct]?.map((group) => (
-              <div key={group.category} className={styles.techRow}>
-                
-                {/* Category Title */}
-                <div className={styles.techCategory}>
-                  <h3>{group.category}</h3>
-                </div>
+        {/* Tablet/Mobile Carousel */}
+          <div className={styles.carouselWrapper}>
+            <div className={styles.arrowsWrapper}>
+              <button className={styles.arrow} onClick={handlePrev}>
+                <FaChevronLeft />
+              </button>
+            </div>
 
-                {/* Tech Cards */}
-                  <div className={styles.techItemsRow}>
-                    {group.items.map((tech) => (
-                      <div key={tech.name} className={styles.techCard}>
-                        <img src={tech.logo} alt={tech.name} />
-                        <span>{tech.name}</span>
-                      </div>
-                    ))}
-                  </div>
-              </div>
-            ))}
+            <div className={styles.carouselItem}>
+              <span className={styles.tabIcon}>{activeProduct.icon}</span>
+              <span className={styles.tabLabel}>{activeProduct.title}</span>
+            </div>
+
+            <div className={styles.arrowsWrapper}>
+              <button className={styles.arrow} onClick={handleNext}>
+                <FaChevronRight />
+              </button>
+            </div>
           </div>
 
+
+        {/* Tech Stack Content */}
+        <div className={styles.tabContent}>
+          {activeTechData?.map((group) => (
+            <div key={group.category} className={styles.techRow}>
+              <div className={styles.techCategory}>
+                <h3 className={styles.headerh3}>{group.category}</h3>
+              </div>
+              <div className={styles.techItemsRow}>
+                {group.items.map((item) => (
+                  <div key={item.name} className={styles.techCard}>
+                    <img src={item.logo} alt={item.name} />
+                    <span><p>{item.name} </p></span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
 
 export default ChooseYourTech;
+
+
+
+// function ChooseYourTech() {
+//   const [activeTech, setActiveTech] = useState(null);
+
+//   const handleToggle = (techId) => {
+//     setActiveTech(activeTech === techId ? null : techId);
+//   };
+
+//   return (
+//     <section className={styles.techSection}>
+//       <div className={styles.container}>
+//         {/* Title */}
+//         <h2 className={styles.sectionTitle}>CHOOSE YOUR TECH</h2>
+
+//         {/* Active Buttons */}
+//           <div className={styles.productButtonsWrapper}>
+//             {products.map((product) => (
+//               <div key={product.id} className={styles.productBlock}>
+//                 <button
+//                   className={`${styles.productButton} ${
+//                     activeTech === product.id ? styles.active : ""
+//                   }`}
+//                   onClick={() => handleToggle(product.id)}
+//                 >
+//                   {product.icon} {product.title}
+//                 </button>
+
+//                 {/* Tech Details for Active Tab */}
+//                 {activeTech === product.id && (
+//                   <div className={styles.techDetails}>
+//                     {techData[product.id]?.map((group) => (
+//                       <div key={group.category} className={styles.techRow}>
+//                         <div className={styles.techCategory}>
+//                           <h3>{group.category}</h3>
+//                         </div>
+//                         <div className={styles.techItemsRow}>
+//                           {group.items.map((tech) => (
+//                             <div key={tech.name} className={styles.techCard}>
+//                               <img src={tech.logo} alt={tech.name} />
+//                               <span>{tech.name}</span>
+//                             </div>
+//                           ))}
+//                         </div>
+//                       </div>
+//                     ))}
+//                   </div>
+//                 )}
+//               </div>
+//             ))}
+//           </div>
+//       </div>
+//     </section>
+//   );
+// }
+

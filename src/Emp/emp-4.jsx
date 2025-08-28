@@ -46,7 +46,7 @@ import AngularApp from "../component/pages-services/technologies/custom-developm
 import SpringApp from "../component/pages-services/technologies/custom-development/spring/spring";
 import CSharpApp from "../component/pages-services/technologies/custom-development/csharp/csharp";
 import ReactApp from "../component/pages-services/technologies/custom-development/react/reactpage";
-
+import JavaApp from "../component/pages-services/technologies/custom-development/java/java";
 
 
 import DatabaseApp from "../component/pages-services/technologies/custom-development/database/database";
@@ -56,7 +56,7 @@ const emp4Routes = (
     <Route path="/services/api-development" element={<ApiDevelopment />} />
 
     <Route path="/services/hosting-service" element={<HostingServices/>}/>
-    <Route path="/services/support-service" element={<SupportServices/>}/>
+    <Route path="/services/server-support" element={<SupportServices/>}/>
     <Route path="/services/development-support" element={<DevelopmentSupport/>}/>
     <Route path="/services/staff-agumentation" element={<Staff/>}/>
 
@@ -107,7 +107,8 @@ const emp4Routes = (
     <Route path="/services/spring-development-service" element={<SpringApp/>}/>
     <Route path="/services/csharp-development-service" element={<CSharpApp/>}/>
     <Route path="/services/react-development-service" element={<ReactApp/>}/>
-  
+    <Route path="/services/java-development-service" element={<JavaApp/>}/>
+    
 
 
 

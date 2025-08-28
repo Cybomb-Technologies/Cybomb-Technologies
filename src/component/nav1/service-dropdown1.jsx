@@ -137,7 +137,7 @@ function Servicedropdown1({
                 <Link to="/services/hosting-service" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaServer className={styles.icon} /> Hosting
                 </Link>
-                <Link to="/services/support-service" className={styles.dropdownItem} onClick={onLinkClick}>
+                <Link to="/services/server-support" className={styles.dropdownItem} onClick={onLinkClick}>
                   <FaHeadset className={styles.icon} /> Server Support
                 </Link>
                 <Link to="/services/development-support" className={styles.dropdownItem} onClick={onLinkClick}>

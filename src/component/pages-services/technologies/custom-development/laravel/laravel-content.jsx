@@ -60,28 +60,28 @@ const offerData = [
 
 const offerings = [
   {
-    title: 'Laravel Experts',
-    description: 'Certified Laravel developers with 5+ years average experience.',
+    title: 'MVC Architecture',
+    description: 'Provides a clean separation of concerns for structured application development.',
   },
   {
-    title: 'Full-Cycle Development',
-    description: 'From concept to deployment with Laravel ecosystem.',
+    title: 'Eloquent ORM',
+    description: 'Simplifies database interactions with an expressive and elegant ActiveRecord implementation.',
   },
   {
-    title: 'Performance Optimization',
-    description: 'Laravel caching, query optimization, and load balancing.',
+    title: 'Blade Templating',
+    description: 'Lightweight and powerful templating engine with template inheritance and components.',
   },
   {
-    title: 'Laravel + Vue.js/React',
-    description: 'Modern SPAs with Laravel backend and JavaScript frontend.',
+    title: 'Artisan CLI',
+    description: 'Command-line tool for automating repetitive tasks like migrations, testing, and scaffolding.',
   },
   {
-    title: 'Laravel Testing',
-    description: 'PHPUnit, Pest, and Dusk for reliable applications.',
+    title: 'Built-in Authentication',
+    description: 'Pre-configured authentication system with guards, providers, and password hashing.',
   },
   {
-    title: 'Laravel Security',
-    description: 'CSRF protection, XSS prevention, and secure authentication.',
+    title: 'Queue & Task Scheduling',
+    description: 'Handles background jobs, delayed tasks, and cron-style scheduling with ease.',
   },
 ];
 
@@ -117,12 +117,12 @@ function LaravelAppContent() {
         image={placeholderImage}
       />
       <WhatWeOffer
-        title="Our Laravel Services"
+        title="What We Offer"
         items={offerData}
         image={placeholderImage}
       />
       <ServicesOfferings 
-        title="Our Laravel Expertise" 
+        title="Laravel Features" 
         items={offerings}
       /> 
       <TechnologiesToolsSection/>

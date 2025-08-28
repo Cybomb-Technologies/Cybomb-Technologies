@@ -60,7 +60,7 @@ function Footer1({
     {
       icon: "bi-geo-alt-fill",
       label: "Address",
-      text: "Cybomb Technologies LLP, Prime Plaza No.54/1, 1st street, Sripuram colony, St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India",
+      // text: "Cybomb Technologies LLP, Prime Plaza No.54/1, 1st street, Sripuram colony, St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India",
     },
     {
       icon: "bi-telephone-fill",
