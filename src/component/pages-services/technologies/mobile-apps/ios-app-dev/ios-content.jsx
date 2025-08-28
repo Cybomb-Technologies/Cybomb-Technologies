@@ -9,7 +9,7 @@ import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img1.png';
-
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 const services = [
   {
     title: 'Custom Native App Development',
@@ -92,11 +92,48 @@ const whychooseus = [
     title: 'Thorough Quality Assurance',
     description: "Rigorous testing across all stages.",
   },
+  
+];
+
+const iosTechDescription = [
+    {
+    name: "Xcode",
+    description: "Apple’s official IDE for building, testing, and deploying iOS and macOS applications.",
+    icon: "https://icon.icepanel.io/Technology/svg/Xcode.svg",
+    iconColors: "linear-gradient(135deg, #e0f7faff, #b3ebf2ff)"
+  },
   {
-    title: 'Ongoing Support',
-    description: "Continuous maintenance, monitoring, and enhancements.",
+    name: "SwiftUI",
+    description: "A modern UI framework for building declarative and responsive Apple platform interfaces.",
+    icon: "https://img.icons8.com/?size=96&id=_BTyk4vBumjx&format=png", // your base64
+    iconColors: "linear-gradient(135deg, #beedf8ff, #a4dcf5ff)"
+  },
+  {
+    name: "UIKit",
+    description: "A foundational framework providing essential UI components for iOS applications.",
+    icon: "https://www.svgrepo.com/show/342326/uikit.svg",
+    iconColors: "linear-gradient(135deg, #f5e0faff, #e2c7f5ff)"
+  },
+   {
+    name: "Appium",
+    description: "An open-source tool for automating native, mobile web, and hybrid applications on iOS and Android platforms.",
+    icon: "https://appium.io/docs/en/latest/assets/images/appium-logo.png",
+    iconColors: "linear-gradient(135deg, #d1f4fa, #81d4fa)"
+  },
+    {
+    name: "ARKit",
+    description: "A framework for creating augmented reality experiences on iOS devices.",
+    icon: "https://developer.apple.com/assets/elements/icons/arkit/arkit-96x96_2x.png",
+    iconColors: "linear-gradient(135deg, #d9f7e8ff, #b8e6cfff)"
+  },
+  {
+    name: "Xcode",
+    description: "Apple’s official IDE for building apps across iOS, macOS, watchOS, and tvOS platforms.",
+    icon: "https://icon.icepanel.io/Technology/svg/Xcode.svg",
+    iconColors: "linear-gradient(135deg, #e0f2ff, #b3daf7)"
   },
 ];
+
 
 function IosContent() {
   return (
@@ -132,6 +169,7 @@ function IosContent() {
     <WhyChooseUs ChooseUs={whychooseus}/>
 
     <IosTechnologiesSection/>
+    <AboutTech technologies={iosTechDescription} />
     <StillNotSure/>
     
      <HiringModels

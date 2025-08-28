@@ -8,6 +8,7 @@ import ServicesOfferings from "../../../../common-ui/custom-development/services
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import VersionControlTech from "./versioncontrol-technology";
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const hiringData = [
   { title: "Collaboration", description: "Enable seamless teamwork with branching, merging, and pull requests." },
@@ -43,6 +44,46 @@ const useCases = [
   "DevOps – Integrate continuous testing and delivery into workflows.",
 ];
 
+const versionControlDescription = [
+  {
+    name: "Git",
+    description: "Distributed version control system enabling efficient source code management and collaboration.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    iconColors: "linear-gradient(135deg, #fdd6d6ff, #fcbabae7)"
+  },
+  {
+    name: "GitHub",
+    description: "Popular platform for hosting Git repositories with collaboration, code reviews, and project management.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    iconColors: "linear-gradient(135deg, #d0d0d0ff, #f5f5f5ff)"
+  },
+  {
+    name: "GitLab",
+    description: "DevOps platform providing Git repository management, CI/CD, and issue tracking.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
+    iconColors: "linear-gradient(135deg, #f9d2b5ff, #fbc1aaff)"
+  },
+  {
+    name: "Bitbucket",
+    description: "Git-based source code repository hosting service with Jira and Trello integration.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg",
+    iconColors: "linear-gradient(135deg, #c1e3faff, #a8d8faff)"
+  },
+  {
+    name: "GitHub Actions",
+    description: "CI/CD automation tool integrated with GitHub for building, testing, and deploying code.",
+    icon: "https://avatars.githubusercontent.com/u/44036562?s=200&v=4",
+    iconColors: "linear-gradient(135deg, #c7e8faff, #a3e6f7ff)"
+  },
+  {
+    name: "GitLab CI/CD",
+    description: "Continuous integration and deployment pipelines integrated into GitLab.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
+    iconColors: "linear-gradient(135deg, #ffe2ccff, #f7c7b5ff)"
+  }  
+];
+
+
 function VersionControlContent() {
   return (
     <section>
@@ -73,6 +114,7 @@ function VersionControlContent() {
       />
       <ServicesOfferings title="Our Expertise" items={offerings} />
       <VersionControlTech />
+      <AboutTech technologies={versionControlDescription} />
       <DevelopmentProcess title="Common Use Cases" Process={useCases} />
       <OnlinePresence
         title="Ready to Optimize Your Workflow?"

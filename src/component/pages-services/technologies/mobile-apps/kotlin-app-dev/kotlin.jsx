@@ -1,5 +1,5 @@
 import AgileProcess from '../../../../common-ui/agile-process/agile-process';
-import KotlinContent from './kotlin-cntent';
+import KotlinContent from './kotlin-content';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
 
