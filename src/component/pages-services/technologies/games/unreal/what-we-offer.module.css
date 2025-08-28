@@ -1,0 +1,114 @@
+.offerSection {
+  padding: 3rem 1.5rem;
+  background: #fff;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2rem; /* slightly bigger */
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #111;
+}
+
+.scrollContainer {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  scrollbar-width: thin; /* for Firefox */
+  scrollbar-color: #00a8e8 transparent;
+}
+
+/* Scrollbar Track */
+.scrollContainer::-webkit-scrollbar {
+  height: 12px;
+  background: transparent;
+}
+
+/* Scrollbar Thumb with dynamic effects */
+.scrollContainer::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #00a8e8, #007ea7, #00c4ff);
+  background-size: 300% 100%;
+  border-radius: 10px;
+  animation: scrollThumbMove 4s linear infinite, pulseThumb 2.5s ease-in-out infinite;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(0, 168, 232, 0.6);
+}
+
+/* Hover Glow Effect */
+.scrollContainer::-webkit-scrollbar-thumb:hover {
+  box-shadow: 0 0 12px rgba(0, 168, 232, 0.9), 0 0 20px rgba(0, 126, 167, 0.7);
+  transform: scale(1.1);
+}
+
+/* Scrollbar Track */
+.scrollContainer::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+
+/* Moving gradient animation */
+@keyframes scrollThumbMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Subtle pulsing effect */
+@keyframes pulseThumb {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.card {
+  flex: 0 0 360px; /* increased width */
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px); /* subtle lift effect */
+}
+
+.cardImage {
+  width: 100%;
+  height: 280px; /* bigger image */
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 1.25rem; /* more breathing room */
+}
+
+.cardTitle {
+  font-size: 1.25rem; /* bigger heading */
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.cardDescription {
+  font-size: 1rem; /* slightly bigger text */
+  color: #555;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.cardButton {
+  display: inline-block;
+  width: 120px; /* bigger button */
+  height: 40px;
+  border-radius: 22px;
+  border: none;
+  background: #00a8e8;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cardButton:hover {
+  background: #007ea7;
+}
