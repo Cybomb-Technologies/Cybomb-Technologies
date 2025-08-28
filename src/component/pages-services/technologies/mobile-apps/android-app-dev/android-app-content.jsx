@@ -12,7 +12,7 @@ import hireUsImg from './../../../../../assets/contact/hiring-model-img1.png';
 // hiring-model-img1.png
 // hiring-model-img2.webp
 // hiring-model-img3.svg
-
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 const services = [
   {
     title: 'Custom Android App Development',
@@ -90,11 +90,47 @@ const whychooseus = [
     title: 'Custom Solutions',
     description: "Tailored development in line with your goals.",
   },
+];
+
+const AndroidDescription = [
   {
-    title: 'Flexible Hiring Models',
-    description: "bucket hours or dedicated full-time hires.",
+    name: "Android Studio",
+    description: "Official IDE for Android development, providing powerful tools for building, testing, and debugging apps.",
+    icon: "https://icon.icepanel.io/Technology/svg/Android-Studio.svg",
+    iconColors: "linear-gradient(135deg, #c6d0f7ff, #9edcf5ff)"
+  },
+    {
+    name: "Android Emulator",
+    description: "Virtual device environment for testing and debugging Android applications without physical devices.",
+    icon: "https://developer.android.com/static/studio/images/device-manager/emu.png",
+    iconColors: "linear-gradient(135deg, #e2f2faff, #c1e5f7ff)"
+  },
+    {
+    name: "Java",
+    description: "Robust, object-oriented programming language widely used for building Android applications.",
+    icon: "https://www.vectorlogo.zone/logos/java/java-icon.svg",
+    iconColors: "linear-gradient(135deg, #fde0cfff, #fbc4a9ff)"
+  },
+    {
+    name: "XML",
+    description: "Markup language used to design UI layouts and resources in Android applications.",
+    icon: "https://www.svgrepo.com/show/106090/xml.svg",
+    iconColors: "linear-gradient(135deg, #d9d9d9ff, #bfbfbfff)"
+  },
+    {
+    name: "Jetpack Compose",
+    description: "Modern Android UI toolkit for building native interfaces with declarative code.",
+    icon: "https://logo.svgcdn.com/d/jetpackcompose-original-8x.png",
+    iconColors: "linear-gradient(135deg, #d8f5e6ff, #b7f7ccff)"
+  },
+    {
+    name: "BrowserStack",
+    description: "Cloud testing platform for Android apps across real devices and browsers.",
+    icon: "https://www.svgrepo.com/show/353515/browserstack.svg",
+    iconColors: "linear-gradient(135deg, #fae2dfff, #f7b7b7ff)"
   },
 ];
+
 
 function AndroidAppContent() {
   return (
@@ -128,6 +164,7 @@ function AndroidAppContent() {
     <WhyChooseUs ChooseUs={whychooseus}/>
 
     <AndroidTechnologiesSection/>
+    <AboutTech technologies={AndroidDescription} />
     <StillNotSure/>
     
      <HiringModels

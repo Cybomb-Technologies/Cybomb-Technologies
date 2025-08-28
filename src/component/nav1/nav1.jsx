@@ -146,16 +146,16 @@ function Nav1() {
                   </Link>
                 </li>
 
-                 <li className={styles.navItem}>
+                 {/* <li className={styles.navItem}>
                   <Link
                     to="/pricing-page"
                     className={styles.navLink}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Pricing
-                    {/* On-Demand Developer */}
+                   
                   </Link>
-                </li>
+                </li> */}
 
                 <Technologiesdropdown1
                   isMobile={isMobile}
@@ -256,7 +256,7 @@ function Nav1() {
                 </Link>
               </li>
 
-               <li className={styles.navItem}>
+               {/* <li className={styles.navItem}>
                 <Link
                   to="/pricing"
                   className={styles.navLink}
@@ -264,7 +264,7 @@ function Nav1() {
                 >
                   Pricing
                 </Link>
-              </li>
+              </li> */}
 
               <Technologiesdropdown1
                 isMobile

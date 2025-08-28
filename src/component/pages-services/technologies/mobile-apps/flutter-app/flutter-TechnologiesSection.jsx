@@ -9,7 +9,7 @@ const techData = {
 };
 
 const techLogos = {
-  "Flutter SDK": "https://www.svgrepo.com/show/349363/flutter.svg",
+  "Flutter SDK": "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",
   "Dart language": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/dart-programming-language-icon.png",
   
  

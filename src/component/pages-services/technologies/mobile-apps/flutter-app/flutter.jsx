@@ -1,4 +1,4 @@
-import FlutterContent from './flutter-cntent';
+import FlutterContent from './flutter-content';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
 

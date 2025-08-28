@@ -1,4 +1,4 @@
-import ReactNativeContent from './react-native-cntent';
+import ReactNativeContent from './react-native-content';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
 

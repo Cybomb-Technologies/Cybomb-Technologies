@@ -1,4 +1,4 @@
-import AndroidAppContent from './android-app-cntent';
+import AndroidAppContent from './android-app-content';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
 
