@@ -8,7 +8,7 @@ import ServicesOfferings from "../../../../common-ui/custom-development/services
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import ReactTechnologies from "./react-technologies";
-
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 const hiringData = [
   { title: "Component-Based", description: "Reusable and modular UI components." },
   { title: "Fast Development", description: "Rapid iteration with hot reloading." },
@@ -34,7 +34,45 @@ const offerings = [
   { title: "Code Reviews", description: "Ensuring high-quality, maintainable code." },
   { title: "Performance Optimization", description: "Fine-tuned apps for speed and efficiency." },
 ];
+const databaseDescription = [
+  {
+    name: "Express.js",
+    description: "Express.js can be integrated with a NoSQL database like MongoDB to build real-time, scalable applications with flexible, document-based data modeling.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #a8e0ff, #c1f0ff)"
+  },
+  {
+    name: "Next.js",
+    description: "Next.js supports real-time databases and cloud storage integration.This enables seamless, scalable, and synchronized mobile/web apps.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)"
+  },
+  {
+    name: "Vue.js",
+    description: "Vue.js can be integrated with relational databases like MySQL or PostgreSQL.They provide robust, high-performance applications with full ACID compliance.",
+    icon: "https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg",
+    iconColors : "linear-gradient(135deg, #7ed957, #a3f37b)" // Replace with actual icon path
+  },
+  {
+    name: "TypeScript",
+    description: "TypeScript enables scalable, high-performance applications with strong typing and robust code maintainability.",
+    icon: "https://img.icons8.com/?size=100&id=vMqgHSToxrJR&format=png",
+    iconColors : "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)" // Replace with actual icon path
+  },
+  {
+    name: "vercel",
+    description: "Vercel provides fast, serverless deployment for web applications.It ensures seamless scalability, global edge delivery, and optimized performance.",
+    icon: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg",
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)" // Replace with actual icon path
+  },
+  {
+    name: "Electron.js",
+    description: "Electron.js enables building cross-platform desktop applications using JavaScript, HTML, and CSS.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg",
+    iconColors :"linear-gradient(135deg, #a0e1ff, #c1f0ff)" // pastel light blue// Replace with actual icon path
 
+  }
+];
 const useCases = [
   "Web Applications – Interactive, scalable business platforms.",
   "Single Page Applications – Smooth, app-like user experience.",
@@ -69,6 +107,8 @@ function ReactContent() {
       <WhatWeOffer title="Our React Services" items={offerData} image={placeholderImage} />
       <ServicesOfferings title="Our Expertise" items={offerings} />
       <ReactTechnologies />
+      <AboutTech technologies={databaseDescription} />
+
       <DevelopmentProcess title="Common Use Cases" Process={useCases} />
       <OnlinePresence
         title="Ready to Build Your React Solution?"

@@ -10,6 +10,7 @@ import HiringModels from "../../../../common-ui/mobile-app/hiring";
 
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img2.webp';
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const services = [
   {
@@ -91,7 +92,45 @@ const whychooseus = [
     description: 'Continuous optimization, security updates, and feature enhancements.',
   },
 ];
+const databaseDescription = [
+  {
+    name: "Shopify",
+    description: "Shopify is a leading e-commerce platform that enables businesses to create, manage, and scale online stores efficiently.",
+    icon: "https://www.vectorlogo.zone/logos/shopify/shopify-icon.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #a8e0ff, #c1f0ff)"
+  },
+  {
+    name: "Liquid",
+    description: "Liquid is a flexible template language used to create dynamic content in web applications, widely adopted by Shopify and Jekyll.",
+    icon: "https://www.vectorlogo.zone/logos/shopify/shopify-icon.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)"
+  },
+  {
+    name: "JavaScript",
+    description: "JavaScript is a powerful scripting language that enables interactive and dynamic web applications.",
+    icon: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
+    iconColors : "linear-gradient(135deg, #7ed957, #a3f37b)" // Replace with actual icon path
+  },
+  {
+    name: "HTML5",
+    description: "HTML5 is the standard markup language for structuring and presenting modern web content.",
+    icon: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg",
+    iconColors : "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)" // Replace with actual icon path
+  },
+  {
+    name: "CSS3",
+    description: "CSS3 is used to style and design web pages with responsive layouts, animations, and visual effects.",
+    icon: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg",
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)" // Replace with actual icon path
+  },
+  {
+    name: "JSON",
+    description: "JSON (JavaScript Object Notation) is a lightweight data-interchange format used for storing and exchanging structured data.",
+    icon: "https://www.vectorlogo.zone/logos/json/json-icon.svg",
+    iconColors :"linear-gradient(135deg, #a0e1ff, #c1f0ff)" // pastel light blue// Replace with actual icon path
 
+  }
+];
 function ShopifyContent() {
   return (
    <section>
@@ -125,6 +164,8 @@ function ShopifyContent() {
     <WhyChooseUs ChooseUs={whychooseus}/>
 
     <ShopifyTechnologiesSection/>
+    <AboutTech technologies={databaseDescription} />
+
     <StillNotSure/>
     
      <HiringModels

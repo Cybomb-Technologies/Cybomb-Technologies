@@ -9,6 +9,7 @@ import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img2.webp';
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 // hiring-model-img1.png
 // hiring-model-img2.webp
 // hiring-model-img3.svg
@@ -94,7 +95,45 @@ const whychooseus = [
     description: 'Continuous support to keep your store secure, fast, and competitive.',
   },
 ];
+const databaseDescription = [
+  {
+    name: "PHP",
+    description: "PHP is a widely-used server-side scripting language that enables dynamic web development, seamless database integration, and robust backend functionality.",
+    icon: "https://www.vectorlogo.zone/logos/php/php-icon.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #a8e0ff, #c1f0ff)"
+  },
+  {
+    name: "MySQL",
+    description: "MySQL is a reliable relational database management system known for speed, scalability, and ACID compliance.",
+    icon: "https://cdn-icons-png.flaticon.com/128/5968/5968313.png", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)"
+  },
+  {
+    name: "JavaScript",
+    description: "JavaScript is a versatile scripting language that powers dynamic, interactive, and responsive web applications.",
+    icon: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
+    iconColors : "linear-gradient(135deg, #7ed957, #a3f37b)" // Replace with actual icon path
+  },
+  {
+    name: "Knockout.js",
+    description: "Knockout.js is a lightweight JavaScript library that simplifies dynamic UIs with MVVM data binding.",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7eX6iYMVyluJz3BwD10ipXYS1eI1hJ_fLbQ&s",
+    iconColors : "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)" // Replace with actual icon path
+  },
+  {
+    name: "LESS",
+    description: "LESS is a CSS preprocessor that extends stylesheets with variables, mixins, and modular structure for easier maintenance.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LESS_Logo.svg/1024px-LESS_Logo.svg.png",
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)" // Replace with actual icon path
+  },
+  {
+    name: "CSS3",
+    description: "CSS3 is a style sheet language that enhances web design with advanced layouts, animations, and responsive styling.",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzdOPGrhHK13DvB6p7XR8Qlw_LOfMbRuK5Bg&s",
+    iconColors :"linear-gradient(135deg, #a0e1ff, #c1f0ff)" // pastel light blue// Replace with actual icon path
 
+  }
+];
 function AdobeCommerceContent() {
   return (
    <section>
@@ -129,6 +168,8 @@ function AdobeCommerceContent() {
     <WhyChooseUs ChooseUs={whychooseus}/>
 
     <AdobeTechnologiesSection/>
+    <AboutTech technologies={databaseDescription} />
+
     <StillNotSure/>
     
      <HiringModels
