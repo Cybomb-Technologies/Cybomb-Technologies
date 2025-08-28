@@ -12,13 +12,13 @@ function HomeBanner() {
 
   const [setCurrentPhraseIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentPhraseIndex((prev) => (prev + 1) % rotatingPhrases.length);
-    }, 3000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentPhraseIndex((prev) => (prev + 1) % rotatingPhrases.length);
+  //   }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <section className="home-banner">
@@ -26,7 +26,7 @@ function HomeBanner() {
         <Carousel.Item>
           <img
             className="d-block w-100 custom-banner-img"
-            src="/images/banner/banner-1.jpg"
+            src="/images/banner/banner-1.webp"
             alt="First slide"
           />
 
@@ -35,7 +35,7 @@ function HomeBanner() {
               <div className="row">
                 <div className="col-xl-7 col-lg-8 col-md-10">
                   <div className="caption-box text-start">
-                    <h1>Innovating Your Vision Into AI-Powered Platforms</h1>
+                    <h2 className="h1 fw-bold">Innovating Your Vision Into AI-Powered Platforms</h2>
                     <p>
                       We empower businesses with scalable mobile apps,
                       intelligent AI systems, and seamless SaaS platforms —
@@ -54,7 +54,7 @@ function HomeBanner() {
         <Carousel.Item>
           <img
             className="d-block w-100 custom-banner-img"
-            src="/images/banner/banner-2.jpg"
+            src="/images/banner/banner-2.webp"
             alt="Second slide"
           />
 
@@ -63,7 +63,7 @@ function HomeBanner() {
               <div className="row">
                 <div className="col-xl-7 col-lg-8 col-md-10">
                   <div className="caption-box text-start">
-                    <h1>Transforming Ideas Into Digital Excellence</h1>
+                    <h2 className="h1 fw-bold">Transforming Ideas Into Digital Excellence</h2>
                     <p>
                       From concept to launch, we craft user-focused solutions
                       that merge sleek design with powerful technology
@@ -81,7 +81,7 @@ function HomeBanner() {
         <Carousel.Item>
           <img
             className="d-block w-100 custom-banner-img"
-            src="/images/banner/banner-3.jpg"
+            src="/images/banner/banner-3.webp"
             alt="Third slide"
           />
           <Carousel.Caption className="custom-caption">
@@ -89,7 +89,7 @@ function HomeBanner() {
               <div className="row">
                 <div className="col-xl-7 col-lg-8 col-md-10">
                   <div className="caption-box text-start">
-                    <h1>Driving Growth Through Smart Technology</h1>
+                    <h1 className="">Driving Growth Through Smart Technology</h1>
                     <p>
                       Our expertise in AI, cloud solutions, and cross-platform
                       development enables businesses to streamline operations,

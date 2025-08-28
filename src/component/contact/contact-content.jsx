@@ -203,7 +203,11 @@ function Contactcontent() {
           </div>
 
           {/* Contact Form */}
+
           <div className="col-lg-7">
+            <img src="/images/banner/banner-2.webp" alt=""  className="img-fluid h-100 object-fit-cover"/>
+          </div>
+          {/* <div className="col-lg-7">
             <div className="card h-100 border-0 shadow-sm">
               <div className="card-body p-4 p-md-5">
                 {submitStatus && (
@@ -348,7 +352,7 @@ function Contactcontent() {
                 )}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
