@@ -34,7 +34,7 @@ function App() {
         {emp4Routes}
         {emp5Routes}
       </Routes>
-      <Popupform />
+      {/* <Popupform /> */}
       {/* <Footer /> */}
       <Footer1/>
     </Router>

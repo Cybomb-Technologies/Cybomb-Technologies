@@ -15,9 +15,9 @@ function CRMTools({ tools }) {
               <div className={styles.card}>
                 <h3 className={styles.cardTitle}>{tool.name}</h3>
                 <p className={styles.cardDescription}>{tool.description}</p>
-                <a>
+                {/* <a>
                   <button className={styles.learnBtn}>Learn More</button>
-                </a>
+                </a> */}
               </div>
             </div>
           ))}
