@@ -10,6 +10,7 @@ import HiringModels from "../../../../common-ui/mobile-app/hiring";
 
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img2.webp';
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const services = [
   {
@@ -91,7 +92,45 @@ const whychooseus = [
     description: 'Post-launch support to keep your application optimized and updated.',
   },
 ];
+const databaseDescription = [
+  {
+    name: "PHP",
+    description: "PHP is a popular server-side scripting language used for building dynamic and robust web applications.",
+    icon: "https://www.vectorlogo.zone/logos/php/php-icon.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #a8e0ff, #c1f0ff)"
+  },
+  {
+    name: "Symfony CLI",
+    description: "Symfony CLI is a command-line tool that streamlines the development, management, and deployment of Symfony PHP applications.",
+    icon: "https://www.vectorlogo.zone/logos/symfony/symfony-icon.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)"
+  },
+  {
+    name: "Twig",
+    description: "Twig is a flexible and secure templating engine for PHP that simplifies dynamic content rendering.",
+    icon: "https://www.svgrepo.com/show/374142/twig.svg",
+    iconColors : "linear-gradient(135deg, #7ed957, #a3f37b)" // Replace with actual icon path
+  },
+  {
+    name: "Composer",
+    description: "Composer is a dependency manager for PHP that simplifies package installation, versioning, and project management.",
+    icon: "https://www.svgrepo.com/show/85929/composer.svg",
+    iconColors : "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)" // Replace with actual icon path
+  },
+  {
+    name: "Doctrine ORM",
+    description: "Doctrine ORM is a powerful PHP object-relational mapper that simplifies database interactions with object-oriented models.",
+    icon: "https://icon.icepanel.io/Technology/svg/Doctrine.svg",
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)" // Replace with actual icon path
+  },
+  {
+    name: "PostgreSQL",
+    description: "PostgreSQL is a powerful, open-source relational database known for scalability, reliability, and ACID compliance.",
+    icon: "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg",
+    iconColors :"linear-gradient(135deg, #a0e1ff, #c1f0ff)" // pastel light blue// Replace with actual icon path
 
+  }
+];
 function ShopifyContent() {
   return (
    <section>
@@ -126,6 +165,8 @@ function ShopifyContent() {
     <WhyChooseUs ChooseUs={whychooseus}/>
 
     <SymfonyTechnologiesSection/>
+    <AboutTech technologies={databaseDescription} />
+
     <StillNotSure/>
     
      <HiringModels

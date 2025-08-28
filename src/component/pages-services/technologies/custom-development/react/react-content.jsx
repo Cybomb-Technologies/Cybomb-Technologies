@@ -10,6 +10,7 @@ import OnlinePresence from "../../../../common-ui/custom-development/online-pres
 import ReactTechnologies from "./react-technologies";
 import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
+
 const hiringData = [
   {
     title: "Component-Based",
@@ -83,7 +84,45 @@ const offerings = [
     description: "Fine-tuned apps for speed and efficiency.",
   },
 ];
+const databaseDescription = [
+  {
+    name: "Express.js",
+    description: "Express.js can be integrated with a NoSQL database like MongoDB to build real-time, scalable applications with flexible, document-based data modeling.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #a8e0ff, #c1f0ff)"
+  },
+  {
+    name: "Next.js",
+    description: "Next.js supports real-time databases and cloud storage integration.This enables seamless, scalable, and synchronized mobile/web apps.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)"
+  },
+  {
+    name: "Vue.js",
+    description: "Vue.js can be integrated with relational databases like MySQL or PostgreSQL.They provide robust, high-performance applications with full ACID compliance.",
+    icon: "https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg",
+    iconColors : "linear-gradient(135deg, #7ed957, #a3f37b)" // Replace with actual icon path
+  },
+  {
+    name: "TypeScript",
+    description: "TypeScript enables scalable, high-performance applications with strong typing and robust code maintainability.",
+    icon: "https://img.icons8.com/?size=100&id=vMqgHSToxrJR&format=png",
+    iconColors : "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)" // Replace with actual icon path
+  },
+  {
+    name: "vercel",
+    description: "Vercel provides fast, serverless deployment for web applications.It ensures seamless scalability, global edge delivery, and optimized performance.",
+    icon: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg",
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)" // Replace with actual icon path
+  },
+  {
+    name: "Electron.js",
+    description: "Electron.js enables building cross-platform desktop applications using JavaScript, HTML, and CSS.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg",
+    iconColors :"linear-gradient(135deg, #a0e1ff, #c1f0ff)" // pastel light blue// Replace with actual icon path
 
+  }
+];
 const useCases = [
   "Web Applications – Interactive, scalable business platforms.",
   "Single Page Applications – Smooth, app-like user experience.",
@@ -92,29 +131,29 @@ const useCases = [
   "Mobile Apps – React Native for iOS and Android.",
 ];
 
-const reactDescription = [
-  {
-    name: "CSS3",
-    description:
-      "Modern stylesheet standard for responsive layouts, animations, and rich visual effects via media queries and advanced selectors.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    iconColors: "linear-gradient(135deg, #66a6ff, #89f7fe)",
-  },
-  {
-    name: "Bootstrap",
-    description:
-      "Mobile-first CSS framework with a responsive grid, prebuilt components, and theming utilities for fast, consistent UI.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-    iconColors: "linear-gradient(135deg, #a17fe0, #c084fc)",
-  },
-  {
-    name: "Tailwind CSS",
-    description:
-      "Utility-first CSS framework for rapid, scalable UI development using composable classes and design-system consistency.",
-    icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
-    iconColors: "linear-gradient(135deg, #6ee7b7, #3b82f6)",
-  },
-];
+// const reactDescription = [
+//   {
+//     name: "CSS3",
+//     description:
+//       "Modern stylesheet standard for responsive layouts, animations, and rich visual effects via media queries and advanced selectors.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+//     iconColors: "linear-gradient(135deg, #66a6ff, #89f7fe)",
+//   },
+//   {
+//     name: "Bootstrap",
+//     description:
+//       "Mobile-first CSS framework with a responsive grid, prebuilt components, and theming utilities for fast, consistent UI.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+//     iconColors: "linear-gradient(135deg, #a17fe0, #c084fc)",
+//   },
+//   {
+//     name: "Tailwind CSS",
+//     description:
+//       "Utility-first CSS framework for rapid, scalable UI development using composable classes and design-system consistency.",
+//     icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
+//     iconColors: "linear-gradient(135deg, #6ee7b7, #3b82f6)",
+//   },
+// ];
 
 function ReactContent() {
   return (
@@ -146,7 +185,8 @@ function ReactContent() {
       />
       <ServicesOfferings title="Our Expertise" items={offerings} />
       <ReactTechnologies />
-      <AboutTech technologies={reactDescription} />
+      <AboutTech technologies={databaseDescription} />
+
       <DevelopmentProcess title="Common Use Cases" Process={useCases} />
       <OnlinePresence
         title="Ready to Build Your React Solution?"

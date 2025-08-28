@@ -7,9 +7,9 @@ import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-cons
 import { MdSchedule } from 'react-icons/md';
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
-
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img2.webp';
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const services = [
   {
@@ -91,7 +91,45 @@ const whychooseus = [
     description: 'Regular updates, security patches, and performance tuning.',
   },
 ];
+const databaseDescription = [
+  {
+    name: "CSS3",
+    description: "CSS3 is a style sheet language that enhances web design with advanced layouts, animations, and responsive styling.",
+    icon: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #a8e0ff, #c1f0ff)"
+  },
+  {
+    name: "HTML5",
+    description: "HTML5 is the standard markup language for structuring and presenting modern web content.",
+    icon: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)"
+  },
+  {
+    name: "MySQL",
+    description: "MySQL is a reliable relational database management system known for speed, scalability, and ACID compliance.",
+    icon: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg",
+    iconColors : "linear-gradient(135deg, #7ed957, #a3f37b)" // Replace with actual icon path
+  },
+  {
+    name: "JavaScript",
+    description: "JavaScript is a versatile scripting language that powers dynamic, interactive, and responsive web applications.",
+    icon: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
+    iconColors : "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)" // Replace with actual icon path
+  },
+  {
+    name: "Knockout.js",
+    description: "Knockout.js is a lightweight JavaScript library that simplifies dynamic UIs with MVVM data binding.",
+    icon: "https://cdn.worldvectorlogo.com/logos/knockout.svg",
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)" // Replace with actual icon path
+  },
+  {
+    name: "LESS",
+    description: "LESS is a CSS preprocessor that extends stylesheets with variables, mixins, and modular structure for easier maintenance.",
+    icon: "https://www.vectorlogo.zone/logos/lesscss/lesscss-icon.svg",
+    iconColors :"linear-gradient(135deg, #a0e1ff, #c1f0ff)" // pastel light blue// Replace with actual icon path
 
+  }
+];
 function MagentoContent() {
   return (
    <section>
@@ -125,6 +163,8 @@ function MagentoContent() {
     <WhyChooseUs ChooseUs={whychooseus}/>
 
     <MagentoTechnologiesSection/>
+    <AboutTech technologies={databaseDescription} />
+
     <StillNotSure/>
     
      <HiringModels

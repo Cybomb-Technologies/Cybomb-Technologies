@@ -9,6 +9,7 @@ import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img2.webp';
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const services = [
   {
@@ -90,7 +91,45 @@ const whychooseus = [
     description: 'Continuous improvements, feature enhancements, and maintenance.',
   },
 ];
+const databaseDescription = [
+  {
+    name: "HTML5",
+    description: "HTML5 is the standard markup language for structuring and presenting modern web content.",
+    icon: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #a8e0ff, #c1f0ff)"
+  },
+  {
+    name: "CSS3",
+    description: "CSS3 is used to style and design web pages with responsive layouts, animations, and visual effects.",
+    icon: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)"
+  },
+  {
+    name: "JavaScript",
+    description: "JavaScript is a versatile scripting language that powers dynamic, interactive, and responsive web applications.",
+    icon: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
+    iconColors : "linear-gradient(135deg, #7ed957, #a3f37b)" // Replace with actual icon path
+  },
+  {
+    name: "Stencil",
+    description: "Stencil is a compiler for building reusable, standards-based web components that work across modern frameworks",
+    icon: "https://www.vectorlogo.zone/logos/stenciljs/stenciljs-icon.svg",
+    iconColors : "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)" // Replace with actual icon path
+  },
+  {
+    name: "Handlebars.js",
+    description: "Handlebars.js is a simple templating engine that enables dynamic HTML generation with minimal logic in templates.",
+    icon: "https://www.vectorlogo.zone/logos/handlebarsjs/handlebarsjs-icon.svg",
+    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)" // Replace with actual icon path
+  },
+  {
+    name: "BigCommerce",
+    description: "BigCommerce is a scalable e-commerce platform that enables businesses to build, manage, and grow online stores efficiently.",
+    icon: "https://www.vectorlogo.zone/logos/bigcommerce/bigcommerce-icon.svg",
+    iconColors :"linear-gradient(135deg, #a0e1ff, #c1f0ff)" // pastel light blue// Replace with actual icon path
 
+  }
+];
 function BigCommerceContent() {
   return (
    <section>
@@ -125,6 +164,8 @@ function BigCommerceContent() {
     <WhyChooseUs ChooseUs={whychooseus}/>
 
     <BigCommerceTechnologiesSection/>
+    <AboutTech technologies={databaseDescription} />
+
     <StillNotSure/>
     
      <HiringModels
