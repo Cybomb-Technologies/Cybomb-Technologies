@@ -44,37 +44,51 @@ const useCases = [
   "Startups – Cloud-native, scalable database-backed apps."
 ];
 
+  // const iconColors = [
+  //   , // Original purple
+  //   "linear-gradient(135deg, #f9e1a0ff, #fede9fff)", // Blue
+  //   "linear-gradient(135deg, #beedf6ff, #c7e7fbff)", // Pink
+  //   "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)", // Green
+  //   "linear-gradient(135deg, #f5c7c7d8, #fad6d6cb)", // Orange
+  //   "linear-gradient(135deg, #959393ff, #092e2048)", // Lavender
+  // ];
 
 const databaseDescription = [
   {
     name: "MongoDB",
     description: "NoSQL database for real-time, scalable apps with flexible document-based data modeling.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #ccfdbfff, #d4f9b8ff)"
   },
   {
     name: "Firebase",
     description: "Realtime database & cloud storage for mobile/web apps with seamless backend integration.",
     icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg", // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #f9e1a0ff, #fede9fff)"  
   },
   {
     name: "MySQL",
     description: "Relational DB for robust, high-performance applications with ACID compliance.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", // Replace with actual icon path
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    iconColors : "linear-gradient(135deg, #beedf6ff, #c7e7fbff)" // Replace with actual icon path
   },
   {
     name: "PostgreSQL",
     description: "Open-source DB supporting complex queries, JSON and advanced data types.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", // Replace with actual icon path
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    iconColors : "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)" // Replace with actual icon path
   },
   {
     name: "SQL Server",
     description: "Enterprise-grade Microsoft database management with comprehensive business intelligence.",
-    icon: "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg", // Replace with actual icon path
+    icon: "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg",
+    iconColors : "linear-gradient(135deg, #f5c7c7d8, #fad6d6cb)" // Replace with actual icon path
   },
   {
     name: "Django ORM",
     description: "Simplified relational database management using Django framework with Python integration.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg", // Replace with actual icon path
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+    iconColors : "linear-gradient(135deg, #959393ff, #092e2048)" // Replace with actual icon path
 
   }
 ];

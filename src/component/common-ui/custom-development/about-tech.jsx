@@ -3,14 +3,14 @@ import styles from "./about-tech.module.css";
 
 const AboutTech = ({ technologies }) => {
   // Array of colors for the icon containers
-  const iconColors = [
-    "linear-gradient(135deg, #ccfdbfff, #d4f9b8ff)", // Original purple
-    "linear-gradient(135deg, #f9e1a0ff, #fede9fff)", // Blue
-    "linear-gradient(135deg, #beedf6ff, #c7e7fbff)", // Pink
-    "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)", // Green
-    "linear-gradient(135deg, #f5c7c7d8, #fad6d6cb)", // Orange
-    "linear-gradient(135deg, #959393ff, #092e2048)", // Lavender
-  ];
+  // const iconColors = [
+  //   "linear-gradient(135deg, #ccfdbfff, #d4f9b8ff)", // Original purple
+  //   "linear-gradient(135deg, #f9e1a0ff, #fede9fff)", // Blue
+  //   "linear-gradient(135deg, #beedf6ff, #c7e7fbff)", // Pink
+  //   "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)", // Green
+  //   "linear-gradient(135deg, #f5c7c7d8, #fad6d6cb)", // Orange
+  //   "linear-gradient(135deg, #959393ff, #092e2048)", // Lavender
+  // ];
 
   return (
     <section className={styles.techSection}>
@@ -23,9 +23,9 @@ const AboutTech = ({ technologies }) => {
         <div className={styles.techGrid}>
           {technologies.map((tech, index) => {
             // Get color based on index (cycle through colors if more items than colors)
-            const colorIndex = index % iconColors.length;
+            // const colorIndex = index % iconColors.length;
             const iconStyle = {
-              background: iconColors[colorIndex]
+              background: tech.iconColors
             };
             
             return (
