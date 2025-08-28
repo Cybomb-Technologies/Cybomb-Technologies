@@ -7,9 +7,9 @@ import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-cons
 import { MdSchedule } from "react-icons/md";
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
-
-import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
-import hireUsImg from './../../../../../assets/contact/hiring-model-img3.svg';
+import AboutTech from "../../../../common-ui/mobile-app/about-tech";
+import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
+import hireUsImg from "./../../../../../assets/contact/hiring-model-img3.svg";
 
 const services = [
   {
@@ -57,11 +57,13 @@ const services = [
 const hiringData = [
   {
     title: "Bucket Hours",
-    description: "Prepay a pack of development hours for up to 6 months — ideal for ongoing updates, small enhancements, page edits, or WordPress maintenance tasks.",
+    description:
+      "Prepay a pack of development hours for up to 6 months — ideal for ongoing updates, small enhancements, page edits, or WordPress maintenance tasks.",
   },
   {
     title: "Dedicated WordPress Developers",
-    description: "Hire full-time WordPress experts exclusively for your project — ensuring focused attention, faster turnaround, and seamless collaboration.",
+    description:
+      "Hire full-time WordPress experts exclusively for your project — ensuring focused attention, faster turnaround, and seamless collaboration.",
   },
 ];
 
@@ -92,6 +94,57 @@ const whychooseus = [
   },
 ];
 
+const wordpressDescription = [
+  {
+    name: "PHP",
+    description:
+      "Core server-side scripting language powering WordPress themes, plugins, and backend logic.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+    iconColors:
+      "linear-gradient(135deg, rgba(137,147,190,0.4), rgba(125,139,202,0.4))",
+  },
+  {
+    name: "MySQL",
+    description:
+      "Relational database management system used by WordPress to store content and site data.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    iconColors:
+      "linear-gradient(135deg, rgba(0,117,143,0.4), rgba(241,181,102,0.4))",
+  },
+  {
+    name: "REST API",
+    description:
+      "Built-in WordPress API for creating, reading, updating, and deleting data via HTTP requests.",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB6FxLJTOj02_DdkJdJn-CwvebehzJOIyvYA&s",
+    iconColors:
+      "linear-gradient(135deg, rgba(0,198,255,0.4), rgba(0,114,255,0.4))",
+  },
+  {
+    name: "Composer",
+    description:
+      "Dependency manager for PHP, used in modern WordPress projects to handle libraries and packages.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg",
+    iconColors:
+      "linear-gradient(135deg, rgba(110,78,46,0.4), rgba(198,154,107,0.4))",
+  },
+  {
+    name: "Docker",
+    description:
+      "Containerization platform that provides isolated environments for WordPress development and deployment.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    iconColors:
+      "linear-gradient(135deg, rgba(13,183,237,0.4), rgba(29,99,237,0.4))",
+  },
+  {
+    name: "Git Workflows (CI/CD)",
+    description:
+      "Version control and automation pipelines used to manage WordPress code, testing, and deployments.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    iconColors:
+      "linear-gradient(135deg, rgba(255,126,95,0.4), rgba(254,180,123,0.4))",
+  },
+];
+
 function WordPressContent() {
   return (
     <section>
@@ -105,7 +158,7 @@ function WordPressContent() {
         stats={[
           { number: "80%", label: "Powers 40%+ of global websites" },
           { number: "70%", label: "Large plugin ecosystem" },
-          { number: "65%", label: "Strong CMS + CRM integration" }
+          { number: "65%", label: "Strong CMS + CRM integration" },
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"
@@ -126,9 +179,14 @@ function WordPressContent() {
       <WhyChooseUs ChooseUs={whychooseus} />
 
       <WordPressTechnologiesSection />
+      <AboutTech technologies={wordpressDescription} />
       <StillNotSure />
 
-      <HiringModels title="Hiring Models" cards={hiringData} image={hireUsImg} />
+      <HiringModels
+        title="Hiring Models"
+        cards={hiringData}
+        image={hireUsImg}
+      />
     </section>
   );
 }

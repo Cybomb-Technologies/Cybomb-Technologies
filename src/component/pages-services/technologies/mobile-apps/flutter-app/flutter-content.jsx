@@ -9,7 +9,7 @@ import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img1.png';
-
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 const services = [
   {
     title: 'Custom App Development',
@@ -34,6 +34,10 @@ const services = [
   {
     title: 'Support & Maintenance',
     description: 'Post-launch updates, monitoring, and issue resolution.',
+  },  
+  {
+    title: 'Native-like UX',
+    description: 'Delivers smooth performance on both iOS & Android platforms.',
   },
   {
     title: 'Performance Optimization',
@@ -62,10 +66,6 @@ const whychooseus = [
     description: "Single codebase results in 50% faster development cycles.",
   },
   {
-    title: 'Native-like UX',
-    description: 'Delivers smooth performance on both iOS & Android platforms.',
-  },
-  {
     title: 'Stunning UI Consistency',
     description: 'Same branded experience across all devices and screens.',
   },
@@ -82,6 +82,46 @@ const whychooseus = [
     description: 'Over 500K Flutter apps in Play Store and adopted by 46% of developers.',
   },
 ];
+const flutterTechDescription = [
+  {
+    name: "Flutter SDK",
+    description: "UI toolkit by Google for building natively compiled apps for mobile, web, and desktop from a single codebase.",
+    icon: "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",
+    iconColors: "linear-gradient(135deg, #daf3faff, #cee6edff)"
+  },
+  {
+    name: "Dart language",
+    description: "Programming language optimized for UI, powering Flutter apps with fast compilation and expressive syntax.",
+    icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/dart-programming-language-icon.png",
+    iconColors: "linear-gradient(135deg, #d0e5faff, #a7c8faff)"
+  },
+  {
+    name: "Firebase integration",
+    description: "Seamless backend integration for Flutter apps, providing authentication, database, analytics, and cloud storage.",
+    icon: "https://firebase.google.com/static/images/brand-guidelines/product-logo.png",
+    iconColors: "linear-gradient(135deg, #ffe4b3ff, #ffd59cff)"
+  },
+  {
+    name: "Hot reload",
+    description: "Development feature in Flutter allowing instant UI updates without restarting the app.",
+    icon: "https://www.svgrepo.com/show/513605/refresh.svg",
+    iconColors: "linear-gradient(135deg, #c1c1c1ff, #c1c1c1ff)"
+  },
+    {
+    name: "Bloc (Business Logic Component)",
+    description: "A state management library for Flutter apps, enabling separation of business logic and UI.",
+    icon: "https://www.svgrepo.com/show/374235/bloc.svg",
+    iconColors: "linear-gradient(135deg, #e0fae2ff, #b3f2b6ff)"
+  },
+  {
+    name: "GetX",
+    description: "A lightweight Flutter framework for state management, dependency injection, and route management.",
+    icon: "https://raw.githubusercontent.com/jonataslaw/getx-community/master/getx.png",
+    iconColors: "linear-gradient(135deg, #f3cbfbff, #f9b5f4cc)"
+  }
+  
+];
+
 
 function FlutterContent() {
   return (
@@ -119,6 +159,7 @@ function FlutterContent() {
       <WhyChooseUs ChooseUs={whychooseus} />
 
       <FlutterTechnologiesSection />
+      <AboutTech technologies={flutterTechDescription} />
       <StillNotSure />
 
       <HiringModels

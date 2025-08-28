@@ -7,9 +7,9 @@ import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-cons
 import { MdSchedule } from "react-icons/md";
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
-
-import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
-import hireUsImg from './../../../../../assets/contact/hiring-model-img3.svg';
+import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
+import hireUsImg from "./../../../../../assets/contact/hiring-model-img3.svg";
+import AboutTech from "../../../../common-ui/mobile-app/about-tech";
 
 const services = [
   {
@@ -52,7 +52,8 @@ const hiringData = [
   },
   {
     title: "Dedicated Joomla Developers",
-    description: "Hire full-time Joomla experts exclusively for your project — ensuring focused attention, faster turnaround, and expert handling of custom modules and site improvements.",
+    description:
+      "Hire full-time Joomla experts exclusively for your project — ensuring focused attention, faster turnaround, and expert handling of custom modules and site improvements.",
   },
 ];
 
@@ -79,6 +80,57 @@ const whychooseus = [
   },
 ];
 
+const joomlaDescription = [
+  {
+    name: "Joomla (latest versions)",
+    description:
+      "Open-source CMS for building dynamic websites and online applications, with robust extensions and templates.",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwBkbxZnGZTv4FU4eHWw2EPxgJBoxg-MudxA&s",
+    iconColors:
+      "linear-gradient(135deg, rgba(244,67,54,0.4), rgba(21,101,192,0.4))",
+  },
+  {
+    name: "PHP",
+    description:
+      "Core server-side scripting language powering Joomla’s backend, extensions, and template logic.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+    iconColors:
+      "linear-gradient(135deg, rgba(137,147,190,0.4), rgba(79,91,147,0.4))",
+  },
+  {
+    name: "MySQL",
+    description:
+      "Primary database management system for storing Joomla content, users, and configurations.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    iconColors:
+      "linear-gradient(135deg, rgba(0,117,143,0.4), rgba(242,145,17,0.4))",
+  },
+  {
+    name: "HTML5 & CSS3",
+    description:
+      "Frontend technologies used in Joomla templates to create responsive layouts and styled designs.",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSqBu9NeI3VRExYQtWrJIgnW-7drtru5IPzw&s",
+    iconColors:
+      "linear-gradient(135deg, rgba(227,79,38,0.4), rgba(239,101,42,0.4))",
+  },
+  {
+    name: "JavaScript (with jQuery)",
+    description:
+      "Enhances Joomla’s interactivity, dynamic modules, and user interface behaviors.",
+    icon: "https://www.kindpng.com/picc/m/476-4768341_javascript-logo-number-angularjs-node-javascript-transparent-background.png",
+    iconColors:
+      "linear-gradient(135deg, rgba(247,223,30,0.4), rgba(240,219,79,0.4))",
+  },
+  {
+    name: "Docker",
+    description:
+      "Provides isolated, containerized environments for Joomla development, testing, and scalable deployments.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    iconColors:
+      "linear-gradient(135deg, rgba(13,183,237,0.4), rgba(29,99,237,0.4))",
+  },
+];
+
 function JoomlaContent() {
   return (
     <section>
@@ -92,7 +144,7 @@ function JoomlaContent() {
         stats={[
           { number: "70%", label: "Popular open-source CMS" },
           { number: "60%", label: "Extensible via community modules" },
-          { number: "65%", label: "Supports multilingual sites" }
+          { number: "65%", label: "Supports multilingual sites" },
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"
@@ -113,9 +165,14 @@ function JoomlaContent() {
       <WhyChooseUs ChooseUs={whychooseus} />
 
       <JoomlaTechnologiesSection />
+      <AboutTech technologies={joomlaDescription} />
       <StillNotSure />
 
-      <HiringModels title="Hiring Models" cards={hiringData} image={hireUsImg} />
+      <HiringModels
+        title="Hiring Models"
+        cards={hiringData}
+        image={hireUsImg}
+      />
     </section>
   );
 }

@@ -9,6 +9,7 @@ import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img1.png';
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const services = [
   {
@@ -86,6 +87,44 @@ const whychooseus = [
     description: 'Used in award-winning iOS apps across industries.',
   },
 ];
+const SwiftTechDescription = [
+  {
+    name: "Swift",
+    description: "Modern programming language by Apple, designed for performance, safety, and ease of use in iOS and macOS apps.",
+    icon: "https://www.svgrepo.com/show/452110/swift.svg",
+    iconColors: "linear-gradient(135deg, #fbe0d6, #f7b39a)"
+  },
+  {
+    name: "Objective-C",
+    description: "A legacy but powerful object-oriented language used extensively in iOS/macOS applications and frameworks.",
+    icon: "https://icon.icepanel.io/Technology/svg/Objective-C.svg",
+    iconColors: "linear-gradient(135deg, #d9e7f7, #a7c4eb)"
+  },
+  {
+    name: "Cocoa",
+    description: "Apple’s native object-oriented framework for building applications on macOS and iOS.",
+    icon: "https://developer.apple.com/assets/elements/icons/appkit/appkit-96x96_2x.png",
+    iconColors: "linear-gradient(135deg, #f4e6ff, #d4bdf7)"
+  },
+  {
+    name: "SwiftUI",
+    description: "A declarative UI framework by Apple for building responsive and modern iOS/macOS user interfaces.",
+    icon: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…", // base64 you already have
+    iconColors: "linear-gradient(135deg, #e3f7e6, #b3e6c9)"
+  },
+  {
+    name: "Xcode",
+    description: "Apple’s official IDE for building apps across iOS, macOS, watchOS, and tvOS platforms.",
+    icon: "https://icon.icepanel.io/Technology/svg/Xcode.svg",
+    iconColors: "linear-gradient(135deg, #e0f2ff, #b3daf7)"
+  },
+  {
+    name: "CocoaPods",
+    description: "Dependency manager for iOS projects, used to integrate third-party libraries with ease.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cocoapods/cocoapods-plain.svg",
+    iconColors: "linear-gradient(135deg, #ffe5f0, #f7c4d9)"
+  }
+];
 
 function SwiftContent() {
   return (
@@ -123,6 +162,7 @@ function SwiftContent() {
       <WhyChooseUs ChooseUs={whychooseus} />
 
       <SwiftTechnologiesSection />
+      <AboutTech technologies={SwiftTechDescription} />
       <StillNotSure />
 
       <HiringModels
