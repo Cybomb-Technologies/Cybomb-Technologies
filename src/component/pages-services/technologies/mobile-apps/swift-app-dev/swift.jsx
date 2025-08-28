@@ -1,4 +1,4 @@
-import SwiftContent from './swift-cntent';
+import SwiftContent from './swift-content';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
 
