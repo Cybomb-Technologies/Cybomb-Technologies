@@ -9,6 +9,7 @@ import EngagementOptions from '../../common-ui/cloud-services/engagement-options
 import styles from '../../common-ui/cloud-services/cloud-usecase.module.css';
 import gcpImg from '../../../assets/technologies/google-cloud-platform-img.jpg';
 import contactUsImg from './../../../assets/contact/contact-us-img2.jpg';
+import AboutTech from '../../common-ui/custom-development/about-tech';
 
 const statsData = [
   { number: "99.95%", label: "Service uptime backed by Google infrastructure" },
@@ -104,6 +105,45 @@ const engagementOptions = [
     description: "From backend architecture to frontend deployment on GCP.",
   },
 ];
+const databaseDescription = [
+  {
+    name: "App Engine",
+    description: "App Engine is a fully managed platform for building and deploying scalable web and mobile applications.",
+    icon: "https://icon.icepanel.io/GCP/svg/App-Engine.svg", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(230, 240, 251),rgb(239, 246, 255))"
+  },
+  {
+    name: "Cloud Function",
+    description: "Cloud Functions is a serverless compute service that executes event-driven code without provisioning servers.",
+    icon: "https://icon.icepanel.io/GCP/svg/Cloud-Functions.svg", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(230, 240, 251),rgb(239, 246, 255))"
+  },
+  {
+    name: "Compute Engine",
+    description: "Compute Engine provides scalable virtual machines that run workloads on Google Cloud’s infrastructure.",
+    icon: "https://icon.icepanel.io/GCP/svg/Compute-Engine.svg",
+    iconColors: "linear-gradient(135deg,rgb(182, 227, 247),rgb(183, 224, 231))" 
+  },
+  {
+    name: "GKE (Kubernetes)",
+    description: "GKE is a managed Kubernetes service that simplifies deploying, managing, and scaling containerized applications on Google Cloud.",
+    icon: "https://www.svgrepo.com/show/376321/google-gke.svg",
+    iconColors : "linear-gradient(135deg,rgb(177, 218, 245),rgb(200, 231, 249))" // Replace with actual icon path
+  },
+  {
+    name: "Cloud Run",
+    description: "Cloud Run is a fully managed serverless platform that runs containerized applications with automatic scaling.",
+    icon: "https://icon.icepanel.io/GCP/svg/Cloud-Run.svg",
+    iconColors : "linear-gradient(135deg,rgb(249, 235, 235),rgb(252, 237, 237))" // Replace with actual icon path
+  },
+  {
+    name: "BigQuery",
+    description: "BigQuery is Google Cloud’s fully managed, serverless data warehouse for fast SQL analytics at scale.",
+    icon: "https://icon.icepanel.io/GCP/svg/BigQuery.svg",
+    iconColors :"linear-gradient(135deg,rgb(208, 239, 255),rgb(204, 238, 250))" // pastel light blue// Replace with actual icon path
+
+  }
+];
 
 export default function GoogleCloudContent() {
   return (
@@ -129,6 +169,8 @@ export default function GoogleCloudContent() {
       services={services}
     />
       <TechToolsSection/>
+      <AboutTech technologies={databaseDescription} />
+
       <OnlinePresence
       title="Unlock Your Cloud Potential with Our Google Cloud Platform Solutions"
       description="Our custom Google Cloud Platform integrations ensure scalability, security, and cost-efficiency."
