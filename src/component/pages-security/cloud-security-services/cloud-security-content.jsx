@@ -6,7 +6,7 @@ import WhyChooseUs from "../../common-ui/security/why-choose-us";
 import OnlinePresence from "../../common-ui/security/online-presence";
 import TechToolsSection from "./cloud-technologies";
 import contactUsImg from './../../../assets/contact/contact-us-img1.jpg';
-
+import AboutTech from '../../common-ui/custom-development/about-tech';
 const services = [
   {
     title: 'Cloud Threat Detection & Prevention',
@@ -72,7 +72,45 @@ const stats = [
   { number: "65%", label: "Reduction in cloud-related incidents" },
   { number: "24/7", label: "Real-time cloud monitoring" },
 ];
+const databaseDescription = [
+  {
+    name: "AWS Security Hub",
+    description: "CSS3 is a style sheet language that enhances web design with advanced layouts, animations, and responsive styling.",
+    icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Security-Hub.svg", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(244, 165, 165),rgb(252, 159, 159))"
+  },
+  {
+    name: "Azure Security Center",
+    description: "HTML5 is the standard markup language for structuring and presenting modern web content.",
+    icon: "https://learn.microsoft.com/en-us/media/logos/logo-ms-social.png", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(230, 224, 222),rgb(236, 226, 231))"
+  },
+  {
+    name: "Google Cloud Security Command Center",
+    description: "MySQL is a reliable relational database management system known for speed, scalability, and ACID compliance.",
+    icon: "https://icon.icepanel.io/GCP/svg/Security-Command-Center.svg",
+    iconColors: "linear-gradient(135deg,rgb(139, 215, 248),rgb(144, 238, 255))" 
+  },
+  {
+    name: "AWS IAM",
+    description: "JavaScript is a versatile scripting language that powers dynamic, interactive, and responsive web applications.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png",
+    iconColors : "linear-gradient(135deg,rgb(241, 222, 191),rgb(245, 230, 164))" // Replace with actual icon path
+  },
+  {
+    name: "Azure Active Directory",
+    description: "Knockout.js is a lightweight JavaScript library that simplifies dynamic UIs with MVVM data binding.",
+    icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/IAM-Identity-Center.svg",
+    iconColors : "linear-gradient(135deg,rgb(253, 179, 179),rgb(239, 174, 174))" // Replace with actual icon path
+  },
+  {
+    name: "Okta",
+    description: "LESS is a CSS preprocessor that extends stylesheets with variables, mixins, and modular structure for easier maintenance.",
+    icon: "https://learn.microsoft.com/en-us/media/logos/logo-ms-social.png",
+    iconColors: "linear-gradient(135deg,rgb(230, 224, 222),rgb(236, 226, 231))"
 
+  }
+];
 export default function CloudSecurityContent() {
   return (
     <section>
@@ -92,6 +130,8 @@ export default function CloudSecurityContent() {
         Services={services}
       />
       <TechToolsSection/>
+      <AboutTech technologies={databaseDescription} />
+
       <WhyChooseUs ChooseUs={whychooseus}/>
       <OnlinePresence 
         title="Secure Your Cloud Today!"
