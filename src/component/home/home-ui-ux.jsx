@@ -44,7 +44,7 @@ function HomeUIUX() {
     <section className="uiux-section">
       <div className="container-uiux">
         <h2 className="section-title-uiux" style={{color:"#003459"}}>
-          End-to-End UI/UX Services for Web & Mobile Development
+          End-to-End UI/UX Services for Web App & Mobile App Development
         </h2>
           <div className="services-grid-uiux" data-aos="fade-up">
             {services.map((service, index) => (
