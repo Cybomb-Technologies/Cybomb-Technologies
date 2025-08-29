@@ -8,6 +8,7 @@ import ServicesOfferings from "../../../../common-ui/custom-development/services
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import CSharpTechnologies from "./csharp-technology";
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const hiringData = [
   { title: 'Cross-Platform', description: 'Run on Windows, Linux, and macOS with .NET Core.' },
@@ -34,6 +35,46 @@ const offerings = [
   { title: 'Full-Stack Development', description: 'From backend APIs to frontend UIs.' },
   { title: 'Ongoing Support', description: 'Long-term maintenance and feature updates.' }
 ];
+
+const dotnetTechDescription = [
+    {
+    name: ".NET Core",
+    description: "A cross-platform, open-source framework for building modern, scalable, high-performance applications for Windows, Linux, and macOS.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg",
+    iconColors: "linear-gradient(135deg, #fbecfdff, #f1d1faff)"
+  },
+  {
+    name: "Blazor",
+    description: "A .NET-based framework for building interactive client-side web UIs with C# instead of JavaScript, running via WebAssembly.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blazor/blazor-original.svg",
+    iconColors: "linear-gradient(135deg, #eef2ff, #e0e7ff)"
+  },
+  {
+    name: "UWP",
+    description: "Universal Windows Platform, used for developing Windows apps that run across devices like PCs, tablets, Xbox, and HoloLens.",
+    icon: "https://cdn.iconscout.com/icon/premium/png-512-thumb/uwp-5363138-4488927.png?f=webp&w=512",
+    iconColors: "linear-gradient(135deg, #f1fbe6ff, #e8fddeff)"
+  },
+    {
+    name: "Xamarin",
+    description: "A cross-platform mobile app framework using C# and .NET to create native apps for iOS, Android, and Windows.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xamarin/xamarin-original.svg",
+    iconColors: "linear-gradient(135deg, #eff6ff, #dbeafe)"
+  },
+    {
+    name: "LINQ",
+    description: "Language Integrated Query, a .NET feature for querying collections, XML, and databases using C# syntax.",
+    icon: "https://cdn-icons-png.flaticon.com/512/6132/6132221.png",
+    iconColors: "linear-gradient(135deg, #f5d4fcff, #fbccf4ff)"
+  },
+  {
+    name: "NHibernate",
+    description: "A mature and flexible ORM for .NET, offering database-independent mapping and advanced querying features.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nhibernate/nhibernate-original.svg",
+    iconColors: "linear-gradient(135deg, #b8a4a4ff, #fadcdcff)"
+  },
+];
+
 
 const useCases = [
   "Enterprise Resource Planning systems",
@@ -76,6 +117,7 @@ function CSharpPage() {
         items={offerings}
       /> 
       <CSharpTechnologies/>
+      <AboutTech technologies={dotnetTechDescription} />
       <DevelopmentProcess 
         title="Common Use Cases"
         Process={useCases}

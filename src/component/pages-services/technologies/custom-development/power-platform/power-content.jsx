@@ -8,6 +8,7 @@ import ServicesOfferings from "../../../../common-ui/custom-development/services
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import PowerPlatformTechnologies from "./power-technology";
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const hiringData = [
   {
@@ -94,6 +95,49 @@ const useCases = [
   "AI Solutions - Document processing, prediction models, and sentiment analysis."
 ];
 
+const powerPlatformTechDescription = [
+  // Core Components
+  {
+    name: "Power Apps",
+    description: "A low-code application development platform that allows businesses to create custom apps quickly to solve unique challenges and automate processes.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Microsoft_Power_Platform_logo.svg/768px-Microsoft_Power_Platform_logo.svg.png?20231122081707",
+    iconColors: "linear-gradient(135deg, #b2f5c5ff, #a6f6baff)"
+  },
+  {
+    name: "Power Automate",
+    description: "A workflow automation tool that enables users to streamline repetitive tasks and integrate apps and services with minimal coding.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Microsoft_Power_Automate.svg/144px-Microsoft_Power_Automate.svg.png?20240215095559",
+    iconColors: "linear-gradient(135deg, #aad2f0ff, #b5e6fdff)"
+  },
+  {
+    name: "Power BI",
+    description: "A business intelligence and analytics tool that allows users to visualize data, generate insights, and create interactive dashboards.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/900px-New_Power_BI_Logo.svg.png?20210102182532",
+    iconColors: "linear-gradient(135deg, #eae2bfff, #efe7b8ff)"
+  },
+  {
+    name: "Power Virtual Agents",
+    description: "A no-code chatbot-building platform that enables businesses to create AI-powered chatbots for customer service and internal use cases.",
+    icon: "https://www.encorebusiness.com/wp-content/uploads/2022/06/PowerVirtualAgents.png",
+    iconColors: "linear-gradient(135deg, #b4d9f6ff, #acd5ebff)"
+  },
+
+  // Connectors
+  {
+    name: "SharePoint",
+    description: "A collaborative platform used to store, organize, share, and access information seamlessly within Microsoft 365.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Microsoft_Office_SharePoint_%282019%E2%80%93present%29.svg/768px-Microsoft_Office_SharePoint_%282019%E2%80%93present%29.svg.png?20190925170659",
+    iconColors: "linear-gradient(135deg, #b3f0f2ff, #aaeff4ff)"
+  },
+  
+  {
+    name: "Office 365",
+    description: "A suite of productivity tools (Word, Excel, Outlook, Teams, etc.) that integrates seamlessly with Power Platform for enhanced collaboration.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Microsoft_365_%282022%29.svg/768px-Microsoft_365_%282022%29.svg.png?20231004051714",
+    iconColors: "linear-gradient(135deg, #b7edf6ff, #b6e8f7ff)"
+  },
+];
+
 function PowerPlatformContent() {
   return (
     <section>
@@ -126,7 +170,8 @@ function PowerPlatformContent() {
         title="Power Platform Features" 
         items={offerings}
       /> 
-      <PowerPlatformTechnologies/>
+      <PowerPlatformTechnologies/> 
+      <AboutTech technologies={powerPlatformTechDescription} />
       <DevelopmentProcess 
         title="Common Use Cases"
         Process={useCases}
