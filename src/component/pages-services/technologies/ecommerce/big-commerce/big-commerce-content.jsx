@@ -96,13 +96,13 @@ const databaseDescription = [
     name: "HTML5",
     description: "HTML5 is the standard markup language for structuring and presenting modern web content.",
     icon: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg", // Replace with actual icon path
-    iconColors : "linear-gradient(135deg, #a8e0ff, #c1f0ff)"
+    iconColors: "linear-gradient(135deg,rgb(247, 183, 170),rgb(243, 175, 206))"
   },
   {
     name: "CSS3",
     description: "CSS3 is used to style and design web pages with responsive layouts, animations, and visual effects.",
     icon: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg", // Replace with actual icon path
-    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)"
+    iconColors: "linear-gradient(135deg,rgb(188, 218, 252),rgb(198, 224, 255))"
   },
   {
     name: "JavaScript",
@@ -114,7 +114,7 @@ const databaseDescription = [
     name: "Stencil",
     description: "Stencil is a compiler for building reusable, standards-based web components that work across modern frameworks",
     icon: "https://www.vectorlogo.zone/logos/stenciljs/stenciljs-icon.svg",
-    iconColors : "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)" // Replace with actual icon path
+    iconColors : "linear-gradient(135deg,rgb(196, 230, 255),rgb(210, 250, 252))" // Replace with actual icon path
   },
   {
     name: "Handlebars.js",
@@ -126,7 +126,7 @@ const databaseDescription = [
     name: "BigCommerce",
     description: "BigCommerce is a scalable e-commerce platform that enables businesses to build, manage, and grow online stores efficiently.",
     icon: "https://www.vectorlogo.zone/logos/bigcommerce/bigcommerce-icon.svg",
-    iconColors :"linear-gradient(135deg, #a0e1ff, #c1f0ff)" // pastel light blue// Replace with actual icon path
+    iconColors :"linear-gradient(135deg,rgb(213, 240, 253),rgb(215, 240, 249))" // pastel light blue// Replace with actual icon path
 
   }
 ];

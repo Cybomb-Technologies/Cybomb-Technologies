@@ -6,7 +6,7 @@ import WhyChooseUs from "../../common-ui/security/why-choose-us";
 import OnlinePresence from "../../common-ui/security/online-presence";
 import TechToolsSection from "./api-technologies";
 import contactUsImg from './../../../assets/contact/contact-us-img1.jpg';
-
+import AboutTech from '../../common-ui/custom-development/about-tech';
 const services = [
   {
     title: 'Threat Detection & Prevention',
@@ -72,6 +72,45 @@ const stats = [
   { number: "60%", label: "Lower API-related incidents with monitoring" },
   { number: "24/7", label: "Real-time API protection" },
 ];
+const databaseDescription = [
+  {
+    name: "Kong Gateway",
+    description: "Kong Gateway is an open-source API gateway that provides high-performance traffic control, security, and observability.",
+    icon: "https://www.svgrepo.com/show/353978/kong-icon.svg", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(188, 252, 225),rgb(198, 224, 255))"
+  },
+  {
+    name: "Apigee",
+    description: "Apigee is Google Cloud’s full lifecycle API management platform for designing, securing, and analyzing APIs at scale.",
+    icon: "https://www.svgrepo.com/show/375537/apigee-api-platform.svg", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(170, 216, 247),rgb(175, 211, 243))"
+  },
+  {
+    name: "AWS API Gateway",
+    description: "AWS API Gateway enables developers to create, publish, and manage secure APIs with scalable serverless integration.",
+    icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg",
+    iconColors: "linear-gradient(135deg,rgb(251, 160, 160),rgb(251, 168, 154))" 
+  },
+  {
+    name: "Azure API Management",
+    description: "Azure API Management provides a unified platform for securing, publishing, and monitoring APIs across environments.",
+    icon: "https://learn.microsoft.com/en-us/media/logos/logo-ms-social.png",
+    iconColors : "linear-gradient(135deg,rgb(222, 231, 218),rgb(222, 238, 213))" // Replace with actual icon path
+  },
+  {
+    name: "OAuth 2.0",
+    description: "OAuth 2.0 is an open standard authorization framework that enables secure delegated access to resources.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Oauth_logo.svg",
+    iconColors : "linear-gradient(135deg,rgb(203, 200, 200),rgb(235, 230, 230))" // Replace with actual icon path
+  },
+  {
+    name: "OpenID Connect",
+    description: "OAuth 2.0 is an open standard authorization framework that enables secure delegated access to resources.",
+    icon: "https://img.icons8.com/?size=512&id=21051&format=png",
+    iconColors :"linear-gradient(135deg,rgb(244, 251, 255),rgb(244, 213, 195))" // pastel light blue// Replace with actual icon path
+
+  }
+];
 
 export default function APISecurityContent() {
   return (
@@ -92,6 +131,8 @@ export default function APISecurityContent() {
         Services={services}
       />
       <TechToolsSection/>
+      <AboutTech technologies={databaseDescription} />
+
       <WhyChooseUs ChooseUs={whychooseus}/>
       <OnlinePresence 
         title="Secure Your APIs Today!"

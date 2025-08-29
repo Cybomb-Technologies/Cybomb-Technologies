@@ -8,6 +8,10 @@ import ServicesOfferings from "../../../../common-ui/custom-development/services
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import SpringTechnologies from "./spring-technology";
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
+import springintegration from "../../../../../assets/tech-logo/spring-integration.png";
+import springwebflux from "../../../../../assets/tech-logo/spring-webflux.png";
+import springdata from "../../../../../assets/tech-logo/spring-data.png";
 
 const hiringData = [
   { title: 'Enterprise-Grade', description: 'Robust solutions for complex business needs.' },
@@ -43,6 +47,46 @@ const useCases = [
   "API-driven SaaS platforms"
 ];
 
+const springBootTechDescription = [
+  {
+    name: "Spring Boot",
+    description: "Java-based framework that simplifies the development of production-ready applications with minimal configuration.",
+    icon: "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
+    iconColors: "linear-gradient(135deg, #f0fff4, #c6f6d5)"
+  },
+  {
+    name: "Spring Web Flux",
+    description: "Core foundation providing features like dependency injection, AOP, and integration with enterprise-level services.",
+    icon: springwebflux,
+    iconColors: "linear-gradient(135deg, #ccf4c9ff, #d2fbcfff)"
+  },
+  {
+    name: "Spring Security",
+    description: "Powerful authentication and authorization framework for securing applications.",
+    icon: "https://www.javacodegeeks.com/wp-content/uploads/2014/07/spring-security-project.png",
+    iconColors: "linear-gradient(135deg, #d1fad2ff, #d1fbdaff)"
+  },
+  {
+    name: "Spring Data JPA",
+    description: "Simplifies data access by reducing boilerplate code when interacting with relational databases.",
+    icon: springdata,
+    iconColors: "linear-gradient(135deg, #cdf2d4ff, #d8f6d2ff)"
+  },
+  {
+    name: "Spring Cloud",
+    description: "Tools for building distributed systems, microservices, service discovery, and configuration management.",
+    icon: "https://www.clipartmax.com/png/full/195-1955230_cloud-gateway-spring-cloud-contract-logo.png",
+    iconColors: "linear-gradient(135deg, #d8fdd9ff, #e3ffdfff)"
+  },
+  {
+    name: "Spring Integration",
+    description: "Provides production-ready features like health checks, metrics, and monitoring endpoints.",
+    icon: springintegration, // same as boot
+    iconColors: "linear-gradient(135deg, #d2fbcaff, #c6fad1ff)"
+  }
+];
+
+
 function SpringPage() {
   return (
     <section>
@@ -76,6 +120,7 @@ function SpringPage() {
         items={offerings}
       /> 
       <SpringTechnologies/>
+      <AboutTech technologies={springBootTechDescription} />
       <DevelopmentProcess 
         title="Common Use Cases"
         Process={useCases}

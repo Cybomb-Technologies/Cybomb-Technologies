@@ -8,6 +8,7 @@ import ServicesOfferings from "../../../../common-ui/custom-development/services
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import DotNetTechnologies from "./dotnet-technology";
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const hiringData = [
   { title: 'Enterprise Ready', description: 'Robust framework for mission-critical applications.' },
@@ -42,6 +43,49 @@ const useCases = [
   "Healthcare Solutions - HIPAA compliant systems.",
   "Government Systems - Secure public sector applications."
 ];
+const dotnetTechDescription = [
+  // .NET Core & Framework
+  {
+    name: ".NET Core",
+    description: "A cross-platform, high-performance framework for building modern, cloud-based, and internet-connected applications.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
+    iconColors: "linear-gradient(135deg, #fef0ffff, #fce0feff)"
+  },
+  {
+    name: "ASP.NET Core",
+    description: "An open-source, cross-platform framework for building modern web applications, APIs, and microservices with .NET.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
+    iconColors: "linear-gradient(135deg, #eef2ff, #e0e7ff)"
+  },
+  
+  // DevOps
+  {
+    name: "Azure DevOps",
+    description: "Microsoft's DevOps platform providing CI/CD, repositories, pipelines, and project management for .NET apps.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+    iconColors: "linear-gradient(135deg, #eff6ff, #dbeafe)"
+  },
+  {
+    name: "GitHub Actions",
+    description: "A CI/CD platform integrated with GitHub, commonly used to automate build and deployment pipelines for .NET projects.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    iconColors: "linear-gradient(135deg, #f3f4f6, #e5e7eb)"
+  },
+  {
+    name: "Docker",
+    description: "A containerization tool often used with .NET applications for packaging and deploying apps consistently.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    iconColors: "linear-gradient(135deg, #dbeafe, #bfdbfe)"
+  },
+  {
+    name: "Kubernetes",
+    description: "A container orchestration system used for scaling and managing .NET microservices in production.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+    iconColors: "linear-gradient(135deg, #cee6f3ff, #bbeaf7ff)"
+  },
+  
+];
+
 
 function DotNetPage() {
   return (
@@ -76,16 +120,18 @@ function DotNetPage() {
         items={offerings}
       /> 
       <DotNetTechnologies/>
-      <DevelopmentProcess 
-        title="Common Use Cases"
-        Process={useCases}
-      />
+      <AboutTech technologies={dotnetTechDescription} />
+      
       <OnlinePresence 
         title="Ready to Build Your .NET Solution?"
         buttonText="CONTACT OUR .NET TEAM"
         buttonLink="#"
         imageSrc={placeholderImage}
         imageAlt=".NET development services"
+      />
+      <DevelopmentProcess 
+        title="Common Use Cases"
+        Process={useCases}
       />
     </section>
   );

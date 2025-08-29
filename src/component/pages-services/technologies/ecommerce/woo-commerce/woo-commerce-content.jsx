@@ -97,25 +97,25 @@ const databaseDescription = [
     name: "CSS3",
     description: "CSS3 is a style sheet language that enhances web design with advanced layouts, animations, and responsive styling.",
     icon: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg", // Replace with actual icon path
-    iconColors : "linear-gradient(135deg, #a8e0ff, #c1f0ff)"
+    iconColors :"linear-gradient(135deg,rgb(188, 228, 247),rgb(225, 247, 255))" // pastel light blue// Replace with actual icon path
   },
   {
     name: "HTML5",
     description: "HTML5 is the standard markup language for structuring and presenting modern web content.",
     icon: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg", // Replace with actual icon path
-    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)"
+    iconColors: "linear-gradient(135deg,rgb(247, 183, 170),rgb(243, 175, 206))"
   },
   {
     name: "MySQL",
     description: "MySQL is a reliable relational database management system known for speed, scalability, and ACID compliance.",
     icon: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg",
-    iconColors : "linear-gradient(135deg, #7ed957, #a3f37b)" // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(139, 215, 248),rgb(144, 238, 255))"  
   },
   {
     name: "JavaScript",
     description: "JavaScript is a versatile scripting language that powers dynamic, interactive, and responsive web applications.",
     icon: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
-    iconColors : "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)" // Replace with actual icon path
+    iconColors : "linear-gradient(135deg, #7ed957, #a3f37b)" // Replace with actual icon path
   },
   {
     name: "jQuery",
@@ -127,7 +127,7 @@ const databaseDescription = [
     name: "WooCommerce",
     description: "WooCommerce is a flexible WordPress plugin that enables businesses to create and manage fully-featured online stores.",
     icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/woocommerce-icon.png",
-    iconColors :"linear-gradient(135deg, #a0e1ff, #c1f0ff)" // pastel light blue// Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(202, 151, 246),rgb(218, 168, 244))"
 
   }
 ];
