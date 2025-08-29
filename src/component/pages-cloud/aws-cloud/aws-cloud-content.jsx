@@ -9,6 +9,7 @@ import EngagementOptions from '../../common-ui/cloud-services/engagement-options
 import styles from '../../common-ui/cloud-services/cloud-usecase.module.css';
 import awsImage from '../../../assets/technologies/amazon-web-services-img.jpg';
 import contactUsImg from './../../../assets/contact/contact-us-img2.jpg';
+import AboutTech from '../../common-ui/custom-development/about-tech';
 
 const statsData = [
   { number: "99.99%", label: "Service availability with AWS infrastructure" },
@@ -105,6 +106,45 @@ const engagementOptions = [
   },
 ];
 
+const databaseDescription = [
+  {
+    name: "EC2",
+    description: "Amazon EC2 is a scalable cloud computing service that provides resizable virtual servers for deploying and managing applications.",
+    icon: "https://icon.icepanel.io/AWS/svg/Compute/EC2.svg", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(249, 171, 155),rgb(255, 182, 215))"
+  },
+  {
+    name: "ECS",
+    description: "Amazon ECS is a fully managed container orchestration service for running and scaling Docker containers on AWS.",
+    icon: "https://icon.icepanel.io/AWS/svg/Containers/ECS-Anywhere.svg", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(249, 171, 155),rgb(255, 182, 215))"
+  },
+  {
+    name: "Lambda",
+    description: "AWS Lambda is a serverless compute service that runs code in response to events without managing servers.",
+    icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg",
+    iconColors: "linear-gradient(135deg,rgb(249, 171, 155),rgb(255, 182, 215))" 
+  },
+  {
+    name: "S3",
+    description: "Amazon S3 is a scalable object storage service that securely stores and retrieves any amount of data in the cloud.",
+    icon: "https://icon.icepanel.io/AWS/svg/Storage/S3-on-Outposts.svg",
+    iconColors : "linear-gradient(135deg,rgb(174, 240, 146),rgb(182, 243, 151))" // Replace with actual icon path
+  },
+  {
+    name: "ClodFront",
+    description: "Amazon CloudFront is a fast content delivery network (CDN) that securely delivers data, videos, applications, and APIs globally with low latency.",
+    icon: "https://icon.icepanel.io/AWS/svg/Networking-Content-Delivery/CloudFront.svg",
+    iconColors: "linear-gradient(135deg,rgb(191, 197, 251),rgb(186, 214, 255))"
+  },
+  {
+    name: "RDS",
+    description: "Amazon RDS is a managed relational database service that simplifies setup, operation, and scaling of databases in the cloud",
+    icon: "https://icon.icepanel.io/AWS/svg/Database/RDS.svg",
+    iconColors :"linear-gradient(135deg,rgb(193, 234, 255),rgb(178, 231, 249))" // pastel light blue// Replace with actual icon path
+
+  }
+];
 
 export default function AWSContent() {
   return (
@@ -130,6 +170,8 @@ export default function AWSContent() {
       services={services}
     />
       <TechToolsSection/>
+      <AboutTech technologies={databaseDescription} />
+
       <OnlinePresence
       title="Unlock Your Cloud Potential with Our AWS Solutions"
       description="Our custom AWS integrations ensure scalability, security, and cost-efficiency."

@@ -6,6 +6,7 @@ import WhyChooseUs from "../../common-ui/security/why-choose-us";
 import OnlinePresence from "../../common-ui/security/online-presence";
 import TechToolsSection from "./aws-technologies";
 import contactUsImg from './../../../assets/contact/contact-us-img1.jpg';
+import AboutTech from '../../common-ui/custom-development/about-tech';
 
 const services = [
   {
@@ -87,6 +88,45 @@ const stats = [
   { number: "50%", label: "Fewer incidents using AWS security best practices" },
   { number: "24/7", label: "Threat monitoring and detection" },
 ];
+const databaseDescription = [
+  {
+    name: "AWS WAF",
+    description: "AWS WAF is a web application firewall that protects web applications from common web exploits and attacks.",
+    icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/WAF.svg", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(243, 185, 169),rgb(240, 187, 163))"
+  },
+  {
+    name: "AWS Shield",
+    description: "AWS Shield is a managed DDoS protection service that safeguards applications running on AWS.",
+    icon: "https://w7.pngwing.com/pngs/335/196/png-transparent-aws-shield-advance-hd-logo.png", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(255, 246, 245),rgb(236, 226, 230))"
+  },
+  {
+    name: "AWS GuardDuty",
+    description: "AWS GuardDuty is a threat detection service that continuously monitors for malicious or unauthorized activity in AWS accounts and workloads.",
+    icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/GuardDuty.svg",
+    iconColors: "linear-gradient(135deg,rgb(243, 185, 169),rgb(240, 187, 163))" 
+  },
+  {
+    name: "AWS CloudFront",
+    description: "Amazon CloudFront is a content delivery network (CDN) that securely delivers data, videos, applications, and APIs with low latency.",
+    icon: "https://icon.icepanel.io/AWS/svg/Networking-Content-Delivery/CloudFront.svg",
+    iconColors : "linear-gradient(135deg,rgb(209, 169, 249),rgb(209, 180, 238))" // Replace with actual icon path
+  },
+  {
+    name: "AWS Security Hub",
+    description: "AWS Security Hub provides a comprehensive view of security alerts and compliance status across AWS accounts.",
+    icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Security-Hub.svg",
+    iconColors : "linear-gradient(135deg,rgb(243, 185, 169),rgb(240, 187, 163))" // Replace with actual icon path
+  },
+  {
+    name: "AWS Certificate Manager",
+    description: "AWS Certificate Manager handles provisioning, deploying, and managing SSL/TLS certificates for securing AWS applications and websites",
+    icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Certificate-Manager.svg",
+    iconColors :"linear-gradient(135deg,rgb(243, 185, 169),rgb(240, 187, 163))" // pastel light blue// Replace with actual icon path
+
+  }
+];
 
 export default function AWSSecurityContent() {
   return (
@@ -107,6 +147,8 @@ export default function AWSSecurityContent() {
         Services={services}
       />
       <TechToolsSection/>
+      <AboutTech technologies={databaseDescription} />
+
       <WhyChooseUs ChooseUs={whychooseus}/>
       <OnlinePresence 
         title="Secure Your Web Applications Today!"

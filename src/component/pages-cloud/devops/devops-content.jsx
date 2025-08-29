@@ -10,6 +10,7 @@ import styles from '../../common-ui/cloud-services/cloud-usecase.module.css';
 import devOpsImg from '../../../assets/technologies/do-with-devops-img.jpg';
 import contactUsImg from './../../../assets/contact/contact-us-img2.jpg';
 import DevOpsTools from '../../common-ui/cloud-services/DevOpsTools';
+import AboutTech from '../../common-ui/custom-development/about-tech';
 
 const statsData = [
   { number: "60%", label: "Faster release cycles with CI/CD pipelines" },
@@ -109,6 +110,48 @@ const engagementOptions = [
     description: "Hire certified DevOps engineers on-demand",
   },
 ];
+const databaseDescription = [
+  {
+    name: "Jenkins",
+    description: "Jenkins is an open-source automation server that enables continuous integration and continuous delivery (CI/CD) pipelines.",
+    icon: "https://icon.icepanel.io/Technology/svg/Jenkins.svg", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(254, 245, 198),rgb(252, 244, 200))"
+  },
+  {
+    name: "GitHub Actions",
+    description: "GitHub Actions is a workflow automation platform that allows CI/CD directly within GitHub repositories.",
+    icon: "https://icon.icepanel.io/Technology/svg/GitHub-Actions.svg", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(185, 230, 249),rgb(186, 232, 255))"
+  },
+  {
+    name: "GitLab CI/CD",
+    description: "GitLab CI/CD is a built-in continuous integration and deployment tool for automating software delivery pipelines.",
+    icon: "https://icon.icepanel.io/Technology/svg/GitLab.svg",
+    iconColors: "linear-gradient(135deg,rgb(255, 209, 193),rgb(254, 214, 185))" 
+  },
+  {
+    name: "Docker",
+    description: "Docker is a platform for building, packaging, and running applications in lightweight, portable containers.",
+    icon: "https://icon.icepanel.io/Technology/svg/Docker.svg",
+    iconColors : "linear-gradient(135deg,rgb(161, 224, 246),rgb(198, 230, 243))" // Replace with actual icon path
+  },
+  {
+    name: "Kubernetes",
+    description: "Kubernetes is an open-source container orchestration system for automating deployment, scaling, and management of containerized applications.",
+    icon: "https://icon.icepanel.io/Technology/svg/Kubernetes.svg",
+    iconColors : "linear-gradient(135deg,rgb(200, 217, 244),rgb(194, 216, 242))" // Replace with actual icon path
+  },
+  {
+    name: "Helm",
+    description: "Helm is a package manager for Kubernetes that simplifies application deployment and management using charts.",
+    icon: "https://icon.icepanel.io/Technology/svg/Helm.svg",
+    iconColors :"linear-gradient(135deg,rgb(194, 227, 243), #c1f0ff)" // pastel light blue// Replace with actual icon path
+    
+  }
+];
+
+
+
 
 export default function DevopsContent() {
   return (
@@ -134,6 +177,8 @@ export default function DevopsContent() {
       services={services}
     />
       <TechToolsSection/>
+      <AboutTech technologies={databaseDescription} />
+
       <OnlinePresence
       title="Unlock Your Cloud Potential with Our DevOps Solutions"
       description="Our custom DevOps integrations ensure scalability, security, and cost-efficiency."

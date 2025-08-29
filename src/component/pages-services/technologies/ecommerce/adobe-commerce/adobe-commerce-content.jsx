@@ -106,8 +106,7 @@ const databaseDescription = [
     name: "MySQL",
     description: "MySQL is a reliable relational database management system known for speed, scalability, and ACID compliance.",
     icon: "https://cdn-icons-png.flaticon.com/128/5968/5968313.png", // Replace with actual icon path
-    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)"
-  },
+    iconColors: "linear-gradient(135deg,rgb(139, 215, 248),rgb(144, 238, 255))"  },
   {
     name: "JavaScript",
     description: "JavaScript is a versatile scripting language that powers dynamic, interactive, and responsive web applications.",
@@ -117,8 +116,8 @@ const databaseDescription = [
   {
     name: "Knockout.js",
     description: "Knockout.js is a lightweight JavaScript library that simplifies dynamic UIs with MVVM data binding.",
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7eX6iYMVyluJz3BwD10ipXYS1eI1hJ_fLbQ&s",
-    iconColors : "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)" // Replace with actual icon path
+    icon: "https://cdn.worldvectorlogo.com/logos/knockout.svg",
+    iconColors : "linear-gradient(135deg,rgb(248, 231, 231),rgb(252, 237, 237))" // Replace with actual icon path
   },
   {
     name: "LESS",
@@ -129,8 +128,8 @@ const databaseDescription = [
   {
     name: "CSS3",
     description: "CSS3 is a style sheet language that enhances web design with advanced layouts, animations, and responsive styling.",
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzdOPGrhHK13DvB6p7XR8Qlw_LOfMbRuK5Bg&s",
-    iconColors :"linear-gradient(135deg, #a0e1ff, #c1f0ff)" // pastel light blue// Replace with actual icon path
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+    iconColors :"linear-gradient(135deg,rgb(188, 228, 247),rgb(225, 247, 255))" // pastel light blue// Replace with actual icon path
 
   }
 ];
