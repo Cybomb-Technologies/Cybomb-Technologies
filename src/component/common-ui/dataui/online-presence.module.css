@@ -96,6 +96,10 @@
     margin-bottom: 1rem;
   }
 
+  .section {
+    padding: 2rem 1rem; /* reduce top/bottom padding */
+  }
+
   .description {
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -105,8 +109,11 @@
     font-size: 1rem;
     padding: 0.6rem 1.2rem;
   }
-
-  .image {
-    height: 160px;
+  /* .image {
+    height: 220px;
+    max-width: 100%;
+  } */
+  .imageWrapper {
+    display: none;
   }
 }
