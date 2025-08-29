@@ -100,32 +100,28 @@ const wordpressDescription = [
     description:
       "Core server-side scripting language powering WordPress themes, plugins, and backend logic.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(137,147,190,0.4), rgba(125,139,202,0.4))",
+    iconColors: "linear-gradient(135deg,  rgba(179, 191, 247, 0.4))",
   },
   {
     name: "MySQL",
     description:
       "Relational database management system used by WordPress to store content and site data.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(0,117,143,0.4), rgba(241,181,102,0.4))",
+    iconColors: "linear-gradient(135deg, #beedf6ff, #c7e7fbff)",
   },
   {
     name: "REST API",
     description:
       "Built-in WordPress API for creating, reading, updating, and deleting data via HTTP requests.",
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB6FxLJTOj02_DdkJdJn-CwvebehzJOIyvYA&s",
-    iconColors:
-      "linear-gradient(135deg, rgba(0,198,255,0.4), rgba(0,114,255,0.4))",
+    icon: "https://apps.odoo.com/web/image/loempia.module/37657/icon_image?unique=d97f809",
+    iconColors: "linear-gradient(135deg, rgba(180, 227, 240, 0.4))",
   },
   {
     name: "Composer",
     description:
       "Dependency manager for PHP, used in modern WordPress projects to handle libraries and packages.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(110,78,46,0.4), rgba(198,154,107,0.4))",
+    iconColors: "linear-gradient(135deg, rgba(255, 211, 164, 0.4))",
   },
   {
     name: "Docker",

@@ -85,9 +85,8 @@ const joomlaDescription = [
     name: "Joomla (latest versions)",
     description:
       "Open-source CMS for building dynamic websites and online applications, with robust extensions and templates.",
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwBkbxZnGZTv4FU4eHWw2EPxgJBoxg-MudxA&s",
-    iconColors:
-      "linear-gradient(135deg, rgba(244,67,54,0.4), rgba(21,101,192,0.4))",
+    icon: "https://images.icon-icons.com/2592/PNG/512/joomla_logo_icon_154471.png",
+    iconColors: "linear-gradient(135deg, #beedf6ff, #c7e7fbff)",
   },
   {
     name: "PHP",
@@ -102,14 +101,13 @@ const joomlaDescription = [
     description:
       "Primary database management system for storing Joomla content, users, and configurations.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(0,117,143,0.4), rgba(242,145,17,0.4))",
+    iconColors: "linear-gradient(135deg, #beedf6ff, #c7e7fbff)",
   },
   {
     name: "HTML5 & CSS3",
     description:
       "Frontend technologies used in Joomla templates to create responsive layouts and styled designs.",
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSqBu9NeI3VRExYQtWrJIgnW-7drtru5IPzw&s",
+    icon: "https://cdn.simpleicons.org/html5",
     iconColors:
       "linear-gradient(135deg, rgba(227,79,38,0.4), rgba(239,101,42,0.4))",
   },
@@ -117,7 +115,7 @@ const joomlaDescription = [
     name: "JavaScript (with jQuery)",
     description:
       "Enhances Joomla’s interactivity, dynamic modules, and user interface behaviors.",
-    icon: "https://www.kindpng.com/picc/m/476-4768341_javascript-logo-number-angularjs-node-javascript-transparent-background.png",
+    icon: "https://iconape.com/wp-content/files/ez/353342/svg/javascript-seeklogo.com.svg",
     iconColors:
       "linear-gradient(135deg, rgba(247,223,30,0.4), rgba(240,219,79,0.4))",
   },
