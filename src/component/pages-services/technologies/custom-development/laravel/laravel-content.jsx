@@ -7,7 +7,7 @@ import ServicesOfferings from "../../../../common-ui/custom-development/services
 import TechnologiesToolsSection from "./laravel-technology";
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
-
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 const hiringData = [
   {
     title: 'Proven Laravel Expertise',
@@ -93,6 +93,51 @@ const useCases = [
   "CRM/ERP Systems – Business management systems built on Laravel."
 ];
 
+const laravelTechDescription = [
+  // Laravel Ecosystem
+  {
+    name: "Laravel",
+    description: "A PHP framework for web artisans, Laravel provides elegant syntax, MVC architecture, and built-in features for rapid web application development.",
+    icon: "https://icon.icepanel.io/Technology/svg/Laravel.svg",
+    iconColors: "linear-gradient(135deg, #fef2f2, #fee2e2)"
+  },
+    // Frontend
+  {
+    name: "Vue.js",
+    description: "A progressive JavaScript framework for building user interfaces, commonly paired with Laravel for reactive frontends.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    iconColors: "linear-gradient(135deg, #f0fdfa, #ccfbf1)"
+  },
+    {
+    name: "Inertia.js",
+    description: "A modern stack that lets you build single-page apps using Laravel backend with Vue, React, or Svelte without writing an API.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/inertiajs/inertiajs-original.svg",
+    iconColors: "linear-gradient(135deg, #faf5ff, #ede9fe)"
+  },
+    {
+    name: "Alpine.js",
+    description: "A lightweight JavaScript framework for adding reactivity to Laravel Blade templates, often called the Tailwind of JavaScript.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/alpinejs/alpinejs-original.svg",
+    iconColors: "linear-gradient(135deg, #ecfdf5, #d1fae5)"
+  },
+
+  // Databases
+  
+  {
+    name: "Redis",
+    description: "An in-memory key-value store used in Laravel for caching, sessions, and real-time features like queues.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+    iconColors: "linear-gradient(135deg, #fff1f2, #ffe4e6)"
+  },
+    {
+    name: "Envoyer",
+    description: "A zero-downtime deployment service for Laravel applications, built for smooth CI/CD pipelines.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/envoy/envoy-original.svg",
+    iconColors: "linear-gradient(135deg, #fdf4ff, #fae8ff)"
+  }  
+];
+
+
 function LaravelAppContent() {
   return (
     <section>
@@ -126,6 +171,7 @@ function LaravelAppContent() {
         items={offerings}
       /> 
       <TechnologiesToolsSection/>
+      <AboutTech technologies={laravelTechDescription} />
       <DevelopmentProcess 
         title="Laravel Use Cases"
         Process={useCases}

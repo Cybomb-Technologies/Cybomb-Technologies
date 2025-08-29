@@ -8,6 +8,7 @@ import ServicesOfferings from "../../../../common-ui/custom-development/services
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import AngularTechnologies from "./angular-technology";
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const hiringData = [
   { title: 'Enterprise Ready', description: 'Robust framework for large applications.' },
@@ -43,6 +44,46 @@ const useCases = [
   "Internal Tools - Business process automation."
 ];
 
+const angularTechDescription = [
+  {
+    name: "Angular",
+    description: "A powerful TypeScript-based open-source framework for building dynamic, single-page client applications developed by Google.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+    iconColors: "linear-gradient(135deg, #fef2f2, #fee2e2)"
+  },
+    {
+    name: "RxJS",
+    description: "A reactive programming library used in Angular for handling asynchronous operations and managing streams of data.",
+    icon: "https://rxjs.dev/assets/images/favicons/favicon.ico",
+    iconColors: "linear-gradient(135deg, #f7d8f0ff, #fad6fbff)"
+  },
+  {
+    name: "NgRx",
+    description: "A state management library for Angular inspired by Redux, providing a reactive approach for handling application state.",
+    icon: "https://ngrx.io/assets/images/badge.svg",
+    iconColors: "linear-gradient(135deg, #f2d8f8ff, #efd4f6ff)"
+  },
+  {
+    name: "Ivy",
+    description: "Angular’s next-generation rendering engine, offering faster compilation, better debugging, and improved bundle sizes.",
+    icon: "https://angular.io/assets/images/logos/angular/angular.svg",
+    iconColors: "linear-gradient(135deg, #f7e3d9ff, #fcddd7ff)"
+  },
+    {
+    name: "Bootstrap",
+    description: "A popular front-end framework that provides responsive design and UI components, integrated easily with Angular.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
+    iconColors: "linear-gradient(135deg, #fff7ed, #ffedd5)"
+  },
+  {
+    name: "Tailwind",
+    description: "A utility-first CSS framework that allows highly customizable and responsive UI design within Angular projects.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    iconColors: "linear-gradient(135deg, #eff6ff, #dbeafe)"
+  }
+];
+
+
 function AngularPage() {
   return (
     <section>
@@ -76,6 +117,7 @@ function AngularPage() {
         items={offerings}
       /> 
       <AngularTechnologies/>
+      <AboutTech technologies={angularTechDescription} />
       <DevelopmentProcess 
         title="Common Use Cases"
         Process={useCases}

@@ -1,6 +1,6 @@
 .hiringSection {
   background-color: #034472;
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
   color: #000;
 }
 
@@ -71,9 +71,12 @@
   .rightContent .image {
     margin: 0 auto;
   }
+  .image{
+    display:none;
+  }
 }
 
-@media (min-width: 1301px) {
+@media (min-width: 1200px) {
   .container {
     padding: 0 2rem;
   }

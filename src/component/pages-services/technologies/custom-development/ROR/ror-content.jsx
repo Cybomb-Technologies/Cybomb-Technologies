@@ -8,7 +8,7 @@ import ServicesOfferings from "../../../../common-ui/custom-development/services
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import RailsTechnologiesTools from "./ror-technology";
-
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 // Main content data
 const hiringData = [
   {
@@ -95,6 +95,50 @@ const useCases = [
   "Internal Tools - Business process automation and admin dashboards."
 ];
 
+const rorTechDescription = [
+  // --- Rails Ecosystem ---
+  {
+    name: "Ruby",
+    description: "A dynamic, open-source programming language focused on simplicity and productivity. It powers the Ruby on Rails framework with its clean, readable syntax.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg",
+    iconColors: "linear-gradient(135deg, #f7c6c3ff, #ecc3d3ff)"
+  },
+  {
+    name: "RSpec",
+    description: "A testing framework for Ruby and Rails applications. It focuses on behavior-driven development (BDD) with human-readable syntax.",
+    icon: "https://rspec.info/images/logo.png",
+    iconColors: "linear-gradient(135deg, #cef8fbff, #c7ebf5ff)"
+  },
+  {
+    name: "Rails",
+    description: "A full-stack web application framework written in Ruby. Rails follows the MVC pattern and emphasizes convention over configuration and developer happiness.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-plain.svg",
+    iconColors: "linear-gradient(135deg, #fbbebeff, #efbabaff)"
+  },
+  
+  {
+    name: "Sidekiq",
+    description: "A background job processing framework for Ruby, using Redis as a job queue to handle asynchronous tasks at scale.",
+    icon: "https://www.svgrepo.com/show/354344/sidekiq-icon.svg",
+    iconColors: "linear-gradient(135deg, #f7cbd9ff, #f3c5b5ff)"
+  },
+    // --- Frontend ---
+  
+  {
+    name: "Vue.js",
+    description: "A progressive JavaScript framework for building UIs. It can be used with Rails to build reactive, lightweight frontends.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    iconColors: "linear-gradient(135deg, #c7f7e1ff, #c6f8ddff)"
+  },
+  {
+    name: "Redis",
+    description: "An in-memory key-value store used in Rails for caching, sessions, and background job queues (e.g., Sidekiq).",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+    iconColors: "linear-gradient(135deg, #f1cbc8ff, #f4d4ccff)"
+  }  
+];
+
+
 
 // Main Component
 function RORAppContent() {
@@ -130,6 +174,7 @@ function RORAppContent() {
         items={offerings}
       /> 
       <RailsTechnologiesTools/>
+      <AboutTech technologies={rorTechDescription} />
       <DevelopmentProcess 
         title="Rails Use Cases"
         Process={useCases}
