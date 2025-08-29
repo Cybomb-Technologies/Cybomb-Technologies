@@ -8,6 +8,7 @@ import ServicesOfferings from "../../../../common-ui/custom-development/services
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import ZohoCreatorTechnologies from "./zohocreator-technology";
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const hiringData = [
   { title: 'Rapid Development', description: 'Build apps 10x faster than traditional coding.' },
@@ -43,6 +44,46 @@ const useCases = [
   "Custom Dashboards - Visualize key business metrics."
 ];
 
+const zohoTechDescription = [
+  {
+    name: "Zoho Creator",
+    description: "A low-code application development platform that allows businesses to build custom apps with minimal coding.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/ZOHO_logo_2023.svg/768px-ZOHO_logo_2023.svg.png?20231106145651",
+    iconColors: "linear-gradient(135deg, #ddf8d6ff, #eef2c8ff)"
+  },
+  {
+    name: "Zoho Analytics",
+    description: "A self-service BI and data analytics tool for creating reports, dashboards, and visualizations from multiple data sources.",
+    icon: "https://img.icons8.com/?size=96&id=KJ0KehaD9qPs&format=png",
+    iconColors: "linear-gradient(135deg, #fdedecff, #f9dbdbff)"
+  },
+  {
+    name: "Zoho CRM",
+    description: "A powerful customer relationship management platform designed to manage sales, marketing, and customer support.",
+    icon: "https://www.zohowebstatic.com/sites/zweb/images/productlogos/crm.svg",
+    iconColors: "linear-gradient(135deg, #d3e3f1ff, #cfd3f6ff)"
+  },
+  {
+    name: "Custom Widgets",
+    description: "Extend Zoho Creator with custom-built widgets using HTML, CSS, and JavaScript for enhanced UI and functionality.",
+    icon: "https://img.icons8.com/?size=96&id=59816&format=png",
+    iconColors: "linear-gradient(135deg, #fff1f2, #ffe4e6)"
+  },
+  {
+    name: "API Connectors",
+    description: "Enable smooth communication with third-party apps and services by integrating APIs within Zoho Creator apps.",
+    icon: "https://www.svgrepo.com/show/379931/api-integration-connection.svg",
+    iconColors: "linear-gradient(135deg, #f0fdf4, #dcfce7)"
+  },
+  {
+    name: "CSS Customization",
+    description: "Personalize and style Zoho Creator applications with custom CSS to enhance branding and user experience.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    iconColors: "linear-gradient(135deg, #eff6ff, #dbeafe)"
+  }
+];
+
+
 function ZohoCreatorPage() {
   return (
     <section>
@@ -76,6 +117,7 @@ function ZohoCreatorPage() {
         items={offerings}
       /> 
       <ZohoCreatorTechnologies/>
+      <AboutTech technologies={zohoTechDescription} />
       <DevelopmentProcess 
         title="Common Use Cases"
         Process={useCases}

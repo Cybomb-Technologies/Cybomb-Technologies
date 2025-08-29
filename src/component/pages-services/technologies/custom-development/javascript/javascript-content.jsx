@@ -43,6 +43,157 @@ const useCases = [
   "Progressive Web Apps - Installable, offline-ready applications."
 ];
 
+// const javascriptTechDescription = [
+//   // Core JavaScript
+//   {
+//     name: "JavaScript (ES6+)",
+//     description: "The core programming language of the web, with modern ES6+ features such as classes, modules, async/await, and arrow functions.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+//     iconColors: "linear-gradient(135deg, #fef9c3, #fef08a)"
+//   },
+//   {
+//     name: "TypeScript",
+//     description: "A strongly-typed superset of JavaScript that compiles to plain JavaScript, improving maintainability and scalability.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+//     iconColors: "linear-gradient(135deg, #e0f2fe, #bae6fd)"
+//   },
+//   {
+//     name: "Node.js",
+//     description: "A runtime environment that allows JavaScript to run on the server, enabling scalable and event-driven applications.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+//     iconColors: "linear-gradient(135deg, #dcfce7, #bbf7d0)"
+//   },
+//   {
+//     name: "Deno",
+//     description: "A secure runtime for JavaScript and TypeScript created by the original author of Node.js, featuring modern tooling and built-in TypeScript support.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/denojs/denojs-original.svg",
+//     iconColors: "linear-gradient(135deg, #f0f9ff, #e0f2fe)"
+//   },
+//   {
+//     name: "Bun",
+//     description: "An all-in-one JavaScript runtime, bundler, and package manager designed for speed and simplicity.",
+//     icon: "https://bun.sh/logo.svg",
+//     iconColors: "linear-gradient(135deg, #f3f4f6, #e5e7eb)"
+//   },
+
+//   // Front-End Frameworks
+//   {
+//     name: "React",
+//     description: "A JavaScript library for building component-based UIs, developed by Meta, widely used for SPAs and modern frontends.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+//     iconColors: "linear-gradient(135deg, #e0f2fe, #bae6fd)"
+//   },
+//   {
+//     name: "Vue.js",
+//     description: "A progressive JavaScript framework for building reactive UIs, offering a simple core and flexible ecosystem.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+//     iconColors: "linear-gradient(135deg, #dcfce7, #bbf7d0)"
+//   },
+//   {
+//     name: "Angular",
+//     description: "A TypeScript-based framework by Google for building scalable, enterprise-ready web applications.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+//     iconColors: "linear-gradient(135deg, #fee2e2, #fecaca)"
+//   },
+//   {
+//     name: "Svelte",
+//     description: "A modern UI framework that compiles components to efficient JavaScript at build time, producing highly optimized apps.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
+//     iconColors: "linear-gradient(135deg, #ffedd5, #fed7aa)"
+//   },
+//   {
+//     name: "Next.js",
+//     description: "A React-based framework providing hybrid static & server-side rendering, API routes, and optimized performance out of the box.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+//     iconColors: "linear-gradient(135deg, #f3f4f6, #e5e7eb)"
+//   },
+
+//   // Back-End Frameworks
+//   {
+//     name: "Express.js",
+//     description: "A minimal and flexible Node.js framework providing robust features for APIs and web applications.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+//     iconColors: "linear-gradient(135deg, #fafafa, #e5e5e5)"
+//   },
+//   {
+//     name: "NestJS",
+//     description: "A progressive Node.js framework built with TypeScript, inspired by Angular’s modular architecture, for scalable server-side applications.",
+//     icon: "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
+//     iconColors: "linear-gradient(135deg, #fdf4ff, #fae8ff)"
+//   },
+//   {
+//     name: "AdonisJS",
+//     description: "A full-featured MVC framework for Node.js, offering an elegant developer experience similar to Laravel.",
+//     icon: "https://avatars.githubusercontent.com/u/13810373?s=200&v=4",
+//     iconColors: "linear-gradient(135deg, #e0f2fe, #dbeafe)"
+//   },
+
+//   // Build & Testing Tools
+//   {
+//     name: "Webpack",
+//     description: "A powerful JavaScript bundler that compiles modules into optimized assets for modern web applications.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg",
+//     iconColors: "linear-gradient(135deg, #e0f2fe, #dbeafe)"
+//   },
+//   {
+//     name: "Vite",
+//     description: "A next-generation frontend build tool that provides instant dev server start and lightning-fast HMR.",
+//     icon: "https://vitejs.dev/logo.svg",
+//     iconColors: "linear-gradient(135deg, #f0fdf4, #dcfce7)"
+//   },
+//   {
+//     name: "Babel",
+//     description: "A JavaScript compiler that allows developers to use the latest features by transpiling code for older environments.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg",
+//     iconColors: "linear-gradient(135deg, #fef3c7, #fde68a)"
+//   },
+//   {
+//     name: "Jest",
+//     description: "A delightful JavaScript testing framework with built-in mocking, snapshots, and a simple API.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+//     iconColors: "linear-gradient(135deg, #fee2e2, #fecaca)"
+//   },
+//   {
+//     name: "Mocha",
+//     description: "A feature-rich JavaScript test framework running on Node.js, making asynchronous testing simple and fun.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg",
+//     iconColors: "linear-gradient(135deg, #f5f5f4, #e7e5e4)"
+//   },
+
+//   // Deployment & DevOps
+//   {
+//     name: "Docker",
+//     description: "A containerization platform that ensures JavaScript apps run consistently across environments.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+//     iconColors: "linear-gradient(135deg, #dbeafe, #bfdbfe)"
+//   },
+//   {
+//     name: "Kubernetes",
+//     description: "A container orchestration system for managing, scaling, and deploying JavaScript microservices in production.",
+//     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+//     iconColors: "linear-gradient(135deg, #dcfce7, #bbf7d0)"
+//   },
+//   {
+//     name: "Vercel",
+//     description: "A cloud platform optimized for frontend frameworks and static sites, powering Next.js and other JS apps.",
+//     icon: "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
+//     iconColors: "linear-gradient(135deg, #f3f4f6, #e5e7eb)"
+//   },
+//   {
+//     name: "Netlify",
+//     description: "A deployment platform for modern web projects, offering continuous deployment, edge functions, and CDN support.",
+//     icon: "https://www.netlify.com/v3/static/favicon/favicon.ico",
+//     iconColors: "linear-gradient(135deg, #f0fdfa, #ccfbf1)"
+//   },
+//   {
+//     name: "AWS Lambda",
+//     description: "A serverless compute service by AWS that runs JavaScript/Node.js code without provisioning servers.",
+//     icon: "https://cdn.worldvectorlogo.com/logos/aws-lambda-1.svg",
+//     iconColors: "linear-gradient(135deg, #fffbeb, #fef3c7)"
+//   }
+// ];
+
+
 function JavaScriptPage() {
   return (
     <section>

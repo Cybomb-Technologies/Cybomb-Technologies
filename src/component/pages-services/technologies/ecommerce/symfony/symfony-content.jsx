@@ -97,7 +97,7 @@ const databaseDescription = [
     name: "PHP",
     description: "PHP is a popular server-side scripting language used for building dynamic and robust web applications.",
     icon: "https://www.vectorlogo.zone/logos/php/php-icon.svg", // Replace with actual icon path
-    iconColors : "linear-gradient(135deg, #a8e0ff, #c1f0ff)"
+    iconColors : "linear-gradient(135deg,rgb(146, 206, 238),rgb(170, 225, 243))"
   },
   {
     name: "Symfony CLI",
@@ -109,19 +109,19 @@ const databaseDescription = [
     name: "Twig",
     description: "Twig is a flexible and secure templating engine for PHP that simplifies dynamic content rendering.",
     icon: "https://www.svgrepo.com/show/374142/twig.svg",
-    iconColors : "linear-gradient(135deg, #7ed957, #a3f37b)" // Replace with actual icon path
+    iconColors : "linear-gradient(135deg,rgb(169, 243, 137),rgb(212, 253, 192))" // Replace with actual icon path
   },
   {
     name: "Composer",
     description: "Composer is a dependency manager for PHP that simplifies package installation, versioning, and project management.",
     icon: "https://www.svgrepo.com/show/85929/composer.svg",
-    iconColors : "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)" // Replace with actual icon path
+    iconColors : "linear-gradient(135deg,rgb(188, 227, 255),rgb(172, 251, 255))" // Replace with actual icon path
   },
   {
     name: "Doctrine ORM",
     description: "Doctrine ORM is a powerful PHP object-relational mapper that simplifies database interactions with object-oriented models.",
     icon: "https://icon.icepanel.io/Technology/svg/Doctrine.svg",
-    iconColors : "linear-gradient(135deg, #d3d3d3, #e8e8e8)" // Replace with actual icon path
+    iconColors : "linear-gradient(135deg,rgb(255, 220, 220),rgb(251, 208, 208))" // Replace with actual icon path
   },
   {
     name: "PostgreSQL",

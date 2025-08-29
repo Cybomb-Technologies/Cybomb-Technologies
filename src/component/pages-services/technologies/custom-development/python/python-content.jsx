@@ -8,6 +8,7 @@ import ServicesOfferings from "../../../../common-ui/custom-development/services
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import PythonTechnologies from "./python-technology";
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const hiringData = [
   { title: 'Versatile Language', description: 'From web apps to data science and automation.' },
@@ -43,6 +44,52 @@ const useCases = [
   "Scripting - Automate business processes."
 ];
 
+const pythonTechDescription = [
+  // --- Frameworks ---
+  
+  {
+    name: "Flask",
+    description: "A lightweight Python micro-framework for building simple yet powerful web applications. Provides flexibility with extensions for databases, authentication, and APIs.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+    iconColors: "linear-gradient(135deg, #d5d4d4ff, #cbcbcbff)"
+  },
+    {
+    name: "Pyramid",
+    description: "A flexible Python web framework suitable for both small and large applications, offering URL mapping, templating, and security features.",
+    icon: "https://cdn-icons-png.flaticon.com/512/6409/6409798.png",
+    iconColors: "linear-gradient(135deg, #f8e8cfff, #f7dad2ff)"
+  },
+  
+
+  // --- Data Science ---
+  {
+    name: "Pandas",
+    description: "A data analysis and manipulation library for Python, offering data structures like DataFrames and powerful tools for cleaning, filtering, and transforming data.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
+    iconColors: "linear-gradient(135deg, #d5cefbff, #d8cbf2ff)"
+  },
+  {
+    name: "NumPy",
+    description: "The core library for numerical computing in Python, providing support for arrays, matrices, and high-performance mathematical functions.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
+    iconColors: "linear-gradient(135deg, #d1eff9ff, #c8ebf5ff)"
+  },
+  {
+    name: "SciPy",
+    description: "A scientific computing library built on NumPy, offering advanced modules for optimization, integration, interpolation, and statistics.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/SCIPY_2.svg/768px-SCIPY_2.svg.png?20200904111722",
+    iconColors: "linear-gradient(135deg, #cce2f6ff, #b7e9eeff)"
+  },
+  {
+    name: "Django",
+    description: "A high-level Python web framework that encourages rapid development and clean, pragmatic design. Comes with ORM, admin panel, authentication, and scalability.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+    iconColors: "linear-gradient(135deg, #b2b4b3ff, #a4a4a4ff)"
+  },
+  
+];
+
+
 function PythonPage() {
   return (
     <section>
@@ -76,6 +123,7 @@ function PythonPage() {
         items={offerings}
       /> 
       <PythonTechnologies/>
+            <AboutTech technologies={pythonTechDescription} />
       <DevelopmentProcess 
         title="Common Use Cases"
         Process={useCases}

@@ -7,6 +7,7 @@ import ServicesOfferings from "../../../../common-ui/custom-development/services
 import TechnologiesToolsSection from "./php-technology";
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
 
 const hiringData = [
   {
@@ -100,6 +101,46 @@ const useCases = [
   "Community Platforms – Forums, social networks, and membership sites."
 ];
 
+const phpTechDescription = [
+  {
+    name: "Laravel",
+    description: "A modern PHP framework known for elegant syntax, MVC structure, built-in ORM (Eloquent), and a vast ecosystem for rapid web application development.",
+    icon: "https://icon.icepanel.io/Technology/svg/Laravel.svg",
+    iconColors: "linear-gradient(135deg, #ff9a9e, #fad0c4)"
+  },
+  {
+    name: "Symfony",
+    description: "A robust PHP framework offering reusable components, flexibility, and scalability for enterprise-level web applications.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg",
+    iconColors: "linear-gradient(135deg, #e0e0e0, #bdbdbd)"
+  },
+  {
+    name: "CodeIgniter",
+    description: "A lightweight PHP framework designed for developers who need a simple and elegant toolkit to build full-featured web applications.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg",
+    iconColors: "linear-gradient(135deg, #fabbaeff, #f3bbd4ff)"
+  },
+  {
+    name: "Yii",
+    description: "A high-performance PHP framework best for large-scale applications with built-in security, caching, and Gii code generator.",
+    icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/yii-php-framework-icon.png",
+    iconColors: "linear-gradient(135deg, #9ef0f6ff, #acc2f2ff)"
+  },
+  {
+    name: "CakePHP",
+    description: "A PHP framework that simplifies development with code generation, scaffolding, and convention-over-configuration principles.",
+    icon: "https://www.svgrepo.com/show/341668/cakephp.svg",
+    iconColors: "linear-gradient(135deg, #f7d5beff, #edb1ceff)"
+  },
+  {
+    name: "Joomla",
+    description: "An open-source PHP CMS offering flexibility, multilingual support, and thousands of extensions for website development.",
+    icon: "https://www.svgrepo.com/show/508922/joomla.svg",
+    iconColors: "linear-gradient(135deg, #f3ccc1ff, #f7dcb8ff)"
+  }
+];
+
+
 function PHPAppContent() {
   return (
    <section>
@@ -134,6 +175,7 @@ function PHPAppContent() {
           items={offerings}
         /> 
         <TechnologiesToolsSection/>
+              <AboutTech technologies={phpTechDescription} />
             <DevelopmentProcess 
                 title="Use Case"
                 Process={useCases}

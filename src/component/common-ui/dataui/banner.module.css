@@ -14,6 +14,7 @@
 
 .heading {
   font-size: 3rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -44,7 +45,7 @@
   background-color: #003459;
 }
 
-.note{
+.note {
   font-size: 1rem;
   margin-top: 1rem;
   margin-bottom: 0rem;
@@ -57,6 +58,7 @@
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .heading {
+    margin-top: 0rem;
     font-size: 2rem;
   }
 
@@ -78,6 +80,7 @@
 
 @media (max-width: 480px) {
   .heading {
+    margin-top: 0rem;
     font-size: 1.6rem;
   }
 

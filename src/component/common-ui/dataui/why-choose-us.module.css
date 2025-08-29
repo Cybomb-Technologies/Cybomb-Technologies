@@ -67,7 +67,7 @@
   .card {
     flex: 1 1 calc(45% - 1.5rem);
   }
-  .section{
+  .section {
     padding: 1rem 1.5rem;
   }
 }
@@ -76,6 +76,7 @@
 @media (max-width: 768px) {
   .heading {
     font-size: 2rem;
+    margin-bottom: 1.5rem;
     padding-bottom: 0rem;
   }
 
@@ -97,7 +98,7 @@
   .card p {
     font-size: 1rem;
   }
-  .section{
-    padding: 1rem 1.5rem;
+  .section {
+    padding: 1rem 0.8rem;
   }
 }

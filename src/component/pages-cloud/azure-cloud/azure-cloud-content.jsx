@@ -9,7 +9,7 @@ import EngagementOptions from '../../common-ui/cloud-services/engagement-options
 import styles from '../../common-ui/cloud-services/cloud-usecase.module.css';
 import azureImg from '../../../assets/technologies/azure-cloud-services-img.jpg';
 import contactUsImg from './../../../assets/contact/contact-us-img2.jpg';
-
+import AboutTech from '../../common-ui/custom-development/about-tech';
 const statsData = [
   { number: "99.95%", label: "Global availability through Microsoft data centers" },
   { number: "70%", label: "Improved productivity with Azure DevOps integration" },
@@ -103,6 +103,45 @@ const engagementOptions = [
     description: "Integrate Azure with AWS, GCP, or on-prem infrastructure for maximum flexibility",
   },
 ];
+const databaseDescription = [
+  {
+    name: "App Services",
+    description: "App Services provide a fully managed platform for building, deploying, and scaling web and mobile applications.",
+    icon: "https://code.benco.io/icon-collection/azure-icons/App-Services.svg", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(188, 218, 252),rgb(198, 224, 255))"
+  },
+  {
+    name: "Azure Functions",
+    description: "Azure Functions is a serverless compute service that runs event-driven code without managing infrastructure.",
+    icon: "https://code.benco.io/icon-collection/azure-icons/Function-Apps.svg", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg,rgb(244, 215, 209),rgb(246, 217, 230))"
+  },
+  {
+    name: "Virtual Machines",
+    description: "Virtual Machines provide scalable, isolated computing environments that run operating systems and applications on virtualized hardware.",
+    icon: "https://code.benco.io/icon-collection/azure-icons/Virtual-Machine.svg",
+    iconColors: "linear-gradient(135deg,rgb(139, 215, 248),rgb(144, 238, 255))" 
+  },
+  {
+    name: "Logic Apps",
+    description: "Azure Logic Apps is a cloud service that automates workflows and integrates apps, data, and services seamlessly.",
+    icon: "https://code.benco.io/icon-collection/azure-icons/Logic-Apps.svg",
+    iconColors : "linear-gradient(135deg,rgb(218, 230, 213),hsl(97, 27.30%, 87.10%))" // Replace with actual icon path
+  },
+  {
+    name: "AKS (Kubernetes)",
+    description: "AKS is a managed Kubernetes service that simplifies deploying, managing, and scaling containerized applications in Azure.",
+    icon: "https://code.benco.io/icon-collection/azure-icons/Kubernetes-Services.svg",
+    iconColors : "linear-gradient(135deg,rgb(187, 212, 244),rgb(191, 227, 245))" // Replace with actual icon path
+  },
+  {
+    name: "Azure SQL",
+    description: "Azure SQL is a fully managed relational database service that provides high availability, scalability, and security in the cloud.",
+    icon: "https://code.benco.io/icon-collection/azure-icons/SQL-Server.svg",
+    iconColors :"linear-gradient(135deg,rgb(194, 227, 243), #c1f0ff)" // pastel light blue// Replace with actual icon path
+
+  }
+];
 
 
 export default function AzureContent() {
@@ -129,6 +168,8 @@ export default function AzureContent() {
       services={services}
     />
       <TechToolsSection/>
+      <AboutTech technologies={databaseDescription} />
+
       <OnlinePresence
       title="Unlock Your Cloud Potential with Our Azure Solutions"
       description="Our custom Azure integrations ensure scalability, security, and cost-efficiency."
