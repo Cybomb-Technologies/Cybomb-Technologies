@@ -132,7 +132,7 @@
 /* Extra Small Phones (<480px) */
 @media (max-width: 479px) {
   .section {
-    padding: 2rem 0.5rem;
+    padding: 2rem 1rem;
   }
   .container {
     padding: 2rem 1rem;

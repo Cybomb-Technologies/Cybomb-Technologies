@@ -1,13 +1,15 @@
 import Banner from "../../../../common-ui/custom-development/banner";
 import InfoStats from "../../../../common-ui/custom-development/info-stats";
 import HiringModels from "../../../../common-ui/custom-development/hiring";
-import placeholderImage from './../../../../../assets/placeholder-image.webp';
 import WhatWeOffer from "../../../../common-ui/custom-development/whatweoffer";
 import ServicesOfferings from "../../../../common-ui/custom-development/services-offerings";
 import TechnologiesToolsSection from "./laravel-technology";
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import AboutTech from "../../../../common-ui/custom-development/about-tech";
+import WhyChooseImg from "./../../../../../assets/contact/schedule-a-consultation-img1.jpg";
+import WhatWeOfferImg from "./../../../../../assets/contact/hiring-model-img2.webp";
+import contactImg from "./../../../../../assets/contact/contact-us-img1.jpg";
 const hiringData = [
   {
     title: 'Proven Laravel Expertise',
@@ -159,12 +161,12 @@ function LaravelAppContent() {
       <HiringModels
         title="Why Choose Laravel"
         cards={hiringData}
-        image={placeholderImage}
+        image={WhyChooseImg}
       />
       <WhatWeOffer
         title="What We Offer"
         items={offerData}
-        image={placeholderImage}
+        image={WhatWeOfferImg}
       />
       <ServicesOfferings 
         title="Laravel Features" 
@@ -180,7 +182,7 @@ function LaravelAppContent() {
         title="Let's Build Your Next Laravel Application"
         buttonText="CONTACT US"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactImg}
         imageAlt="Laravel development services"
       />
     </section>

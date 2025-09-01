@@ -2,12 +2,15 @@ import React from "react";
 import Banner from "../../../../common-ui/custom-development/banner";
 import InfoStats from "../../../../common-ui/custom-development/info-stats";
 import HiringModels from "../../../../common-ui/custom-development/hiring";
-import placeholderImage from './../../../../../assets/placeholder-image.webp';
 import WhatWeOffer from "../../../../common-ui/custom-development/whatweoffer";
 import ServicesOfferings from "../../../../common-ui/custom-development/services-offerings";
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import JavaTechnologies from "./java-technology";
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
+import WhyChooseImg from "./../../../../../assets/contact/schedule-a-consultation-img1.jpg";
+import WhatWeOfferImg from "./../../../../../assets/contact/hiring-model-img2.webp";
+import contactImg from "./../../../../../assets/contact/contact-us-img1.jpg";
 
 const hiringData = [
   { title: 'Enterprise Grade', description: 'Rock-solid applications for mission-critical systems.' },
@@ -43,6 +46,47 @@ const useCases = [
   "IoT Backends - Process device data at scale."
 ];
 
+const javaTechDescription = [
+  // Java Ecosystem
+  {
+    name: "Java SE",
+    description: "Java Standard Edition provides the core functionality of the Java language, including APIs for basic data structures, networking, and concurrency.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    iconColors: "linear-gradient(135deg, #c0d5f5c6, #a8bef0be)"
+  },
+  {
+    name: "Spring Boot",
+    description: "A powerful framework for building production-ready Java applications with minimal configuration, offering embedded servers and microservice support.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+    iconColors: "linear-gradient(135deg, #dcfce7, #bbf7d0)"
+  },
+{
+    name: "Hibernate",
+    description: "An ORM (Object Relational Mapping) framework that simplifies database interactions by mapping Java objects to relational tables.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-original-wordmark.svg",
+    iconColors: "linear-gradient(135deg, #baaaf589, #655f475c)"
+  },
+  {
+    name: "Struts",
+    description: "An open-source framework for creating Java EE web applications using the MVC design pattern.",
+    icon: "https://www.svgrepo.com/show/354402/struts.svg",
+    iconColors: "linear-gradient(135deg, #c5d7faff, #cadcf7ff)"
+  },
+  {
+    name: "Play",
+    description: "A reactive web framework for Java and Scala, designed for building scalable and modern web applications.",
+    icon: "https://www.playframework.com/assets/images/logos/play_full_color.png",
+    iconColors: "linear-gradient(135deg, #ccfbf1, #99f6e4)"
+  },
+  {
+    name: "Tomcat",
+    description: "An open-source implementation of the Java Servlet, JSP, and WebSocket technologies, widely used as a lightweight application server.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original-wordmark.svg",
+    iconColors: "linear-gradient(135deg, #fef3c7, #fde68a)"
+  }  
+];
+
+
 function JavaPage() {
   return (
     <section>
@@ -64,18 +108,19 @@ function JavaPage() {
       <HiringModels
         title="Why Java"
         cards={hiringData}
-        image={placeholderImage}
+        image={WhyChooseImg}
       />
       <WhatWeOffer
         title="Our Java Services"
         items={offerData}
-        image={placeholderImage}
+        image={WhatWeOfferImg}
       />
       <ServicesOfferings 
         title="Our Expertise" 
         items={offerings}
       /> 
       <JavaTechnologies/>
+                  <AboutTech technologies={javaTechDescription} />
       <DevelopmentProcess 
         title="Common Use Cases"
         Process={useCases}
@@ -84,7 +129,7 @@ function JavaPage() {
         title="Ready to Build Your Java Solution?"
         buttonText="CONTACT OUR TEAM"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactImg}
         imageAlt="Java development services"
       />
     </section>

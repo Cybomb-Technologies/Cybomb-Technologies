@@ -2,13 +2,15 @@ import React from "react";
 import Banner from "../../../../common-ui/custom-development/banner";
 import InfoStats from "../../../../common-ui/custom-development/info-stats";
 import HiringModels from "../../../../common-ui/custom-development/hiring";
-import placeholderImage from "./../../../../../assets/placeholder-image.webp";
 import WhatWeOffer from "../../../../common-ui/custom-development/whatweoffer";
 import ServicesOfferings from "../../../../common-ui/custom-development/services-offerings";
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import VersionControlTech from "./versioncontrol-technology";
 import AboutTech from "../../../../common-ui/custom-development/about-tech";
+import WhyChooseImg from "./../../../../../assets/contact/schedule-a-consultation-img1.jpg";
+import WhatWeOfferImg from "./../../../../../assets/contact/hiring-model-img2.webp";
+import contactImg from "./../../../../../assets/contact/contact-us-img1.jpg";
 
 const hiringData = [
   { title: "Collaboration", description: "Enable seamless teamwork with branching, merging, and pull requests." },
@@ -105,12 +107,12 @@ function VersionControlContent() {
       <HiringModels
         title="Why Choose Git & CI/CD"
         cards={hiringData}
-        image={placeholderImage}
+        image={WhyChooseImg}
       />
       <WhatWeOffer
         title="Our Version Control & Automation Services"
         items={offerData}
-        image={placeholderImage}
+        image={WhatWeOfferImg}
       />
       <ServicesOfferings title="Our Expertise" items={offerings} />
       <VersionControlTech />
@@ -120,7 +122,7 @@ function VersionControlContent() {
         title="Ready to Optimize Your Workflow?"
         buttonText="CONTACT OUR CI/CD TEAM"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactImg}
         imageAlt="Version control and CI/CD services"
       />
     </section>
