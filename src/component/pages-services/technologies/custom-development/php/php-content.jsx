@@ -7,7 +7,6 @@ import TechnologiesToolsSection from "./php-technology";
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import AboutTech from "../../../../common-ui/custom-development/about-tech";
-
 import WhyChooseImg from "./../../../../../assets/contact/schedule-a-consultation-img1.jpg";
 import WhatWeOfferImg from "./../../../../../assets/contact/hiring-model-img2.webp";
 import contactImg from "./../../../../../assets/contact/contact-us-img1.jpg";
