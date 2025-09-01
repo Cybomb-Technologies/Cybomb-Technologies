@@ -4,16 +4,43 @@ import styles from "../../common-ui/cloud-services/TechToolsSection.module.css";
 const techData = {
   "AWS Services": [
     { name: "EC2", logo: "https://icon.icepanel.io/AWS/svg/Compute/EC2.svg" },
-    { name: "ECS", logo: "https://icon.icepanel.io/AWS/svg/Containers/ECS-Anywhere.svg" },
-    { name: "Lambda", logo: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
-    { name: "S3", logo: "https://icon.icepanel.io/AWS/svg/Storage/S3-on-Outposts.svg" },
-    { name: "CloudFront", logo: "https://icon.icepanel.io/AWS/svg/Networking-Content-Delivery/CloudFront.svg" },
+    {
+      name: "ECS",
+      logo: "https://images.icon-icons.com/2699/PNG/512/amazon_ecs_logo_icon_168660.png",
+    },
+    {
+      name: "Lambda",
+      logo: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg",
+    },
+    {
+      name: "S3",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Amazon-S3-Logo.svg/1712px-Amazon-S3-Logo.svg.png",
+    },
+    {
+      name: "CloudFront",
+      logo: "https://icon.icepanel.io/AWS/svg/Networking-Content-Delivery/CloudFront.svg",
+    },
     { name: "RDS", logo: "https://icon.icepanel.io/AWS/svg/Database/RDS.svg" },
-    { name: "DynamoDB", logo: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" },
-    { name: "Aurora", logo: "https://icon.icepanel.io/AWS/svg/Database/Aurora.svg" },
-    { name: "API Gateway", logo: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" },
-    { name: "AppSync", logo: "https://icon.icepanel.io/AWS/svg/App-Integration/AppSync.svg" },
-    { name: "Route53", logo: "https://icon.icepanel.io/AWS/svg/Networking-Content-Delivery/Route-53.svg" },
+    {
+      name: "DynamoDB",
+      logo: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg",
+    },
+    {
+      name: "Aurora",
+      logo: "https://icon.icepanel.io/AWS/svg/Database/Aurora.svg",
+    },
+    {
+      name: "API Gateway",
+      logo: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg",
+    },
+    {
+      name: "AppSync",
+      logo: "https://icon.icepanel.io/AWS/svg/App-Integration/AppSync.svg",
+    },
+    {
+      name: "Route53",
+      logo: "https://icon.icepanel.io/AWS/svg/Networking-Content-Delivery/Route-53.svg",
+    },
   ],
 };
 
@@ -44,7 +71,9 @@ const TechToolsSection = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`${styles.tab} ${selected === cat ? styles.activeTab : ""}`}
+              className={`${styles.tab} ${
+                selected === cat ? styles.activeTab : ""
+              }`}
               onClick={() => {
                 setSelected(cat);
                 setCurrentSlide(0);

@@ -255,11 +255,11 @@ ul {
   display: flex;
   flex-direction: row;
   text-align: right;
-  gap: 2rem;
-  flex: 0 0 70%;
+  gap: 0.5rem;
+  flex: 0 0 72%;
   justify-content: flex-end;
 }
- 
+
 .certificateItem {
   display: flex;
   align-items: center;
@@ -273,7 +273,8 @@ ul {
 .certificateItem:hover {
   background: rgba(255, 255, 255, 0.1);
 }
- 
+
+
 .certificateId {
   font-size: 0.9rem;
   color: #fff;
@@ -302,9 +303,19 @@ ul {
   color: #ddd;
   font-weight: 600;
 }
- 
+
+.thirdCertificateLogo {
+  width: 80px;
+  height: auto;
+}
+
+.certificateSection .certificateItem:nth-child(3) .certificateLogo {
+  width: 80px;
+  height: auto;
+}
+
 .copyrightSection {
-  flex: 0 0 28%;
+  flex: 0 0 22%;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -837,4 +848,38 @@ ul {
     white-space: pre;
     display: block;
   }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .certificateLogo {
+    max-width: 140px;
+    width: 100%;
+    height: auto;
+  }
+
+  .certificateSection {
+    flex: 1 1 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footerTopRow2 {
+    grid-template-columns: 15% 20% 15% 25%;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .footerGetInTouch {
+    grid-column: span 4;
+    width: 100%;
+    text-align: left;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .contactItem {
+    padding-right: 1rem;
+  }
+
 }

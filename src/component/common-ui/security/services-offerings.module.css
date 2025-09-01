@@ -1,6 +1,6 @@
 .androidServicesSection {
   background-color: #003459;
-  padding: 0rem 0rem;
+  padding: 2rem 1rem;
 }
 
 .sectionTitle {
@@ -8,7 +8,7 @@
   font-weight: 700;
   text-align: center;
   color: #ffffff;
-  margin-bottom: 3rem;
+  margin: 1rem 0 3rem 0;
 }
 
 .sectionLayer {
@@ -89,7 +89,7 @@
 /* Mobile (<= 768px) */
 @media (max-width: 768px) {
   .androidServicesSection {
-    padding: 1rem;
+    padding: 0.5rem 0.5rem 0.8rem 0.5rem;
   }
   .sectionLayer {
     padding: 1rem;
@@ -99,6 +99,7 @@
     font-size: 1.5rem;
     text-align: center;
     align-items: center;
+    margin: 1rem 0 1.5rem 0;
   }
 
   .grid {
