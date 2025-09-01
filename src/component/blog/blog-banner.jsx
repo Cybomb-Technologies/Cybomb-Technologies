@@ -12,7 +12,7 @@ function Blogbanner() {
       >
         <div className="container">
           <div className="mb-3">
-            <i className="fas fa-lightbulb fa-2x text-warning mb-2"></i>
+            <i className="fas fa-lightbulb fa-2x text-light mb-2"></i>
             <p className="small text-uppercase fw-semibold letter-spacing">
               Discover. Learn. Transform.
             </p>

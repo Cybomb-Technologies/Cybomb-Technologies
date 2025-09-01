@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./blogcontent.module.css";
-
+import { Link } from "react-router-dom";
 function Blogcontent() {
   const [selectedTopic, setSelectedTopic] = useState("Cloud Computing");
   const [blogPosts, setBlogPosts] = useState([]);
@@ -77,16 +77,16 @@ function Blogcontent() {
     <section className={styles.blogSection}>
       <div className="container">
         {/* Header */}
-        <div className={`text-center mb-5 ${styles.sectionHeader}`}>
+        {/* <div className={`text-center mb-5 ${styles.sectionHeader}`}>
           <h2>Insights, Trends & Solutions from IT Experts</h2>
           <p>
             Curated knowledge on cloud, AI, DevOps, security & infrastructure
             modernization to power your business transformation.
           </p>
-        </div>
+        </div> */}
 
         {/* Trending Topics */}
-        <div className={`text-center mb-5 ${styles.trendingTopics}`}>
+        {/* <div className={`text-center mb-5 ${styles.trendingTopics}`}>
           <h4 className="mb-3">Trending Topics</h4>
           <div className={styles.badgeWrapper}>
             {trendingTopics.map((topic, index) => (
@@ -101,10 +101,10 @@ function Blogcontent() {
               </span>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Blog Cards - Dynamic from API */}
-        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+        {/* <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
           {loading ? (
             <p className="text-center">Loading posts...</p>
           ) : blogPosts.length > 0 ? (
@@ -113,14 +113,14 @@ function Blogcontent() {
                 <div className={`card h-100 ${styles.blogCard}`}>
                   <img src={post.image} className="card-img-top" alt={post.title} />
                   <div className="card-body">
-                    {/* Title clamp */}
+                   
                     <h5 className={`card-title ${styles.truncateTwoLines}`}>
                       {post.title}
                     </h5>
                     <p className={`card-text text-primary small mb-1`}>
                       {post.date} · {post.category}
                     </p>
-                    {/* Excerpt with toggle */}
+                    
                     <ExcerptWithToggle text={post.excerpt} />
                   </div>
                 </div>
@@ -129,10 +129,10 @@ function Blogcontent() {
           ) : (
             <p className="text-center">No articles found for this topic.</p>
           )}
-        </div>
+        </div> */}
 
         {/* CTA Section */}
-        <div className={`mt-5 ${styles.ctaSection}`}>
+        <div className={`mt-3 ${styles.ctaSection}`}>
           <div className="row align-items-center">
             <div className="col-md-9">
               <h3>Looking for Expert Guidance?</h3>
@@ -142,15 +142,15 @@ function Blogcontent() {
               </p>
             </div>
             <div className="col-md-3 text-md-end mt-4 mt-md-0">
-              <a href="#" className="btn btn-light px-4 py-2 rounded-pill">
+              <Link to="/contact-us" className="btn btn-light px-4 py-2 rounded-pill">
                 Schedule a Free Consultation
-              </a>
+              </Link>
             </div>
           </div>
         </div>
 
         {/* Newsletter Section */}
-        <div className={`mt-5 text-center ${styles.newsletterSection}`}>
+        {/* <div className={`mt-5 text-center ${styles.newsletterSection}`}>
           <h3>Stay Updated with the Latest Tech Insights</h3>
           <p>
             Subscribe to our newsletter for monthly updates on enterprise
@@ -166,7 +166,7 @@ function Blogcontent() {
               Subscribe
             </button>
           </form>
-        </div>
+        </div> */}
       </div>
     </section>
   );

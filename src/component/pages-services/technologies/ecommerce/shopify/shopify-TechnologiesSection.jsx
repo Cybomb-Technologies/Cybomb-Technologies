@@ -3,32 +3,52 @@ import styles from "../../../../common-ui/design-and-development/development-tec
 
 const techData = {
   "Languages & Tools": ["Liquid", "JavaScript", "HTML5", "CSS3", "JSON"],
-  "Platforms": ["Shopify", "Shopify Plus"],
+  Platforms: ["Shopify", "Shopify Plus"],
   "Cloud & Hosting": ["Shopify Cloud", "AWS"],
-  "Integrations": ["REST APIs", "GraphQL", "ERP & CRM Systems", "Payment Gateways (PayPal, Stripe, Razorpay)"],
+  Integrations: [
+    "REST APIs",
+    "GraphQL",
+    "ERP & CRM Systems",
+    "Payment Gateways (PayPal, Stripe, Razorpay)",
+  ],
   "DevOps & CI/CD": ["GitHub Actions", "Bitbucket Pipelines"],
-  "UI Libraries & Frameworks": ["Bootstrap", "Tailwind CSS", "React for custom storefronts"],
+  "UI Libraries & Frameworks": [
+    "Bootstrap",
+    "Tailwind CSS",
+    "React for custom storefronts",
+  ],
 };
 
 const techLogos = {
-  Liquid: "https://www.vectorlogo.zone/logos/shopify/shopify-icon.svg",
-  JavaScript: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
+  Liquid:
+    "https://cdn.prod.website-files.com/64be309a0c8ae7454454fcef/653932043d90a3fa696fd68a_liquid-logo-text.png",
+  JavaScript:
+    "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
   HTML5: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg",
   CSS3: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg",
   JSON: "https://www.vectorlogo.zone/logos/json/json-icon.svg",
   Shopify: "https://www.vectorlogo.zone/logos/shopify/shopify-icon.svg",
-  "Shopify Plus": "https://www.vectorlogo.zone/logos/shopify/shopify-icon.svg",
-  "Shopify Cloud": "https://www.vectorlogo.zone/logos/shopify/shopify-icon.svg",
-  AWS: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",
-  "REST APIs": "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
+  "Shopify Plus":
+    "https://vectorseek.com/wp-content/uploads/2023/09/Shopify-Plus-Logo-Vector.svg-.png",
+  "Shopify Cloud":
+    "https://img.icons8.com/?size=512&id=yEo5mhvn1aUK&format=png",
+  AWS: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSObhWW7gEGNs1r3kbEXIeWuIDC74C6p5RVQ&s",
+  "REST APIs":
+    "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
   GraphQL: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
-  "ERP & CRM Systems": "https://www.vectorlogo.zone/logos/sap/sap-icon.svg",
-  "Payment Gateways (PayPal, Stripe, Razorpay)": "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
-  "GitHub Actions": "https://www.vectorlogo.zone/logos/github/github-icon.svg",
-  "Bitbucket Pipelines": "https://www.vectorlogo.zone/logos/bitbucket/bitbucket-icon.svg",
-  Bootstrap: "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg",
-  "Tailwind CSS": "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
-  "React for custom storefronts": "https://www.svgrepo.com/show/452092/react.svg",
+  "ERP & CRM Systems":
+    "https://www.vhv.rs/dpng/d/310-3105283_integrated-crm-and-erp-erp-crm-hd-png.png",
+  "Payment Gateways (PayPal, Stripe, Razorpay)":
+    "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
+  "GitHub Actions": "https://www.svgrepo.com/show/306098/githubactions.svg",
+  "Bitbucket Pipelines":
+    "https://www.freshleafmedia.co.uk/assets/media/bitbucket-pipeline_blogThumb.png",
+  Bootstrap:
+    "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg",
+  "Tailwind CSS":
+    "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+  "React for custom storefronts":
+    "https://www.svgrepo.com/show/452092/react.svg",
 };
 
 const SymfonyTechnologiesSection = () => {
@@ -45,7 +65,9 @@ const SymfonyTechnologiesSection = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`${styles.tab} ${selected === cat ? styles.activeTab : ""}`}
+              className={`${styles.tab} ${
+                selected === cat ? styles.activeTab : ""
+              }`}
               onClick={() => setSelected(cat)}
             >
               {cat}
@@ -66,8 +88,6 @@ const SymfonyTechnologiesSection = () => {
             </div>
           ))}
         </div>
-
-        
       </div>
     </section>
   );

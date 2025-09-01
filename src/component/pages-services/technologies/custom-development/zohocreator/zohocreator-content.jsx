@@ -2,13 +2,15 @@ import React from "react";
 import Banner from "../../../../common-ui/custom-development/banner";
 import InfoStats from "../../../../common-ui/custom-development/info-stats";
 import HiringModels from "../../../../common-ui/custom-development/hiring";
-import placeholderImage from './../../../../../assets/placeholder-image.webp';
 import WhatWeOffer from "../../../../common-ui/custom-development/whatweoffer";
 import ServicesOfferings from "../../../../common-ui/custom-development/services-offerings";
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import ZohoCreatorTechnologies from "./zohocreator-technology";
 import AboutTech from "../../../../common-ui/custom-development/about-tech";
+import WhyChooseImg from "./../../../../../assets/contact/schedule-a-consultation-img1.jpg";
+import WhatWeOfferImg from "./../../../../../assets/contact/hiring-model-img2.webp";
+import contactImg from "./../../../../../assets/contact/contact-us-img1.jpg";
 
 const hiringData = [
   { title: 'Rapid Development', description: 'Build apps 10x faster than traditional coding.' },
@@ -105,12 +107,12 @@ function ZohoCreatorPage() {
       <HiringModels
         title="Why Choose Zoho Creator"
         cards={hiringData}
-        image={placeholderImage}
+        image={WhyChooseImg}
       />
       <WhatWeOffer
         title="What We Offer"
         items={offerData}
-        image={placeholderImage}
+        image={WhatWeOfferImg}
       />
       <ServicesOfferings 
         title="Zoho Creator Features" 
@@ -126,7 +128,7 @@ function ZohoCreatorPage() {
         title="Ready to Transform Your Business with Zoho?"
         buttonText="TALK TO OUR ZOHO TEAM"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactImg}
         imageAlt="Zoho development services"
       />
     </section>

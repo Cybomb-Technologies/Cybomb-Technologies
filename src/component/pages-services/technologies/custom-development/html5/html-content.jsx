@@ -2,12 +2,15 @@ import React from "react";
 import Banner from "../../../../common-ui/custom-development/banner";
 import InfoStats from "../../../../common-ui/custom-development/info-stats";
 import HiringModels from "../../../../common-ui/custom-development/hiring";
-import placeholderImage from './../../../../../assets/placeholder-image.webp';
 import WhatWeOffer from "../../../../common-ui/custom-development/whatweoffer";
 import ServicesOfferings from "../../../../common-ui/custom-development/services-offerings";
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import HTML5Technologies from "./html-technology";
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
+import WhyChooseImg from "./../../../../../assets/contact/schedule-a-consultation-img1.jpg";
+import WhatWeOfferImg from "./../../../../../assets/contact/hiring-model-img2.webp";
+import contactImg from "./../../../../../assets/contact/contact-us-img1.jpg";
 
 const hiringData = [
   { title: 'Modern Web Standards', description: 'Build future-proof applications using latest HTML5 specifications.' },
@@ -43,6 +46,47 @@ const useCases = [
   "Interactive Media - Rich media experiences with Canvas/WebGL."
 ];
 
+const html5TechDescription = [
+  // Core Technologies
+  {
+    name: "HTML5",
+    description: "The standard markup language for structuring web content, introducing semantic elements, multimedia support, and APIs for modern web apps.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    iconColors: "linear-gradient(135deg, #fbd6d1ff, #f7cac9ff)"
+  },
+  {
+    name: "CSS3",
+    description: "The styling language of the web, enabling responsive layouts, animations, and modern design capabilities with Flexbox and Grid.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    iconColors: "linear-gradient(135deg, #dbeafe, #bfdbfe)"
+  },
+  {
+    name: "JavaScript",
+    description: "The core programming language of the web, enabling dynamic behavior, interactivity, and client-side logic in web applications.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    iconColors: "linear-gradient(135deg, #fef9c3, #fef08a)"
+  },
+  {
+    name: "Tailwind CSS",
+    description: "A utility-first CSS framework for building responsive and customizable UIs without leaving your HTML.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    iconColors: "linear-gradient(135deg, #d1e6f7ff, #d1e0f7ff)"
+  },
+  {
+    name: "Bootstrap",
+    description: "A popular CSS framework that provides ready-to-use components, responsive grid system, and utilities for rapid development.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
+    iconColors: "linear-gradient(135deg, #ede9fe, #ddd6fe)"
+  },
+  {
+    name: "Material UI",
+    description: "A React component library implementing Google’s Material Design, offering prebuilt UI elements with accessibility in mind.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+    iconColors: "linear-gradient(135deg, #e0f2fe, #bae6fd)"
+  }
+];
+
+
 function HTML5Page() {
   return (
     <section>
@@ -64,18 +108,19 @@ function HTML5Page() {
       <HiringModels
         title="Why Choose HTML5"
         cards={hiringData}
-        image={placeholderImage}
+        image={WhyChooseImg}
       />
       <WhatWeOffer
         title="What We Offer"
         items={offerData}
-        image={placeholderImage}
+        image={WhatWeOfferImg}
       />
       <ServicesOfferings 
         title="HTML5 Features" 
         items={offerings}
       /> 
       <HTML5Technologies/>
+      <AboutTech technologies={html5TechDescription} />
       <DevelopmentProcess 
         title="Common Use Cases"
         Process={useCases}
@@ -84,7 +129,7 @@ function HTML5Page() {
         title="Ready to Build Your Modern Web Experience?"
         buttonText="START YOUR PROJECT"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactImg}
         imageAlt="HTML5 development services"
       />
     </section>

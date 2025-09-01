@@ -93,22 +93,22 @@ const hostingPlatforms = [
   {
     name: "Vercel",
     description: "Fast and scalable hosting for Next.js and frontend apps.",
-    icon: "▲",
+    icon: 'https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg',
   },
   {
     name: "Netlify",
     description: "Deploy modern websites and apps in seconds.",
-    icon: "☁️",
+    icon: 'https://cdn.iconscout.com/icon/free/png-256/free-netlify-logo-icon-svg-png-download-3030170.png',
   },
   {
     name: "Hostinger",
     description: "Affordable and reliable web hosting platform.",
-    icon: "💜",
+    icon: 'https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/hostinger-fmuhvgr37dia4fht66h4kb.png/hostinger-qlefdkghljsdttvj5z5nr.png?_a=DATAg1AAZAA0',
   },
   {
     name: "DigitalOcean",
     description: "Powerful cloud hosting for developers and businesses.",
-    icon: "🌊",
+    icon: 'https://images.seeklogo.com/logo-png/38/1/digital-ocean-logo-png_seeklogo-388318.png',
   },
 ];
 

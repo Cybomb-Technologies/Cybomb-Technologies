@@ -2,12 +2,15 @@ import React from "react";
 import Banner from "../../../../common-ui/custom-development/banner";
 import InfoStats from "../../../../common-ui/custom-development/info-stats";
 import HiringModels from "../../../../common-ui/custom-development/hiring";
-import placeholderImage from "./../../../../../assets/placeholder-image.webp";
 import WhatWeOffer from "../../../../common-ui/custom-development/whatweoffer";
 import ServicesOfferings from "../../../../common-ui/custom-development/services-offerings";
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import CSSTechnologies from "./css-technology";
+import AboutTech from "../../../../common-ui/custom-development/about-tech";
+import WhyChooseImg from "./../../../../../assets/contact/schedule-a-consultation-img1.jpg";
+import WhatWeOfferImg from "./../../../../../assets/contact/hiring-model-img2.webp";
+import contactImg from "./../../../../../assets/contact/contact-us-img1.jpg";
 
 const hiringData = [
   {
@@ -106,6 +109,51 @@ const useCases = [
   "Interactive Media - Rich media experiences with Canvas/WebGL.",
 ];
 
+const cssTechDescription = [
+  // Core Styling
+  {
+    name: "CSS3",
+    description: "The modern styling language for the web, supporting responsive design, animations, transitions, and advanced layout techniques like Flexbox and Grid.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    iconColors: "linear-gradient(135deg, #dbeafe, #bfdbfe)"
+  },
+  
+  {
+    name: "Grid Layout",
+    description: "A powerful CSS 2D layout system providing precise control over rows and columns for building complex, responsive web designs.",
+    icon: "https://cdn0.iconfinder.com/data/icons/text-editor-solid/48/column_table_layout_grid-512.png",
+    iconColors: "linear-gradient(135deg, #746e6d8a, #b4adad7c)"
+  },
+  // Preprocessors
+  {
+    name: "Sass",
+    description: "A CSS preprocessor adding nesting, variables, mixins, and modularization to simplify and scale styling workflows.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+    iconColors: "linear-gradient(135deg, #fce7f3, #fbcfe8)"
+  },
+  {
+    name: "Less",
+    description: "A lightweight CSS preprocessor that extends CSS with functions, mixins, and variables for maintainable design systems.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/less/less-plain-wordmark.svg",
+    iconColors: "linear-gradient(135deg, #dbeafe, #93c5fd)"
+  },
+  {
+    name: "Stylus",
+    description: "An expressive, dynamic CSS preprocessor with minimal syntax and powerful features for cleaner styling logic.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stylus/stylus-original.svg",
+    iconColors: "linear-gradient(135deg, #fef9c3, #fde68a)"
+  },
+
+  // Utility Frameworks
+  {
+    name: "Bulma",
+    description: "A modern CSS framework based on Flexbox, providing responsive, clean, and minimal UI components out-of-the-box.",
+    icon: "https://user-images.githubusercontent.com/22581026/71645940-90e34800-2cad-11ea-8c92-df9c30fb0899.png",
+    iconColors: "linear-gradient(135deg, #dbf6f7ff, #d0e8f6ff)"
+  }
+];
+
+
 function CSSPage() {
   return (
     <section>
@@ -127,21 +175,22 @@ function CSSPage() {
       <HiringModels
         title="Why CSS"
         cards={hiringData}
-        image={placeholderImage}
+        image={WhyChooseImg}
       />
       <WhatWeOffer
         title="Our CSS Services"
         items={offerData}
-        image={placeholderImage}
+        image={WhatWeOfferImg}
       />
       <ServicesOfferings title="Our Expertise" items={offerings} />
       <CSSTechnologies />
+      <AboutTech technologies={cssTechDescription} />
       <DevelopmentProcess title="Common Use Cases" Process={useCases} />
       <OnlinePresence
         title="Ready to Build Your Modern Web Experience?"
         buttonText="START YOUR PROJECT"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactImg}
         imageAlt="HTML5 development services"
       />
     </section>

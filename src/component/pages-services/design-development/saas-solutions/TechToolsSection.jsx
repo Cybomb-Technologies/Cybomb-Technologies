@@ -13,46 +13,65 @@ const techData = {
 
 const techLogos = {
   // Frontend
-  "React.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  Angular: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
-  "Vue.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+  "React.js":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  Angular:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+  "Vue.js":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
   "Tailwind CSS": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
 
   // Backend
-  "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  "Python (Django/Flask)": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "Node.js":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  "Python (Django/Flask)":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   Laravel: "https://cdn.worldvectorlogo.com/logos/laravel-2.svg",
-  "Ruby on Rails": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg",
+  "Ruby on Rails":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg",
 
   // Databases
-  PostgreSQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-  MongoDB: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-  Firebase: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  PostgreSQL:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  MongoDB:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  Firebase:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
 
   // Cloud
   AWS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-  Azure: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
-  "Google Cloud": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+  Azure:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+  "Google Cloud":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
 
   // DevOps
-  Docker: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-  "GitHub Actions": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg",
-  Jenkins: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
-  "CI/CD pipelines": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
+  Docker:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  "GitHub Actions":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg",
+  Jenkins:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
+  "CI/CD pipelines":
+    "https://arrowcore.com/wp-content/uploads/2022/03/3.8-768x500-c-default.png",
 
   // Payments
   Stripe: "https://www.vectorlogo.zone/logos/stripe/stripe-ar21.svg",
-  Razorpay: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/razorpay-icon.png",
-  PayPal: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/paypal-icon.png",
-  Chargebee: "https://cdn.brandfetch.io/idqx2Y_n5J/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+  Razorpay:
+    "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/razorpay-icon.png",
+  PayPal:
+    "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/paypal-icon.png",
+  Chargebee:
+    "https://cdn.brandfetch.io/idqx2Y_n5J/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
 
   // APIs
   REST: "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
-  GraphQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
-  Webhooks: "https://cdn.brandfetch.io/idqx2Y_n5J/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+  GraphQL:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+  Webhooks:
+    "https://images.seeklogo.com/logo-png/27/2/webhooks-logo-png_seeklogo-274079.png",
   OAuth2: "https://www.svgrepo.com/show/354135/oauth.svg",
 };
-
 
 const TechToolsSection = () => {
   const categories = Object.keys(techData);
@@ -68,7 +87,9 @@ const TechToolsSection = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`${styles.tab} ${selected === cat ? styles.activeTab : ""}`}
+              className={`${styles.tab} ${
+                selected === cat ? styles.activeTab : ""
+              }`}
               onClick={() => setSelected(cat)}
             >
               {cat}
