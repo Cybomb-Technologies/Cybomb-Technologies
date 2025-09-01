@@ -2,10 +2,21 @@ import React, { useState } from "react";
 import styles from "../../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const techData = {
-  "Languages & Tools": ["HTML5", "CSS3", "JavaScript", "Stencil", "Handlebars.js"],
-  "Platforms": ["BigCommerce", "BigCommerce Enterprise"],
+  "Languages & Tools": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Stencil",
+    "Handlebars.js",
+  ],
+  Platforms: ["BigCommerce", "BigCommerce Enterprise"],
   "Cloud & Hosting": ["BigCommerce SaaS Cloud"],
-  "Integrations": ["REST APIs", "GraphQL", "ERP/CRM", "Payment Gateways (PayPal, Stripe, Braintree)"],
+  Integrations: [
+    "REST APIs",
+    "GraphQL",
+    "ERP/CRM",
+    "Payment Gateways (PayPal, Stripe, Braintree)",
+  ],
   "DevOps & CI/CD": ["GitHub Actions", "Bitbucket Pipelines", "Docker"],
   "UI Libraries & Frameworks": ["Bootstrap", "Tailwind CSS", "React", "Vue.js"],
 };
@@ -13,21 +24,31 @@ const techData = {
 const techLogos = {
   HTML5: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg",
   CSS3: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg",
-  JavaScript: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
+  JavaScript:
+    "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
   Stencil: "https://www.vectorlogo.zone/logos/stenciljs/stenciljs-icon.svg",
-  "Handlebars.js": "https://www.vectorlogo.zone/logos/handlebarsjs/handlebarsjs-icon.svg",
-  BigCommerce: "https://www.vectorlogo.zone/logos/bigcommerce/bigcommerce-icon.svg",
-  "BigCommerce Enterprise": "https://www.vectorlogo.zone/logos/bigcommerce/bigcommerce-icon.svg",
-  "BigCommerce SaaS Cloud": "https://www.vectorlogo.zone/logos/bigcommerce/bigcommerce-icon.svg",
-  "REST APIs": "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
+  "Handlebars.js":
+    "https://www.vectorlogo.zone/logos/handlebarsjs/handlebarsjs-icon.svg",
+  BigCommerce:
+    "https://www.vectorlogo.zone/logos/bigcommerce/bigcommerce-icon.svg",
+  "BigCommerce Enterprise":
+    "https://www.vectorlogo.zone/logos/bigcommerce/bigcommerce-icon.svg",
+  "BigCommerce SaaS Cloud":
+    "https://www.vectorlogo.zone/logos/bigcommerce/bigcommerce-icon.svg",
+  "REST APIs":
+    "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
   GraphQL: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
   "ERP/CRM": "https://www.vectorlogo.zone/logos/sap/sap-icon.svg",
-  "Payment Gateways (PayPal, Stripe, Braintree)": "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
-  "GitHub Actions": "https://www.vectorlogo.zone/logos/github/github-icon.svg",
-  "Bitbucket Pipelines": "https://www.vectorlogo.zone/logos/bitbucket/bitbucket-icon.svg",
+  "Payment Gateways (PayPal, Stripe, Braintree)":
+    "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
+  "GitHub Actions": "https://www.svgrepo.com/show/306098/githubactions.svg",
+  "Bitbucket Pipelines":
+    "https://www.freshleafmedia.co.uk/assets/media/bitbucket-pipeline_blogThumb.png",
   Docker: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg",
-  Bootstrap: "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg",
-  "Tailwind CSS": "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+  Bootstrap:
+    "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg",
+  "Tailwind CSS":
+    "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
   React: "https://www.svgrepo.com/show/452092/react.svg",
   "Vue.js": "https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg",
 };
@@ -45,7 +66,9 @@ const BigCommerceTechnologiesSection = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`${styles.tab} ${selected === cat ? styles.activeTab : ""}`}
+              className={`${styles.tab} ${
+                selected === cat ? styles.activeTab : ""
+              }`}
               onClick={() => setSelected(cat)}
             >
               {cat}
@@ -66,8 +89,6 @@ const BigCommerceTechnologiesSection = () => {
             </div>
           ))}
         </div>
-
-        
       </div>
     </section>
   );

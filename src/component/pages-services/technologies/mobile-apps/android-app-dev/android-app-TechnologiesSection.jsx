@@ -3,24 +3,33 @@ import styles from "../../../../common-ui/design-and-development/development-tec
 
 const techData = {
   "Languages & SDK": ["Kotlin", "Java", "Flutter", "React Native", "Xamarin"],
-  "Complementary Technologies": ["Firebase", "cloud services", "DevOps", "e-commerce", "CRM plugins"],
-  
+  "Complementary Technologies": [
+    "Firebase",
+    "cloud services",
+    "DevOps",
+    "e-commerce",
+    "CRM plugins",
+  ],
 };
 
 const techLogos = {
-  Java:"https://www.vectorlogo.zone/logos/java/java-icon.svg",
-  Flutter:"https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",
-  "React Native":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/768px-React-icon.svg.png?20220125121207",
-  Xamarin:"https://www.svgrepo.com/show/306994/xamarin.svg",
-  
-  Kotlin: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
-  Firebase: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-  "cloud services":"https://uxwing.com/wp-content/themes/uxwing/download/domain-hosting/cloud-services-icon.png",
-  DevOps:"https://www.svgrepo.com/show/339133/devops.svg",
-  "e-commerce":"https://www.svgrepo.com/show/250745/ecommerce.svg",
-  "CRM plugins":"https://cdn-icons-png.flaticon.com/512/906/906341.png"
+  Java: "https://www.vectorlogo.zone/logos/java/java-icon.svg",
+  Flutter: "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",
+  "React Native":
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/768px-React-icon.svg.png?20220125121207",
+  Xamarin: "https://www.svgrepo.com/show/306994/xamarin.svg",
 
-  };
+  Kotlin:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+  Firebase:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  "cloud services":
+    "https://uxwing.com/wp-content/themes/uxwing/download/domain-hosting/cloud-services-icon.png",
+  DevOps:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Devops-toolchain.svg/2560px-Devops-toolchain.svg.png",
+  "e-commerce": "https://www.svgrepo.com/show/250745/ecommerce.svg",
+  "CRM plugins": "https://cdn-icons-png.flaticon.com/512/906/906341.png",
+};
 
 const AndroidTechnologiesSection = () => {
   const categories = Object.keys(techData);
@@ -36,7 +45,9 @@ const AndroidTechnologiesSection = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`${styles.tab} ${selected === cat ? styles.activeTab : ""}`}
+              className={`${styles.tab} ${
+                selected === cat ? styles.activeTab : ""
+              }`}
               onClick={() => setSelected(cat)}
             >
               {cat}
@@ -57,8 +68,6 @@ const AndroidTechnologiesSection = () => {
             </div>
           ))}
         </div>
-
-        
       </div>
     </section>
   );

@@ -2,37 +2,63 @@ import React, { useState } from "react";
 import styles from "../../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const techData = {
-  "Languages & Tools": ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "jQuery"],
-  "Platforms": ["WooCommerce", "WordPress"],
+  "Languages & Tools": [
+    "PHP",
+    "MySQL",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "jQuery",
+  ],
+  Platforms: ["WooCommerce", "WordPress"],
   "Cloud & Hosting": ["AWS", "Google Cloud", "WP Engine", "Kinsta"],
-  "Integrations": ["REST APIs", "GraphQL", "ERP/CRM", "Payment Gateways (PayPal, Stripe, Razorpay)"],
+  Integrations: [
+    "REST APIs",
+    "GraphQL",
+    "ERP/CRM",
+    "Payment Gateways (PayPal, Stripe, Razorpay)",
+  ],
   "DevOps & CI/CD": ["GitHub Actions", "Bitbucket Pipelines", "Docker"],
-  "UI Libraries & Frameworks": ["Bootstrap", "Tailwind CSS", "React for custom storefronts"],
+  "UI Libraries & Frameworks": [
+    "Bootstrap",
+    "Tailwind CSS",
+    "React for custom storefronts",
+  ],
 };
 
 const techLogos = {
   PHP: "https://www.vectorlogo.zone/logos/php/php-icon.svg",
   MySQL: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg",
-  JavaScript: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
+  JavaScript:
+    "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
   HTML5: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg",
   CSS3: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg",
   jQuery: "https://www.vectorlogo.zone/logos/jquery/jquery-icon.svg",
-  WooCommerce: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/woocommerce-icon.png",
+  WooCommerce:
+    "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/woocommerce-icon.png",
   WordPress: "https://www.vectorlogo.zone/logos/wordpress/wordpress-icon.svg",
   AWS: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",
-  "Google Cloud": "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg",
+  "Google Cloud":
+    "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg",
   "WP Engine": "https://www.svgrepo.com/show/331650/wp-engine.svg",
-  Kinsta: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Kinsta_logo.svg/768px-Kinsta_logo.svg.png?20240518022442",
-  "REST APIs": "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
+  Kinsta:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Kinsta_logo.svg/768px-Kinsta_logo.svg.png?20240518022442",
+  "REST APIs":
+    "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
   GraphQL: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
   "ERP/CRM": "https://www.vectorlogo.zone/logos/sap/sap-icon.svg",
-  "Payment Gateways (PayPal, Stripe, Razorpay)": "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
-  "GitHub Actions": "https://www.vectorlogo.zone/logos/github/github-icon.svg",
-  "Bitbucket Pipelines": "https://www.vectorlogo.zone/logos/bitbucket/bitbucket-icon.svg",
+  "Payment Gateways (PayPal, Stripe, Razorpay)":
+    "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
+  "GitHub Actions": "https://www.svgrepo.com/show/306098/githubactions.svg",
+  "Bitbucket Pipelines":
+    "https://www.freshleafmedia.co.uk/assets/media/bitbucket-pipeline_blogThumb.png",
   Docker: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg",
-  Bootstrap: "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg",
-  "Tailwind CSS": "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
-  "React for custom storefronts": "https://www.svgrepo.com/show/452092/react.svg",
+  Bootstrap:
+    "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg",
+  "Tailwind CSS":
+    "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+  "React for custom storefronts":
+    "https://www.svgrepo.com/show/452092/react.svg",
 };
 const WooCommerceTechnologiesSection = () => {
   const categories = Object.keys(techData);
@@ -48,7 +74,9 @@ const WooCommerceTechnologiesSection = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`${styles.tab} ${selected === cat ? styles.activeTab : ""}`}
+              className={`${styles.tab} ${
+                selected === cat ? styles.activeTab : ""
+              }`}
               onClick={() => setSelected(cat)}
             >
               {cat}
@@ -69,8 +97,6 @@ const WooCommerceTechnologiesSection = () => {
             </div>
           ))}
         </div>
-
-        
       </div>
     </section>
   );
