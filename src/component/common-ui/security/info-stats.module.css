@@ -1,5 +1,5 @@
 .infoSection {
-  padding: 4rem 1rem;
+  padding: 4rem 1rem 1rem 1rem;
   background-color: #f9fafb;
   text-align: center;
   position: relative;
@@ -11,7 +11,7 @@
   padding: 2rem;
   border-radius: 1rem;
   max-width: 1300px;
-  margin: -8rem auto 2rem auto;
+  margin: -4rem auto 3rem auto;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -55,7 +55,7 @@
   text-align: center;
   font-size: 1.5rem;
   color: #000000;
-  margin-top: 2rem;
+  margin: 1.5rem auto;
   font-weight: 600;
 }
 
@@ -78,7 +78,6 @@
     justify-content: flex-start;
     text-align: start;
     flex: 0 0 0px;
-    
   }
 
   .infoItem:last-child {
@@ -99,10 +98,9 @@
     font-size: 1.25rem;
     width: 80%;
     text-align: center;
-    margin: 0 auto; 
+    margin: 0 auto;
   }
 }
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .infoCard {

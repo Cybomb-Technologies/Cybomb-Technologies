@@ -19,7 +19,8 @@ const techLogos = {
   Symfony: "https://symfony.com/logos/symfony_black_03.svg",
   MySQL: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg",
   Redis: "https://www.vectorlogo.zone/logos/redis/redis-icon.svg",
-  Varnish: "https://www.varnish-software.com/themes/custom/varnish/logo.svg",
+  Varnish:
+    "https://info.varnish-software.com/hubfs/Logos/Varnish%20Software%20logos/Logos%20for%20Website%20(Branding%20IMP)/Varnish%20Software%20Logo%20Blue%20and%20Black_rgb-1.png",
   Twig: "https://twig.symfony.com/images/logo.png",
 
   "Drupal 10": "https://www.drupal.org/files/Wordmark_blue_RGB.png",

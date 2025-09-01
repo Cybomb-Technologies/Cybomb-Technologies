@@ -96,41 +96,43 @@ const whychooseus = [
 
 const wordpressDescription = [
   {
-    name: "PHP",
+    name: "Webflow",
     description:
-      "Core server-side scripting language powering WordPress themes, plugins, and backend logic.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-    iconColors: "linear-gradient(135deg,  rgba(179, 191, 247, 0.4))",
+      "Visual web design and CMS platform that allows building responsive websites without coding.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg",
+    iconColors: "linear-gradient(135deg, rgba(100, 110, 255, 0.4))",
   },
   {
-    name: "MySQL",
+    name: "Ghost",
     description:
-      "Relational database management system used by WordPress to store content and site data.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    iconColors: "linear-gradient(135deg, #beedf6ff, #c7e7fbff)",
-  },
-  {
-    name: "REST API",
-    description:
-      "Built-in WordPress API for creating, reading, updating, and deleting data via HTTP requests.",
-    icon: "https://apps.odoo.com/web/image/loempia.module/37657/icon_image?unique=d97f809",
-    iconColors: "linear-gradient(135deg, rgba(180, 227, 240, 0.4))",
-  },
-  {
-    name: "Composer",
-    description:
-      "Dependency manager for PHP, used in modern WordPress projects to handle libraries and packages.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg",
-    iconColors: "linear-gradient(135deg, rgba(255, 211, 164, 0.4))",
-  },
-  {
-    name: "Docker",
-    description:
-      "Containerization platform that provides isolated environments for WordPress development and deployment.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      "Open-source publishing platform designed for professional blogging, newsletters, and memberships.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ghost/ghost-original.svg",
     iconColors:
-      "linear-gradient(135deg, rgba(13,183,237,0.4), rgba(29,99,237,0.4))",
+      "linear-gradient(135deg, rgba(0,0,0,0.4), rgba(100,100,100,0.4))",
   },
+  {
+    name: "Strapi",
+    description:
+      "Headless CMS built with Node.js that provides customizable APIs for managing content.",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBTdkkL_3ixf0a9aGl4bynndpGTyjVpkooIt5AiA3TpJVyyuelvZN-lfoOgc-yv1QJRS0&usqp=CAU",
+    iconColors: "linear-gradient(135deg, rgba(102, 51, 153, 0.4))",
+  },
+  {
+    name: "Contentful",
+    description:
+      "Cloud-based headless CMS that delivers structured content via APIs for modern web apps.",
+    icon: "https://staging.svgrepo.com/show/353600/contentful.svg",
+    iconColors: "linear-gradient(135deg, rgba(0, 150, 200, 0.4))",
+  },
+  {
+    name: "Cloudinary",
+    description:
+      "Media management platform for storing, optimizing, and delivering images and videos at scale.",
+    icon: "https://www.svgrepo.com/show/353566/cloudinary.svg",
+    iconColors:
+      "linear-gradient(135deg, rgba(0, 200, 255, 0.4), rgba(0, 150, 200, 0.4))",
+  },
+
   {
     name: "Git Workflows (CI/CD)",
     description:
