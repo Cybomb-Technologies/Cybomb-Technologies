@@ -150,8 +150,6 @@
 .navItems {
   display: flex;
   list-style: none;
-  /* gap: 1rem; */
-  flex-direction: row;
   align-content: center;
   align-items: center;
   margin: 1rem 0rem;
@@ -259,7 +257,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    max-height: calc(100vh - 70px); /* Adjust based on your navbar height */
+    max-height: calc(100vh - 70px);
     overflow-y: auto;
     overflow-x: auto;
     padding: 1rem;
@@ -295,10 +293,10 @@
   }
 
   .navItems {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    margin: 0;
   }
 
   .navLink {
@@ -311,7 +309,7 @@
 }
 
 /* Mobile: <768px */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .navInner {
     flex-direction: row;
     align-items: center;
@@ -455,7 +453,7 @@
 /* Tablet View: 768px–1199px */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .offcanvasMenu {
-    width: 400px;
+    width: 420px;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
   }
@@ -482,6 +480,21 @@
 
   .offcanvasMenu li {
     padding-left: 1rem;
+  }
+
+   .navItems {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navLink {
+    color: #9bd0ff;
+    font-size: 18px;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    text-align: left;
   }
 }
 
@@ -533,40 +546,6 @@
   padding-left: 0rem;
 }
 
-/*Low-Resolution Desktop: 992px–1199px */
-@media screen and (min-width: 992px) and (max-width: 1098px) {
-  .navInner {
-    max-width: 1000px;
-    padding: 0 1rem;
-  }
-
-  .logo img {
-    width: 135px;
-    height: auto;
-    padding: 6px;
-  }
-
-  .navItems {
-    gap: 0.5rem;
-  }
-
-  .navLink {
-    padding: 8px 12px;
-    font-size: 15px;
-  }
-/* 
-  .menuToggle {
-    display: none;
-  } */
-
-  .menu {
-    gap: 0.5rem;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 14px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .navInner {
     width: auto;
@@ -578,4 +557,31 @@
     justify-content: flex-end;
     font-size: 14px;
   }  
+
+  .navItems{
+    display: flex;
+    flex-direction: row;
+    color: black;
+  }
+
+  .navLink {
+    display: block;
+    width: 100%;
+    color: black;
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 1199px) {
+  .menu {
+    flex-direction: column !important;
+    align-items: flex-start;
+    /* rest of the mobile/tablet styles */
+  }
+  .navItems {
+    flex-direction: column !important;
+    align-items: flex-start;
+    width: 100%;
+  }
 }

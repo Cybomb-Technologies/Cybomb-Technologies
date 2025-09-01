@@ -34,7 +34,7 @@ import AiPersolizedServices from "../component/pages-dataui/ui-page/ai-persolize
 import BlockChainServices from "../component/pages-dataui/ui-page/blockchain/blockchain-service";
 import PHPApp from "../component/pages-services/technologies/custom-development/php/php";
 import LaravelApp from "../component/pages-services/technologies/custom-development/laravel/laravel";
-import RORApp from "../component/pages-services/technologies/custom-development/ROR/ror";
+import RORApp from "../component/pages-services/technologies/custom-development/ror/ror";
 import PowerPlatformApp from "../component/pages-services/technologies/custom-development/power-platform/power";
 import HTML5App from "../component/pages-services/technologies/custom-development/html5/html5";
 import JavaScriptApp from "../component/pages-services/technologies/custom-development/javascript/javascript";

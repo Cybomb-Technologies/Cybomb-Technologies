@@ -2,7 +2,6 @@ import React from "react";
 import Banner from "../../../../common-ui/custom-development/banner";
 import InfoStats from "../../../../common-ui/custom-development/info-stats";
 import HiringModels from "../../../../common-ui/custom-development/hiring";
-import placeholderImage from './../../../../../assets/placeholder-image.webp';
 import WhatWeOffer from "../../../../common-ui/custom-development/whatweoffer";
 import ServicesOfferings from "../../../../common-ui/custom-development/services-offerings";
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
@@ -12,6 +11,9 @@ import AboutTech from "../../../../common-ui/custom-development/about-tech";
 import springintegration from "../../../../../assets/tech-logo/spring-integration.png";
 import springwebflux from "../../../../../assets/tech-logo/spring-webflux.png";
 import springdata from "../../../../../assets/tech-logo/spring-data.png";
+import WhyChooseImg from "./../../../../../assets/contact/schedule-a-consultation-img1.jpg";
+import WhatWeOfferImg from "./../../../../../assets/contact/hiring-model-img2.webp";
+import contactImg from "./../../../../../assets/contact/contact-us-img1.jpg";
 
 const hiringData = [
   { title: 'Enterprise-Grade', description: 'Robust solutions for complex business needs.' },
@@ -108,12 +110,12 @@ function SpringPage() {
       <HiringModels
         title="Why Choose Spring Boot"
         cards={hiringData}
-        image={placeholderImage}
+        image={WhyChooseImg}
       />
       <WhatWeOffer
         title="What We offer"
         items={offerData}
-        image={placeholderImage}
+        image={WhatWeOfferImg}
       />
       <ServicesOfferings 
         title="Spring Boot Features" 
@@ -129,7 +131,7 @@ function SpringPage() {
         title="Ready to Build Your Spring Solution?"
         buttonText="CONTACT OUR SPRING TEAM"
         buttonLink="#"
-        imageSrc={placeholderImage}
+        imageSrc={contactImg}
         imageAlt="Spring development services"
       />
     </section>

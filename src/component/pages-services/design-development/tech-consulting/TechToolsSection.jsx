@@ -13,46 +13,63 @@ const techData = {
 
 const techLogos = {
   // Frontend
-  React: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  Angular: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
-  "Vue.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+  React:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  Angular:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+  "Vue.js":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
 
   // Backend
-  "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  Python: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "Node.js":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  Python:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
   PHP: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-  ".NET": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
+  ".NET":
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png",
 
   // Cloud
   AWS: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/768px-Amazon_Web_Services_Logo.svg.png",
-  Azure: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
-  "Google Cloud": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+  Azure:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+  "Google Cloud":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
 
   // DevOps
-  Docker: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-  Kubernetes: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
-  "GitHub Actions": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-  Jenkins: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
+  Docker:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  Kubernetes:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+  "GitHub Actions":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  Jenkins:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
 
   // Databases
-  PostgreSQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-  MongoDB: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-  MySQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-  Firebase: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  PostgreSQL:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  MongoDB:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  MySQL:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  Firebase:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
 
   // APIs
   REST: "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
-  GraphQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
-  gRPC: "https://grpc.io/img/logos/grpc-icon-color.png",
+  GraphQL:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+  gRPC: "https://logo.svgcdn.com/l/grpc-8x.png",
 
   // Security
   OAuth2: "https://www.svgrepo.com/show/354135/oauth.svg",
   JWT: "https://img.icons8.com/?size=96&id=rHpveptSuwDz&format=png",
   SSO: "https://img.icons8.com/?size=100&id=K8vtcOVlZAC6&format=png",
-  "Encryption Standards": "https://cdn.iconscout.com/icon/premium/png-256-thumb/advanced-encryption-standard-4870465-4049924.png", // Generic lock icon
+  "Encryption Standards":
+    "https://cdn.iconscout.com/icon/premium/png-256-thumb/advanced-encryption-standard-4870465-4049924.png", // Generic lock icon
 };
-
 
 const TechToolsSection = () => {
   const categories = Object.keys(techData);
@@ -68,7 +85,9 @@ const TechToolsSection = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`${styles.tab} ${selected === cat ? styles.activeTab : ""}`}
+              className={`${styles.tab} ${
+                selected === cat ? styles.activeTab : ""
+              }`}
               onClick={() => setSelected(cat)}
             >
               {cat}
