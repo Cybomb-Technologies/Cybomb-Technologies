@@ -12,6 +12,7 @@ import Refundpolicy from "../pages/refund-policy";
 import Career from "../pages/career";
 import Faq from "../pages/faq";
 import Ecommdev from "../component/pages-services/design-development/Ecommerce-development/Ecomm-dev";
+import AdminLogin from "../Admin/Login/login";
 
 
 const emp1Routes = (
@@ -29,6 +30,8 @@ const emp1Routes = (
     <Route path="/refund-policy" element={<Refundpolicy />} />
     <Route path="/services/ecommerce-development" element ={ <Ecommdev/>} />
     <Route path="*" element ={ <NotFoundPage/>} />
+     <Route path="/Admin/Login" element ={ <AdminLogin/>} />
+   
   </>
 );
 
