@@ -11,6 +11,7 @@ import WhyChooseImg from "./../../../../../assets/contact/schedule-a-consultatio
 import WhatWeOfferImg from "./../../../../../assets/contact/hiring-model-img2.webp";
 import contactImg from "./../../../../../assets/contact/contact-us-img1.jpg";
 
+
 const hiringData = [
   {
     title: 'Proven Reliability',
@@ -162,7 +163,7 @@ function PHPAppContent() {
         highlight="Fortune 500 Companies"
     />
 
- <HiringModels
+   <HiringModels
       title="Why Choose PHP"
       cards={hiringData}
       image={WhyChooseImg}

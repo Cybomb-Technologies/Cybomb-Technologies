@@ -1,5 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./home-partners.module.css";
+import DjitLogoImg from "./../../assets/partners/djit-trading.png";
+import AitalsLogoImg from "./../../assets/partners/aitals-startup-partner.png";
+
 
 const techItems = [
   {
@@ -14,6 +17,15 @@ const techItems = [
     name: 'Microsoft',
     logo: 'https://cdn.worldvectorlogo.com/logos/microsoft-5.svg',
   },
+  {
+    name: 'Djit Trading',
+    logo: DjitLogoImg,
+  },
+  {
+    name: 'Aitals',
+    logo: AitalsLogoImg,
+  },
+
 ];
 
 const HomePartners = () => {
