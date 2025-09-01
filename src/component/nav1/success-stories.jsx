@@ -86,8 +86,11 @@ function Successstoriesdropdown1({
                   <Link to="/portfolio" className={styles.dropdownItem} onClick={onLinkClick}>
                     Portfolio
                   </Link>
+                  <Link to="/blog" className={styles.dropdownItem} onClick={onLinkClick}>
+                    Blogs
+                  </Link>
                 </div>
-
+              
                 {/* Column 2: Industries We Serve — Part 1*/}
                 {/* <div className={styles.dropdownColumn}>
                   <div className={styles.dropdownHeader}> 
