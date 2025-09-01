@@ -150,7 +150,6 @@
   display: block;
   opacity: 1;
   visibility: visible;
-  /* transform: translateX(-50%) translateY(0%); */
   background-color: #9bd0ff;
 }
 
@@ -226,7 +225,7 @@
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .dropdownMenu {
     position: static;
     width: 100%;
@@ -354,7 +353,7 @@
 }
 
 /* Fix white text on mobile/tablet with white bg */
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .dropdownToggle {
     color: #9bd0ff;
     font-size: 18px;
@@ -380,7 +379,7 @@
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .dropdownMenu {
     max-height: 50vh;
     overflow-y: auto;
@@ -420,6 +419,10 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .dropdownToggle {
+    color: #000000;
+    font-size: 15px;
+  }
   .dropdownGrid {
     display: flex;
     flex-wrap: wrap;
@@ -471,34 +474,24 @@
   box-shadow: 0 0 0 2px rgba(28, 133, 203, 0.2);
 }
 
-/* 
-@media screen and (min-width: 1099px) and (max-width: 1320px){
-    .dropdownMenu {
-      display: block;
-      position: absolute;
-      top: 100%;
-      left: 50%; 
-      transform: translateX(-10%);
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-      z-index: 999;
-      padding: 1.5rem;
-      min-width: 250px;
-      width: max-content;
-      max-width: calc(100vw - 40px);
-      transition: opacity 0.3s ease;
-      opacity: 0;
-      visibility: hidden;
-    }
+@media (min-width: 1200px) {  
+  .dropdownMenu {
+    transform: translateX(-10%);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 999;
+    padding: 1.5rem;
+    width: max-content;
+    max-width: max-content;
+    transition: opacity 0.3s ease;
+  }
+  
+  .dropdownWrapper:hover .dropdownMenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    background-color: #9bd0ff;
+  }
 
-    .dropdownWrapper:hover .dropdownMenu {
-      display: block;
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(-50%) translateY(0%);
-      background-color: #9bd0ff;
-    }
 }
 
-*/

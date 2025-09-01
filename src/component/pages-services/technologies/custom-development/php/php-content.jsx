@@ -1,13 +1,17 @@
 import Banner from "../../../../common-ui/custom-development/banner";
 import InfoStats from "../../../../common-ui/custom-development/info-stats";
 import HiringModels from "../../../../common-ui/custom-development/hiring";
-import placeholderImage from './../../../../../assets/placeholder-image.webp';
 import WhatWeOffer from "../../../../common-ui/custom-development/whatweoffer";
 import ServicesOfferings from "../../../../common-ui/custom-development/services-offerings";
 import TechnologiesToolsSection from "./php-technology";
 import DevelopmentProcess from "../../../../common-ui/custom-development/development-process";
 import OnlinePresence from "../../../../common-ui/custom-development/online-presence";
 import AboutTech from "../../../../common-ui/custom-development/about-tech";
+
+import WhyChooseImg from "./../../../../../assets/contact/schedule-a-consultation-img1.jpg";
+import WhatWeOfferImg from "./../../../../../assets/contact/hiring-model-img2.webp";
+import contactImg from "./../../../../../assets/contact/contact-us-img1.jpg";
+
 
 const hiringData = [
   {
@@ -160,15 +164,15 @@ function PHPAppContent() {
         highlight="Fortune 500 Companies"
     />
 
- <HiringModels
+   <HiringModels
       title="Why Choose PHP"
       cards={hiringData}
-      image={placeholderImage}
+      image={WhyChooseImg}
     />
     <WhatWeOffer
       title="What We Offer"
       items={offerData}
-      image={placeholderImage}
+      image={WhatWeOfferImg}
     />
      <ServicesOfferings 
           title="PHP Features" 
@@ -184,7 +188,7 @@ function PHPAppContent() {
               title = "Let's Find the right PHP for your business."
               buttonText = "CONTACT US"
               buttonLink = "#"
-              imageSrc = {placeholderImage}
+              imageSrc = {contactImg}
               imageAlt = "CRM services"/>
     </section>
       );

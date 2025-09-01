@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./footer1.module.css";
+import DpiitLogo from "./../../assets/footer/dpiit-logo.png";
+import DgftLogo from "./../../assets/footer/dgft-logo.png";
+import AicteLogo from "./../../assets/footer/aicte-logo.png";
+
 
 const API_URL = import.meta.env.VITE_API_BASE; 
 
@@ -180,7 +184,7 @@ function Footer1({
           <div className={styles.certificateSection}>
             <div className={styles.certificateItem}>
               <img
-                src="/images/footer/dpiit-logo.png"
+                src={DpiitLogo}
                 alt="Certificate 1"
                 className={styles.certificateLogo}
               />
@@ -192,7 +196,7 @@ function Footer1({
 
             <div className={styles.certificateItem}>
               <img
-                src="/images/footer/dgft-logo.png"
+                src={DgftLogo}
                 alt="Certificate 2"
                 className={styles.certificateLogo}
               />
@@ -201,6 +205,19 @@ function Footer1({
                 <span className={styles.certificateValue}>IEC - #AARFC1378G</span>
               </div>
             </div>
+
+            <div className={`${styles.certificateItem} ${styles.thirdCertificate}`}>
+              <img
+                src={AicteLogo}
+                alt="Certificate 3"
+                className={`${styles.certificateLogo} ${styles.thirdCertificateLogo}`}
+              />
+              <div className={styles.certificateText}>
+                <span className={styles.certificateLabel}>AICTE Reg.</span>
+                <span className={styles.certificateValue}>Internship Partner</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

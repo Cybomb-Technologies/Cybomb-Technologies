@@ -103,7 +103,7 @@ function Technologiesdropdown1({
                 top: "100%",
                 left: "50%",
                 transform: "translateX(-70%)",
-                minWidth: "1000px",
+                minWidth: "1050px",
                 maxWidth: "1200px",
                 width: `${Math.min(columnCount, 4) * 220}px`,
               }
@@ -440,13 +440,13 @@ function Technologiesdropdown1({
                     >
                       <FaCode className={styles.icon} /> Database
                     </Link>
-                     {/* <Link
+                     <Link
                       to="/services/versioncontrol-development-service"
                       className={styles.dropdownItem1}
                       onClick={onLinkClick}
                     >
                       <FaCode className={styles.icon} /> Version Control
-                    </Link> */}
+                    </Link>
                     
                   </div>
                 </div>
