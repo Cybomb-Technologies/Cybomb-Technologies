@@ -485,6 +485,7 @@ function Technologiesdropdown1({
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaGofore className={styles.icon} /> Golang</Link>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaRocket className={styles.icon} /> AR/VR</Link>
               </div> */}
+              
             </div>
           </div>
         </li>
