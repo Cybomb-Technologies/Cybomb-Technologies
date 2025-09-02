@@ -1,25 +1,8 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import "./banner-custom.css";
 import { Carousel } from "react-bootstrap";
 function HomeBanner() {
-  const rotatingPhrases = [
-    "Powerful Digital Solutions",
-    "Scalable Mobile Apps",
-    "AI-Powered Platforms",
-    "Custom SaaS Systems",
-  ];
-
-  const [setCurrentPhraseIndex] = useState(0);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentPhraseIndex((prev) => (prev + 1) % rotatingPhrases.length);
-  //   }, 3000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
-
+  
   return (
     <section className="home-banner">
       <Carousel fade interval={3000} controls={false} indicators={true}>
@@ -89,7 +72,7 @@ function HomeBanner() {
               <div className="row">
                 <div className="col-xl-7 col-lg-8 col-md-10">
                   <div className="caption-box text-start">
-                    <h1 className="">Driving Growth Through Smart Technology</h1>
+                    <h2 className="">Driving Growth Through Smart Technology</h2>
                     <p>
                       Our expertise in AI, cloud solutions, and cross-platform
                       development enables businesses to streamline operations,
