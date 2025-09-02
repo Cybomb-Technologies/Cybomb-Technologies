@@ -4,15 +4,14 @@ import Metatags from "../../../../../SEO/meta-tags";
 
 function JavaApp() {
   const metaPropsData = {
-    title: "JavaScript Development Services - Cybomb Technologies | Interactive Web Solutions",
+    title: "Java Development Services - Cybomb Technologies | Enterprise Solutions",
     description:
-      "Cybomb Technologies provides expert JavaScript development services, building dynamic, interactive, and high-performance web applications tailored to your business needs.",
+      "Cybomb Technologies offers expert Java development services, delivering secure, scalable, and high-performance enterprise applications tailored to your business needs.",
     keyword:
-      "JavaScript Development, Frontend Development, Web Applications, JS Frameworks, Interactive Websites, Cybomb Technologies",
-    url: "https://www.cybomb.com/services/javascript-development-service",
+      "Java Development, Enterprise Applications, Backend Development, Spring Boot, Hibernate, Java Frameworks, Cybomb Technologies",
+    url: "https://www.cybomb.com/services/java-development-service",
     image: "https://www.cybomb.com/images/banner-2.jpg", // Same as provided
   };
-
   return (
     <>
       <Metatags metaProps={metaPropsData} />

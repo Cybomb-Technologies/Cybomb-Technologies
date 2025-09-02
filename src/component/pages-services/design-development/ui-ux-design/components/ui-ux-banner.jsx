@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ui-ux-banner.module.css";
-import Bannerform from "../../../banner-form/banner-form";
+import Bannerform from "../../../../banner-form/banner-form";
 
 const UiUxBanner = () => {
   return (
