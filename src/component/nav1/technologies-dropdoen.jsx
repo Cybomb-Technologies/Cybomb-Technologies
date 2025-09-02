@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./dropdown.module.css";
 import { useRef, useEffect, useState } from "react";
-
+ 
 import {
   FaMobileAlt,
   FaShoppingCart,
@@ -39,7 +39,7 @@ import {
   FaRocket,
 } from "react-icons/fa";
 import { SiFlutter } from "react-icons/si";
-
+ 
 function Technologiesdropdown1({
   onLinkClick,
   isMobile,
@@ -50,7 +50,7 @@ function Technologiesdropdown1({
 }) {
   const dropdownRef = useRef(null);
   const [columnCount, setColumnCount] = useState(0);
-
+ 
   useEffect(() => {
     if (dropdownRef.current) {
       // Count only the top-level headers (direct techColumn children)
@@ -60,7 +60,7 @@ function Technologiesdropdown1({
       setColumnCount(columns.length);
     }
   }, [isOpen]);
-
+ 
   return (
     <li
       className={styles.dropdownWrapper}
@@ -83,7 +83,7 @@ function Technologiesdropdown1({
           {isOpen ? <FaChevronUp size={12} /> : <FaChevronDown size={12} />}
         </span>
       </Link>
-
+ 
       <ul
         className={`${styles.dropdownMenu} ${
           isMobile && isOpen ? styles.show : ""
@@ -175,7 +175,7 @@ function Technologiesdropdown1({
                   <FaMicrosoft className={styles.icon} /> Xamarin{" "}
                 </Link>
               </div>
-
+ 
               {/* Ecommerce */}
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}>
@@ -224,7 +224,7 @@ function Technologiesdropdown1({
                   <FaMagento className={styles.icon} /> Magento
                 </Link>
               </div>
-
+ 
               {/* CMS */}
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}>
@@ -318,7 +318,7 @@ function Technologiesdropdown1({
                   </div>
                 </div>
               </div>
-
+ 
               {/* Custom Development */}
               <div className={styles.techColumn1}>
                 <div className={styles.dropdownHeader}>
@@ -369,7 +369,7 @@ function Technologiesdropdown1({
                       <FaCode className={styles.icon} /> Database
                     </Link>
                   </div>
-                  
+                 
                   <div className={styles.subColumn}>
                     <Link
                       to="/services/python-development-service"
@@ -407,8 +407,8 @@ function Technologiesdropdown1({
                     >
                       <FaCode className={styles.icon} /> C#
                     </Link>
-                    
-                    
+                   
+                   
                      <Link
                       to="/services/versioncontrol-development-service"
                       className={styles.dropdownItem1}
@@ -416,7 +416,7 @@ function Technologiesdropdown1({
                     >
                       <FaCode className={styles.icon} /> Version Control
                     </Link>
-                    
+                   
                   </div>
                   <div className={styles.subColumn}>
                     <Link
@@ -447,7 +447,7 @@ function Technologiesdropdown1({
                     >
                       <FaMicrosoft className={styles.icon} /> Power Platform
                     </Link>
-                    
+                   
                     <Link
                       to="/services/zohocreator-development-service"
                       className={styles.dropdownItem1}
@@ -459,41 +459,41 @@ function Technologiesdropdown1({
                   </div>
                 </div>
               </div>
-
+ 
               {/* Full Stack */}
               {/* <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaServer className={styles.icon} /> Full Stack </div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaServer className={styles.icon} /> Full Stack MERN</Link>
               </div> */}
-
+ 
               {/*  CRM */}
               {/* <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaCogs className={styles.icon} /> CRM</div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> ServiceNow</Link>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaCode className={styles.icon} /> Salesforce</Link>
               </div> */}
-
+ 
               {/* Games */}
               <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaGamepad className={styles.icon} /> Games</div>
                 <Link to="/services/unity" className={styles.dropdownItem1} onClick={onLinkClick}><FaUnity className={styles.icon} /> Unity</Link>
                 <Link to="/services/unreal" className={styles.dropdownItem1} onClick={onLinkClick}><FaCube className={styles.icon} /> Unreal</Link>
               </div>
-
+ 
               {/* Cloud */}
               {/* <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaCloud className={styles.icon} /> Cloud</div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaAws className={styles.icon} /> AWS</Link>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaAzure className={styles.icon} /> Azure</Link>
               </div> */}
-
+ 
               {/* Other*/}
               {/* <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaCode className={styles.icon} /> Other</div>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaGofore className={styles.icon} /> Golang</Link>
                 <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaRocket className={styles.icon} /> AR/VR</Link>
               </div> */}
-              
+             
             </div>
           </div>
         </li>
@@ -501,5 +501,5 @@ function Technologiesdropdown1({
     </li>
   );
 }
-
+ 
 export default Technologiesdropdown1;

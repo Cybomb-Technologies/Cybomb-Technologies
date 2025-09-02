@@ -10,7 +10,7 @@ import Industriesdropdown1 from "./Industries-dropdown";
 import Securitydropdown1 from "./security-dropdown";
 import Successstoriesdropdown1 from "./success-stories";
 import Technologiesdropdown1 from "./technologies-dropdoen";
-// import ChatWidget from "../../ChatWidget/ChatWidget";
+import ChatWidget from "../../ChatWidget/ChatWidget";
 
 function Nav1() {
   const location = useLocation();
@@ -295,13 +295,13 @@ function Nav1() {
       </nav>
 
       {/* Floating Call Button */}
-      <div className={styles.floatingBtn}>
+      {/* <div className={styles.floatingBtn}>
         <a href="tel:+919715092104" target="_blank" rel="noreferrer">
           <div className={styles.contactIcon}>
             <i className="bi bi-telephone-fill"></i>
           </div>
         </a>
-      </div>
+      </div> */}
       {/* Floating Chat Widget */}
       {/* <div className={styles.chatWidget}>
         <input type="checkbox" id="chatToggle" className={styles.chatToggle} />
@@ -320,7 +320,7 @@ function Nav1() {
         </div>
       </div> */}
 
-      {/* <ChatWidget/> */}
+      <ChatWidget/>
     </>
   );
 }

@@ -4,7 +4,7 @@ import styles from "./ChatWidget.module.css";
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { sender: "bot", text: "Hello! How can I help you?" }
+    { sender: "bot", text: "Hello! How can I help you with Cybomb Technologies?" }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);

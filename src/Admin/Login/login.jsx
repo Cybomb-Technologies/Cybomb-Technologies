@@ -1,136 +1,120 @@
-import styles from "./login.module.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import styles from "./Login.module.css";
 
-function AdminLogin() {
-  const [loginData, setLoginData] = useState({
-    username: "",
-    password: ""
-  });
+function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setLoginData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    
+    setError("");
+    setIsLoading(true);
+
     try {
-      const response = await fetch('https://api.cybombtechnologies.com/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(loginData)
+      const res = await fetch("http://localhost:5000/api/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
       });
-      
-      if (response.ok) {
-        const data = await response.json();
-        // Handle successful login (store token, redirect, etc.)
-        console.log('Login successful:', data);
+
+      const data = await res.json();
+
+      if (res.ok) {
+        localStorage.setItem("token", data.token);
+        navigate("/admin/dashboard");
       } else {
-        // Handle login error
-        console.error('Login failed');
+        setError(data.msg || "Login failed");
       }
-    } catch (error) {
-      console.error('Error during login:', error);
+    } catch (err) {
+      setError("Server Error");
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <div className={`container-fluid ${styles.gradientBackground}`}>
-      <div className="row justify-content-center align-items-center min-vh-100">
-        <div className="col-12 col-md-8 col-lg-6 col-xl-4">
-          <div className={`card shadow-lg ${styles.loginCard}`}>
-            <div className="card-body p-5">
-              <div className="text-center mb-4">
-                <img 
-                  src="/images/logo-11.png" 
-                  alt="Cybomb Technologies" 
-                  className={`img-fluid ${styles.logo}`}
-                />
-                {/* <h3 className="mt-3 mb-2">Cybomb Technologies</h3> */}
-                {/* <p className="text-muted">Secure Admin Portal</p> */}
+    <div className={`${styles.loginContainer}`}>
+      <div className={`card ${styles.loginCard}`}>
+        <div className="card-body">
+          <div className={styles.brandWrapper}>
+            <h2 className={`card-title ${styles.title}`}>
+              <i className="bi bi-shield-lock"></i> Admin Portal
+            </h2>
+          </div>
+          <p className={styles.subtitle}>Sign in to your account</p>
+          
+          <form onSubmit={handleLogin}>
+            {error && (
+              <div className={`alert alert-danger ${styles.alert}`} role="alert">
+                <i className="bi bi-exclamation-triangle"></i> {error}
               </div>
-
-              <form onSubmit={handleSubmit}>
-                <div className="form-group mb-3">
-                  <label htmlFor="username" className="form-label">Username</label>
-                  <div className="input-group">
-                    <span className="input-group-text">
-                      <i className="fas fa-user"></i>
-                    </span>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="username"
-                      name="username"
-                      placeholder="Enter your username"
-                      value={loginData.username}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="form-group mb-4">
-                  <label htmlFor="password" className="form-label">Password</label>
-                  <div className="input-group">
-                    <span className="input-group-text">
-                      <i className="fas fa-lock"></i>
-                    </span>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="password"
-                      name="password"
-                      placeholder="Enter your password"
-                      value={loginData.password}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="d-flex justify-content-between align-items-center mb-4">
-                  <div className="form-check">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="rememberMe"
-                    />
-                    <label className="form-check-label" htmlFor="rememberMe">
-                      Remember me
-                    </label>
-                  </div>
-                  <a href="#forgot-password" className="text-decoration-none">
-                    Forgot password?
-                  </a>
-                </div>
-
-                <button 
-                  type="submit" 
-                  className={`btn btn-primary w-100 ${styles.loginBtn}`}
-                >
-                  Login
-                </button>
-              </form>
-
-              <div className="text-center mt-4">
-                <p className="mb-0">
-                  Need help? <a href="#support" className="text-decoration-none">Contact support</a>
-                </p>
+            )}
+            
+            <div className="mb-3">
+              <label htmlFor="username" className="form-label">Username</label>
+              <div className={styles.inputGroup}>
+                <span className={styles.inputIcon}>
+                  <i className="bi bi-person"></i>
+                </span>
+                <input
+                  type="text"
+                  className={`form-control ${styles.inputField}`}
+                  id="username"
+                  placeholder="Enter your username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
+                />
               </div>
             </div>
-          </div>
+            
+            <div className="mb-4">
+              <label htmlFor="password" className="form-label">Password</label>
+              <div className={styles.inputGroup}>
+                <span className={styles.inputIcon}>
+                  <i className="bi bi-key"></i>
+                </span>
+                <input
+                  type="password"
+                  className={`form-control ${styles.inputField}`}
+                  id="password"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+            
+            <button
+              type="submit"
+              className={`btn btn-primary ${styles.loginButton}`}
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <>
+                  <span className={styles.spinner} role="status" aria-hidden="true"></span>
+                  Signing in...
+                </>
+              ) : (
+                <>
+                  <i className="bi bi-box-arrow-in-right"></i> Sign in
+                </>
+              )}
+            </button>
+          </form>
           
+          <div className={styles.footer}>
+            <a href="#" className={styles.forgotLink}>Forgot password?</a>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default AdminLogin;
+export default Login;
