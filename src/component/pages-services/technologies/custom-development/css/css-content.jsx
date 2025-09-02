@@ -122,7 +122,7 @@ const cssTechDescription = [
     name: "Grid Layout",
     description: "A powerful CSS 2D layout system providing precise control over rows and columns for building complex, responsive web designs.",
     icon: "https://cdn0.iconfinder.com/data/icons/text-editor-solid/48/column_table_layout_grid-512.png",
-    iconColors: "linear-gradient(135deg, #746e6d8a, #b4adad7c)"
+    iconColors: "linear-gradient(135deg, #eca598eb, #d5b7b7e3)"
   },
   // Preprocessors
   {
@@ -148,7 +148,7 @@ const cssTechDescription = [
   {
     name: "Bulma",
     description: "A modern CSS framework based on Flexbox, providing responsive, clean, and minimal UI components out-of-the-box.",
-    icon: "https://user-images.githubusercontent.com/22581026/71645940-90e34800-2cad-11ea-8c92-df9c30fb0899.png",
+    icon: "https://www.svgrepo.com/show/353527/bulma.svg",
     iconColors: "linear-gradient(135deg, #dbf6f7ff, #d0e8f6ff)"
   }
 ];
@@ -173,12 +173,12 @@ function CSSPage() {
         highlight="Businesses Worldwide"
       />
       <HiringModels
-        title="Why CSS"
+        title="Why Choose CSS"
         cards={hiringData}
         image={WhyChooseImg}
       />
       <WhatWeOffer
-        title="Our CSS Services"
+        title="What We Offer "
         items={offerData}
         image={WhatWeOfferImg}
       />

@@ -1,7 +1,7 @@
 import XamarinContent from './xamarin-content';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
-
+import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 function XamarinApp() {
   const metaPropsData = {
     title: "Xamarin App Development - Cybomb Technologies | Cross-Platform Mobile Solutions",
@@ -194,6 +194,7 @@ const tabsData = [
         accentColor="#1c85cb"
         cardView={true}
       />
+      <StillNotSure />
     </>
   );
 }

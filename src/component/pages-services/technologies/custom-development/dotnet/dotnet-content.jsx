@@ -124,16 +124,17 @@ function DotNetPage() {
       <DotNetTechnologies/>
       <AboutTech technologies={dotnetTechDescription} />
       
+      
+      <DevelopmentProcess 
+        title="Common Use Cases"
+        Process={useCases}
+      />
       <OnlinePresence 
         title="Ready to Build Your .NET Solution?"
         buttonText="CONTACT OUR .NET TEAM"
         buttonLink="#"
         imageSrc={contactImg}
         imageAlt=".NET development services"
-      />
-      <DevelopmentProcess 
-        title="Common Use Cases"
-        Process={useCases}
       />
     </section>
   );

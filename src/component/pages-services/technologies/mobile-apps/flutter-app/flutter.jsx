@@ -1,7 +1,7 @@
 import FlutterContent from './flutter-content';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
-
+import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 function FlutterApp() {
   const metaPropsData = {
     title: "Flutter App Development | Cross Platform App Solutions - Cybomb",
@@ -194,6 +194,8 @@ const tabsData = [
         accentColor="#1c85cb"
         cardView={true}
       />
+      <StillNotSure />
+
     </>
   );
 }

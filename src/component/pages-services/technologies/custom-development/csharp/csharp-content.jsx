@@ -73,7 +73,7 @@ const dotnetTechDescription = [
     name: "NHibernate",
     description: "A mature and flexible ORM for .NET, offering database-independent mapping and advanced querying features.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nhibernate/nhibernate-original.svg",
-    iconColors: "linear-gradient(135deg, #b8a4a4ff, #fadcdcff)"
+    iconColors: "linear-gradient(135deg, #fcc8c8ff, #fadcdcff)"
   },
 ];
 

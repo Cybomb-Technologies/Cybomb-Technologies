@@ -17,7 +17,7 @@ const techData = {
     "REST APIs",
     "GraphQL",
     "ERP/CRM",
-    "Payment Gateways (PayPal, Stripe, Authorize.Net)",
+    "PayPal",
   ],
   "DevOps & CI/CD": ["GitHub Actions", "Jenkins", "Bitbucket Pipelines"],
   "UI Libraries & Frameworks": ["Bootstrap", "Tailwind CSS"],
@@ -44,7 +44,7 @@ const techLogos = {
     "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
   GraphQL: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
   "ERP/CRM": "https://www.vectorlogo.zone/logos/sap/sap-icon.svg",
-  "Payment Gateways (PayPal, Stripe, Authorize.Net)":
+  "PayPal":
     "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
   "GitHub Actions": "https://www.svgrepo.com/show/306098/githubactions.svg",
   Jenkins: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg",

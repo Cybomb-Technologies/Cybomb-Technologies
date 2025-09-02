@@ -51,7 +51,7 @@ const versionControlDescription = [
     name: "Git",
     description: "Distributed version control system enabling efficient source code management and collaboration.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    iconColors: "linear-gradient(135deg, #fdd6d6ff, #fcbabae7)"
+    iconColors: "linear-gradient(135deg, #fdd6d6ff, #f3a0a0e7)"
   },
   {
     name: "GitHub",
@@ -63,25 +63,25 @@ const versionControlDescription = [
     name: "GitLab",
     description: "DevOps platform providing Git repository management, CI/CD, and issue tracking.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
-    iconColors: "linear-gradient(135deg, #f9d2b5ff, #fbc1aaff)"
+    iconColors: "linear-gradient(135deg, #f9d2b5ff, #f9e6deff)"
   },
   {
     name: "Bitbucket",
     description: "Git-based source code repository hosting service with Jira and Trello integration.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg",
-    iconColors: "linear-gradient(135deg, #c1e3faff, #a8d8faff)"
+    iconColors: "linear-gradient(135deg, #76c8ffff, #a8d8faff)"
   },
-  {
+  { 
     name: "GitHub Actions",
     description: "CI/CD automation tool integrated with GitHub for building, testing, and deploying code.",
     icon: "https://avatars.githubusercontent.com/u/44036562?s=200&v=4",
-    iconColors: "linear-gradient(135deg, #c7e8faff, #a3e6f7ff)"
+    iconColors: "linear-gradient(135deg, #6acbffff, #d3f5feff)"
   },
   {
     name: "GitLab CI/CD",
     description: "Continuous integration and deployment pipelines integrated into GitLab.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
-    iconColors: "linear-gradient(135deg, #ffe2ccff, #f7c7b5ff)"
+    iconColors: "linear-gradient(135deg, #facaa5ff, #fdbca4ff)"
   }  
 ];
 

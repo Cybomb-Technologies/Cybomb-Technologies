@@ -15,7 +15,7 @@ const techData = {
     "REST APIs",
     "GraphQL",
     "ERP/CRM",
-    "Payment Gateways (PayPal, Stripe, Braintree)",
+    "PayPal",
   ],
   "DevOps & CI/CD": ["GitHub Actions", "Bitbucket Pipelines", "Docker"],
   "UI Libraries & Frameworks": ["Bootstrap", "Tailwind CSS", "React", "Vue.js"],
@@ -39,7 +39,7 @@ const techLogos = {
     "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
   GraphQL: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
   "ERP/CRM": "https://www.vectorlogo.zone/logos/sap/sap-icon.svg",
-  "Payment Gateways (PayPal, Stripe, Braintree)":
+  "PayPal":
     "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
   "GitHub Actions": "https://www.svgrepo.com/show/306098/githubactions.svg",
   "Bitbucket Pipelines":

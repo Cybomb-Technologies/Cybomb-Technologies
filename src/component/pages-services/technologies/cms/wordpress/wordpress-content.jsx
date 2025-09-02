@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import AboutTech from "../../../../common-ui/mobile-app/about-tech";
 import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
@@ -100,46 +100,42 @@ const wordpressDescription = [
     description:
       "Visual web design and CMS platform that allows building responsive websites without coding.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg",
-    iconColors: "linear-gradient(135deg, rgba(100, 110, 255, 0.4))",
+    iconColors: "linear-gradient(135deg, #c2e8fa, #d6f1fd)", // pastel soft blue
   },
   {
     name: "Ghost",
     description:
       "Open-source publishing platform designed for professional blogging, newsletters, and memberships.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ghost/ghost-original.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(0,0,0,0.4), rgba(100,100,100,0.4))",
+    iconColors: "linear-gradient(135deg, #e6e6e6, #f5f5f5)", // pastel soft grey
   },
   {
     name: "Strapi",
     description:
       "Headless CMS built with Node.js that provides customizable APIs for managing content.",
     icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBTdkkL_3ixf0a9aGl4bynndpGTyjVpkooIt5AiA3TpJVyyuelvZN-lfoOgc-yv1QJRS0&usqp=CAU",
-    iconColors: "linear-gradient(135deg, rgba(102, 51, 153, 0.4))",
+    iconColors: "linear-gradient(135deg, #e0d4fa, #f0e8ff)", // pastel soft purple
   },
   {
     name: "Contentful",
     description:
       "Cloud-based headless CMS that delivers structured content via APIs for modern web apps.",
     icon: "https://staging.svgrepo.com/show/353600/contentful.svg",
-    iconColors: "linear-gradient(135deg, rgba(0, 150, 200, 0.4))",
+    iconColors: "linear-gradient(135deg, #d0f6fa, #e4fdff)", // pastel cyan-teal
   },
   {
     name: "Cloudinary",
     description:
       "Media management platform for storing, optimizing, and delivering images and videos at scale.",
     icon: "https://www.svgrepo.com/show/353566/cloudinary.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(0, 200, 255, 0.4), rgba(0, 150, 200, 0.4))",
+    iconColors: "linear-gradient(135deg, #d2f0ff, #e8f9ff)", // pastel sky blue
   },
-
   {
     name: "Git Workflows (CI/CD)",
     description:
       "Version control and automation pipelines used to manage WordPress code, testing, and deployments.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(255,126,95,0.4), rgba(254,180,123,0.4))",
+    iconColors: "linear-gradient(135deg, #ffe0d1, #fff0eb)", // pastel orange-pink
   },
 ];
 
@@ -166,19 +162,19 @@ function WordPressContent() {
         Services={services}
       />
 
-      <ScheduleConsultation
+      
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+        <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our WordPress Services"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
-
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <WordPressTechnologiesSection />
       <AboutTech technologies={wordpressDescription} />
-      <StillNotSure />
+      
 
       <HiringModels
         title="Hiring Models"

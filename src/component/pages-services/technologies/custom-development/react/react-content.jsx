@@ -91,7 +91,7 @@ const databaseDescription = [
     name: "Express.js",
     description: "Express.js can be integrated with a NoSQL database like MongoDB to build real-time, scalable applications with flexible, document-based data modeling.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", // Replace with actual icon path
-    iconColors : "linear-gradient(135deg, #a8e0ff, #c1f0ff)"
+    iconColors : "linear-gradient(135deg, #ffffffff, #c1f0ff)"
   },
   {
     name: "Next.js",
@@ -121,7 +121,7 @@ const databaseDescription = [
     name: "Electron.js",
     description: "Electron.js enables building cross-platform desktop applications using JavaScript, HTML, and CSS.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg",
-    iconColors :"linear-gradient(135deg, #a0e1ff, #c1f0ff)" // pastel light blue// Replace with actual icon path
+    iconColors :"linear-gradient(135deg, #d2f1ffff, #c1f0ff)" // pastel light blue// Replace with actual icon path
 
   }
 ];

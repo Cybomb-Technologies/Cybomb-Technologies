@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img1.png';
@@ -148,20 +148,19 @@ function FlutterContent() {
         Services={services}
       />
       
-      <ScheduleConsultation
+     
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+ <ScheduleConsultation
         heading="Accelerate App Delivery With Flutter"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
         imageAlt="Flutter App Consultation"
         Icon={MdSchedule}
       />
-
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <FlutterTechnologiesSection />
       <AboutTech technologies={flutterTechDescription} />
-      <StillNotSure />
-
+      
       <HiringModels
         title="Flutter Developer Hiring Models"
         cards={hiringData}
