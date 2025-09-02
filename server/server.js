@@ -3,6 +3,8 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const os = require('os');
+const connectDB = require("./config/db");
+const adminRoutes = require("./routes/adminRoutes");
  
 // Create Express app
 const app = express();
@@ -40,6 +42,10 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
  
+
+
+
+
 // Import routes
 const sendMailRoutes = require("./routes/sendMailRoute");
 const popupMailRoute = require("./routes/popupMailRoute");
@@ -55,7 +61,10 @@ app.get('/api/health', (req, res) => {
   });
 });
  
+connectDB();
+
 // API routes
+app.use("/api/admin", adminRoutes);
 app.use("/api/send-mail", sendMailRoutes);
 app.use("/api/popup-mail", popupMailRoute);
 app.use("/api/banner-mail", bannerMailRoute);

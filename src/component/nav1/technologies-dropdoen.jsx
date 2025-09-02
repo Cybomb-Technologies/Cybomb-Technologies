@@ -382,6 +382,13 @@ function Technologiesdropdown1({
                     >
                       <FaCode className={styles.icon} /> Zoho Creator
                     </Link>
+                    <Link
+                      to="/services/versioncontrol-development-service"
+                      className={styles.dropdownItem1}
+                      onClick={onLinkClick}
+                    >
+                      <FaCode className={styles.icon} /> Version Control
+                    </Link>
                   </div>
                   <div className={styles.subColumn}>
                     <Link
@@ -433,6 +440,7 @@ function Technologiesdropdown1({
                     >
                       <FaCode className={styles.icon} /> React
                     </Link>
+
                       <Link
                       to="/services/database-development-service"
                       className={styles.dropdownItem1}
@@ -440,13 +448,7 @@ function Technologiesdropdown1({
                     >
                       <FaCode className={styles.icon} /> Database
                     </Link>
-                     <Link
-                      to="/services/versioncontrol-development-service"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaCode className={styles.icon} /> Version Control
-                    </Link>
+                     
                     
                   </div>
                 </div>
