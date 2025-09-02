@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./uiux-why-matters.module.css";
-import uiuxImage from './../../../../assets/uiux.png'; 
+import uiuxImage from './../../../../../assets/uiux.png'; 
 
 const UiUxWhyMatters = () => {
   return (

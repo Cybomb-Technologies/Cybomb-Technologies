@@ -6,9 +6,9 @@ import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
 
 export default function SaaSSolutions() {
   const metaPropsData = {
-  title: "SaaS Solutions - Cybomb Technologies | Scalable & Secure Software-as-a-Service",
+  title: "SaaS Solution - Cybomb Technologies | Scalable Software-as-a-Service",
   description:
-    "Cybomb Technologies delivers end-to-end SaaS Solutions, from design and development to deployment and maintenance. We build secure, scalable, and user-friendly cloud-based applications for businesses worldwide.",
+    "Cybomb Technologies offers complete SaaS solutions, covering design, development, deployment, and support with secure, scalable cloud apps.",
   keyword:
     "SaaS Solutions, Software as a Service Development, SaaS Application Development, Cloud SaaS Solutions, Multi-Tenant Applications, SaaS Product Design, SaaS Deployment, SaaS Services India",
   url: "https://www.cybomb.com/services/saas-solutions",

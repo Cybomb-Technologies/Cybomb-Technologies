@@ -20,15 +20,15 @@ const services = [
       'Optimized for all devices—phones, tablets, laptops, and desktops',
   },
   {
-    title: 'Landing Pages & Marketing Sites',
-    description:
-      'Perfect for promotions, product launches, or lead generation with high conversions',
-  },
-  {
-    title: 'Business & Portfolio Websites',
-    description:
-      'Showcase your company, services, projects, and team with clean, professional design',
-  },
+  title: 'Landing Page Development',
+  description:
+    'We design high-converting landing pages for promotions, product launches, and lead generation.',
+},
+{
+  title: 'Business & Portfolio Website Design',
+  description:
+    'We build professional websites to showcase your business, services, projects, and team effectively.',
+},
   {
     title: 'eCommerce Website Development',
     description:
