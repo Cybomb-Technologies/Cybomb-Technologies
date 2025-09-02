@@ -214,11 +214,11 @@ function MobileAppDevelopment() {
     <>
       <Helmet>
         <title>
-          Mobile App Development in Chennai | Native and Cross Platform - Cybomb Technologies 
+          Mobile App Development in Chennai | Native & Cross Platform  
         </title>
         <meta
           name="description"
-          content="Cybomb Technologies is a leading IT company offering expert mobile app development, UI/UX design, Web Delopment and digital solutions for startups and enterprises."
+          content="Cybomb Technologies delivers mobile app development, web solutions, UI/UX design, and digital services tailored for startups and enterprises worldwide."
         />
         <meta
           name="keywords"

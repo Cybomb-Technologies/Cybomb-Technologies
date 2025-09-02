@@ -1,4 +1,3 @@
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import AngularPage from "./angular-content";
 import Metatags from "../../../../../SEO/meta-tags";
 
@@ -17,7 +16,7 @@ function AngularApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <AngularPage />
-      <StillNotSure />
+      
     </>
   );
 }

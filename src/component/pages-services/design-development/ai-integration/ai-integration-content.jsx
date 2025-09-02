@@ -10,120 +10,124 @@ import aiIntegrationImg from "./../../../../assets/technologies/ai-integration.j
 
 const services = [
   {
-    title: 'AI-Powered Chatbots & Virtual Assistants',
+    title: 'AI Chatbots & Virtual Assistants',
     description:
-      'Deploy intelligent bots that understand natural language and resolve user queries 24/7 across web, mobile, and messaging platforms.',
+      'We create smart chatbots that understand natural language and provide 24/7 support on websites, apps, and messaging platforms.',
   },
   {
-    title: 'Workflow Automation with AI',
+    title: 'AI Workflow Automation',
     description:
-      'Use machine learning to automate document processing, customer onboarding, ticket triaging, and more.',
+      'We use AI to automate tasks like document processing, customer onboarding, and support ticket handling to save time and costs.',
   },
   {
-    title: 'Predictive Analytics',
+    title: 'AI Predictive Analytics',
     description:
-      'Leverage historical and real-time data to forecast trends, user behavior, and business outcomes—empowering faster decision-making.',
+      'We analyze real-time and past data with AI to predict trends, customer behavior, and business outcomes for better decisions.',
   },
   {
-    title: 'Generative AI (GPT, DALL·E, etc.)',
+    title: 'Generative AI Solutions',
     description:
-      'Integrate models like ChatGPT, DALL·E, or Claude to generate content, code, images, or personalized experiences on demand.',
+      'We integrate tools like ChatGPT and DALL·E to create content, code, images, and personalized experiences instantly.',
   },
   {
     title: 'Custom AI Model Integration',
     description:
-      'Fine-tune or integrate custom models using OpenAI, Google Vertex AI, Azure OpenAI, Hugging Face, or local LLMs—tailored to your data and goals.',
+      'We fine-tune and connect AI models from OpenAI, Google, Azure, or Hugging Face to match your data and business needs.',
   },
   {
-    title: 'Voice & Vision AI',
+    title: 'Voice & Image AI',
     description:
-      'Implement voice assistants, speech-to-text, OCR, and computer vision models into your app, tools, or workflows.',
+      'We build AI solutions for voice recognition, speech-to-text, image scanning (OCR), and computer vision applications.',
   },
   {
-    title: 'Recommendation Engines',
+    title: 'AI Recommendation Systems',
     description:
-      'Add AI-driven recommendations (products, content, actions) to enhance UX and increase conversions.',
+      'We add AI-powered recommendations for products, content, or services to improve user experience and boost conversions.',
   },
   {
-    title: 'Data Strategy & MLOps',
+    title: 'AI Data Strategy & MLOps',
     description:
-      'Build a robust data foundation and implement MLOps practices for seamless, scalable, and reproducible AI model deployment and management.',
+      'We set up strong data pipelines and MLOps practices to deploy, monitor, and scale AI models smoothly and securely.',
   },
 ];
+
 
 const process = [
   {
-    title: 'Discovery & Assessment',
+    title: 'AI Discovery & Planning',
     description:
-      'Understand your business objectives, workflows, and data ecosystem to identify areas where AI can create real value.',
+      'We study your business needs and find the best ways AI can improve your workflows and results.',
   },
   {
-    title: 'Strategy & Roadmap',
+    title: 'AI Roadmap & Strategy',
     description:
-      'Define the AI use cases, technical architecture, model requirements, and a step-by-step action plan tailored to your goals.',
+      'We define the right AI use cases, tools, and step-by-step plan to reach your goals.',
   },
   {
-    title: 'Solution Design',
+    title: 'AI Solution Design',
     description:
-      'Select the right AI tools, models (pre-trained or custom), frameworks, and integrations (e.g., APIs, cloud services) to ensure compatibility and scalability.',
+      'We choose the best AI models, APIs, and cloud services to build scalable and reliable solutions.',
   },
   {
-    title: 'Implementation Support',
+    title: 'AI Integration & Deployment',
     description:
-      'Work alongside your in-house teams or third-party developers to integrate AI models, set up pipelines, and deploy intelligent features within your systems.',
+      'We integrate AI into your apps, systems, or workflows and ensure everything works smoothly.',
   },
   {
-    title: 'Ongoing Evaluation',
+    title: 'Monitoring & Improvement',
     description:
-      'Monitor AI performance, collect user feedback, improve accuracy, and scale intelligently with retraining and optimization as your needs evolve.',
+      'We track performance, collect feedback, and keep optimizing AI models for better results.',
   },
 ];
+
 
 const whychooseus = [
   {
-    title: 'Use-Case First',
-    description: 'We start with business value, not hype',
+    title: 'Business-Focused AI',
+    description: 'We design AI solutions that solve real business problems and add value.',
   },
   {
-    title: 'Model-Agnostic',
-    description: 'Choose the best model for your task (open-source or proprietary)',
+    title: 'Flexible AI Models',
+    description: 'We use the right AI models, whether open-source or enterprise-grade, based on your needs.',
   },
   {
-    title: 'Secure & Compliant',
-    description: 'AI built with privacy and ethical safeguards',
+    title: 'Security & Compliance',
+    description: 'Our AI integrations follow strict data security and compliance standards.',
   },
   {
-    title: 'Seamless Integration',
-    description: 'APIs, SDKs, or custom model embedding into your stack',
+    title: 'Easy System Integration',
+    description: 'We connect AI with your apps, APIs, and workflows without disrupting operations.',
   },
   {
-    title: 'Scalable Solutions',
-    description: 'Build once, optimize, and scale effortlessly',
+    title: 'Future-Ready Scaling',
+    description: 'Our AI solutions are built to grow with your business and handle more users easily.',
   },
 ];
 
+
 const engagementOptions = [
   {
-    title: 'AI Use Case Discovery & Roadmap',
-    description: 'Identify and prioritize where AI can drive value in your business',
+    title: 'AI Strategy & Planning',
+    description: 'We analyze your business needs and create a clear roadmap for AI integration.',
   },
   {
-    title: 'Rapid Prototyping',
-    description: 'Build MVPs or PoCs to quickly validate AI ideas',
+    title: 'AI Prototyping & MVPs',
+    description: 'Quickly test AI ideas with proof-of-concepts and minimum viable products.',
   },
   {
-    title: 'End-to-End Integration',
-    description: 'We design, build, deploy, and maintain the AI components',
+    title: 'Full AI Integration',
+    description: 'We build and integrate AI into your existing apps, workflows, and systems.',
   },
   {
-    title: 'Model Fine-Tuning',
-    description: 'Adapt LLMs or ML models using your custom datasets',
+    title: 'Model Training & Optimization',
+    description: 'We customize and fine-tune AI models with your business data for better accuracy.',
   },
   {
-    title: 'Consulting & Training',
-    description: 'Help your team understand, govern, and leverage AI responsibly',
+    title: 'AI Consulting & Support',
+    description: 'We guide your team on AI adoption, best practices, and ongoing support.',
   },
 ];
+
 
 export default function AiIntegrationContent() {
   return (

@@ -6,6 +6,12 @@ const WhatWeOffer = ({ title, items = [], image }) => {
     <section className={styles.offerSection}>
       <div className={styles.container}>
         
+        
+
+        {/* Right Content (same as your original image section) */}
+        <div className={styles.rightContent}>
+          <img src={image} alt="Hiring discussion" className={styles.image} />
+        </div>
         {/* Left Content (Updated text style for "What We Offer") */}
         <div className={styles.leftContent}>
           <h2 className={styles.sectionTitle}>{title}</h2>
@@ -15,12 +21,6 @@ const WhatWeOffer = ({ title, items = [], image }) => {
             </p>
           ))}
         </div>
-
-        {/* Right Content (same as your original image section) */}
-        <div className={styles.rightContent}>
-          <img src={image} alt="Hiring discussion" className={styles.image} />
-        </div>
-
       </div>
     </section>
   );

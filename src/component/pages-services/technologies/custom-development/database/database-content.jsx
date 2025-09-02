@@ -104,45 +104,46 @@ const databaseDescription = [
     name: "MongoDB",
     description:
       "NoSQL database for real-time, scalable apps with flexible document-based data modeling.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", // Replace with actual icon path
-    iconColors: "linear-gradient(135deg, #ccfdbfff, #d4f9b8ff)",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    iconColors: "linear-gradient(135deg, #d1fadc, #e0ffe8)", // soft green
   },
   {
     name: "Firebase",
     description:
       "Realtime database & cloud storage for mobile/web apps with seamless backend integration.",
-    icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg", // Replace with actual icon path
-    iconColors: "linear-gradient(135deg, #f9e1a0ff, #fede9fff)",
+    icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+    iconColors: "linear-gradient(135deg, #fff3d6, #fff9e8)", // soft yellow
   },
   {
     name: "MySQL",
     description:
       "Relational DB for robust, high-performance applications with ACID compliance.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    iconColors: "linear-gradient(135deg, #beedf6ff, #c7e7fbff)", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg, #c2e8fa, #d6f1fd)", // soft sky blue
   },
   {
     name: "PostgreSQL",
     description:
       "Open-source DB supporting complex queries, JSON and advanced data types.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-    iconColors: "linear-gradient(135deg, #a5d5f8ff, #aaebeeff)", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg, #cce5ff, #e0f3ff)", // soft azure
   },
   {
     name: "SQL Server",
     description:
       "Enterprise-grade Microsoft database management with comprehensive business intelligence.",
-    icon: "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg",
-    iconColors: "linear-gradient(135deg, #f5c7c7d8, #fad6d6cb)", // Replace with actual icon path
+    icon: "https://marstel.ru/assets/images/img-articles/2025/01/mssql_for_1c/mssql_logo.png",
+    iconColors: "linear-gradient(135deg, #ef2727ff, #e3d8d8ff)", // soft pastel red
   },
   {
     name: "Django ORM",
     description:
       "Simplified relational database management using Django framework with Python integration.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
-    iconColors: "linear-gradient(135deg, #959393ff, #092e2048)", // Replace with actual icon path
+    iconColors: "linear-gradient(135deg, #e0e0e0, #f5f5f5)", // soft grey-white
   },
 ];
+
 
 function DatabaseContent() {
   return (

@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import hireUsImg from "./../../../../../assets/contact/hiring-model-img3.svg";
@@ -86,48 +86,42 @@ const acquiaDescription = [
     description:
       "Enterprise-grade managed cloud hosting platform optimized for Drupal. Provides scalability, security, and DevOps tooling for digital experiences.",
     icon: "https://dev.acquia.com/sites/default/files/2022-07/drop-cloud-platform.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(13,183,237,0.4), rgba(29,99,237,0.4))",
+    iconColors: "linear-gradient(135deg, #e9f8fb, #f3fbfe)",
   },
   {
-    name: "Acquia DAM (Digital Asset Management)",
+    name: "Acquia DAM",
     description:
       "Centralized system to organize, manage, and deliver digital assets across teams, ensuring brand consistency and faster content workflows.",
     icon: "https://www.acquia.com/sites/default/files/styles/large/public/media/image/2023-08/Acquia%20DAM%20Logo_Integration.png?itok=y36XcB26",
-    iconColors:
-      "linear-gradient(135deg, rgba(227,28,121,0.4), rgba(102,51,153,0.4))",
+    iconColors: "linear-gradient(135deg, #fce9f5, #fff3fa)",
   },
-
   {
     name: "Drupal 10",
     description:
       "Latest major release of the open-source Drupal CMS. Provides modern front-end theming, structured content management, and robust APIs.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/drupal/drupal-original.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(13,183,237,0.4), rgba(29,99,237,0.4))",
+    iconColors: "linear-gradient(135deg, #e9f8fb, #f3fbfe)",
   },
-
   {
     name: "Symfony",
     description:
       "PHP framework that underpins Drupal’s backend architecture, offering reusable components and robust application structure.",
     icon: "https://symfony.com/logos/symfony_black_03.png",
-    iconColors: "rgba(0, 0, 0, 0.4)",
+    iconColors: "linear-gradient(135deg, #f2f2f2, #fafafa)",
   },
   {
     name: "MySQL",
     description:
       "Relational database system used by Drupal for storing and querying content, configuration, and user data.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    iconColors: "linear-gradient(135deg, #beedf6ff, #c7e7fbff)",
+    iconColors: "linear-gradient(135deg, #e9f8fb, #f3fbfe)", // baseline palette
   },
   {
     name: "GraphQL",
     description:
       "Query language and runtime for APIs, enabling efficient, flexible, and headless content delivery from Drupal applications.",
     icon: "https://graphql.org/img/logo.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(229,53,171,0.4), rgba(255,119,201,0.4))",
+    iconColors: "linear-gradient(135deg, #fce9f5, #fff3fa)",
   },
 ];
 
@@ -154,19 +148,19 @@ function AcquiaContent() {
         Services={services}
       />
 
-      <ScheduleConsultation
+      
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+        <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our Acquia Services"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
-
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <AcquiaTechnologiesSection />
       <AboutTech technologies={acquiaDescription} />
-      <StillNotSure />
+      
 
       <HiringModels
         title="Hiring Models"

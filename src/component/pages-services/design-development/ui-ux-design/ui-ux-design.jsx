@@ -6,9 +6,9 @@ import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
 
 export default function UiUxDesign() {
   const metaPropsData = {
-  title: "UI/UX Design Services - Cybomb Technologies | Engaging & User-Centric Designs",
+  title: "UI/UX Design Services - Cybomb Technologies | User-Centric Designs",
   description:
-    "Cybomb Technologies offers UI/UX Design Services to create visually appealing, intuitive, and responsive interfaces. We craft designs that enhance user experience and boost engagement across web and mobile platforms.",
+    "Cybomb Technologies provides UI/UX design services to build responsive, user-friendly web and mobile interfaces that improve customer experience.",
   keyword:
     "UI UX Design Services, User Experience Design, User Interface Design, Web App UI Design, Mobile App UX Design, UI Prototyping, UX Research, UI UX Consulting, UI UX Services India",
   url: "https://www.cybomb.com/services/ui-ux-design",

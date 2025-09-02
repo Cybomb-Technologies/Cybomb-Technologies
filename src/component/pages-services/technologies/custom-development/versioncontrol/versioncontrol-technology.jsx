@@ -19,8 +19,8 @@ const VersionControlTech = () => {
     "CircleCI": "https://avatars.githubusercontent.com/u/1231870?s=200&v=4",
     "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     "Kubernetes": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
-    "AWS CodePipeline": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
-    "Azure DevOps": "https://cdn.worldvectorlogo.com/logos/azure-devops.svg"
+    "AWS CodePipeline": "https://svgmix.com/uploads/78f381-aws-codepipeline.svg",
+    "Azure DevOps": "https://cdn.iconscout.com/icon/free/png-256/free-azure-devops-icon-svg-png-download-3029870.png?f=webp"
   };
 
   const categories = Object.keys(techData);

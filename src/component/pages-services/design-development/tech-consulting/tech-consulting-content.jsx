@@ -80,9 +80,9 @@ const whychooseus = [
     description: 'Work with experienced architects, engineers, and strategists',
   },
   {
-    title: 'Business-Aligned Thinking',
-    description: 'We consult with your outcomes in mind, not just the code',
-  },
+  title: 'Business-Focused Solutions',
+  description: 'We align technology with your goals to drive real results, not just deliver code.',
+},
   {
     title: 'Scalable Recommendations',
     description: 'Solutions that grow with your users, traffic, and complexity',

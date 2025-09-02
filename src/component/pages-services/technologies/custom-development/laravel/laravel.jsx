@@ -1,5 +1,4 @@
 import LaravelAppContent from "./laravel-content";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import Metatags from "../../../../../SEO/meta-tags";
 
 function LaravelApp() {
@@ -17,7 +16,6 @@ function LaravelApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <LaravelAppContent />
-      <StillNotSure />
     </>
   );
 }

@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import hireUsImg from "./../../../../../assets/contact/hiring-model-img3.svg";
@@ -88,14 +88,14 @@ const umbracoDescription = [
     name: "Umbraco Core",
     description:
       "The open-source .NET-based CMS that provides flexible content management, customization, and extensibility.",
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4msHITxrFehH7askWJkb_hMUy3LVdnkbjug&s",
+    icon: "https://cdn.iconscout.com/icon/free/png-256/free-umbraco-icon-svg-png-download-3030267.png?f=webp",
     iconColors: "linear-gradient(135deg, #a6c4f3ff 40%)",
   },
   {
     name: "Umbraco Cloud",
     description:
       "Fully managed hosting platform for Umbraco projects with automated upgrades, deployment workflows, and scalable infrastructure.",
-    icon: "data:image/png;base64,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",
+    icon: "https://cdn.iconscout.com/icon/free/png-256/free-umbraco-icon-svg-png-download-3030267.png?f=webp",
     iconColors: "linear-gradient(135deg, #cad0f1ff 40%)",
   },
   {
@@ -152,19 +152,19 @@ function UmbracoContent() {
         Services={services}
       />
 
-      <ScheduleConsultation
+      
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+        <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our Umbraco Services"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
-
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <UmbracoTechnologiesSection />
       <AboutTech technologies={umbracoDescription} />
-      <StillNotSure />
+      
 
       <HiringModels
         title="Hiring Models"

@@ -8,8 +8,8 @@ const techData = {
   Integrations: [
     "REST APIs",
     "GraphQL",
-    "ERP & CRM Systems",
-    "Payment Gateways (PayPal, Stripe, Razorpay)",
+    "ERP Systems",
+    "PayPal",
   ],
   "DevOps & CI/CD": ["GitHub Actions", "Bitbucket Pipelines"],
   "UI Libraries & Frameworks": [
@@ -29,16 +29,16 @@ const techLogos = {
   JSON: "https://www.vectorlogo.zone/logos/json/json-icon.svg",
   Shopify: "https://www.vectorlogo.zone/logos/shopify/shopify-icon.svg",
   "Shopify Plus":
-    "https://vectorseek.com/wp-content/uploads/2023/09/Shopify-Plus-Logo-Vector.svg-.png",
+    "https://thimpress.com/wp-content/uploads/2023/03/shopify-plus-logo.png",
   "Shopify Cloud":
     "https://img.icons8.com/?size=512&id=yEo5mhvn1aUK&format=png",
   AWS: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSObhWW7gEGNs1r3kbEXIeWuIDC74C6p5RVQ&s",
   "REST APIs":
     "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
   GraphQL: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
-  "ERP & CRM Systems":
-    "https://www.vhv.rs/dpng/d/310-3105283_integrated-crm-and-erp-erp-crm-hd-png.png",
-  "Payment Gateways (PayPal, Stripe, Razorpay)":
+  "ERP Systems":
+    "https://uxwing.com/wp-content/themes/uxwing/download/business-professional-services/erp-icon.png",
+  "PayPal":
     "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
   "GitHub Actions": "https://www.svgrepo.com/show/306098/githubactions.svg",
   "Bitbucket Pipelines":

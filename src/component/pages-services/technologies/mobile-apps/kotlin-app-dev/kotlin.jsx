@@ -2,7 +2,7 @@ import AgileProcess from '../../../../common-ui/agile-process/agile-process';
 import KotlinContent from './kotlin-content';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
-
+import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 function KotlinApp() {
   const metaPropsData = {
     title: "Kotlin App Development - Cybomb Technologies | Modern Android Solutions",
@@ -195,6 +195,7 @@ const tabsData = [
         accentColor="#1c85cb"
         cardView={true}
       />
+      <StillNotSure />
     </>
   );
 }

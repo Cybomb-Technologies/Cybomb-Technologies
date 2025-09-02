@@ -7,11 +7,10 @@ import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
 
 export default function WebDev() {
   const metaPropsData = {
-  title: "Website Development Services in Chennai | Custom & Responsive Web Solutions - Cybomb",
-  description:
-    "Cybomb Technologies offers Website Development Services to build fast, secure, and fully responsive websites. We deliver custom designs, seamless functionality, and optimized performance for businesses of all sizes.",
+  title: "Website Development Services in Chennai | Custom Web Solutions",
+  description:"Cybomb Technologies provides website development services with custom design, fast performance, security, and fully responsive solutions for businesses.",
   keyword:
-    "Website Development Services, Custom Website Design, Responsive Web Development, Web Application Development, Business Website Development, Ecommerce Website Development, Website Development India",
+    "Website Development Services, Custom Website Design, Responsive Web Development, Business Website Development, Ecommerce Website Development,site Development India",
   url: "https://www.cybomb.com/services/web-development",
   image: "https://www.cybomb.com/images/logo-11.png", 
 };

@@ -16,13 +16,13 @@ const techData = {
     "REST APIs",
     "GraphQL",
     "ERP/CRM",
-    "Payment Gateways (PayPal, Stripe, Razorpay)",
+    "PayPal",
   ],
   "DevOps & CI/CD": ["GitHub Actions", "Bitbucket Pipelines", "Docker"],
   "UI Libraries & Frameworks": [
     "Bootstrap",
     "Tailwind CSS",
-    "React for custom storefronts",
+    "React ",
   ],
 };
 
@@ -47,7 +47,7 @@ const techLogos = {
     "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png",
   GraphQL: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
   "ERP/CRM": "https://www.vectorlogo.zone/logos/sap/sap-icon.svg",
-  "Payment Gateways (PayPal, Stripe, Razorpay)":
+  "PayPal":
     "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
   "GitHub Actions": "https://www.svgrepo.com/show/306098/githubactions.svg",
   "Bitbucket Pipelines":
@@ -57,7 +57,7 @@ const techLogos = {
     "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg",
   "Tailwind CSS":
     "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
-  "React for custom storefronts":
+  "React ":
     "https://www.svgrepo.com/show/452092/react.svg",
 };
 const WooCommerceTechnologiesSection = () => {

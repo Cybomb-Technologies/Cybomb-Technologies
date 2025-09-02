@@ -24,7 +24,7 @@ const ReactTechnologies = () => {
         "Bootstrap": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
         "Redux Toolkit": "https://redux-toolkit.js.org/img/redux.svg",
         "Zustand": "https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
-        "Recoil": "https://recoiljs.org/img/logo.svg",
+        "Recoil": "https://img.icons8.com/color/600/recoil-js.png",
         "MobX": "https://mobx.js.org/assets/mobx.png",
         "Webpack": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg",
         "Babel": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg",

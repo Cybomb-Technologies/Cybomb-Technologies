@@ -1,6 +1,7 @@
 .techSection {
-  padding: 5rem 0;
-  background-color: #f8f9fa;
+  padding: 3rem 0;
+  background-color: #ffffff;
+  padding-bottom: 3rem;
 }
 
 .container {
@@ -13,14 +14,14 @@
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #1c85cb;
   margin-bottom: 1rem;
 }
 
 .sectionSubtitle {
   text-align: center;
   font-size: 1.2rem;
-  color: #666;
+  color: #000000;
   margin-bottom: 3rem;
   max-width: 700px;
   margin-left: auto;
@@ -34,7 +35,7 @@
 }
 
 .techCard {
-  background: white;
+  background: linear-gradient(90deg, #0490b7, #08488b);
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -43,11 +44,14 @@
   flex-direction: column;
   align-items: start;
   text-align: start;
+  color:white;
 }
 
 .techCard:hover {
   transform: translateY(-5px);
+  background: linear-gradient(90deg, #08488b, #0490b7);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  color: white !important;
 }
 
 .iconContainer {
@@ -60,21 +64,29 @@
   margin-bottom: 1.5rem;
 }
 
+/* .iconContainer:hover{
+background-color: #ffffff !important;
+} */
+
 .techIcon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   object-fit: contain; /* Makes icons white */
+}
+
+.icon-color-about:hover{
+  background-color: white !important;
 }
 
 .techName {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1a1a1a;
+  
   margin-bottom: 1rem;
 }
 
 .techDescription {
-  color: #666;
+  
   line-height: 1.6;
   margin-bottom: 1.5rem;
   flex-grow: 1;

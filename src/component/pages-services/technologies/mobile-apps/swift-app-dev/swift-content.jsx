@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import hireUsImg from "./../../../../../assets/contact/hiring-model-img1.png";
@@ -170,19 +170,19 @@ function SwiftContent() {
         Services={services}
       />
 
-      <ScheduleConsultation
+      
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+<ScheduleConsultation
         heading="Accelerate Apple App Delivery With Swift"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
         imageAlt="Swift App Consultation"
         Icon={MdSchedule}
       />
-
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <SwiftTechnologiesSection />
       <AboutTech technologies={SwiftTechDescription} />
-      <StillNotSure />
+      
 
       <HiringModels
         title="Swift Developer Hiring Models"

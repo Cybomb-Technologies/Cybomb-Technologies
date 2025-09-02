@@ -1,4 +1,3 @@
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import DotNetPage from "./dotnet-content";
 import Metatags from "../../../../../SEO/meta-tags";
 
@@ -17,7 +16,7 @@ function DotnetApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <DotNetPage />
-      <StillNotSure />
+      
     </>
   );
 }

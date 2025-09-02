@@ -6,9 +6,9 @@ import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
 
 export default function TechConsulting() {
   const metaPropsData = {
-  title: "Tech Consulting Services - Cybomb Technologies | Strategic IT & Technology Advisory",
+  title: "Tech Consulting Services - Cybomb Technologies | IT Tech Advisory",
   description:
-    "Cybomb Technologies provides Tech Consulting Services to help businesses make informed technology decisions. We offer strategic IT planning, system audits, cloud adoption guidance, and digital transformation consulting.",
+    "Cybomb Technologies offers tech consulting to guide IT planning, system audits, cloud adoption, and digital transformation for businesses.",
   keyword:
     "Tech Consulting Services, IT Consulting, Technology Advisory, Digital Transformation Consulting, Cloud Adoption Strategy, IT System Audit, Enterprise Technology Solutions, IT Consulting India",
   url: "https://www.cybomb.com/services/tech-consulting",
