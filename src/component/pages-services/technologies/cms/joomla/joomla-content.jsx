@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import hireUsImg from "./../../../../../assets/contact/hiring-model-img3.svg";
@@ -86,48 +86,45 @@ const joomlaDescription = [
     description:
       "Open-source CMS for building dynamic websites and online applications, with robust extensions and templates.",
     icon: "https://images.icon-icons.com/2592/PNG/512/joomla_logo_icon_154471.png",
-    iconColors: "linear-gradient(135deg, #beedf6ff, #c7e7fbff)",
+    iconColors: "linear-gradient(135deg, #d0f0f7, #c7e7fb)", // soft aqua gradient
   },
   {
     name: "PHP",
     description:
       "Core server-side scripting language powering Joomla’s backend, extensions, and template logic.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(137,147,190,0.4), rgba(79,91,147,0.4))",
+    iconColors: "linear-gradient(135deg, #d7d9f2, #c2c5e6)", // cool lavender/grey
   },
   {
     name: "MySQL",
     description:
       "Primary database management system for storing Joomla content, users, and configurations.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    iconColors: "linear-gradient(135deg, #beedf6ff, #c7e7fbff)",
+    iconColors: "linear-gradient(135deg, #beedf6, #c7e7fb)", // keep consistent soft blue
   },
   {
     name: "HTML5 & CSS3",
     description:
       "Frontend technologies used in Joomla templates to create responsive layouts and styled designs.",
     icon: "https://cdn.simpleicons.org/html5",
-    iconColors:
-      "linear-gradient(135deg, rgba(227,79,38,0.4), rgba(239,101,42,0.4))",
+    iconColors: "linear-gradient(135deg, #f9d3c3, #f4b39b)", // soft coral/peach
   },
   {
     name: "JavaScript (with jQuery)",
     description:
       "Enhances Joomla’s interactivity, dynamic modules, and user interface behaviors.",
     icon: "https://iconape.com/wp-content/files/ez/353342/svg/javascript-seeklogo.com.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(247,223,30,0.4), rgba(240,219,79,0.4))",
+    iconColors: "linear-gradient(135deg, #fdf3c4, #f9e98a)", // soft yellow gradient
   },
   {
     name: "Docker",
     description:
       "Provides isolated, containerized environments for Joomla development, testing, and scalable deployments.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(13,183,237,0.4), rgba(29,99,237,0.4))",
+    iconColors: "linear-gradient(135deg, #c8e7f9, #a7d4f4)", // soft aqua blue
   },
 ];
+
 
 function JoomlaContent() {
   return (
@@ -152,19 +149,19 @@ function JoomlaContent() {
         Services={services}
       />
 
-      <ScheduleConsultation
+      
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+        <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our Joomla Services"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
-
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <JoomlaTechnologiesSection />
       <AboutTech technologies={joomlaDescription} />
-      <StillNotSure />
+      
 
       <HiringModels
         title="Hiring Models"

@@ -1,4 +1,3 @@
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import NodeJSPage from "./nodejs-content";
 import Metatags from "../../../../../SEO/meta-tags";
 
@@ -17,7 +16,6 @@ function NodeJSApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <NodeJSPage />
-      <StillNotSure />
     </>
   );
 }

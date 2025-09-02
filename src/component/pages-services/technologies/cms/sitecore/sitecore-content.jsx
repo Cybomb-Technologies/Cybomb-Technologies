@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import hireUsImg from "./../../../../../assets/contact/hiring-model-img3.svg";
@@ -83,7 +83,7 @@ const sitecoreDescription = [
     name: "Sitecore XP (Experience Platform)",
     description:
       "The core digital experience platform offering CMS, personalization, analytics, and marketing automation in a single solution.",
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIPTekrCx5hWCLlTD8AEaBOv9mz-mU-knapw&s",
+    icon: "https://res.cloudinary.com/apideck/icons/sitecore",
     iconColors: "linear-gradient(135deg, #f0ededff 60%)",
   },
   {
@@ -104,7 +104,7 @@ const sitecoreDescription = [
     name: "Sitecore JSS (JavaScript Services)",
     description:
       "A framework that allows developers to build fully headless applications in React, Angular, or Vue, powered by Sitecore content.",
-    icon: "https://cmscritic.com/ms-content/uploads/2023/08/sitecore_logo.jpg?format=auto&width=2048",
+    icon: "https://res.cloudinary.com/apideck/icons/sitecore",
     iconColors: "linear-gradient(135deg, #e9a8a3ff 40%)",
   },
   {
@@ -118,7 +118,7 @@ const sitecoreDescription = [
     name: "Identity Server (Security)",
     description:
       "A central authentication and authorization system in Sitecore that supports SSO, secure API access, and identity federation.",
-    icon: "https://old.dotnetfoundation.org/assets/projects/identityserver.png",
+    icon: "https://products.containerize.com/single-sign-on/identity-server/header_image.png",
     iconColors: "linear-gradient(135deg, #e9dadaff 40% )",
   },
 ];
@@ -146,19 +146,19 @@ function SitecoreContent() {
         Services={services}
       />
 
-      <ScheduleConsultation
+      
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+        <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our WordPress Services"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
-
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <SitecoreTechnologiesSection />
       <AboutTech technologies={sitecoreDescription} />
-      <StillNotSure />
+     
 
       <HiringModels
         title="Hiring Models"

@@ -1,7 +1,7 @@
 import ReactNativeContent from './react-native-content';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
-
+import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 function ReactNative() {
   const metaPropsData = {
     title: "React Native App Development - Cybomb Technologies | Cross-Platform Mobile Apps",
@@ -194,6 +194,7 @@ const tabsData = [
         accentColor="#1c85cb"
         cardView={true}
       />
+      <StillNotSure/>
     </>
   );
 }

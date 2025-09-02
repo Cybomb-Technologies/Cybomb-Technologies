@@ -1,5 +1,4 @@
 import PHPAppContent from "./php-content";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import Metatags from "../../../../../SEO/meta-tags";
 
 function PHPApp() {
@@ -17,7 +16,6 @@ function PHPApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <PHPAppContent />
-      <StillNotSure />
     </>
   );
 }

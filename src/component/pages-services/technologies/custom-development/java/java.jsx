@@ -1,5 +1,4 @@
 import JavaPage from "./java-content";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import Metatags from "../../../../../SEO/meta-tags";
 
 function JavaApp() {
@@ -16,7 +15,6 @@ function JavaApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <JavaPage />
-      <StillNotSure />
     </>
   );
 }

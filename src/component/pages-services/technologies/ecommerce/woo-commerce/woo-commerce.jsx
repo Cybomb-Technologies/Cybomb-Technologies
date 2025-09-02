@@ -1,7 +1,7 @@
 import WooCommerceContent from './woo-commerce-content';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
-
+import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 
 
 function WooCommerce() {
@@ -196,7 +196,7 @@ const tabsData = [
         cardView={true}
       />
       <Metatags  metaProps={metaPropsData}/>
-      
+      <StillNotSure/>
     </>
   );
 }

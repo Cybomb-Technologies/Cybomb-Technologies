@@ -13,7 +13,7 @@ const DatabaseTechnologies = () => {
     "Firebase": "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
     "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-    "SQL Server": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg",
+    "SQL Server": "https://marstel.ru/assets/images/img-articles/2025/01/mssql_for_1c/mssql_logo.png",
     "Django ORM": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
   };
 

@@ -109,25 +109,25 @@ const phpTechDescription = [
     name: "Laravel",
     description: "A modern PHP framework known for elegant syntax, MVC structure, built-in ORM (Eloquent), and a vast ecosystem for rapid web application development.",
     icon: "https://icon.icepanel.io/Technology/svg/Laravel.svg",
-    iconColors: "linear-gradient(135deg, #ff9a9e, #fad0c4)"
+    iconColors: "linear-gradient(135deg, #de8b8eff, #fff4f0ff)"
   },
   {
     name: "Symfony",
     description: "A robust PHP framework offering reusable components, flexibility, and scalability for enterprise-level web applications.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg",
-    iconColors: "linear-gradient(135deg, #e0e0e0, #bdbdbd)"
+    iconColors: "linear-gradient(135deg, #e0e0e0, #e0d4d4ff)"
   },
   {
     name: "CodeIgniter",
     description: "A lightweight PHP framework designed for developers who need a simple and elegant toolkit to build full-featured web applications.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg",
-    iconColors: "linear-gradient(135deg, #fabbaeff, #f3bbd4ff)"
+    iconColors: "linear-gradient(135deg, #f9ad9dff, #ded3d8ff)"
   },
   {
     name: "Yii",
     description: "A high-performance PHP framework best for large-scale applications with built-in security, caching, and Gii code generator.",
     icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/yii-php-framework-icon.png",
-    iconColors: "linear-gradient(135deg, #9ef0f6ff, #acc2f2ff)"
+    iconColors: "linear-gradient(135deg, #29f1ffff, #acc2f2ff)"
   },
   {
     name: "CakePHP",

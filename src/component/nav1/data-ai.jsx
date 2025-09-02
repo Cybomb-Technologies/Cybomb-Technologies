@@ -65,8 +65,8 @@ function Datadropdown1({
                 top: "100%",
                 left: "50%",
                 transform: "translateX(-50%)",
-                width: "max-content",
-                maxWidth: "calc(100vw - 40px)"
+                width: "650px",
+                maxWidth: "calc(100vw - 20px)"
               }
             : {
                 display: isOpen ? "block" : "none",
@@ -112,24 +112,24 @@ function Datadropdown1({
               {/* AI Column */}
               <div className={styles.dropdownColumn}>
                 <div className={styles.dropdownHeader}> <FaBrain className={styles.icon} /> AI</div>
-                <Link to="/services/ai-integration" className={styles.dropdownItem} onClick={onLinkClick}> <FaBrain className={styles.icon} /> AI Integration </Link>
+                <Link to="/services/ai-integration" className={styles.dropdownItem1} onClick={onLinkClick}> <FaBrain className={styles.icon} /> AI Integration </Link>
 
-                <Link className={styles.dropdownItem} to="/services/custom-ai-development" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem1} to="/services/custom-ai-development" onClick={onLinkClick}>
                   <GiArtificialIntelligence className={styles.icon} /> Custom AI Development
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/ai-consulting-strategy" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem1} to="/services/ai-consulting-strategy" onClick={onLinkClick}>
                   <FaRegLightbulb className={styles.icon} /> AI Consulting Strategy
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/ai-business-intelligence" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem1} to="/services/ai-business-intelligence" onClick={onLinkClick}>
                   <FaChartPie className={styles.icon} /> AI Business Intelligence
                 </Link>
-                <Link className={styles.dropdownItem} to="services/ai-large-language-model" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem1} to="services/ai-large-language-model" onClick={onLinkClick}>
                   <FaRobot className={styles.icon} /> Large Language Models Solutions
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/ai-persolized-experience" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem1} to="/services/ai-persolized-experience" onClick={onLinkClick}>
                   <FaUserCog className={styles.icon} /> AI Personalized Customer Experience
                 </Link>
-                <Link className={styles.dropdownItem} to="/services/ai-blockchain-integration" onClick={onLinkClick}>
+                <Link className={styles.dropdownItem1} to="/services/ai-blockchain-integration" onClick={onLinkClick}>
                   <FaCube className={styles.icon} /> Blockchain
                 </Link>
               </div>

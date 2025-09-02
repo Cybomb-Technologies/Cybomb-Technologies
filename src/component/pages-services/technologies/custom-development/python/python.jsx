@@ -1,4 +1,3 @@
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import PythonPage from "./python-content";
 import Metatags from "../../../../../SEO/meta-tags";
 
@@ -17,7 +16,6 @@ function PythonApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <PythonPage />
-      <StillNotSure />
     </>
   );
 }

@@ -53,7 +53,7 @@ const pythonTechDescription = [
     name: "Flask",
     description: "A lightweight Python micro-framework for building simple yet powerful web applications. Provides flexibility with extensions for databases, authentication, and APIs.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
-    iconColors: "linear-gradient(135deg, #d5d4d4ff, #cbcbcbff)"
+    iconColors: "linear-gradient(135deg, #fff6f6ff, #cbcbcbff)"
   },
     {
     name: "Pyramid",
@@ -86,7 +86,7 @@ const pythonTechDescription = [
     name: "Django",
     description: "A high-level Python web framework that encourages rapid development and clean, pragmatic design. Comes with ORM, admin panel, authentication, and scalability.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
-    iconColors: "linear-gradient(135deg, #b2b4b3ff, #a4a4a4ff)"
+    iconColors: "linear-gradient(135deg, #c2d9cdff, #dbc7c7ff)"
   },
   
 ];

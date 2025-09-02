@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import hireUsImg from "./../../../../../assets/contact/hiring-model-img3.svg";
@@ -89,44 +89,43 @@ const sharepointDescription = [
     name: "SharePoint Online",
     description:
       "Cloud-based platform for collaboration, intranet, and document management in Microsoft 365.",
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTSTTt9FzqDgpkv-O0b0qgTmrxeYVucAH6PA&s",
-    iconColors: "linear-gradient(135deg, #a8e6cf 0%, #d0f4de 100%)",
+    icon: "https://brandlogo.org/wp-content/uploads/2025/05/Microsoft-SharePoint-Icon-2019.png.webp",
+    iconColors: "linear-gradient(135deg, #e0f7f4, #b2f0df)", // fresh teal
   },
   {
     name: "SharePoint Framework (SPFx)",
     description:
       "Modern development model for building custom SharePoint solutions using web technologies.",
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo3RCLJS5jl3tgLpf9vQSAOIY26_i3SKLUBA&s",
-    iconColors: "linear-gradient(135deg, #98d5f3ff 20%)",
+    icon: "https://brandlogo.org/wp-content/uploads/2025/05/Microsoft-SharePoint-Icon-2019.png.webp",
+    iconColors: "linear-gradient(135deg, #d6f0ff, #a3d9f9)", // soft sky blue
   },
   {
     name: "TypeScript",
     description:
       "Strongly typed JavaScript superset used to build reliable, scalable SharePoint solutions.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(49,120,198,0.4), rgba(35,90,151,0.4))",
+    iconColors: "linear-gradient(135deg, #e6f1ff, #bddbff)", // pastel TS blue
   },
   {
     name: "React",
     description:
       "Popular JavaScript library for building fast, reusable UI components in SharePoint Framework.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    iconColors: "linear-gradient(135deg, #b9e8ffff 20%)",
+    iconColors: "linear-gradient(135deg, #e0faff, #b8ecf6)", // fresh aqua
   },
   {
     name: "Microsoft Graph API",
     description:
       "Unified API to access Microsoft 365 services such as Teams, Outlook, OneDrive, and SharePoint data.",
-    icon: "https://blogger.googleusercontent.com/img/a/AVvXsEhq3I_gGZkqPBK4o7UbetcvxviO7Oi-SwRZJdofEQe9KyYv6axBZMICBg6xpQPukO_niYPUtnFL5jh7xHQ6FowM14ckjOHO6GCDlqo7-RB0TFiugH39b1TRs9w7yqhYSg9RzdZbZRsBluWg9eAji7wDVzr64SbpJ38qe_EQVBEHLqWJ65EniLIIs2qkmg=w423-h254",
-    iconColors: "linear-gradient(135deg, #93b6c7ff 40%)",
+    icon: "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/Graph%20API%20logo.png?itok=B8Gk4HZb",
+    iconColors: "linear-gradient(135deg, #f0f7ff, #c6d9f7)", // light MS blue
   },
   {
     name: "Azure DevOps",
     description:
       "Cloud service for CI/CD pipelines, version control, and project management for SharePoint projects.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
-    iconColors: "linear-gradient(135deg, #c4e2ffff 40%)",
+    iconColors: "linear-gradient(135deg, #e1f3ff, #b9ddf7)", // Azure pastel blue
   },
 ];
 
@@ -153,7 +152,9 @@ function SharePointContent() {
         Services={services}
       />
 
-      <ScheduleConsultation
+      
+      <WhyChooseUs ChooseUs={whychooseus} />
+<ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our SharePoint Services"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
@@ -161,11 +162,9 @@ function SharePointContent() {
         Icon={MdSchedule}
       />
 
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <SharePointTechnologiesSection />
       <AboutTech technologies={sharepointDescription} />
-      <StillNotSure />
+      
 
       <HiringModels
         title="Hiring Models"

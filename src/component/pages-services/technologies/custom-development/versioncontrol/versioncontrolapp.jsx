@@ -1,4 +1,3 @@
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import VersionControlContent from "./versioncontrol-content";
 import Metatags from "../../../../../SEO/meta-tags";
 
@@ -17,7 +16,7 @@ function VersionControlApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <VersionControlContent />
-      <StillNotSure />
+     
     </>
   );
 }

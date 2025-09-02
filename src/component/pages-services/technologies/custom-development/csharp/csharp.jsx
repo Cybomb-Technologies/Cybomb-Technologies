@@ -1,5 +1,4 @@
 import CSharpPage from "./csharp-content";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import Metatags from "../../../../../SEO/meta-tags";
 
 function CSharpApp() {
@@ -17,7 +16,6 @@ function CSharpApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <CSharpPage />
-      <StillNotSure />
     </>
   );
 }

@@ -1,5 +1,4 @@
 import CSSPage from "./css-content";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import Metatags from "../../../../../SEO/meta-tags";
 
 function CSSApp() {
@@ -18,7 +17,7 @@ function CSSApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <CSSPage />
-      <StillNotSure />
+      
     </>
   );
 }

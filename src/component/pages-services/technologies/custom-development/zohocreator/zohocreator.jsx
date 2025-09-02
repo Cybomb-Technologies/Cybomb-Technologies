@@ -1,5 +1,4 @@
 import ZohoCreatorPage from "./zohocreator-content";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import Metatags from "../../../../../SEO/meta-tags";
 
 function ZohoCreatorApp() {
@@ -17,7 +16,7 @@ function ZohoCreatorApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <ZohoCreatorPage />
-      <StillNotSure />
+     
     </>
   );
 }
