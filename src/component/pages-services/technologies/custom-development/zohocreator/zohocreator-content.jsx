@@ -50,7 +50,7 @@ const zohoTechDescription = [
   {
     name: "Zoho Creator",
     description: "A low-code application development platform that allows businesses to build custom apps with minimal coding.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/ZOHO_logo_2023.svg/768px-ZOHO_logo_2023.svg.png?20231106145651",
+    icon: "https://uhorizon.pe/wp-content/uploads/2021/01/zoho-creator-header.png",
     iconColors: "linear-gradient(135deg, #ddf8d6ff, #eef2c8ff)"
   },
   {
@@ -62,7 +62,7 @@ const zohoTechDescription = [
   {
     name: "Zoho CRM",
     description: "A powerful customer relationship management platform designed to manage sales, marketing, and customer support.",
-    icon: "https://www.zohowebstatic.com/sites/zweb/images/productlogos/crm.svg",
+    icon: "https://zoho.codafish.net/wp-content/uploads/2022/08/crm-512.png",
     iconColors: "linear-gradient(135deg, #d3e3f1ff, #cfd3f6ff)"
   },
   {
