@@ -10,92 +10,95 @@ import saasSolutionImg from "./../../../../assets/technologies/saas-solutions.jp
 
 const services = [
   {
-    title: 'Product Strategy & MVP Planning',
+    title: 'SaaS Strategy & MVP Development',
     description:
-      'We validate your SaaS idea and build the Minimum Viable Product with only the essential features to test and attract early users.',
+      'We help you shape your SaaS idea, plan the right features, and build a Minimum Viable Product to attract first users quickly.',
   },
   {
-    title: 'Custom SaaS Product Development',
+    title: 'Custom SaaS Development',
     description:
-      'Complete frontend, backend, database, and cloud development to bring your SaaS to life—from concept to launch.',
+      'From design to backend, database, and cloud, we create complete SaaS solutions tailored to your business needs.',
   },
   {
-    title: 'Multi-Tenant Architecture',
+    title: 'Scalable SaaS Architecture',
     description:
-      'Design scalable platforms with role-based access, multi-user tenancy, and separation of user data.',
+      'We design secure, multi-tenant systems that support many users, roles, and growing business demands.',
   },
   {
-    title: 'Subscription & Billing Integration',
+    title: 'Subscription & Payment Systems',
     description:
-      'Add payment gateways, user subscriptions, free trials, and billing logic with tools like Stripe, Razorpay, or PayPal.',
+      'We set up billing, free trials, and payment gateways like Stripe, Razorpay, and PayPal for smooth revenue management.',
   },
   {
-    title: 'Admin & User Dashboards',
+    title: 'User & Admin Dashboards',
     description:
-      'Powerful, intuitive interfaces for both users and your internal team to manage accounts, analytics, and workflows.',
+      'We create easy-to-use dashboards for customers and admin teams to track data, accounts, and workflows.',
   },
   {
-    title: 'SaaS Modernization & Rebuilds',
+    title: 'SaaS Upgrades & Modernization',
     description:
-      'Rebuild or upgrade outdated SaaS products using modern tech stacks and best practices.',
+      'We rebuild or improve old SaaS products with modern technologies, faster performance, and better security.',
   },
   {
-    title: 'API Integrations',
+    title: 'Third-Party API Integration',
     description:
-      'Integrate your SaaS with third-party platforms, CRMs, analytics, automation tools, and more.',
+      'We connect your SaaS with CRMs, analytics tools, automation platforms, and other software for more functionality.',
   },
   {
-    title: 'Ongoing Maintenance & Support',
+    title: 'Ongoing SaaS Support',
     description:
-      'Post-launch support, performance monitoring, and regular updates to ensure your SaaS product remains secure and reliable.',
+      'We provide maintenance, updates, and monitoring to keep your SaaS secure, fast, and reliable after launch.',
   },
 ];
+
 
 const process = [
   {
-    title: 'Discovery & Planning',
-    description: "Refine your vision, analyze competitors, and outline your SaaS goals",
+    title: 'Research & Strategy',
+    description: 'We understand your SaaS idea, study the market, and plan the best approach.',
   },
   {
-    title: 'Wireframes & UI Design',
-    description: "Design intuitive flows and interfaces users will love",
+    title: 'Design & Prototyping',
+    description: 'We create clean UI/UX designs and wireframes to show how your SaaS will work.',
   },
   {
-    title: 'Agile Development & Sprint Reviews',
-    description: "Work in fast-paced sprints with regular demos and feedback",
+    title: 'SaaS Development',
+    description: 'We build your SaaS using modern technologies with regular updates and feedback.',
   },
   {
-    title: 'Testing & Optimization',
-    description: "Ensure performance, responsiveness, and security",
+    title: 'Testing & Security',
+    description: 'We test for speed, bugs, and data security to ensure a reliable SaaS product.',
   },
   {
-    title: 'Launch & Scale',
-    description: "Go live with support in marketing handoff, analytics setup, and post-launch monitoring",
+    title: 'Launch & Growth',
+    description: 'We launch your SaaS, set up analytics, and support you in scaling to more users.',
   },
 ];
 
+
 const whychooseus = [
   {
-    title: 'Product Thinking',
-    description: 'We go beyond code to help you shape a viable SaaS business',
+    title: 'SaaS Expertise',
+    description: 'We design and build SaaS platforms that are reliable, fast, and easy to use.',
   },
   {
-    title: 'MVP First',
-    description: 'Launch quickly, test early, and scale fast',
+    title: 'Faster Time to Market',
+    description: 'Launch your SaaS product quickly with our agile development approach.',
   },
   {
-    title: 'Built Secure',
-    description: 'User data protection, GDPR-ready, and access control by default',
+    title: 'Data Security',
+    description: 'We keep your SaaS platform safe with strong security and compliance practices.',
   },
   {
-    title: 'Scalable Systems',
-    description: 'Architecture that handles traffic spikes, growth, and feature expansions',
+    title: 'Scalable Growth',
+    description: 'Our solutions grow with your business and support more users as you expand.',
   },
   {
-    title: 'Startup-Friendly',
-    description: 'Transparent pricing, fast iterations, and ongoing collaboration',
+    title: 'Long-Term Support',
+    description: 'We provide updates, maintenance, and improvements to keep your SaaS running smoothly.',
   },
 ];
+
 
 const engagementOptions = [
   {
