@@ -11,7 +11,7 @@ const toolsAndTech = [
   },
   {
     name: "Apache Kafka",
-    logo: "https://locusit.se/wp-content/uploads/2024/08/Apache-Kafka.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR3QGmhl8g-mKOI9YRJvjlwOwFZpR8Q18ARw&s",
   },
   {
     name: "Apache Flink",
@@ -23,19 +23,19 @@ const toolsAndTech = [
   },
   {
     name: "Apache Airflow",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzCIuPsPokbP-V0RFFgCRJqcve5gpjJmTtg&s",
   },
   {
     name: "Apache NiFi",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Apache-nifi-logo.svg/2560px-Apache-nifi-logo.svg.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXq1YUXMtDbkSQnw7fWRWKCayhy77eV8HxYw&s",
   },
   {
     name: "dbt",
-    logo: "https://vectorseek.com/wp-content/uploads/2023/09/Dbt-Logo-Vector.svg-.png",
+    logo: "https://avatars.githubusercontent.com/u/77229014?v=4",
   },
   {
     name: "Snowflake",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Snowflake_Logo.svg/1280px-Snowflake_Logo.svg.png",
+    logo: "https://registry.npmmirror.com/@lobehub/icons-static-png/1.64.0/files/dark/snowflake-color.png",
   },
   {
     name: "Google BigQuery",
@@ -43,11 +43,11 @@ const toolsAndTech = [
   },
   {
     name: "Amazon Redshift",
-    logo: "https://cdn.prod.website-files.com/601064f495f4b4967f921aa9/63588a8a2e82ff2d5e3434b6_202210-redshift-logo.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROFfEqplM57B_cRPv1fdRn8tBFTrqX57n5Bg&s",
   },
   {
     name: "Azure Synapse",
-    logo: "https://files.readme.io/5fd73e2-synapse.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq5BJgTw2H2_OMckcMo7vskg-DWqTXSq_yGQ&s",
   },
   {
     name: "PostgreSQL",
@@ -59,7 +59,7 @@ const toolsAndTech = [
   },
   {
     name: "Apache Cassandra",
-    logo: "https://cdn.worldvectorlogo.com/logos/cassandra.svg",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMMNAO3jX7Wv7cpa6DDTAmFgJf953zIRd0vQ&s",
   },
   {
     name: "Python",
@@ -71,7 +71,7 @@ const toolsAndTech = [
   },
   {
     name: "SQL",
-    logo: "http://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
+    logo: "https://www.svgrepo.com/show/369980/database-sql.svg",
   },
   {
     name: "AWS Glue",
@@ -83,7 +83,7 @@ const toolsAndTech = [
   },
   {
     name: "Azure Data Factory",
-    logo: "https://avangelstech.com/wp-content/uploads/2023/08/azure-data-factory1-e1691424267300.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO8E_8XAOtsN9H-cgebHZiZzebnUPIu20w7w&s",
   },
   {
     name: "GCP Dataflow",

@@ -4,10 +4,11 @@ import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
-import OnlinePresence from "../../../common-ui/dataui/online-presence";
+// import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
 import contactUsImg from './../../../../assets/contact/contact-us-img1.jpg';
 import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img2.jpg';
+import AIConsultingSection from "./ai-consulting-tech-tool";
 
 const WhatWeOffers = [
   {
@@ -99,6 +100,10 @@ function AIConsultingStrategyContent() {
       />
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
+
+        <AIConsultingSection/>
+
+      <WhyChooseUs ChooseUs={whychooseus} />
       
       <ScheduleConsultation
         heading="Shape Your AI Future with Confidence"
@@ -108,15 +113,15 @@ function AIConsultingStrategyContent() {
         Icon={MdSchedule}
       />
 
-      <WhyChooseUs ChooseUs={whychooseus} />
+      
 
-      <OnlinePresence 
+      {/* <OnlinePresence 
         title="Let’s Build Your AI Strategy Today."
         buttonText="CONTACT US"
         buttonLink="#"
         imageSrc={contactUsImg}
         imageAlt="AI Consulting & Strategy Services"
-      />
+      /> */}
 
       <DevelopmentProcess 
         title="Use Cases"

@@ -12,6 +12,38 @@
 .btn.btn-primary{
   background-color: #003459 !important;
 }
+
+.custom-card-body1 {
+  background-color: #ffffff !important;
+  display: flex;
+  flex-direction: column; 
+  height: 100%;  /* ensure card fills height */
+}
+
+.custom-card-body1 .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;  /* take up available space */
+}
+
+.custom-btn-contact {
+  margin-top: auto;   /* push button down */
+  align-self: center; /* keep it centered */
+  width: auto;
+}
+
+.contactMethodCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+
 .hero::before {
   content: "";
   position: absolute;

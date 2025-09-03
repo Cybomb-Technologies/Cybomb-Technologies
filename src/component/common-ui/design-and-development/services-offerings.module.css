@@ -32,7 +32,7 @@
   border-radius: 1rem;
   padding: 2.5rem;
   transition: transform 0.2s ease;
-  box-shadow: 10px 6px 6px rgba(0, 126, 167, 10); 
+  box-shadow: 10px 6px 6px rgba(0, 126, 167, 10);
 }
 
 .card:hover {
@@ -88,6 +88,9 @@
 
 /* Mobile (<= 768px) */
 @media (max-width: 768px) {
+  .androidServicesSection {
+    padding: 2.5rem 0.7rem 1.5rem;
+  }
   .sectionLayer {
     padding: 1rem;
   }
@@ -96,13 +99,14 @@
     font-size: 1.5rem;
     text-align: center;
     align-items: center;
+    margin-bottom: 1.5rem;
   }
 
   .grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .card {
     padding: 1.5rem;
   }

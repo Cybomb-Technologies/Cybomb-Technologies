@@ -1,5 +1,5 @@
 .section {
-  background-color: #f9fafb;
+  background-color: #ffffff;
   padding: 4rem 1rem;
 }
 
@@ -70,11 +70,11 @@
 
 /* Tablets (≤768px) */
 @media (max-width: 768px) {
-  .section{
-    padding: 0rem 1rem 2rem;
+  .section {
+    padding: 0rem 0.4rem 2rem;
   }
 
-  .container{
+  .container {
     padding: 0rem 1rem 2rem;
   }
 
@@ -102,14 +102,14 @@
 
 /* Small mobile (≤480px) */
 @media (max-width: 480px) {
-  .section{
-    padding: 0rem 1rem 0rem;
+  .section {
+    padding: 0rem 0.4rem 0rem;
   }
 
-  .container{
+  .container {
     padding: 0rem 1rem 2rem;
   }
- 
+
   .heading {
     font-size: 1.75rem;
   }
