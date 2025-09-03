@@ -201,8 +201,8 @@ function Footer1({
                 className={styles.certificateLogo}
               />
               <div className={styles.certificateText}>
-                <span className={styles.certificateLabel}>Cert ID:</span>
-                <span className={styles.certificateValue}>IEC - #AARFC1378G</span>
+                <span className={styles.certificateLabel}>Cert ID: IEC</span>
+                <span className={styles.certificateValue}>#AARFC1378G</span>
               </div>
             </div>
 
