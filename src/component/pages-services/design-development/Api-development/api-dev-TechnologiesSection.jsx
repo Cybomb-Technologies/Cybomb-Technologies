@@ -31,7 +31,7 @@ const TechLogos = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   Tailwind: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
   Shopify:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopify_logo_2018.svg/768px-Shopify_logo_2018.svg.png?20240107131458",
+    "https://cdn3.iconfinder.com/data/icons/social-media-2068/64/_shopping-512.png",
   WooCommerce:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/woocommerce/woocommerce-original.svg",
   Magento:
@@ -55,9 +55,9 @@ const TechLogos = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   PostgreSQL:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-  Stripe: "https://www.vectorlogo.zone/logos/stripe/stripe-ar21~bgwhite.svg",
+  Stripe: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQGluJhW7I1NYU7jF77E-9K9I46_ib_DUNHw&s",
   PayPal:
-    "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/paypal-icon.png",
+    "https://cdn.pixabay.com/photo/2018/05/08/21/29/paypal-3384015_640.png",
   Phonepe:
     "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/phonepe-icon.png",
   UPI: "https://www.vectorlogo.zone/logos/upi/upi-ar21.svg",
