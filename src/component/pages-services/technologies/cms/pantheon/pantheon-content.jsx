@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import hireUsImg from "./../../../../../assets/contact/hiring-model-img3.svg";
@@ -99,46 +99,46 @@ const pantheonDescription = [
     name: "Pantheon Platform (Dev/Test/Live workflows & Multidev)",
     description:
       "Cloud platform providing Dev, Test, Live environments and Multidev for collaborative development and seamless deployments.",
-    icon: "https://venturebeat.com/wp-content/uploads/2019/03/c69b42ac-1587-4592-89a1-fa83cae40273.png",
-    iconColors: "linear-gradient(135deg, #a0a0a0ff 20%)",
+    icon: "https://logos.bugcrowdusercontent.com/logos/ecb1/6de7/3b2e721d/ab643de84a27a76d7787801a19d9d554_Logo_BLK_Fist.png",
+    iconColors: "linear-gradient(135deg, #fff4c2, #ffe083)", // Pantheon yellow soft gradient
   },
   {
     name: "Drupal Core",
     description:
       "Open-source CMS supported by Pantheon for building complex, content-rich digital experiences.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/drupal/drupal-original.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(13,183,237,0.4), rgba(29,99,237,0.4))",
+    iconColors: "linear-gradient(135deg, #d0f0ff, #a6e4ff)", // Clean Drupal blue tone
   },
   {
     name: "WordPress Core",
     description:
       "Most popular CMS supported by Pantheon, enabling fast and flexible site creation and management.",
-    icon: "https://www.vectorlogo.zone/logos/wordpress/wordpress-tile.svg",
-    iconColors: "linear-gradient(135deg,  rgba(29,99,237,0.4)",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
+    iconColors: "linear-gradient(135deg, #d9ecf5, #b9daeb)", // WordPress light blue-gray
   },
   {
     name: "PHP",
     description:
       "The core programming language powering both Drupal and WordPress on Pantheon.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-    iconColors: "linear-gradient(135deg, #a3abceff 40%)",
+    iconColors: "linear-gradient(135deg, #e4e6f7, #c7cbe5)", // Softer lavender tone for PHP
   },
   {
     name: "MySQL",
     description:
       "Relational database used to store and query content, user data, and configuration for Drupal and WordPress.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    iconColors: "linear-gradient(135deg, #beedf6ff, #c7e7fbff)",
+    iconColors: "linear-gradient(135deg, #beedf6, #c7e7fb)", // Same as before (perfect match)
   },
   {
     name: "Fastly (CDN with Varnish caching)",
     description:
       "Delivers content globally with integrated Varnish caching for speed, security, and scalability.",
     icon: "https://www.svgrepo.com/show/331388/fastly.svg",
-    iconColors: "linear-gradient(135deg, #fab5b5ff 40%)",
+    iconColors: "linear-gradient(135deg, #ffd6d6, #ffb3b3)", // Soft Fastly red tone
   },
 ];
+
 
 function PantheonContent() {
   return (
@@ -163,19 +163,19 @@ function PantheonContent() {
         Services={services}
       />
 
-      <ScheduleConsultation
+      
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+        <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our Pantheon Services"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
-
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <PantheonTechnologiesSection />
       <AboutTech technologies={pantheonDescription} />
-      <StillNotSure />
+      
 
       <HiringModels
         title="Hiring Models"

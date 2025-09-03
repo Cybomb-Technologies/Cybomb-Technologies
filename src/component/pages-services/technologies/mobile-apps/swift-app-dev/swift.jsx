@@ -1,7 +1,7 @@
 import SwiftContent from './swift-content';
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
-
+import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 function SwiftApp() {
   const metaPropsData = {
     title: "Swift App Development - Cybomb Technologies | Native iOS Applications",
@@ -194,6 +194,7 @@ const tabsData = [
         accentColor="#1c85cb"
         cardView={true}
       />
+      <StillNotSure />
     </>
   );
 }

@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 
 import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
@@ -161,7 +161,9 @@ function ShopifyContent() {
         highlight="Fortune 500 enterprises"
       />
       <ServicesOfferings title="Our Shopify Offerings" Services={services} />
-      <ScheduleConsultation
+      
+      <WhyChooseUs ChooseUs={whychooseus} />
+<ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our Shopify Services"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
@@ -169,12 +171,10 @@ function ShopifyContent() {
         Icon={MdSchedule}
       />
 
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <ShopifyTechnologiesSection />
       <AboutTech technologies={databaseDescription} />
 
-      <StillNotSure />
+      
 
       <HiringModels
         title="Hiring Models"

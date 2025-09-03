@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img1.png';
@@ -143,19 +143,19 @@ function XamarinContent() {
         Services={services}
       />
       
-      <ScheduleConsultation
+      
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+        <ScheduleConsultation
         heading="Accelerate Your App Strategy with Xamarin"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
         imageAlt="Xamarin App Consultation"
         Icon={MdSchedule}
       />
-
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <XamarinTechnologiesSection />
       <AboutTech technologies={xamarinTechDescription} />
-      <StillNotSure />
+      
 
       <HiringModels
         title="Xamarin Developer Hiring Models"

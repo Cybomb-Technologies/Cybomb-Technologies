@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img1.png';
@@ -152,19 +152,19 @@ function KotlinContent() {
         Services={services}
       />
       
-      <ScheduleConsultation
+      
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+<ScheduleConsultation
         heading="Build Android Apps Faster With Kotlin"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
         imageAlt="Kotlin App Consultation"
         Icon={MdSchedule}
       />
-
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <KotlinTechnologiesSection />
       <AboutTech technologies={kotlinTechDescription} />
-      <StillNotSure />
+      
 
       <HiringModels
         title="Kotlin Developer Hiring Models"

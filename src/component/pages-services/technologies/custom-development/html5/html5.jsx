@@ -1,5 +1,4 @@
 import HTML5Page from "./html-content";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import Metatags from "../../../../../SEO/meta-tags";
 
 function HTML5App() {
@@ -17,7 +16,6 @@ function HTML5App() {
     <>
       <Metatags metaProps={metaPropsData} />
       <HTML5Page />
-      <StillNotSure />
     </>
   );
 }

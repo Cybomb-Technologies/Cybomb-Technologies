@@ -1,18 +1,18 @@
-import UiUxBanner from "./ui-ux-banner";
+import UiUxBanner from "./components/ui-ux-banner";
 import InfoStats from "../../../common-ui/design-and-development/info-stats";
-import ServicesOfferings from "./services-offerings";
-import WhyChooseUs from "./why-choose-us";
+import ServicesOfferings from "./components/services-offerings";
+import WhyChooseUs from "./components/why-choose-us";
 import OnlinePresence from "../../../common-ui/design-and-development/online-presence";
-import EngagementOptions from "./engagement-options";
-import TechToolsSection from "./TechToolsSection";
+import EngagementOptions from "./components/engagement-options";
+import TechToolsSection from "./components/TechToolsSection";
 import uiuxDesignImg from "./../../../../assets/technologies/ui-ux-design.jpg";
-import UiUxWhyMatters from "./uiux-why-matters"
+import UiUxWhyMatters from "./components/uiux-why-matters"
 const services = [
   {
-    title: 'Product Discovery & Research',
-    description:
-      'Deep user research, competitor analysis, and design workshops to define goals and build empathy with your audience.',
-  },
+  title: 'UI/UX Research & Strategy',
+  description:
+    'We analyze users, competitors, and market trends to design user-friendly and engaging digital experiences.',
+},
   {
     title: 'Wireframing & Prototyping',
     description:

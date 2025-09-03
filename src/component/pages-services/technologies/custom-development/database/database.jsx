@@ -1,4 +1,3 @@
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import DatabaseContent from "./database-content";
 import Metatags from "../../../../../SEO/meta-tags";
 
@@ -17,7 +16,7 @@ function DatabaseApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <DatabaseContent />
-      <StillNotSure />
+      
     </>
   );
 }

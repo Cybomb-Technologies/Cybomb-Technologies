@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
 import hireUsImg from './../../../../../assets/contact/hiring-model-img2.webp';
@@ -153,20 +153,20 @@ function BigCommerceContent() {
     Services={services}/>
         
        
-        <ScheduleConsultation
+        
+
+    <WhyChooseUs ChooseUs={whychooseus}/>
+<ScheduleConsultation
       heading="Stay Ahead Of The Competition With Our BigCommerce Services"
       buttonText="Schedule a Consultation!"
       imageSrc={scheduleConsultImg}
       imageAlt="CRM Consultation"
       Icon={MdSchedule}
     />
-
-    <WhyChooseUs ChooseUs={whychooseus}/>
-
     <BigCommerceTechnologiesSection/>
     <AboutTech technologies={databaseDescription} />
 
-    <StillNotSure/>
+    
     
      <HiringModels
       title="Hiring Models"

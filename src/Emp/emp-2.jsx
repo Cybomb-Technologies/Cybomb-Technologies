@@ -28,7 +28,9 @@ import NetworkPen from "../component/pages-security/network-penetration-testing/
 import PricingPage from "../component/page-pricing/pricing/pricing";
 import UnityGames from "../component/pages-services/technologies/games/unity/unity";
 import UnrealGames from "../component/pages-services/technologies/games/unreal/unreal";
-
+import CybombBlog from "../component/blog/cybomb-blog";
+import BlogDetail from "../component/blog/blog-details";
+import TagPage from "../component/blog/tag-page";
 // Just return <Route />s. Don't wrap in <Routes>
 const emp2Routes = (
   <>
@@ -64,6 +66,9 @@ const emp2Routes = (
     <Route path="/pricing-page" element={<PricingPage/>}/>
     <Route path="/services/unity" element={<UnityGames/>}/>
     <Route path="/services/unreal" element={<UnrealGames/>}/>
+    <Route path="/" element={<CybombBlog />} />
+    <Route path="/blog/:id" element={<BlogDetail />} />
+    <Route path="/tags/:tagName" element={<TagPage />} />
   </>
 );
 

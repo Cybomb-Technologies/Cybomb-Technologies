@@ -28,7 +28,7 @@ const techLogos = {
   Webhooks:
     "https://images.seeklogo.com/logo-png/27/2/webhooks-logo-png_seeklogo-274079.png",
   SOAP: "https://www.svgrepo.com/show/530564/soap.svg",
-  SOAP: "https://cdn.prod.website-files.com/6005ea4c5ffe7d59bb2933e3/678515e3ab55e6d8ee51c492_8Wf7YsapSPpbVneDFEHIJD458iyXMJJUDrkamCIvgRI.png",
+  
 
   // Languages
   "Node.js":

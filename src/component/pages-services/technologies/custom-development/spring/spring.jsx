@@ -1,5 +1,4 @@
 import SpringPage from "./spring-content";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import Metatags from "../../../../../SEO/meta-tags";
 
 function SpringApp() {
@@ -17,7 +16,7 @@ function SpringApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <SpringPage />
-      <StillNotSure />
+     
     </>
   );
 }

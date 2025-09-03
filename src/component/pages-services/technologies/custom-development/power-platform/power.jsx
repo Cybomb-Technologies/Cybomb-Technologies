@@ -1,5 +1,4 @@
 import PowerPlatformContent from "./power-content";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import Metatags from "../../../../../SEO/meta-tags";
 
 function PowerPlatformApp() {
@@ -17,7 +16,6 @@ function PowerPlatformApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <PowerPlatformContent />
-      <StillNotSure />
     </>
   );
 }

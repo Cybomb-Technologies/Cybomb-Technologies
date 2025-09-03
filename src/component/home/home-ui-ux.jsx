@@ -1,6 +1,7 @@
 import "./home-ui-ux.css";
 
 function HomeUIUX() {
+
   const services = [
   {
     icon: "bi-people",
@@ -38,14 +39,14 @@ function HomeUIUX() {
     description:
       "Maintain design consistency across products with scalable systems and component libraries.",
   },
-];
+  ];
 
   return (
     <section className="uiux-section">
       <div className="container-uiux">
-        <h2 className="section-title-uiux" style={{color:"#003459"}}>
-          End-to-End UI/UX Services for Web App & Mobile App Development
-        </h2>
+        <h1 className="section-title-uiux" style={{color:"#003459"}}>
+          Mobile App & Web Development with top UI/UX Services
+        </h1>
           <div className="services-grid-uiux" data-aos="fade-up">
             {services.map((service, index) => (
               <div key={index} className="service-card-uiux">

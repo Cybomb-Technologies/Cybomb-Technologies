@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import hireUsImg from "./../../../../../assets/contact/hiring-model-img3.svg";
@@ -97,7 +97,7 @@ const drupalDescription = [
       "Latest version of the Drupal CMS offering improved performance, modern APIs, and enhanced content authoring tools.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/drupal/drupal-original.svg",
     iconColors:
-      "linear-gradient(135deg, rgba(13,183,237,0.4), rgba(29,99,237,0.4))",
+      "linear-gradient(135deg, #c3e6faff, #d7efffff)", // soft Drupal blue
   },
   {
     name: "PHP",
@@ -105,14 +105,14 @@ const drupalDescription = [
       "Core server-side scripting language powering Drupal’s backend, modules, and business logic.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
     iconColors:
-      "linear-gradient(135deg, rgba(137,147,190,0.4), rgba(79,91,147,0.4))",
+      "linear-gradient(135deg, #d6d9f5ff, #e6e8faff)", // light lavender tones
   },
   {
     name: "MySQL",
     description:
       "Relational database system used by Drupal to store content, configurations, and site data.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    iconColors: "linear-gradient(135deg, #beedf6ff, #c7e7fbff)",
+    iconColors: "linear-gradient(135deg, #beedf6ff, #c7e7fbff)", // keep same MySQL palette
   },
   {
     name: "Twig",
@@ -120,7 +120,7 @@ const drupalDescription = [
       "Modern templating engine in Drupal 10 for secure, clean, and flexible front-end theming.",
     icon: "https://user-images.githubusercontent.com/973783/46407973-3c5dbf80-c72e-11e8-947c-d1fdaaa28f73.png",
     iconColors:
-      "linear-gradient(135deg, rgba(104,163,93,0.4), rgba(156,204,101,0.4))",
+      "linear-gradient(135deg, #d7f5d6ff, #e8fbe7ff)", // fresh light green
   },
   {
     name: "Composer",
@@ -128,7 +128,7 @@ const drupalDescription = [
       "Dependency manager for PHP, essential for installing and managing Drupal core, modules, and libraries.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg",
     iconColors:
-      "linear-gradient(135deg, rgba(110,78,46,0.4), rgba(198,154,107,0.4))",
+      "linear-gradient(135deg, #f2e1c8ff, #f8efe2ff)", // warm beige gradient
   },
   {
     name: "Docker",
@@ -136,7 +136,7 @@ const drupalDescription = [
       "Containerization platform enabling isolated and reproducible environments for Drupal development and deployment.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     iconColors:
-      "linear-gradient(135deg, rgba(13,183,237,0.4), rgba(29,99,237,0.4))",
+      "linear-gradient(135deg, #c2e8faff, #d6f1fdff)", // light aqua blue
   },
 ];
 
@@ -163,19 +163,19 @@ function DrupalContent() {
         Services={services}
       />
 
-      <ScheduleConsultation
+      
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+        <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our Drupal Services"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
-
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <DrupalTechnologiesSection />
       <AboutTech technologies={drupalDescription} />
-      <StillNotSure />
+      
 
       <HiringModels
         title="Hiring Models"

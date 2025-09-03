@@ -2,7 +2,7 @@
 import Metatags from '../../../../../SEO/meta-tags';
 import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
 import MagentoContent from './magento-content';
-
+import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 
 function Magento() {
   const metaPropsData = {
@@ -196,7 +196,7 @@ const tabsData = [
         cardView={true}
       />
       <Metatags  metaProps={metaPropsData}/>
-      
+      <StillNotSure/>
       
     </>
   );

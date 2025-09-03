@@ -33,7 +33,7 @@ function ManagementTeam() {
         </div>
 
        <div className="container py-5">
-         <div className="row">
+         <div className="row justify-content-center">
              <div className="col-md-4 col-lg-4">
                <div className="manage-card">
                  <div className="manage-profile-pic">
@@ -50,22 +50,8 @@ function ManagementTeam() {
               </a>
                </div>
              </div>
-               <div className="col-md-4 col-lg-4">
-               <div className="manage-card">
-                 <div className="manage-profile-pic">
-                   <img src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755692170/team-7_jenwou.png" alt="Manoj M R" />
-                 </div>
-                 <h5 className="manage-name text-black">Pavan Pradeep Naik</h5>
-                 <p className="manage-role">CTO</p>
-                 <a
-                href="https:www.linkedin.com/in/pavannaikindia"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
-              </a>
-               </div>
-             </div>
+
+
              <div className="col-md-4 col-lg-4">
                <div className="manage-card">
                  <div className="manage-profile-pic">

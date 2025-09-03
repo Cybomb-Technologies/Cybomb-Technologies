@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 
 import scheduleConsultImg from './../../../../../assets/contact/schedule-a-consultation-img3.jpg';
@@ -154,20 +154,20 @@ function WooCommerceContent() {
     Services={services}/>
         
        
-        <ScheduleConsultation
+        
+
+    <WhyChooseUs ChooseUs={whychooseus}/>
+<ScheduleConsultation
       heading="Stay Ahead Of The Competition With Our WooCommerce Services"
       buttonText="Schedule a Consultation!"
       imageSrc={scheduleConsultImg}
       imageAlt="CRM Consultation"
       Icon={MdSchedule}
     />
-
-    <WhyChooseUs ChooseUs={whychooseus}/>
-
     <WooCommerceTechnologiesSection/>
     <AboutTech technologies={databaseDescription} />
 
-    <StillNotSure/>
+    
     
      <HiringModels
       title="Hiring Models"

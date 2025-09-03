@@ -13,7 +13,7 @@ const SpringTechnologies = () => {
 
   const techLogos = {
     "Spring Boot": "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
-    "Spring MVC": "https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg",
+    "Spring MVC": "https://www.svgrepo.com/show/354380/spring-icon.svg",
     "Spring WebFlux": springwebflux,
     "Spring Cloud": "https://www.clipartmax.com/png/full/195-1955230_cloud-gateway-spring-cloud-contract-logo.png",
     "Spring Data JPA": springdata,

@@ -73,7 +73,7 @@ function Clouddropdown1({
                     </div>
 
                   <Link
-                    to="/Services/aws-cloud"
+                    to="/services/aws-cloud"
                     className={styles.dropdownItem}
                     onClick={onLinkClick}
                   >
@@ -81,7 +81,7 @@ function Clouddropdown1({
                   </Link>
 
                   <Link
-                    to="/Services/azure-cloud"
+                    to="/services/azure-cloud"
                     className={styles.dropdownItem}
                     onClick={onLinkClick}
                   >
@@ -89,7 +89,7 @@ function Clouddropdown1({
                   </Link>
 
                   <Link
-                    to="/Services/google-cloud"
+                    to="/services/google-cloud"
                     className={styles.dropdownItem}
                     onClick={onLinkClick}
                   >
@@ -97,7 +97,7 @@ function Clouddropdown1({
                   </Link>
 
                   <Link
-                    to="/Services/devops"
+                    to="/services/devops"
                     className={styles.dropdownItem}
                     onClick={onLinkClick}
                   >

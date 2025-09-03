@@ -12,12 +12,13 @@ const services = [
   {
     title: 'Custom Mobile App Development',
     description:
-      'Native or cross-platform apps built to meet your business goals and user needs.',
+      'We build custom mobile apps for iOS and Android that match your business goals, engage users, and work smoothly on all devices.',
+
   },
   {
     title: 'UI/UX Design for Mobile',
     description:
-      'Mobile-first designs that feel intuitive and look stunning on all screen sizes.Build scalable, maintainable apps using native frameworks to deliver dynamic UI and robust architecture.',
+      'We create user-friendly mobile designs that improve customer experience and work seamlessly across all devices.',
   },
   {
     title: 'iOS & Android App Development',
@@ -25,17 +26,17 @@ const services = [
       'Build specifically for the Apple App Store or Google Play using Swift, Kotlin, or Java.',
   },
   {
-    title: 'Cross-Platform App Development',
-    description:
-      'One codebase, multiple platforms-using Flutter or React Native.',
-  },
+  title: 'Cross-Platform App Development',
+  description:
+    'We create cross-platform mobile apps using Flutter and React Native that run smoothly on both iOS and Android with a single codebase.',
+},
   {
     title: 'App Testing & Quality Assurance',
     description:
       'Ensure a smooth, bug-free experience across devices and operating systems.',
   },
   {
-    title: 'App Store Deployment & Support',
+    title: 'App Store & play store Deployment',
     description:
       'We will help you get listed, approved, and ready to launch on the App Store & Play Store',
   },
@@ -68,26 +69,27 @@ const process = [
 
 const whychooseus = [
   {
-    title: 'Custom-First Approach',
-    description: "We don't use cookie-cutter templates — everything is made to fit you",
+    title: 'Tailored Mobile Apps',
+    description: 'We build apps designed around your business needs and user goals.',
   },
   {
-    title: 'Mobile & SEO Ready',
-    description: 'Optimized for search engines and all screen sizes',
+  title: 'Scalable Solutions',
+  description: 'We build mobile apps that grow with your business and handle more users easily.',
+},
+  {
+    title: 'User-Friendly Design',
+    description: 'We focus on simple, attractive, and easy-to-use mobile experiences.',
   },
   {
-    title: 'Clean & Modern Code',
-    description: 'We use modern code and optimization techniques to keep your site fast',
+    title: 'High Performance',
+    description: 'Our apps are fast, secure, and optimized for the best performance.',
   },
   {
-    title: 'Speed & Performance',
-    description: 'Easily update your content, images, or blogs without a developer',
-  },
-  {
-    title: 'Ongoing Support',
-    description: "We're here for updates, fixes, scaling, and improvements",
+    title: 'Ongoing Support & Updates',
+    description: 'We provide regular updates, maintenance, and support as your app grows.',
   },
 ];
+
 
 function MobileAppDevContent() {
   return (

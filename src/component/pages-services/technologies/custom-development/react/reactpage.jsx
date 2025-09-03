@@ -1,5 +1,4 @@
 import ReactContent from "./react-content";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 import Metatags from "../../../../../SEO/meta-tags";
 
 function ReactApp() {
@@ -18,7 +17,6 @@ function ReactApp() {
     <>
       <Metatags metaProps={metaPropsData} />
       <ReactContent />
-      <StillNotSure />
     </>
   );
 }

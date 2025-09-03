@@ -22,7 +22,9 @@
 }
 
 .leftContent {
-  flex: 1;
+  flex: -1;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .offerText {

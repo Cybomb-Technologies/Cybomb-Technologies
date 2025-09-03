@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./career-banner.module.css";
-import bannerImg from "/public/images/about-banner.png";
+import bannerImg from "/images/about-banner.png";
 import QuickApplyModal from "./job-apply-modal"; // import the modal
 
 const CareerBanner = () => {

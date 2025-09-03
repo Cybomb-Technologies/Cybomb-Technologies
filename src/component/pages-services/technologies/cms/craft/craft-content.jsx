@@ -5,7 +5,7 @@ import ServicesOfferings from "../../../../common-ui/mobile-app/services-offerin
 import WhyChooseUs from "../../../../common-ui/mobile-app/why-choose-us";
 import ScheduleConsultation from "../../../../common-ui/mobile-app/schedule-consultation";
 import { MdSchedule } from "react-icons/md";
-import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
+
 import HiringModels from "../../../../common-ui/mobile-app/hiring";
 import scheduleConsultImg from "./../../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import hireUsImg from "./../../../../../assets/contact/hiring-model-img3.svg";
@@ -98,48 +98,45 @@ const craftDescription = [
     description:
       "Flexible, developer-friendly CMS built on PHP (Yii2) with powerful content modeling and admin UX.",
     icon: "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/8209afd844b3ed3aced2",
-    iconColors:
-      "linear-gradient(135deg, rgba(229,66,43,0.4), rgba(247,108,94,0.4), rgba(255,138,101,0.4))",
+    iconColors: "linear-gradient(135deg, #ffd9d6, #ffeceb)", // pastel coral
   },
   {
     name: "Craft Commerce",
     description:
       "E-commerce plugin for Craft CMS enabling customizable stores, checkout flows, and product management.",
     icon: "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/8209afd844b3ed3aced2",
-    iconColors: "rgba(255, 111, 97, 0.4)",
+    iconColors: "linear-gradient(135deg, #ffe7d6, #fff3eb)", // pastel peach
   },
   {
     name: "Twig",
     description:
       "Secure and expressive templating engine used by Craft CMS for building clean, maintainable front-end themes.",
     icon: "https://user-images.githubusercontent.com/973783/46407973-3c5dbf80-c72e-11e8-947c-d1fdaaa28f73.png",
-    iconColors:
-      "linear-gradient(135deg, rgba(104,163,93,0.4), rgba(156,204,101,0.4))",
+    iconColors: "linear-gradient(135deg, #e0f5d6, #f1faeb)", // pastel green
   },
   {
     name: "PHP (Yii2 Framework)",
     description:
       "Server-side foundation for Craft CMS, using PHP in combination with the Yii2 framework.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(119,123,179,0.4), rgba(79,91,147,0.4))",
+    iconColors: "linear-gradient(135deg, #dcd6ff, #f0ebff)", // pastel violet
   },
   {
     name: "GraphQL",
     description:
       "Headless APIs in Craft CMS for delivering structured content to modern front-end frameworks and apps.",
     icon: "https://graphql.org/img/logo.svg",
-    iconColors:
-      "linear-gradient(135deg, rgba(229,53,171,0.4), rgba(255,119,201,0.4))",
+    iconColors: "linear-gradient(135deg, #ffd6f3, #ffe6f8)", // pastel pink
   },
   {
     name: "MySQL",
     description:
       "Relational database used by Craft CMS for storing content, configurations, and transactional data.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    iconColors: "linear-gradient(135deg, #beedf6ff, #c7e7fbff)",
+    iconColors: "linear-gradient(135deg, #beedf6, #c7e7fb)", // pastel blue (base reference)
   },
 ];
+
 
 function CraftContent() {
   return (
@@ -164,19 +161,19 @@ function CraftContent() {
         Services={services}
       />
 
-      <ScheduleConsultation
+      
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+        <ScheduleConsultation
         heading="Stay Ahead Of The Competition With Our Craft Services"
         buttonText="Schedule a Consultation!"
         imageSrc={scheduleConsultImg}
         imageAlt="CRM Consultation"
         Icon={MdSchedule}
       />
-
-      <WhyChooseUs ChooseUs={whychooseus} />
-
       <CraftTechnologiesSection />
       <AboutTech technologies={craftDescription} />
-      <StillNotSure />
+      
 
       <HiringModels
         title="Hiring Models"
