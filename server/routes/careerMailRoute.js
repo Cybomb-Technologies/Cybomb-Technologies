@@ -1,6 +1,7 @@
 const express = require("express");
 const multer = require("multer");
 const sendCareerMail = require("../utils/career-send");
+const CareerForm = require("../models/CareerForm");
 
 const router = express.Router();
 
@@ -17,6 +18,20 @@ router.post("/", upload.single("resume"), async (req, res) => {
       return res.status(400).json({ success: false, message: "All fields are required" });
     }
 
+    // 1️⃣ Save to MongoDB
+    const newCareer = new CareerForm({
+      name,
+      phone,
+      email,
+      jobTitle,
+      resumeFileName: req.file.originalname,
+      resumeData: req.file.buffer,
+    });
+
+    const savedCareer = await newCareer.save();
+    console.log("Saved career form:", savedCareer);
+
+    // 2️⃣ Send email
     const response = await sendCareerMail({
       name,
       phone,
