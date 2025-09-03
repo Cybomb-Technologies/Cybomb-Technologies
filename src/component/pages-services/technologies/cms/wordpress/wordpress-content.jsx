@@ -99,7 +99,7 @@ const wordpressDescription = [
     name: "Webflow",
     description:
       "Visual web design and CMS platform that allows building responsive websites without coding.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg",
+    icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/webflow-icon.png",
     iconColors: "linear-gradient(135deg, #c2e8fa, #d6f1fd)", // pastel soft blue
   },
   {
@@ -113,7 +113,7 @@ const wordpressDescription = [
     name: "Strapi",
     description:
       "Headless CMS built with Node.js that provides customizable APIs for managing content.",
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBTdkkL_3ixf0a9aGl4bynndpGTyjVpkooIt5AiA3TpJVyyuelvZN-lfoOgc-yv1QJRS0&usqp=CAU",
+    icon: "https://www.svgrepo.com/show/354399/strapi-icon.svg",
     iconColors: "linear-gradient(135deg, #e0d4fa, #f0e8ff)", // pastel soft purple
   },
   {

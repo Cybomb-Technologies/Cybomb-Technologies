@@ -25,7 +25,7 @@ const defaultSocialLinks = [
 
 const defaultLegalLinks = [
   { to: "/privacy-policy", label: "Privacy Policy" },
-  { to: "/terms", label: "Terms of Services" },
+  { to: "/terms", label: "Terms & Conditions" },
   { to: "/refund-policy", label: "Refund Policy" },
   { to: "/cookie-policy", label: "Cookie Policy" },
 ];
@@ -80,7 +80,7 @@ function Footer1({
 
   const quickLinks = [
     { to: "/", label: "Home" },
-    { to: "/aboutus", label: "About Us" },
+    { to: "/about-us", label: "About Us" },
     { to: "/services", label: "Services" },
     { to: "/portfolio", label: "Portfolio" },
     { to: "/career", label: "Career" },
@@ -178,7 +178,7 @@ function Footer1({
         {/* BOTTOM */}
         <div className={styles.footerBottom}>
           <div className={styles.copyrightSection}>
-            <p>© {new Date().getFullYear()} Cybomb Technologies LLP. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Cybomb Technologies LLP.<br/>All rights reserved.</p>
           </div>
 
           <div className={styles.certificateSection}>
