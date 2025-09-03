@@ -7,7 +7,7 @@ import Clouddropdown from "./cloud-dropdown";
 import Datadropdown from "./data-ai";
 import Securitydropdown from "./security-dropdown";
 import Industriesdropdown from "./Industries-dropdown";
-import Technologiesdropdown from "./technologies-dropdoen";
+import Technologiesdropdown from "./technologies-dropdown";
 import Successstoriesdropdown from "./success-stories";
 
 function Nav() {
