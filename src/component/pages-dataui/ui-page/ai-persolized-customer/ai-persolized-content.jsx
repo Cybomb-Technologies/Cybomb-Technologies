@@ -4,10 +4,11 @@ import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
-import OnlinePresence from "../../../common-ui/dataui/online-presence";
+// import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
 import contactUsImg from './../../../../assets/contact/contact-us-img1.jpg';
 import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img2.jpg';
+import AICustomerExperienceToolsSection from "./ai-persolized-tech-tool";
 
 const WhatWeOffers = [
   {
@@ -100,6 +101,10 @@ function AIPersonalizedCustomerExperienceContent() {
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
       
+        <AICustomerExperienceToolsSection/>
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+      
       <ScheduleConsultation
         heading="Transform Customer Journeys with AI Personalization"
         buttonText="Schedule a Consultation!"
@@ -108,15 +113,15 @@ function AIPersonalizedCustomerExperienceContent() {
         Icon={MdSchedule}
       />
 
-      <WhyChooseUs ChooseUs={whychooseus} />
+      
 
-      <OnlinePresence 
+      {/* <OnlinePresence 
         title="Let's Build Personalized Experiences for Your Customers."
         buttonText="CONTACT US"
         buttonLink="#"
         imageSrc={contactUsImg}
         imageAlt="Personalized AI Solutions"
-      />
+      /> */}
 
       <DevelopmentProcess 
         title="Use Cases"

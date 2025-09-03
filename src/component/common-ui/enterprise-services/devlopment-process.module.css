@@ -1,5 +1,5 @@
 .section {
-  background-color: #f3f4f6;
+  background-color: #ffffff;
   padding: 4rem 1rem;
 }
 
@@ -59,18 +59,34 @@
 }
 
 /* Individual card colors */
-.card1 { background-color: #1c85cb; }
-.card2 { background-color: #003459; }
-.card3 { background-color: #007ea7; }
-.card4 { background-color: #00171f; }
-.card5 { background-color: #1c85cb; }
-.card6 { background-color: #003459; }
-.card7 { background-color: #007ea7; }
-.card8 { background-color: #00171f; }
+.card1 {
+  background-color: #1c85cb;
+}
+.card2 {
+  background-color: #003459;
+}
+.card3 {
+  background-color: #007ea7;
+}
+.card4 {
+  background-color: #00171f;
+}
+.card5 {
+  background-color: #1c85cb;
+}
+.card6 {
+  background-color: #003459;
+}
+.card7 {
+  background-color: #007ea7;
+}
+.card8 {
+  background-color: #00171f;
+}
 
 /* Tablet (768px–1199px) */
 @media (max-width: 1199px) and (min-width: 768px) {
-  .section{
+  .section {
     padding: 1.5rem 2rem;
   }
 
@@ -96,7 +112,7 @@
 
 /* Mobile (<768px) */
 @media (max-width: 767px) {
-  .section{
+  .section {
     padding: 2rem 1rem;
   }
   .title {
@@ -105,7 +121,7 @@
     border-radius: 32px;
   }
 
-  .titleWrapper{
+  .titleWrapper {
     margin-bottom: 1rem;
   }
 

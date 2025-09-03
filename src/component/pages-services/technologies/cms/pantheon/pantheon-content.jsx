@@ -100,7 +100,7 @@ const pantheonDescription = [
     description:
       "Cloud platform providing Dev, Test, Live environments and Multidev for collaborative development and seamless deployments.",
     icon: "https://logos.bugcrowdusercontent.com/logos/ecb1/6de7/3b2e721d/ab643de84a27a76d7787801a19d9d554_Logo_BLK_Fist.png",
-    iconColors: "linear-gradient(135deg, #fff4c2, #ffe083)", // Pantheon yellow soft gradient
+    iconColors: "linear-gradient(135deg, #f3f0e1ff, #ffffffff)", // Pantheon yellow soft gradient
   },
   {
     name: "Drupal Core",
@@ -113,7 +113,7 @@ const pantheonDescription = [
     name: "WordPress Core",
     description:
       "Most popular CMS supported by Pantheon, enabling fast and flexible site creation and management.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
+    icon: "https://www.svgrepo.com/show/475696/wordpress-color.svg",
     iconColors: "linear-gradient(135deg, #d9ecf5, #b9daeb)", // WordPress light blue-gray
   },
   {
@@ -134,7 +134,7 @@ const pantheonDescription = [
     name: "Fastly (CDN with Varnish caching)",
     description:
       "Delivers content globally with integrated Varnish caching for speed, security, and scalability.",
-    icon: "https://www.svgrepo.com/show/331388/fastly.svg",
+    icon: "https://companieslogo.com/img/orig/FSLY-48251d1d.png?t=1742791628",
     iconColors: "linear-gradient(135deg, #ffd6d6, #ffb3b3)", // Soft Fastly red tone
   },
 ];

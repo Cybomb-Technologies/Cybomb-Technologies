@@ -4,10 +4,11 @@ import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
-import OnlinePresence from "../../../common-ui/dataui/online-presence";
+// import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
 import contactUsImg from './../../../../assets/contact/contact-us-img1.jpg';
-import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img2.jpg';
+// import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img2.jpg';
+import CustomAIDevelopmentToolsSection from "./custom-ai-tech-tool";
 
 const WhatWeOffers = [
   {
@@ -100,6 +101,9 @@ function CustomAIDevelopmentContent() {
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
       
+      <CustomAIDevelopmentToolsSection/>
+      <WhyChooseUs ChooseUs={whychooseus} />
+      
       <ScheduleConsultation
         heading="Turn Your AI Vision Into Reality"
         buttonText="Schedule a Consultation!"
@@ -108,15 +112,15 @@ function CustomAIDevelopmentContent() {
         Icon={MdSchedule}
       />
 
-      <WhyChooseUs ChooseUs={whychooseus} />
+      
 
-      <OnlinePresence 
+      {/* <OnlinePresence 
         title="Let’s Build Your Custom AI Solution Today."
         buttonText="CONTACT US"
         buttonLink="#"
         imageSrc={scheduleConsultImg}
         imageAlt="Custom AI Development Services"
-      />
+      /> */}
 
       <DevelopmentProcess 
         title="Use Cases"

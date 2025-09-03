@@ -4,7 +4,7 @@ const cors = require('cors');
 const path = require('path');
 const os = require('os');
 const connectDB = require("./config/db");
-const adminRoutes = require("./routes/adminRoutes");
+
  
 // Create Express app
 const app = express();
@@ -44,14 +44,15 @@ app.use(express.urlencoded({ extended: true }));
  
 
 
-
-
 // Import routes
 const sendMailRoutes = require("./routes/sendMailRoute");
 const popupMailRoute = require("./routes/popupMailRoute");
 const bannerMailRoute = require("./routes/bannerMail");
 const careerMailRoute = require("./routes/careerMailRoute");
 const footerMailRoute = require("./routes/footermail")
+const adminRoutes = require("./routes/adminRoutes");
+const adminRegisterRoute = require("./routes/adminRegister");
+
 // Health check route
 app.get('/api/health', (req, res) => {
   res.status(200).json({
@@ -69,7 +70,9 @@ app.use("/api/send-mail", sendMailRoutes);
 app.use("/api/popup-mail", popupMailRoute);
 app.use("/api/banner-mail", bannerMailRoute);
 app.use("/api/career", careerMailRoute);
-app.use("/api/footer-mail",footerMailRoute)
+app.use("/api/footer-mail",footerMailRoute);
+app.use("/admin", adminRegisterRoute);
+
  
 // Serve frontend in production
 if (process.env.NODE_ENV === 'production') {

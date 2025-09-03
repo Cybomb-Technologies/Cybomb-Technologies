@@ -106,19 +106,25 @@ function Contactcontent() {
             }
           ].map((item, index) => (
             <div className="col-md-4" key={index}>
-              <div className={`card h-100 border-0 ${styles.contactMethodCard}`}>
-                <div className="card-body text-center">
-                  <div className={styles.iconContainer}>
-                    <i className={`bi ${item.icon}`}></i>
-                  </div>
-                  <h5 className="mb-3">{item.title}</h5>
-                  <p className="text-muted mb-4">{item.content}</p>
-                  <a href={item.link} target={item.target} className="btn btn-primary px-4" style={{ backgroundColor: "#003459" }}>
-                    {item.btnText}
-                  </a>
-                </div>
-              </div>
-            </div>
+  <div className={`card h-100 border-0 ${styles.contactMethodCard}`}>
+    <div className="card-body d-flex flex-column text-center">
+      <div className={styles.iconContainer}>
+        <i className={`bi ${item.icon}`}></i>
+      </div>
+      <h5 className="mb-3">{item.title}</h5>
+      <p className="text-muted mb-4">{item.content}</p>
+      <a 
+        href={item.link} 
+        target={item.target} 
+        className="btn btn-primary px-4 mt-auto mx-auto" 
+        style={{ backgroundColor: "#003459" }}
+      >
+        {item.btnText}
+      </a>
+    </div>
+  </div>
+</div>
+
           ))}
         </div>
 

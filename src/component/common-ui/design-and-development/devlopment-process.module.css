@@ -1,5 +1,5 @@
 .section {
-  background-color: #f3f4f6;
+  background-color: #fff;
   padding: 4rem 1rem;
 }
 
@@ -19,7 +19,7 @@
   font-weight: 700;
   color: #fff;
   background-color: #00171f;
-  padding: 1.5rem 4.5rem;
+  padding: 1rem 3rem;
   border-radius: 64px;
   text-align: center;
   margin: 0;
@@ -116,7 +116,11 @@
 
 /* Mobile (≤768px) */
 @media (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem; /* reduce top/bottom from 4rem → 2rem */
+  }
   .titleWrapper {
+    margin-bottom: 1.5rem;
     justify-content: center;
   }
 
@@ -128,7 +132,7 @@
 
   .cardsWrapper {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .card {

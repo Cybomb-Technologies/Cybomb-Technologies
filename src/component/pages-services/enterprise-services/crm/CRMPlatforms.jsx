@@ -1,14 +1,38 @@
-import styles from '../../../common-ui/enterprise-services/crm-platforms.module.css';
+import styles from "../../../common-ui/enterprise-services/crm-platforms.module.css";
 
 const platforms = [
-  { name: 'Salesforce', logo: 'https://a.sfdcstatic.com/shared/images/c360-nav/salesforce-with-type-logo.svg' },
-  { name: 'HubSpot CRM', logo: 'https://cdn.prod.website-files.com/64f9b4455536d44a918695b3/65115c26cf6103bc7771d449_64b5254be3e1527059fedfc2_5842a629a6515b1e0ad75afa.png' },
-  { name: 'Zoho CRM', logo: 'https://www.zohowebstatic.com/sites/zweb/images/productlogos/crm.svg' },
-  { name: 'Microsoft Dynamics 365', logo: 'https://cdn.prod.website-files.com/64f9b4455536d44a918695b3/65115c67432e8b2ade1ae861_64b5252b4f82bcb1e0dfd34c_60bf400d26ecf589a2ac3b82_Dynamics-365-logo.png' },
-  { name: 'Pipedrive', logo: 'https://cdn.prod.website-files.com/64f9b4455536d44a918695b3/65115cac738d792054337f59_64b524f7a94b48cb24d326a4_Pipedrive_Logo_Green.png' },
-  { name: 'Freshworks CRM', logo: 'https://brandlogos.net/wp-content/uploads/2024/04/freshworks-logo_brandlogos.net_c6t5u.png' },
-  { name: 'SugarCRM', logo: 'https://www.sugarcrm.com/au/wp-content/themes/sugarcrm-child/dist/images/sugarcrm-logo-blk.svg' },
-  { name: 'Custom-built CRMs', logo: 'https://dhinatechnologies.com/wp-content/uploads/2024/08/Custom-CRM.webp' }, 
+  {
+    name: "Salesforce",
+    logo: "https://a.sfdcstatic.com/shared/images/c360-nav/salesforce-with-type-logo.svg",
+  },
+  {
+    name: "HubSpot CRM",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAztOg2GIEf1DQEyUwP6pPFWu0fbxryhP6-w&s",
+  },
+  {
+    name: "Zoho CRM",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR8BJlLUn5J6IluAyuuO7hK6yKTmyTARQ3OA&s",
+  },
+  {
+    name: "Microsoft Dynamics 365",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGqrE-RAidPznFrsOlTokHWxaXHl2Lo44DlQ&s",
+  },
+  {
+    name: "Pipedrive",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6cGUncukACK9cCNGNDTm1ihmaTmmebXhEgg&s",
+  },
+  {
+    name: "Freshworks CRM",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfre3qtddqt4WDekxmOUmxig9IvSr9oIkCHA&s",
+  },
+  {
+    name: "SugarCRM",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb-bE00qCoIqxuXQbvpp5X17tmIuJxdLcSfg&s",
+  },
+  {
+    name: "Custom-built CRMs",
+    logo: "https://dhinatechnologies.com/wp-content/uploads/2024/08/Custom-CRM.webp",
+  },
 ];
 
 function CRMPlatforms() {

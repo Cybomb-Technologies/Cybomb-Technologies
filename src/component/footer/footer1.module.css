@@ -261,19 +261,21 @@ ul {
 }
 
 .certificateItem {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.5rem 1rem;
-  background: rgb(0 52 89 / 70%);
-  border-radius: 6px;
-  transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    background: rgb(0 52 89 / 70%);
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
 }
  
 .certificateItem:hover {
   background: rgba(255, 255, 255, 0.1);
 }
-
 
 .certificateId {
   font-size: 0.9rem;
@@ -290,7 +292,7 @@ ul {
 .certificateText {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: start;
 }
  
 .certificateLabel {
@@ -823,6 +825,13 @@ ul {
     content: "Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street, Sripuram colony,\A St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India";
     white-space: pre;
     display: block;
+  }
+  
+  .certificateLabel{
+    text-align: start;
+  }
+  .certificateValue{
+    text-align: start;
   }
 }
  

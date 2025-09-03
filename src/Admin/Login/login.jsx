@@ -25,7 +25,7 @@ function Login() {
 
       if (res.ok) {
         localStorage.setItem("token", data.token);
-        navigate("/admin/dashboard");
+        navigate("/admin/home");
       } else {
         setError(data.msg || "Login failed");
       }
