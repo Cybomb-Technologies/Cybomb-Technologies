@@ -28,7 +28,7 @@ const techLogos = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   Laravel: "https://cdn.worldvectorlogo.com/logos/laravel-2.svg",
   "Ruby on Rails":
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqZvIj5aHaJS3S5LsmmY5E0Gw1YnZILStuTA&s",
 
   // Databases
   PostgreSQL:
@@ -58,9 +58,8 @@ const techLogos = {
   // Payments
   Stripe: "https://www.vectorlogo.zone/logos/stripe/stripe-ar21.svg",
   Razorpay:
-    "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/razorpay-icon.png",
-  PayPal:
-    "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/paypal-icon.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbSIn7tavtgQYDPKioA-ImEORtBr1kS1XULQ&s",
+  PayPal: "https://www.svgrepo.com/show/475665/paypal-color.svg",
   Chargebee:
     "https://cdn.brandfetch.io/idqx2Y_n5J/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
 
