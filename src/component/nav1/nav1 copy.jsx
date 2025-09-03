@@ -9,7 +9,7 @@ import Datadropdown1 from "./data-ai";
 import Industriesdropdown1 from "./Industries-dropdown";
 import Securitydropdown1 from "./security-dropdown";
 import Successstoriesdropdown1 from "./success-stories";
-import Technologiesdropdown1 from "./technologies-dropdoen";
+import Technologiesdropdown1 from "./technologies-dropdown";
 
 function Nav1() {
   const location = useLocation();

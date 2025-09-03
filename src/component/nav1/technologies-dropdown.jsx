@@ -102,7 +102,7 @@ function Technologiesdropdown1({
                 position: "absolute",
                 top: "100%",
                 left: "50%",
-                transform: "translateX(-80%)",
+                transform: "translateX(-75%)",
                 minWidth: "1250px",
                 maxWidth: "1300px",
                 width: `${Math.min(columnCount, 4) * 220}px`,
