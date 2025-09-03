@@ -1,17 +1,18 @@
 .section {
-  background-color: #007c91;
+  background-color: #007ea7;
   padding: 50px 20px;
   text-align: center;
 }
 
 .title {
-  background: #fff;
+  background: #000000;
   display: inline-block;
   padding: 12px 30px;
   border-radius: 40px;
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 40px;
+  color: #fff;
 }
 
 .cardsContainer {
@@ -31,9 +32,9 @@
   transition: transform 0.3s ease;
 }
 
-.card:hover {
+/* .card:hover {
   transform: translateY(-5px);
-}
+} */
 
 /* .cardTitle {
   font-weight: bold;
@@ -42,7 +43,7 @@
 } */
 
 .cardDesc {
-  color: #444;
+  color: #000000;
   font-size: 15px;
 }
 .cardTitle {
@@ -55,10 +56,11 @@
   border-bottom: 2px solid #878181; /* line under heading */
 }
 .cardHeader {
-  background-color: rgb(201, 196, 196);
+  background-color: #003459;
   text-align: center;
   font-weight: bold;
   border-radius: 10px 10px 0 0px;
+  color: #fff;
   
 }
 .cardContent {

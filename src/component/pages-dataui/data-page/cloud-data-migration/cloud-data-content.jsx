@@ -4,7 +4,7 @@ import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
 import { MdSchedule } from 'react-icons/md';
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
-import OnlinePresence from "../../../common-ui/dataui/online-presence";
+// import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
 import contactUsImg from './../../../../assets/contact/contact-us-img2.jpg';
 import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
@@ -99,7 +99,7 @@ function CloudDataMigrationContent() {
       />
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
-      
+      <WhyChooseUs ChooseUs={whychooseus} />      
       <ScheduleConsultation
         heading="Modernize Your Infrastructure with Cloud Data Migration"
         buttonText="Schedule a Consultation!"
@@ -108,15 +108,15 @@ function CloudDataMigrationContent() {
         Icon={MdSchedule}
       />
 
-      <WhyChooseUs ChooseUs={whychooseus} />
 
+{/* 
       <OnlinePresence 
         title="Let’s Plan Your Cloud Data Migration Strategy."
         buttonText="CONTACT US"
         buttonLink="#"
         imageSrc={contactUsImg}
         imageAlt="Cloud Data Migration Services"
-      />
+      /> */}
 
       <DevelopmentProcess 
         title="Use Cases"
