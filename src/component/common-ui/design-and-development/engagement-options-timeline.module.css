@@ -5,13 +5,14 @@
 }
 
 .title {
-  background: #fff;
+  background: #000000;
   display: inline-block;
   padding: 12px 30px;
   border-radius: 40px;
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 40px;
+  color: #fff;
 }
 
 .cardsContainer {
@@ -31,9 +32,9 @@
   transition: transform 0.3s ease;
 }
 
-.card:hover {
+/* .card:hover {
   transform: translateY(-5px);
-}
+} */
 
 /* .cardTitle {
   font-weight: bold;
@@ -42,7 +43,11 @@
 } */
 
 .cardDesc {
+<<<<<<< HEAD
   color: #000;
+=======
+  color: #000000;
+>>>>>>> 93af200e4507925de9d4f7501b2d5da7d3dc6895
   font-size: 15px;
 }
 .cardTitle {
@@ -59,6 +64,11 @@
   font-weight: bold;
   color: #fff;
   border-radius: 10px 10px 0 0px;
+<<<<<<< HEAD
+=======
+  color: #fff;
+  
+>>>>>>> 93af200e4507925de9d4f7501b2d5da7d3dc6895
 }
 .cardContent {
   padding: 0 20px;

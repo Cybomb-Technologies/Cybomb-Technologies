@@ -12,7 +12,7 @@ const techData = {
   "ML Platforms": ["TensorFlow", "PyTorch", "Vertex AI", "Azure ML"],
   Automation: ["Zapier", "Make", "LangChain", "AutoGPT", "Airflow"],
   "Vision/OCR": ["Google Vision API", "AWS Rekognition", "Tesseract"],
-  Voice: ["Whisper", "ElevenLabs", "Speechly", "Twilio"],
+  Voice: ["ElevenLabs", "Speechly", "Twilio"],
   Deployment: [
     "Docker",
     "FastAPI",
@@ -61,11 +61,9 @@ const techLogos = {
     "https://www.svgrepo.com/show/375395/cloud-vision-api.svg",
   "AWS Rekognition":
     "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/768px-Amazon_Web_Services_Logo.svg.png",
-  Tesseract: "https://logodix.com/logo/1752785.png",
+  Tesseract: "https://static.thenounproject.com/png/232016-200.png",
 
   // Voice
-  Whisper:
-    "https://wp.logos-download.com/wp-content/uploads/2024/03/Whisper_Logo-2775x3000.png",
   ElevenLabs:
     "https://cdn.brandfetch.io/idl_sWY35e/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B",
   Speechly: "https://dreamy-cori-a02de1.netlify.app/logo512.png",
