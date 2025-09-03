@@ -93,7 +93,7 @@ const sharepointDescription = [
     iconColors: "linear-gradient(135deg, #e0f7f4, #b2f0df)", // fresh teal
   },
   {
-    name: "SharePoint Framework (SPFx)",
+    name: "SharePoint Framework",
     description:
       "Modern development model for building custom SharePoint solutions using web technologies.",
     icon: "https://brandlogo.org/wp-content/uploads/2025/05/Microsoft-SharePoint-Icon-2019.png.webp",
