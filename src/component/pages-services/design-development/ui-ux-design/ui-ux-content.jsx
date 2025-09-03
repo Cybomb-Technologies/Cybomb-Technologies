@@ -40,28 +40,28 @@ const services = [
   },
 ];
 
-const process = [
-  {
-    title: 'Discovery & Research',
-    description: 'Interviews, user personas, journey mapping',
-  },
-  {
-    title: 'Wireframes & Ideation',
-    description: 'Blueprint the user journey and screens',
-  },
-  {
-    title: 'UI Visual Design',
-    description: 'Apply branding, layout, and interaction patterns',
-  },
-  {
-    title: 'Prototyping & Testing',
-    description: 'Get feedback early and iterate',
-  },
-  {
-    title: 'Handoff & Support',
-    description: 'Share dev-ready files, design systems, and future guidance',
-  },
-];
+// const process = [
+//   {
+//     title: 'Discovery & Research',
+//     description: 'Interviews, user personas, journey mapping',
+//   },
+//   {
+//     title: 'Wireframes & Ideation',
+//     description: 'Blueprint the user journey and screens',
+//   },
+//   {
+//     title: 'UI Visual Design',
+//     description: 'Apply branding, layout, and interaction patterns',
+//   },
+//   {
+//     title: 'Prototyping & Testing',
+//     description: 'Get feedback early and iterate',
+//   },
+//   {
+//     title: 'Handoff & Support',
+//     description: 'Share dev-ready files, design systems, and future guidance',
+//   },
+// ];
 
 const whychooseus = [
   {

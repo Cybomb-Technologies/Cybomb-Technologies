@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState,  useRef } from "react";
 import styles from "./techtools.module.css";
 
 const techItems = [
@@ -8,8 +8,8 @@ const techItems = [
   { name: "Lottie", logo: "https://cdn.worldvectorlogo.com/logos/lottiefiles.svg" },
   { name: "After Effects", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" },
   { name: "Framer", logo: "https://cdn.worldvectorlogo.com/logos/framer-1.svg" },
-  { name: "Maze", logo: "https://cdn.brandfetch.io/iddFGFHNcm/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B" },
-  { name: "UsabilityHub", logo: "https://cdn.prod.website-files.com/658002b040896ac0d98d8f10/65a90a9041071df14e532cc3_8.svg" },
+  { name: "Maze", logo: " https://cdn.brandfetch.io/iddFGFHNcm/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1671034548382"},
+  { name: "UsabilityHub", logo: "https://avatars.githubusercontent.com/u/16235092?s=200&v=4" },
   { name: "Storybook", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" }
 ];
 

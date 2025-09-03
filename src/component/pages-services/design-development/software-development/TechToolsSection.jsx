@@ -40,7 +40,7 @@ const techLogos = {
   Springboot:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
   ".Net":
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png",
+    "https://cdn.prod.website-files.com/6047a9e35e5dc54ac86ddd90/63064f1fedf422395124660e_e7d03466.png",
 
   // Databases
   MongoDB:
