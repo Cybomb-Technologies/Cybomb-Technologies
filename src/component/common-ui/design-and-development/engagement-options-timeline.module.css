@@ -43,11 +43,7 @@
 } */
 
 .cardDesc {
-<<<<<<< HEAD
-  color: #000;
-=======
   color: #000000;
->>>>>>> 93af200e4507925de9d4f7501b2d5da7d3dc6895
   font-size: 15px;
 }
 .cardTitle {
@@ -64,11 +60,7 @@
   font-weight: bold;
   color: #fff;
   border-radius: 10px 10px 0 0px;
-<<<<<<< HEAD
-=======
   color: #fff;
-  
->>>>>>> 93af200e4507925de9d4f7501b2d5da7d3dc6895
 }
 .cardContent {
   padding: 0 20px;
