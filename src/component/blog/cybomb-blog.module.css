@@ -21,7 +21,7 @@
 
 .blogGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
 }
 
@@ -47,7 +47,8 @@
 
 
 .blogCard:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .blogImage {
@@ -77,7 +78,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .blogContent {
@@ -120,15 +121,63 @@
   text-decoration: underline; /* Show underline on hover */
 }
 
+/* 📱 Responsive Styles for <1400px */
+@media (max-width: 1400px) {
+  .blogSection {
+    padding: 2rem 4rem; /* Reduce side padding */
+  }
+  
+  .blogGrid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Slightly smaller min width */
+    gap: 1.8rem;
+  }
+  
+  .blogImage {
+    height: 180px; /* Slightly reduce image height */
+  }
+}
+
+/* 📱 Tablet Styles */
+@media (max-width: 1024px) {
+  .blogSection {
+    padding: 2rem 3rem;
+  }
+  
+  .blogHeading {
+    font-size: 2.2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .blogGrid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 1.5rem;
+  }
+  
+  .blogImage {
+    height: 170px;
+  }
+  
+  .blogTitle {
+    font-size: 1.2rem;
+  }
+}
 
 /* 📱 Mobile Styles */
 @media (max-width: 768px) {
   .blogSection {
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
   }
 
+  .blogHeading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
   .sectionTitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
   }
 
@@ -142,7 +191,7 @@
   }
 
   .blogImage {
-    height: 160px; /* smaller images for mobile */
+    height: 160px;
   }
 
   .blogTitle {
@@ -159,15 +208,21 @@
   }
 
   .readMoreBtn {
-    padding: 0.5rem 1rem;
     font-size: 0.9rem;
-    border-radius: 6px;
   }
 }
 
 @media (max-width: 480px) {
+  .blogSection {
+    padding: 1.5rem 1rem;
+  }
+  
+  .blogHeading {
+    font-size: 1.8rem;
+  }
+  
   .sectionTitle {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .blogImage {
@@ -183,7 +238,9 @@
   }
 
   .readMoreBtn {
-    width: 100%; /* full width button for small screens */
-    text-align: center;
+    width: 100%;
+    text-align: end;
+    margin-right: 0;
+    padding-right: 1rem;
   }
 }

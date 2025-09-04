@@ -1,8 +1,11 @@
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/design-and-development/info-stats";
 import HiringModels from "../../../../common-ui/custom-development/hiring";
-import placeholderImage from './../../../../../assets/placeholder-image.webp';
+import placeholderImage from '/images/games/unreal-matters1.png';
 import WhatWeOffer from "./what-we-offer";
+import WhyChooseUs from "./why-choose-us";
+import TechToolsSection from "./TechToolsSection";
+import UseCases from "./use-case";
 
 function UnrealContent() {
 
@@ -68,7 +71,7 @@ function UnrealContent() {
         heading="Unreal Game Development Services"
         subtext="Deliver Next-Gen Gaming Experiences with Unreal Engine"
         buttonText="Book Free Consultation"
-        note="Unreal Engine is the industry standard for creating high-fidelity, immersive, and scalable games. From indie studios to AAA developers, Unreal empowers creators to push boundaries in graphics, gameplay, and interactivity. Our Unreal game development services help you bring your vision to life across platforms including PC, consoles, AR/VR, and mobile."
+        note="Unreal Engine powers high-fidelity, immersive, and scalable games for PC, consoles, mobile, and AR/VR. From indie to AAA, we help bring your vision to life with cutting-edge graphics and gameplay."
       />
       <InfoStats
         stats={[
@@ -85,6 +88,9 @@ function UnrealContent() {
         image={placeholderImage}
       />
       <WhatWeOffer title="What We Offer" items={offerItems} />
+      <WhyChooseUs/>
+      <TechToolsSection/>
+      <UseCases/>
     </section>
   );
 }

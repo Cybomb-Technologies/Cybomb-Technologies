@@ -10,7 +10,7 @@ const metaPropsData = {
     "Cybomb Technologies provides professional Unity game development services, creating immersive, high-performance, and cross-platform gaming experiences. From concept to deployment, we deliver engaging games tailored to your vision.",
   keyword:
     "Unity Game Development Services, Unity 3D Game Development, Cross-Platform Game Development, Mobile Game Development, Unity Game Design, AR VR Game Development, Unity Development India",
-  url: "https://www.cybomb.com/services/unity-game-development",
+  url: "https://www.cybomb.com/services/unity",
   image: "https://www.cybomb.com",
 };
 

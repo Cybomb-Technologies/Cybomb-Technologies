@@ -3,7 +3,8 @@ import CareerBanner from "./career-banner";
 import CareerContent from "./content";
 import JobDetailModal from "./job-detail-modal";
 import StillNotSure from './../common-ui/stillnotsure/StillNotSure';
-
+import HiringProcess from "./hiring-process";
+import Testimonials from "./testimonials"
 export default function CareerPage() {
   const [jobs] = useState([
     {
@@ -103,6 +104,8 @@ export default function CareerPage() {
         />
         
       )}
+      <HiringProcess/>
+      <Testimonials/>
       <StillNotSure/>
     </>
   );

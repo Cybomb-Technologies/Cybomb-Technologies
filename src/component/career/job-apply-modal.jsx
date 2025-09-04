@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FiUpload } from "react-icons/fi";
+import { FiUpload, FiCheckCircle } from "react-icons/fi";
 
 const API_URL = import.meta.env.VITE_API_BASE; 
 
@@ -99,101 +99,123 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
             <button type="button" className="btn-close" onClick={onClose}></button>
           </div>
           <div className="modal-body">
-            <form onSubmit={handleSubmit} className="row g-3">
-              <div className="col-12">
-                <label className="form-label">Full Name*</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className={`form-control ${errors.name ? "is-invalid" : ""}`}
-                />
-                {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+            {submitSuccess ? (
+              <div className="text-center py-4">
+                <FiCheckCircle className="text-success mb-3" style={{ fontSize: "3rem" }} />
+                <h4 className="text-success mb-2">Application Submitted!</h4>
+                <p className="text-muted">
+                  Thank you for applying to {job?.title || "the position"}. 
+                  We'll review your application and get back to you soon.
+                </p>
+                <div className="progress mt-4" style={{ height: "4px" }}>
+                  <div 
+                    className="progress-bar bg-success" 
+                    role="progressbar" 
+                    style={{ width: "100%", transition: "width 5s ease" }}
+                    aria-valuenow="100" 
+                    aria-valuemin="0" 
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <small className="text-muted">Closing automatically...</small>
               </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="row g-3">
+                <div className="col-12">
+                  <label className="form-label">Full Name*</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className={`form-control ${errors.name ? "is-invalid" : ""}`}
+                  />
+                  {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+                </div>
 
-              <div className="col-12">
-                <label className="form-label">Phone*</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="+91 9876543210"
-                  className={`form-control ${errors.phone ? "is-invalid" : ""}`}
-                />
-                {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
-              </div>
+                <div className="col-12">
+                  <label className="form-label">Phone*</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="+91 9876543210"
+                    className={`form-control ${errors.phone ? "is-invalid" : ""}`}
+                  />
+                  {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
+                </div>
 
-              <div className="col-12">
-                <label className="form-label">Email*</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className={`form-control ${errors.email ? "is-invalid" : ""}`}
-                />
-                {errors.email && <div className="invalid-feedback">{errors.email}</div>}
-              </div>
+                <div className="col-12">
+                  <label className="form-label">Email*</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={`form-control ${errors.email ? "is-invalid" : ""}`}
+                  />
+                  {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+                </div>
 
-              <div className="col-12">
-                <label className="form-label">Resume/CV*</label>
-                <div className={`border rounded p-3 ${errors.resume ? "border-danger" : ""}`}>
-                  {formData.resume ? (
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div>
-                        <FiUpload className="me-2" />
-                        {formData.resume.name}
-                        <small className="text-muted ms-2">
-                          {(formData.resume.size / 1024 / 1024).toFixed(2)} MB
-                        </small>
+                <div className="col-12">
+                  <label className="form-label">Resume/CV*</label>
+                  <div className={`border rounded p-3 ${errors.resume ? "border-danger" : ""}`}>
+                    {formData.resume ? (
+                      <div className="d-flex justify-content-between align-items-center">
+                        <div>
+                          <FiUpload className="me-2" />
+                          {formData.resume.name}
+                          <small className="text-muted ms-2">
+                            {(formData.resume.size / 1024 / 1024).toFixed(2)} MB
+                          </small>
+                        </div>
+                        <button
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary"
+                          onClick={() => setFormData((prev) => ({ ...prev, resume: null }))}
+                        >
+                          Change
+                        </button>
                       </div>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                        onClick={() => setFormData((prev) => ({ ...prev, resume: null }))}
-                      >
-                        Change
-                      </button>
-                    </div>
-                  ) : (
-                    <>
-                      <label className="btn btn-sm btn-outline-primary mb-0">
-                        <FiUpload className="me-1" /> Upload File
-                        <input
-                          type="file"
-                          accept=".pdf,.doc,.docx"
-                          className="d-none"
-                          onChange={handleFileChange}
-                        />
-                      </label>
-                      <small className="text-muted ms-2">
-                        PDF, DOC, DOCX (Max 5MB)
-                      </small>
-                    </>
+                    ) : (
+                      <>
+                        <label className="btn btn-sm btn-outline-primary mb-0">
+                          <FiUpload className="me-1" /> Upload File
+                          <input
+                            type="file"
+                            accept=".pdf,.doc,.docx"
+                            className="d-none"
+                            onChange={handleFileChange}
+                          />
+                        </label>
+                        <small className="text-muted ms-2">
+                          PDF, DOC, DOCX (Max 5MB)
+                        </small>
+                      </>
+                    )}
+                  </div>
+                  {errors.resume && (
+                    <div className="text-danger small mt-2">{errors.resume}</div>
                   )}
                 </div>
-                {errors.resume && (
-                  <div className="text-danger small mt-2">{errors.resume}</div>
-                )}
-              </div>
 
-              {errors.submit && <div className="alert alert-danger">{errors.submit}</div>}
+                {errors.submit && <div className="alert alert-danger">{errors.submit}</div>}
 
-              <div className="col-12 text-end">
-                <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
-                  {isSubmitting ? (
-                    <>
-                      <span className="spinner-border spinner-border-sm me-2"></span>
-                      Submitting...
-                    </>
-                  ) : (
-                    "Submit Application"
-                  )}
-                </button>
-              </div>
-            </form>
+                <div className="col-12 text-end">
+                  <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <span className="spinner-border spinner-border-sm me-2"></span>
+                        Submitting...
+                      </>
+                    ) : (
+                      "Submit Application"
+                    )}
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </div>

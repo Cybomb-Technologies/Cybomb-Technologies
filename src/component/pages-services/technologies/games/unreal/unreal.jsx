@@ -10,7 +10,7 @@ function UnrealGames() {
       "Cybomb Technologies offers professional Unreal Engine game development services, delivering AAA-quality graphics, immersive experiences, and cross-platform solutions. From concept to launch, we create high-performance games tailored to your vision.",
     keyword:
       "Unreal Game Development Services, Unreal Engine Game Development, AAA Game Development, Cross-Platform Game Development, PC Game Development, AR VR Unreal Games, Unreal Development India",
-    url: "https://www.cybomb.com/services/unreal-game-development",
+    url: "https://www.cybomb.com/services/unreal",
     image: "https://www.cybomb.com",
   };
 

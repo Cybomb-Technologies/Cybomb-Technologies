@@ -1,8 +1,11 @@
 import Banner from "../../../../common-ui/mobile-app/banner";
 import InfoStats from "../../../../common-ui/design-and-development/info-stats";
 import HiringModels from "../../../../common-ui/custom-development/hiring";
-import placeholderImage from './../../../../../assets/placeholder-image.webp';
+import placeholderImage from '/images/games/unity-matters2.png';
 import WhatWeOffer from "./what-we-offer";
+import WhyChooseUs from "./why-choose-us";
+import TechToolsSection from "./TechToolsSection";
+import UseCases from "./use-case";
 function UnityContent() {
 
 const hiringData = [
@@ -69,7 +72,7 @@ const offerItems = [
         heading="Unity Game Development Services"
         subtext="Build Engaging, Cross-Platform Games with the Power of Unity"
         buttonText="Book Free Consultation"
-        note="Unity is one of the most versatile and widely used game engines, trusted by indie developers and AAA studios alike. Our Unity game development services help you create interactive, scalable, and visually captivating games for mobile, PC, AR/VR, and consoles. With our expertise, you can turn your game idea into an immersive reality."
+        note="Unity powers versatile, scalable, and visually captivating games across mobile, PC, consoles, and AR/VR. From indie to AAA, we help bring your ideas to life with immersive gameplay."
     />
     <InfoStats
         stats={[
@@ -86,6 +89,9 @@ const offerItems = [
       image={placeholderImage}
     />
     <WhatWeOffer title="What We Offer" items={offerItems} />
+    <WhyChooseUs/>
+    <TechToolsSection/>
+    <UseCases/>
    </section>
   );
 }
