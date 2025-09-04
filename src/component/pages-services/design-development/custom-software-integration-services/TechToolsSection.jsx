@@ -43,7 +43,7 @@ const techLogos = {
     "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png",
   SAP: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
   HubSpot:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/HubSpot_Logo.svg/2560px-HubSpot_Logo.svg.png",
+    "https://i.pinimg.com/736x/90/83/b0/9083b0faecc8b67b257be30857dac6c1.jpg",
   Zoho: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/ZOHO_logo_2023.svg/768px-ZOHO_logo_2023.svg.png?20231106145651",
   QuickBooks: "https://cdn.worldvectorlogo.com/logos/quickbooks-2.svg",
   Shopify: "https://cdn.worldvectorlogo.com/logos/shopify.svg",
@@ -62,7 +62,7 @@ const techLogos = {
   // Middleware
   Zapier: "https://www.svgrepo.com/show/354596/zapier-icon.svg",
   "Make (Integromat)":
-    "https://cdn.brandfetch.io/idxzQ5rVNK/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtORa_gTHo3gSEmwlH8pWut4v7Udwnm-dQmw&s",
   "custom microservices":
     "https://png.pngtree.com/png-vector/20240606/ourmid/pngtree-black-and-white-icon-of-a-square-with-gears-on-it-vector-png-image_6990998.png",
 

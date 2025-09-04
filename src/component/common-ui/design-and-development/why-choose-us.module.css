@@ -1,5 +1,5 @@
 .section {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 4rem 1rem;
 }
 
@@ -71,9 +71,12 @@
 
 /* ✅ Mobile (≤768px) */
 @media (max-width: 768px) {
+  .section {
+    padding: 2.5rem 1rem 1.5rem 1rem;
+  }
   .heading {
     font-size: 2rem;
-    padding-bottom: 0rem;
+    margin-bottom: 1.5rem;
   }
 
   .row {

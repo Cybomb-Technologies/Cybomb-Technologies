@@ -1,42 +1,42 @@
-import React from 'react';
-import styles from '../../../common-ui/enterprise-services/crm-platforms.module.css';
+import React from "react";
+import styles from "../../../common-ui/enterprise-services/crm-platforms.module.css";
 
 const platforms = [
   {
-    name: 'Amazon Web Services (AWS)',
-    logo: 'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
+    name: "Amazon Web Services (AWS)",
+    logo: "https://cdn.worldvectorlogo.com/logos/aws-2.svg",
   },
   {
-    name: 'Microsoft Azure',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/2048px-Microsoft_Azure.svg.png',
+    name: "Microsoft Azure",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/2048px-Microsoft_Azure.svg.png",
   },
   {
-    name: 'Google Cloud Platform (GCP)',
-    logo: 'https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg',
+    name: "Google Cloud Platform (GCP)",
+    logo: "https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg",
   },
   {
-    name: 'DigitalOcean',
-    logo: 'https://assets.wheelhouse.com/media/_solution_logo_09222023_11957561.png',
+    name: "DigitalOcean",
+    logo: "https://assets.wheelhouse.com/media/_solution_logo_09222023_11957561.png",
   },
   {
-    name: 'Oracle Cloud',
-    logo: 'https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png',
+    name: "Oracle Cloud",
+    logo: "https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png",
   },
   {
-    name: 'Heroku',
-    logo: 'https://cdn.worldvectorlogo.com/logos/heroku-4.svg',
+    name: "Heroku",
+    logo: "https://cdn.worldvectorlogo.com/logos/heroku-4.svg",
   },
   {
-    name: 'Docker, Kubernetes, Helm',
-    logo: 'https://cdn.worldvectorlogo.com/logos/docker.svg',
+    name: "Docker, Kubernetes, Helm",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqea62MI9LsCBEPZ4WCRjBO7eKY08zYXacGg&s",
   },
   {
-    name: 'Terraform, Ansible',
-    logo: 'https://cdn.worldvectorlogo.com/logos/terraform-enterprise.svg',
+    name: "Terraform, Ansible",
+    logo: "https://cdn.worldvectorlogo.com/logos/terraform-enterprise.svg",
   },
   {
-    name: 'Cloudflare, Vercel, Netlify',
-    logo: 'https://cdn.worldvectorlogo.com/logos/cloudflare-1.svg',
+    name: "Cloudflare, Vercel, Netlify",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvaQqABKT1-8jjuiFfj1Wn1OqKUBIatY6ZHw&s",
   },
 ];
 

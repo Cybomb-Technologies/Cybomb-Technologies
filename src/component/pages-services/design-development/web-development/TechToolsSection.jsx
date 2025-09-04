@@ -30,12 +30,12 @@ const techLogos = {
   jQuery:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
   WordPress:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVhNUS5emquOnd63nSxHHhN3Ow_16X_rdokA&s",
   Webflow:
     "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/webflow-icon.png",
-  Ghost: "https://www.engineered-mind.com/content/images/2022/11/ghost.png",
+  Ghost: "https://docs.ghost.org/images/74e0ffae-ghost-logo-orb.png",
   Strapi:
-    "https://platform.sh/static/strapi-stack_black@2x-07109cdae9f760e8d97c89788c9dc9df.png",
+    "https://assets.super.so/e7c0f16c-8bd3-4c76-8075-4c86f986e1b2/uploads/favicon/9c68ae10-0a8a-4e3f-9084-3625b19df9cb.png",
   WooCommerce:
     "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/woocommerce-icon.png",
   Shopify: "https://cdn.shopify.com/static/images/logos/shopify-bag.png",
@@ -55,7 +55,7 @@ const techLogos = {
   Hostinger: "https://cdn.worldvectorlogo.com/logos/hostinger.svg",
   AWS: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/768px-Amazon_Web_Services_Logo.svg.png",
   GoDaddy:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/GoDaddy_logo.svg/1200px-GoDaddy_logo.svg.png?20250508095437",
+    "https://krausgroupmarketing.com/wp-content/uploads/2020/03/GoDaddy_newlogo.png",
   "GitHub Pages": "https://github.githubassets.com/favicons/favicon.svg",
   Figma:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
@@ -63,7 +63,7 @@ const techLogos = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg",
   Photoshop:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg",
-  Canva: "https://static.canva.com/static/images/favicon.ico",
+  Canva: "https://static.vecteezy.com/system/resources/previews/032/329/171/non_2x/canva-icon-logo-symbol-free-png.png",
 };
 
 const techUrls = {

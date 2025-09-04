@@ -41,7 +41,7 @@ const techLogos = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
 
   Photon:
-    "https://cdn.startbase.com/images/company/photon-engine/6c0db653d1/?webp=1&w=154",
+    "https://media.licdn.com/dms/image/v2/C4D0BAQGdkIvXUdQMEA/company-logo_200_200/company-logo_200_200/0/1672822694984/photon_interactive_logo?e=2147483647&v=beta&t=IiWanIdzLeUySi-SK9DThXkRoTUU1QI22W-GiYqADJY",
   Mirror: "https://avatars.githubusercontent.com/u/65781588?v=4",
   Firebase:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
