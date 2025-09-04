@@ -473,6 +473,8 @@
   flex-direction: column;
   gap: 0.5rem;
   width: 150px;
+  margin-right: 2rem;
+  
 }
 
 .dropdownItem1 {
