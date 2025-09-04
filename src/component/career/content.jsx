@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import CareerFilters from "./career-filters";
 import CareerCard from "./career-card";
-import Testimonials from "./testimonials";
 import styles from "./career-content.module.css";
-import Gallery from './gallery';
+
+
 
 const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
   const [search, setSearch] = useState("");
@@ -33,7 +33,7 @@ const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
   });
 
   return (
-    <div className={`container my-5 ${styles.careerSection}`} id="openings">
+    <div className={`container mb-0my-5 ${styles.careerSection}`} id="openings">
       {/* Filters */}
       <CareerFilters
         search={search}
@@ -45,36 +45,35 @@ const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
         clearFilters={clearFilters}
       />
 
-    
-<div className="mb-5">
-  <h3 className={`mb-4 mt-4 ${styles.sectionTitle}`}>Current Openings</h3>
-  {filteredJobs.length > 0 ? (
-    <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-      {filteredJobs.map((job) => (
-        <div key={job.id} className="col">
-          <CareerCard job={job} onView={onViewJob} onApply={onApplyJob} />
-        </div>
-      ))}
-    </div>
-  ) : (
-    <div className="text-center py-5">
-      <h4 className="text-muted mb-3">No jobs match your criteria</h4>
-      <button
-        className="btn btn-outline-primary"
-        onClick={clearFilters}
-      >
-        Clear Filters
-      </button>
-    </div>
-  )}
-</div>
+      <div className="mb-5">
+        <h3 className={`mb-4 mt-4 ${styles.sectionTitle}`}>Current Openings</h3>
+        {filteredJobs.length > 0 ? (
+          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {filteredJobs.map((job) => (
+              <div key={job.id} className="col">
+                <CareerCard job={job} onView={onViewJob} onApply={onApplyJob} />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-5">
+            <h4 className="text-muted mb-3">No jobs match your criteria</h4>
+            <button
+              className="btn btn-outline-primary"
+              onClick={clearFilters}
+            >
+              Clear Filters
+            </button>
+          </div>
+        )}
+      </div>
 
       {/* Why Join Us */}
-      <section className="my-5 py-4">
+      <section className="my-0 py-0">
         <h3 className={`mb-5 text-center ${styles.sectionTitle}`}>
           Why Join Our Team?
         </h3>
-        <div className="row g-4">
+        <div className="row g-2 g-md-4">
           {[
             {
               icon: "👥",
@@ -115,75 +114,18 @@ const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
           ].map((item, index) => (
             <div key={index} className="col-md-6 col-lg-4">
               <div className={`card h-100 p-4 ${styles.benefitCard}`}>
-                <div className="fs-1 mb-3">{item.icon}</div>
-                <h5 className="mb-3">{item.title}</h5>
-                <p className="text-muted mb-0">{item.description}</p>
+                <div className="d-flex align-items-center mb-0">
+                  <div className="fs-1 me-3">{item.icon}</div>
+                  <h5 className="mb-0">{item.title}</h5>
+                </div>
+                <p className="text-light mb-0">{item.description}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
-
-      {/* Hiring Process */}
-<section className="my-5 py-4">
-  <h3 className={`mb-5 text-center ${styles.sectionTitle}`}>
-    Our Hiring Process
-  </h3>
-  <div className={`${styles.processStack} container`}>
-    {[
-      {
-        step: 1,
-        title: "Application Review",
-        description:
-          "We carefully review each application against the role requirements.",
-      },
-      {
-        step: 2,
-        title: "Initial Screening",
-        description:
-          "A recruiter will reach out for a phone/video call to discuss your experience.",
-      },
-      {
-        step: 3,
-        title: "Technical Assessment",
-        description:
-          "For technical roles, we'll evaluate your skills through practical tests.",
-      },
-      {
-        step: 4,
-        title: "Team Interviews",
-        description:
-          "You'll meet with potential team members and managers for in-depth discussions.",
-      },
-      {
-        step: 5,
-        title: "Culture Fit",
-        description:
-          "We assess mutual fit to ensure you'll thrive in our environment.",
-      },
-      {
-        step: 6,
-        title: "Offer",
-        description:
-          "Successful candidates receive a competitive offer package.",
-      },
-    ].map((item) => (
-      <div key={item.step} className={`${styles.processStepStack}`}>
-        <div className={styles.stepCircle}>{item.step}</div>
-        <div className={styles.stepContent}>
-          <h5>{item.title}</h5>
-          <p className="text-muted mb-0">{item.description}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
-
-      {/* Testimonials */}
-       {/* <Testimonials /> */}
-
-      {/* <Gallery/> */}
     </div>
+    
   );
 };
 
