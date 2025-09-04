@@ -2,13 +2,8 @@ import React, { useState } from "react";
 import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const governanceSolutions = {
-  "Data Governance Platforms": [
-    "Collibra",
-    "Informatica Axon",
-    "Alation",
-    "Atlan",
-  ],
-  "Data Quality & Master Data Management": [
+  "Governance Platforms": ["Collibra", "Informatica Axon", "Alation", "Atlan"],
+  "Data Quality & MDM": [
     "Informatica Data Quality",
     "Talend Data Quality",
     "SAP Master Data Governance",
@@ -21,13 +16,13 @@ const governanceSolutions = {
     "Azure Purview",
     "Google Data Catalog",
   ],
-  "Data Lineage & Observability": [
+  "Lineage & Observability": [
     "Datafold",
     "OpenLineage",
     "Monte Carlo Data",
     "Bigeye",
   ],
-  "Privacy & Compliance Tools": [
+  "Privacy & Compliance": [
     "OneTrust",
     "BigID",
     "Immuta",

@@ -2,27 +2,22 @@ import React, { useState } from "react";
 import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const modelingDesignCategories = {
-  "Data Modeling Tools": [
+  "Data Modeling": [
     "ER/Studio",
     "ERwin Data Modeler",
-    "IBM InfoSphere Data Architect",
+    "IBM InfoSphere",
     "Oracle SQL Developer",
     "Toad Data Modeler",
   ],
-  "Business Process Modeling": [
-    "Bizagi",
-    "Signavio",
-    "Camunda",
-    "Visual Paradigm",
-  ],
-  "UML & Software Design Tools": [
+  "Process Modeling": ["Bizagi", "Signavio", "Camunda", "Visual Paradigm"],
+  "UML & Software Design": [
     "Enterprise Architect",
     "StarUML",
     "Astah",
     "Lucidchart",
     "Draw.io",
   ],
-  "Data Visualization & Dashboarding": [
+  "Data Visualization": [
     "Tableau",
     "Power BI",
     "Qlik Sense",
@@ -44,7 +39,7 @@ const modelingDesignLogos = {
     "https://erstudio.com/wp-content/uploads/2024/04/ERS-icon-1-1.png",
   "ERwin Data Modeler":
     "https://upload.wikimedia.org/wikipedia/commons/7/7f/Erwin_logo.png",
-  "IBM InfoSphere Data Architect":
+  "IBM InfoSphere":
     "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1280px-IBM_logo.svg.png",
   "Oracle SQL Developer":
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVNZuq-vA2sQZouioLgv7aW0e9IlulOHisLg&s",

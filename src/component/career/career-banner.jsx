@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./career-banner.module.css";
-import bannerImg from "/images/about-banner.png";
 import QuickApplyModal from "./job-apply-modal"; // import the modal
 
 const CareerBanner = () => {
@@ -11,7 +10,7 @@ const CareerBanner = () => {
       <section
         className={`${styles.banner} text-white text-center d-flex align-items-center`}
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${bannerImg})`,
+          background: "linear-gradient(135deg, #00171f, #003459)",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat"
@@ -20,7 +19,7 @@ const CareerBanner = () => {
         <div className={`${styles.overlay} container`}>
           <div className="row justify-content-center">
             <div className="col-lg-8">
-              <h1 className="display-4 fw-bold mb-4">Build Your Future With Us</h1>
+              <h1 className="display-4 fw-bold mb-3 mt-5">Build Your Future With Us</h1>
               <p className="lead mb-4 fs-4">
                 Join a team of innovators shaping the future of technology. We're looking for passionate individuals to help us solve complex challenges.
               </p>

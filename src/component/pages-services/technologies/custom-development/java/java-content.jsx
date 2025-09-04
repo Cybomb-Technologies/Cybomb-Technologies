@@ -52,7 +52,7 @@ const javaTechDescription = [
     name: "Java SE",
     description: "Java Standard Edition provides the core functionality of the Java language, including APIs for basic data structures, networking, and concurrency.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-    iconColors: "linear-gradient(135deg, #c0d5f5c6, #a8bef0be)"
+    iconColors: "linear-gradient(135deg, #c0d5f5e1, #cddbfaff)"
   },
   {
     name: "Spring Boot",
@@ -63,8 +63,8 @@ const javaTechDescription = [
 {
     name: "Hibernate",
     description: "An ORM (Object Relational Mapping) framework that simplifies database interactions by mapping Java objects to relational tables.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-original-wordmark.svg",
-    iconColors: "linear-gradient(135deg, #baaaf589, #655f475c)"
+    icon: "https://logo.svgcdn.com/l/hibernate.png",
+    iconColors: "linear-gradient(135deg, #eae4ffbd, #e2d8b05c)"
   },
   {
     name: "Struts",
@@ -75,13 +75,13 @@ const javaTechDescription = [
   {
     name: "Play",
     description: "A reactive web framework for Java and Scala, designed for building scalable and modern web applications.",
-    icon: "https://www.playframework.com/assets/images/logos/play_full_color.png",
+    icon: "https://avatars.githubusercontent.com/u/319107?v=4",
     iconColors: "linear-gradient(135deg, #ccfbf1, #99f6e4)"
   },
   {
     name: "Tomcat",
     description: "An open-source implementation of the Java Servlet, JSP, and WebSocket technologies, widely used as a lightweight application server.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original-wordmark.svg",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Apache_Tomcat_logo.svg/1200px-Apache_Tomcat_logo.svg.png",
     iconColors: "linear-gradient(135deg, #fef3c7, #fde68a)"
   }  
 ];

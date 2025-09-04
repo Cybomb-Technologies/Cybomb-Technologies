@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const qualityManagementCategories = {
-  "Quality Management Systems (QMS)": [
+  "Quality Management Systems": [
     "ISO 9001",
     "Six Sigma",
     "TQM",
     "Lean Manufacturing",
     "CMMI",
   ],
-  "Quality Management Software": [
+  Software: [
     "SAP Quality Management",
     "Oracle Quality Management",
     "MasterControl",
@@ -22,7 +22,7 @@ const qualityManagementCategories = {
     "Check Sheets",
     "Inspection Management Software",
   ],
-  "Continuous Improvement Frameworks": [
+  "Improvement Frameworks": [
     "Kaizen",
     "PDCA Cycle",
     "Benchmarking",

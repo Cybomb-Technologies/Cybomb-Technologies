@@ -2,35 +2,29 @@ import React, { useState } from "react";
 import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const storageSolutions = {
-  "Relational Databases": [
+  "Relational DB": [
     "MySQL",
     "PostgreSQL",
     "MariaDB",
     "Oracle Database",
     "Microsoft SQL Server",
   ],
-  "NoSQL Databases": ["MongoDB", "Cassandra", "CouchDB", "Redis", "DynamoDB"],
-  "Cloud Storage Services": [
+  "NoSQL DB": ["MongoDB", "Cassandra", "CouchDB", "Redis", "DynamoDB"],
+  "Cloud Storage": [
     "Amazon S3",
     "Google Cloud Storage",
     "Azure Blob Storage",
     "IBM Cloud Object Storage",
   ],
-  "Distributed File Systems": ["HDFS", "Ceph", "GlusterFS", "MinIO"],
-  "Data Warehousing Solutions": [
+  " File Systems": ["HDFS", "Ceph", "GlusterFS", "MinIO"],
+  "Data Warehousing": [
     "Snowflake",
     "Amazon Redshift",
     "Google BigQuery",
     "Azure Synapse Analytics",
     "Teradata",
   ],
-  "Backup & Archival Solutions": [
-    "Veeam",
-    "Commvault",
-    "Rubrik",
-    "Acronis",
-    "Backblaze",
-  ],
+  "Backup & Archival": ["Veeam", "Commvault", "Rubrik", "Acronis", "Backblaze"],
 };
 
 const storageLogos = {

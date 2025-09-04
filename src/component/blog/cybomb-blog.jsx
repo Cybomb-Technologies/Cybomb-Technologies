@@ -20,7 +20,7 @@ export const blogData = [
     description:
       "React has been around for years, yet it continues to dominate the frontend landscape. Its component-based structure, huge community, and ecosystem make it unmatched...",
     fullContent:
-      "React has been around for years, yet it continues to dominate the frontend landscape. Its component-based structure, huge community, and ecosystem make it unmatched. While other frameworks are gaining traction, React’s flexibility and wide adoption keep it as the top choice for developers and companies alike."
+      "React has been around for years, yet it continues to dominate the frontend landscape. Its component-based structure, huge community, and ecosystem make it unmatched. While other frameworks are gaining traction, React's flexibility and wide adoption keep it as the top choice for developers and companies alike."
   },
   {
     id: 3,
@@ -28,9 +28,9 @@ export const blogData = [
     date: "Aug 15, 2025",
     image: "/images/blog/modern-seo.jpg",
     description:
-      "SEO is not just about keywords anymore. With Google’s latest updates, content quality, page performance, and user experience matter more than ever...",
+      "SEO is not just about keywords anymore. With Google's latest updates, content quality, page performance, and user experience matter more than ever...",
     fullContent:
-      "SEO is not just about keywords anymore. With Google’s latest updates, content quality, page performance, and user experience matter more than ever. Businesses that embrace these practices will see sustainable growth in organic traffic. Structured data, Core Web Vitals, and voice search optimization are must-haves in modern SEO."
+      "SEO is not just about keywords anymore. With Google's latest updates, content quality, page performance, and user experience matter more than ever. Businesses that embrace these practices will see sustainable growth in organic traffic. Structured data, Core Web Vitals, and voice search optimization are must-haves in modern SEO."
   },
   {
     id: 4,
@@ -48,9 +48,9 @@ export const blogData = [
     date: "Aug 05, 2025",
     image: "/images/blog/no-code.png",
     description:
-      "No-code platforms are making it easier for businesses and entrepreneurs to build apps without coding knowledge. But will they replace developers? Let’s find out...",
+      "No-code platforms are making it easier for businesses and entrepreneurs to build apps without coding knowledge. But will they replace developers? Let's find out...",
     fullContent:
-      "No-code platforms are making it easier for businesses and entrepreneurs to build apps without coding knowledge. But will they replace developers? Let’s find out. No-code is great for MVPs and rapid prototyping, but complex systems will still need professional developers. The rise of no-code is changing the way businesses approach software development."
+      "No-code platforms are making it easier for businesses and entrepreneurs to build apps without coding knowledge. But will they replace developers? Let's find out. No-code is great for MVPs and rapid prototyping, but complex systems will still need professional developers. The rise of no-code is changing the way businesses approach software development."
   },
   {
     id: 6,
@@ -58,9 +58,9 @@ export const blogData = [
     date: "Aug 01, 2025",
     image: "/images/blog/cyber-security.png",
     description:
-      "With cyber threats on the rise, businesses need to adopt strong security practices. From encryption to zero-trust policies, here’s what you should know...",
+      "With cyber threats on the rise, businesses need to adopt strong security practices. From encryption to zero-trust policies, here's what you should know...",
     fullContent:
-      "With cyber threats on the rise, businesses need to adopt strong security practices. From encryption to zero-trust policies, here’s what you should know. Cybersecurity is no longer optional — it’s a must for businesses of all sizes. This article highlights key security measures every business should implement in 2025."
+      "With cyber threats on the rise, businesses need to adopt strong security practices. From encryption to zero-trust policies, here's what you should know. Cybersecurity is no longer optional — it's a must for businesses of all sizes. This article highlights key security measures every business should implement in 2025."
   },
   {
   id: 7,
@@ -118,15 +118,26 @@ export default function CybombBlog() {
   const navigate = useNavigate();
   const [showAll, setShowAll] = useState(false);
 
+  // Function to handle card click
+  const handleCardClick = (blogId) => {
+    navigate(`/blog/${blogId}`);
+  };
+
   // Show only first 3 blogs if collapsed, else show all
   const visibleBlogs = showAll ? blogData : blogData.slice(0, 3);
+  
   return (
     <div className={styles.blogSection}>
       {/* Dynamic Heading */}
       <h2 className={styles.blogHeading}>Cybomb Blogs</h2>
       <div className={styles.blogGrid}>
         {visibleBlogs.map((blog) => (
-          <div key={blog.id} className={styles.blogCard}>
+          <div 
+            key={blog.id} 
+            className={styles.blogCard}
+            onClick={() => handleCardClick(blog.id)}
+            style={{cursor: 'pointer'}}
+          >
             <img
               src={blog.image}
               alt={blog.title}
@@ -143,7 +154,10 @@ export default function CybombBlog() {
             </div>
             <button
               className={styles.readMoreBtn}
-              onClick={() => navigate(`/blog/${blog.id}`)}
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent card click event from firing
+                navigate(`/blog/${blog.id}`);
+              }}
             >
               Read More...
             </button>

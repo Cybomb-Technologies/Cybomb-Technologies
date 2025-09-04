@@ -1,11 +1,18 @@
 .section {
-  background-color: #003459;
-  padding: 2rem 1rem 2.5rem;
+  background-color: #ffffff;
+  padding: 3rem 1rem;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.card {
+  background-color: #003459;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -43,6 +50,12 @@
   cursor: pointer;
   font-weight: 500;
   text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0d6ba3;
 }
 
 .arrow {
@@ -66,10 +79,11 @@
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .container {
+  .card {
     flex-direction: column;
     text-align: center;
     gap: 0;
+    padding: 2rem;
   }
 
   .textContent {
@@ -86,7 +100,7 @@
   }
 
   .imageWrapper {
-    margin-top: 0rem;
+    margin-top: 2rem;
     display: none;
   }
   .image {
@@ -96,6 +110,14 @@
 
 /* Mobile */
 @media (max-width: 600px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
   .title {
     font-size: 1.6rem;
     margin-bottom: 2rem;
@@ -109,15 +131,13 @@
   .button {
     font-size: 1rem;
     padding: 0.6rem 1.2rem;
-    
   }
-
 
   .image {
     display: none;
   }
   .imageWrapper {
-    margin-top: 0rem;
+    margin-top: 1.5rem;
     display: none;
   }
 }

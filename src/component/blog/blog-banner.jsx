@@ -31,7 +31,7 @@ function Blogbanner() {
             solutions, and foresight to thrive in the evolving IT landscape.
           </p>
 
-          <a
+          {/* <a
             href="#blogs"
             className="btn btn-light mt-4 px-4 py-2 fw-semibold"
             style={{
@@ -50,7 +50,7 @@ function Blogbanner() {
             }}
           >
             Explore Blogs
-          </a>
+          </a> */}
         </div>
       </div>
 

@@ -102,10 +102,11 @@ function Technologiesdropdown1({
                 position: "absolute",
                 top: "100%",
                 left: "50%",
-                transform: "translateX(-75%)",
-                minWidth: "1250px",
-                maxWidth: "1300px",
+                transform: "translateX(-60%)",
+                minWidth: "1100px",
+                maxWidth: "1250px",
                 width: `${Math.min(columnCount, 4) * 220}px`,
+
               }
         }
       >
@@ -166,14 +167,14 @@ function Technologiesdropdown1({
                   {" "}
                   <FaJava className={styles.icon} /> Kotlin{" "}
                 </Link>
-                <Link
+                {/* <Link
                   to="/services/xamarin-app-development"
                   className={styles.dropdownItem1}
                   onClick={onLinkClick}
                 >
                   {" "}
                   <FaMicrosoft className={styles.icon} /> Xamarin{" "}
-                </Link>
+                </Link> */}
               </div>
  
               {/* Ecommerce */}
@@ -313,7 +314,7 @@ function Technologiesdropdown1({
                       onClick={onLinkClick}
                     >
                       {" "}
-                      <FaCode className={styles.icon} /> AEM Development{" "}
+                      <FaCode className={styles.icon} /> AEM{" "}
                     </Link>
                   </div>
                 </div>
@@ -326,40 +327,33 @@ function Technologiesdropdown1({
                 </div>
                 <div className={styles.subColumnWrapper}>
                   <div className={styles.subColumn}>
-                    <Link
-                      to="/services/html5-development-service"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaHtml5 className={styles.icon} /> HTML5
-                    </Link>
                      <Link
-                      to="/services/css"
+                      to="/services/php-development-service"
                       className={styles.dropdownItem1}
                       onClick={onLinkClick}
                     >
-                      <FaHtml5 className={styles.icon} /> CSS 3
+                      <FaPhp className={styles.icon} /> PHP
                     </Link>
                     <Link
-                      to="/services/javascript-development-service"
+                      to="/services/laravel-development-service"
                       className={styles.dropdownItem1}
                       onClick={onLinkClick}
                     >
-                      <FaJs className={styles.icon} /> JavaScript
+                      <FaLaravel className={styles.icon} /> Laravel
                     </Link>
+                    {/* <Link
+                      to="/services/ror-development-service"
+                      className={styles.dropdownItem1}
+                      onClick={onLinkClick}
+                    >
+                      <FaCode className={styles.icon} /> ROR
+                    </Link> */}
                     <Link
-                      to="/services/react-development-service"
+                      to="/services/power-platform-development-service"
                       className={styles.dropdownItem1}
                       onClick={onLinkClick}
                     >
-                      <FaCode className={styles.icon} /> React
-                    </Link>
-                     <Link
-                      to="/services/angular-development-service"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaAngular className={styles.icon} /> Angular
+                      <FaMicrosoft className={styles.icon} /> Power Platform
                     </Link>
                      <Link
                       to="/services/database-development-service"
@@ -368,6 +362,18 @@ function Technologiesdropdown1({
                     >
                       <FaCode className={styles.icon} /> Database
                     </Link>
+                     <Link
+                      to="/services/versioncontrol-development-service"
+                      className={styles.dropdownItem1}
+                      onClick={onLinkClick}
+                    >
+                      <FaCode className={styles.icon} /> Version Control
+                    </Link>
+
+
+
+
+                    
                   </div>
                  
                   <div className={styles.subColumn}>
@@ -409,62 +415,37 @@ function Technologiesdropdown1({
                     </Link>
                    
                    
-                     <Link
-                      to="/services/versioncontrol-development-service"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaCode className={styles.icon} /> Version Control
-                    </Link>
+                    
                    
                   </div>
                   <div className={styles.subColumn}>
-                    <Link
-                      to="/services/php-development-service"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaPhp className={styles.icon} /> PHP
-                    </Link>
-                    <Link
-                      to="/services/laravel-development-service"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaLaravel className={styles.icon} /> Laravel
-                    </Link>
-                    <Link
-                      to="/services/ror-development-service"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaCode className={styles.icon} /> ROR
-                    </Link>
-                    <Link
-                      to="/services/power-platform-development-service"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaMicrosoft className={styles.icon} /> Power Platform
-                    </Link>
+                    
                    
-                    <Link
-                      to="/services/zohocreator-development-service"
-                      className={styles.dropdownItem1}
-                      onClick={onLinkClick}
-                    >
-                      <FaCode className={styles.icon} /> Zoho Creator
-                    </Link>
+                   
                      
                   </div>
                 </div>
               </div>
  
               {/* Full Stack */}
-              {/* <div className={styles.techColumn}>
+              <div className={styles.techColumn}>
                 <div className={styles.dropdownHeader}><FaServer className={styles.icon} /> Full Stack </div>
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaServer className={styles.icon} /> Full Stack MERN</Link>
-              </div> */}
+                  <Link
+                          to="/services/react-development-service"
+                          className={styles.dropdownItem1}
+                          onClick={onLinkClick}
+                        >
+                          <FaCode className={styles.icon} /> React JS
+                        </Link>
+                  <Link
+                          to="/services/java-development-service"
+                          className={styles.dropdownItem1}
+                          onClick={onLinkClick}
+                        >
+                          <FaCode className={styles.icon} /> Java
+                        </Link>
+
+              </div>
  
               {/*  CRM */}
               {/* <div className={styles.techColumn}>
@@ -481,11 +462,54 @@ function Technologiesdropdown1({
               </div>
  
               {/* Cloud */}
-              {/* <div className={styles.techColumn}>
-                <div className={styles.dropdownHeader}><FaCloud className={styles.icon} /> Cloud</div>
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaAws className={styles.icon} /> AWS</Link>
-                <Link className={styles.dropdownItem1} onClick={onLinkClick}><FaAzure className={styles.icon} /> Azure</Link>
-              </div> */}
+              <div className={styles.techColumn}>
+                <div className={styles.dropdownHeader}><FaCloud className={styles.icon} /> Front-End</div>
+                 <div className={styles.subColumnWrapper}>
+                    <div className={styles.subColumn}>
+                      <Link
+                          to="/services/html5-development-service"
+                          className={styles.dropdownItem1}
+                          onClick={onLinkClick}
+                        >
+                        <FaHtml5 className={styles.icon} /> HTML5
+                      </Link>
+                      <Link
+                        to="/services/css"
+                        className={styles.dropdownItem1}
+                        onClick={onLinkClick}
+                        >
+                        <FaHtml5 className={styles.icon} /> CSS 3
+                      </Link>
+                    
+                    </div>
+                    <div className={styles.subColumn}>
+                        <Link
+                          to="/services/javascript-development-service"
+                          className={styles.dropdownItem1}
+                          onClick={onLinkClick}
+                        >
+                          <FaJs className={styles.icon} /> JavaScript
+                        </Link>
+                         <Link
+                            to="/services/angular-development-service"
+                            className={styles.dropdownItem1}
+                            onClick={onLinkClick}
+                          >
+                          <FaAngular className={styles.icon} /> Angular
+                          </Link>
+                    </div>
+                      <div className={styles.subColumn}>
+                         
+                          <Link
+                          to="/services/zohocreator-development-service"
+                          className={styles.dropdownItem1}
+                          onClick={onLinkClick}
+                          >
+                          <FaCode className={styles.icon} /> Zoho Creator
+                          </Link>
+                      </div>
+                </div>
+              </div>
  
               {/* Other*/}
               {/* <div className={styles.techColumn}>

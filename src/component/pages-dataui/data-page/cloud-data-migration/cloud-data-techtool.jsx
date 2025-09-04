@@ -2,34 +2,34 @@ import React, { useState } from "react";
 import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const cloudDataMigrationCategories = {
-  "Cloud Migration Platforms": [
+  "Cloud Migration": [
     "AWS Migration Hub",
     "Azure Migrate",
     "Google Cloud Migrate",
     "VMware HCX",
     "Carbonite Migrate",
   ],
-  "Database Migration Tools": [
+  "Database Migration": [
     "AWS DMS",
     "Azure DMS",
     "Google DMS",
     "Oracle GoldenGate",
     "IBM InfoSphere Data Replication",
   ],
-  "ETL & Data Integration Tools": [
+  "ETL & Data Integration": [
     "Talend",
     "Informatica Cloud Data Integration",
     "Apache NiFi",
     "Fivetran",
     "Stitch",
   ],
-  "Storage & File Migration Tools": [
+  "Storage & File Migration": [
     "AWS DataSync",
     "Azure Storage Migration",
     "Google Transfer Appliance",
     "Rsync",
   ],
-  "Monitoring & Optimization Tools": [
+  "Monitoring & Optimization": [
     "CloudHealth by VMware",
     "Turbonomic",
     "Dynatrace",

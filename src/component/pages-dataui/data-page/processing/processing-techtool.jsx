@@ -2,27 +2,27 @@ import React, { useState } from "react";
 import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const processingCategories = {
-  "Data Processing Frameworks": [
+  "Processing Frameworks": [
     "Apache Spark",
     "Apache Flink",
     "Hadoop MapReduce",
     "Beam",
   ],
-  "Data Streaming Platforms": [
+  "Streaming Platforms": [
     "Apache Kafka",
     "Amazon Kinesis",
     "Apache Pulsar",
     "Google Pub/Sub",
   ],
-  "ETL & Data Integration Tools": [
+  "ETL & Integration": [
     "Apache NiFi",
     "Talend",
     "Informatica",
     "Airbyte",
     "dbt",
   ],
-  "Workflow Orchestration": ["Apache Airflow", "Luigi", "Prefect", "Dagster"],
-  "Batch Processing Tools": ["Apache Hive", "Pig", "Presto", "Trino"],
+  Orchestration: ["Apache Airflow", "Luigi", "Prefect", "Dagster"],
+  "Batch Tools": ["Apache Hive", "Pig", "Presto", "Trino"],
   "Real-Time Analytics": ["Druid", "ClickHouse", "Rockset", "Materialize"],
 };
 

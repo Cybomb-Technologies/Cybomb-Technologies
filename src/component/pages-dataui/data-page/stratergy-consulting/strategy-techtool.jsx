@@ -2,42 +2,22 @@ import React, { useState } from "react";
 import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const strategyConsultingCategories = {
-  "Business Intelligence Platforms": [
-    "Tableau",
-    "Power BI",
-    "Qlik Sense",
-    "Looker",
-  ],
-  "Data Analytics & Visualization": [
+  "BI Platforms": ["Tableau", "Power BI", "Qlik Sense", "Looker"],
+  "Analytics & Visualization": [
     "Alteryx",
     "SAS",
     "KNIME",
     "Google Data Studio",
   ],
-  "Market & Competitive Intelligence": [
-    "Crunchbase",
-    "CB Insights",
-    "PitchBook",
-    "Statista",
-  ],
-  "Financial & Strategic Modeling": [
+  "Market Intelligence": ["Crunchbase", "CB Insights", "PitchBook", "Statista"],
+  "Financial Modeling": [
     "Microsoft Excel",
     "Quantrix",
     "Oracle Hyperion",
     "Anaplan",
   ],
-  "Collaboration & Knowledge Management": [
-    "Miro",
-    "Notion",
-    "Confluence",
-    "SharePoint",
-  ],
-  "Survey & Research Tools": [
-    "Qualtrics",
-    "SurveyMonkey",
-    "Typeform",
-    "Dovetail",
-  ],
+  "Collaboration Tools": ["Miro", "Notion", "Confluence", "SharePoint"],
+  "Survey Tools": ["Qualtrics", "SurveyMonkey", "Typeform", "Dovetail"],
 };
 
 const strategyConsultingLogos = {
