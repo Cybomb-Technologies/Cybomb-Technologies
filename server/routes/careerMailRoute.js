@@ -51,4 +51,20 @@ router.post("/", upload.single("resume"), async (req, res) => {
   }
 });
 
+// GET /api/career
+router.get("/", async (req, res) => {
+  try {
+    // Fetch all career submissions, latest first
+    const careers = await CareerForm.find()
+      .sort({ createdAt: -1 })
+      .select("-resumeFileName -resumeData"); // exclude these two fields
+
+    res.status(200).json(careers); // send all other fields
+  } catch (error) {
+    console.error("Error fetching career forms:", error);
+    res.status(500).json({ success: false, message: "Server error" });
+  }
+});
+
+
 module.exports = router;

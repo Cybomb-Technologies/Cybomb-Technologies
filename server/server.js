@@ -15,6 +15,7 @@ const allowedOrigins = [
   'http://localhost:5173',
   'https://cybomb.com',
   'https://www.cybomb.com',
+   'https://api.cybomb.com', 
   'http://147.93.111.96:5000'
 ];
  
