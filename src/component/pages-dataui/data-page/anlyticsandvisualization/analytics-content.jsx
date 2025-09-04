@@ -2,12 +2,13 @@ import Banner from "../../../common-ui/dataui/banner";
 import InfoStats from "../../../common-ui/dataui/info-stats";
 import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
-import { MdSchedule } from 'react-icons/md';
+import { MdSchedule } from "react-icons/md";
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
 // import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
-import contactUsImg from './../../../../assets/contact/contact-us-img2.jpg';
-import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
+import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
+import AnalyticsToolsSection from "./analytics-techtool";
 
 const WhatWeOffers = [
   {
@@ -75,13 +76,13 @@ const useCases = [
   "Building predictive sales analytics for revenue forecasting",
   "Creating interactive customer segmentation visualizations",
   "Embedding analytics into SaaS platforms for client use",
-  "Visualizing supply chain performance to identify bottlenecks"
+  "Visualizing supply chain performance to identify bottlenecks",
 ];
 
 function AnalyticsVisualizationContent() {
   return (
     <section>
-      <Banner 
+      <Banner
         heading="Analytics & Visualization"
         subtext="Turn data into decisions with clear, actionable insights."
         buttonText="Start Your Analytics Journey"
@@ -90,16 +91,20 @@ function AnalyticsVisualizationContent() {
 
       <InfoStats
         stats={[
-          { number: "70%", label: "Of leaders rely on dashboards for decisions" },
+          {
+            number: "70%",
+            label: "Of leaders rely on dashboards for decisions",
+          },
           { number: "5×", label: "Faster reporting with automation" },
-          { number: "80%", label: "Higher engagement with visual insights" }
+          { number: "80%", label: "Higher engagement with visual insights" },
         ]}
         caption="Trusted by Enterprises and"
         highlight="High-Growth Startups"
       />
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
-       <WhyChooseUs ChooseUs={whychooseus} />
+      <AnalyticsToolsSection />
+      <WhyChooseUs ChooseUs={whychooseus} />
       <ScheduleConsultation
         heading="Make Smarter Decisions with Analytics & Visualization"
         buttonText="Schedule a Consultation!"
@@ -107,8 +112,6 @@ function AnalyticsVisualizationContent() {
         imageAlt="Analytics Consultation"
         Icon={MdSchedule}
       />
-
-     
 
       {/* <OnlinePresence 
         title="Let’s Build Your Custom Analytics & Visualization Solution."
@@ -118,10 +121,7 @@ function AnalyticsVisualizationContent() {
         imageAlt="Analytics & Visualization Services"
       /> */}
 
-      <DevelopmentProcess 
-        title="Use Cases"
-        Process={useCases}
-      />
+      <DevelopmentProcess title="Use Cases" Process={useCases} />
     </section>
   );
 }

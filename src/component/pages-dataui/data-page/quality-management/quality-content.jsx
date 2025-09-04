@@ -2,13 +2,13 @@ import Banner from "../../../common-ui/dataui/banner";
 import InfoStats from "../../../common-ui/dataui/info-stats";
 import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
-import { MdSchedule } from 'react-icons/md';
+import { MdSchedule } from "react-icons/md";
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
 // import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
-import contactUsImg from './../../../../assets/contact/contact-us-img2.jpg';
-import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
-
+import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
+import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
+import QualityToolsSection from "./quality-techtool";
 const WhatWeOffers = [
   {
     title: "Data Profiling & Assessment",
@@ -75,13 +75,13 @@ const useCases = [
   "Standardizing product data for multi-channel e-commerce",
   "Implementing automated quality checks in data pipelines",
   "Reducing duplicate records in enterprise CRM systems",
-  "Ensuring regulatory compliance with accurate financial data"
+  "Ensuring regulatory compliance with accurate financial data",
 ];
 
 function QualityManagementContent() {
   return (
     <section>
-      <Banner 
+      <Banner
         heading="Quality Management"
         subtext="Ensure your business decisions are powered by clean, accurate, and reliable data."
         buttonText="Book Free Consultation"
@@ -90,17 +90,24 @@ function QualityManagementContent() {
 
       <InfoStats
         stats={[
-          { number: "95%", label: "Improvement in data accuracy after cleanup" },
-          { number: "60%", label: "Less duplication with master data management" },
-          { number: "Compliance-ready", label: "Datasets across industries" }
+          {
+            number: "95%",
+            label: "Improvement in data accuracy after cleanup",
+          },
+          {
+            number: "60%",
+            label: "Less duplication with master data management",
+          },
+          { number: "Compliance-ready", label: "Datasets across industries" },
         ]}
         caption="Helping Businesses Achieve"
         highlight="Data Excellence Worldwide"
       />
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
+      <QualityToolsSection />
       <WhyChooseUs ChooseUs={whychooseus} />
-      
+
       <ScheduleConsultation
         heading="Transform Your Data into a Trusted Business Asset"
         buttonText="Schedule a Consultation!"
@@ -108,8 +115,6 @@ function QualityManagementContent() {
         imageAlt="Data Quality Consultation"
         Icon={MdSchedule}
       />
-
-
 
       {/* <OnlinePresence 
         title="Let’s Build a Data Quality Strategy That Works for You."
@@ -119,10 +124,7 @@ function QualityManagementContent() {
         imageAlt="Data Quality Services"
       /> */}
 
-      <DevelopmentProcess 
-        title="Use Cases"
-        Process={useCases}
-      />
+      <DevelopmentProcess title="Use Cases" Process={useCases} />
     </section>
   );
 }

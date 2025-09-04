@@ -2,13 +2,13 @@ import Banner from "../../../common-ui/dataui/banner";
 import InfoStats from "../../../common-ui/dataui/info-stats";
 import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
-import { MdSchedule } from 'react-icons/md';
+import { MdSchedule } from "react-icons/md";
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
 // import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
-import contactUsImg from './../../../../assets/contact/contact-us-img2.jpg';
-import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
-
+import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
+import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
+import StrategyToolsSection from "./strategy-techtool";
 const WhatWeOffers = [
   {
     title: "Digital Transformation Planning",
@@ -75,39 +75,44 @@ const useCases = [
   "Designing a scalable product roadmap before launch",
   "Revamping internal processes for better productivity",
   "Creating a 2-year digital transformation roadmap",
-  "Evaluating whether to build or buy a software platform"
+  "Evaluating whether to build or buy a software platform",
 ];
 
-function Stratergycontent(){
-    return(
+function Stratergycontent() {
+  return (
     <section>
-    <Banner 
+      <Banner
         heading="Strategy Consultancy"
         subtext="Empower smarter decision. Build a future-proof roadmap."
         buttonText="Book Free Consultation"
         note="Our stratergy consultancy services help businesses align their technology, operations, and growth initiatives with a clear, actionable plan - tailored for today's fast-changing digital world. Whether you're scaling a startup or optimizing an enterprises, we offer strategic insights and hands-on expertise to guide your next move."
-    />
-    <InfoStats
+      />
+      <InfoStats
         stats={[
-          { number: "90%", label: "Of enterprises investing in digital transformation" },
+          {
+            number: "90%",
+            label: "Of enterprises investing in digital transformation",
+          },
           { number: "Mobile-first", label: "Adoption now the new standard" },
-          { number: "50%", label: "Efficiency boost with AI-led analytics" }
+          { number: "50%", label: "Efficiency boost with AI-led analytics" },
         ]}
         caption="Partnered with Startups and"
         highlight="Fortune 500 Companies"
-    />
-    <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
+      />
+      <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
 
-    <WhyChooseUs ChooseUs={whychooseus}/>
-    
-    <ScheduleConsultation
-      heading="Stay Ahead Of The Competition With Our Strategy Consultancy Services"
-      buttonText="Schedule a Consultation!"
-      imageSrc={scheduleConsultImg}
-      imageAlt="CRM Consultation"
-      Icon={MdSchedule}
-    />
-     
+      <StrategyToolsSection />
+
+      <WhyChooseUs ChooseUs={whychooseus} />
+
+      <ScheduleConsultation
+        heading="Stay Ahead Of The Competition With Our Strategy Consultancy Services"
+        buttonText="Schedule a Consultation!"
+        imageSrc={scheduleConsultImg}
+        imageAlt="CRM Consultation"
+        Icon={MdSchedule}
+      />
+
       {/* <OnlinePresence 
                title = "Let's Find the Strategy Consultancy Services right for your business."
                buttonText = "CONTACT US"
@@ -115,13 +120,8 @@ function Stratergycontent(){
                imageSrc = {contactUsImg}
                imageAlt = "CRM services"
            /> */}
-    <DevelopmentProcess 
-            title="Use Case"
-            Process={useCases}
-            />
-
-
-</section>
-    );
-    } 
+      <DevelopmentProcess title="Use Case" Process={useCases} />
+    </section>
+  );
+}
 export default Stratergycontent;
