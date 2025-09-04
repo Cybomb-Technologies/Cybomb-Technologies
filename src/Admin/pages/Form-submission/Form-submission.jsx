@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+const API_URL = import.meta.env.VITE_API_BASE; 
 function FormSubmission() {
   const [activeTab, setActiveTab] = useState("all");
   const [bannerData, setBannerData] = useState([]);
@@ -11,9 +11,9 @@ function FormSubmission() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const bannerRes = await fetch("http://localhost:5000/api/banner-mail");
-        const popupRes = await fetch("http://localhost:5000/api/popup-mail");
-        const homeRes = await fetch("http://localhost:5000/api/send-mail");
+        const bannerRes = await fetch(`${API_URL}/api/banner-mail`);
+        const popupRes = await fetch(`${API_URL}/api/popup-mail`);
+        const homeRes = await fetch(`${API_URL}/api/send-mail`);
 
         const bannerJson = await bannerRes.json();
         const popupJson = await popupRes.json();
