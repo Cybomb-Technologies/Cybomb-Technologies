@@ -16,6 +16,7 @@
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: bold;
+  padding: 1rem;
 }
 
 .subtext {
@@ -36,13 +37,12 @@
   font-weight: 600;
   border: none;
   border-radius: 2rem;
-  cursor: pointer;
+    width: 20%;
+  margin: auto;
   transition: background-color 0.3s ease;
 }
 
-.button:hover {
-  background-color: #003459;
-}
+
 
 .note{
   font-size: 1rem;

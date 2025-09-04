@@ -3,11 +3,50 @@ import CareerBanner from "./career-banner";
 import CareerContent from "./content";
 import JobDetailModal from "./job-detail-modal";
 import StillNotSure from './../common-ui/stillnotsure/StillNotSure';
+import HiringProcess from "./hiring-process";
+import Testimonials from "./testimonials"
 
 export default function CareerPage() {
   const [jobs] = useState([
+
     {
-      id: "ui-ux-1",
+      id: "fullstack-1",
+      title: "Fullstack Developer",
+      type: "Full-time",
+      location: "Remote / Hybrid",
+      experience: "3–5 years",
+      department: "Engineering",
+      short: "Work across the stack to design, build, and scale modern web applications with robust backend and dynamic frontend.",
+      isNew: true,
+      skills: ["React", "Node.js", "Express", "MongoDB", "REST/GraphQL", "TypeScript"],
+      responsibilities: [
+        "Develop and maintain scalable fullstack applications",
+        "Design RESTful and GraphQL APIs",
+        "Build reusable frontend components and backend services",
+        "Ensure application security and data protection",
+        "Collaborate with designers, frontend, and DevOps teams"
+      ]
+    },
+    {
+      id: "mobile-dev-2",
+      title: "Mobile App Developer",
+      type: "Full-time",
+      location: "Remote / Chennai",
+      experience: "2–4 years",
+      department: "Engineering",
+      short: "Develop high-quality mobile applications for iOS and Android using React Native or Flutter.",
+      isNew: false,
+      skills: ["React Native", "Flutter", "iOS/Android SDKs", "APIs", "Firebase"],
+      responsibilities: [
+        "Design and build advanced mobile applications",
+        "Integrate third-party APIs and services",
+        "Ensure mobile applications are optimized for performance and usability",
+        "Collaborate with backend developers for data integration",
+        "Write unit tests and ensure code quality"
+      ]
+    },
+    {
+      id: "ui-ux-3",
       title: "Senior UI/UX Designer",
       type: "Full-time",
       location: "Remote / Chennai",
@@ -25,7 +64,7 @@ export default function CareerPage() {
       ]
     },
     {
-      id: "react-dev-2",
+      id: "react-dev-4",
       title: "React Developer",
       type: "Full-time",
       location: "Remote / Hybrid",
@@ -43,7 +82,7 @@ export default function CareerPage() {
       ]
     },
     {
-      id: "devops-3",
+      id: "devops-5",
       title: "DevOps Engineer",
       type: "Full-time",
       location: "Remote",
@@ -59,8 +98,9 @@ export default function CareerPage() {
         "Implement security best practices",
         "Collaborate with development teams on deployment strategies"
       ]
-    }
-  ]);
+    },
+  ]
+);
 
   const [selectedJob, setSelectedJob] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -103,6 +143,8 @@ export default function CareerPage() {
         />
         
       )}
+      <HiringProcess/>
+      <Testimonials/>
       <StillNotSure/>
     </>
   );

@@ -11,21 +11,21 @@ function OnlinePresence({
   return (
     <section className={styles.section}>
       <div className={styles.container}>
+        <div className={styles.card}>
+          <div className={styles.textContent}>
+            <h2 className={styles.title}>{title}</h2>
+            <p className={styles.description}>{description}</p>
+            
+            <Link to="/contact-us" className={styles.button}>
+              {buttonText}
+              <span className={styles.arrow}>&rarr;</span>
+            </Link>
+          </div>
 
-        <div className={styles.textContent}>
-          <h2 className={styles.title}>{title}</h2>
-          <p className={styles.description}>{description}</p>
-          
-          <Link to="/contact-us" className={styles.button}>
-            {buttonText}
-            <span className={styles.arrow}>&rarr;</span>
-          </Link>
+          <div className={styles.imageWrapper}>
+            <img src={imageSrc} alt={imageAlt} className={styles.image} />
+          </div>
         </div>
-
-        <div className={styles.imageWrapper}>
-          <img src={imageSrc} alt={imageAlt} className={styles.image} />
-        </div>
-
       </div>
     </section>
   );

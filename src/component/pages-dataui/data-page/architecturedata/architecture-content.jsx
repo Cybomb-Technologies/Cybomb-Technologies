@@ -2,13 +2,13 @@ import Banner from "../../../common-ui/dataui/banner";
 import InfoStats from "../../../common-ui/dataui/info-stats";
 import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
-import { MdSchedule } from 'react-icons/md';
+import { MdSchedule } from "react-icons/md";
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
 // import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
-import contactUsImg from './../../../../assets/contact/contact-us-img2.jpg';
-import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
-
+import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
+import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
+import ArchitectureToolsSection from "./architecture-techtool";
 const WhatWeOffers = [
   {
     title: "Enterprise Data Architecture",
@@ -55,8 +55,7 @@ const whychooseus = [
   },
   {
     title: "Performance-Driven",
-    description:
-      "Optimized for speed, scalability, and minimal latency.",
+    description: "Optimized for speed, scalability, and minimal latency.",
   },
   {
     title: "Business Alignment",
@@ -75,13 +74,13 @@ const useCases = [
   "Implementing a hybrid architecture for regulated industries",
   "Building a real-time streaming data platform",
   "Migrating legacy systems to a modern, scalable architecture",
-  "Unifying multi-cloud environments into a cohesive architecture"
+  "Unifying multi-cloud environments into a cohesive architecture",
 ];
 
 function ArchitectureContent() {
   return (
     <section>
-      <Banner 
+      <Banner
         heading="Architecture"
         subtext="Build a scalable, secure, and future-ready foundation for your data ecosystem."
         buttonText="Plan Your Data Architecture"
@@ -91,15 +90,22 @@ function ArchitectureContent() {
       <InfoStats
         stats={[
           { number: "60%", label: "Fewer data silos after modernization" },
-          { number: "99.99%", label: "Uptime achievable with cloud-native designs" },
-          { number: "3×", label: "Faster analytics with optimized architecture" }
+          {
+            number: "99.99%",
+            label: "Uptime achievable with cloud-native designs",
+          },
+          {
+            number: "3×",
+            label: "Faster analytics with optimized architecture",
+          },
         ]}
         caption="Trusted by Leading Enterprises and"
         highlight="High-Growth Innovators"
       />
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
-            <WhyChooseUs ChooseUs={whychooseus} />
+      <ArchitectureToolsSection />
+      <WhyChooseUs ChooseUs={whychooseus} />
       <ScheduleConsultation
         heading="Design a Data Architecture That Scales With Your Business"
         buttonText="Schedule a Consultation!"
@@ -107,8 +113,6 @@ function ArchitectureContent() {
         imageAlt="Data Architecture Consultation"
         Icon={MdSchedule}
       />
-
-
 
       {/* <OnlinePresence 
         title="Let’s Build Your Future-Ready Data Architecture Today."
@@ -118,10 +122,7 @@ function ArchitectureContent() {
         imageAlt="Data Architecture Services"
       /> */}
 
-      <DevelopmentProcess 
-        title="Use Cases"
-        Process={useCases}
-      />
+      <DevelopmentProcess title="Use Cases" Process={useCases} />
     </section>
   );
 }

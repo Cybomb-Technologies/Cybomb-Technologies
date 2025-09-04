@@ -1,5 +1,5 @@
 .banner {
-  height: 100vh;
+  height: 60vh;
   min-height: 500px;
   position: relative;
   display: flex;
@@ -14,7 +14,7 @@
 
 @media (max-width: 768px) {
   .banner {
-    height: 70vh;
+    height: 80vh;
     min-height: 400px;
   }
   

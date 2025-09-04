@@ -2,12 +2,13 @@ import Banner from "../../../common-ui/dataui/banner";
 import InfoStats from "../../../common-ui/dataui/info-stats";
 import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
-import { MdSchedule } from 'react-icons/md';
+import { MdSchedule } from "react-icons/md";
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
 // import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
-import contactUsImg from './../../../../assets/contact/contact-us-img2.jpg';
-import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
+import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
+import ModelingToolsSection from "./modeling-techtool";
 
 const WhatWeOffers = [
   {
@@ -75,13 +76,13 @@ const useCases = [
   "Building a dimensional model for enterprise analytics",
   "Optimizing legacy data models for faster reporting",
   "Creating a hybrid model for multi-cloud deployments",
-  "Unifying disparate data sources under a single model"
+  "Unifying disparate data sources under a single model",
 ];
 
 function ModelingDesignContent() {
   return (
     <section>
-      <Banner 
+      <Banner
         heading="Modeling & Design"
         subtext="Transform raw information into structured, scalable, and business-ready data architecture."
         buttonText="Start Your Data Design"
@@ -90,18 +91,21 @@ function ModelingDesignContent() {
 
       <InfoStats
         stats={[
-          { number: "40%", label: "Performance gains after optimized modeling" },
+          {
+            number: "40%",
+            label: "Performance gains after optimized modeling",
+          },
           { number: "100%", label: "Models aligned with business KPIs" },
-          { number: "75%", label: "Reduction in redundant structures" }
+          { number: "75%", label: "Reduction in redundant structures" },
         ]}
         caption="Trusted by Enterprises and"
         highlight="High-Growth Startups"
       />
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
-
+      <ModelingToolsSection />
       <WhyChooseUs ChooseUs={whychooseus} />
-      
+
       <ScheduleConsultation
         heading="Design Data Models That Empower Your Business"
         buttonText="Schedule a Consultation!"
@@ -109,8 +113,6 @@ function ModelingDesignContent() {
         imageAlt="Data Modeling Consultation"
         Icon={MdSchedule}
       />
-
-
 
       {/* <OnlinePresence 
         title="Let’s Build a Future-Ready Data Architecture for Your Organization."
@@ -120,10 +122,7 @@ function ModelingDesignContent() {
         imageAlt="Data Modeling Services"
       /> */}
 
-      <DevelopmentProcess 
-        title="Use Cases"
-        Process={useCases}
-      />
+      <DevelopmentProcess title="Use Cases" Process={useCases} />
     </section>
   );
 }

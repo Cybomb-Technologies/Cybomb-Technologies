@@ -2,13 +2,13 @@ import Banner from "../../../common-ui/dataui/banner";
 import InfoStats from "../../../common-ui/dataui/info-stats";
 import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
-import { MdSchedule } from 'react-icons/md';
+import { MdSchedule } from "react-icons/md";
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
 // import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
-import contactUsImg from './../../../../assets/contact/contact-us-img2.jpg';
-import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
-
+import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
+import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
+import CloudDataToolsSection from "./cloud-data-techtool";
 const WhatWeOffers = [
   {
     title: "Cloud Readiness Assessment",
@@ -75,13 +75,13 @@ const useCases = [
   "Consolidating multiple data warehouses into a single cloud platform",
   "Moving legacy applications to a hybrid cloud environment",
   "Transitioning analytics workloads to Azure Synapse",
-  "Shifting real-time streaming data pipelines to Google Cloud"
+  "Shifting real-time streaming data pipelines to Google Cloud",
 ];
 
 function CloudDataMigrationContent() {
   return (
     <section>
-      <Banner 
+      <Banner
         heading="Cloud Data Migration"
         subtext="Seamlessly move your data to the cloud with minimal risk and maximum efficiency."
         buttonText="Start Your Migration"
@@ -92,14 +92,15 @@ function CloudDataMigrationContent() {
         stats={[
           { number: "94%", label: "Of enterprises already use cloud services" },
           { number: "60%", label: "Report cost savings after migration" },
-          { number: "3×", label: "Faster service deployment post-migration" }
+          { number: "3×", label: "Faster service deployment post-migration" },
         ]}
         caption="Trusted by Enterprises and"
         highlight="Innovation-Driven Startups"
       />
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
-      <WhyChooseUs ChooseUs={whychooseus} />      
+      <CloudDataToolsSection />
+      <WhyChooseUs ChooseUs={whychooseus} />
       <ScheduleConsultation
         heading="Modernize Your Infrastructure with Cloud Data Migration"
         buttonText="Schedule a Consultation!"
@@ -108,8 +109,7 @@ function CloudDataMigrationContent() {
         Icon={MdSchedule}
       />
 
-
-{/* 
+      {/* 
       <OnlinePresence 
         title="Let’s Plan Your Cloud Data Migration Strategy."
         buttonText="CONTACT US"
@@ -118,10 +118,7 @@ function CloudDataMigrationContent() {
         imageAlt="Cloud Data Migration Services"
       /> */}
 
-      <DevelopmentProcess 
-        title="Use Cases"
-        Process={useCases}
-      />
+      <DevelopmentProcess title="Use Cases" Process={useCases} />
     </section>
   );
 }
