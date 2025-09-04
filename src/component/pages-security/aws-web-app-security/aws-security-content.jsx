@@ -149,7 +149,7 @@ export default function AWSSecurityContent() {
       <Banner
         heading="AWS Web Application Security"
         subtext="Protect your applications, data, and customers with AWS-powered security solutions"
-        buttonText="Get Free Security Assessment"
+        buttonText="Get Free AWS Security Assessment"
         note="In today's digital-first world, securing your web applications is more critical than ever. With AWS's advanced security services and our expertise, you get end-to-end protection against cyber threats—without sacrificing performance or scalability."
       />
       <InfoStats

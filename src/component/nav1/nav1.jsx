@@ -7,11 +7,10 @@ import Servicedropdown1 from "./service-dropdown1";
 import Clouddropdown1 from "./cloud-dropdown";
 import Datadropdown1 from "./data-ai";
 import Industriesdropdown1 from "./Industries-dropdown";
-import Securitydropdown1 from "./security-dropdown";
 import Successstoriesdropdown1 from "./success-stories";
 import Technologiesdropdown1 from "./technologies-dropdown";
 import ChatWidget from "../../ChatWidget/ChatWidget";
-
+import CloudSecurityDropdown from "./cloud-security"
 function Nav1() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -103,7 +102,7 @@ function Nav1() {
                   onLinkClick={handleNavItemClick}
                 />
 
-                <Clouddropdown1
+                <CloudSecurityDropdown
                   isMobile={isMobile}
                   isOpen={activeDropdown === "cloud"}
                   onMouseEnter={() => setActiveDropdown("cloud")}
@@ -118,14 +117,14 @@ function Nav1() {
                   onMouseLeave={() => setActiveDropdown(null)}
                   onLinkClick={handleNavItemClick}
                 />
-
-                <Securitydropdown1
+                  <Technologiesdropdown1
                   isMobile={isMobile}
-                  isOpen={activeDropdown === "security"}
-                  onMouseEnter={() => setActiveDropdown("security")}
+                  isOpen={activeDropdown === "technologies"}
+                  onMouseEnter={() => setActiveDropdown("technologies")}
                   onMouseLeave={() => setActiveDropdown(null)}
                   onLinkClick={handleNavItemClick}
                 />
+
 
                 {/*   <Industriesdropdown1
                   isMobile={isMobile}
@@ -146,7 +145,7 @@ function Nav1() {
                   </Link>
                 </li>
 
-                 {/* <li className={styles.navItem}>
+                 <li className={styles.navItem}>
                   <Link
                     to="/pricing-page"
                     className={styles.navLink}
@@ -155,16 +154,17 @@ function Nav1() {
                     Pricing
                    
                   </Link>
-                </li> */}
-
-                <Technologiesdropdown1
-                  isMobile={isMobile}
-                  isOpen={activeDropdown === "technologies"}
-                  onMouseEnter={() => setActiveDropdown("technologies")}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                  onLinkClick={handleNavItemClick}
-                />
-
+                </li>
+                   <li className={styles.navItem}>
+                  <Link
+                    to="/career"
+                    className={styles.navLink}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Careers
+                  </Link>
+                </li>
+              
                 <Successstoriesdropdown1
                   isMobile={isMobile}
                   isOpen={activeDropdown === "success"}
@@ -173,15 +173,7 @@ function Nav1() {
                   onLinkClick={handleNavItemClick}
                 />
 
-                <li className={styles.navItem}>
-                  <Link
-                    to="/about-us"
-                    className={styles.navLink}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    About Us
-                  </Link>
-                </li>
+               
               </ul>
             </div>
           )}
@@ -221,7 +213,7 @@ function Nav1() {
                 onToggle={() => handleDropdownToggle("services")}
                 onLinkClick={handleNavItemClick}
               />
-              <Clouddropdown1
+              <CloudSecurityDropdown
                 isMobile
                 isOpen={activeDropdown === "cloud"}
                 onToggle={() => handleDropdownToggle("cloud")}
@@ -233,10 +225,11 @@ function Nav1() {
                 onToggle={() => handleDropdownToggle("data")}
                 onLinkClick={handleNavItemClick}
               />
-              <Securitydropdown1
+              
+              <Technologiesdropdown1
                 isMobile
-                isOpen={activeDropdown === "security"}
-                onToggle={() => handleDropdownToggle("security")}
+                isOpen={activeDropdown === "technologies"}
+                onToggle={() => handleDropdownToggle("technologies")}
                 onLinkClick={handleNavItemClick}
               />
               <Industriesdropdown1
@@ -256,7 +249,7 @@ function Nav1() {
                 </Link>
               </li>
 
-               {/* <li className={styles.navItem}>
+               <li className={styles.navItem}>
                 <Link
                   to="/pricing"
                   className={styles.navLink}
@@ -264,14 +257,8 @@ function Nav1() {
                 >
                   Pricing
                 </Link>
-              </li> */}
+              </li>
 
-              <Technologiesdropdown1
-                isMobile
-                isOpen={activeDropdown === "technologies"}
-                onToggle={() => handleDropdownToggle("technologies")}
-                onLinkClick={handleNavItemClick}
-              />
               <Successstoriesdropdown1
                 isMobile
                 isOpen={activeDropdown === "success"}
@@ -281,11 +268,11 @@ function Nav1() {
 
               <li className={styles.navItem}>
                   <Link
-                    to="/about-us"
+                    to="/career"
                     className={styles.navLink}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    About Us
+                     Careers
                   </Link>
               </li>
 

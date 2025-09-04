@@ -4,13 +4,13 @@ import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Testimonials = () => {
   const testimonials = [
-        {
-      quote: "The work-life balance is real. I can be productive at work while still having time for my family and personal projects.",
-      author: "Vignesh Indrajith",
-      role: "UI/UX Designer",
-      tenure: "3 years at company",
-      avatar: "/images/avatar3.jpg"
-    },
+    //     {
+    //   quote: "The work-life balance is real. I can be productive at work while still having time for my family and personal projects.",
+    //   author: "Sudesh T",
+    //   role: "FullStack Developer",
+    //   tenure: "1 years at company",
+    //   avatar: "/images/avatar3.jpg"
+    // },
     {
       quote: "What I love most is the trust and autonomy we're given to solve problems creatively. The leadership truly values our input.",
       author: "Santhosh K",
