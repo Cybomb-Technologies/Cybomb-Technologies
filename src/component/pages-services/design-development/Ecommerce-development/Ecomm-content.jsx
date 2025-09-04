@@ -1,63 +1,61 @@
-
-import DevelopmentProcess from "../../../common-ui/design-and-development/development-process";
-import OnlinePresence from "../../../common-ui/design-and-development/online-presence";
+import Banner from "../../../common-ui/design-and-development/banner";
+import InfoStats from "../../../common-ui/design-and-development/info-stats";
 import ServicesOfferings from "../../../common-ui/design-and-development/services-offerings";
+import DevelopmentProcess from "../../../common-ui/design-and-development/development-process";
 import WhyChooseUs from "../../../common-ui/design-and-development/why-choose-us";
-import StillNotSure from "../../../common-ui/stillnotsure/StillNotSure";
-import placeholderImage from './../../../../assets/placeholder-image.webp';
+import OnlinePresence from "../../../common-ui/design-and-development/online-presence";
+import EngagementOptions from "../../../common-ui/design-and-development/engagement-options";
+import EcomTechToolsSection from "./Ecom-tech";
+import Ecommerceimg from "./../../../../assets/technologies/ecommerceimg.png"
 
- const services = [
+const services = [
   {
     title: 'Custom E-Commerce Website Development',
-    description:
-      'Fully tailored storefronts with intuitive navigation, fast performance, and brand alignment.',
+    description: 'Fully tailored storefronts with intuitive navigation, fast performance, and brand alignment.',
   },
   {
     title: 'Platform-Based Solutions (Shopify, WooCommerce, Magento)',
-    description:
-      'Fast deployment and robust features using popular e-commerce platforms.',
+    description: 'Fast deployment and robust features using popular e-commerce platforms.',
   },
   {
     title: 'Headless Commerce Development',
-    description:
-      'Flexible and scalable frontends powered by APIs and modern frameworks like React or Vue.',
+    description: 'Flexible and scalable frontends powered by APIs and modern frameworks like React or Vue.',
   },
   {
     title: 'Secure Payment Gateway Integration',
-    description:
-      'Integration with Stripe, Razorpay, PayPal, and other gateways for secure transactions.',
+    description: 'Integration with Stripe, Razorpay, PayPal, and other gateways for secure transactions.',
   },
   {
     title: 'Inventory & Order Management Systems',
-    description:
-      'Real-time stock control, order tracking, and automated updates to boost efficiency.',
+    description: 'Real-time stock control, order tracking, and automated updates to boost efficiency.',
   },
   {
     title: 'Mobile-Optimized Shopping Experiences',
-    description:
-      'Responsive design and PWA-ready builds for seamless mobile commerce.',
+    description: 'Responsive design and PWA-ready builds for seamless mobile commerce.',
   },
-
 ];
 
 const process = [
   {
-    title: 'Single Vendor Store',
-    description: "Perfect for brands or businesses with their own inventory",
+    title: 'Discovery & Strategy',
+    description: 'Understand your business goals, target audience, and technical requirements',
   },
   {
-    title: 'Design & Wireframing',
-    description: "Amazon-style platforms with seller logins, commissions, and dashboards",
+    title: 'UI/UX Design & Wireframing',
+    description: 'Create intuitive user journeys, product flows, and visually appealing storefront designs',
   },
   {
-    title: 'Development & Iteration',
-    description: "Code frontend, backend, cart system, and payment flow",
+    title: 'Development & Implementation',
+    description: 'Build frontend, backend, shopping cart, payment integration, and admin dashboard',
   },
   {
-    title: 'Testing & Optimization',
-    description: "Deploy your store, provide training, and offer maintenance",
+    title: 'Quality Assurance & Testing',
+    description: 'Thorough testing for functionality, performance, security, and user experience',
   },
-
+  {
+    title: 'Deployment & Optimization',
+    description: 'Launch your store and implement ongoing performance monitoring and conversion optimization',
+  },
 ];
 
 const whychooseus = [
@@ -79,32 +77,65 @@ const whychooseus = [
   },
   {
     title: 'Ongoing Support & Maintenance',
-    description: "From bug fixes to feature upgrades, we’ve got your store covered long-term.",
+    description: "From bug fixes to feature upgrades, we've got your store covered long-term.",
   },
 ];
 
-function Ecommcontent() {
+const engagementOptions = [
+  {
+    title: "End-to-End E-commerce Development",
+    description: "Complete store development from design to deployment with full customization",
+  },
+  {
+    title: "Platform Migration & Upgrade",
+    description: "Seamlessly move your existing store to a new platform with data preservation",
+  },
+  {
+    title: "Maintenance & Support Packages",
+    description: "Ongoing technical support, security updates, and performance optimization",
+  },
+];
+
+export default function Ecommcontent() {
   return (
-    <>
-      <ServicesOfferings Services={services} title={"What We Offer"}/>
+    <section>
+      <Banner 
+        heading="E-commerce Development Services"
+        subtext="We build online stores that convert visitors into loyal customers"
+        buttonText="Book Free Consultation"
+        note="Whether you're starting small or scaling big, we create powerful e-commerce solutions tailored to your brand. From design to secure payments and smooth checkout experiences—we develop online stores that sell."
+      />
+      <InfoStats
+        stats={[
+          { number: "$6T", label: "Global e-commerce sales projected for 2024" },
+          { number: "70%", label: "of shoppers prefer mobile-friendly online stores" },
+          { number: "50%", label: "increase in trust with great shopping experiences" }
+        ]}
+        caption="Partnered with Startups and"
+        highlight="Fortune 500 Companies"
+      />
+      <ServicesOfferings 
+        title="Our E-commerce Development Services"
+        Services={services}
+      />
+      <EcomTechToolsSection/>
       <WhyChooseUs ChooseUs={whychooseus}/>
       <OnlinePresence 
-          title = "Craft a Captivating Online Presence for Your Brand!"
-          description = "Our custom E-commerce Development  turn your vision into a compelling online presence."
-          buttonText = "Request a Free Quote Today!"
-          buttonLink = "#"
-          imageSrc = {placeholderImage}
-          imageAlt = "Web Development"
+        title="Transform Your Business with a Powerful Online Store"
+        description="Our custom e-commerce solutions turn your vision into a revenue-generating digital storefront"
+        buttonText="Request a Free Quote Today!"
+        buttonLink="#"
+        imageSrc={Ecommerceimg}
+        imageAlt="E-commerce Development"
       />
-       <DevelopmentProcess 
-      title="Our Development Process"
-      Process={process}
-      
+      <DevelopmentProcess 
+        title="Our E-commerce Development Process"
+        Process={process}
       />
-      
-      <StillNotSure/>
-    </>
+      <EngagementOptions
+        title="How can we Collaborate"
+        options={engagementOptions}
+      />
+    </section>
   );
 }
-
-export default Ecommcontent;
