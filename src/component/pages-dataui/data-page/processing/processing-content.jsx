@@ -2,12 +2,13 @@ import Banner from "../../../common-ui/dataui/banner";
 import InfoStats from "../../../common-ui/dataui/info-stats";
 import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
-import { MdSchedule } from 'react-icons/md';
+import { MdSchedule } from "react-icons/md";
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
 // import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
-import contactUsImg from './../../../../assets/contact/contact-us-img2.jpg';
-import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
+import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
+import ProcessingToolsSection from "./processing-techtool";
 
 const WhatWeOffers = [
   {
@@ -75,13 +76,13 @@ const useCases = [
   "Streaming IoT device data for real-time monitoring",
   "Aggregating sales data from multiple regions for forecasting",
   "Cleaning and enriching customer data for personalization",
-  "Running large-scale batch jobs for financial reporting"
+  "Running large-scale batch jobs for financial reporting",
 ];
 
 function ProcessingContent() {
   return (
     <section>
-      <Banner 
+      <Banner
         heading="Processing Services"
         subtext="Transform raw data into actionable insights with speed and precision."
         buttonText="Book Free Consultation"
@@ -92,14 +93,18 @@ function ProcessingContent() {
         stats={[
           { number: "2TB+", label: "Of data processed daily across pipelines" },
           { number: "99.9%", label: "Uptime for optimized cloud data flows" },
-          { number: "70%", label: "Faster processing with modern architectures" }
+          {
+            number: "70%",
+            label: "Faster processing with modern architectures",
+          },
         ]}
         caption="Trusted by Businesses Across"
         highlight="Industries Worldwide"
       />
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
-      <WhyChooseUs ChooseUs={whychooseus} />      
+      <ProcessingToolsSection />
+      <WhyChooseUs ChooseUs={whychooseus} />
       <ScheduleConsultation
         heading="Unlock the Power of Your Data with Our Processing Expertise"
         buttonText="Schedule a Consultation!"
@@ -107,8 +112,6 @@ function ProcessingContent() {
         imageAlt="Data Processing Consultation"
         Icon={MdSchedule}
       />
-
-
 
       {/* <OnlinePresence 
         title="Let’s Build the Right Data Processing Solution for Your Business."
@@ -118,10 +121,7 @@ function ProcessingContent() {
         imageAlt="Data Processing Services"
       /> */}
 
-      <DevelopmentProcess 
-        title="Use Cases"
-        Process={useCases}
-      />
+      <DevelopmentProcess title="Use Cases" Process={useCases} />
     </section>
   );
 }

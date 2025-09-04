@@ -2,12 +2,13 @@ import Banner from "../../../common-ui/dataui/banner";
 import InfoStats from "../../../common-ui/dataui/info-stats";
 import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
-import { MdSchedule } from 'react-icons/md';
+import { MdSchedule } from "react-icons/md";
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
 // import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
-import contactUsImg from './../../../../assets/contact/contact-us-img2.jpg';
-import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
+import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
+import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
+import GovernanceToolsSection from "./governance-techtool";
 
 const WhatWeOffers = [
   {
@@ -75,13 +76,13 @@ const useCases = [
   "Creating a unified data catalog for enterprise-wide access",
   "Setting up master data management for consistent customer records",
   "Automating policy enforcement to prevent unauthorized data access",
-  "Building an audit-ready governance framework for financial institutions"
+  "Building an audit-ready governance framework for financial institutions",
 ];
 
 function GovernanceContent() {
   return (
     <section>
-      <Banner 
+      <Banner
         heading="Governance Solutions"
         subtext="Control, protect, and maximize the value of your data assets."
         buttonText="Book Free Consultation"
@@ -90,16 +91,23 @@ function GovernanceContent() {
 
       <InfoStats
         stats={[
-          { number: "85%", label: "Of enterprises recognize governance as critical" },
-          { number: "100%", label: "Compliance achievable in regulated industries" },
-          { number: "60%", label: "Reduction in data-related risks" }
+          {
+            number: "85%",
+            label: "Of enterprises recognize governance as critical",
+          },
+          {
+            number: "100%",
+            label: "Compliance achievable in regulated industries",
+          },
+          { number: "60%", label: "Reduction in data-related risks" },
         ]}
         caption="Trusted by Enterprises in"
         highlight="Highly Regulated Sectors"
       />
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
-      <WhyChooseUs ChooseUs={whychooseus} />      
+      <GovernanceToolsSection />
+      <WhyChooseUs ChooseUs={whychooseus} />
       <ScheduleConsultation
         heading="Ensure Compliance & Control with Our Governance Solutions"
         buttonText="Schedule a Consultation!"
@@ -108,8 +116,7 @@ function GovernanceContent() {
         Icon={MdSchedule}
       />
 
-
-{/* 
+      {/* 
       <OnlinePresence 
         title="Let’s Build a Governance Framework That Works for You."
         buttonText="CONTACT US"
@@ -118,10 +125,7 @@ function GovernanceContent() {
         imageAlt="Data Governance Services"
       /> */}
 
-      <DevelopmentProcess 
-        title="Use Cases"
-        Process={useCases}
-      />
+      <DevelopmentProcess title="Use Cases" Process={useCases} />
     </section>
   );
 }

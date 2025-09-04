@@ -2,13 +2,13 @@ import Banner from "../../../common-ui/dataui/banner";
 import InfoStats from "../../../common-ui/dataui/info-stats";
 import WhatWeOffer from "../../../common-ui/dataui/whatweoffer";
 import ScheduleConsultation from "../../../common-ui/dataui/schedule-consultation";
-import { MdSchedule } from 'react-icons/md';
+import { MdSchedule } from "react-icons/md";
 import WhyChooseUs from "../../../common-ui/dataui/why-choose-us";
 // import OnlinePresence from "../../../common-ui/dataui/online-presence";
 import DevelopmentProcess from "../../../common-ui/dataui/development-process";
-import contactUsImg from './../../../../assets/contact/contact-us-img2.jpg';
-import scheduleConsultImg from './../../../../assets/contact/schedule-a-consultation-img3.jpg';
-
+import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
+import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
+import StorageToolsSection from "./storage-techtool";
 const WhatWeOffers = [
   {
     title: "Cloud Storage Solutions",
@@ -55,8 +55,7 @@ const whychooseus = [
   },
   {
     title: "High Availability",
-    description:
-      "Redundant systems ensure your data is always accessible.",
+    description: "Redundant systems ensure your data is always accessible.",
   },
   {
     title: "Security & Compliance",
@@ -75,13 +74,13 @@ const useCases = [
   "Setting up hybrid storage for regulated industries",
   "Archiving petabytes of historical data for compliance",
   "Providing low-latency storage for AI model training",
-  "Optimizing storage footprint with automated tiering"
+  "Optimizing storage footprint with automated tiering",
 ];
 
 function StorageContent() {
   return (
     <section>
-      <Banner 
+      <Banner
         heading="Storage Solutions"
         subtext="Secure, scalable, and high-performance storage for your business data."
         buttonText="Book Free Consultation"
@@ -90,18 +89,24 @@ function StorageContent() {
 
       <InfoStats
         stats={[
-          { number: "99.999%", label: "Durability with enterprise-grade storage" },
+          {
+            number: "99.999%",
+            label: "Durability with enterprise-grade storage",
+          },
           { number: "50%", label: "Cost savings with tiered strategies" },
-          { number: "Petabyte-scale", label: "Data storage management supported" }
+          {
+            number: "Petabyte-scale",
+            label: "Data storage management supported",
+          },
         ]}
         caption="Trusted by Enterprises for"
         highlight="Secure & Scalable Storage"
       />
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
-
+      <StorageToolsSection />
       <WhyChooseUs ChooseUs={whychooseus} />
-      
+
       <ScheduleConsultation
         heading="Future-Proof Your Business with Reliable Storage Solutions"
         buttonText="Schedule a Consultation!"
@@ -109,8 +114,6 @@ function StorageContent() {
         imageAlt="Data Storage Consultation"
         Icon={MdSchedule}
       />
-
-      
 
       {/* <OnlinePresence 
         title="Let’s Design the Right Storage Strategy for Your Business."
@@ -120,10 +123,7 @@ function StorageContent() {
         imageAlt="Data Storage Services"
       /> */}
 
-      <DevelopmentProcess 
-        title="Use Cases"
-        Process={useCases}
-      />
+      <DevelopmentProcess title="Use Cases" Process={useCases} />
     </section>
   );
 }
