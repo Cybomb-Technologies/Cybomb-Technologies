@@ -8,7 +8,6 @@ import Testimonials from "./testimonials"
 
 export default function CareerPage() {
   const [jobs] = useState([
-
     {
       id: "fullstack-1",
       title: "Fullstack Developer",
