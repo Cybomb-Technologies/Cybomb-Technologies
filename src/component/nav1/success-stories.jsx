@@ -18,6 +18,7 @@ import { FaBriefcase, FaChevronDown, FaChevronUp,
   FaShoppingCart,
   FaIndustry,
   } from "react-icons/fa";
+import { FaFolderOpen, FaBlog, FaInfoCircle, FaBookOpen } from "react-icons/fa";
 import { MdOutlineEnergySavingsLeaf } from "react-icons/md";
 
 function Successstoriesdropdown1({
@@ -47,7 +48,7 @@ function Successstoriesdropdown1({
         // onMouseEnter={() => !isMobile && onToggle(true)}
         // onMouseLeave={() => !isMobile && onToggle(false)}
       >
-        Success Stories
+        About Us
         <span className={styles.arrow}>
           {isOpen ? <FaChevronUp size={10} /> : <FaChevronDown size={10} />}
         </span>
@@ -76,23 +77,34 @@ function Successstoriesdropdown1({
       >
         <li>
           <div className="container">
-              <div className={styles.dropdownGrid}>
 
+              <div className={styles.dropdownGrid}>
                 {/* Column 1: Our Work */}
                 <div className={styles.dropdownColumn}>
                   <div className={styles.dropdownHeader}>
                     <FaBriefcase className={styles.icon} /> Our Work
                   </div>
+
                   <Link to="/portfolio" className={styles.dropdownItem} onClick={onLinkClick}>
-                    Portfolio
+                    <FaFolderOpen className={styles.icon} /> Portfolio
                   </Link>
+
                   <Link to="/blog" className={styles.dropdownItem} onClick={onLinkClick}>
-                    Blogs
+                    <FaBlog className={styles.icon} /> Blogs
                   </Link>
-                     <Link to="/about-us" className={styles.dropdownItem} onClick={onLinkClick}>
-                    About Us
+                  {/* <Link to="/case-study" className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaBookOpen className={styles.icon} />  Case Study
+                  </Link> */}
+                </div>
+              </div>
+
+              <div className={styles.dropdownGrid}>
+                <div className={styles.dropdownColumn}>
+                  <Link to="/about-us" className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaInfoCircle className={styles.icon} /> About Us
                   </Link>
                 </div>
+              </div>
               
                 {/* Column 2: Industries We Serve — Part 1*/}
                 {/* <div className={styles.dropdownColumn}>
@@ -125,7 +137,7 @@ function Successstoriesdropdown1({
                 </div> */}
 
               </div>
-            </div>
+
 
         </li>
       </ul>

@@ -15,7 +15,7 @@ import Metatags from "../SEO/meta-tags";
 function Home() {
 
   const metaPropsData = {
-    title: "Mobile App and Web Delopment in Chennai | Cybomb Technologies",
+    title: "Mobile App and Web Development in Chennai | Cybomb Technologies",
     description:"Cybomb Technologies is a top IT company offering expert web development, mobile app development, UI/UX design, and digital solutions for startups and enterprises.",
     keyword:"Cybomb Technologies, Web Development, Mobile App Development, UI UX Design, React Developer, Chennai IT Company, Software Services India",
     url: "https://www.cybomb.com/",
