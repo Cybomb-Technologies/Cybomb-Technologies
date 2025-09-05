@@ -38,11 +38,11 @@ const dataArchitectureLogos = {
   "Amazon Redshift":
     "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Amazon-Redshift-Logo.svg/1862px-Amazon-Redshift-Logo.svg.png",
   "Google BigQuery":
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW2CYa3DEFyYo2lZxx0jAlWhopk2C2aJJn6Q&s",
+    "https://images.icon-icons.com/2699/PNG/512/google_bigquery_logo_icon_168150.png",
   Snowflake: "https://cdn-icons-png.flaticon.com/512/2530/2530064.png",
   Teradata: "https://img.icons8.com/?size=512&id=108544&format=png",
   "Microsoft Synapse":
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq5BJgTw2H2_OMckcMo7vskg-DWqTXSq_yGQ&s",
+    "https://intellifysolutions.com/wp-content/uploads/2023/08/Azure-Synapse-Analytics-1.png",
 
   // Data Lakes
   "Amazon S3":
@@ -51,7 +51,7 @@ const dataArchitectureLogos = {
     "https://solace.com/wp-content/uploads/2021/10/azure-data-lake-storage-logo.png",
   "Cloud Storage": "https://img.icons8.com/color/600/google-cloud.png",
   Databricks:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQebjNdAWUv_RSkIPsfUK7VwTTe8BygfhTUcw&s",
+    "https://1000logos.net/wp-content/uploads/2025/01/Databricks-Emblem.png",
   HDFS: "https://img.icons8.com/?size=512&id=69132&format=png",
 
   // Data Integration & ETL

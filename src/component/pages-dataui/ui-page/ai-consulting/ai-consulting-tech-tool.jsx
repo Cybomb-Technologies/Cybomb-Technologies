@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
 
 const aiConsultingCategories = {
-  "Machine Learning Platforms": [
-    "TensorFlow",
-    "PyTorch",
-    "KNIME"
-  ],
+  "Machine Learning Platforms": ["TensorFlow", "PyTorch", "KNIME"],
   "AI Roadmap & Planning": [
     "DataRobot",
     "H2O.ai",
@@ -24,27 +20,35 @@ const aiConsultingCategories = {
 };
 
 const aiConsultingLogos = {
-
-
-
-  TensorFlow: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg",
-  PyTorch: "https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg",
+  TensorFlow:
+    "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg",
+  PyTorch:
+    "https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg",
   KNIME: "https://elest.io/images/softwares/238/logo.png",
 
   // AI Roadmap & Planning
-  DataRobot: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwno994cLeN4Kpf1VOJtifl3mpB_oASbaK_g&s",
-  "H2O.ai": "https://upload.wikimedia.org/wikipedia/commons/f/f3/H2O_logo_from_H2O.ai.png?20160218230403",
-  "C3 AI": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_hHLSiuchXgp9RANaRVM9g61k7bRwt8R9pA&s",
-  "SAS Viya": "https://www.sas.com/en/news/media-gallery/all-images/sas-logo-blue.transform/width319/image.1685459921715.png",
-  RapidMiner: "https://www.stardog.com/img/connectors/logo-small/RapidMiner.png?_cchid=64b32da4106f4e3471ed00cee89ee954",
-
+  DataRobot:
+    "https://monkedo-static.s3.eu-central-1.amazonaws.com/component-icons/datarobot.png",
+  "H2O.ai":
+    "https://upload.wikimedia.org/wikipedia/commons/f/f3/H2O_logo_from_H2O.ai.png?20160218230403",
+  "C3 AI":
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_hHLSiuchXgp9RANaRVM9g61k7bRwt8R9pA&s",
+  "SAS Viya":
+    "https://www.sas.com/en/news/media-gallery/all-images/sas-logo-blue.transform/width319/image.1685459921715.png",
+  RapidMiner:
+    "https://static.macupdate.com/products/62534/l/rapidminer-studio-logo.png?v=1660413019",
 
   // Enterprise AI Strategy
-  "Azure AI": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
-  "AWS AI": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
-  "Google Cloud AI": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKrTg_Ygs_SNsALOCO1-s6-KYS2CKFd0LvfA&s",
-  "Oracle AI": "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
-  "SAP AI": "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
+  "Azure AI":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+  "AWS AI":
+    "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+  "Google Cloud AI":
+    "https://www.therobinlord.com/wp-content/uploads/2024/09/google-vertex.webp",
+  "Oracle AI":
+    "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
+  "SAP AI":
+    "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
 };
 
 const AIConsultingSection = () => {
@@ -61,7 +65,9 @@ const AIConsultingSection = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`${styles.tab} ${selected === cat ? styles.activeTab : ""}`}
+              className={`${styles.tab} ${
+                selected === cat ? styles.activeTab : ""
+              }`}
               onClick={() => setSelected(cat)}
             >
               {cat}

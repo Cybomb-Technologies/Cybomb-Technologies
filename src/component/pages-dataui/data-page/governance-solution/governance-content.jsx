@@ -9,6 +9,7 @@ import DevelopmentProcess from "../../../common-ui/dataui/development-process";
 import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
 import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import GovernanceToolsSection from "./governance-techtool";
+import AboutTech from "../../../common-ui/dataui/about-tech";
 
 const WhatWeOffers = [
   {
@@ -79,6 +80,51 @@ const useCases = [
   "Building an audit-ready governance framework for financial institutions",
 ];
 
+const governanceDescription = [
+  {
+    name: "Collibra",
+    description:
+      "A leading data governance platform that provides a centralized system for managing data assets, ensuring data quality, compliance, and collaboration across organizations.",
+    icon: "https://www.datameer.com/wp-content/uploads/2023/04/yrh4ffcjynusx5wkhzyx.png",
+    iconColors: "linear-gradient(135deg, #e3edff, #f8faff)", // soft blue tones
+  },
+  {
+    name: "Alation",
+    description:
+      "A data catalog and governance solution that helps organizations discover, understand, and govern their data assets while fostering data-driven collaboration.",
+    icon: "https://images.saasworthy.com/alation_11773_logo_1607581065_sbeah.png",
+    iconColors: "linear-gradient(135deg, #ffeecf, #fff9ef)", // pale golden yellow
+  },
+  {
+    name: "BigID",
+    description:
+      "A data privacy and security platform that helps enterprises discover, classify, and govern sensitive data to ensure compliance with global data protection regulations.",
+    icon: "https://astrix.security/wp-content/uploads/2024/06/icon-customer-stories-menu-bigid.png",
+    iconColors: "linear-gradient(135deg, #ffe1dc, #fff6f5)", // light coral/pink
+  },
+  {
+    name: "Apache Atlas",
+    description:
+      "An open-source metadata and governance framework that enables organizations to manage metadata, data lineage, and classifications across the Hadoop ecosystem and beyond.",
+    icon: "https://data-universe.org/wp-content/uploads/2023/03/Imagen2-1.png",
+    iconColors: "linear-gradient(135deg, #d7f3f2, #f5fcfb)", // aqua/teal tint
+  },
+  {
+    name: "Azure Purview",
+    description:
+      "A unified data governance service from Microsoft Azure that enables data discovery, classification, lineage tracking, and compliance across hybrid and multi-cloud environments.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Microsoft_Purview_Logo.svg/2048px-Microsoft_Purview_Logo.svg.png",
+    iconColors: "linear-gradient(135deg, #d6ebff, #f5faff)", // very soft azure blue
+  },
+  {
+    name: "Datafold",
+    description:
+      "A data quality and observability platform that automates testing, monitors pipelines, and ensures reliable data by detecting anomalies and validating transformations.",
+    icon: "https://images.saasworthy.com/tr:w-112,h-0,c-at_max,e-sharpen-1/datafold_9355_logo_1612520621_dzuse.svg",
+    iconColors: "linear-gradient(135deg, #ffd9e6, #fff2f7)", // blush pink
+  },
+];
+
 function GovernanceContent() {
   return (
     <section>
@@ -107,6 +153,7 @@ function GovernanceContent() {
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
       <GovernanceToolsSection />
+      <AboutTech technologies={governanceDescription} />
       <WhyChooseUs ChooseUs={whychooseus} />
       <ScheduleConsultation
         heading="Ensure Compliance & Control with Our Governance Solutions"

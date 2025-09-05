@@ -64,8 +64,7 @@ const qualityManagementLogos = {
 
   // Continuous Improvement Frameworks
   Kaizen: "https://cdn-icons-png.freepik.com/512/17008/17008893.png",
-  "PDCA Cycle":
-    "https://www.clipartmax.com/png/middle/274-2746399_customer-relationship-management-pdca-organization-circle-process-png.png",
+  "PDCA Cycle": "https://cdn-icons-png.flaticon.com/512/15319/15319158.png",
   Benchmarking:
     "https://png.pngtree.com/png-clipart/20230504/original/pngtree-benchmark-line-icon-png-image_9139045.png",
   "5S Methodology":

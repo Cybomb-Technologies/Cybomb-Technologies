@@ -57,7 +57,7 @@ const cloudDataMigrationLogos = {
 
   // Database Migration Tools
   "AWS DMS":
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmHrRHzF_GX7BrgoKKz-vZhRfIcyTv9BBQwQ&s",
+    "https://symbols.getvecta.com/stencil_10/12_amazon-rds.5b660971df.png",
 
   "Azure DMS":
     "https://azure.microsoft.com/svghandler/database-migration/?width=600&height=315",
@@ -82,7 +82,7 @@ const cloudDataMigrationLogos = {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpC6wy_WqJmr2HDjUcqJMsKxtV7zHEVfIbPQ&s",
 
   Fivetran:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS0Z-uZoOS8HujlQByDJtp2EkklymrG3VqzA&s",
+    "https://images.icon-icons.com/2699/PNG/512/fivetran_logo_icon_170149.png",
 
   Stitch: "https://www.stitchdata.com/images/og-site-icon.png",
 
@@ -109,7 +109,7 @@ const cloudDataMigrationLogos = {
   Dynatrace: "https://www.svgrepo.com/show/353681/dynatrace-icon.svg",
 
   "New Relic":
-    "https://images.seeklogo.com/logo-png/44/1/new-relic-logo-png_seeklogo-441431.png",
+    "https://s3.eu-west-1.amazonaws.com/www.jobfluent.com/company_logos/1/2/7/127_170_196.png",
 
   Datadog:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh-bjJdK2IAQnNsbvQfeEKWVSfel4RyMTVew&s",

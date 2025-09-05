@@ -9,6 +9,8 @@ import DevelopmentProcess from "../../../common-ui/dataui/development-process";
 import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
 import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import ArchitectureToolsSection from "./architecture-techtool";
+import AboutTech from "../../../common-ui/dataui/about-tech";
+
 const WhatWeOffers = [
   {
     title: "Enterprise Data Architecture",
@@ -77,6 +79,51 @@ const useCases = [
   "Unifying multi-cloud environments into a cohesive architecture",
 ];
 
+const dataArchitectureDescription = [
+  {
+    name: "Amazon Redshift",
+    description:
+      "A fully managed cloud data warehouse service by AWS that allows fast query performance on large-scale datasets with massive parallel processing.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Amazon-Redshift-Logo.svg/1862px-Amazon-Redshift-Logo.svg.png",
+    iconColors: "linear-gradient(135deg, #f8d6d6, #fff5f5)", // soft pastel red
+  },
+  {
+    name: "Google BigQuery",
+    description:
+      "A serverless, highly scalable, and cost-effective multi-cloud data warehouse designed for business agility and real-time analytics.",
+    icon: "https://images.icon-icons.com/2699/PNG/512/google_bigquery_logo_icon_168150.png",
+    iconColors: "linear-gradient(135deg, #e3ecfd, #f9fbff)", // pale Google blue
+  },
+  {
+    name: "Snowflake",
+    description:
+      "A cloud-based data platform offering data warehousing, data lakes, and secure data sharing with elastic scaling and multi-cloud support.",
+    icon: "https://cdn-icons-png.flaticon.com/512/2530/2530064.png",
+    iconColors: "linear-gradient(135deg, #d6f7fb, #f7fcfd)", // light aqua blue
+  },
+  {
+    name: "Microsoft Synapse",
+    description:
+      "An integrated analytics service combining enterprise data warehousing, big data integration, and real-time analytics in Azure.",
+    icon: "https://intellifysolutions.com/wp-content/uploads/2023/08/Azure-Synapse-Analytics-1.png",
+    iconColors: "linear-gradient(135deg, #d6ebff, #f5faff)", // soft azure blue
+  },
+  {
+    name: "Amazon S3",
+    description:
+      "A highly scalable, secure, and durable object storage service by AWS, designed for data lakes, backup, archiving, and big data analytics.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Amazon-S3-Logo.svg",
+    iconColors: "linear-gradient(135deg, #ffe6d1, #fff8f3)", // pastel orange/peach
+  },
+  {
+    name: "Databricks",
+    description:
+      "A unified data analytics and AI platform that combines data engineering, machine learning, and collaborative analytics on top of Apache Spark.",
+    icon: "https://1000logos.net/wp-content/uploads/2025/01/Databricks-Emblem.png",
+    iconColors: "linear-gradient(135deg, #ffd9d6, #fff5f4)", // light coral red
+  },
+];
+
 function ArchitectureContent() {
   return (
     <section>
@@ -105,6 +152,7 @@ function ArchitectureContent() {
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
       <ArchitectureToolsSection />
+      <AboutTech technologies={dataArchitectureDescription} />
       <WhyChooseUs ChooseUs={whychooseus} />
       <ScheduleConsultation
         heading="Design a Data Architecture That Scales With Your Business"
