@@ -43,10 +43,8 @@ const analyticsVisualizationLogos = {
   Tableau: "https://img.icons8.com/color/512/tableau-software.png",
   "Power BI":
     "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/power-bi-icon.png",
-  "Qlik Sense":
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrxxvp7YH3zixZGzkL0kavMMeIi1mpk8Wlvv3aIfgXrO0HmeBz-Xm5GmJ8jg-OqwbFtSo&usqp=CAU",
-  Looker:
-    "https://images.seeklogo.com/logo-png/39/1/google-looker-logo-png_seeklogo-394597.png",
+  "Qlik Sense": "https://logodix.com/logo/2096842.png",
+  Looker: "https://www.svgrepo.com/show/354012/looker-icon.svg",
   "Google Data Studio":
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ichXLiSdM3M4epxIZviJp7HyWADC3SZI3A&s",
 

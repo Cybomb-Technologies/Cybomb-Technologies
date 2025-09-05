@@ -32,7 +32,7 @@ const storageLogos = {
   MySQL: "https://cdn-icons-png.flaticon.com/512/528/528260.png",
   PostgreSQL: "https://www.svgrepo.com/show/306591/postgresql.svg",
   MariaDB:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn3ZcV5gCN7VxftpYg69_tiDJdF_oFeDiw9w&s",
+    "http://images.icon-icons.com/2699/PNG/512/mariadb_logo_icon_170968.png",
   "Oracle Database":
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUYGvjHZ4lmNz5Uu-NpGvf2dGcmoqnNxuj5A&s",
   "Microsoft SQL Server":
@@ -46,7 +46,8 @@ const storageLogos = {
   CouchDB: "https://couchdb.apache.org/image/couch@2x.png",
   Redis:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLuV_aZWnhJ6Nku3SvxpJiJmJoZ7SisUshVQ&s",
-  DynamoDB: "https://upload.wikimedia.org/wikipedia/commons/f/fd/DynamoDB.png",
+  DynamoDB:
+    "https://cdn.freebiesupply.com/logos/thumbs/2x/aws-dynamodb-logo.png",
 
   // Cloud Storage Services
   "Amazon S3":

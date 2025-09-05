@@ -54,7 +54,7 @@ const modelingDesignLogos = {
   Camunda:
     "https://images.icon-icons.com/2699/PNG/512/camunda_logo_icon_167768.png",
   "Visual Paradigm":
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-xUOcz7ZwG_rKd-FeuD1gwcl8Fmn4B0e0SQ&s",
+    "https://www.marvelic.co.th/wp-content/uploads/2021/08/VP.png",
 
   // UML & Software Design Tools
   "Enterprise Architect":
@@ -64,7 +64,7 @@ const modelingDesignLogos = {
   Astah:
     "https://pbs.twimg.com/profile_images/1645303059424350209/7nW0NuWp_400x400.jpg",
   Lucidchart:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ9k_D_XAOKxpb3i29UeBl8jHJNJEXL1kemQ&s",
+    "https://cdn.productivity.directory/tools/2f7d5938-4427-4f3b-81c1-084f6d5ef70a",
   "Draw.io":
     "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Diagrams.net_Logo.svg/2048px-Diagrams.net_Logo.svg.png",
 
@@ -77,13 +77,12 @@ const modelingDesignLogos = {
   Looker:
     "https://images.seeklogo.com/logo-png/39/1/google-looker-logo-png_seeklogo-394597.png",
   "D3.js":
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROBrvYxusFDXpOxpG74SET8uSF9fDAohSyZg&s",
+    "https://i0.wp.com/ahex.co/wp-content/uploads/2022/06/d3.png?fit=400%2C400&ssl=1",
 
   // Simulation & System Modeling
   "MATLAB Simulink":
     "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/1200px-Matlab_Logo.png",
-  AnyLogic:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS47WozBldVS552OD_FbsZ6lSa-p5Z63zz_ug&s",
+  AnyLogic: "https://336118.selcdn.ru/Gutsy-Culebra/products/AnyLogic-Logo.png",
   "Arena Simulation":
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfIF1Tm1x40L2ZNf8suwCTHyCzw7DYpRMHuIugQdT_iQ08g-y8N30xWeWIdLf9J1I-AYI&usqp=CAU",
   "Stella Architect":

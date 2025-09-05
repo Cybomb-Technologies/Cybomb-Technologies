@@ -9,6 +9,7 @@ import DevelopmentProcess from "../../../common-ui/dataui/development-process";
 import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
 import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import AnalyticsToolsSection from "./analytics-techtool";
+import AboutTech from "../../../common-ui/dataui/about-tech";
 
 const WhatWeOffers = [
   {
@@ -79,6 +80,51 @@ const useCases = [
   "Visualizing supply chain performance to identify bottlenecks",
 ];
 
+const analyticsVisualizationDescription = [
+  {
+    name: "Tableau",
+    description:
+      "A leading data visualization and business intelligence tool that enables interactive dashboards and advanced analytics with drag-and-drop simplicity.",
+    icon: "https://img.icons8.com/color/512/tableau-software.png",
+    iconColors: "linear-gradient(135deg, #fddbb3, #e6f3ff)", // soft orange + pale blue
+  },
+  {
+    name: "Power BI",
+    description:
+      "Microsoft’s business analytics service that provides interactive visualizations and self-service business intelligence capabilities with strong Office integration.",
+    icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/power-bi-icon.png",
+    iconColors: "linear-gradient(135deg, #ffefb3, #fffbea)", // soft golden yellow
+  },
+  {
+    name: "Qlik Sense",
+    description:
+      "A modern analytics platform that uses an associative data engine to provide powerful self-service visualization, dashboards, and embedded analytics.",
+    icon: "https://logodix.com/logo/2096842.png",
+    iconColors: "linear-gradient(135deg, #d9fbe6, #f7fffb)", // mint green pastel
+  },
+  {
+    name: "Looker",
+    description:
+      "A Google Cloud data analytics and visualization platform that allows businesses to explore, share, and operationalize insights from their data.",
+    icon: "https://www.svgrepo.com/show/354012/looker-icon.svg",
+    iconColors: "linear-gradient(135deg, #e9ddff, #faf7ff)", // soft lavender
+  },
+  {
+    name: "Zoho Analytics",
+    description:
+      "A self-service BI and analytics platform from Zoho that enables users to create visualizations, dashboards, and analyze data with AI-powered insights.",
+    icon: "https://img.icons8.com/?size=512&id=KJ0KehaD9qPs&format=png",
+    iconColors: "linear-gradient(135deg, #d6eaff, #f5faff)", // pale blue
+  },
+  {
+    name: "Grafana",
+    description:
+      "An open-source analytics and interactive visualization platform for monitoring time-series data across infrastructure, applications, and business metrics.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg",
+    iconColors: "linear-gradient(135deg, #ffd9c9, #fff4f0)", // soft orange-peach
+  },
+];
+
 function AnalyticsVisualizationContent() {
   return (
     <section>
@@ -104,6 +150,7 @@ function AnalyticsVisualizationContent() {
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
       <AnalyticsToolsSection />
+      <AboutTech technologies={analyticsVisualizationDescription} />
       <WhyChooseUs ChooseUs={whychooseus} />
       <ScheduleConsultation
         heading="Make Smarter Decisions with Analytics & Visualization"

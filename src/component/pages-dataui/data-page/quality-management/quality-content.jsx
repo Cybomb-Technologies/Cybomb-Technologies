@@ -9,6 +9,8 @@ import DevelopmentProcess from "../../../common-ui/dataui/development-process";
 import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
 import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import QualityToolsSection from "./quality-techtool";
+import AboutTech from "../../../common-ui/dataui/about-tech";
+
 const WhatWeOffers = [
   {
     title: "Data Profiling & Assessment",
@@ -78,6 +80,51 @@ const useCases = [
   "Ensuring regulatory compliance with accurate financial data",
 ];
 
+const qualityManagementDescription = [
+  {
+    name: "ISO 9001",
+    description:
+      "An international standard for quality management systems (QMS), providing a framework to ensure consistent quality, customer satisfaction, and continuous improvement.",
+    icon: "https://images.seeklogo.com/logo-png/30/2/iso-logo-png_seeklogo-305564.png",
+    iconColors: "linear-gradient(135deg, #d6e4f5, #f5f9ff)", // soft pastel blue
+  },
+  {
+    name: "Six Sigma",
+    description:
+      "A data-driven methodology focused on reducing defects, improving processes, and achieving operational excellence through statistical analysis and DMAIC principles.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/6/67/Six_sigma-2.svg",
+    iconColors: "linear-gradient(135deg, #e6e6e6, #fafafa)", // light neutral gray
+  },
+  {
+    name: "TQM",
+    description:
+      "Total Quality Management (TQM) is a comprehensive approach to organizational management that emphasizes customer satisfaction, employee involvement, and process improvement.",
+    icon: "https://cdn-icons-png.flaticon.com/512/18497/18497224.png",
+    iconColors: "linear-gradient(135deg, #d6e9f7, #f5faff)", // pale sky blue
+  },
+  {
+    name: "SAP Quality Management",
+    description:
+      "A component of SAP ERP that integrates quality management processes, supporting inspections, audits, and compliance within enterprise operations.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png",
+    iconColors: "linear-gradient(135deg, #d4f1fb, #f7fcfe)", // very soft azure
+  },
+  {
+    name: "MasterControl",
+    description:
+      "A cloud-based quality management software (QMS) designed to automate compliance processes, document control, and regulatory requirements in highly regulated industries.",
+    icon: "https://images.seeklogo.com/logo-png/47/3/mastercontrol-logo-png_seeklogo-470646.png",
+    iconColors: "linear-gradient(135deg, #d9e7f9, #f5f9ff)", // pastel blue gradient
+  },
+  {
+    name: "PDCA Cycle",
+    description:
+      "A four-step iterative method (Plan-Do-Check-Act) used in business process management and continuous improvement to enhance quality and performance.",
+    icon: "https://cdn-icons-png.flaticon.com/512/15319/15319158.png",
+    iconColors: "linear-gradient(135deg, #d5f5e3, #f7fcf9)", // light mint green
+  },
+];
+
 function QualityManagementContent() {
   return (
     <section>
@@ -106,6 +153,7 @@ function QualityManagementContent() {
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
       <QualityToolsSection />
+      <AboutTech technologies={qualityManagementDescription} />
       <WhyChooseUs ChooseUs={whychooseus} />
 
       <ScheduleConsultation
