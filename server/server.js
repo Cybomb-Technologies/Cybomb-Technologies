@@ -73,6 +73,8 @@ app.use("/api/banner-mail", bannerMailRoute);
 app.use("/api/career", careerMailRoute);
 app.use("/api/footer-mail",footerMailRoute);
 app.use("/admin", adminRegisterRoute);
+app.use("/uploads", express.static("public/uploads"));
+
 
  
 // Serve frontend in production
