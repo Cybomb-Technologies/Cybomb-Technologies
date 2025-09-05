@@ -155,7 +155,7 @@ function Nav1() {
                    
                   </Link>
                 </li>
-                   <li className={styles.navItem}>
+                <li className={styles.navItem}>
                   <Link
                     to="/career"
                     className={styles.navLink}
@@ -172,6 +172,16 @@ function Nav1() {
                   onMouseLeave={() => setActiveDropdown(null)}
                   onLinkClick={handleNavItemClick}
                 />
+
+                {/* <li className={styles.navItem}>
+                  <Link
+                    to="/about-us"
+                    className={styles.navLink}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    About Us
+                  </Link>
+                </li> */}
 
                
               </ul>
