@@ -9,6 +9,8 @@ import DevelopmentProcess from "../../../common-ui/dataui/development-process";
 import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
 import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import CloudDataToolsSection from "./cloud-data-techtool";
+import AboutTech from "../../../common-ui/dataui/about-tech";
+
 const WhatWeOffers = [
   {
     title: "Cloud Readiness Assessment",
@@ -78,6 +80,51 @@ const useCases = [
   "Shifting real-time streaming data pipelines to Google Cloud",
 ];
 
+const cloudDataMigrationDescription = [
+  {
+    name: "Azure Migrate",
+    description:
+      "Microsoft’s unified migration platform that helps you discover, assess, and migrate applications, infrastructure, and data to Azure with minimal downtime.",
+    icon: "https://images.saasworthy.com/azuremigrate_11351_logo_1666091880_0vz91.png",
+    iconColors: "linear-gradient(135deg, #cce6f9, #f5fbff)", // much lighter azure
+  },
+  {
+    name: "Talend",
+    description:
+      "A leading open-source ETL and cloud data integration platform that enables users to connect, transform, and integrate data from diverse sources with scalability.",
+    icon: "https://images.icon-icons.com/2699/PNG/512/talend_logo_icon_169665.png",
+    iconColors: "linear-gradient(135deg, #ffd9cc, #ffffffff)", // very light peach
+  },
+  {
+    name: "Azure DMS",
+    description:
+      "Azure Database Migration Service simplifies the migration of multiple database sources to Azure with near-zero downtime and guided processes.",
+    icon: "https://symbols.getvecta.com/stencil_10/12_amazon-rds.5b660971df.png",
+    iconColors: "linear-gradient(135deg, #cceeff, #f2fcff)", // soft sky blue
+  },
+  {
+    name: "Fivetran",
+    description:
+      "Fivetran provides automated data integration with fully managed pipelines, enabling fast and reliable data replication from multiple sources into cloud data warehouses.",
+    icon: "https://images.icon-icons.com/2699/PNG/512/fivetran_logo_icon_170149.png",
+    iconColors: "linear-gradient(135deg, #d6ebff, #f7fbff)", // pale blue tones
+  },
+  {
+    name: "Dynatrace",
+    description:
+      "Dynatrace is an AI-powered monitoring and observability platform that provides full-stack visibility, application performance management, and cloud infrastructure monitoring.",
+    icon: "https://www.svgrepo.com/show/353681/dynatrace-icon.svg",
+    iconColors: "linear-gradient(135deg, #d9f5e0, #f8fdf9)", // mint pastel
+  },
+  {
+    name: "New Relic",
+    description:
+      "New Relic is an observability platform that helps developers and IT teams monitor, debug, and optimize applications and infrastructure in real time.",
+    icon: "https://s3.eu-west-1.amazonaws.com/www.jobfluent.com/company_logos/1/2/7/127_170_196.png",
+    iconColors: "linear-gradient(135deg, #d6f2f5, #f5fcfc)", // aqua pastel
+  },
+];
+
 function CloudDataMigrationContent() {
   return (
     <section>
@@ -100,6 +147,7 @@ function CloudDataMigrationContent() {
 
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
       <CloudDataToolsSection />
+      <AboutTech technologies={cloudDataMigrationDescription} />
       <WhyChooseUs ChooseUs={whychooseus} />
       <ScheduleConsultation
         heading="Modernize Your Infrastructure with Cloud Data Migration"

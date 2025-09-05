@@ -60,7 +60,7 @@ const governanceSolutionsLogos = {
   "Alation Data Catalog":
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRol77QMUvIT5Bm0nGXK8RVydBXcQAiRbiSpw&s",
   "Azure Purview":
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhrzwhOzh_1swMk_xkdQFrnBtq5441sD1fxDZiBPleTmCvi7QwtQYeOf7wbEefhCHWT70&usqp=CAU",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Microsoft_Purview_Logo.svg/2048px-Microsoft_Purview_Logo.svg.png",
   "Google Data Catalog": "https://www.svgrepo.com/show/375405/data-catalog.svg",
 
   // Data Lineage & Observability
@@ -76,7 +76,7 @@ const governanceSolutionsLogos = {
   OneTrust:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxpmVIEf6blKY8i-JfxDuOsDsgKKnmACDefVWYsHWdOPH3ITyDLFg6rr2wIp6KWlEkr8E&usqp=CAU",
   BigID:
-    "https://images.prismic.io/sacra/a93df398-bf11-40dd-87ed-cdda138300e2_128c38b4-c55d-4fa0-8549-aac41be67df6.png?auto=compress,format",
+    "https://astrix.security/wp-content/uploads/2024/06/icon-customer-stories-menu-bigid.png",
   Immuta:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoZEZB4g4yjmTJygYAU0JzjpW6zEa68VRNpA&s",
   Privacera:

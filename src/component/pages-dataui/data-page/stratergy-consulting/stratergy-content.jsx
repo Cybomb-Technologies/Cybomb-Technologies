@@ -9,6 +9,8 @@ import DevelopmentProcess from "../../../common-ui/dataui/development-process";
 import contactUsImg from "./../../../../assets/contact/contact-us-img2.jpg";
 import scheduleConsultImg from "./../../../../assets/contact/schedule-a-consultation-img3.jpg";
 import StrategyToolsSection from "./strategy-techtool";
+import AboutTech from "../../../common-ui/dataui/about-tech";
+
 const WhatWeOffers = [
   {
     title: "Digital Transformation Planning",
@@ -78,6 +80,51 @@ const useCases = [
   "Evaluating whether to build or buy a software platform",
 ];
 
+const strategyConsultingDescription = [
+  {
+    name: "Power BI",
+    description:
+      "A powerful business intelligence platform by Microsoft that enables interactive dashboards, data visualizations, and real-time reporting for decision-making.",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg",
+    iconColors: "linear-gradient(135deg, #fff4d6, #fffbe6)", // light yellow tones
+  },
+  {
+    name: "Tableau",
+    description:
+      "A leading data visualization and analytics platform that helps consultants and businesses create interactive dashboards and uncover actionable insights.",
+    icon: "https://cdn.worldvectorlogo.com/logos/tableau-software.svg",
+    iconColors: "linear-gradient(135deg, #FFEFE5, #FFF8F2)", // very light orange/cream
+  },
+  {
+    name: "Qlik Sense",
+    description:
+      "A modern business intelligence and data analytics platform that enables self-service visualization, interactive dashboards, and guided analytics for strategy teams.",
+    icon: "https://logodix.com/logo/2096842.png",
+    iconColors: "linear-gradient(135deg, #e6f8ef, #f5fdf9)", // pale green background
+  },
+  {
+    name: "Looker",
+    description:
+      "A cloud-based business intelligence tool that helps organizations explore, analyze, and share real-time data insights with a focus on scalability and collaboration.",
+    icon: "https://www.svgrepo.com/show/354012/looker-icon.svg",
+    iconColors: "linear-gradient(135deg, #ede8ff, #f9f7ff)", // light lavender/purple
+  },
+  {
+    name: "Miro",
+    description:
+      "A collaborative online whiteboard platform used in consulting for workshops, brainstorming sessions, and strategic planning with remote and hybrid teams.",
+    icon: "https://www.svgrepo.com/show/517866/miro.svg",
+    iconColors: "linear-gradient(135deg, #fff7d6, #fffceb)", // very soft yellow
+  },
+  {
+    name: "Confluence",
+    description:
+      "A collaboration and knowledge management tool by Atlassian that helps consulting teams document processes, share insights, and manage strategic projects.",
+    icon: "https://cdn.worldvectorlogo.com/logos/confluence-1.svg",
+    iconColors: "linear-gradient(135deg, #e6f0ff, #f7fbff)", // pale blue gradient
+  },
+];
+
 function Stratergycontent() {
   return (
     <section>
@@ -102,7 +149,7 @@ function Stratergycontent() {
       <WhatWeOffer title="What We Offer" services={WhatWeOffers} />
 
       <StrategyToolsSection />
-
+      <AboutTech technologies={strategyConsultingDescription} />
       <WhyChooseUs ChooseUs={whychooseus} />
 
       <ScheduleConsultation
