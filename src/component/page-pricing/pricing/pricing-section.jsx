@@ -19,11 +19,11 @@ const PricingSection = () => {
   {/* Starter Plan */}
   <Col lg={4} md={12} className="mb-4">
     <div className={`${styles.pricingCard} ${styles.starter}`}>
-              <h4 className={styles.planTitle}>Starter Website</h4>
+              <h4 className={styles.planTitle}>Economy Website</h4>
               <p className={styles.planSubtitle}>
-                Best for individuals, startups, and small businesses looking to get online quickly
+                One page website
               </p>
-              <h3 className={styles.planPrice}>$1,500<span className={styles.pricePeriod}>one-time</span></h3>
+              <h3 className={styles.planPrice}>₹6,000<span className={styles.pricePeriod}>one-time</span></h3>
               <p className={styles.priceNote}>
                 One-time Fee – No Hidden Charges
               </p>
@@ -31,23 +31,30 @@ const PricingSection = () => {
               <ul className={styles.featuresList}>
                 <li>
                   <FaMobile className={styles.featureIcon} />
-                  5 Custom Pages
+                  Onepage website
                 </li>
                 <li>
                   <FaGlobe className={styles.featureIcon} />
-                  Responsive Design
+                  500 MB hosting
                 </li>
                 <li>
                   <FaChartLine className={styles.featureIcon} />
-                  Basic SEO Setup
+                  Mobile responsive
                 </li>
                 <li>
                   <FaEnvelope className={styles.featureIcon} />
-                  Contact Form
+                  Enquiry form
                 </li>
                 <li>
                   <FaCheck className={styles.featureIcon} />
-                  30 Days Free Support & Maintenance
+                  Click to call option
+                </li>
+                 <li>
+                  <FaChartLine className={styles.featureIcon} />
+                   <li>
+                  <FaChartLine className={styles.featureIcon} />
+                  1 Content revision
+                </li>
                 </li>
               </ul>
               
