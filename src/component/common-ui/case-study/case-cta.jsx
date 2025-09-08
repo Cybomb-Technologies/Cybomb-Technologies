@@ -1,4 +1,3 @@
-import React from 'react';
 import './case-cta.css';
 
 const CaseCTA = () => {

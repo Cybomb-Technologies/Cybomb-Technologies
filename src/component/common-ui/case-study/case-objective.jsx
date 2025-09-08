@@ -1,6 +1,5 @@
-import React from "react";
 import "./case-objectives.css";
-import objectiveImg from "./../../assets/technologies/it-support-matters-img.jpg"; // Replace with your image path
+import objectiveImg from "../../../assets/technologies/it-support-matters-img.jpg"; // Replace with your image path
 // it-support-matters-img.jpg
 const CaseObjective = () => {
   return (
