@@ -147,7 +147,7 @@ function Nav1() {
 
                  <li className={styles.navItem}>
                   <Link
-                    to="/pricing-page"
+                    to="/pricing"
                     className={styles.navLink}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

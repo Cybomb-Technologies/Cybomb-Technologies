@@ -63,7 +63,7 @@ const emp2Routes = (
     <Route path="/services/api-security" element={<ApiSecurity/>}/>
     <Route path="/services/cloud-security-services" element={<CloudSecurity/>}/>
     <Route path="/services/network-penetration-testing" element={<NetworkPen/>}/>
-    <Route path="/pricing-page" element={<PricingPage/>}/>
+    <Route path="/pricing" element={<PricingPage/>}/>
     <Route path="/services/unity" element={<UnityGames/>}/>
     <Route path="/services/unreal" element={<UnrealGames/>}/>
     <Route path="/" element={<CybombBlog />} />
