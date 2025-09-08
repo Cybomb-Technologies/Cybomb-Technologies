@@ -4,6 +4,37 @@ import styles from "./footer1.module.css";
 import DpiitLogo from "./../../assets/footer/dpiit-logo.png";
 import DgftLogo from "./../../assets/footer/dgft-logo.png";
 import AicteLogo from "./../../assets/footer/aicte-logo.png";
+import { useEffect } from "react";
+
+// function useIsMobile(breakpoint = 1024) {
+//   const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
+
+//   useEffect(() => {
+//     const handleResize = () => setIsMobile(window.innerWidth < breakpoint);
+//     window.addEventListener("resize", handleResize);
+//     return () => window.removeEventListener("resize", handleResize);
+//   }, [breakpoint]);
+
+//   return isMobile;
+// }
+
+function useDeviceType() {
+  const [device, setDevice] = useState(getDeviceType());
+
+  function getDeviceType() {
+    if (window.innerWidth < 768) return "mobile";
+    if (window.innerWidth < 1024) return "tablet";
+    return "desktop";
+  }
+
+  useEffect(() => {
+    const handleResize = () => setDevice(getDeviceType());
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return device;
+}
 
 
 const API_URL = import.meta.env.VITE_API_BASE; 
@@ -37,6 +68,9 @@ function Footer1({
   const [email, setEmail] = useState();
   const [status, setStatus] = useState("");
 
+  //const isMobile = useIsMobile();
+  const device = useDeviceType();
+
   const handleSubscribe = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
@@ -60,11 +94,46 @@ function Footer1({
     }
   };
 
+    let addressText = "";
+      if (device === "desktop") {
+        addressText = `Cybomb Technologies LLP,
+                   Prime Plaza No.54/1, 1st street, Sripuram colony,
+                   St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India`;
+      } else if (device === "tablet") {
+        addressText = `Cybomb Technologies LLP,
+                       Prime Plaza No.54/1, 1st street,
+                       Sripuram colony, St. Thomas Mount,
+                        Chennai, TN - 600 016, India`;
+      } else {
+        // mobile
+        addressText = `Cybomb Technologies LLP,
+                       Prime Plaza No.54/1, 1st street,
+                       Sripuram colony, St. Thomas Mount,
+                       Chennai, Tamil Nadu - 600 016, India`;
+        }
+
   const contactItems = [
+    // {
+    //   icon: "bi-geo-alt-fill",
+    //   label: "Address",
+    //   //text: "",
+    //   //text: "Cybomb Technologies LLP, Prime Plaza No.54/1, 1st street, Sripuram colony, St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India",
+    //         text: isMobile
+    //     ? `Cybomb Technologies LLP,
+    //         Prime Plaza No.54/1, 1st street,
+    //         Sripuram colony, St. Thomas Mount,
+    //         Chennai, Tamil Nadu - 600 016, India`
+    //                 : `Cybomb Technologies LLP,
+    //         Prime Plaza No.54/1, 1st street, Sripuram colony,
+    //         St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India`,
+    // },
+
     {
       icon: "bi-geo-alt-fill",
       label: "Address",
-      // text: "Cybomb Technologies LLP, Prime Plaza No.54/1, 1st street, Sripuram colony, St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India",
+    
+      text: addressText,
+            
     },
     {
       icon: "bi-telephone-fill",

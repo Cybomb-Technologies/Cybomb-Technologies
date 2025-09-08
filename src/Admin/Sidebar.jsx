@@ -40,7 +40,7 @@ function Sidebar() {
           </li>
           <li className="my-2">
             <Link
-              to="/admin/careers"
+              to="/admin/career-page"
               className="text-white text-decoration-none d-block p-2 rounded hover-bg-light"
             >
               <i className="fas fa-briefcase me-2"></i>Career Applications

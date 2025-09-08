@@ -46,8 +46,7 @@ const techLogos = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
 
   // Automation
-  Zapier:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLQDKOSSTsLcrYcEo7qDL0rcAYKMlNZk18Xg&s",
+  Zapier: "https://img.icons8.com/color/512/zapier.png",
   Make: "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/make-color.png",
   LangChain:
     "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/langchain-ipuhh4qo1jz5ssl4x0g2a.png/langchain-dp1uxj2zn3752pntqnpfu2.png?_a=DATAg1AAZAA0",

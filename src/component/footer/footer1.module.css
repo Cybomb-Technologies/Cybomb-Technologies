@@ -822,7 +822,8 @@ ul {
   }
  
   .addressText::before {
-    content: "Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street, Sripuram colony,\A St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India";
+    content: "";
+    /* Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street, Sripuram colony,\A St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India */
     white-space: pre;
     display: block;
   }
@@ -841,7 +842,8 @@ ul {
   }
  
   .addressText::before {
-    content: "Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street,\A Sripuram colony, St. Thomas Mount,\A Chennai, Tamil Nadu - 600 016, India";
+    content: "";
+    /* Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street,\A Sripuram colony, St. Thomas Mount,\A Chennai, Tamil Nadu - 600 016, India */
     white-space: pre;
     display: block;
   }
@@ -853,7 +855,8 @@ ul {
   }
  
   .addressText::before {
-    content: "Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street,\A Sripuram colony, St. Thomas Mount,\A Chennai, Tamil Nadu - 600 016, India";
+    content: "";
+    /* Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street,\A Sripuram colony, St. Thomas Mount,\A Chennai, Tamil Nadu - 600 016, India */
     white-space: pre;
     display: block;
   }
@@ -874,7 +877,7 @@ ul {
   }
 
   .footerTopRow2 {
-    grid-template-columns: 15% 20% 15% 25%;
+    grid-template-columns: 20% 20% 20% 38%;
     gap: 1rem;
     padding: 1rem;
   }

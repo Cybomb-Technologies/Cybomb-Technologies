@@ -15,6 +15,7 @@ const allowedOrigins = [
   'http://localhost:5173',
   'https://cybomb.com',
   'https://www.cybomb.com',
+   'https://api.cybomb.com', 
   'http://147.93.111.96:5000'
 ];
  
@@ -72,6 +73,8 @@ app.use("/api/banner-mail", bannerMailRoute);
 app.use("/api/career", careerMailRoute);
 app.use("/api/footer-mail",footerMailRoute);
 app.use("/admin", adminRegisterRoute);
+app.use("/uploads", express.static("public/uploads"));
+
 
  
 // Serve frontend in production

@@ -4,6 +4,7 @@ import Login from "./Login/login";
 import ProtectedRoute from "./ProtectedRoute";
 import AdminHome from "./pages/Home";
 import FormSubmission from "./pages/Form-submission/Form-submission";
+import CareerPage from "./pages/Career-Page/Career-Page";
 
 const AdminRoutes = (
   <>
@@ -23,6 +24,8 @@ const AdminRoutes = (
       <Route index element={<AdminHome />} />        {/* /admin */}
       <Route path="home" element={<AdminHome />} />
       <Route path="form-submission" element={<FormSubmission/>} />
+       <Route path="career-page" element={<CareerPage/>} />
+      
         {/* /admin/home */}
     </Route>
   </>

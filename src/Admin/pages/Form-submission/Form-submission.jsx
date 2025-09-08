@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+const API_URL = import.meta.env.VITE_API_BASE; 
 
 function FormSubmission() {
   const [activeTab, setActiveTab] = useState("all");
@@ -11,9 +12,9 @@ function FormSubmission() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const bannerRes = await fetch("http://localhost:5000/api/banner-mail");
-        const popupRes = await fetch("http://localhost:5000/api/popup-mail");
-        const homeRes = await fetch("http://localhost:5000/api/send-mail");
+        const bannerRes = await fetch(`${API_URL}/api/banner-mail`);
+        const popupRes = await fetch(`${API_URL}/api/popup-mail`);
+        const homeRes = await fetch(`${API_URL}/api/send-mail`);
 
         const bannerJson = await bannerRes.json();
         const popupJson = await popupRes.json();
@@ -77,65 +78,68 @@ function FormSubmission() {
     ));
 
   return (
-    <div style={{ padding: "0px 10px 10px 30px" }}>
-      <div className="card border-0">
-        <h3 style={{ textAlign: "center", color: "#007bff", padding: "10px 0px" }}>
-          Form Submission Data
-        </h3>
+    <div className="form-submission-container">
+      <div className="card header-card">
+        <h6 className="dashboard-title">
+          Form Submission Dashboard
+        </h6>
+        {/* <p className="dashboard-subtitle">View and manage all form submissions</p> */}
       </div>
 
-      <div className="d-flex justify-content-between align-items-center mb-4 mt-4">
-        <ul className="nav nav-pills">
-          <li className="nav-item">
-            <button
-              className={`nav-link ${activeTab === "all" ? "active" : ""}`}
-              onClick={() => setActiveTab("all")}
-            >
-              All
-            </button>
-          </li>
-          <li className="nav-item">
-            <button
-              className={`nav-link ${activeTab === "banner" ? "active" : ""}`}
-              onClick={() => setActiveTab("banner")}
-            >
-              Banner Form
-            </button>
-          </li>
-          <li className="nav-item">
-            <button
-              className={`nav-link ${activeTab === "popup" ? "active" : ""}`}
-              onClick={() => setActiveTab("popup")}
-            >
-              Popup Form
-            </button>
-          </li>
-          <li className="nav-item">
-            <button
-              className={`nav-link ${activeTab === "home" ? "active" : ""}`}
-              onClick={() => setActiveTab("home")}
-            >
-              Home Contact
-            </button>
-          </li>
-        </ul>
-
-        <input
-          type="text"
-          className="form-control"
-          style={{ width: "250px" }}
-          placeholder="Search..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
+      <div className="dashboard-controls">
+        <div className="row">
+          <div className="col-md-8 col-sm-12">
+            <div className="tab-container">
+              <button
+                className={`tab-btn ${activeTab === "all" ? "active" : ""}`}
+                onClick={() => setActiveTab("all")}
+              >
+                <i className="fas fa-table"></i> All Submissions
+              </button>
+              <button
+                className={`tab-btn ${activeTab === "banner" ? "active" : ""}`}
+                onClick={() => setActiveTab("banner")}
+              >
+                <i className="fas fa-flag"></i> Banner Form
+              </button>
+              <button
+                className={`tab-btn ${activeTab === "popup" ? "active" : ""}`}
+                onClick={() => setActiveTab("popup")}
+              >
+                <i className="fas fa-window-restore"></i> Popup Form
+              </button>
+              <button
+                className={`tab-btn ${activeTab === "home" ? "active" : ""}`}
+                onClick={() => setActiveTab("home")}
+              >
+                <i className="fas fa-home"></i> Home Contact
+              </button>
+            </div>
+          </div>
+          <div className="col-md-4 col-sm-12">
+            <div className="search-container">
+              <i className="fas fa-search search-icon"></i>
+              <input
+                type="text"
+                className="search-input"
+                placeholder="Search submissions..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       {loading ? (
-        <p style={{ textAlign: "center", fontSize: "18px" }}>Loading...</p>
+        <div className="loading-container">
+          <div className="spinner"></div>
+          <p>Loading form submissions...</p>
+        </div>
       ) : (
-        <div className="table-responsive shadow-sm" style={{ borderRadius: "10px", overflow: "hidden" }}>
-          <table className="table table-hover table-striped">
-            <thead style={{ backgroundColor: "#007bff", color: "#fff" }}>
+        <div className="table-container">
+          <table className="submissions-table">
+            <thead>
               <tr>
                 {activeTab === "banner" &&
                   ["Full Name", "Email", "Phone", "Company", "Requirement", "Date"].map(
@@ -160,9 +164,9 @@ function FormSubmission() {
                 <>
                   {bannerData.length > 0 && (
                     <>
-                      <tr style={{ backgroundColor: "#e9ecef" }}>
-                        <td colSpan="10" style={{ fontWeight: "bold" }}>
-                          Banner Form
+                      <tr className="table-section-header">
+                        <td colSpan="10">
+                          <i className="fas fa-flag"></i> Banner Form Submissions
                         </td>
                       </tr>
                       {renderBannerTable(bannerData)}
@@ -170,9 +174,9 @@ function FormSubmission() {
                   )}
                   {popupData.length > 0 && (
                     <>
-                      <tr style={{ backgroundColor: "#e9ecef" }}>
-                        <td colSpan="10" style={{ fontWeight: "bold" }}>
-                          Popup Form
+                      <tr className="table-section-header">
+                        <td colSpan="10">
+                          <i className="fas fa-window-restore"></i> Popup Form Submissions
                         </td>
                       </tr>
                       {renderPopupTable(popupData)}
@@ -180,9 +184,9 @@ function FormSubmission() {
                   )}
                   {homeContactData.length > 0 && (
                     <>
-                      <tr style={{ backgroundColor: "#e9ecef" }}>
-                        <td colSpan="10" style={{ fontWeight: "bold" }}>
-                          Home Contact
+                      <tr className="table-section-header">
+                        <td colSpan="10">
+                          <i className="fas fa-home"></i> Home Contact Submissions
                         </td>
                       </tr>
                       {renderHomeTable(homeContactData)}
@@ -192,22 +196,208 @@ function FormSubmission() {
               )}
             </tbody>
           </table>
+          
+          {bannerData.length === 0 && popupData.length === 0 && homeContactData.length === 0 && (
+            <div className="no-data">
+              <i className="fas fa-inbox"></i>
+              <h3>No form submissions yet</h3>
+              <p>Form submissions will appear here once users start submitting forms.</p>
+            </div>
+          )}
         </div>
       )}
 
       <style>
         {`
-          .tab-gradient {
-            background: linear-gradient(45deg, #6a11cb, #2575fc);
-            color: #fff;
-            border-radius: 50px;
-            padding: 8px 25px;
-            margin-right: 10px;
-            transition: 0.3s;
+          .form-submission-container {
+            padding: 10px 5px 20px 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            min-height: 100vh;
           }
-          .tab-gradient.active {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transform: scale(1.05);
+          
+          .header-card {
+            background: linear-gradient(120deg, #4e54c8, #8f94fb);
+            color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+          }
+          
+          .dashboard-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 5px;
+          }
+          
+          .dashboard-subtitle {
+            opacity: 0.9;
+            margin-bottom: 0;
+          }
+          
+          .dashboard-controls {
+            margin-bottom: 24px;
+          }
+          
+          .tab-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+          }
+          
+          .tab-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background-color: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            color: #495057;
+            font-weight: 500;
+            transition: all 0.2s ease;
+          }
+          
+          .tab-btn:hover {
+            background-color: #f8f9fa;
+            border-color: #c6c7cb;
+          }
+          
+          .tab-btn.active {
+            background-color: #4e54c8;
+            color: white;
+            border-color: #4e54c8;
+          }
+          
+          .search-container {
+            position: relative;
+          }
+          
+          .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+          }
+          
+          .search-input {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          }
+          
+          .search-input:focus {
+            border-color: #4e54c8;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(78, 84, 200, 0.25);
+          }
+          
+          .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+          }
+          
+          .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4e54c8;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 16px;
+          }
+          
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+          
+          .table-container {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+          }
+          
+          .submissions-table {
+            width: 100%;
+            border-collapse: collapse;
+          }
+          
+          .submissions-table th {
+            background-color: #4e54c8;
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+          }
+          
+          .submissions-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e9ecef;
+          }
+          
+          .submissions-table tr:last-child td {
+            border-bottom: none;
+          }
+          
+          .submissions-table tr:hover {
+            background-color: #f8f9fa;
+          }
+          
+          .table-section-header {
+            background-color: #e9ecef !important;
+          }
+          
+          .table-section-header td {
+            font-weight: 600;
+            font-size: 16px;
+            padding: 12px 16px;
+          }
+          
+          .no-data {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+          }
+          
+          .no-data i {
+            font-size: 56px;
+            margin-bottom: 16px;
+            color: #ced4da;
+          }
+          
+          .no-data h3 {
+            margin-bottom: 8px;
+            color: #495057;
+          }
+          
+          @media (max-width: 768px) {
+            .tab-container {
+              margin-bottom: 16px;
+            }
+            
+            .tab-btn {
+              flex: 1;
+              justify-content: center;
+              min-width: 120px;
+            }
+            
+            .submissions-table {
+              display: block;
+              overflow-x: auto;
+            }
+            
+            .header-card {
+              text-align: center;
+            }
           }
         `}
       </style>
