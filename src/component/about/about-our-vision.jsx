@@ -7,7 +7,7 @@ function Aboutourvision() {
         <div className="container">
           <div className="row">
             <div className="col-sm-7 mx-auto">
-              <h2 className="text-center text-primary">🚀Our vision</h2>
+              <h2 className="text-center text-primary">Our vision</h2>
               <div className="card mt-5 ourvision-card">
                 <p className="p-4 mb-0 text-black fs-5 border-0 shadow">
                   To be the leading technology partner for innovative businesses

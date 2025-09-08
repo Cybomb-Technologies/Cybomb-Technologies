@@ -1,0 +1,116 @@
+.case-banner {
+  display: flex;
+  flex: 1 1 50%;
+  width: 100%;
+  background: #fff; /* White background for full section */
+  margin: 8rem 4rem 4rem 4rem;
+  padding: 0;
+  height: 320px;
+  justify-content: center;
+  
+}
+
+/* LEFT SECTION */
+.banner-left {
+  flex: 1;
+  max-width: max-content;
+  height: 500px;
+  
+  /* background-size: cover; */
+  position: relative;
+  /* display: flex; */
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem 34rem 4rem 3rem;;
+  background: linear-gradient(to right, rgba(29, 78, 216, 0.9), rgba(236, 72, 153, 0.8));
+  color: #fff;
+  border-right: #fff 14px solid;
+}
+/* 
+.banner-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(29, 78, 216, 0.9), rgba(236, 72, 153, 0.8));
+  z-index: 1;
+} */
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 380px;
+}
+
+.banner-content h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.banner-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5rem;
+  color: #e5e7eb;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #1d4ed8;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e5e7eb;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* RIGHT SECTION */
+.banner-right {
+  flex: 1;
+  max-width: max-content;
+  height: 500px;
+  background: #04394e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    justify-content: flex-start;
+    padding-right: 60px;
+    color: #fff;
+    padding: 4rem;
+}
+
+
+.banner-right p {
+  max-width: 360px;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
