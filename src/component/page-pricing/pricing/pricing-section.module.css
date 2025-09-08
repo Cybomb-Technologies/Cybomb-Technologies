@@ -298,7 +298,7 @@
   
   /* Center the enterprise card properly */
   .scrollRow > :nth-child(3) {
-    display: flex;
+    /* display: flex; */
     justify-self: center;
   }
 }

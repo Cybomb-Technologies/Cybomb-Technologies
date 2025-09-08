@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom"; 
-import Banner from "../common-ui/design-and-development/banner";
+import Portfoliobanner from "./portfolio-banner.jsx";
 import PortfolioItem from "./portfolio-items.jsx";
 import styles from "./portfolio-content.module.css";
 import PortfolioUseCase from "./portfolio-usecase.jsx";
@@ -116,7 +116,7 @@ const portfolioItems = [
       "The system covers student enrollment, attendance, exams, fees, and timetable management – all under one secure dashboard.",
       "With separate portals for Admin, Teachers, Students, and Parents, the platform ensures smooth communication and effective digital learning management."
     ],
-    previewLink: "/demo/school-mangement",
+    previewLink: "/demo/school-mangement/",
     animationDirection: "fade-left",
     imagePosition: "left",
     style: {
@@ -137,7 +137,7 @@ const portfolioItems = [
       "Users can book rides in real-time, track driver location, calculate fares, and make secure online payments through a seamless mobile interface.",
       "The platform includes dedicated apps for users and drivers, along with an admin panel to manage bookings, payments, and support efficiently."
     ],
-    previewLink: "/demo/taxi-booking-app",
+    previewLink: "/demo/taxi-booking-app/",
     animationDirection: "fade-right",
     imagePosition: "right",
     style: {
@@ -158,7 +158,7 @@ const portfolioItems = [
       "The system features property search, image galleries, location maps, and enquiry forms – all optimized for mobile and desktop.",
       "With admin control, agent logins, and real-time listing updates, the platform ensures a smooth experience for both property owners and buyers."
     ],
-    previewLink: "/demo/real-estate-app",
+    previewLink: "/demo/real-estate-app/",
     animationDirection: "fade-left",
     imagePosition: "left",
    style: {
@@ -412,12 +412,7 @@ const handlePageChange = (newPage) => {
 
   return (
     <>
-      <Banner 
-        heading="Portfolio"
-        subtext="Delivering Results. Driving Innovation."
-        buttonText="Book Free Consultation"
-        note="From startups to enterprises, we've helped clients across industries bring their digital vision to life. Explore some of our recent projects that reflect our versatility, expertise, and commitment to excellence."
-      />
+      <Portfoliobanner/>
     
        <section className={styles.portfolioContainer} ref={portfolioSectionRef} id="Portfolio">
         <div className="container">
