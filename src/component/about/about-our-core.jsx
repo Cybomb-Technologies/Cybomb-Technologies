@@ -4,7 +4,7 @@ function Aboutourcore() {
     <>
       <section className="core-value" style={{ padding: "60px 0px"}}>
         <div className="container">
-          <h2 className="text-center text-primary">📊 Our Core Values</h2>
+          <h2 className="text-center text-primary"> Our Core Values</h2>
           <p className="text-center text-white">
             Numbers that speak for our commitment to excellence
           </p>

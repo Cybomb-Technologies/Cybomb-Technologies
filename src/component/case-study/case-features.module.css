@@ -1,0 +1,64 @@
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.card {
+  width: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+/* Top hexagon section */
+.top {
+  padding: 50px 20px 60px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  position: relative;
+  border-color: black 1px solid !important;
+  top: 67px;
+}
+
+.icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Bottom section */
+.bottom {
+  padding: 120px 15px 15px 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-top: -20px;
+  color: #fff;
+}
+
+.rectangleContent {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-top: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+  }
+}
