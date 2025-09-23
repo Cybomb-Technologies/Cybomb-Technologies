@@ -175,7 +175,7 @@ function Home() {
     if (diffMins < 60) {
       return `${diffMins} min ago`;
     } else if (diffHours < 24) {
-      return `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
+      return `${diffHours} hr${diffHours > 1 ? 's' : ''} ago`;
     } else {
       return date.toLocaleDateString();
     }
@@ -422,139 +422,121 @@ function Home() {
       {/* Blog Management - Now Dynamic */}
       {/* Blog Management - Table Format */}
       <div className="row">
-        <div className="col">
-          <div className="card shadow-sm mb-4">
-            <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-              <h6 className="m-0 fw-bold text-primary">Blog Management</h6>
+  <div className="col">
+    <div className="card shadow-sm mb-4">
+      <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+        <h6 className="m-0 fw-bold text-primary">Blog Management</h6>
+        <Link to="/admin/admin-blog">
+          <button className="btn btn-sm btn-outline-primary">
+            <i className="fas fa-plus me-1"></i>Manage Blogs
+          </button>
+        </Link>
+      </div>
+      <div className="card-body p-0">
+        {loading ? (
+          <div className="text-center py-5">
+            <div className="spinner-border text-primary" style={{width: '3rem', height: '3rem'}} role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
+            <p className="mt-3 text-muted">Loading blogs...</p>
+          </div>
+        ) : recentBlogs.length > 0 ? (
+          <div className="table-container">
+            <table className="table table-hover align-middle mb-0">
+              <thead className="table-light">
+                <tr>
+                  <th scope="col" className="ps-4" style={{width: '30%'}}>Title</th>
+                  <th scope="col" style={{width: '15%'}}>Publish Date</th>
+                  <th scope="col" style={{width: '25%'}}>Description</th>
+                  <th scope="col" style={{width: '10%'}}>Status</th>
+                  <th scope="col" className="pe-4" style={{width: '10%'}}>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {recentBlogs.map((blog) => (
+                  <tr key={blog._id} className="blog-table-row">
+                    <td className="ps-4">
+                      <div className="d-flex align-items-center">
+                        {blog.image && (
+                          <img 
+                            src={`${API_URL}${blog.image}`} 
+                            alt={blog.title}
+                            className="blog-thumbnail me-3"
+                            style={{
+                              width: '50px',
+                              height: '40px',
+                              objectFit: 'cover',
+                              borderRadius: '6px'
+                            }}
+                          />
+                        )}
+                        <div className="flex-grow-1 min-w-0">
+                          <h6 className="mb-1 fw-semibold text-dark text-truncate" style={{fontSize: '0.95rem'}}>
+                            {blog.title.slice(0,20)}
+                          </h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div className="d-flex flex-column">
+                        <span className="fw-medium text-dark">
+                          {new Date(blog.date).toLocaleDateString()}
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <p className="mb-0 text-muted text-truncate" style={{fontSize: '0.875rem', maxWidth: '200px'}}>
+                        {blog.description.slice(0, 60)}...
+                      </p>
+                    </td>
+                    <td>
+                      <span className="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1">
+                        <i className="fas fa-check-circle me-1"></i>Published
+                      </span>
+                    </td>
+                    <td className="pe-4">
+                      <div className="d-flex gap-2 justify-content-center">
+                        <Link 
+                          to="/admin/admin-blog" 
+                          className="btn btn-sm btn-outline-primary px-2"
+                          title="Edit Blog"
+                          style={{minWidth: '40px'}}
+                        >
+                          <i className="fas fa-edit"></i>
+                        </Link>
+                        <button 
+                          className="btn btn-sm btn-outline-danger px-2"
+                          title="Delete Blog"
+                          onClick={() => handleBlogDelete(blog._id)}
+                          style={{minWidth: '40px'}}
+                        >
+                          <i className="fas fa-trash"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <div className="text-center py-5">
+            <div className="empty-state">
+              <i className="fas fa-blog fa-4x text-muted mb-3"></i>
+              <h5 className="text-muted">No Blog Posts Found</h5>
+              <p className="text-muted mb-4">Get started by creating your first blog post</p>
               <Link to="/admin/admin-blog">
-                <button className="btn btn-sm btn-outline-primary">
-                  <i className="fas fa-plus me-1"></i>Manage Blogs
+                <button className="btn btn-primary">
+                  <i className="fas fa-plus me-2"></i>Create First Blog
                 </button>
               </Link>
             </div>
-            <div className="card-body">
-              {loading ? (
-                <div className="text-center py-5">
-                  <div className="spinner-border text-primary" style={{width: '3rem', height: '3rem'}} role="status">
-                    <span className="visually-hidden">Loading...</span>
-                  </div>
-                  <p className="mt-3 text-muted">Loading blogs...</p>
-                </div>
-              ) : recentBlogs.length > 0 ? (
-                <div className="table-container">
-                  <table className="table table-hover align-middle">
-                    <thead className="table-light">
-                      <tr>
-                        <th scope="col" style={{width: '30%'}}>Title</th>
-                        <th scope="col" style={{width: '20%'}}>Publish Date</th>
-                        <th scope="col" style={{width: '25%'}}>Description</th>
-                        <th scope="col" style={{width: '10%'}}>Status</th>
-                        <th scope="col" style={{width: '15%'}}>Metrics</th>
-                        <th scope="col" style={{width: '10%'}}>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {recentBlogs.map((blog) => (
-                        <tr key={blog._id} className="blog-table-row">
-                          <td>
-                            <div className="d-flex align-items-center">
-                              {blog.image && (
-                                <img 
-                                  src={`${API_URL}${blog.image}`} 
-                                  alt={blog.title}
-                                  className="blog-thumbnail me-3"
-                                  style={{
-                                    width: '50px',
-                                    height: '40px',
-                                    objectFit: 'cover',
-                                    borderRadius: '6px'
-                                  }}
-                                />
-                              )}
-                              <div>
-                                <h6 className="mb-0 fw-semibold text-dark" style={{fontSize: '0.95rem'}}>
-                                  {blog.title}
-                                </h6>
-                                <small className="text-muted">
-                                  {blog.description.slice(0, 30)}...
-                                </small>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div className="d-flex flex-column">
-                              <span className="fw-medium text-dark">
-                                {new Date(blog.date).toLocaleDateString()}
-                              </span>
-                              {/* <small className="text-muted">
-                                {new Date(blog.date).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
-                              </small> */}
-                            </div>
-                          </td>
-                          <td>
-                            <p className="mb-0 text-muted" style={{fontSize: '0.875rem'}}>
-                              {blog.description.slice(0, 60)}...
-                            </p>
-                          </td>
-                          <td>
-                            <span className="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2">
-                              <i className="fas fa-check-circle me-1"></i>Published
-                            </span>
-                          </td>
-                          <td>
-                            <div className="d-flex justify-content-around text-center">
-                              <div>
-                                <div className="fw-bold text-primary">{blog.views || 0}</div>
-                                <small className="text-muted">Views</small>
-                              </div>
-                              <div className="mx-2">
-                                <div className="fw-bold text-info">{blog.comments || 0}</div>
-                                <small className="text-muted">Comments</small>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div className="d-flex gap-2">
-                              <Link 
-                                to="/admin/admin-blog" 
-                                className="btn btn-sm btn-outline-primary"
-                                title="Edit Blog"
-                              >
-                                <i className="fas fa-edit"></i>
-                              </Link>
-                              <button 
-                                className="btn btn-sm btn-outline-danger"
-                                title="Delete Blog"
-                                onClick={() => handleBlogDelete(blog._id)}
-                              >
-                                <i className="fas fa-trash"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              ) : (
-                <div className="text-center py-5">
-                  <div className="empty-state">
-                    <i className="fas fa-blog fa-4x text-muted mb-3"></i>
-                    <h5 className="text-muted">No Blog Posts Found</h5>
-                    <p className="text-muted mb-4">Get started by creating your first blog post</p>
-                    <Link to="/admin/adminblog">
-                      <button className="btn btn-primary">
-                        <i className="fas fa-plus me-2"></i>Create First Blog
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
           </div>
-        </div>
+        )}
       </div>
-
+    </div>
+  </div>
+</div>
       {/* Quick Actions - No changes */}
       {/* <div className="row">
         <div className="col-12">
@@ -631,8 +613,8 @@ function Home() {
             border-left: 4px solid #36b9cc !important;
           }
           
-          .stats-card-warning:hover {
-            border-left: 4px solid #f6c23e !important;
+          .stats-card-newsletter:hover {
+            border-left: 4px solid #fbb605ff !important;
           }
           
           .card {
@@ -699,6 +681,9 @@ function Home() {
     width: 100%;
     table-layout: fixed; /* This ensures fixed column widths */
     margin-bottom: 0;
+  }
+    .bg-warning {
+    background-color: rgb(7, 143, 144) !important;
   }
           
           @media (max-width: 768px) {

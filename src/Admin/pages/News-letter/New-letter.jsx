@@ -352,27 +352,31 @@ function Newsletter() {
         {/* Stats Cards */}
         <div className="row mb-4">
           <div className="col-md-4">
-            <div className="stats-card">
-              <div className="stat-number">{stats.total}</div>
-              <div className="stat-label">Total Subscribers</div>
-              <i className="fas fa-users fa-2x opacity-50 float-end mt-3"></i>
-            </div>
-          </div>
-          <div className="col-md-4">
+  <div className="stats-card d-flex justify-content-between align-items-center">
+    <div>
+      <div className="stat-number">{stats.total}</div>
+      <div className="stat-label">Total Subscribers</div>
+    </div>
+    <i className="fas fa-users fa-2x opacity-50"></i>
+  </div>
+</div>
+          {/* <div className="col-md-4">
             <div className="stats-card">
               <div className="stat-number">{stats.active}</div>
               <div className="stat-label">Active Subscribers</div>
               <i className="fas fa-check-circle fa-2x opacity-50 float-end mt-3"></i>
             </div>
-          </div>
+          </div> */}
           <div className="col-md-4">
-            <div className="stats-card">
+            <div className="stats-card d-flex justify-content-between align-items-center">
+              <div>
               <div className="stat-number">{stats.today}</div>
               <div className="stat-label">New Today</div>
-              <i className="fas fa-calendar-day fa-2x opacity-50 float-end mt-3"></i>
+              </div>
+              <i className="fas fa-calendar-day fa-2x opacity-50"></i>
             </div>
           </div>
-        </div>
+  </div>
 
         {/* Subscriptions Table */}
         <div className="subscriptions-table">
@@ -389,7 +393,7 @@ function Newsletter() {
                 <tr>
                   <th>Email Address</th>
                   <th>Subscription Date</th>
-                  <th>Status</th>
+                  {/* <th>Status</th> */}
                   <th>Actions</th>
                 </tr>
               </thead>
@@ -404,11 +408,11 @@ function Newsletter() {
                       <i className="fas fa-clock me-2 text-muted"></i>
                       {formatDate(subscription.subscribedAt || subscription.createdAt)}
                     </td>
-                    <td>
+                    {/* <td>
                       <span className={`status-badge ${subscription.status === 'unsubscribed' ? 'status-unsubscribed' : 'status-active'}`}>
                         {subscription.status === 'unsubscribed' ? 'Unsubscribed' : 'Active'}
                       </span>
-                    </td>
+                    </td> */}
                     <td>
                       <button
                         className="btn btn-sm delete-btn"
