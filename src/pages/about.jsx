@@ -29,7 +29,7 @@ function About() {
       <Aboutourjourne />
       <Aboutourcore />
       <ManagementTeam />
-      <TeamMember />
+      {/* <TeamMember /> */}
       <Aboutourteam />
       <Aboutnewsletter />
     </>
