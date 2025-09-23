@@ -6,7 +6,7 @@ import AdminHome from "./pages/Home";
 import FormSubmission from "./pages/Form-submission/Form-submission";
 import CareerPage from "./pages/Career-Page/Career-Page";
 import AdminBlog from "./pages/Blog/admin-blog";
-
+import Newsletter from "./pages/News-letter/New-letter";
 const AdminRoutes = (
   <>
     {/* Login page */}
@@ -27,7 +27,7 @@ const AdminRoutes = (
       <Route path="form-submission" element={<FormSubmission/>} />
        <Route path="career-page" element={<CareerPage/>} />
        <Route path="admin-blog" element={<AdminBlog/>} />
-       
+       <Route path="news-letter" element={<Newsletter />} />
       
         {/* /admin/home */}
     </Route>
