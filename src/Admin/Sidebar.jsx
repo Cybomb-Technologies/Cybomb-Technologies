@@ -22,14 +22,14 @@ function Sidebar() {
               <i className="fas fa-tachometer-alt me-2"></i>Dashboard
             </Link>
           </li>
-          <li className="my-2">
+          {/* <li className="my-2">
             <Link
               to="/admin/users"
               className="text-white text-decoration-none d-block p-2 rounded hover-bg-light"
             >
               <i className="fas fa-users me-2"></i>Users
             </Link>
-          </li>
+          </li> */}
           <li className="my-2">
             <Link
               to="/admin/form-submission"
@@ -55,13 +55,22 @@ function Sidebar() {
             </Link>
           </li>
           <li className="my-2">
+         <Link 
+          to="/admin/news-letter" 
+          className="text-white text-decoration-none d-block p-2 rounded hover-bg-light"
+          >
+          
+          <i className="fas fa-newspaper me-2"></i>Newsletter
+        </Link>
+        </li>
+          {/* <li className="my-2">
             <Link
               to="/admin/settings"
               className="text-white text-decoration-none d-block p-2 rounded hover-bg-light"
             >
               <i className="fas fa-cog me-2"></i>Settings
             </Link>
-          </li>
+          </li> */}
         </ul>
         
         <div className="sidebar-footer mt-5 pt-3 border-top border-secondary">
@@ -150,8 +159,8 @@ function Sidebar() {
           
           <div className="sidebar-footer mt-5 pt-3 border-top border-secondary">
             <div className="text-center text-muted small">
-              <p>v1.2.0</p>
-              <p>© 2023 Cybomb</p>
+              {/* <p>v1.2.0</p>
+              <p>© 2025 Cybomb</p> */}
             </div>
           </div>
         </div>
