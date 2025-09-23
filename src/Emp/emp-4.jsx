@@ -47,7 +47,7 @@ import SpringApp from "../component/pages-services/technologies/custom-developme
 import CSharpApp from "../component/pages-services/technologies/custom-development/csharp/csharp";
 import ReactApp from "../component/pages-services/technologies/custom-development/react/reactpage";
 import JavaApp from "../component/pages-services/technologies/custom-development/java/java";
-
+import AiAgentCaseStudy from "../component/page-case-study/ai-agent-case-study/ai-agent-case-study";
 
 import DatabaseApp from "../component/pages-services/technologies/custom-development/database/database";
 import VersionControlApp from "../component/pages-services/technologies/custom-development/versioncontrol/versioncontrolapp";
@@ -108,7 +108,8 @@ const emp4Routes = (
     <Route path="/services/csharp-development-service" element={<CSharpApp/>}/>
     <Route path="/services/react-development-service" element={<ReactApp/>}/>
     <Route path="/services/java-development-service" element={<JavaApp/>}/>
-    
+    {/* <Route path="/case-study" element={<CaseStudy/>}/> */}
+    <Route path="/case-study/ai-agent-case-study" element={<AiAgentCaseStudy/>}/>
 
 
 

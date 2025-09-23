@@ -16,13 +16,13 @@ function TeamMember() {
               <h5 className="team-name text-black">Santhosh K</h5>
               <p className="team-role">Web App Developer</p>
 
-              <a
+              {/* <a
                 href=" https://www.linkedin.com/in/santhosh-k-b8bab724a"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -33,13 +33,13 @@ function TeamMember() {
               </div>
               <h5 className="team-name text-black">Manoj M R</h5>
               <p className="team-role">UI & UX Designer</p>
-               <a
+               {/* <a
                 href="https://www.linkedin.com/in/manoj-m-r/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -56,13 +56,13 @@ function TeamMember() {
               </div>
               <h5 className="team-name text-black">Divyadharshini Subramani</h5>
               <p className="team-role">Website Developer</p>
-              <a
+              {/* <a
                 href=" https://www.linkedin.com/in/divyadharshini-s-80a177348"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -76,14 +76,14 @@ function TeamMember() {
               </div>
               <h5 className="team-name text-black">Divya Baskaran</h5>
               <p className="team-role">Mobile App Developer</p>
-              <a
+              {/* <a
                 href="https://www.linkedin.com/in/divya-baskaran-765572283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
  "
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -94,13 +94,13 @@ function TeamMember() {
               </div>
               <h5 className="team-name text-black">Devashree Salunke</h5>
               <p className="team-role">IOS Developer</p>
-               <a
+               {/* <a
                 href=" https://www.linkedin.com/in/devashree-salunke-1b0308247"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
-              </a>
+              </a> */}
                
             </div>
           </div>

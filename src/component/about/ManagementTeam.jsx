@@ -37,17 +37,17 @@ function ManagementTeam() {
              <div className="col-md-4 col-lg-4">
                <div className="manage-card">
                  <div className="manage-profile-pic">
-                   <img src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755750329/team-2_l8ay7a.png" alt="Manoj M R" />
+                   <img src="https://res.cloudinary.com/duomzq5mm/image/upload/v1758172793/Gemini_Generated_Image_hmp2qvhmp2qvhmp2_heys1r.png" alt="Manoj M R" />
                  </div>
                  <h5 className="manage-name text-black">Meenaskhi Sundaram</h5>
                  <p className="manage-role">COO</p>
-                   <a
+                   {/* <a
                 href="https://www.linkedin.com/in/ms1670/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
-              </a>
+              </a> */}
                </div>
              </div>
 
@@ -55,17 +55,17 @@ function ManagementTeam() {
              <div className="col-md-4 col-lg-4">
                <div className="manage-card">
                  <div className="manage-profile-pic">
-                   <img src="https://res.cloudinary.com/duomzq5mm/image/upload/v1755750407/team-4_apufd7.jpg" alt="Manoj M R" />
+                   <img src="https://res.cloudinary.com/duomzq5mm/image/upload/v1758172854/image_15_lketxc.png" alt="Manoj M R" />
                  </div>
                  <h5 className="manage-name text-black">Sudesh T</h5>
                  <p className="manage-role">VP</p>
-                   <a
+                   {/* <a
                 href="https://www.linkedin.com/in/sudesh-t-317b14276/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="mx-3 bi bi-linkedin fs-4 text-primary"></i>
-              </a>
+              </a> */}
                </div>
              </div>
          </div>

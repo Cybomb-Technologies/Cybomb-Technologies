@@ -145,16 +145,16 @@ function Nav1() {
                   </Link>
                 </li>
 
-                 {/* <li className={styles.navItem}>
+                 <li className={styles.navItem}>
                   <Link
-                    to="/pricing-page"
+                    to="/pricing"
                     className={styles.navLink}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Pricing
                    
                   </Link>
-                </li> */}
+                </li>
                 <li className={styles.navItem}>
                   <Link
                     to="/career"

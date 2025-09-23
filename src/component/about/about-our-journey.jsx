@@ -4,7 +4,7 @@ function Aboutourjourney() {
     <>
       <section className="ourjourney" style={{ padding: "60px 0px"}}>
         <div className="container">
-          <h2 className="text-primary text-center">🧩 Our Journey</h2>
+          <h2 className="text-primary text-center"> Our Journey</h2>
 
           <div className="row mt-5">
             <div className="col-md-3 mt-3 mt-md-0">
