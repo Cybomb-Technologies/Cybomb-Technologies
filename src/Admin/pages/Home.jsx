@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 const API_URL = import.meta.env.VITE_API_BASE; 
 
@@ -21,9 +21,122 @@ function Home() {
     contact: 0
   });
   const [loading, setLoading] = useState(false);
-  
 
+    // Check if user should be logged out based on login time
+  const checkLoginExpiry = useCallback(() => {
+    const loginTime = localStorage.getItem("loginTime");
+    if (!loginTime) {
+      // No login time found, redirect to login
+      localStorage.removeItem("token");
+      navigate("/admin/login");
+      return false;
+    }
+
+    const currentTime = new Date().getTime();
+    const loginDuration = currentTime - parseInt(loginTime);
+    const twoHours = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
+
+    if (loginDuration > twoHours) {
+      // Session expired
+      localStorage.removeItem("token");
+      localStorage.removeItem("loginTime");
+      navigate("/admin/login");
+      return false;
+    }
+
+    return true;
+  }, [navigate]);
+
+  // Auto logout function
+  const autoLogout = useCallback(() => {
+    localStorage.removeItem("token");
+    navigate("/admin/login");
+  }, [navigate]);
+
+  const handleLogout = (e) => {
+    if (e) e.preventDefault();
+    autoLogout();
+  };
+
+    // Set login time when component mounts (if not already set)
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/admin/login");
+      return;
+    }
+
+    // Set login time if not already set
+    if (!localStorage.getItem("loginTime")) {
+      localStorage.setItem("loginTime", new Date().getTime().toString());
+    }
+
+    // Check if session is still valid
+    if (!checkLoginExpiry()) {
+      return;
+    }
+  }, [navigate, checkLoginExpiry]);
+
+  // Check session expiry every minute + inactivity timer
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      navigate("/admin/login");
+      return;
+    }
+
+    // Check session expiry every 1 minute
+    const expiryCheckInterval = setInterval(() => {
+      checkLoginExpiry();
+    }, 60000); // Check every minute
+
+    // Inactivity timer (2 hours - but will be overridden by session expiry)
+    let inactivityTimer;
+
+    const resetTimer = () => {
+      clearTimeout(inactivityTimer);
+      // Set inactivity timer to 2 hours (same as session expiry)
+      inactivityTimer = setTimeout(autoLogout, 2 * 60 * 60 * 1000);
+    };
+    const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'];
+
+    // Set initial timer
+    resetTimer();
+
+    // Add event listeners to reset timer on user activity
+    events.forEach(event => {
+      document.addEventListener(event, resetTimer);
+    });
+
+    // Also reset timer when component mounts
+    resetTimer();
+
+        events.forEach(event => {
+      document.addEventListener(event, resetTimer);
+    });
+
+    // Cleanup function
+    return () => {
+      clearInterval(expiryCheckInterval);
+      clearTimeout(inactivityTimer);
+      events.forEach(event => {
+        document.removeEventListener(event, resetTimer);
+      });
+    };
+  }, [autoLogout, checkLoginExpiry, navigate]);
+
+    
+  useEffect(() => {
+    
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/admin/login");
+      return;
+    }
+
+    if (!checkLoginExpiry()) {
+      return;
+    }  
+
     const fetchDashboardData = async () => {
       try {
         setLoading(true);
@@ -130,11 +243,11 @@ function Home() {
     fetchDashboardData();
   }, []);
 
-  const handleLogout = (e) => {
-    e.preventDefault();
-    localStorage.removeItem("token");
-    navigate("/");
-  };
+  // const handleLogout = (e) => {
+  //   e.preventDefault();
+  //   localStorage.removeItem("token");
+  //   navigate("/");
+  // };
 
     const handleBlogDelete = async (blogId) => {
     if (window.confirm("Are you sure you want to delete this blog post?")) {
@@ -227,7 +340,7 @@ function Home() {
               <li><a className="dropdown-item" href="#">Profile</a></li>
               <li><a className="dropdown-item" href="#">Settings</a></li>
               <li><hr className="dropdown-divider"/></li>
-              <Link to="/" className="dropdown-item" onClick={handleLogout}>
+               <Link to="/admin/login" className="dropdown-item" onClick={handleLogout}>
                 Logout
               </Link>
             </ul>
