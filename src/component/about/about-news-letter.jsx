@@ -1,4 +1,5 @@
 import "./about-news-letter.css";
+import { Link } from "react-router-dom";
 function Aboutnewsletter() {
   return (
     <>
@@ -8,9 +9,9 @@ function Aboutnewsletter() {
             <div className="col-md-6">
               <div className="card border-0 newsletter-card p-5 text-center d-flex align-items-center mt-2 mt-lg-0 h-100"  data-aos="fade-up">
                 <h2 className="text-primary fw-bold">Get in Touch</h2>
-                <button className="news-letter-btn mt-3">
+                <Link to="/contact-us" className="news-letter-btn mt-3 text-decoration-none">
                   Start Your Project
-                </button>
+                </Link>
               </div>
             </div>
             <div className="col-md-6">
