@@ -10,6 +10,7 @@ import Homecontact from "../component/home/home-contact";
 import HomeUIUX from "../component/home/home-ui-ux";
 import HomePartners from "../component/home/home-partners";
 import Metatags from "../SEO/meta-tags";
+import HomePressrelease from "../component/home/home-press-release";
 // import HomePricing from "../component/home/home-pricing";
 
 function Home() {
@@ -38,6 +39,7 @@ function Home() {
       {/* <Homenewsletter /> */}
       <HomePartners/>
       <Homecontact />
+      <HomePressrelease/>
     </>
   );
 }

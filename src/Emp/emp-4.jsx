@@ -51,6 +51,7 @@ import AiAgentCaseStudy from "../component/page-case-study/ai-agent-case-study/a
 
 import DatabaseApp from "../component/pages-services/technologies/custom-development/database/database";
 import VersionControlApp from "../component/pages-services/technologies/custom-development/versioncontrol/versioncontrolapp";
+import HomePressReleaseDetail from "../pages/home-press-release-Detail";
 const emp4Routes = (
   <>
     <Route path="/services/api-development" element={<ApiDevelopment />} />
@@ -117,6 +118,10 @@ const emp4Routes = (
 
   <Route path="/services/database-development-service" element={<DatabaseApp/>}/>
     <Route path="/services/versioncontrol-development-service" element={<VersionControlApp/>}/>
+      <Route path="/pressrelease/:id" element={ <HomePressReleaseDetail/>} />
+
+   
+
   </>
 );
 

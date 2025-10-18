@@ -3,6 +3,8 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/bootstrap.css';
 import styles from './contact.module.css';
 
+const API_URL = import.meta.env.VITE_API_BASE; 
+
 function Contactcontent() {
   const [formData, setFormData] = useState({
     name: "",
@@ -38,7 +40,7 @@ function Contactcontent() {
     setSubmitStatus(null);
 
     try {
-      const res = await fetch("http://localhost:5000/api/send-mail", {
+      const res = await fetch(`${API_URL}/api/send-mail`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({...formData, subscribe}),

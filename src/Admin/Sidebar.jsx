@@ -54,6 +54,14 @@ function Sidebar() {
               <i className="fas fa-blog me-2"></i>Blog Management
             </Link>
           </li>
+           <li className="my-2">
+            <Link
+              to="/admin/press-release"
+              className="text-white text-decoration-none d-block p-2 rounded hover-bg-light"
+            >
+              <i className="fas fa-blog me-2"></i>Press Release
+            </Link>
+          </li>
           <li className="my-2">
          <Link 
           to="/admin/news-letter" 

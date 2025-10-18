@@ -50,6 +50,7 @@ const footerMailRoute = require("./routes/footermail");
 const adminRoutes = require("./routes/adminRoutes");
 const adminRegisterRoute = require("./routes/adminRegister");
 const blogRoute = require("./routes/blogRoute");
+const pressreleaseRoute = require("./routes/PressreleaseRoute");
 
 // Health check route
 app.get('/api/health', (req, res) => {
@@ -71,6 +72,7 @@ app.use("/api/career", careerMailRoute);
 app.use("/api/footer-mail", footerMailRoute);
 app.use("/admin", adminRegisterRoute);
 app.use("/api/blogs", blogRoute);
+app.use("/api/pressrelease", pressreleaseRoute);
 
 // ✅ Serve uploads (only this one is needed)
 app.use("/uploads", express.static(path.join(__dirname, "public/uploads")));
