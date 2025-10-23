@@ -11,7 +11,7 @@ function Newsletter() {
   const [stats, setStats] = useState({
     total: 0,
     active: 0,
-    today: 0
+    today: 0,
   });
 
   // Fetch newsletter subscriptions
@@ -20,26 +20,27 @@ function Newsletter() {
       setLoading(true);
       const response = await fetch(`${API_URL}/api/footer-mail`);
       if (!response.ok) {
-        throw new Error('Failed to fetch subscriptions');
+        throw new Error("Failed to fetch subscriptions");
       }
       const data = await response.json();
       setSubscriptions(data);
       setFilteredSubscriptions(data);
-      
+
       // Calculate stats
       const today = new Date().toDateString();
-      const todaySubscriptions = data.filter(sub => 
-        new Date(sub.subscribedAt || sub.createdAt).toDateString() === today
+      const todaySubscriptions = data.filter(
+        (sub) =>
+          new Date(sub.subscribedAt || sub.createdAt).toDateString() === today
       );
 
       setStats({
         total: data.length,
-        active: data.filter(sub => !sub.status || sub.status === 'active').length,
-        today: todaySubscriptions.length
+        active: data.filter((sub) => !sub.status || sub.status === "active")
+          .length,
+        today: todaySubscriptions.length,
       });
     } catch (error) {
       console.error("Error fetching subscriptions:", error);
-      // Set empty arrays in case of error
       setSubscriptions([]);
       setFilteredSubscriptions([]);
     } finally {
@@ -53,7 +54,7 @@ function Newsletter() {
 
   // Handle search
   useEffect(() => {
-    const results = subscriptions.filter(sub =>
+    const results = subscriptions.filter((sub) =>
       sub.email.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredSubscriptions(results);
@@ -64,17 +65,17 @@ function Newsletter() {
     if (window.confirm("Are you sure you want to delete this subscription?")) {
       try {
         const response = await fetch(`${API_URL}/api/footer-mail/${id}`, {
-          method: "DELETE"
+          method: "DELETE",
         });
-        
+
         if (response.ok) {
-          fetchSubscriptions(); // Refresh the list
+          fetchSubscriptions();
         } else {
-          throw new Error('Failed to delete subscription');
+          throw new Error("Failed to delete subscription");
         }
       } catch (error) {
         console.error("Error deleting subscription:", error);
-        alert('Error deleting subscription. Please try again.');
+        alert("Error deleting subscription. Please try again.");
       }
     }
   };
@@ -82,35 +83,57 @@ function Newsletter() {
   // Export to CSV
   const exportToCSV = () => {
     if (subscriptions.length === 0) {
-      alert('No data to export');
+      alert("No data to export");
       return;
     }
 
     const headers = ["Email", "Subscribed Date", "Status"];
-    const csvData = subscriptions.map(sub => [
+    const csvData = subscriptions.map((sub) => [
       sub.email,
       new Date(sub.subscribedAt || sub.createdAt).toLocaleDateString(),
-      sub.status || 'active'
+      sub.status || "active",
     ]);
 
     const csvContent = [headers, ...csvData]
-      .map(row => row.map(field => `"${field}"`).join(','))
-      .join('\n');
+      .map((row) => row.map((field) => `"${field}"`).join(","))
+      .join("\n");
 
-    const blob = new Blob([csvContent], { type: 'text/csv' });
+    const blob = new Blob([csvContent], { type: "text/csv" });
     const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = `newsletter-subscriptions-${new Date().toISOString().split('T')[0]}.csv`;
+    a.download = `newsletter-subscriptions-${
+      new Date().toISOString().split("T")[0]
+    }.csv`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     window.URL.revokeObjectURL(url);
   };
 
+  // Download Sample CSV for Import
+const downloadSample = () => {
+  const headers = ["Email", "Subscribed Date", "Status"];
+  const demoRow = ["demo@example.com", new Date().toISOString().split("T")[0], "active"];
+  const csvContent = [headers, demoRow]
+    .map(row => row.join(","))
+    .join("\n");
+
+  const blob = new Blob([csvContent], { type: "text/csv" });
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "newsletter-sample.csv";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  window.URL.revokeObjectURL(url);
+};
+
+
   const formatDate = (dateString) => {
-    if (!dateString) return 'Unknown';
-    
+    if (!dateString) return "Unknown";
+
     const date = new Date(dateString);
     const now = new Date();
     const diffMs = now - date;
@@ -121,16 +144,41 @@ function Newsletter() {
     if (diffMins < 60) {
       return `${diffMins} min ago`;
     } else if (diffHours < 24) {
-      return `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
+      return `${diffHours} hour${diffHours > 1 ? "s" : ""} ago`;
     } else if (diffDays < 7) {
-      return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
+      return `${diffDays} day${diffDays > 1 ? "s" : ""} ago`;
     } else {
       return date.toLocaleDateString();
     }
   };
 
+  const handleImport = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      setLoading(true);
+      const response = await fetch(`${API_URL}/api/footer-mail/import`, {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+      alert(result.message || "Import completed");
+      fetchSubscriptions();
+    } catch (error) {
+      console.error("Import error:", error);
+      alert("Error importing Excel file");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   // Custom styles
-  const styles = `
+    const styles = `
     .newsletter-container {
       background: #f8f9fa;
       border-radius: 15px;
@@ -319,13 +367,15 @@ function Newsletter() {
   return (
     <div className="container-fluid">
       <style>{styles}</style>
-      
+
       <div className="newsletter-container">
         {/* Header */}
         <div className="newsletter-header">
           <div>
             <h1 className="page-title">Newsletter Subscriptions</h1>
-            <p className="page-subtitle">Manage your email subscribers and newsletter campaigns</p>
+            <p className="page-subtitle">
+              Manage your email subscribers and newsletter campaigns
+            </p>
           </div>
           <div className="d-flex align-items-center flex-wrap">
             <div className="search-box me-3">
@@ -342,47 +392,71 @@ function Newsletter() {
               <button className="btn refresh-btn" onClick={fetchSubscriptions}>
                 <i className="fas fa-sync-alt me-2"></i>Refresh
               </button>
+
+              <input
+                type="file"
+                accept=".xlsx,.xls,.csv"
+                id="importFile"
+                style={{ display: "none" }}
+                onChange={handleImport}
+              />
+
+              <button
+                className="btn btn-success"
+                onClick={() => document.getElementById("importFile").click()}
+              >
+                <i className="fas fa-file-import me-2"></i>Import Excel
+              </button>
+
+          
+
               <button className="btn export-btn" onClick={exportToCSV}>
                 <i className="fas fa-download me-2"></i>Export CSV
               </button>
+                  <button
+                className="btn btn-info"
+                onClick={downloadSample}
+              >
+                <i className="fas fa-file-download me-2"></i>Download Sample
+              </button>
             </div>
           </div>
+          <p className="text-muted mt-2" style={{ fontSize: "0.9rem" }}>
+            Use the <strong>Download Sample</strong> button to get a CSV file with the correct format for import.
+          </p>
         </div>
 
         {/* Stats Cards */}
         <div className="row mb-4">
           <div className="col-md-4">
-  <div className="stats-card d-flex justify-content-between align-items-center">
-    <div>
-      <div className="stat-number">{stats.total}</div>
-      <div className="stat-label">Total Subscribers</div>
-    </div>
-    <i className="fas fa-users fa-2x opacity-50"></i>
-  </div>
-</div>
-          {/* <div className="col-md-4">
-            <div className="stats-card">
-              <div className="stat-number">{stats.active}</div>
-              <div className="stat-label">Active Subscribers</div>
-              <i className="fas fa-check-circle fa-2x opacity-50 float-end mt-3"></i>
+            <div className="stats-card d-flex justify-content-between align-items-center">
+              <div>
+                <div className="stat-number">{stats.total}</div>
+                <div className="stat-label">Total Subscribers</div>
+              </div>
+              <i className="fas fa-users fa-2x opacity-50"></i>
             </div>
-          </div> */}
+          </div>
           <div className="col-md-4">
             <div className="stats-card d-flex justify-content-between align-items-center">
               <div>
-              <div className="stat-number">{stats.today}</div>
-              <div className="stat-label">New Today</div>
+                <div className="stat-number">{stats.today}</div>
+                <div className="stat-label">New Today</div>
               </div>
               <i className="fas fa-calendar-day fa-2x opacity-50"></i>
             </div>
           </div>
-  </div>
+        </div>
 
         {/* Subscriptions Table */}
         <div className="subscriptions-table">
           {loading ? (
             <div className="text-center py-5">
-              <div className="spinner-border loading-spinner" style={{width: '3rem', height: '3rem'}} role="status">
+              <div
+                className="spinner-border loading-spinner"
+                style={{ width: "3rem", height: "3rem" }}
+                role="status"
+              >
                 <span className="visually-hidden">Loading...</span>
               </div>
               <p className="mt-3 text-muted">Loading subscriptions...</p>
@@ -393,7 +467,6 @@ function Newsletter() {
                 <tr>
                   <th>Email Address</th>
                   <th>Subscription Date</th>
-                  {/* <th>Status</th> */}
                   <th>Actions</th>
                 </tr>
               </thead>
@@ -406,13 +479,10 @@ function Newsletter() {
                     </td>
                     <td>
                       <i className="fas fa-clock me-2 text-muted"></i>
-                      {formatDate(subscription.subscribedAt || subscription.createdAt)}
+                      {formatDate(
+                        subscription.subscribedAt || subscription.createdAt
+                      )}
                     </td>
-                    {/* <td>
-                      <span className={`status-badge ${subscription.status === 'unsubscribed' ? 'status-unsubscribed' : 'status-active'}`}>
-                        {subscription.status === 'unsubscribed' ? 'Unsubscribed' : 'Active'}
-                      </span>
-                    </td> */}
                     <td>
                       <button
                         className="btn btn-sm delete-btn"
@@ -431,7 +501,9 @@ function Newsletter() {
               <i className="fas fa-inbox"></i>
               <h4>No subscribers found</h4>
               <p className="text-muted">
-                {searchTerm ? 'Try adjusting your search terms' : 'You currently have no newsletter subscribers'}
+                {searchTerm
+                  ? "Try adjusting your search terms"
+                  : "You currently have no newsletter subscribers"}
               </p>
             </div>
           )}
