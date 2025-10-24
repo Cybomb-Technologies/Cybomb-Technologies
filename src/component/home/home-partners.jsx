@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import styles from "./home-partners.module.css";
 import DjitLogoImg from "./../../assets/partners/djit-trading.png";
-import AitalsLogoImg from "./../../assets/partners/aitals-startup-partner.png";
+import AitalsLogoImg from "./../../assets/partners/Aitals.png";
 
 
 const techItems = [
@@ -25,6 +25,15 @@ const techItems = [
     name: 'Aitals',
     logo: AitalsLogoImg,
   },
+  {
+    name: 'Rank Seo',
+    logo: 'https://res.cloudinary.com/dcfjt8shw/image/upload/v1761297491/j4q6qjzlm93uirax0l6f.png'
+  },
+  {
+    name: 'PDF Works',
+    logo: 'https://res.cloudinary.com/dcfjt8shw/image/upload/v1761288318/wn8m8g8skdpl6iz2rwoa.svg'
+  }
+
 
 ];
 
