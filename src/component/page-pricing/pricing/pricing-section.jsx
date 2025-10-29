@@ -2,8 +2,21 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaCheck, FaGlobe, FaMobile, FaEnvelope, FaCode, FaCogs } from "react-icons/fa";
 import styles from "./pricing-section.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 const PricingSection = () => {
+  const navigate = useNavigate();
+
+  const handleCheckout = (planType, price, planName) => {
+    navigate('/checkout', { 
+      state: { 
+        planType, 
+        price, 
+        planName 
+      } 
+    });
+  };
+
   return (
     <section id="pricingsection" className={styles.pricingSection}>
       <Container>
@@ -34,7 +47,11 @@ const PricingSection = () => {
                 <li><FaCheck className={styles.featureIcon} /> 1 Content revision</li>
               </ul>
 
-              <Button variant="outline-primary" className={styles.ctaBtn}>
+              <Button 
+                variant="outline-primary" 
+                className={styles.ctaBtn}
+                onClick={() => handleCheckout('economy', 6000, 'Economy Website')}
+              >
                 Launch Your Website
               </Button>
             </div>
@@ -62,7 +79,11 @@ const PricingSection = () => {
                 <li><FaCheck className={styles.featureIcon} /> 2 Content revision</li>
               </ul>
 
-              <Button variant="primary" className={styles.ctaBtn}>
+              <Button 
+                variant="primary" 
+                className={styles.ctaBtn}
+                onClick={() => handleCheckout('professional', 10700, 'Professional Website')}
+              >
                 Get Professional Website
               </Button>
             </div>
@@ -91,7 +112,11 @@ const PricingSection = () => {
                 <li><FaCheck className={styles.featureIcon} /> 3 Content revision</li>
               </ul>
 
-              <Button variant="outline-primary" className={styles.ctaBtn}>
+              <Button 
+                variant="outline-primary" 
+                className={styles.ctaBtn}
+                onClick={() => handleCheckout('cms', 18000, 'Custom CMS Website')}
+              >
                 Build Custom CMS Website
               </Button>
             </div>
