@@ -5,7 +5,7 @@ function Termscontent() {
       <section className="terms-content-bg">
         <div className="container p-5" >
           <h2 className="text-primary">
-            Terms & Conditions – Cybomb Technologies
+            Terms & Conditions – Cybomb Technologies Pvt Ltd.
           </h2>
           <h6>Effective Date: 21-02-2025</h6>
           <p>

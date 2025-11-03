@@ -1,54 +1,99 @@
 import "./about-our-journey.css";
+import { useState } from "react";
+
 function Aboutourjourney() {
+  const [activeYear, setActiveYear] = useState("2025-today");
+
+  const journeyData = {
+    "2021": {
+      title: "Foundation",
+      description: "Cybomb Technology was founded by a tech enthusiast with a vision of creating impactful digital solutions. Starting with a small office and a team of 5, we began our journey developing mobile applications for local businesses.",
+      icon: "🏢",
+      stats: "Team: 5"
+    },
+    "2022": {
+      title: "Expansion", 
+      description: "Expanded our services to include web application development and SaaS solutions. Our team grew to 10 talented professionals, and we opened our second office in Chennai.",
+      icon: "📈",
+      stats: "Team: 10"
+    },
+    "2023": {
+      title: "AI Integration",
+      description: "Recognized the growing importance of AI, we established a specialized AI integration team. This strategic move allowed us to offer cutting-edge solutions that leverage machine learning and data analytics.",
+      icon: "🤖",
+      stats: "Innovation"
+    },
+    "2024-corporate": {
+      title: "Corporate Transformation",
+      description: "Now a team of 80+ experts, we've successfully delivered over 300+ projects across various industries. Our client base spans from innovative startups to established SMEs looking for digital transformation.",
+      icon: "🎯",
+      stats: "Team: 80+"
+    },
+    "2025-today": {
+      title: "Today",
+      description: "In October 2025, Cybomb LLP was converted to Cybomb Private Limited, marking a significant milestone in our corporate growth and strengthening our commitment to delivering exceptional digital solutions.",
+      icon: "⚡",
+      stats: "Milestone"
+    }
+    
+  };
+
   return (
     <>
-      <section className="ourjourney" style={{ padding: "60px 0px"}}>
+      <section className="ourjourney">
         <div className="container">
-          <h2 className="text-primary text-center"> Our Journey</h2>
+          <div className="section-header">
+            <h2>Our Journey</h2>
+            <p>From vision to reality - 5 years of innovation and growth</p>
+          </div>
 
-          <div className="row mt-5">
-            <div className="col-md-3 mt-3 mt-md-0">
-              <div className="card p-4 journey-card h-100" data-aos="zoom-in-left">
-                <h6 className="text-white fs-5">✅ 2021 - Foundation</h6>
-                <p className="mt-2 text-white">
-                  Cybomb Tecnology was founded by a tech enthusiast with a
-                  vision of creating impactful digital solutions. Starting with
-                  a small office and a team of 5, we began our journey
-                  developing mobile applications for local businesses.
-                </p>
-              </div>
-            </div>
+          {/* Timeline Navigation */}
+          <div className="timeline-nav">
+            <button
+              className={`nav-year ${activeYear == "2021" ? 'active' : ''}`}
+              onClick={() => setActiveYear("2021")}
+            >
+              2021
+            </button>
+            <button
+              className={`nav-year ${activeYear == "2022" ? 'active' : ''}`}
+              onClick={() => setActiveYear("2022")}
+            >
+              2022
+            </button>
+            <button
+              className={`nav-year ${activeYear == "2023" ? 'active' : ''}`}
+              onClick={() => setActiveYear("2023")}
+            >
+              2023
+            </button>
+            <button
+              className={`nav-year ${activeYear == "2024-corporate" ? 'active' : ''}`}
+              onClick={() => setActiveYear("2024-corporate")}
+            >
+              2024
+            </button>
+            <button
+              className={`nav-year ${activeYear == "2025-today" ? 'active' : ''}`}
+              onClick={() => setActiveYear("2025-today")}
+            >
+              2025
+            </button>
+          </div>
 
-            <div className="col-md-3 mt-3 mt-md-0">
-              <div className="card p-4 journey-card h-100" data-aos="zoom-in-up">
-                <h6 className="text-white fs-5">✅ 2022 - Expension</h6>
-                <p className="mt-2 text-white">
-                  Expanded our services to include web application development
-                  and SaaS solutions. Our team grew to 10 talented
-                  professionals, and we opened our second office in a Chennai.
-                </p>
+          {/* Active Content */}
+          <div className="active-content" data-aos="fade-up">
+            <div className="content-card">
+              <div className="card-header">
+                <span className="year-icon">{journeyData[activeYear].icon}</span>
+                <div>
+                  <h3>{journeyData[activeYear].title}</h3>
+                  {/* <span className="year-badge">2025</span> */}
+                </div>
               </div>
-            </div>
-            <div className="col-md-3 mt-3 mt-md-0">
-              <div className="card p-4 journey-card h-100" data-aos="zoom-in-down">
-                <h6 className="text-white fs-5">✅ 2023 - AI Integration</h6>
-                <p className="mt-2 text-white">
-                  Recognized the growing importance of AI, we established a
-                  specialized AI integration team. This strategic move allowed
-                  us to offer cutting-edge solutions that leverage machine
-                  learning and data analytics.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-3 mt-3 mt-md-0">
-              <div className="card p-4 journey-card h-100" data-aos="zoom-in-right">
-                <h6 className="text-white fs-5">✅ 2025 - Today</h6>
-                <p className="mt-2 text-white">
-                  Now a team of 80+ experts, we've successfully delivered over
-                  300+ projects across various industries. Our client base spans
-                  from innovative startups to established SMEs looking for
-                  digital transformation.
-                </p>
+              <p>{journeyData[activeYear].description}</p>
+              <div className="card-stats">
+                <span className="stat-tag">{journeyData[activeYear].stats}</span>
               </div>
             </div>
           </div>
@@ -57,4 +102,5 @@ function Aboutourjourney() {
     </>
   );
 }
+
 export default Aboutourjourney;

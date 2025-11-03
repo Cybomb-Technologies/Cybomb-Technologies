@@ -21,7 +21,7 @@ function Footer({ socialLinks = defaultSocialLinks }) {
     {
       icon: "bi-geo-alt-fill",
       label: "Address",
-      text: "Cybomb Technologies LLP, Hygee Works - Prime Plaza No.54/1, 1st street, Sripuram colony, St.Thomas Mount, Chennai - 600016, Tamil Nadu, India",
+      text: "Cybomb Technologies Pvt ltd, Hygee Works - Prime Plaza No.54/1, 1st street, Sripuram colony, St.Thomas Mount, Chennai - 600016, Tamil Nadu, India",
     },
     {
       icon: "bi-telephone-fill",
@@ -186,7 +186,7 @@ function Footer({ socialLinks = defaultSocialLinks }) {
             <Link to="/refund-policy">Refund Policy</Link>
             <Link to="/cookie-policy">Cookie Policy</Link>
           </div>
-          <p>© 2025 Cybomb Technologies LLP | All Rights Reserved</p>
+          <p>© 2025 Cybomb Technologies Pvt Ltd. | All Rights Reserved</p>
         </div>
       </div>
     </footer>

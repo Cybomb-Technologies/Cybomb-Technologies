@@ -145,11 +145,24 @@ function Contactcontent() {
                   <div className={styles.contactInfoText}>
                     <h5>Address</h5>
                     <p>
-                      Cybomb Technologies LLP<br />
+                      Cybomb Technologies Pvt Ltd<br />
                       Prime Plaza – No.54/1, 1st street, Sripuram Colony<br />
                       St. Thomas Mount, Chennai, India
                     </p>
+                    </div>
+                </div>
+                <div className={styles.contactInfoItem}>
+                  <div className={styles.contactInfoIcon}>
+                    <i className="bi bi-geo-alt-fill"></i>
                   </div>
+                  <div className={styles.contactInfoText}>
+                    <h5>USA Address</h5>
+                    <p>
+                      Cybomb Technologies Inc,
+                      30 N Gould St Ste R,
+                      Sheridan, WY 82801
+                    </p>
+                    </div>
                 </div>
 
                 {/* Working Hours */}

@@ -318,7 +318,7 @@ function Home() {
       {/* Header - No changes */}
       <header className="d-flex justify-content-between align-items-center pb-3 pt-1 mb-4 border-bottom">
         <div className="d-flex align-items-center">
-          <h1 className="h4 mb-0 fw-bold">Cybomb Technologies LLP</h1>
+          <h1 className="h4 mb-0 fw-bold">Cybomb Technologies Pvt Ltd</h1>
         </div>
         <div className="d-flex align-items-center">
           <div className="dropdown me-3">
