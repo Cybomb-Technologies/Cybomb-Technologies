@@ -5,7 +5,7 @@ function Cookiecontent() {
     <>
       <section className="cookie-policy-content">
         <div className="container p-5" >
-          <h2 className="text-primary">Cookie Policy – Cybomb Technologies</h2>
+          <h2 className="text-primary">Cookie Policy – Cybomb Technologies Pvt Ltd</h2>
           <h5 className="mt-3">Understanding Our Use of Cookies</h5>
 
           <div className="mt-4">

@@ -34,11 +34,28 @@ function Homecontact() {
                     <b>Address</b>
                   </p>
                   <p className="mb-0 fs-6 contact-text-color">
-                    Cybomb Technologies LLP <br />  Prime Plaza No.54/1, 1st street, Sripuram colony,
+                    Cybomb Technologies Pvt Ltd <br />  Prime Plaza No.54/1, 1st street, Sripuram colony,
                     <br />
                     St.Thomas Mount, Chennai, India
                   </p>
                 </div>
+                
+              </div>
+              <div className="d-flex mt-3 align-items-start">
+                <div className="pt-3">
+                  <i className="bi bi-geo-alt-fill contact-icon"></i>
+                </div>
+                <div className="ms-3">
+                  <p className="contact-text-color mb-0">
+                    <b>USA Address</b>
+                  </p>
+                  <p className="mb-0 fs-6 contact-text-color">
+                    Cybomb Technologies Inc, <br />  30 N Gould St Ste R,
+                    <br />
+                    Sheridan, WY 82801
+                  </p>
+                </div>
+                
               </div>
 
               {/* Phone */}

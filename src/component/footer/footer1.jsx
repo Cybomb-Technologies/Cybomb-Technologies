@@ -96,20 +96,39 @@ function Footer1({
 
     let addressText = "";
       if (device === "desktop") {
-        addressText = `Cybomb Technologies LLP,
+        addressText = `Cybomb Technologies Pvt Ltd,
                    Prime Plaza No.54/1, 1st street, Sripuram colony,
                    St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India`;
+
+
       } else if (device === "tablet") {
-        addressText = `Cybomb Technologies LLP,
+        addressText = `Cybomb Technologies Pvt Ltd,
                        Prime Plaza No.54/1, 1st street,
                        Sripuram colony, St. Thomas Mount,
                         Chennai, TN - 600 016, India`;
       } else {
         // mobile
-        addressText = `Cybomb Technologies LLP,
+        addressText = `Cybomb Technologies Pvt Ltd,
                        Prime Plaza No.54/1, 1st street,
                        Sripuram colony, St. Thomas Mount,
                        Chennai, Tamil Nadu - 600 016, India`;
+        }
+        let addressText1 = "";
+      if (device === "desktop") {
+        addressText1 = `Cybomb Technologies Inc,
+                   30 N Gould St Ste R,
+                   Sheridan, WY 82801`;
+
+
+      } else if (device === "tablet") {
+        addressText1 = `Cybomb Technologies Inc,
+                   30 N Gould St Ste R,
+                   Sheridan, WY 82801`;
+      } else {
+        // mobile
+        addressText1 = `Cybomb Technologies Inc,
+                   30 N Gould St Ste R,
+                   Sheridan, WY 82801`;
         }
 
   const contactItems = [
@@ -132,7 +151,16 @@ function Footer1({
       icon: "bi-geo-alt-fill",
       label: "Address",
     
+      
       text: addressText,
+            
+    },
+    {
+      icon: "bi-geo-alt-fill",
+      label: "USA Address",
+    
+      
+      text: addressText1,
             
     },
     {
@@ -247,7 +275,7 @@ function Footer1({
         {/* BOTTOM */}
         <div className={styles.footerBottom}>
           <div className={styles.copyrightSection}>
-            <p>© {new Date().getFullYear()} Cybomb Technologies LLP.<br/>All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Cybomb Technologies Pvt Ltd.<br/>All rights reserved.</p>
           </div>
 
           <div className={styles.certificateSection}>
