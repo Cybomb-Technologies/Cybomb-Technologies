@@ -15,7 +15,8 @@ const allowedOrigins = [
   'https://cybomb.com',
   'https://www.cybomb.com',
   'https://api.cybomb.com',
-  'http://147.93.111.96:5000'
+  'http://147.93.111.96:5000',
+  'https://admin.cybomb.com'
 ];
 
 app.use(cors({
