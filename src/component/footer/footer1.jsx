@@ -5,9 +5,6 @@ import DpiitLogo from "./../../assets/footer/dpiit-logo.png";
 import DgftLogo from "./../../assets/footer/dgft-logo.png";
 import AicteLogo from "./../../assets/footer/aicte-logo.png";
 
-/**
- * Device type hook (unchanged)
- */
 function useDeviceType() {
   const [device, setDevice] = useState(getDeviceType());
 
@@ -29,18 +26,9 @@ function useDeviceType() {
 const API_URL = import.meta.env.VITE_API_BASE;
 
 const defaultSocialLinks = [
-  {
-    href: "https://www.instagram.com/cybomb_tech/",
-    iconClass: "bi bi-instagram",
-  },
-  {
-    href: "https://www.linkedin.com/company/cybomb/",
-    iconClass: "bi bi-linkedin",
-  },
-  {
-    href: "https://x.com/CybombTech",
-    iconClass: "fa-brands fa-x-twitter",
-  },
+  { href: "https://www.instagram.com/cybomb_tech/", iconClass: "bi bi-instagram" },
+  { href: "https://www.linkedin.com/company/cybomb/", iconClass: "bi bi-linkedin" },
+  { href: "https://x.com/CybombTech", iconClass: "fa-brands fa-x-twitter" },
 ];
 
 const defaultLegalLinks = [
@@ -50,29 +38,7 @@ const defaultLegalLinks = [
   { to: "/cookie-policy", label: "Cookie Policy" },
 ];
 
-function Footer1({
-  socialLinks = defaultSocialLinks,
-  legalLinks = defaultLegalLinks,
-
-  // You can pass custom addresses in through props if you like
-    address1Label = "Address 1",
-  address2Label = "USA Address",
-  address1TextDesktop = `Cybomb Technologies LLP,
-Prime Plaza No.54/1, 1st street, Sripuram colony,
-St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India`,
-  address1TextTablet = `Cybomb Technologies LLP,
-Prime Plaza No.54/1, 1st street,
-Sripuram colony, St. Thomas Mount,
-Chennai, TN - 600 016, India`,
-  address1TextMobile = `Cybomb Technologies Pvt ,
-Prime Plaza No.54/1, 1st street,
-Sripuram colony, St. Thomas Mount,
-Chennai, Tamil Nadu - 600 016, India`,
-  address2Text = `Cybomb Technologies Inc,
-30 N Gould St Ste R,
-Sheridan, Wyoming 82801, USA`,
-
-}) {
+function Footer1({ socialLinks = defaultSocialLinks, legalLinks = defaultLegalLinks }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("");
   const device = useDeviceType();
@@ -80,14 +46,12 @@ Sheridan, Wyoming 82801, USA`,
   const handleSubscribe = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
-
     try {
       const res = await fetch(`${API_URL}/api/footer-mail`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-
       if (res.ok) {
         setStatus("✅ Subscription successful!");
         setEmail("");
@@ -100,18 +64,37 @@ Sheridan, Wyoming 82801, USA`,
     }
   };
 
-  // Address 1 text mapped by device (kept like your default)
-  let address1Text = "";
+  // Address texts (device-aware)
+  let addressText = "";
   if (device === "desktop") {
-    address1Text = address1TextDesktop;
+    addressText = `Cybomb Technologies Pvt Ltd,
+                   Prime Plaza No.54/1, 1st street, Sripuram colony,
+                   St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India`;
   } else if (device === "tablet") {
-    address1Text = address1TextTablet;
+    addressText = `Cybomb Technologies Pvt Ltd,
+                   Prime Plaza No.54/1, 1st street,
+                   Sripuram colony, St. Thomas Mount,
+                   Chennai, TN - 600 016, India`;
   } else {
-    address1Text = address1TextMobile;
+    addressText = `Cybomb Technologies Pvt Ltd,
+                   Prime Plaza No.54/1, 1st street,
+                   Sripuram colony, St. Thomas Mount,
+                   Chennai, Tamil Nadu - 600 016, India`;
   }
 
-  // DEFAULT Get in Touch items (reverted: phone & email like before)
-  const getInTouchItems = [
+  let addressText1 = "";
+  if (device === "desktop" || device === "tablet") {
+    addressText1 = `Cybomb Technologies Inc,
+                   30 N Gould St Ste R,
+                   Sheridan, Wyoming 82801`;
+  } else {
+    addressText1 = `Cybomb Technologies Inc,
+                   30 N Gould St Ste R,
+                   Sheridan, Wyoming 82801`;
+  }
+
+  // Get in Touch (default: phone & email only)
+  const contactItems = [
     {
       icon: "bi-telephone-fill",
       label: "Phone",
@@ -155,12 +138,20 @@ Sheridan, Wyoming 82801, USA`,
       </a>
     ));
 
+  // inline style for address cards (so we don't touch module.css)
+  const addressCardStyle = {
+    background: "rgba(0, 52, 89, 0.35)",
+    borderRadius: "10px",
+    padding: "12px",
+    height: "100%",
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        {/* DESKTOP/TABLET/ MOBILE wrapper kept as-is */}
+        {/* DESKTOP */}
         <div className={styles.desktopLayout}>
-          {/* Row 1 (unchanged) */}
+          {/* Row 1 */}
           <div className={styles.footerTopRow1}>
             <div className={styles.subscribeSection}>
               <h4 className={styles.subTitle}>Subscribe</h4>
@@ -181,109 +172,83 @@ Sheridan, Wyoming 82801, USA`,
             </div>
 
             <div className={styles.logoCol}>
-              <img
-                src="/images/logo-1-white.png"
-                alt="logo"
-                className={styles.logo}
-              />
+              <img src="/images/logo-1-white.png" alt="logo" className={styles.logo} />
               <div className={styles.socials}>{renderSocialIcons()}</div>
             </div>
           </div>
 
-          {/* Row 2 */}
-<div className={styles.footerTopRow2}>
-  {/* Quick Links */}
-  <div className={styles.quickLinks}>
-    <h4 className={`${styles.sectionTitle} ${styles.footerQuickLinks}`}>
-      Quick Links
-    </h4>
-    <ul>{renderListLinks(quickLinks)}</ul>
-  </div>
+          {/* Row 2: four columns */}
+          <div className={styles.footerTopRow2}>
+            <div className={styles.quickLinks}>
+              <h4 className={`${styles.sectionTitle} ${styles.footerQuickLinks}`}>Quick Links</h4>
+              <ul>{renderListLinks(quickLinks)}</ul>
+            </div>
 
-  {/* Services */}
-  <div className={styles.services}>
-    <h4 className={`${styles.sectionTitle} ${styles.footerServices}`}>
-      Services
-    </h4>
-    <ul>{renderListLinks(servicesLinks)}</ul>
-  </div>
+            <div className={styles.services}>
+              <h4 className={`${styles.sectionTitle} ${styles.footerServices}`}>Services</h4>
+              <ul>{renderListLinks(servicesLinks)}</ul>
+            </div>
 
-  {/* Legal */}
-  <div className={styles.quickLinks}>
-    <h4 className={`${styles.sectionTitle} ${styles.footerLegalLinks}`}>
-      Legal
-    </h4>
-    <ul>{renderListLinks(legalLinks)}</ul>
-  </div>
+            <div className={styles.quickLinks}>
+              <h4 className={`${styles.sectionTitle} ${styles.footerLegalLinks}`}>Legal</h4>
+              <ul>{renderListLinks(legalLinks)}</ul>
+            </div>
 
-  {/* Get in Touch */}
-  <div className={styles.getInTouch}>
-    <h4 className={`${styles.sectionTitle} ${styles.footerGetInTouch}`}>
-      Get in Touch
-    </h4>
+            <div className={styles.getInTouch}>
+              <h4 className={`${styles.sectionTitle} ${styles.footerGetInTouch}`}>Get in Touch</h4>
+              {contactItems.map((item, i) => (
+                <div key={i} className={styles.contactItem}>
+                  <i className={`bi ${item.icon} ${styles.icon}`}></i>
+                  <div className={styles.contactTextBlock}>
+                    <p><strong>{item.label}</strong></p>
+                    <p>{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-    {getInTouchItems.map((item, i) => (
-      <div key={i} className={styles.contactItem}>
-        <i className={`bi ${item.icon} ${styles.icon}`}></i>
-        <div className={styles.contactTextBlock}>
-          <p>
-            <strong>{item.label}</strong>
-          </p>
-          <p>{item.text}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
+          {/* NEW: full-width address row across the footer */}
+          <div className="row justify-content-center g-3 mt-0">
+            <div className="col-12 col-md-6 col-lg-5 d-flex">
+              <div style={addressCardStyle} className="w-100">
+                <div className={styles.contactItem}>
+                  <i className={`bi bi-geo-alt-fill ${styles.icon}`}></i>
+                  <div className={styles.contactTextBlock}>
+                    <p><strong>India</strong></p>
+                    <p className={styles.addressText}>{addressText}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-{/* 🔹 New Address Row spanning entire footer width */}
-<div className={styles.footerAddressRow}>
-  {/* Address 1 */}
-  <div className={styles.addressCard}>
-    <div className={styles.contactItem}>
-      <i className={`bi bi-geo-alt-fill ${styles.icon}`}></i>
-      <div className={styles.contactTextBlock}>
-        <p>
-          <strong>{address1Label}</strong>
-        </p>
-        <p className={styles.addressText}>{address1Text}</p>
-      </div>
-    </div>
-  </div>
-
-  {/* Address 2 */}
-  <div className={styles.addressCard}>
-    <div className={styles.contactItem}>
-      <i className={`bi bi-geo-alt-fill ${styles.icon}`}></i>
-      <div className={styles.contactTextBlock}>
-        <p>
-          <strong>{address2Label}</strong>
-        </p>
-        <p className={styles.addressText}>{address2Text}</p>
-      </div>
-    </div>
-  </div>
-</div>
-
+            <div className="col-12 col-md-6 col-lg-5 d-flex">
+              <div style={addressCardStyle} className="w-100">
+                <div className={styles.contactItem}>
+                  <i className={`bi bi-geo-alt-fill ${styles.icon}`}></i>
+                  <div className={styles.contactTextBlock}>
+                    <p><strong>USA</strong></p>
+                    <p className={styles.addressText}>{addressText1}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* End address row */}
         </div>
 
-        {/* BOTTOM (unchanged) */}
+        {/* BOTTOM */}
         <div className={styles.footerBottom}>
           <div className={styles.copyrightSection}>
             <p>
-              © {new Date().getFullYear()} Cybomb Technologies LLP.
-              <br />
+              © {new Date().getFullYear()} Cybomb Technologies Pvt Ltd.<br />
               All rights reserved.
             </p>
           </div>
 
           <div className={styles.certificateSection}>
             <div className={styles.certificateItem}>
-              <img
-                src={DpiitLogo}
-                alt="Certificate 1"
-                className={styles.certificateLogo}
-              />
+              <img src={DpiitLogo} alt="Certificate 1" className={styles.certificateLogo} />
               <div className={styles.certificateText}>
                 <span className={styles.certificateLabel}>Cert ID:</span>
                 <span className={styles.certificateValue}>#DIPP115093</span>
@@ -291,20 +256,14 @@ Sheridan, Wyoming 82801, USA`,
             </div>
 
             <div className={styles.certificateItem}>
-              <img
-                src={DgftLogo}
-                alt="Certificate 2"
-                className={styles.certificateLogo}
-              />
+              <img src={DgftLogo} alt="Certificate 2" className={styles.certificateLogo} />
               <div className={styles.certificateText}>
                 <span className={styles.certificateLabel}>Cert ID: IEC</span>
                 <span className={styles.certificateValue}>#AARFC1378G</span>
               </div>
             </div>
 
-            <div
-              className={`${styles.certificateItem} ${styles.thirdCertificate}`}
-            >
+            <div className={`${styles.certificateItem} ${styles.thirdCertificate}`}>
               <img
                 src={AicteLogo}
                 alt="Certificate 3"
@@ -312,9 +271,7 @@ Sheridan, Wyoming 82801, USA`,
               />
               <div className={styles.certificateText}>
                 <span className={styles.certificateLabel}>AICTE Reg.</span>
-                <span className={styles.certificateValue}>
-                  Internship Partner
-                </span>
+                <span className={styles.certificateValue}>Internship Partner</span>
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ function Metatags({ metaProps }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Cybomb Technologies LLP",
+    name: "Cybomb Technologies Private Limited",
     image: metaProps.image,
     "@id": "",
     url: metaProps.url,
