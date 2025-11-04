@@ -1,23 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./footer1.module.css";
 import DpiitLogo from "./../../assets/footer/dpiit-logo.png";
 import DgftLogo from "./../../assets/footer/dgft-logo.png";
 import AicteLogo from "./../../assets/footer/aicte-logo.png";
-import { useEffect } from "react";
 
-// function useIsMobile(breakpoint = 1024) {
-//   const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
-
-//   useEffect(() => {
-//     const handleResize = () => setIsMobile(window.innerWidth < breakpoint);
-//     window.addEventListener("resize", handleResize);
-//     return () => window.removeEventListener("resize", handleResize);
-//   }, [breakpoint]);
-
-//   return isMobile;
-// }
-
+/**
+ * Device type hook (unchanged)
+ */
 function useDeviceType() {
   const [device, setDevice] = useState(getDeviceType());
 
@@ -36,8 +26,7 @@ function useDeviceType() {
   return device;
 }
 
-
-const API_URL = import.meta.env.VITE_API_BASE; 
+const API_URL = import.meta.env.VITE_API_BASE;
 
 const defaultSocialLinks = [
   {
@@ -61,14 +50,31 @@ const defaultLegalLinks = [
   { to: "/cookie-policy", label: "Cookie Policy" },
 ];
 
-function Footer1({ 
-  socialLinks = defaultSocialLinks, 
-  legalLinks = defaultLegalLinks 
-}) {
-  const [email, setEmail] = useState();
-  const [status, setStatus] = useState("");
+function Footer1({
+  socialLinks = defaultSocialLinks,
+  legalLinks = defaultLegalLinks,
 
-  //const isMobile = useIsMobile();
+  // You can pass custom addresses in through props if you like
+    address1Label = "Address 1",
+  address2Label = "USA Address",
+  address1TextDesktop = `Cybomb Technologies LLP,
+Prime Plaza No.54/1, 1st street, Sripuram colony,
+St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India`,
+  address1TextTablet = `Cybomb Technologies LLP,
+Prime Plaza No.54/1, 1st street,
+Sripuram colony, St. Thomas Mount,
+Chennai, TN - 600 016, India`,
+  address1TextMobile = `Cybomb Technologies Pvt ,
+Prime Plaza No.54/1, 1st street,
+Sripuram colony, St. Thomas Mount,
+Chennai, Tamil Nadu - 600 016, India`,
+  address2Text = `Cybomb Technologies Inc,
+30 N Gould St Ste R,
+Sheridan, Wyoming 82801, USA`,
+
+}) {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("");
   const device = useDeviceType();
 
   const handleSubscribe = async (e) => {
@@ -94,47 +100,18 @@ function Footer1({
     }
   };
 
-    let addressText = "";
-      if (device === "desktop") {
-        addressText = `Cybomb Technologies LLP,
-                   Prime Plaza No.54/1, 1st street, Sripuram colony,
-                   St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India`;
-      } else if (device === "tablet") {
-        addressText = `Cybomb Technologies LLP,
-                       Prime Plaza No.54/1, 1st street,
-                       Sripuram colony, St. Thomas Mount,
-                        Chennai, TN - 600 016, India`;
-      } else {
-        // mobile
-        addressText = `Cybomb Technologies LLP,
-                       Prime Plaza No.54/1, 1st street,
-                       Sripuram colony, St. Thomas Mount,
-                       Chennai, Tamil Nadu - 600 016, India`;
-        }
+  // Address 1 text mapped by device (kept like your default)
+  let address1Text = "";
+  if (device === "desktop") {
+    address1Text = address1TextDesktop;
+  } else if (device === "tablet") {
+    address1Text = address1TextTablet;
+  } else {
+    address1Text = address1TextMobile;
+  }
 
-  const contactItems = [
-    // {
-    //   icon: "bi-geo-alt-fill",
-    //   label: "Address",
-    //   //text: "",
-    //   //text: "Cybomb Technologies LLP, Prime Plaza No.54/1, 1st street, Sripuram colony, St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India",
-    //         text: isMobile
-    //     ? `Cybomb Technologies LLP,
-    //         Prime Plaza No.54/1, 1st street,
-    //         Sripuram colony, St. Thomas Mount,
-    //         Chennai, Tamil Nadu - 600 016, India`
-    //                 : `Cybomb Technologies LLP,
-    //         Prime Plaza No.54/1, 1st street, Sripuram colony,
-    //         St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India`,
-    // },
-
-    {
-      icon: "bi-geo-alt-fill",
-      label: "Address",
-    
-      text: addressText,
-            
-    },
+  // DEFAULT Get in Touch items (reverted: phone & email like before)
+  const getInTouchItems = [
     {
       icon: "bi-telephone-fill",
       label: "Phone",
@@ -150,7 +127,6 @@ function Footer1({
   const quickLinks = [
     { to: "/", label: "Home" },
     { to: "/about-us", label: "About Us" },
-    // { to: "/services", label: "Services" },
     { to: "/portfolio", label: "Portfolio" },
     { to: "/career", label: "Career" },
     { to: "/contact-us", label: "Contact Us" },
@@ -182,20 +158,20 @@ function Footer1({
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        {/* DESKTOP */}
+        {/* DESKTOP/TABLET/ MOBILE wrapper kept as-is */}
         <div className={styles.desktopLayout}>
-          {/* Row 1 */}
+          {/* Row 1 (unchanged) */}
           <div className={styles.footerTopRow1}>
             <div className={styles.subscribeSection}>
               <h4 className={styles.subTitle}>Subscribe</h4>
               <p>Stay updated with our latest news and offers.</p>
 
               <form className={styles.rowAlign} onSubmit={handleSubscribe}>
-                <input                   
-                  type="email" 
-                  placeholder="Enter your email" 
+                <input
+                  type="email"
+                  placeholder="Enter your email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)} 
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
                 <button type="submit">Subscribe</button>
@@ -205,49 +181,100 @@ function Footer1({
             </div>
 
             <div className={styles.logoCol}>
-              <img src="/images/logo-1-white.png" alt="logo" className={styles.logo} />
+              <img
+                src="/images/logo-1-white.png"
+                alt="logo"
+                className={styles.logo}
+              />
               <div className={styles.socials}>{renderSocialIcons()}</div>
             </div>
           </div>
 
           {/* Row 2 */}
-          <div className={styles.footerTopRow2}>
-            <div className={styles.quickLinks}>
-              <h4 className={`${styles.sectionTitle} ${styles.footerQuickLinks}`}>Quick Links</h4>
-              <ul>{renderListLinks(quickLinks)}</ul>
-            </div>
+<div className={styles.footerTopRow2}>
+  {/* Quick Links */}
+  <div className={styles.quickLinks}>
+    <h4 className={`${styles.sectionTitle} ${styles.footerQuickLinks}`}>
+      Quick Links
+    </h4>
+    <ul>{renderListLinks(quickLinks)}</ul>
+  </div>
 
-            <div className={styles.services}>
-              <h4 className={`${styles.sectionTitle} ${styles.footerServices}`}>Services</h4>
-              <ul>{renderListLinks(servicesLinks)}</ul>
-            </div>
+  {/* Services */}
+  <div className={styles.services}>
+    <h4 className={`${styles.sectionTitle} ${styles.footerServices}`}>
+      Services
+    </h4>
+    <ul>{renderListLinks(servicesLinks)}</ul>
+  </div>
 
-            <div className={styles.quickLinks}>
-              <h4 className={`${styles.sectionTitle} ${styles.footerLegalLinks}`}>Legal</h4>
-              <ul>{renderListLinks(legalLinks)}</ul>
-            </div>
+  {/* Legal */}
+  <div className={styles.quickLinks}>
+    <h4 className={`${styles.sectionTitle} ${styles.footerLegalLinks}`}>
+      Legal
+    </h4>
+    <ul>{renderListLinks(legalLinks)}</ul>
+  </div>
 
-            <div className={styles.getInTouch}>
-              <h4 className={`${styles.sectionTitle} ${styles.footerGetInTouch}`}>Get in Touch</h4>
-              {contactItems.map((item, i) => (
-                <div key={i} className={styles.contactItem}>
-                  <i className={`bi ${item.icon} ${styles.icon}`}></i>
-                  <div className={styles.contactTextBlock}>
-                    <p><strong>{item.label}</strong></p>
-                    <p className={item.label === "Address" ? styles.addressText : ""}>
-                      {item.label === "Address" ? item.text : item.text}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+  {/* Get in Touch */}
+  <div className={styles.getInTouch}>
+    <h4 className={`${styles.sectionTitle} ${styles.footerGetInTouch}`}>
+      Get in Touch
+    </h4>
+
+    {getInTouchItems.map((item, i) => (
+      <div key={i} className={styles.contactItem}>
+        <i className={`bi ${item.icon} ${styles.icon}`}></i>
+        <div className={styles.contactTextBlock}>
+          <p>
+            <strong>{item.label}</strong>
+          </p>
+          <p>{item.text}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+{/* 🔹 New Address Row spanning entire footer width */}
+<div className={styles.footerAddressRow}>
+  {/* Address 1 */}
+  <div className={styles.addressCard}>
+    <div className={styles.contactItem}>
+      <i className={`bi bi-geo-alt-fill ${styles.icon}`}></i>
+      <div className={styles.contactTextBlock}>
+        <p>
+          <strong>{address1Label}</strong>
+        </p>
+        <p className={styles.addressText}>{address1Text}</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Address 2 */}
+  <div className={styles.addressCard}>
+    <div className={styles.contactItem}>
+      <i className={`bi bi-geo-alt-fill ${styles.icon}`}></i>
+      <div className={styles.contactTextBlock}>
+        <p>
+          <strong>{address2Label}</strong>
+        </p>
+        <p className={styles.addressText}>{address2Text}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
 
-        {/* BOTTOM */}
+        {/* BOTTOM (unchanged) */}
         <div className={styles.footerBottom}>
           <div className={styles.copyrightSection}>
-            <p>© {new Date().getFullYear()} Cybomb Technologies LLP.<br/>All rights reserved.</p>
+            <p>
+              © {new Date().getFullYear()} Cybomb Technologies LLP.
+              <br />
+              All rights reserved.
+            </p>
           </div>
 
           <div className={styles.certificateSection}>
@@ -275,7 +302,9 @@ function Footer1({
               </div>
             </div>
 
-            <div className={`${styles.certificateItem} ${styles.thirdCertificate}`}>
+            <div
+              className={`${styles.certificateItem} ${styles.thirdCertificate}`}
+            >
               <img
                 src={AicteLogo}
                 alt="Certificate 3"
@@ -283,10 +312,11 @@ function Footer1({
               />
               <div className={styles.certificateText}>
                 <span className={styles.certificateLabel}>AICTE Reg.</span>
-                <span className={styles.certificateValue}>Internship Partner</span>
+                <span className={styles.certificateValue}>
+                  Internship Partner
+                </span>
               </div>
             </div>
-
           </div>
         </div>
       </div>
