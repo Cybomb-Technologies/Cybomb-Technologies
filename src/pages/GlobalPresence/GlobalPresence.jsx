@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Container, Row, Col, Card, Button, Badge, Accordion } from "react-bootstrap";
 import styles from "./GlobalPresence.module.css";
-
+import HomeService from "./Global-service";
 
 const LOCATIONS = {
   india: {
@@ -13,8 +13,8 @@ const LOCATIONS = {
       "Chennai, Tamil Nadu",
       "India"
     ],
-    phone: "+91 —",
-    email: "hello@cybomb.com",
+    phone: "+91 9715092104",
+    email: "support@cybomb.com",
     mapsQuery: "Cybomb%20Technologies%20Chennai%20Tamil%20Nadu",
     // Small map embed for the card:
     cardMapSrc:
@@ -30,7 +30,7 @@ const LOCATIONS = {
       "United States"
     ],
     phone: "+1 —",
-    email: "hello@cybomb.com",
+    email: "support@cybomb.com",
     mapsQuery:
       "30%20N%20Gould%20St%20Ste%20R,%20Sheridan,%20Wyoming%2082801",
     cardMapSrc:
@@ -48,7 +48,7 @@ export default function GlobalPresence() {
     <div className={styles.pageWrap}>
       {/* ===== Banner ===== */}
       <section className={styles.banner}>
-        <Container className="py-5">
+        <Container className="py-5 mt-5">
           <Row className="align-items-center">
             <Col lg={8} className="text-center text-lg-start">
               <h1 className={styles.bannerTitle}>
@@ -117,7 +117,7 @@ export default function GlobalPresence() {
                         <Card.Title className="mb-1">Cybomb — India</Card.Title>
                         <Card.Subtitle className="text-muted">Chennai, Tamil Nadu</Card.Subtitle>
                       </div>
-                      <Badge bg="secondary">Engineering Hub</Badge>
+                      <Badge bg="secondary">Head Office</Badge>
                     </div>
 
                     <hr className="my-3" />
@@ -195,7 +195,7 @@ export default function GlobalPresence() {
       {/* ===== Your existing section goes here ===== */}
       {/* Replace <TrustedBySection/> with the component you already have */}
       <section className={styles.customSlot}>
-        {/* Example: <TrustedBySection /> */}
+       <HomeService />
       </section>
 
       {/* ===== FAQ ===== */}
@@ -227,8 +227,8 @@ export default function GlobalPresence() {
                     Can we visit your offices?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Absolutely. Please reach out to <a href="mailto:hello@cybomb.com">hello@cybomb.com</a> to
-                    schedule a visit to our Chennai (India) engineering hub or our
+                    Absolutely. Please reach out to <a href="mailto:support@cybomb.com">support@cybomb.com</a> to
+                    schedule a visit to our Chennai (India) office or our
                     Sheridan (USA) office. We’ll share visitor access and timings.
                   </Accordion.Body>
                 </Accordion.Item>
