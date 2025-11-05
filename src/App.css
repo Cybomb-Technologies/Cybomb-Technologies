@@ -1,0 +1,60 @@
+/* Custom styles for Bootstrap conversion */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover-opacity-100:hover {
+  opacity: 1 !important;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #6666CC, #1A173A);
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.whitespace-pre {
+  white-space: pre-wrap;
+}
+
+/* Custom color for purple */
+.bg-purple {
+  background-color: #6f42c1 !important;
+}
+
+.text-purple {
+  color: #6f42c1 !important;
+}
+
+.bg-purple.bg-opacity-10 {
+  background-color: rgba(111, 66, 193, 0.1) !important;
+}
+
+.btn-outline-purple {
+  color: #6f42c1;
+  border-color: #6f42c1;
+}
+
+.btn-outline-purple:hover {
+  background-color: #6f42c1;
+  border-color: #6f42c1;
+  color: white;
+}
+/* Custom CSS file (e.g., custom.css) */
+@media (min-width: 992px) { /* lg breakpoint */
+    .ms-lg-250 {
+        margin-left: 250px !important;
+    }
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ms-lg-250 {
+    margin-left: 0 !important;
+  }
+  
+  .ps-lg-250 {
+    padding-left: 0 !important;
+  }
+}

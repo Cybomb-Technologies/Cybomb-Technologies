@@ -31,7 +31,7 @@ function Homecontact() {
                 </div>
                 <div className="ms-3">
                   <p className="contact-text-color mb-0">
-                    <b>Address</b>
+                    <b>India</b>
                   </p>
                   <p className="mb-0 fs-6 contact-text-color">
                     Cybomb Technologies Pvt Ltd <br />  Prime Plaza No.54/1, 1st street, Sripuram colony,
@@ -47,12 +47,12 @@ function Homecontact() {
                 </div>
                 <div className="ms-3">
                   <p className="contact-text-color mb-0">
-                    <b>USA Address</b>
+                    <b>USA</b>
                   </p>
                   <p className="mb-0 fs-6 contact-text-color">
                     Cybomb Technologies Inc, <br />  30 N Gould St Ste R,
                     <br />
-                    Sheridan, WY 82801
+                    Sheridan, Wyoming 82801
                   </p>
                 </div>
                 

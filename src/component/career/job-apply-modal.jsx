@@ -1,32 +1,68 @@
 import React, { useState } from "react";
-import { FiUpload, FiCheckCircle } from "react-icons/fi";
+import { FiUpload, FiCheckCircle, FiUser, FiMail, FiPhone, FiBriefcase, FiClock, FiFileText, FiX } from "react-icons/fi";
 
-const API_URL = import.meta.env.VITE_API_BASE; 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const QuickApplyModal = ({ job, onClose, onApply }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
+    role: job?.title || "",
+    experience: "",
+    coverLetter: "",
     resume: null,
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
+  const experienceOptions = [
+    "Less than 1 year",
+    "1 - 3 years",
+    "3 - 5 years",
+    "5 - 10 years",
+    "10+ years",
+  ];
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: "" }));
+    }
   };
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    if (file && file.size > 5 * 1024 * 1024) {
-      setErrors((prev) => ({
-        ...prev,
-        resume: "File size should be less than 5MB",
-      }));
-    } else {
+    if (file) {
+      // Validate file type
+      const allowedTypes = [
+        "application/pdf",
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      ];
+
+      if (!allowedTypes.includes(file.type)) {
+        setErrors((prev) => ({
+          ...prev,
+          resume: "Please upload a PDF or Word document (PDF, DOC, DOCX).",
+        }));
+        e.target.value = "";
+        return;
+      }
+
+      // Validate file size (5MB)
+      if (file.size > 5 * 1024 * 1024) {
+        setErrors((prev) => ({
+          ...prev,
+          resume: "Please upload a file smaller than 5MB.",
+        }));
+        e.target.value = "";
+        return;
+      }
+
       setErrors((prev) => ({ ...prev, resume: "" }));
       setFormData((prev) => ({ ...prev, resume: file }));
     }
@@ -38,6 +74,7 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
     if (!formData.email.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/))
       newErrors.email = "Valid email is required";
     if (
+      formData.phone &&
       !formData.phone.match(
         /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
       )
@@ -49,52 +86,57 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!validate()) return;
-    setIsSubmitting(true);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  if (!validate()) return;
+  setIsSubmitting(true);
 
-    try {
-      const formDataToSend = new FormData();
-      formDataToSend.append("name", formData.name);
-      formDataToSend.append("phone", formData.phone);
-      formDataToSend.append("email", formData.email);
+  try {
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("phone", formData.phone);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("role", formData.role);
+    formDataToSend.append("experience", formData.experience);
+    formDataToSend.append("coverLetter", formData.coverLetter);
+
+    if (formData.resume) {
       formDataToSend.append("resume", formData.resume);
-
-      // Add job title to form data
-      if (job?.title) {
-        formDataToSend.append("jobTitle", job.title);
-      }
-
-      const res = await fetch(`${API_URL}/api/career`, {
-        method: "POST",
-        body: formDataToSend,
-      });
-
-      if (!res.ok) {
-        throw new Error("Failed to submit application");
-      }
-
-      setSubmitSuccess(true);
-      setTimeout(() => {
-        onApply?.();
-        onClose();
-      }, 2000);
-    } catch (error) {
-      console.error("Submission error:", error);
-      setErrors({ submit: "Failed to submit application. Please try again." });
-    } finally {
-      setIsSubmitting(false);
     }
-  };
+
+    // FIXED: Use the correct application endpoint
+    const res = await fetch(`${API_BASE_URL}/api/application`, {
+      method: "POST",
+      body: formDataToSend,
+    });
+
+    const responseData = await res.json();
+
+    if (!res.ok) {
+      throw new Error(responseData.message || "Failed to submit application");
+    }
+
+    setSubmitSuccess(true);
+    setTimeout(() => {
+      onApply?.();
+      onClose();
+    }, 2000);
+  } catch (error) {
+    console.error("Submission error:", error);
+    setErrors({ submit: error.message || "Failed to submit application. Please try again." });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <div className="modal fade show" style={{ display: "block" }} tabIndex="-1">
-      <div className="modal-dialog modal-md modal-dialog-centered">
+      <div className="modal-dialog modal-lg modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title">
-              {job ? `Quick Apply: ${job.title}` : "Quick Application"}
+            <h5 className="modal-title d-flex align-items-center">
+              <FiBriefcase className="me-2" />
+              {job ? `Apply for: ${job.title}` : "Quick Application"}
             </h5>
             <button type="button" className="btn-close" onClick={onClose}></button>
           </div>
@@ -122,19 +164,26 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
             ) : (
               <form onSubmit={handleSubmit} className="row g-3">
                 <div className="col-12">
-                  <label className="form-label">Full Name*</label>
+                  <label className="form-label d-flex align-items-center">
+                    <FiUser className="me-2" />
+                    Full Name*
+                  </label>
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     className={`form-control ${errors.name ? "is-invalid" : ""}`}
+                    placeholder="Jane Doe"
                   />
                   {errors.name && <div className="invalid-feedback">{errors.name}</div>}
                 </div>
 
                 <div className="col-12">
-                  <label className="form-label">Phone*</label>
+                  <label className="form-label d-flex align-items-center">
+                    <FiPhone className="me-2" />
+                    Phone
+                  </label>
                   <input
                     type="tel"
                     name="phone"
@@ -147,40 +196,99 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
                 </div>
 
                 <div className="col-12">
-                  <label className="form-label">Email*</label>
+                  <label className="form-label d-flex align-items-center">
+                    <FiMail className="me-2" />
+                    Email*
+                  </label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     className={`form-control ${errors.email ? "is-invalid" : ""}`}
+                    placeholder="jane.doe@example.com"
                   />
                   {errors.email && <div className="invalid-feedback">{errors.email}</div>}
                 </div>
 
                 <div className="col-12">
-                  <label className="form-label">Resume/CV*</label>
+                  <label className="form-label d-flex align-items-center">
+                    <FiBriefcase className="me-2" />
+                    Applying For*
+                  </label>
+                    <input
+                      type="text"
+                      name="role"
+                      value={formData.role}
+                      readOnly
+                      className="form-control bg-light"
+                    />
+                </div>
+
+                <div className="col-12">
+                  <label className="form-label d-flex align-items-center">
+                    <FiClock className="me-2" />
+                    Total Experience
+                  </label>
+                  <select
+                    name="experience"
+                    value={formData.experience}
+                    onChange={handleChange}
+                    className="form-control"
+                  >
+                    <option value="">Select experience level</option>
+                    {experienceOptions.map((opt) => (
+                      <option key={opt} value={opt}>
+                        {opt}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="col-12">
+                  <label className="form-label d-flex align-items-center">
+                    <FiFileText className="me-2" />
+                    Cover Letter / Message
+                  </label>
+                  <textarea
+                    name="coverLetter"
+                    value={formData.coverLetter}
+                    onChange={handleChange}
+                    rows="3"
+                    className="form-control"
+                    placeholder="Tell us why you are a great fit for this role..."
+                  ></textarea>
+                </div>
+
+                <div className="col-12">
+                  <label className="form-label d-flex align-items-center">
+                    <FiUpload className="me-2" />
+                    Resume/CV*
+                  </label>
                   <div className={`border rounded p-3 ${errors.resume ? "border-danger" : ""}`}>
                     {formData.resume ? (
                       <div className="d-flex justify-content-between align-items-center">
-                        <div>
+                        <div className="d-flex align-items-center">
                           <FiUpload className="me-2" />
-                          {formData.resume.name}
-                          <small className="text-muted ms-2">
-                            {(formData.resume.size / 1024 / 1024).toFixed(2)} MB
-                          </small>
+                          <div>
+                            <div className="fw-medium">{formData.resume.name}</div>
+                            <small className="text-muted">
+                              {(formData.resume.size / 1024 / 1024).toFixed(2)} MB
+                            </small>
+                          </div>
                         </div>
                         <button
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
                           onClick={() => setFormData((prev) => ({ ...prev, resume: null }))}
                         >
+                          <FiX className="me-1" />
                           Change
                         </button>
                       </div>
                     ) : (
-                      <>
-                        <label className="btn btn-sm btn-outline-primary mb-0">
+                      <div className="text-center">
+                        <label className="btn btn-outline-primary mb-2">
                           <FiUpload className="me-1" /> Upload File
                           <input
                             type="file"
@@ -189,10 +297,10 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
                             onChange={handleFileChange}
                           />
                         </label>
-                        <small className="text-muted ms-2">
+                        <div className="small text-muted">
                           PDF, DOC, DOCX (Max 5MB)
-                        </small>
-                      </>
+                        </div>
+                      </div>
                     )}
                   </div>
                   {errors.resume && (
@@ -200,19 +308,36 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
                   )}
                 </div>
 
-                {errors.submit && <div className="alert alert-danger">{errors.submit}</div>}
+                {errors.submit && (
+                  <div className="col-12">
+                    <div className="alert alert-danger">{errors.submit}</div>
+                  </div>
+                )}
 
-                <div className="col-12 text-end">
-                  <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
-                    {isSubmitting ? (
-                      <>
-                        <span className="spinner-border spinner-border-sm me-2"></span>
-                        Submitting...
-                      </>
-                    ) : (
-                      "Submit Application"
-                    )}
-                  </button>
+                <div className="col-12">
+                  <div className="d-flex gap-2 justify-content-end">
+                    <button 
+                      type="button" 
+                      className="btn btn-secondary" 
+                      onClick={onClose}
+                    >
+                      Cancel
+                    </button>
+                    <button 
+                      type="submit" 
+                      className="btn btn-primary" 
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <span className="spinner-border spinner-border-sm me-2"></span>
+                          Submitting...
+                        </>
+                      ) : (
+                        "Submit Application"
+                      )}
+                    </button>
+                  </div>
                 </div>
               </form>
             )}

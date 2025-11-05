@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { FiClock, FiMapPin, FiAward } from "react-icons/fi";
+import { FiClock, FiMapPin, FiAward, FiDollarSign } from "react-icons/fi";
 import styles from "./career-content.module.css";
-import QuickApplyModal from "./job-apply-modal"; // Import the quick apply modal
+import QuickApplyModal from "./job-apply-modal";
 
-const CareerCard = ({ job, onView }) => {
+const CareerCard = ({ job, onView, onApply }) => {
   const [showQuickApply, setShowQuickApply] = useState(false);
 
   return (
@@ -38,17 +38,28 @@ const CareerCard = ({ job, onView }) => {
               <FiClock className="me-2" />
               <small>Experience: {job.experience}</small>
             </div>
+            {job.salary && (
+              <div className="d-flex align-items-center text-success mb-2">
+                <FiDollarSign className="me-2" />
+                <small className="fw-bold">{job.salary}</small>
+              </div>
+            )}
             <p className="card-text my-3">{job.short}</p>
 
-            {job.skills && (
+            {job.skills && job.skills.length > 0 && (
               <div className="mb-3">
                 <small className="text-muted d-block mb-1">Key Skills:</small>
                 <div className="d-flex flex-wrap gap-2">
-                  {job.skills.map((skill, index) => (
+                  {job.skills.slice(0, 3).map((skill, index) => (
                     <span key={index} className="badge bg-light text-dark">
                       {skill}
                     </span>
                   ))}
+                  {job.skills.length > 3 && (
+                    <span className="badge bg-light text-dark">
+                      +{job.skills.length - 3} more
+                    </span>
+                  )}
                 </div>
               </div>
             )}
@@ -81,6 +92,7 @@ const CareerCard = ({ job, onView }) => {
           onClose={() => setShowQuickApply(false)}
           onApply={() => {
             setShowQuickApply(false);
+            onApply?.(job);
           }}
         />
       )}

@@ -23,7 +23,7 @@ function useDeviceType() {
   return device;
 }
 
-const API_URL = import.meta.env.VITE_API_BASE;
+const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 const defaultSocialLinks = [
   { href: "https://www.instagram.com/cybomb_tech/", iconClass: "bi bi-instagram" },
@@ -46,23 +46,31 @@ function Footer1({ socialLinks = defaultSocialLinks, legalLinks = defaultLegalLi
   const handleSubscribe = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
+    
     try {
-      const res = await fetch(`${API_URL}/api/footer-mail`, {
+      const res = await fetch(`${API_URL}/api/newsletter/subscribe`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ 
+          email,
+          source: "website-footer" // You can customize this source
+        }),
       });
-      if (res.ok) {
+      
+      const data = await res.json();
+      
+      if (res.ok && data.success) {
         setStatus("✅ Subscription successful!");
         setEmail("");
       } else {
-        setStatus("❌ Failed to subscribe. Try again.");
+        setStatus(data.message || "❌ Failed to subscribe. Try again.");
       }
     } catch (err) {
-      console.error(err);
-      setStatus("⚠️ Server error.");
+      console.error("Subscription error:", err);
+      setStatus("⚠️ Network error. Please try again.");
     }
   };
+
 
   // Address texts (device-aware)
   let addressText = "";

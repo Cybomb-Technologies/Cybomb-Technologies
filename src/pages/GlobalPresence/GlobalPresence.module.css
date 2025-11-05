@@ -1,0 +1,129 @@
+.pageWrap {
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+/* ===== Banner ===== */
+.banner {
+  background: linear-gradient(
+      0deg,
+      color-mix(in srgb, var(--bs-primary) 12%, transparent),
+      color-mix(in srgb, var(--bs-primary) 12%, transparent)
+    ),
+    var(--bs-body-bg);
+  border-bottom: 1px solid color-mix(in srgb, var(--bs-primary) 18%, transparent);
+}
+
+.bannerTitle {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--bs-emphasis-color, var(--bs-body-color));
+}
+
+.bannerSub {
+  opacity: 0.85;
+}
+
+.pillBadge {
+  font-weight: 600;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+}
+
+/* ===== Locations ===== */
+.locations {
+  padding: 3rem 0;
+}
+
+.mapHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-bottom: .75rem;
+}
+
+.mapNote {
+  font-size: .825rem;
+  color: var(--bs-secondary-color);
+}
+
+.mapFrameWrap {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  outline: 1px solid color-mix(in srgb, var(--bs-primary) 18%, transparent);
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+  min-height: 380px;
+  background: #f8f9fa;
+}
+
+.mapFrame {
+  width: 100%;
+  height: 480px;
+  border: 0;
+}
+
+@media (max-width: 991.98px) {
+  .mapFrame { height: 360px; }
+}
+
+.locationCard {
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--bs-primary) 16%, transparent);
+  box-shadow: 0 4px 18px rgba(0,0,0,.06);
+}
+
+.addrList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 .75rem 0;
+}
+
+.addrList li {
+  margin-bottom: .25rem;
+}
+
+.cardMap {
+  position: relative;
+  width: 100%;
+  padding-top: 62%;
+  border-radius: .75rem;
+  overflow: hidden;
+  outline: 1px solid rgba(0,0,0,.06);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.02);
+}
+
+.cardMap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ===== Custom slot (your existing section) ===== */
+.customSlot {
+  padding: 2rem 0 0;
+}
+
+/* ===== FAQ ===== */
+.faq {
+  padding: 3rem 0 4rem;
+  background:
+    radial-gradient(90rem 90rem at 10% -10%,
+      color-mix(in srgb, var(--bs-primary) 9%, transparent), transparent 60%)
+      ,var(--bs-body-bg);
+  border-top: 1px solid color-mix(in srgb, var(--bs-primary) 18%, transparent);
+}
+
+.faq :global(.accordion-button) {
+  font-weight: 600;
+}
+
+.faq :global(.accordion-item) {
+  border-radius: .75rem !important;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.08);
+  margin-bottom: .75rem;
+}
