@@ -10,6 +10,8 @@ import Sitecore from "../component/pages-services/technologies/cms/sitecore/site
 import Pantheon from "../component/pages-services/technologies/cms/pantheon/pantheon";
 import Aem from "../component/pages-services/technologies/cms/aem/aem";
 import CSSApp from "../component/pages-services/technologies/custom-development/css/css";
+import USAHome from "../pages/usa-home";
+
 const emp5Routes = (
   <>
     <Route path="/services/wordpress" element={<WordPress />} />
@@ -23,6 +25,7 @@ const emp5Routes = (
     <Route path="/services/pantheon" element={<Pantheon />} />
     <Route path="/services/aem" element={<Aem />} />
     <Route path="/services/css" element={<CSSApp />} />
+    <Route path="/usa-home" element={<USAHome />} />
 
     {/* <Route path="/services/api-development" element={<ApiDevelopment />} />
      <Route path="/services/hosting-service" element={<HostingServices />} /> */}
