@@ -3,7 +3,7 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/bootstrap.css';
 import styles from './contact.module.css';
 
-const API_URL = import.meta.env.VITE_API_BASE; 
+const API_URL = import.meta.env.VITE_API_BASE_URL; 
 
 function Contactcontent() {
   const [formData, setFormData] = useState({
@@ -30,9 +30,9 @@ function Contactcontent() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // const handlePhoneChange = (value, country, e, formattedValue) => {
-  //   setFormData(prev => ({ ...prev, phone: value }));
-  // };
+  const handlePhoneChange = (value) => {
+    setFormData(prev => ({ ...prev, phone: value }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,10 +40,19 @@ function Contactcontent() {
     setSubmitStatus(null);
 
     try {
-      const res = await fetch(`${API_URL}/api/send-mail`, {
+      // Prepare all data for backend
+      const contactData = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone, // Now storing phone
+        message: formData.message,
+        subscribe: subscribe // Now storing subscription preference
+      };
+
+      const res = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({...formData, subscribe}),
+        body: JSON.stringify(contactData),
       });
 
       const data = await res.json();
@@ -60,7 +69,10 @@ function Contactcontent() {
       });
       setSubscribe(false);
     } catch (error) {
-      setSubmitStatus({ success: false, message: error.message });
+      setSubmitStatus({ 
+        success: false, 
+        message: error.message || "Failed to submit form. Please try again." 
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -108,25 +120,24 @@ function Contactcontent() {
             }
           ].map((item, index) => (
             <div className="col-md-4" key={index}>
-  <div className={`card h-100 border-0 ${styles.contactMethodCard}`}>
-    <div className="card-body d-flex flex-column text-center">
-      <div className={styles.iconContainer}>
-        <i className={`bi ${item.icon}`}></i>
-      </div>
-      <h5 className="mb-3">{item.title}</h5>
-      <p className="text-muted mb-4">{item.content}</p>
-      <a 
-        href={item.link} 
-        target={item.target} 
-        className="btn btn-primary px-4 mt-auto mx-auto" 
-        style={{ backgroundColor: "#003459" }}
-      >
-        {item.btnText}
-      </a>
-    </div>
-  </div>
-</div>
-
+              <div className={`card h-100 border-0 ${styles.contactMethodCard}`}>
+                <div className="card-body d-flex flex-column text-center">
+                  <div className={styles.iconContainer}>
+                    <i className={`bi ${item.icon}`}></i>
+                  </div>
+                  <h5 className="mb-3">{item.title}</h5>
+                  <p className="text-muted mb-4">{item.content}</p>
+                  <a 
+                    href={item.link} 
+                    target={item.target} 
+                    className="btn btn-primary px-4 mt-auto mx-auto" 
+                    style={{ backgroundColor: "#003459" }}
+                  >
+                    {item.btnText}
+                  </a>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
 
@@ -143,26 +154,27 @@ function Contactcontent() {
                     <i className="bi bi-geo-alt-fill"></i>
                   </div>
                   <div className={styles.contactInfoText}>
-                    <h5>Address</h5>
+                    <h5>India</h5>
                     <p>
                       Cybomb Technologies Pvt Ltd<br />
                       Prime Plaza – No.54/1, 1st street, Sripuram Colony<br />
                       St. Thomas Mount, Chennai, India
                     </p>
-                    </div>
+                  </div>
                 </div>
+
                 <div className={styles.contactInfoItem}>
                   <div className={styles.contactInfoIcon}>
                     <i className="bi bi-geo-alt-fill"></i>
                   </div>
                   <div className={styles.contactInfoText}>
-                    <h5>USA Address</h5>
+                    <h5>USA</h5>
                     <p>
                       Cybomb Technologies Inc,
                       30 N Gould St Ste R,
-                      Sheridan, WY 82801
+                      Sheridan,Wyoming 82801
                     </p>
-                    </div>
+                  </div>
                 </div>
 
                 {/* Working Hours */}
@@ -224,11 +236,7 @@ function Contactcontent() {
           </div>
 
           {/* Contact Form */}
-
           <div className="col-lg-7">
-            <img src="/images/banner/banner-2.webp" alt=""  className="img-fluid h-100 object-fit-cover"/>
-          </div>
-          {/* <div className="col-lg-7">
             <div className="card h-100 border-0 shadow-sm">
               <div className="card-body p-4 p-md-5">
                 {submitStatus && (
@@ -239,12 +247,11 @@ function Contactcontent() {
 
                 {showSuccess ? (
                   <div className="text-center py-4">
-                    <svg className={styles.successAnimation} viewBox="0 0 52 52">
-                      <circle className="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
-                      <path className="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-                    </svg>
-                    <h4 className="text-success mt-3">Message Sent!</h4>
-                    <p>We'll get back to you within 24 hours.</p>
+                    <div className="text-success mb-3" style={{ fontSize: '4rem' }}>
+                      <i className="bi bi-check-circle-fill"></i>
+                    </div>
+                    <h4 className="text-success mt-3">Message Sent Successfully!</h4>
+                    <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
                     <button 
                       className="btn btn-outline-primary mt-2"
                       onClick={() => setShowSuccess(false)}
@@ -298,20 +305,18 @@ function Contactcontent() {
                         </div>
 
                         <div className="col-12">
-                          <label className="form-label fw-bold">
-                            Phone Number <span className="text-danger">*</span>
-                          </label>
+                          <label className="form-label fw-bold">Phone Number</label>
                           <PhoneInput
                             country="in"
                             value={formData.phone}
-                            // onChange={handlePhoneChange}
+                            onChange={handlePhoneChange}
                             inputProps={{
                               name: 'phone',
-                              required: true,
                             }}
                             containerClass="react-tel-input w-100"
                             inputClass={styles.phoneInput}
                           />
+                          <small className="text-muted">Optional - we'll store this for better communication</small>
                         </div>
 
                         <div className="col-12">
@@ -344,7 +349,7 @@ function Contactcontent() {
                               onChange={(e) => setSubscribe(e.target.checked)}
                             />
                             <label className="form-check-label" htmlFor="newsletter">
-                              Subscribe to our newsletter
+                              Subscribe to our newsletter for updates and offers
                             </label>
                           </div>
                         </div>
@@ -373,7 +378,7 @@ function Contactcontent() {
                 )}
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
 

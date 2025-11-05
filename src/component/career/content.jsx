@@ -3,9 +3,7 @@ import CareerFilters from "./career-filters";
 import CareerCard from "./career-card";
 import styles from "./career-content.module.css";
 
-
-
-const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
+const CareerContent = ({ jobs = [], loading = false, error = null, onRetry, onViewJob, onApplyJob }) => {
   const [search, setSearch] = useState("");
   const [department, setDepartment] = useState("");
   const [location, setLocation] = useState("");
@@ -22,7 +20,8 @@ const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
       job.short.toLowerCase().includes(search.toLowerCase()) ||
       job.skills?.some((skill) =>
         skill.toLowerCase().includes(search.toLowerCase())
-      );
+      ) ||
+      job.department.toLowerCase().includes(search.toLowerCase());
 
     const matchesDepartment =
       !department || job.department.toLowerCase() === department.toLowerCase();
@@ -31,6 +30,12 @@ const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
 
     return matchesSearch && matchesDepartment && matchesLocation;
   });
+
+  // Get unique departments from jobs
+  const departments = ["All Departments", ...new Set(jobs.map(job => job.department))];
+  
+  // Get unique locations from jobs
+  const locations = ["All Locations", ...new Set(jobs.map(job => job.location))];
 
   return (
     <div className={`container mb-0my-5 ${styles.careerSection}`} id="openings">
@@ -42,12 +47,35 @@ const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
         setDepartment={setDepartment}
         location={location}
         setLocation={setLocation}
+        departments={departments}
+        locations={locations}
         clearFilters={clearFilters}
       />
 
       <div className="mb-5">
         <h3 className={`mb-4 mt-4 ${styles.sectionTitle}`}>Current Openings</h3>
-        {filteredJobs.length > 0 ? (
+        
+        {loading ? (
+          <div className="text-center py-5">
+            <div className="spinner-border text-primary" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
+            <p className="mt-3 text-muted">Loading job openings...</p>
+          </div>
+        ) : error ? (
+          <div className="text-center py-5">
+            <div className="alert alert-danger" role="alert">
+              <h4 className="alert-heading">Unable to load job openings</h4>
+              <p className="mb-3">{error}</p>
+              <button
+                className="btn btn-primary"
+                onClick={onRetry}
+              >
+                Try Again
+              </button>
+            </div>
+          </div>
+        ) : filteredJobs.length > 0 ? (
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             {filteredJobs.map((job) => (
               <div key={job.id} className="col">
@@ -55,14 +83,30 @@ const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
               </div>
             ))}
           </div>
-        ) : (
+        ) : jobs.length > 0 ? (
           <div className="text-center py-5">
             <h4 className="text-muted mb-3">No jobs match your criteria</h4>
+            <p className="text-muted mb-4">
+              Try adjusting your filters to see more results.
+            </p>
             <button
               className="btn btn-outline-primary"
               onClick={clearFilters}
             >
               Clear Filters
+            </button>
+          </div>
+        ) : (
+          <div className="text-center py-5">
+            <h4 className="text-muted mb-3">No current job openings</h4>
+            <p className="text-muted">
+              We don't have any open positions at the moment. Please check back later!
+            </p>
+            <button
+              className="btn btn-outline-primary mt-2"
+              onClick={onRetry}
+            >
+              Refresh
             </button>
           </div>
         )}
@@ -125,7 +169,6 @@ const CareerContent = ({ jobs = [], onViewJob, onApplyJob }) => {
         </div>
       </section>
     </div>
-    
   );
 };
 

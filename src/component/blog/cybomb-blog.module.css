@@ -1,246 +1,270 @@
 .blogSection {
-  padding: 2rem 8rem;
-  font-family: "Inter", sans-serif;
-  background: #f9f9f9;
+  padding: 3rem 1rem;
+  background: #ffffff;
 }
+
 .blogHeading {
   text-align: center;
-  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
   font-weight: 700;
-  margin-bottom: 2rem;
-  color: #003459;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  padding: 0 1rem;
 }
 
-.sectionTitle {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  font-weight: 600;
-  color: #222;
+.blogCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.5rem;
 }
-
-.blogGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-}
-
-.toggleButtonWrapper {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.toggleButton {
-  background: #007ea7;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.toggleButton:hover {
-  background: #005f7f;
-}
-
 
 .blogCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .blogImage {
   width: 100%;
   height: 200px;
-  object-fit:cover ;
-}
-
-
-.blogTitle {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  color: #001f36;
-}
-
-.blogDate {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 0.8rem;
-}
-
-.blogCard {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  object-fit: cover;
 }
 
 .blogContent {
+  padding: 1.25rem;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  flex: 1; /* take remaining space */
-  padding: 1.2rem;
+}
+
+/* cybomb-blog.module.css */
+
+.blogTitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+
+  /* NEW: robust wrapping + 2-line clamp */
+  overflow-wrap: anywhere;   /* handles super-long strings/URLs */
+  word-break: break-word;
+  hyphens: auto;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;     /* show up to 2 lines */
+  overflow: hidden;          /* hide overflow after 2 lines */
+  max-width: 100%;
+}
+
+
+.blogDate {
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.blogReadTime {
+  color: #007bff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .blogDescription {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.5;
+  color: #495057;
+  line-height: 1.6;
+  flex-grow: 1;
   margin-bottom: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
 
-  /* Show only 2 lines */
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.blogTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.blogTag {
+  background: #e9ecef;
+  color: #495057;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .readMoreBtn {
-  margin: 10px; 
-  margin-right: 32px;
-  align-self: flex-end;
-  background: none;        /* No background */
-  border: none;            /* Remove border */
-  padding: 0;              /* Reset padding */
-  font-size: 1rem;         /* Normal text size */
-  font-weight: 500;
-  color: #007ea7;          /* Link-style color */
-  cursor: pointer;         /* Pointer cursor */
-  text-decoration: none;   /* Remove underline initially */
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 0 1.25rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .readMoreBtn:hover {
-  color: #005f7f;          /* Darker on hover */
-  text-decoration: underline; /* Show underline on hover */
+  background: linear-gradient(135deg, #0056b3, #004085);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
 
-/* 📱 Responsive Styles for <1400px */
-@media (max-width: 1400px) {
-  .blogSection {
-    padding: 2rem 4rem; /* Reduce side padding */
-  }
-  
-  .blogGrid {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Slightly smaller min width */
-    gap: 1.8rem;
-  }
-  
-  .blogImage {
-    height: 180px; /* Slightly reduce image height */
-  }
+.toggleButtonWrapper {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 0 1rem;
 }
 
-/* 📱 Tablet Styles */
-@media (max-width: 1024px) {
+.toggleButton {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.toggleButton:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+/* Tablet devices */
+@media (min-width: 768px) and (max-width: 1023px) {
   .blogSection {
-    padding: 2rem 3rem;
+    padding: 3.5rem 1.5rem;
   }
   
   .blogHeading {
-    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    padding: 0 1.5rem;
   }
   
-  .sectionTitle {
-    font-size: 1.8rem;
-  }
-  
-  .blogGrid {
-    grid-template-columns: 1fr; /* Single column */
-    gap: 1.5rem;
-  }
-  
-  .blogImage {
-    height: 170px;
-  }
-  
-  .blogTitle {
-    font-size: 1.2rem;
-  }
-}
-
-/* 📱 Mobile Styles */
-@media (max-width: 768px) {
-  .blogSection {
-    padding: 2rem 1.5rem;
-  }
-
-  .blogHeading {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .sectionTitle {
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .blogGrid {
-    grid-template-columns: 1fr; /* Single column */
-    gap: 1.5rem;
-  }
-
   .blogCard {
-    border-radius: 10px;
+    margin: 0 0.75rem;
   }
-
-  .blogImage {
-    height: 160px;
+  
+  .blogContent {
+    padding: 1.5rem;
   }
-
-  .blogTitle {
-    font-size: 1.1rem;
-  }
-
-  .blogDate {
-    font-size: 0.8rem;
-  }
-
-  .blogDescription {
-    font-size: 0.9rem;
-    margin-bottom: 0.8rem;
-  }
-
+  
   .readMoreBtn {
-    font-size: 0.9rem;
+    margin: 0 1.5rem 1.5rem;
+  }
+  
+  .toggleButtonWrapper {
+    margin-top: 3rem;
+    padding: 0 1.5rem;
   }
 }
 
+/* Desktop devices */
+@media (min-width: 1024px) {
+  .blogSection {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .blogHeading {
+    margin-bottom: 3.5rem;
+    padding: 0 2rem;
+  }
+  
+  .blogCard {
+    margin: 0 1rem;
+  }
+  
+  .blogContent {
+    padding: 1.75rem;
+  }
+  
+  .readMoreBtn {
+    margin: 0 1.75rem 1.75rem;
+  }
+  
+  .toggleButtonWrapper {
+    margin-top: 3.5rem;
+    padding: 0 2rem;
+  }
+}
+
+/* Small mobile devices */
 @media (max-width: 480px) {
   .blogSection {
-    padding: 1.5rem 1rem;
+    padding: 2rem 0.75rem;
   }
   
   .blogHeading {
-    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    padding: 0 0.75rem;
   }
   
-  .sectionTitle {
-    font-size: 1.4rem;
+  .blogCard {
+    margin: 0 0.25rem;
   }
-
-  .blogImage {
-    height: 140px;
+  
+  .blogContent {
+    padding: 1rem;
   }
-
-  .blogTitle {
-    font-size: 1rem;
-  }
-
-  .blogDescription {
-    font-size: 0.85rem;
-  }
-
+  
   .readMoreBtn {
-    width: 100%;
-    text-align: end;
-    margin-right: 0;
-    padding-right: 1rem;
+    margin: 0 1rem 1rem;
+    padding: 0.65rem 1.25rem;
+  }
+  
+  .toggleButtonWrapper {
+    margin-top: 2rem;
+    padding: 0 0.75rem;
+  }
+  
+  .toggleButton {
+    padding: 0.65rem 1.75rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .blogSection {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .blogHeading {
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .blogCard {
+    margin: 0 0.125rem;
+  }
+  
+  .blogContent {
+    padding: 0.875rem;
+  }
+  
+  .readMoreBtn {
+    margin: 0 0.875rem 0.875rem;
+    padding: 0.6rem 1rem;
+  }
+  
+  .toggleButtonWrapper {
+    margin-top: 1.5rem;
+    padding: 0 0.5rem;
   }
 }

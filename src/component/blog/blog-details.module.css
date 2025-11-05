@@ -29,8 +29,8 @@
 
 .customBackBtn:hover {
   color: #005f7a;
-  /* background-color: rgba(0, 126, 167, 0.1); */
 }
+
 /* Sidebar */
 .sidebar {
   margin-top: 2rem;
@@ -76,6 +76,7 @@
   font-size: 0.85rem;
   color: #777;
 }
+
 .enhancedRelatedExcerpt {
   font-size: 0.9rem;
   color: #555;
@@ -83,44 +84,17 @@
   margin-top: 0.5rem;
 }
 
-/* Show sidebar only for large screens */
-@media (max-width: 1024px) {
-  .sidebar {
-    margin-top: 3rem;
-  }
-}
-
-/* Enhanced back button */
-.customBackBtn {
-  background: none;
-  border: none;
-  color: #007ea7;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  display: inline;
-  width: 100%;
-  text-align: center;
-  gap: 6px;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.customBackBtn:hover {
-  color: #005f7a;
-  /* background-color: rgba(0, 126, 167, 0.1); */
-}
-
-/* Enhanced blog title */
+/* Enhanced blog title - FIXED OVERFLOW */
 .enhancedBlogTitle {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #001f36;
   line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  padding: 0 0.5rem;
 }
 
 /* Enhanced meta info */
@@ -131,7 +105,8 @@
   gap: 1rem;
   margin-bottom: 1.5rem;
   color: #6c757d;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  padding: 0 0.5rem;
 }
 
 .metaItem {
@@ -161,14 +136,16 @@
   font-style: italic;
   margin-top: 0.5rem;
   font-size: 0.9rem;
+  padding: 0 1rem;
 }
 
 /* Enhanced content */
 .enhancedContent {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   line-height: 1.8;
   color: #333;
   margin-bottom: 2rem;
+  padding: 0 0.5rem;
 }
 
 .enhancedContent p {
@@ -176,7 +153,7 @@
 }
 
 .leadParagraph {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
   font-weight: 500;
   color: #495057;
   border-left: 4px solid #007ea7;
@@ -189,6 +166,7 @@
   margin-top: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid #dee2e6;
+  padding: 0 0.5rem;
 }
 
 .enhancedTags h5 {
@@ -220,6 +198,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin: 0 0.5rem;
 }
 
 .authorImage {
@@ -235,23 +214,26 @@
   border-top: 2px solid #e9ecef;
   padding-top: 2rem;
   margin-top: 3rem;
+  padding: 0 0.5rem;
 }
 
 .shareTitle {
   font-weight: 600;
   color: #001f36;
   margin-right: 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
 .customShareBtn {
   border: 2px solid;
   border-radius: 50px;
-  padding: 0.5rem 1.2rem;
+  padding: clamp(0.4rem, 2vw, 0.5rem) clamp(1rem, 3vw, 1.2rem);
   font-weight: 500;
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: clamp(0.85rem, 2vw, 1rem);
 }
 
 .customShareBtn:hover {
@@ -294,10 +276,11 @@
   margin-top: 0rem;
   padding-top: 2rem;
   border-top: 2px solid #e9ecef;
+  padding: 0 0.5rem;
 }
 
 .relatedTitle {
-  font-size: 1.8rem;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
   font-weight: 600;
   color: #001f36;
   margin-bottom: 1.5rem;
@@ -310,6 +293,7 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   height: 100%;
+  margin: 0 0.25rem;
 }
 
 .enhancedRelatedCard:hover {
@@ -327,11 +311,13 @@
 }
 
 .enhancedRelatedTitle {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   font-weight: 600;
   color: #001f36;
   margin-bottom: 0.5rem;
   line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .enhancedRelatedDate {
@@ -345,71 +331,60 @@
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 50px;
-  font-size: 0.8rem;
+  font-size: clamp(0.75rem, 2vw, 0.8rem);
   font-weight: 600;
   margin-bottom: 1rem;
   margin-top: 4rem;
   display: inline-block;
 }
-/* Custom badge */
+
 .customCategoryBadge1 {
   background: linear-gradient(135deg, #007ea7 0%, #005f7a 100%);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 50px;
-  font-size: 0.8rem;
+  font-size: clamp(0.75rem, 2vw, 0.8rem);
   font-weight: 600;
   margin-bottom: 1rem;
   margin-top: 1rem;
   display: inline-block;
 }
 
-/* 📱 Responsive Styles */
-@media (max-width: 768px) {
-  .enhancedBlogTitle {
-    font-size: 2rem;
-  }
-  
-  .metaInfo {
-    gap: 0.8rem;
-  }
-  
-  .enhancedDetailImage {
-    max-height: 350px;
-  }
-  
-  .enhancedContent {
-    font-size: 1rem;
-  }
-  
-  .leadParagraph {
-    font-size: 1.1rem;
-    padding-left: 1rem;
-  }
-  
-  .customShareBtn {
-    padding: 0.4rem 1rem;
-    font-size: 0.9rem;
-  }
-  
-  .enhancedRelatedCard {
-    margin-bottom: 1.5rem;
-  }
+/* Container padding system */
+.responsiveContainer {
+  padding-left: clamp(0.5rem, 3vw, 2rem);
+  padding-right: clamp(0.5rem, 3vw, 2rem);
 }
 
-@media (max-width: 576px) {
+/* 📱 Mobile First Responsive Styles */
+
+/* Extra small devices (phones, 360px and down) */
+@media (max-width: 360px) {
   .enhancedBlogTitle {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+    padding: 0 0.25rem;
   }
   
   .metaInfo {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+    padding: 0 0.25rem;
   }
   
   .enhancedDetailImage {
-    max-height: 280px;
+    max-height: 220px;
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+  
+  .enhancedContent {
+    padding: 0 0.25rem;
+  }
+  
+  .leadParagraph {
+    padding-left: 1rem;
+    margin: 1.5rem 0;
   }
   
   .customShareBtn {
@@ -418,9 +393,91 @@
     justify-content: center;
   }
   
+  .enhancedAuthorBio {
+    margin: 0 0.25rem;
+  }
+  
   .authorImage {
     width: 70px;
     height: 70px;
+  }
+  
+  .enhancedRelatedCard {
+    margin-bottom: 1.5rem;
+  }
+  
+  .enhancedTags,
+  .enhancedShareSection,
+  .enhancedRelatedSection {
+    padding: 0 0.25rem;
+  }
+}
+
+/* Small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+  .enhancedBlogTitle {
+    font-size: 1.5rem;
+  }
+  
+  .metaInfo {
+    gap: 0.8rem;
+  }
+  
+  .enhancedDetailImage {
+    max-height: 250px;
+  }
+  
+  .customShareBtn {
+    padding: 0.4rem 1rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  .enhancedBlogTitle {
+    font-size: 1.8rem;
+  }
+  
+  .metaInfo {
+    gap: 1rem;
+  }
+  
+  .enhancedDetailImage {
+    max-height: 350px;
+  }
+  
+  .sidebar {
+    margin-top: 3rem;
+  }
+  
+  .sidebarSection {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .enhancedBlogTitle {
+    font-size: 2.3rem;
+  }
+  
+  .responsiveContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .enhancedBlogTitle {
+    font-size: 2.5rem;
+  }
+}
+
+/* Show sidebar only for large screens */
+@media (max-width: 1024px) {
+  .sidebar {
+    margin-top: 3rem;
   }
 }
 
@@ -438,4 +495,20 @@
 
 .animatedContent {
   animation: fadeInUp 0.6s ease-out;
+}
+
+/* Utility classes for better spacing */
+.mobile-padding {
+  padding-left: clamp(0.5rem, 3vw, 1rem);
+  padding-right: clamp(0.5rem, 3vw, 1rem);
+}
+
+.tablet-padding {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+}
+
+.desktop-padding {
+  padding-left: clamp(2rem, 5vw, 4rem);
+  padding-right: clamp(2rem, 5vw, 4rem);
 }

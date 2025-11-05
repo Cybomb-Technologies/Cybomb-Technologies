@@ -4,7 +4,7 @@ import "react-phone-input-2/lib/bootstrap.css";
 import logo from "../../assets/logo.png";
 import styles from "./PopupForm.module.css";
 
-const API_URL = import.meta.env.VITE_API_BASE;
+const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 function PopupForm() {
   const [showModal, setShowModal] = useState(false);

@@ -1,6 +1,7 @@
 import React from "react";
 import { FiSearch, FiX } from "react-icons/fi";
 import styles from "./career-filters.module.css"
+
 const CareerFilters = ({ 
   search, 
   setSearch, 
@@ -8,25 +9,10 @@ const CareerFilters = ({
   setDepartment, 
   location, 
   setLocation, 
+  departments = [],
+  locations = [],
   clearFilters 
 }) => {
-  const departments = [
-    "All Departments",
-    "Engineering",
-    "Design",
-    "Product",
-    "Marketing",
-    "Sales",
-    "Operations",
-    "Customer Success"
-  ];
-
-  const locations = [
-    "All Locations",
-    "Remote",
-    "Chennai"
-  ];
-
   return (
     <div className={`${styles.filterBar}`} style={{ top: "80px", zIndex: 1000 }}>
       <div className="row g-3 align-items-end">
@@ -63,7 +49,7 @@ const CareerFilters = ({
             onChange={(e) => setDepartment(e.target.value === "All Departments" ? "" : e.target.value)}
           >
             {departments.map((dept) => (
-              <option key={dept} value={dept === "All Departments" ? "" : dept.toLowerCase()}>
+              <option key={dept} value={dept === "All Departments" ? "" : dept}>
                 {dept}
               </option>
             ))}
@@ -76,10 +62,10 @@ const CareerFilters = ({
           <select
             className="form-select"
             value={location}
-            onChange={(e) => setLocation(e.target.value === "All Locations" ? "" : e.target.value.toLowerCase())}
+            onChange={(e) => setLocation(e.target.value === "All Locations" ? "" : e.target.value)}
           >
             {locations.map((loc) => (
-              <option key={loc} value={loc === "All Locations" ? "" : loc.toLowerCase()}>
+              <option key={loc} value={loc === "All Locations" ? "" : loc}>
                 {loc}
               </option>
             ))}
