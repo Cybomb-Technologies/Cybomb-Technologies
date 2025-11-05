@@ -1,3 +1,4 @@
+// job-apply-modal.jsx
 import React, { useState } from "react";
 import { FiUpload, FiCheckCircle, FiUser, FiMail, FiPhone, FiBriefcase, FiClock, FiFileText, FiX } from "react-icons/fi";
 
@@ -130,30 +131,34 @@ const handleSubmit = async (e) => {
 };
 
   return (
-    <div className="modal fade show" style={{ display: "block" }} tabIndex="-1">
+    <div className="modal fade show" style={{ display: "block", backgroundColor: 'rgba(0, 52, 89, 0.8)' }} tabIndex="-1">
       <div className="modal-dialog modal-lg modal-dialog-centered">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title d-flex align-items-center">
+        <div className="modal-content border-0 shadow-lg" style={{ borderRadius: '12px', overflow: 'hidden' }}>
+          <div className="modal-header text-white" style={{ background: 'linear-gradient(135deg, #007ea7 0%, #005f7a 100%)', borderBottom: 'none' }}>
+            <h5 className="modal-title d-flex align-items-center mb-0">
               <FiBriefcase className="me-2" />
               {job ? `Apply for: ${job.title}` : "Quick Application"}
             </h5>
-            <button type="button" className="btn-close" onClick={onClose}></button>
+            <button type="button" className="btn-close btn-close-white" onClick={onClose}></button>
           </div>
-          <div className="modal-body">
+          <div className="modal-body p-4">
             {submitSuccess ? (
               <div className="text-center py-4">
                 <FiCheckCircle className="text-success mb-3" style={{ fontSize: "3rem" }} />
-                <h4 className="text-success mb-2">Application Submitted!</h4>
+                <h4 className="text-success mb-2" style={{ color: '#28a745' }}>Application Submitted!</h4>
                 <p className="text-muted">
                   Thank you for applying to {job?.title || "the position"}. 
                   We'll review your application and get back to you soon.
                 </p>
-                <div className="progress mt-4" style={{ height: "4px" }}>
+                <div className="progress mt-4" style={{ height: "4px", backgroundColor: '#e9ecef' }}>
                   <div 
-                    className="progress-bar bg-success" 
+                    className="progress-bar" 
                     role="progressbar" 
-                    style={{ width: "100%", transition: "width 5s ease" }}
+                    style={{ 
+                      width: "100%", 
+                      transition: "width 5s ease",
+                      background: 'linear-gradient(135deg, #007ea7 0%, #005f7a 100%)'
+                    }}
                     aria-valuenow="100" 
                     aria-valuemin="0" 
                     aria-valuemax="100"
@@ -164,8 +169,8 @@ const handleSubmit = async (e) => {
             ) : (
               <form onSubmit={handleSubmit} className="row g-3">
                 <div className="col-12">
-                  <label className="form-label d-flex align-items-center">
-                    <FiUser className="me-2" />
+                  <label className="form-label d-flex align-items-center fw-medium" style={{ color: '#003459' }}>
+                    <FiUser className="me-2" style={{ color: '#007ea7' }} />
                     Full Name*
                   </label>
                   <input
@@ -175,13 +180,14 @@ const handleSubmit = async (e) => {
                     onChange={handleChange}
                     className={`form-control ${errors.name ? "is-invalid" : ""}`}
                     placeholder="Jane Doe"
+                    style={{ borderRadius: '8px', border: '1.5px solid #e9ecef', padding: '10px 12px' }}
                   />
                   {errors.name && <div className="invalid-feedback">{errors.name}</div>}
                 </div>
 
                 <div className="col-12">
-                  <label className="form-label d-flex align-items-center">
-                    <FiPhone className="me-2" />
+                  <label className="form-label d-flex align-items-center fw-medium" style={{ color: '#003459' }}>
+                    <FiPhone className="me-2" style={{ color: '#007ea7' }} />
                     Phone
                   </label>
                   <input
@@ -191,13 +197,14 @@ const handleSubmit = async (e) => {
                     onChange={handleChange}
                     placeholder="+91 9876543210"
                     className={`form-control ${errors.phone ? "is-invalid" : ""}`}
+                    style={{ borderRadius: '8px', border: '1.5px solid #e9ecef', padding: '10px 12px' }}
                   />
                   {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
                 </div>
 
                 <div className="col-12">
-                  <label className="form-label d-flex align-items-center">
-                    <FiMail className="me-2" />
+                  <label className="form-label d-flex align-items-center fw-medium" style={{ color: '#003459' }}>
+                    <FiMail className="me-2" style={{ color: '#007ea7' }} />
                     Email*
                   </label>
                   <input
@@ -207,13 +214,14 @@ const handleSubmit = async (e) => {
                     onChange={handleChange}
                     className={`form-control ${errors.email ? "is-invalid" : ""}`}
                     placeholder="jane.doe@example.com"
+                    style={{ borderRadius: '8px', border: '1.5px solid #e9ecef', padding: '10px 12px' }}
                   />
                   {errors.email && <div className="invalid-feedback">{errors.email}</div>}
                 </div>
 
                 <div className="col-12">
-                  <label className="form-label d-flex align-items-center">
-                    <FiBriefcase className="me-2" />
+                  <label className="form-label d-flex align-items-center fw-medium" style={{ color: '#003459' }}>
+                    <FiBriefcase className="me-2" style={{ color: '#007ea7' }} />
                     Applying For*
                   </label>
                     <input
@@ -222,12 +230,13 @@ const handleSubmit = async (e) => {
                       value={formData.role}
                       readOnly
                       className="form-control bg-light"
+                      style={{ borderRadius: '8px', border: '1.5px solid #e9ecef', padding: '10px 12px' }}
                     />
                 </div>
 
                 <div className="col-12">
-                  <label className="form-label d-flex align-items-center">
-                    <FiClock className="me-2" />
+                  <label className="form-label d-flex align-items-center fw-medium" style={{ color: '#003459' }}>
+                    <FiClock className="me-2" style={{ color: '#007ea7' }} />
                     Total Experience
                   </label>
                   <select
@@ -235,6 +244,7 @@ const handleSubmit = async (e) => {
                     value={formData.experience}
                     onChange={handleChange}
                     className="form-control"
+                    style={{ borderRadius: '8px', border: '1.5px solid #e9ecef', padding: '10px 12px' }}
                   >
                     <option value="">Select experience level</option>
                     {experienceOptions.map((opt) => (
@@ -246,8 +256,8 @@ const handleSubmit = async (e) => {
                 </div>
 
                 <div className="col-12">
-                  <label className="form-label d-flex align-items-center">
-                    <FiFileText className="me-2" />
+                  <label className="form-label d-flex align-items-center fw-medium" style={{ color: '#003459' }}>
+                    <FiFileText className="me-2" style={{ color: '#007ea7' }} />
                     Cover Letter / Message
                   </label>
                   <textarea
@@ -257,19 +267,20 @@ const handleSubmit = async (e) => {
                     rows="3"
                     className="form-control"
                     placeholder="Tell us why you are a great fit for this role..."
+                    style={{ borderRadius: '8px', border: '1.5px solid #e9ecef', padding: '10px 12px' }}
                   ></textarea>
                 </div>
 
                 <div className="col-12">
-                  <label className="form-label d-flex align-items-center">
-                    <FiUpload className="me-2" />
+                  <label className="form-label d-flex align-items-center fw-medium" style={{ color: '#003459' }}>
+                    <FiUpload className="me-2" style={{ color: '#007ea7' }} />
                     Resume/CV*
                   </label>
-                  <div className={`border rounded p-3 ${errors.resume ? "border-danger" : ""}`}>
+                  <div className={`border rounded p-3 ${errors.resume ? "border-danger" : ""}`} style={{ borderRadius: '8px', border: '1.5px solid #e9ecef' }}>
                     {formData.resume ? (
                       <div className="d-flex justify-content-between align-items-center">
                         <div className="d-flex align-items-center">
-                          <FiUpload className="me-2" />
+                          <FiUpload className="me-2" style={{ color: '#007ea7' }} />
                           <div>
                             <div className="fw-medium">{formData.resume.name}</div>
                             <small className="text-muted">
@@ -281,6 +292,7 @@ const handleSubmit = async (e) => {
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
                           onClick={() => setFormData((prev) => ({ ...prev, resume: null }))}
+                          style={{ borderRadius: '6px' }}
                         >
                           <FiX className="me-1" />
                           Change
@@ -288,7 +300,11 @@ const handleSubmit = async (e) => {
                       </div>
                     ) : (
                       <div className="text-center">
-                        <label className="btn btn-outline-primary mb-2">
+                        <label className="btn btn-outline-primary mb-2" style={{ 
+                          borderRadius: '8px',
+                          border: '1.5px solid #007ea7',
+                          color: '#007ea7'
+                        }}>
                           <FiUpload className="me-1" /> Upload File
                           <input
                             type="file"
@@ -310,16 +326,23 @@ const handleSubmit = async (e) => {
 
                 {errors.submit && (
                   <div className="col-12">
-                    <div className="alert alert-danger">{errors.submit}</div>
+                    <div className="alert alert-danger" style={{ borderRadius: '8px' }}>{errors.submit}</div>
                   </div>
                 )}
 
                 <div className="col-12">
-                  <div className="d-flex gap-2 justify-content-end">
+                  <div className="d-flex gap-2 justify-content-end pt-3">
                     <button 
                       type="button" 
                       className="btn btn-secondary" 
                       onClick={onClose}
+                      style={{ 
+                        borderRadius: '8px',
+                        padding: '10px 20px',
+                        background: '#f8f9fa',
+                        border: '1.5px solid #dee2e6',
+                        color: '#495057'
+                      }}
                     >
                       Cancel
                     </button>
@@ -327,6 +350,13 @@ const handleSubmit = async (e) => {
                       type="submit" 
                       className="btn btn-primary" 
                       disabled={isSubmitting}
+                      style={{ 
+                        borderRadius: '8px',
+                        padding: '10px 24px',
+                        background: 'linear-gradient(135deg, #007ea7 0%, #005f7a 100%)',
+                        border: 'none',
+                        color: 'white'
+                      }}
                     >
                       {isSubmitting ? (
                         <>

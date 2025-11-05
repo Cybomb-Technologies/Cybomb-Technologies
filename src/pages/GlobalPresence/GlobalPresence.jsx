@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Container, Row, Col, Card, Button, Badge, Accordion } from "react-bootstrap";
 import styles from "./GlobalPresence.module.css";
 import HomeService from "./Global-service";
-
+import HomePartners from "../../component/home/home-partners";
 const LOCATIONS = {
   india: {
     key: "india",
     label: "India",
     // Use your exact office address here if you want a precise pin:
     addressLines: [
-      "Cybomb Technologies (India)",
+      "Cybomb Technologies Pvt Ltd,",
       "Chennai, Tamil Nadu",
       "India"
     ],
@@ -29,7 +29,7 @@ const LOCATIONS = {
       "Sheridan, Wyoming 82801",
       "United States"
     ],
-    phone: "+1 —",
+    // phone: "+1 —",
     email: "support@cybomb.com",
     mapsQuery:
       "30%20N%20Gould%20St%20Ste%20R,%20Sheridan,%20Wyoming%2082801",
@@ -47,25 +47,18 @@ export default function GlobalPresence() {
   return (
     <div className={styles.pageWrap}>
       {/* ===== Banner ===== */}
-      <section className={styles.banner}>
-        <Container className="py-5 mt-5">
-          <Row className="align-items-center">
-            <Col lg={8} className="text-center text-lg-start">
-              <h1 className={styles.bannerTitle}>
-                Global Presence
-              </h1>
-              <p className={`mb-0 ${styles.bannerSub}`}>
-                We serve clients worldwide with teams across India & the United States.
-              </p>
-            </Col>
-            <Col lg={4} className="text-center text-lg-end mt-4 mt-lg-0">
-              <Badge bg="primary" className={styles.pillBadge}>
-                Trusted by teams globally
-              </Badge>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+   <section className={styles.banner}>
+  <Container className="py-5 mt-5 d-flex flex-column justify-content-center align-items-center text-center">
+    <h1 className={styles.bannerTitle}>Global Presence</h1>
+    <p className={`mb-3 ${styles.bannerSub}`}>
+      We serve clients worldwide with teams across India & the United States.
+    </p>
+    <Badge bg="primary" className={styles.pillBadge}>
+      Trusted by teams globally
+    </Badge>
+  </Container>
+</section>
+
 
       {/* ===== Locations + Big Map ===== */}
       <section className={styles.locations}>
@@ -196,6 +189,7 @@ export default function GlobalPresence() {
       {/* Replace <TrustedBySection/> with the component you already have */}
       <section className={styles.customSlot}>
        <HomeService />
+       <HomePartners/>
       </section>
 
       {/* ===== FAQ ===== */}

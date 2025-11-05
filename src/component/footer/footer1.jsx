@@ -161,7 +161,7 @@ function Footer1({ socialLinks = defaultSocialLinks, legalLinks = defaultLegalLi
         {/* DESKTOP */}
         <div className={styles.desktopLayout}>
           {/* Row 1 */}
-          <div className={styles.footerTopRow1}>
+          {/* <div className={styles.footerTopRow1}>
             <div className={styles.subscribeSection}>
               <h4 className={styles.subTitle}>Subscribe</h4>
               <p>Stay updated with our latest news and offers.</p>
@@ -184,7 +184,7 @@ function Footer1({ socialLinks = defaultSocialLinks, legalLinks = defaultLegalLi
               <img src="/images/logo-1-white.png" alt="logo" className={styles.logo} />
               <div className={styles.socials}>{renderSocialIcons()}</div>
             </div>
-          </div>
+          </div> */}
 
           {/* Row 2: four columns */}
           <div className={styles.footerTopRow2}>

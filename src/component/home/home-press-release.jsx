@@ -133,14 +133,19 @@ function HomePressrelease() {
                 <div className={styles.imageContainer}>
                   {item.image ? (
                     <img
-                      src={`${API_URL}/${item.image}`}
+                      src={item.image}
                       className={`card-img-top ${styles.cardImage}`}
                       alt={item.title}
                       loading="lazy"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextElementSibling.style.display = 'flex';
+                      }}
                     />
-                  ) : (
+                  ) : null}
+                  {!item.image && (
                     <div
-                      className={`${styles.placeholderImage} bg-light d-flex align-items-center justify-content-center`}
+                      className={`${styles.placeholderImage} bg-light d-flex align-items-center justify-content-center w-100`}
                     >
                       <i className="fas fa-newspaper fa-3x text-muted"></i>
                     </div>

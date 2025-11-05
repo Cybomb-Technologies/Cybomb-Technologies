@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API_URL = import.meta.env.VITE_API_BASE; 
+const API_URL = import.meta.env.VITE_API_BASE_URL; 
 
 function AdminPressrelease() {
   const [press, setPress] = useState([]);
@@ -12,9 +12,8 @@ function AdminPressrelease() {
     author: "",
     status: "published",
     createdAt: "",
+    image: "" // Added image URL field
   });
-  const [imageFile, setImageFile] = useState(null);
-  const [imagePreview, setImagePreview] = useState(null);
   const [editingId, setEditingId] = useState(null);
 
   const [showPopup, setShowPopup] = useState(false);
@@ -37,26 +36,10 @@ function AdminPressrelease() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // Handle image file change
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    setImageFile(file);
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => setImagePreview(reader.result);
-      reader.readAsDataURL(file);
-    } else {
-      setImagePreview(null);
-    }
-  };
-
   // Submit form
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    Object.keys(form).forEach((key) => formData.append(key, form[key]));
-    if (imageFile) formData.append("image", imageFile);
-
+    
     const url = editingId
       ? `${API_URL}/api/pressrelease/${editingId}`
       : `${API_URL}/api/pressrelease`;
@@ -65,7 +48,10 @@ function AdminPressrelease() {
 
     await fetch(url, {
       method,
-      body: formData,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(form),
     });
 
     // Reset form and popup
@@ -77,9 +63,8 @@ function AdminPressrelease() {
       author: "",
       status: "published",
       createdAt: "",
+      image: ""
     });
-    setImageFile(null);
-    setImagePreview(null);
     setEditingId(null);
     setShowPopup(false);
     fetchData();
@@ -95,8 +80,8 @@ function AdminPressrelease() {
       author: item.author,
       status: item.status,
       createdAt: item.createdAt ? item.createdAt.split("T")[0] : "",
+      image: item.image || ""
     });
-    setImagePreview(item.image ? `${API_URL}/${item.image}` : null);
     setEditingId(item._id);
     setShowPopup(true);
   };
@@ -118,9 +103,8 @@ function AdminPressrelease() {
       author: "",
       status: "published",
       createdAt: "",
+      image: ""
     });
-    setImageFile(null);
-    setImagePreview(null);
     setEditingId(null);
     setShowPopup(true);
   };
@@ -136,9 +120,8 @@ function AdminPressrelease() {
       author: "",
       status: "published",
       createdAt: "",
+      image: ""
     });
-    setImageFile(null);
-    setImagePreview(null);
   };
 
   // Filter based on search
@@ -226,14 +209,16 @@ function AdminPressrelease() {
                 style={styles.input}
               />
               <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageChange}
-                style={styles.fileInput}
+                type="url"
+                name="image"
+                placeholder="Image URL"
+                value={form.image}
+                onChange={handleChange}
+                style={styles.input}
               />
-              {imagePreview && (
+              {form.image && (
                 <img
-                  src={imagePreview}
+                  src={form.image}
                   alt="Preview"
                   style={{
                     width: "100px",
@@ -241,6 +226,9 @@ function AdminPressrelease() {
                     objectFit: "cover",
                     marginTop: "10px",
                     borderRadius: "5px",
+                  }}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
                   }}
                 />
               )}
@@ -296,7 +284,6 @@ function AdminPressrelease() {
             <th style={styles.th}>Image</th>
             <th style={styles.th}>Title</th>
             <th style={styles.th}>Category</th>
-            {/* <th style={styles.th}>Date</th> */}
             <th style={styles.th}>Status</th>
             <th style={styles.th}>Actions</th>
           </tr>
@@ -307,9 +294,13 @@ function AdminPressrelease() {
               <td style={styles.td}>
                 {item.image ? (
                   <img
-                    src={`${API_URL}/${item.image}`}
+                    src={item.image}
                     alt={item.title}
                     style={{ width: "80px", height: "50px", objectFit: "cover", borderRadius: "5px" }}
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.textContent = 'Invalid Image';
+                    }}
                   />
                 ) : (
                   "No Image"
@@ -317,9 +308,6 @@ function AdminPressrelease() {
               </td>
               <td style={styles.td}>{item.title}</td>
               <td style={styles.td}>{item.category}</td>
-              {/* <td style={styles.td}>
-                {item.createdAt ? new Date(item.createdAt).toLocaleDateString() : "N/A"}
-              </td> */}
               <td style={styles.td}>
                 <span
                   style={{
@@ -376,7 +364,6 @@ const styles = {
   input: { padding: "12px 15px", borderRadius: "8px", border: "2px solid #e1e8ed", fontSize: "16px", transition: "border-color 0.3s ease" },
   textarea: { padding: "12px 15px", borderRadius: "8px", border: "2px solid #e1e8ed", fontSize: "16px", height: "80px", resize: "vertical", fontFamily: "inherit" },
   select: { padding: "12px 15px", borderRadius: "8px", border: "2px solid #e1e8ed", fontSize: "16px", backgroundColor: "white" },
-  fileInput: { padding: "10px 0" },
   formButtons: { display: "flex", justifyContent: "flex-end", gap: "15px", marginTop: "10px" },
   cancelButton: { padding: "12px 25px", backgroundColor: "#95a5a6", color: "white", border: "none", borderRadius: "5px", cursor: "pointer", fontWeight: "600", fontSize: "16px", transition: "all 0.2s ease" },
   submitButton: { padding: "12px 25px", backgroundColor: "#2ecc71", color: "white", border: "none", borderRadius: "5px", cursor: "pointer", fontWeight: "600", fontSize: "16px", transition: "all 0.2s ease" },

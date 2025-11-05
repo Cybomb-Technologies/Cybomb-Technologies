@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-const API_URL = import.meta.env.VITE_API_BASE; 
+const API_URL = import.meta.env.VITE_API_BASE_URL; 
 function HomePressReleaseDetail() {
   const { id } = useParams();
   const [press, setPress] = useState(null);
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     fetch(`${API_URL}/api/pressrelease/${id}`)
@@ -63,21 +64,21 @@ function HomePressReleaseDetail() {
   return (
     <div className="container my-5">
       {/* Back Button */}
-<Link
-    to="/"
-    className="btn btn-lg btn-outline-primary mb-4 d-inline-flex align-items-center mt-5"
->
-    <i className="bi bi-arrow-left me-2"></i>
-    Back to Press Releases
-</Link>
+      <Link
+        to="/"
+        className="btn btn-lg btn-outline-primary mb-4 d-inline-flex align-items-center mt-5"
+      >
+        <i className="bi bi-arrow-left me-2"></i>
+        Back to Press Releases
+      </Link>
 
       {/* Main Card */}
       <div className="card shadow-lg border-0 overflow-hidden">
         {/* Header Image */}
-        {press.image && (
+        {press.image && !imageError && (
           <div className="position-relative">
             <img
-              src={`${API_URL}/${press.image}`}
+              src={press.image}
               className="card-img-top"
               alt={press.title}
               style={{
@@ -85,7 +86,28 @@ function HomePressReleaseDetail() {
                 objectFit: "cover",
                 width: "100%",
               }}
+              onError={() => setImageError(true)}
             />
+            <div className="position-absolute top-0 start-0 m-3">
+              <span
+                className={`badge ${getStatusBadgeClass(press.status)} fs-6`}
+              >
+                {press.status}
+              </span>
+            </div>
+          </div>
+        )}
+
+        {/* Placeholder if no image or image failed to load */}
+        {(!press.image || imageError) && (
+          <div 
+            className="position-relative bg-light d-flex align-items-center justify-content-center"
+            style={{ height: "400px" }}
+          >
+            <div className="text-center text-muted">
+              <i className="bi bi-newspaper" style={{ fontSize: "4rem" }}></i>
+              <p className="mt-3 fs-5">No Image Available</p>
+            </div>
             <div className="position-absolute top-0 start-0 m-3">
               <span
                 className={`badge ${getStatusBadgeClass(press.status)} fs-6`}
