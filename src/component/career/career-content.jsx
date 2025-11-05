@@ -1,3 +1,4 @@
+// career-content.jsx (no changes needed for this file, keeping as is)
 import React, { useState, useEffect } from "react";
 import CareerBanner from "./career-banner";
 import CareerContent from "./content";

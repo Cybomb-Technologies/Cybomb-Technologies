@@ -24,7 +24,7 @@ const EnquiryManager = ({ popupForms = [], onDelete }) => {
     modal.innerHTML = `
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-          <div class="modal-header bg-info text-white">
+          <div class="modal-header" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white;">
             <h5 class="modal-title d-flex align-items-center">
               <span class="me-2">📧</span>
               Popup Form Details
@@ -34,16 +34,16 @@ const EnquiryManager = ({ popupForms = [], onDelete }) => {
           <div class="modal-body">
             <div class="row mb-3">
               <div class="col-md-6">
-                <label class="form-label fw-medium text-info">Name</label>
+                <label class="form-label fw-medium" style="color: #3b82f6;">Name</label>
                 <div class="p-3 bg-light rounded d-flex align-items-center">
                   <span class="me-2">👤</span>
                   <strong>${item.name || 'N/A'}</strong>
                 </div>
               </div>
               <div class="col-md-6">
-                <label class="form-label fw-medium text-info">Email</label>
+                <label class="form-label fw-medium" style="color: #3b82f6;">Email</label>
                 <div class="p-3 bg-light rounded">
-                  <a href="mailto:${item.email || ''}" class="text-info text-decoration-none fw-medium">
+                  <a href="mailto:${item.email || ''}" class="text-decoration-none fw-medium" style="color: #3b82f6;">
                     ${item.email || 'N/A'}
                   </a>
                 </div>
@@ -52,14 +52,14 @@ const EnquiryManager = ({ popupForms = [], onDelete }) => {
             
             <div class="row mb-3">
               <div class="col-md-6">
-                <label class="form-label fw-medium text-info">Phone</label>
+                <label class="form-label fw-medium" style="color: #3b82f6;">Phone</label>
                 <div class="p-3 bg-light rounded d-flex align-items-center">
                   <span class="me-2">📞</span>
                   ${item.phone || 'N/A'}
                 </div>
               </div>
               <div class="col-md-6">
-                <label class="form-label fw-medium text-info">Newsletter</label>
+                <label class="form-label fw-medium" style="color: #3b82f6;">Newsletter</label>
                 <div class="p-3 bg-light rounded">
                   <span class="badge ${item.subscribe ? 'bg-success' : 'bg-secondary'}">
                     ${item.subscribe ? 'Subscribed' : 'Not Subscribed'}
@@ -69,7 +69,7 @@ const EnquiryManager = ({ popupForms = [], onDelete }) => {
             </div>
             
             <div class="mb-3">
-              <label class="form-label fw-medium text-info">Message</label>
+              <label class="form-label fw-medium" style="color: #3b82f6;">Message</label>
               <div class="p-3 bg-light rounded" style="white-space: pre-wrap; min-height: 100px;">
                 ${item.message || 'No message provided'}
               </div>
@@ -77,7 +77,7 @@ const EnquiryManager = ({ popupForms = [], onDelete }) => {
             
             <div class="row">
               <div class="col-md-6">
-                <label class="form-label fw-medium text-info">Submitted</label>
+                <label class="form-label fw-medium" style="color: #3b82f6;">Submitted</label>
                 <div class="p-3 bg-light rounded d-flex align-items-center">
                   <span class="me-2">📅</span>
                   ${formatDate(item.createdAt)}
@@ -115,22 +115,22 @@ const EnquiryManager = ({ popupForms = [], onDelete }) => {
       {/* Header */}
       <div className="row mb-4">
         <div className="col-12">
-          <div className="card bg-info bg-opacity-10 border-info">
+          <div className="card border-0" style={{ background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)', color: 'white' }}>
             <div className="card-body">
               <div className="row align-items-center">
                 <div className="col-md-8">
-                  <h1 className="h3 mb-1 text-info">
+                  <h1 className="h3 mb-1 text-white">
                     <MessageSquare className="me-3" style={{ width: '32px', height: '32px' }} />
                     Popup Form Submissions
                   </h1>
-                  <p className="text-muted mb-0">
+                  <p className="text-white-50 mb-0">
                     Manage all contact form submissions from the website popup
                   </p>
                 </div>
                 <div className="col-md-4 text-end">
-                  <div className="bg-info text-white rounded p-3 d-inline-block">
-                    <h4 className="mb-0">{safeData.length}</h4>
-                    <small>Total Submissions</small>
+                  <div className="bg-white bg-opacity-20 rounded p-3 d-inline-block border border-white border-opacity-25">
+                    <h4 className="mb-0 text-black">{safeData.length}</h4>
+                    <small className="text-muted">Total Submissions</small>
                   </div>
                 </div>
               </div>
@@ -143,7 +143,7 @@ const EnquiryManager = ({ popupForms = [], onDelete }) => {
       <div className="row">
         <div className="col-12">
           <div className="card shadow border-0">
-            <div className="card-header bg-info text-white">
+            <div className="card-header text-white" style={{ background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)' }}>
               <h5 className="mb-0">
                 <span className="me-2">📊</span>
                 Recent Submissions ({safeData.length})
@@ -178,9 +178,9 @@ const EnquiryManager = ({ popupForms = [], onDelete }) => {
                         <tr key={item._id || index} className="cursor-pointer">
                           <td className="align-middle">
                             <div className="d-flex align-items-center">
-                              <div className="bg-info bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" 
-                                   style={{width: '40px', height: '40px'}}>
-                                <User className="text-info" style={{width: '20px', height: '20px'}} />
+                              <div className="rounded-circle d-flex align-items-center justify-content-center me-3" 
+                                   style={{width: '40px', height: '40px', background: 'rgba(59, 130, 246, 0.1)'}}>
+                                <User style={{width: '20px', height: '20px', color: '#3b82f6'}} />
                               </div>
                               <div>
                                 <strong className="d-block">{item.name || 'N/A'}</strong>
@@ -190,10 +190,11 @@ const EnquiryManager = ({ popupForms = [], onDelete }) => {
                           
                           <td className="align-middle">
                             <div className="d-flex align-items-center">
-                              <Mail className="me-2 text-info" style={{width: '16px', height: '16px'}} />
+                              <Mail className="me-2" style={{width: '16px', height: '16px', color: '#3b82f6'}} />
                               <a 
                                 href={`mailto:${item.email}`}
-                                className="text-info text-decoration-none"
+                                className="text-decoration-none"
+                                style={{color: '#3b82f6'}}
                                 onClick={(e) => e.stopPropagation()}
                               >
                                 {item.email || 'N/A'}
@@ -203,7 +204,7 @@ const EnquiryManager = ({ popupForms = [], onDelete }) => {
                           
                           <td className="align-middle">
                             <div className="d-flex align-items-center">
-                              <Phone className="me-2 text-info" style={{width: '16px', height: '16px'}} />
+                              <Phone className="me-2" style={{width: '16px', height: '16px', color: '#3b82f6'}} />
                               {item.phone || 'N/A'}
                             </div>
                           </td>
@@ -237,8 +238,17 @@ const EnquiryManager = ({ popupForms = [], onDelete }) => {
                                   e.stopPropagation();
                                   handleRowClick(item);
                                 }}
-                                className="btn btn-outline-info btn-sm"
+                                className="btn btn-outline-primary btn-sm"
                                 title="View details"
+                                style={{ borderColor: '#3b82f6', color: '#3b82f6' }}
+                                onMouseOver={(e) => {
+                                  e.target.style.background = '#3b82f6';
+                                  e.target.style.color = 'white';
+                                }}
+                                onMouseOut={(e) => {
+                                  e.target.style.background = 'transparent';
+                                  e.target.style.color = '#3b82f6';
+                                }}
                               >
                                 <Eye style={{width: '16px', height: '16px'}} />
                               </button>
@@ -264,6 +274,19 @@ const EnquiryManager = ({ popupForms = [], onDelete }) => {
           </div>
         </div>
       </div>
+
+      {/* Custom CSS for dashboard theme */}
+      <style jsx>{`
+        .cursor-pointer {
+          cursor: pointer;
+        }
+        
+        .btn-outline-primary:hover {
+          background-color: #3b82f6;
+          border-color: #3b82f6;
+          color: white;
+        }
+      `}</style>
     </div>
   );
 };

@@ -17,6 +17,7 @@ import {
   Bell,
   Settings,
   User,
+  FileText,
 } from "lucide-react";
 
 import Overview from "./Overview";
@@ -26,6 +27,7 @@ import ApplicationManager from "./ApplicationManager";
 import JobOpeningManager from "./JobOpeningManager";
 import BlogManager from "./BlogManager";
 import NewsletterManager from "./NewsletterManager";
+import AdminPressrelease from "./Press-Release"; // Add press release import
 
 /** Replace with your real auth impl if available */
 const useAuth = () => ({
@@ -62,6 +64,7 @@ const AdminDashboard = () => {
   const [enquiries, setEnquiries] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const [jobOpenings, setJobOpenings] = useState([]);
+  const [pressReleases, setPressReleases] = useState([]); // Add press releases state
 
   const { user, logout } = useAuth();
 
@@ -94,9 +97,10 @@ const AdminDashboard = () => {
       const [
         contactsRes,
         applicationsRes,
-        popupFormsRes, // Fixed variable name
+        popupFormsRes,
         blogsRes,
         jobOpeningsRes,
+        pressReleasesRes, // Add press releases API call
       ] = await Promise.all([
         fetch(`${API_BASE_URL}/api/contact`, {
           headers: { Authorization: `Bearer ${token}` },
@@ -111,6 +115,9 @@ const AdminDashboard = () => {
           headers: { Authorization: `Bearer ${token}` },
         }),
         fetch(`${API_BASE_URL}/api/applications`, {
+          headers: { Authorization: `Bearer ${token}` },
+        }),
+        fetch(`${API_BASE_URL}/api/pressrelease`, { // Add press releases fetch
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -132,7 +139,7 @@ const AdminDashboard = () => {
 
       if (popupFormsRes.ok) {
         const data = await popupFormsRes.json();
-        setEnquiries(data); // This contains popup form data
+        setEnquiries(data);
       } else {
         console.error("Failed to fetch popup forms:", popupFormsRes.status);
       }
@@ -151,6 +158,14 @@ const AdminDashboard = () => {
         console.error("Failed to fetch job openings:", jobOpeningsRes.status);
       }
 
+      // Handle press releases response
+      if (pressReleasesRes.ok) {
+        const data = await pressReleasesRes.json();
+        setPressReleases(data.data || data);
+      } else {
+        console.error("Failed to fetch press releases:", pressReleasesRes.status);
+      }
+
     } catch (err) {
       console.error("Error fetching data:", err);
     } finally {
@@ -162,16 +177,17 @@ const AdminDashboard = () => {
     fetchData();
   }, []);
 
-  // Computed counts for badges
+  // Computed counts for badges - Add PressReleases count
   const counts = {
     Enquiries: enquiries?.length || 0,
     Contacts: contacts?.length || 0,
     Application: applications?.length || 0,
     JobOpenings: jobOpenings?.length || 0,
     Blogs: blogs?.length || 0,
+    PressReleases: pressReleases?.length || 0, // Add press releases count
   };
 
-  // Navigation definition
+  // Navigation definition - Add PressReleases item
   const navItems = [
     { id: "Overview", label: "Dashboard Overview", icon: LayoutDashboard },
     { id: "Enquiries", label: "Popup Form Submissions", icon: Inbox, count: counts.Enquiries },
@@ -179,6 +195,7 @@ const AdminDashboard = () => {
     { id: "Application", label: "Applications", icon: Users, count: counts.Application },
     { id: "JobOpenings", label: "Job Openings", icon: Briefcase, count: counts.JobOpenings },
     { id: "Blogs", label: "Blog Manager", icon: BookOpen, count: counts.Blogs },
+    { id: "PressReleases", label: "Press Releases", icon: FileText, count: counts.PressReleases }, // Add Press Releases
     { id: "Newsletter", label: "Newsletter Subscribers", icon: Megaphone },
   ];
 
@@ -229,6 +246,8 @@ const AdminDashboard = () => {
         return <EnquiryManager popupForms={enquiries} onDelete={handleDelete} onRefresh={handleRefresh} />;
       case "Blogs":
         return <BlogManager blogs={blogs} onBlogsUpdate={fetchData} onRefresh={handleRefresh} />;
+      case "PressReleases": // Add Press Releases case
+        return <AdminPressrelease />;
       case "Newsletter":
         return <NewsletterManager onRefresh={handleRefresh} />;
       default:
@@ -281,12 +300,40 @@ const AdminDashboard = () => {
           color: #f1f5f9;
           box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
           border-right: 1px solid #334155;
+          display: flex;
+          flex-direction: column;
+          height: 100vh;
         }
         
         .sidebar-header {
           border-bottom: 1px solid #334155;
           background: rgba(255, 255, 255, 0.02);
           backdrop-filter: blur(10px);
+          flex-shrink: 0;
+          z-index: 10;
+        }
+        
+        .sidebar-content {
+          flex: 1;
+          overflow-y: auto;
+          overflow-x: hidden;
+          display: flex;
+          flex-direction: column;
+        }
+        
+        .sidebar-nav {
+          flex: 1;
+          padding-bottom: 20px;
+        }
+        
+        .sidebar-footer {
+          border-top: 1px solid #334155;
+          background: rgba(255, 255, 255, 0.02);
+          backdrop-filter: blur(10px);
+          flex-shrink: 0;
+          margin-top: auto;
+          position: relative;
+          z-index: 10;
         }
         
         .sidebar-brand {
@@ -350,12 +397,6 @@ const AdminDashboard = () => {
           border-color: rgba(255, 255, 255, 0.3);
         }
         
-        .sidebar-footer {
-          border-top: 1px solid #334155;
-          background: rgba(255, 255, 255, 0.02);
-          backdrop-filter: blur(10px);
-        }
-        
         .collapse-btn {
           border: 0;
           background: rgba(255, 255, 255, 0.08);
@@ -416,23 +457,6 @@ const AdminDashboard = () => {
           transform: translateY(-50%);
           color: #64748b;
           z-index: 5;
-        }
-        
-        .notification-badge {
-          position: absolute;
-          top: -6px;
-          right: -6px;
-          background: #ef4444;
-          color: white;
-          border-radius: 50%;
-          width: 20px;
-          height: 20px;
-          font-size: 11px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: 2px solid #ffffff;
-          font-weight: 600;
         }
         
         .user-avatar {
@@ -530,6 +554,35 @@ const AdminDashboard = () => {
           animation: spin 1s linear infinite;
         }
         
+        /* Custom scrollbar for sidebar */
+        .sidebar-content::-webkit-scrollbar {
+          width: 6px;
+        }
+        
+        .sidebar-content::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 3px;
+        }
+        
+        .sidebar-content::-webkit-scrollbar-thumb {
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 3px;
+        }
+        
+        .sidebar-content::-webkit-scrollbar-thumb:hover {
+          background: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Hide scrollbar when collapsed */
+        .sidebar-collapsed .sidebar-content::-webkit-scrollbar {
+          display: none;
+        }
+        
+        .sidebar-collapsed .sidebar-content {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        
         @media (max-width: 991.98px) {
           .sidebar-fixed {
             transform: translateX(-100%);
@@ -563,7 +616,7 @@ const AdminDashboard = () => {
       <aside
         className={`sidebar position-fixed top-0 start-0 h-100 sidebar-anim ${
           isMobile ? `sidebar-fixed ${sidebarOpen ? "open" : ""}` : ""
-        }`}
+        } ${isCollapsed ? 'sidebar-collapsed' : ''}`}
         style={{ width: SIDEBAR_W, zIndex: 1050 }}
       >
         {/* Header */}
@@ -595,37 +648,39 @@ const AdminDashboard = () => {
           )}
         </div>
 
-        {/* Navigation */}
-        <div className="px-3 pt-4">
-          <nav>
-            {navItems.map(({ id, label, icon: Icon, count }) => {
-              const active = activeTab === id;
-              
-              return (
-                <div key={id} className="nav-item">
-                  <button
-                    className={`nav-link ${active ? "active" : ""}`}
-                    title={isCollapsed ? label : undefined}
-                    onClick={() => handleTabChange(id)}
-                  >
-                    <Icon size={20} />
-                    {!isCollapsed && (
-                      <>
-                        <span className="flex-grow-1 text-truncate">{label}</span>
-                        {count !== undefined && count > 0 && (
-                          <span className="badge">{count}</span>
-                        )}
-                      </>
-                    )}
-                  </button>
-                </div>
-              );
-            })}
-          </nav>
+        {/* Navigation - Scrollable Area */}
+        <div className="sidebar-content">
+          <div className="sidebar-nav px-3 pt-4">
+            <nav>
+              {navItems.map(({ id, label, icon: Icon, count }) => {
+                const active = activeTab === id;
+                
+                return (
+                  <div key={id} className="nav-item">
+                    <button
+                      className={`nav-link ${active ? "active" : ""}`}
+                      title={isCollapsed ? label : undefined}
+                      onClick={() => handleTabChange(id)}
+                    >
+                      <Icon size={20} />
+                      {!isCollapsed && (
+                        <>
+                          <span className="flex-grow-1 text-truncate">{label}</span>
+                          {count !== undefined && count > 0 && (
+                            <span className="badge">{count}</span>
+                          )}
+                        </>
+                      )}
+                    </button>
+                  </div>
+                );
+              })}
+            </nav>
+          </div>
         </div>
 
-        {/* Footer */}
-        <div className="sidebar-footer position-absolute bottom-0 start-0 w-100 p-3">
+        {/* Footer - Fixed at bottom */}
+        <div className="sidebar-footer p-3">
           <div className="d-flex align-items-center mb-3">
             <div className="user-avatar me-3">
               {user.name?.charAt(0) || user.email?.charAt(0) || 'A'}
@@ -667,53 +722,10 @@ const AdminDashboard = () => {
             </button>
             <div className="fw-semibold fs-5 text-slate-800">Cybomb Admin</div>
             
-            <div className="ms-auto d-flex align-items-center">
-              <div className="dropdown">
-                <button 
-                  className="btn btn-light position-relative me-2"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  style={{ borderRadius: '10px' }}
-                >
-                  <Bell size={20} />
-                  {notifications.length > 0 && (
-                    <span className="notification-badge">{notifications.length}</span>
-                  )}
-                </button>
-                <ul className="dropdown-menu dropdown-menu-end">
-                  {notifications.map(notif => (
-                    <li key={notif.id}>
-                      <a className="dropdown-item" href="#">
-                        <div>
-                          <div className="fw-medium">{notif.message}</div>
-                          <small className="text-muted">{notif.time}</small>
-                        </div>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div className="dropdown">
-                <button 
-                  className="btn btn-light d-flex align-items-center"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  style={{ borderRadius: '10px' }}
-                >
-                  <div className="user-avatar me-2">
-                    {user.name?.charAt(0) || user.email?.charAt(0) || 'A'}
-                  </div>
-                  <span className="d-none d-md-inline text-slate-700">{user.name || 'Admin'}</span>
-                </button>
-                <ul className="dropdown-menu dropdown-menu-end">
-                  <li><a className="dropdown-item" href="#"><User size={16} className="me-2" /> Profile</a></li>
-                  <li><a className="dropdown-item" href="#"><Settings size={16} className="me-2" /> Settings</a></li>
-                  <li><hr className="dropdown-divider" /></li>
-                  <li><button className="dropdown-item text-danger" onClick={logout}><LogOut size={16} className="me-2" /> Logout</button></li>
-                </ul>
+            {/* REMOVED: Notification and Profile dropdowns from topbar */}
+            <div className="ms-auto">
+              <div className="user-avatar">
+                {user.name?.charAt(0) || user.email?.charAt(0) || 'A'}
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@ ul {
    BASE STYLES
    ========================= */
 .footer {
-  padding: 60px 0 0;
+  padding: 10px 0 0;
   background-color: #00171f;
   color: white;
 }
@@ -67,7 +67,7 @@ ul {
    ========================= */
 .socials {
   display: flex;
-  gap: 1rem;
+  
   margin-top: 1rem;
   justify-content: flex-start;
 }
