@@ -29,7 +29,13 @@ const app = express();
 // --- Middleware Setup ---
 // Allow requests only from your frontend with all necessary methods
 app.use(cors({
-  origin: ['https://cybomb.com','http://localhost:5173'], // your frontend URL
+  origin: [ 'http://localhost:3000',
+  'http://localhost:5173',
+  'https://cybomb.com',
+  'https://www.cybomb.com',
+  'https://api.cybomb.com',
+  'http://147.93.111.96:5000',
+  'https://admin.cybomb.com'], // your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // include PATCH method
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'], // include necessary headers
   credentials: true // allow cookies/auth headers if needed
