@@ -492,7 +492,7 @@ const BlogManager = () => {
   }
 
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
         <div>
           <h2 className="h3 fw-bold d-flex align-items-center text-primary mb-1">
