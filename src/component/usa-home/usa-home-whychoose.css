@@ -1,0 +1,36 @@
+.why-choose-bg{
+  background-color: #003459;
+}
+
+.stat-card {
+  background-color: rgb(205 211 224) !important;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}
+
+
+.cta-box {
+  background: #007ea7;
+}
+
+
+.bg-purple {
+  background-color: #9333ea !important;
+}
+
+.text-purple {
+  color: #9333ea !important;
+}
+
+.border-orange {
+  border: 1px solid #f97316 !important;
+}
