@@ -1,0 +1,61 @@
+.home-service-bg{
+  background-color: #FFFFFF;
+}
+
+.service-card {
+  background-color: #003459 !important;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-img {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px
+}
+
+.btn-gradient {
+  background: #0098e8 !important;
+  color: #fff;
+  border-radius: 25px;
+  padding: 6px 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: auto !important;
+}
+
+.custom-btn-learn{
+margin-top: auto !important;
+width: auto;
+margin-right: auto;
+}
+
+.btn-gradient:hover {
+  background: transparent;
+  color: white;
+  border: 1px solid #9333ea !important;
+}
+
+.custom-card-text{
+    color:#FFFFFF;
+    font-weight: 600;
+    font-size: 17px;
+
+}
+.custom-card-body {
+  background-color: #003459 !important;
+  display: flex;              /* make it flex */
+  flex-direction: column;     /* stack children vertically */
+  height: auto;               /* take full height inside card */
+}
+.custom-card{
+    border-radius: 20px !important;
+}

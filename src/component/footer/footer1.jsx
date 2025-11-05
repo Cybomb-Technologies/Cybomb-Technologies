@@ -121,6 +121,7 @@ function Footer1({ socialLinks = defaultSocialLinks, legalLinks = defaultLegalLi
     { to: "/portfolio", label: "Portfolio" },
     { to: "/career", label: "Career" },
     { to: "/contact-us", label: "Contact Us" },
+    { to: "/global-presence", label: "Global Presence" }
   ];
 
   const servicesLinks = [
