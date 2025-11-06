@@ -1,3 +1,4 @@
+/* career-content.module.css */
 /* Update in career-content.module.css */
 .careerSection {
   padding: 80px 0;
@@ -8,127 +9,268 @@
 .sectionTitle {
   font-size: 2rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #003459;
   margin-bottom: 1.5rem;
   text-align: center;
+  position: relative;
 }
 
-/* Job Listings */
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #007ea7 0%, #005f7a 100%);
+  border-radius: 2px;
+}
+
+/* Job Card Styles */
 .jobCard {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 8px;
+  transition: all 0.3s ease;
+  border-radius: 12px;
   overflow: hidden;
+  border: 1px solid #e9ecef;
+  background: white;
 }
 
 .jobCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 52, 89, 0.15);
+  border-color: #007ea7;
 }
 
+.jobTitle {
+  color: #003459;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
 
-/* Intro Section */
-.benefitCard {
-  background: linear-gradient(90deg, #0490b7, #08488b);
-  color: white !important;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+.jobTypeBadge {
+  background: linear-gradient(135deg, #007ea7 0%, #005f7a 100%);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
 }
-/* Stats Box */
-.statItem h3 {
-  font-size: 2.2rem;
-  color: #3b82f6;
-  margin-bottom: 5px;
-}
-.statItem p {
+
+.departmentBadge {
+  background: rgba(0, 52, 89, 0.1);
+  color: #003459;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
   font-weight: 500;
-  margin-bottom: 5px;
 }
-.statItem small {
+
+.newBadge {
+  background: #28a745;
+  color: white;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.detailIcon {
+  color: #007ea7;
+  font-size: 0.9rem;
+}
+
+.detailText {
+  color: #495057;
+  font-weight: 500;
+}
+
+.salaryIcon {
+  color: #28a745;
+  font-size: 0.9rem;
+}
+
+.salaryText {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.jobDescription {
+  color: #6c757d;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.skillsLabel {
+  color: #003459;
+  font-weight: 600;
   font-size: 0.85rem;
 }
-/* Filter Bar
-.filterBar {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
-}
-.resetButton:hover {
-  background: #e2e8f0;
-} */
-/* Job Listings */
-.jobCard {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 8px;
-  overflow: hidden;
+
+.skillBadge {
+  background: rgba(0, 52, 89, 0.08);
+  color: #003459;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 52, 89, 0.1);
 }
 
-.jobCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+.moreSkillsBadge {
+  background: rgba(108, 117, 125, 0.1);
+  color: #6c757d;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
-.jobMeta span {
+
+.viewDetailsBtn {
+  background: transparent;
+  color: #007ea7;
+  border: 1.5px solid #007ea7;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.viewDetailsBtn:hover {
+  background: #007ea7;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.applyNowBtn {
+  background: linear-gradient(135deg, #007ea7 0%, #005f7a 100%);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.applyNowBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 126, 167, 0.3);
+}
+
+/* Modal Enhancements */
+.modalHeader {
+  background: linear-gradient(135deg, #007ea7 0%, #005f7a 100%);
+  color: white;
+  border-bottom: none;
+  padding: 1.5rem;
+}
+
+.modalTitle {
+  color: white;
+  font-weight: 600;
+}
+
+.modalJobMeta span {
   font-size: 0.85rem;
   padding: 4px 8px;
   border-radius: 4px;
-  background: #f1f5f9;
-  color: #64748b;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Intro Section */
+.benefitCard {
+  background: linear-gradient(135deg, #007ea7 0%, #005f7a 100%);
+  color: white !important;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 126, 167, 0.15);
+}
+
+/* Stats Box */
+.statItem h3 {
+  font-size: 2.2rem;
+  color: #007ea7;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.statItem p {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #003459;
+}
+.statItem small {
+  font-size: 0.85rem;
+  color: #6c757d;
 }
 
 /* Hiring Process Responsive Styles */
 
 /* Circle for step number */
 .stepCircle {
-  width: 48px;
-  height: 48px;
-  background-color: #0084a8;
-  color: #fff;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #007ea7 0%, #005f7a 100%);
+  color: white;
   font-weight: bold;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px rgba(0, 126, 167, 0.2);
 }
 
 /* Each process step */
 .processStepStack {
   background: #fff;
   border-radius: 12px;
-  padding: 16px;
-  transition: transform 0.2s ease-in-out;
+  padding: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
 }
 
 .processStepStack:hover {
   transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 52, 89, 0.1);
+  border-color: #007ea7;
 }
 
 /* Text content */
 .stepContent h5 {
   font-size: 1.1rem;
   font-weight: 600;
+  color: #003459;
+  margin-bottom: 8px;
+}
+
+.stepContent p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: left;
+  padding-left: 10px;
 }
 
 /* Wrapper to control width on large screens */
 .processWrapper {
-  max-width: 900px; /* Limit width on desktops */
-  margin: 0 auto; /* Center */
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .processStepStack {
-    flex-direction: row;   /* keep row layout */
-    align-items: flex-start; /* align top */
-    text-align: left;       /* text aligned left */
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .stepCircle {
-    margin-right: 8px;  /* space between circle and text */
+    margin-right: 12px;
     margin-bottom: 0;
-    margin-top: 10px;    /* remove bottom margin */
+    margin-top: 4px;
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
   }
 
   .stepContent h5 {
@@ -138,80 +280,77 @@
   .stepContent p {
     font-size: 0.9rem;
   }
-}
-
-
-.stepContent p {
-  color: #555;
-}
-
-
-
-.stepContent p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: #6c757d;
-  text-align: left;
-  padding-left: 10px;
-}
-
-
-/* Modal Styles */
-.modalJobMeta span {
-  font-size: 0.85rem;
-  padding: 4px 8px;
-  border-radius: 4px;
-  background: #f1f5f9;
-  color: #64748b;
-}
-.responsibilitiesList li {
-  margin-bottom: 8px;
-  color: #475569;
-}
-.benefitsList li {
-  margin-bottom: 8px;
-  color: #475569;
-}
-/* Apply Modal */
-.formStep
-.primaryButton:hover {
-  background: #2563eb;
-}
-.primaryButton:disabled {
-  background: #bfdbfe;
-  cursor: not-allowed;
-}
-.secondaryButton:hover {
-  background: #e2e8f0;
-}
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-/* Responsive Styles */
-@media (max-width: 992px) {
-  .sectionTitle {
-    font-size: 1.8rem;
-  }
- 
-}
-@media (max-width: 768px) {
+  
   .careerSection {
     padding: 40px 0;
   }
-  .jobCard {
-    flex-direction: column;
-  }
   
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
 }
+
 @media (max-width: 576px) {
   .sectionTitle {
     font-size: 1.5rem;
   }
-  .filterBar .row > div {
-    margin-bottom: 15px;
+  
+  .jobCard {
+    margin-bottom: 20px;
   }
-  .filterBar .row > div:last-child {
-    margin-bottom: 0;
-  }
- 
+}
+
+/* Form Styles for Apply Modal */
+.formLabel {
+  color: #003459;
+  font-weight: 500;
+}
+
+.formControl {
+  border: 1.5px solid #e9ecef;
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: all 0.3s ease;
+}
+
+.formControl:focus {
+  border-color: #007ea7;
+  box-shadow: 0 0 0 0.2rem rgba(0, 126, 167, 0.15);
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #007ea7 0%, #005f7a 100%);
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 126, 167, 0.3);
+}
+
+.primaryButton:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.secondaryButton {
+  background: #f8f9fa;
+  border: 1.5px solid #dee2e6;
+  color: #495057;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
 }

@@ -17,6 +17,7 @@
     "helmet": "^8.1.0",
     "install": "^0.13.0",
     "libphonenumber-js": "^1.12.10",
+    "lucide-react": "^0.552.0",
     "prop-types": "^15.8.1",
     "react": "^19.1.1",
     "react-bootstrap": "^2.10.10",

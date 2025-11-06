@@ -32,6 +32,7 @@ import CybombBlog from "../component/blog/cybomb-blog";
 import BlogDetail from "../component/blog/blog-details";
 import TagPage from "../component/blog/tag-page";
 import CheckoutPage from "../component/page-pricing/pricing/CheckoutPage"
+import GlobalPresence from "../pages/GlobalPresence/GlobalPresence";
 // Just return <Route />s. Don't wrap in <Routes>
 const emp2Routes = (
   <>
@@ -71,6 +72,7 @@ const emp2Routes = (
     <Route path="/blog/:id" element={<BlogDetail />} />
     <Route path="/tags/:tagName" element={<TagPage />} />
     <Route path="/checkout" element={<CheckoutPage />} />
+    <Route path="/global-presence" element={<GlobalPresence />} />
   </>
 );
 

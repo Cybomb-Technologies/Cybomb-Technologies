@@ -1,40 +1,61 @@
-import { Route } from "react-router-dom";
-import Dashboard from "./Dashboard";
-import Login from "./Login/login";
-import ProtectedRoute from "./ProtectedRoute";
-import AdminHome from "./pages/Home";
-import FormSubmission from "./pages/Form-submission/Form-submission";
-import CareerPage from "./pages/Career-Page/Career-Page";
-import AdminBlog from "./pages/Blog/admin-blog";
-import Newsletter from "./pages/News-letter/New-letter";
-import AdminPressrelease from "./pages/Press-Release/Press-Release";
-const AdminRoutes = (
-  <>
-    {/* Login page */}
-    <Route path="/admin/login" element={<Login />} />
+// Admin/AdminRoutes.jsx
+import { Routes, Route, Navigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import AdminDashboard from "./AdminDashboard";
+import AdminLogin from "./AdminLogin";
 
-    {/* Dashboard layout with nested admin pages */}
-    <Route
-      path="/admin"
-      element={
-        <ProtectedRoute>
-          <Dashboard /> {/* Sidebar always shows */}
-        </ProtectedRoute>
-      }
-    >
-      {/* Nested pages inside Dashboard */}
-      <Route index element={<AdminHome />} />        {/* /admin */}
-      <Route path="home" element={<AdminHome />} />
-      <Route path="form-submission" element={<FormSubmission/>} />
-       <Route path="career-page" element={<CareerPage/>} />
-       <Route path="admin-blog" element={<AdminBlog/>} />
-       <Route path="news-letter" element={<Newsletter />} />
-       <Route path="press-release" element={<AdminPressrelease/>} />
-       
+/** Redirects authenticated users away from /admin/login */
+const RedirectIfAuthed = ({ children }) => {
+  const { isAuthenticated, loading } = useAuth();
+  
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  
+  return isAuthenticated ? <Navigate to="/admin/dashboard" replace /> : children;
+};
+
+/** Protected route wrapper */
+const ProtectedRoute = ({ children }) => {
+  const { isAuthenticated, loading } = useAuth();
+  
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  
+  return isAuthenticated ? children : <Navigate to="/admin/login" replace />;
+};
+
+const AdminRoutes = () => {
+  return (
+    <Routes>
+      {/* Public login (but bounce if already authed) */}
+      <Route
+        path="/login"
+        element={
+          <RedirectIfAuthed>
+            <AdminLogin />
+          </RedirectIfAuthed>
+        }
+      />
+
+      {/* Protected admin routes */}
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <AdminDashboard />
+          </ProtectedRoute>
+        }
+      />
       
-        {/* /admin/home */}
-    </Route>
-  </>
-);
+      {/* Redirect /admin to /admin/dashboard */}
+      <Route path="/" element={<Navigate to="/admin/dashboard" replace />} />
+      
+      {/* Redirect any other admin routes to dashboard */}
+      <Route path="*" element={<Navigate to="/admin/dashboard" replace />} />
+    </Routes>
+  );
+};
 
 export default AdminRoutes;

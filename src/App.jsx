@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import AOS from "aos";
@@ -12,13 +12,15 @@ import emp3Routes from "./Emp/emp-3";
 import emp4Routes from "./Emp/emp-4";
 import emp5Routes from "./Emp/emp-5";
 import AdminRoutes from "./Admin/AdminRoutes";
-
+import { AuthProvider } from "./context/AuthContext";
+import PopupForm from "./component/popup-form/popup-form"
 function Layout({ children }) {
   const location = useLocation();
-  const isAdmin = location.pathname.startsWith("/admin"); // check if path is /admin
+  const isAdmin = location.pathname.startsWith("/admin"); 
 
   return (
     <>
+      {!isAdmin &&<PopupForm/>}
       {!isAdmin && <Nav1 />}   {/* Only show Nav if NOT admin */}
       {children}
       {!isAdmin && <Footer1 />} {/* Only show Footer if NOT admin */}
@@ -32,19 +34,21 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <ScrollToTop />
-      <Layout>
-        <Routes>
-          {emp1Routes}
-          {emp2Routes}
-          {emp3Routes}
-          {emp4Routes}
-          {emp5Routes}
-          {AdminRoutes}
-        </Routes>
-      </Layout>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <ScrollToTop />
+        <Layout>
+          <Routes>
+            {emp1Routes}
+            {emp2Routes}
+            {emp3Routes}
+            {emp4Routes}
+            {emp5Routes}
+            <Route path="/admin/*" element={<AdminRoutes />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </AuthProvider>
   );
 }
 
