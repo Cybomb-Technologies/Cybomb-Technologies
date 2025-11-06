@@ -1,22 +1,23 @@
 import { Link } from "react-router-dom";
-import "./usa-banner-custom.css";
+import styles from "./usa-banner.module.css";
 import { Carousel } from "react-bootstrap";
+
 function HomeBanner() {
   return (
-    <section className="home-banner">
+    <section className={styles.homeBanner}>
       <Carousel fade interval={3000} controls={false} indicators={true}>
         <Carousel.Item>
           <img
-            className="d-block w-100 custom-banner-img"
+            className={`d-block w-100 ${styles.customBannerImg}`}
             src="/images/banner/banner-1.webp"
             alt="First slide"
           />
 
-          <Carousel.Caption className="custom-caption">
+          <Carousel.Caption className={styles.customCaption}>
             <div className="container">
               <div className="row">
                 <div className="col-xl-7 col-lg-8 col-md-10">
-                  <div className="caption-box text-start">
+                  <div className={styles.captionBox}>
                     <h2 className="h1 fw-bold">
                       Innovating Your Vision Into AI-Powered Platforms
                     </h2>
@@ -37,16 +38,16 @@ function HomeBanner() {
 
         <Carousel.Item>
           <img
-            className="d-block w-100 custom-banner-img"
+            className={`d-block w-100 ${styles.customBannerImg}`}
             src="/images/banner/banner-2.webp"
             alt="Second slide"
           />
 
-          <Carousel.Caption className="custom-caption">
+          <Carousel.Caption className={styles.customCaption}>
             <div className="container">
               <div className="row">
                 <div className="col-xl-7 col-lg-8 col-md-10">
-                  <div className="caption-box text-start">
+                  <div className={styles.captionBox}>
                     <h2 className="h1 fw-bold">
                       Transforming Ideas Into Digital Excellence
                     </h2>
@@ -66,15 +67,15 @@ function HomeBanner() {
 
         <Carousel.Item>
           <img
-            className="d-block w-100 custom-banner-img"
+            className={`d-block w-100 ${styles.customBannerImg}`}
             src="/images/banner/banner-3.webp"
             alt="Third slide"
           />
-          <Carousel.Caption className="custom-caption">
+          <Carousel.Caption className={styles.customCaption}>
             <div className="container">
               <div className="row">
                 <div className="col-xl-7 col-lg-8 col-md-10">
-                  <div className="caption-box text-start">
+                  <div className={styles.captionBox}>
                     <h2 className="">
                       Driving Growth Through Smart Technology
                     </h2>

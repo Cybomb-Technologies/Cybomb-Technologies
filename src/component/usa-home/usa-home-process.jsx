@@ -32,6 +32,12 @@ function HomeProcess() {
       description:
         "We offer ongoing support, maintenance, and updates to keep your solution running smoothly and efficiently.",
     },
+    {
+      icon: "bi bi-graph-up",
+      title: "Optimization & Growth",
+      description:
+        "We continuously monitor performance and implement optimizations to ensure your solution evolves with your business needs.",
+    },
   ];
 
   return (
@@ -71,10 +77,10 @@ function HomeProcess() {
         {/* CTA Section */}
         <div className="text-center mt-5">
           <div className="row justify-content-center">
-            <div className="col-lg-8">
+            <div className="col-12">
               <div
                 className="cta-box p-4 rounded-4 text-white"
-                style={{ background: "#007ea7" }}
+                style={{ background: "#00a8e8" }}
               >
                 <h3 className="fw-bold mb-3">Ready to Start Your Project?</h3>
                 <p className="mb-4">
@@ -89,7 +95,7 @@ function HomeProcess() {
                     Start Your Project
                   </a>
                   <a
-                    href="/contact"
+                    href="tel:+919715092104"
                     className="btn btn-outline-light px-4 fw-semibold py-2"
                   >
                     Schedule a Call
