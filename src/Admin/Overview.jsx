@@ -70,9 +70,7 @@ const Overview = ({ onNavigateToTab, counts = {} }) => {
         fetch(`${API_BASE_URL}/api/pressrelease`, {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        fetch(`${API_BASE_URL}/api/newsletter`, {
-          headers: { Authorization: `Bearer ${token}` },
-        })
+        
       ]);
 
       // Process responses
@@ -82,7 +80,7 @@ const Overview = ({ onNavigateToTab, counts = {} }) => {
       const blogs = blogsRes.ok ? await blogsRes.json() : [];
       const jobOpenings = jobOpeningsRes.ok ? await jobOpeningsRes.json() : [];
       const pressReleases = pressReleasesRes.ok ? await pressReleasesRes.json() : [];
-      const newsletter = newsletterRes.ok ? await newsletterRes.json() : [];
+      // const newsletter = newsletterRes.ok ? await newsletterRes.json() : [];
 
       // Calculate counts
       const enquiriesCount = Array.isArray(enquiries) ? enquiries.length : 0;
@@ -91,7 +89,7 @@ const Overview = ({ onNavigateToTab, counts = {} }) => {
       const blogsCount = Array.isArray(blogs.data) ? blogs.data.length : (Array.isArray(blogs) ? blogs.length : 0);
       const jobOpeningsCount = Array.isArray(jobOpenings.data) ? jobOpenings.data.length : (Array.isArray(jobOpenings) ? jobOpenings.length : 0);
       const pressReleasesCount = Array.isArray(pressReleases.data) ? pressReleases.data.length : (Array.isArray(pressReleases) ? pressReleases.length : 0);
-      const newsletterCount = Array.isArray(newsletter.data) ? newsletter.data.length : (Array.isArray(newsletter) ? newsletter.length : 0);
+      // const newsletterCount = Array.isArray(newsletter.data) ? newsletter.data.length : (Array.isArray(newsletter) ? newsletter.length : 0);
 
       const totalInteractions = enquiriesCount + contactsCount + applicationsCount;
 
@@ -102,7 +100,7 @@ const Overview = ({ onNavigateToTab, counts = {} }) => {
         blogs: blogsCount,
         jobOpenings: jobOpeningsCount,
         pressReleases: pressReleasesCount,
-        newsletter: newsletterCount,
+        // newsletter: newsletterCount,
         total: totalInteractions,
       });
 
@@ -197,7 +195,7 @@ const Overview = ({ onNavigateToTab, counts = {} }) => {
       blogs: counts.Blogs || 0,
       jobOpenings: counts.JobOpenings || 0,
       pressReleases: counts.PressReleases || 0,
-      newsletter: 0,
+      // newsletter: 0,
       total: (counts.Enquiries || 0) + (counts.Contacts || 0) + (counts.Application || 0),
     });
 
