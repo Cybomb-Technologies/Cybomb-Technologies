@@ -5,6 +5,11 @@ import QuickApplyModal from "./job-apply-modal"; // import the modal
 const CareerBanner = () => {
   const [showModal, setShowModal] = useState(false);
 
+  const handleApplySuccess = () => {
+    console.log("Application submitted successfully!");
+    // You can add any success handlers here
+  };
+
   return (
     <>
       <section
@@ -45,8 +50,13 @@ const CareerBanner = () => {
       </section>
 
       {/* Quick Apply Modal */}
-      {showModal && <QuickApplyModal show={showModal} onClose={() => setShowModal(false)} />}
-
+      {showModal && (
+        <QuickApplyModal 
+          show={showModal} 
+          onClose={() => setShowModal(false)} 
+          onApply={handleApplySuccess}
+        />
+      )}
     </>
   );
 };

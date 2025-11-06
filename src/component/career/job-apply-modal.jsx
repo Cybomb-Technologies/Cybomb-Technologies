@@ -1,15 +1,14 @@
-// job-apply-modal.jsx
 import React, { useState } from "react";
 import { FiUpload, FiCheckCircle, FiUser, FiMail, FiPhone, FiBriefcase, FiClock, FiFileText, FiX } from "react-icons/fi";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-const QuickApplyModal = ({ job, onClose, onApply }) => {
+const QuickApplyModal = ({ show, onClose, onApply }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
-    role: job?.title || "",
+    role: "General Application", // Default role for quick apply
     experience: "",
     coverLetter: "",
     resume: null,
@@ -25,6 +24,23 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
     "5 - 10 years",
     "10+ years",
   ];
+
+  // Reset form when modal closes
+  React.useEffect(() => {
+    if (!show) {
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        role: "General Application",
+        experience: "",
+        coverLetter: "",
+        resume: null,
+      });
+      setErrors({});
+      setSubmitSuccess(false);
+    }
+  }, [show]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -87,57 +103,72 @@ const QuickApplyModal = ({ job, onClose, onApply }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  if (!validate()) return;
-  setIsSubmitting(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+    setIsSubmitting(true);
 
-  try {
-    const formDataToSend = new FormData();
-    formDataToSend.append("name", formData.name);
-    formDataToSend.append("phone", formData.phone);
-    formDataToSend.append("email", formData.email);
-    formDataToSend.append("role", formData.role);
-    formDataToSend.append("experience", formData.experience);
-    formDataToSend.append("coverLetter", formData.coverLetter);
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("phone", formData.phone);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("role", formData.role);
+      formDataToSend.append("experience", formData.experience);
+      formDataToSend.append("coverLetter", formData.coverLetter);
 
-    if (formData.resume) {
-      formDataToSend.append("resume", formData.resume);
+      if (formData.resume) {
+        formDataToSend.append("resume", formData.resume);
+      }
+
+      const res = await fetch(`${API_BASE_URL}/api/application`, {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const responseData = await res.json();
+
+      if (!res.ok) {
+        throw new Error(responseData.message || "Failed to submit application");
+      }
+
+      setSubmitSuccess(true);
+      onApply?.(); // Call success callback
+      
+      // Auto close after success
+      setTimeout(() => {
+        onClose();
+      }, 3000);
+    } catch (error) {
+      console.error("Submission error:", error);
+      setErrors({ submit: error.message || "Failed to submit application. Please try again." });
+    } finally {
+      setIsSubmitting(false);
     }
+  };
 
-    // FIXED: Use the correct application endpoint
-    const res = await fetch(`${API_BASE_URL}/api/application`, {
-      method: "POST",
-      body: formDataToSend,
-    });
-
-    const responseData = await res.json();
-
-    if (!res.ok) {
-      throw new Error(responseData.message || "Failed to submit application");
-    }
-
-    setSubmitSuccess(true);
-    setTimeout(() => {
-      onApply?.();
+  // Handle backdrop click
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
       onClose();
-    }, 2000);
-  } catch (error) {
-    console.error("Submission error:", error);
-    setErrors({ submit: error.message || "Failed to submit application. Please try again." });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+    }
+  };
+
+  if (!show) return null;
 
   return (
-    <div className="modal fade show" style={{ display: "block", backgroundColor: 'rgba(0, 52, 89, 0.8)' }} tabIndex="-1">
+    <div 
+      className="modal fade show d-block" 
+      style={{ backgroundColor: 'rgba(0, 52, 89, 0.8)' }} 
+      tabIndex="-1"
+      onClick={handleBackdropClick}
+    >
       <div className="modal-dialog modal-lg modal-dialog-centered">
         <div className="modal-content border-0 shadow-lg" style={{ borderRadius: '12px', overflow: 'hidden' }}>
           <div className="modal-header text-white" style={{ background: 'linear-gradient(135deg, #007ea7 0%, #005f7a 100%)', borderBottom: 'none' }}>
             <h5 className="modal-title d-flex align-items-center mb-0">
               <FiBriefcase className="me-2" />
-              {job ? `Apply for: ${job.title}` : "Quick Application"}
+              Quick Application - Submit Your CV
             </h5>
             <button type="button" className="btn-close btn-close-white" onClick={onClose}></button>
           </div>
@@ -147,8 +178,7 @@ const handleSubmit = async (e) => {
                 <FiCheckCircle className="text-success mb-3" style={{ fontSize: "3rem" }} />
                 <h4 className="text-success mb-2" style={{ color: '#28a745' }}>Application Submitted!</h4>
                 <p className="text-muted">
-                  Thank you for applying to {job?.title || "the position"}. 
-                  We'll review your application and get back to you soon.
+                  Thank you for submitting your CV. We'll review your application and contact you if there's a match with our open positions.
                 </p>
                 <div className="progress mt-4" style={{ height: "4px", backgroundColor: '#e9ecef' }}>
                   <div 
@@ -156,7 +186,7 @@ const handleSubmit = async (e) => {
                     role="progressbar" 
                     style={{ 
                       width: "100%", 
-                      transition: "width 5s ease",
+                      transition: "width 3s ease",
                       background: 'linear-gradient(135deg, #007ea7 0%, #005f7a 100%)'
                     }}
                     aria-valuenow="100" 
@@ -224,14 +254,15 @@ const handleSubmit = async (e) => {
                     <FiBriefcase className="me-2" style={{ color: '#007ea7' }} />
                     Applying For*
                   </label>
-                    <input
-                      type="text"
-                      name="role"
-                      value={formData.role}
-                      readOnly
-                      className="form-control bg-light"
-                      style={{ borderRadius: '8px', border: '1.5px solid #e9ecef', padding: '10px 12px' }}
-                    />
+                  <input
+                    type="text"
+                    name="role"
+                    value={formData.role}
+                    readOnly
+                    className="form-control bg-light"
+                    style={{ borderRadius: '8px', border: '1.5px solid #e9ecef', padding: '10px 12px' }}
+                  />
+                  <small className="text-muted">This is a general application. You can specify roles when browsing open positions.</small>
                 </div>
 
                 <div className="col-12">
@@ -266,7 +297,7 @@ const handleSubmit = async (e) => {
                     onChange={handleChange}
                     rows="3"
                     className="form-control"
-                    placeholder="Tell us why you are a great fit for this role..."
+                    placeholder="Tell us about your skills, experience, and why you'd like to join our team..."
                     style={{ borderRadius: '8px', border: '1.5px solid #e9ecef', padding: '10px 12px' }}
                   ></textarea>
                 </div>
