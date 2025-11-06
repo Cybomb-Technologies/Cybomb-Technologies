@@ -1,19 +1,32 @@
-.home-service-bg {
-  background-color: #ffffff;
+/* USA Home Service Section */
+.usa-home-service-section {
+  background-color: #003459;
+  padding: 60px 0px;
 }
 
-.service-card {
-  background-color: #003459 !important;
-  border-radius: 12px;
+.usa-home-service-title {
+  color: #ffffff;
+}
+
+.usa-home-service-subtitle {
+  color: #ffffff;
+}
+
+/* USA Service Cards - White Cards */
+.usa-service-card {
+  background-color: #ffffff !important;
+  border-radius: 20px;
   overflow: hidden;
   transition: transform 0.3s ease;
+  border: none;
 }
 
-.service-card:hover {
+.usa-service-card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.service-img {
+.usa-service-img {
   height: 220px;
   background-size: cover;
   background-position: center;
@@ -21,40 +34,81 @@
   border-bottom-right-radius: 40px;
 }
 
-.btn-gradient {
+.usa-service-card-body {
+  background-color: #ffffff !important;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.usa-service-card-title {
+  color: #003459;
+}
+
+.usa-service-card-text {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* USA Buttons */
+.usa-service-btn {
   background: #0098e8 !important;
   color: #fff;
   border-radius: 25px;
-  padding: 6px 16px;
+  padding: 8px 20px;
   text-decoration: none;
   transition: all 0.3s ease;
   display: inline-block;
-  margin-top: auto !important;
-}
-
-.custom-btn-learn {
-  margin-top: auto !important;
+  margin-top: auto;
   width: auto;
   margin-right: auto;
+  border: none;
+  font-size: 14px;
 }
 
-.btn-gradient:hover {
-  background: transparent;
-  color: white;
-  border: 1px solid #9333ea !important;
+.usa-service-btn:hover {
+  background: #007bbd !important;
+  color: #fff !important;
+  border: none !important;
 }
 
-.custom-card-text {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 17px;
+.usa-service-btn-view-all {
+  background: #0098e8 !important;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 16px;
 }
-.custom-card-body {
-  background-color: #003459 !important;
-  display: flex; /* make it flex */
-  flex-direction: column; /* stack children vertically */
-  height: auto; /* take full height inside card */
+
+.usa-service-btn-view-all:hover {
+  background: #007bbd !important;
+  color: #fff !important;
+  border: none !important;
 }
-.custom-card {
-  border-radius: 20px !important;
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .usa-service-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .usa-service-img {
+    height: 180px;
+  }
+
+  .usa-service-card-text {
+    font-size: 15px;
+  }
+
+  .usa-service-btn {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
 }

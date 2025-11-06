@@ -1,5 +1,5 @@
 /* Main Banner Container */
-.home-banner {
+.homeBanner {
   position: relative;
   min-height: 100vh;
   z-index: 0;
@@ -8,7 +8,7 @@
   color: white;
 }
 
-.home-banner::after {
+.homeBanner::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -17,7 +17,7 @@
   pointer-events: none;
 }
 
-.home-banner .container {
+.homeBanner .container {
   position: relative;
   z-index: 3;
   width: 100%;
@@ -25,81 +25,90 @@
 }
 
 @media screen and (max-width: 1220px) {
-  .custom-banner-img {
+  .customBannerImg {
     object-fit: cover;
     height: 100vh !important;
   }
-  .carousel-caption {
+  .carouselCaption {
     right: 5% !important;
   }
 }
 
-.custom-caption {
-  position: relative;
-  top: 0;
-  bottom: 0;
+.customCaption {
+  position: absolute;
+  top: 20% !important; /* Position from top for header-like placement */
+  bottom: auto !important;
   left: 5% !important;
   display: flex;
-  align-items: center; /* vertical center */
+  align-items: flex-start; /* Align to top */
   justify-content: flex-start;
   text-align: left;
   z-index: 5;
+  transform: translateY(0); /* Remove any vertical centering */
 }
 
-.caption-box {
+.captionBox {
   background: rgba(0, 0, 0, 0.456); /* semi-transparent black */
   padding: 25px 30px;
-  /* max-width: 550px; */
   border-radius: 5px;
+  margin-top: 2rem; /* Add some top margin */
 }
 
-.caption-box h1 {
+.captionBox h1 {
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: left;
 }
 
-.caption-box p {
+.captionBox h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.captionBox p {
   font-size: 1.1rem;
   margin-bottom: 20px;
   text-align: left;
 }
 
-.caption-box .btn {
+.captionBox .btn {
   font-weight: 600;
   padding: 10px 20px;
 }
 
-.carousel-img {
+.carouselImg {
   height: 100vh; /* Full viewport height */
   object-fit: cover; /* Maintain aspect ratio & crop overflow */
 }
+
 /* Text Styles */
-.gradient-text {
+.gradientText {
   color: #ffffff; /* Pure white for maximum contrast */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.dynamic-text-container {
+.dynamicTextContainer {
   display: inline-block;
   min-width: 100%;
   white-space: nowrap;
 }
 
-.dynamic-text {
+.dynamicText {
   color: #6dc2ff; /* Light blue that stands out against wood tones */
   font-weight: 650;
   animation: fadeIn 0.8s ease;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.banner-content-wrapper {
+.bannerContentWrapper {
   margin: 0 auto;
   max-width: 800px;
 }
 
-.banner-paragraph-content {
+.bannerParagraphContent {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 400;
   line-height: 1.6;
@@ -107,7 +116,7 @@
 }
 
 /* Buttons */
-.explore-btn {
+.exploreBtn {
   background: #ffffff25 100% !important;
   border-color: #ffffff !important;
   border-radius: 50px !important;
@@ -119,7 +128,8 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   font-size: 18px;
 }
-.explore-btn::before {
+
+.exploreBtn::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -133,17 +143,17 @@
   transition: opacity 0.4s ease;
 }
 
-.explore-btn:hover {
+.exploreBtn:hover {
   color: #1a3a5a !important;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(126, 216, 255, 0.3);
 }
 
-.explore-btn:hover::before {
+.exploreBtn:hover::before {
   opacity: 1;
 }
 
-.consultation-btn {
+.consultationBtn {
   border-color: #ffffff !important;
   background: #ffffff25 100% !important;
   background-clip: padding-box !important;
@@ -155,7 +165,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.consultation-btn::before {
+.consultationBtn::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -169,25 +179,26 @@
   transition: opacity 0.4s ease;
 }
 
-.consultation-btn:hover {
+.consultationBtn:hover {
   color: #1a3a5a !important;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(126, 216, 255, 0.3);
 }
 
-.consultation-btn:hover::before {
+.consultationBtn:hover::before {
   opacity: 1;
 }
 
 /* Mobile adjustments for buttons */
 @media (max-width: 767.98px) {
-  .explore-btn,
-  .consultation-btn {
+  .exploreBtn,
+  .consultationBtn {
     padding: 0.75rem 1.5rem !important;
     width: 100%;
     max-width: 280px;
   }
 }
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -202,46 +213,77 @@
 
 /* Responsive Adjustments */
 @media (max-width: 1199.98px) {
-  .home-banner h1 {
+  .homeBanner h1 {
     font-size: 2.8rem;
+  }
+
+  .captionBox h1,
+  .captionBox h2 {
+    font-size: 2.2rem;
   }
 }
 
 @media (max-width: 991.98px) {
-  .dynamic-text-container {
+  .dynamicTextContainer {
     white-space: normal;
+  }
+
+  .customCaption {
+    top: 15% !important;
+  }
+
+  .captionBox {
+    margin-top: 1rem;
+    padding: 20px 25px;
   }
 }
 
 @media (max-width: 767.98px) {
-  .home-banner h1 {
+  .homeBanner h1 {
     font-size: 2.2rem;
   }
 
-  .banner-paragraph-content {
-    font-size: 1.1rem;
-  }
-
-  /* .explore-btn,
-  .consultation-btn {
-    padding: 0.75rem 1.5rem;
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto 0.75rem;
-  } */
-}
-
-@media (max-width: 575.98px) {
-  .home-banner h1 {
+  .captionBox h1,
+  .captionBox h2 {
     font-size: 1.8rem;
   }
 
-  .dynamic-text {
+  .bannerParagraphContent {
+    font-size: 1.1rem;
+  }
+
+  .customCaption {
+    top: 12% !important;
+    left: 2% !important;
+    right: 2% !important;
+  }
+
+  .captionBox {
+    padding: 15px 20px;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .homeBanner h1 {
+    font-size: 1.8rem;
+  }
+
+  .captionBox h1,
+  .captionBox h2 {
+    font-size: 1.5rem;
+  }
+
+  .dynamicText {
     color: #7fd8ff; /* Slightly darker blue for better mobile visibility */
   }
 
-  .consultation-btn {
+  .consultationBtn {
     border-color: #7fd8ff;
     color: #7fd8ff;
+  }
+
+  .customCaption {
+    top: 10% !important;
   }
 }
