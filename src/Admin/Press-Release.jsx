@@ -217,6 +217,35 @@ function AdminPressrelease() {
                 style={styles.input}
               />
               {form.image && (
+  <div style={{ position: 'relative' }}>
+    <img
+      src={form.image}
+      alt="Preview"
+      style={{
+        width: "100px",
+        height: "60px",
+        objectFit: "cover",
+        marginTop: "10px",
+        borderRadius: "5px",
+      }}
+      onError={(e) => {
+        e.target.style.display = 'none';
+        // Create fallback message
+        const parent = e.target.parentNode;
+        if (!parent.querySelector('.preview-fallback')) {
+          const fallback = document.createElement('div');
+          fallback.className = 'preview-fallback';
+          fallback.textContent = 'Invalid Image URL';
+          fallback.style.cssText = 'color: #e74c3c; font-size: 12px; margin-top: 10px;';
+          parent.appendChild(fallback);
+        }
+      }}
+    />
+    <div className="preview-fallback" style={{ display: 'none', color: '#e74c3c', fontSize: '12px', marginTop: '10px' }}>
+      Invalid Image URL
+    </div>
+  </div>
+)}{form.image && (
                 <img
                   src={form.image}
                   alt="Preview"
@@ -293,15 +322,28 @@ function AdminPressrelease() {
             <tr key={item._id} style={styles.tr} className="table-row">
               <td style={styles.td}>
                 {item.image ? (
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    style={{ width: "80px", height: "50px", objectFit: "cover", borderRadius: "5px" }}
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.textContent = 'Invalid Image';
-                    }}
-                  />
+                  <>
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      style={{ width: "80px", height: "50px", objectFit: "cover", borderRadius: "5px" }}
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        // Create a fallback text if it doesn't exist
+                        let fallback = e.target.nextSibling;
+                        if (!fallback || !fallback.classList.contains('image-fallback')) {
+                          fallback = document.createElement('span');
+                          fallback.className = 'image-fallback';
+                          fallback.textContent = 'Invalid Image';
+                          fallback.style.cssText = 'color: #999; font-size: 12px;';
+                          e.target.parentNode.appendChild(fallback);
+                        }
+                      }}
+                    />
+                    <span className="image-fallback" style={{ display: 'none', color: '#999', fontSize: '12px' }}>
+                      Invalid Image
+                    </span>
+                  </>
                 ) : (
                   "No Image"
                 )}
