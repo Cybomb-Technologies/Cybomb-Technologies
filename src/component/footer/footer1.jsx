@@ -5,103 +5,114 @@ import DpiitLogo from "./../../assets/footer/dpiit-logo.png";
 import DgftLogo from "./../../assets/footer/dgft-logo.png";
 import AicteLogo from "./../../assets/footer/aicte-logo.png";
 
+/* Track device “type” for address formatting */
 function useDeviceType() {
   const [device, setDevice] = useState(getDeviceType());
-
   function getDeviceType() {
     if (window.innerWidth < 768) return "mobile";
     if (window.innerWidth < 1024) return "tablet";
     return "desktop";
   }
-
   useEffect(() => {
-    const handleResize = () => setDevice(getDeviceType());
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const onResize = () => setDevice(getDeviceType());
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, []);
-
   return device;
 }
 
-const API_URL = import.meta.env.VITE_API_BASE_URL;
-
-const defaultSocialLinks = [
-  { href: "https://www.instagram.com/cybomb_tech/", iconClass: "bi bi-instagram" },
-  { href: "https://www.linkedin.com/company/cybomb/", iconClass: "bi bi-linkedin" },
-  { href: "https://x.com/CybombTech", iconClass: "fa-brands fa-x-twitter" },
-];
+/* Track viewport width so we can do inline “media-query-like” logic */
+function useViewportWidth() {
+  const [vw, setVw] = useState(typeof window !== "undefined" ? window.innerWidth : 1200);
+  useEffect(() => {
+    const onResize = () => setVw(window.innerWidth);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+  return vw;
+}
 
 const defaultLegalLinks = [
-  { to: "/privacy-policy", label: "Privacy Policy" },
-  { to: "/terms", label: "Terms & Conditions" },
-  { to: "/refund-policy", label: "Refund Policy" },
-  { to: "/cookie-policy", label: "Cookie Policy" },
+  { to: "/privacy-policy", label: "Privacy" },
+  { to: "/terms", label: "Terms" },
+  { to: "/refund-policy", label: "Refund" },
+  { to: "/cookie-policy", label: "Cookie" },
 ];
 
-function Footer1({ socialLinks = defaultSocialLinks, legalLinks = defaultLegalLinks }) {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState("");
+function Footer1({ legalLinks = defaultLegalLinks }) {
   const device = useDeviceType();
+  const vw = useViewportWidth();
 
-  const handleSubscribe = async (e) => {
-    e.preventDefault();
-    setStatus("Sending...");
-    
-    try {
-      const res = await fetch(`${API_URL}/api/newsletter/subscribe`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
-          email,
-          source: "website-footer" // You can customize this source
-        }),
-      });
-      
-      const data = await res.json();
-      
-      if (res.ok && data.success) {
-        setStatus("✅ Subscription successful!");
-        setEmail("");
-      } else {
-        setStatus(data.message || "❌ Failed to subscribe. Try again.");
-      }
-    } catch (err) {
-      console.error("Subscription error:", err);
-      setStatus("⚠️ Network error. Please try again.");
-    }
+  /* Breakpoints for layout */
+  const isNarrow = vw < 897;     // your requested breakpoint
+  const isMobile = vw < 480;     // extra small
+
+  /* ===== Certificate card sizing (tight spacing, bigger logos, equalized) ===== */
+  const CERT_CARD_H = isMobile ? 74 : 72;
+  const LOGO_BOX_W = isMobile ? 118 : 110;
+  const LOGO_BOX_H = isMobile ? 58 : 55;
+
+  const certCardStyle = {
+    width: isNarrow ? "100%" : 280,         // full width on narrow, fixed on desktop
+    maxWidth: isNarrow ? 420 : 280,
+    height: CERT_CARD_H,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    gap: isMobile ? "0.55rem" : "0.5rem",
+    padding: isMobile ? "0.45rem 0.7rem" : "0.4rem 0.7rem",
+    background: "rgba(0, 52, 89, 0.85)",
+    borderRadius: 8,
+    overflow: "hidden",
+    boxSizing: "border-box",
+    margin: isNarrow ? "0 auto" : 0,        // center the card block on narrow
   };
 
+  const logoBoxStyle = {
+    width: LOGO_BOX_W,
+    height: LOGO_BOX_H,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexShrink: 0,
+  };
 
-  // Address texts (device-aware)
-  let addressText = "";
-  if (device === "desktop") {
-    addressText = `Cybomb Technologies Pvt Ltd,
-                   Prime Plaza No.54/1, 1st street, Sripuram colony,
-                   St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India`;
-  } else if (device === "tablet") {
-    addressText = `Cybomb Technologies Pvt Ltd,
-                   Prime Plaza No.54/1, 1st street,
-                   Sripuram colony, St. Thomas Mount,
-                   Chennai, TN - 600 016, India`;
-  } else {
-    addressText = `Cybomb Technologies Pvt Ltd,
-                   Prime Plaza No.54/1, 1st street,
-                   Sripuram colony, St. Thomas Mount,
-                   Chennai, Tamil Nadu - 600 016, India`;
-  }
+  const logoImgStyle = {
+    maxWidth: "100%",
+    maxHeight: "100%",
+    objectFit: "contain",
+    display: "block",
+  };
 
-  let addressText1 = "";
-  if (device === "desktop" || device === "tablet") {
-    addressText1 = `Cybomb Technologies Inc,
-                   30 N Gould St Ste R,
-                   Sheridan, Wyoming 82801`;
-  } else {
-    addressText1 = `Cybomb Technologies Inc,
-                   30 N Gould St Ste R,
-                   Sheridan, Wyoming 82801`;
-  }
+  const certTextStyle = {
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "start",
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    lineHeight: 1.2,
+  };
 
-  // Get in Touch (default: phone & email only)
+  /* Top grid content (unchanged) */
+  const quickLinks = [
+    { to: "/", label: "Home" },
+    { to: "/about-us", label: "About Us" },
+    { to: "/portfolio", label: "Portfolio" },
+    { to: "/career", label: "Career" },
+    { to: "/contact-us", label: "Contact Us" },
+    { to: "/global-presence", label: "Global Presence" },
+  ];
+
+  const servicesLinks = [
+    { to: "/services/mobile-app-development", label: "Mobile Apps" },
+    { to: "/services/web-development", label: "Web Development" },
+    { to: "/services/saas-solutions", label: "SaaS Solutions" },
+    { to: "/services/ai-integration", label: "AI Integration" },
+    { to: "/services/ui-ux-design", label: "UI/UX Design" },
+    { to: "/services/tech-consulting", label: "Tech Consulting" },
+  ];
+
   const contactItems = [
     {
       icon: "bi-telephone-fill",
@@ -115,24 +126,6 @@ function Footer1({ socialLinks = defaultSocialLinks, legalLinks = defaultLegalLi
     },
   ];
 
-  const quickLinks = [
-    { to: "/", label: "Home" },
-    { to: "/about-us", label: "About Us" },
-    { to: "/portfolio", label: "Portfolio" },
-    { to: "/career", label: "Career" },
-    { to: "/contact-us", label: "Contact Us" },
-    { to: "/global-presence", label: "Global Presence" }
-  ];
-
-  const servicesLinks = [
-    { to: "/services/mobile-app-development", label: "Mobile Apps" },
-    { to: "/services/web-development", label: "Web Development" },
-    { to: "/services/saas-solutions", label: "SaaS Solutions" },
-    { to: "/services/ai-integration", label: "AI Integration" },
-    { to: "/services/ui-ux-design", label: "UI/UX Design" },
-    { to: "/services/tech-consulting", label: "Tech Consulting" },
-  ];
-
   const renderListLinks = (links) =>
     links.map((link, i) => (
       <li key={i}>
@@ -140,53 +133,25 @@ function Footer1({ socialLinks = defaultSocialLinks, legalLinks = defaultLegalLi
       </li>
     ));
 
-  const renderSocialIcons = () =>
-    socialLinks.map((item, index) => (
-      <a key={index} href={item.href} target="_blank" rel="noreferrer">
-        <i className={item.iconClass}></i>
-      </a>
-    ));
+  /* Addresses */
+  const addressText =
+    device === "desktop"
+      ? `Cybomb Technologies Pvt Ltd,
+         Prime Plaza No.54/1, 1st street, Sripuram colony,
+         St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India`
+      : `Cybomb Technologies Pvt Ltd,
+         Prime Plaza No.54/1, 1st street,
+         Sripuram colony, Chennai, Tamil Nadu - 600 016, India`;
 
-  // inline style for address cards (so we don't touch module.css)
-  const addressCardStyle = {
-    background: "rgba(0, 52, 89, 0.35)",
-    borderRadius: "10px",
-    padding: "12px",
-    height: "100%",
-  };
+  const addressText1 = `Cybomb Technologies Inc,
+                        30 N Gould St Ste R,
+                        Sheridan, Wyoming 82801`;
 
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        {/* DESKTOP */}
+        {/* ===== Top grid: Quick Links | Services | Get in Touch | Address ===== */}
         <div className={styles.desktopLayout}>
-          {/* Row 1 */}
-          {/* <div className={styles.footerTopRow1}>
-            <div className={styles.subscribeSection}>
-              <h4 className={styles.subTitle}>Subscribe</h4>
-              <p>Stay updated with our latest news and offers.</p>
-
-              <form className={styles.rowAlign} onSubmit={handleSubscribe}>
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <button type="submit">Subscribe</button>
-              </form>
-
-              {status && <p className={styles.statusMsg}>{status}</p>}
-            </div>
-
-            <div className={styles.logoCol}>
-              <img src="/images/logo-1-white.png" alt="logo" className={styles.logo} />
-              <div className={styles.socials}>{renderSocialIcons()}</div>
-            </div>
-          </div> */}
-
-          {/* Row 2: four columns */}
           <div className={styles.footerTopRow2}>
             <div className={styles.quickLinks}>
               <h4 className={`${styles.sectionTitle} ${styles.footerQuickLinks}`}>Quick Links</h4>
@@ -196,11 +161,6 @@ function Footer1({ socialLinks = defaultSocialLinks, legalLinks = defaultLegalLi
             <div className={styles.services}>
               <h4 className={`${styles.sectionTitle} ${styles.footerServices}`}>Services</h4>
               <ul>{renderListLinks(servicesLinks)}</ul>
-            </div>
-
-            <div className={styles.quickLinks}>
-              <h4 className={`${styles.sectionTitle} ${styles.footerLegalLinks}`}>Legal</h4>
-              <ul>{renderListLinks(legalLinks)}</ul>
             </div>
 
             <div className={styles.getInTouch}>
@@ -215,12 +175,11 @@ function Footer1({ socialLinks = defaultSocialLinks, legalLinks = defaultLegalLi
                 </div>
               ))}
             </div>
-          </div>
 
-          {/* NEW: full-width address row across the footer */}
-          <div className="row justify-content-center g-3 mt-0">
-            <div className="col-12 col-md-6 col-lg-5 d-flex">
-              <div style={addressCardStyle} className="w-100">
+            <div>
+              <h4 className={styles.sectionTitle}>Address</h4>
+
+              <div className="w-100 mb-3">
                 <div className={styles.contactItem}>
                   <i className={`bi bi-geo-alt-fill ${styles.icon}`}></i>
                   <div className={styles.contactTextBlock}>
@@ -229,10 +188,8 @@ function Footer1({ socialLinks = defaultSocialLinks, legalLinks = defaultLegalLi
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="col-12 col-md-6 col-lg-5 d-flex">
-              <div style={addressCardStyle} className="w-100">
+              <div className="w-100">
                 <div className={styles.contactItem}>
                   <i className={`bi bi-geo-alt-fill ${styles.icon}`}></i>
                   <div className={styles.contactTextBlock}>
@@ -243,46 +200,121 @@ function Footer1({ socialLinks = defaultSocialLinks, legalLinks = defaultLegalLi
               </div>
             </div>
           </div>
-          {/* End address row */}
         </div>
 
-        {/* BOTTOM */}
-        <div className={styles.footerBottom}>
-          <div className={styles.copyrightSection}>
-            <p>
-              © {new Date().getFullYear()} Cybomb Technologies Pvt Ltd.<br />
-              All rights reserved.
-            </p>
+        {/* ===== Bottom: Links + Certificates + Copyright (responsive) ===== */}
+        <div
+          style={{
+            marginTop: "1rem",
+            borderTop: "1px solid #00bfff",
+            paddingTop: isNarrow ? "0.8rem" : "1rem",
+            paddingBottom: isNarrow ? "0.8rem" : "1rem",
+            display: "flex",
+            flexDirection: "column",
+            gap: isNarrow ? "0.6rem" : "0.8rem",
+          }}
+        >
+          {/* Row 1 */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: isNarrow ? "column" : "row",
+              justifyContent: isNarrow ? "center" : "space-between",
+              alignItems: isNarrow ? "center" : "center",
+              flexWrap: "wrap",
+              gap: isNarrow ? "0.8rem" : "1rem",
+            }}
+          >
+            {/* Legal Links */}
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: isNarrow ? "center" : "flex-start",
+                gap: isNarrow ? "14px" : "18px",
+                minWidth: 240,
+                width: isNarrow ? "100%" : "auto",
+              }}
+            >
+              {legalLinks.map((link, i) => (
+                <Link
+                  key={i}
+                  to={link.to}
+                  style={{
+                    color: "rgba(255, 255, 255, 0.9)",
+                    textDecoration: "none",
+                    fontWeight: 500,
+                    fontSize: isNarrow ? "0.9rem" : "0.95rem",
+                    transition: "color 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => (e.target.style.color = "#3fc5ff")}
+                  onMouseLeave={(e) => (e.target.style.color = "rgba(255, 255, 255, 0.9)")}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            {/* Certificates */}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: isNarrow ? "column" : "row",
+                justifyContent: isNarrow ? "center" : "flex-end",
+                alignItems: "center",
+                gap: isNarrow ? "0.75rem" : "0.8rem",
+                flexWrap: "wrap",
+                width: isNarrow ? "100%" : "auto",
+              }}
+            >
+              <div style={certCardStyle}>
+                <div style={logoBoxStyle}>
+                  <img src={DpiitLogo} alt="DPIIT" style={logoImgStyle} />
+                </div>
+                <div style={certTextStyle}>
+                  <span style={{ fontSize: "0.8rem", color: "#fff" }}>Cert ID:</span>
+                  <span style={{ fontSize: "0.8rem", color: "#ddd", fontWeight: 600 }}>
+                    #DIPP115093
+                  </span>
+                </div>
+              </div>
+
+              <div style={certCardStyle}>
+                <div style={logoBoxStyle}>
+                  <img src={DgftLogo} alt="DGFT" style={logoImgStyle} />
+                </div>
+                <div style={certTextStyle}>
+                  <span style={{ fontSize: "0.8rem", color: "#fff" }}>Cert ID: IEC</span>
+                  <span style={{ fontSize: "0.8rem", color: "#ddd", fontWeight: 600 }}>
+                    #AARFC1378G
+                  </span>
+                </div>
+              </div>
+
+              <div style={certCardStyle}>
+                <div style={logoBoxStyle}>
+                  <img src={AicteLogo} alt="AICTE" style={logoImgStyle} />
+                </div>
+                <div style={certTextStyle}>
+                  <span style={{ fontSize: "0.8rem", color: "#fff" }}>AICTE Reg.</span>
+                  <span style={{ fontSize: "0.8rem", color: "#ddd", fontWeight: 600 }}>
+                    Internship Partner
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className={styles.certificateSection}>
-            <div className={styles.certificateItem}>
-              <img src={DpiitLogo} alt="Certificate 1" className={styles.certificateLogo} />
-              <div className={styles.certificateText}>
-                <span className={styles.certificateLabel}>Cert ID:</span>
-                <span className={styles.certificateValue}>#DIPP115093</span>
-              </div>
-            </div>
-
-            <div className={styles.certificateItem}>
-              <img src={DgftLogo} alt="Certificate 2" className={styles.certificateLogo} />
-              <div className={styles.certificateText}>
-                <span className={styles.certificateLabel}>Cert ID: IEC</span>
-                <span className={styles.certificateValue}>#AARFC1378G</span>
-              </div>
-            </div>
-
-            <div className={`${styles.certificateItem} ${styles.thirdCertificate}`}>
-              <img
-                src={AicteLogo}
-                alt="Certificate 3"
-                className={`${styles.certificateLogo} ${styles.thirdCertificateLogo}`}
-              />
-              <div className={styles.certificateText}>
-                <span className={styles.certificateLabel}>AICTE Reg.</span>
-                <span className={styles.certificateValue}>Internship Partner</span>
-              </div>
-            </div>
+          {/* Row 2: Copyright */}
+          <div
+            style={{
+              textAlign: isNarrow ? "center" : "left",
+              color: "rgba(255, 255, 255, 0.85)",
+              fontSize: isNarrow ? "0.85rem" : "0.9rem",
+            }}
+          >
+            © {new Date().getFullYear()} Cybomb Technologies Pvt Ltd. All rights reserved.
           </div>
         </div>
       </div>

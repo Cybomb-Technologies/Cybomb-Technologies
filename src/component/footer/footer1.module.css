@@ -377,7 +377,7 @@ ul {
     padding: 1rem ;
     padding: 1rem 0.5rem;
     padding-bottom: 0% !important;
-    margin-left: 8rem;
+    
   }
  
   .desktopGrid {
@@ -763,7 +763,7 @@ ul {
 .services a:hover,
 .mobileLinks a:hover,
 .desktopGrid a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
  
 .rowAlign {
