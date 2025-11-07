@@ -30,7 +30,7 @@ const emp1Routes = (
     <Route path="/blog" element={<CybombBlog />} />
     
     <Route path="/privacy-policy" element={<Privacypolicy />} />
-    <Route path="/terms" element={<Terms />} />
+    <Route path="/terms-conditions" element={<Terms />} />
     <Route path="/refund-policy" element={<Refundpolicy />} />
     <Route path="/services/ecommerce-development" element={<Ecommdev/>} />
     {/* <Route path="/admin/login" element={<AdminLogin/>} /> */}
