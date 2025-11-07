@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './WhiteLabelApp.css';
+import styles from './WhiteLabelApp.module.css';
 
 const WhiteLabelApp = () => {
   const navigate = useNavigate();
@@ -121,26 +121,26 @@ const WhiteLabelApp = () => {
   ];
 
   return (
-    <div className="white-label-app">
+    <div className={styles.whiteLabelApp}>
       {/* Hero Section */}
-      <section className="hero-section">
-        <div className="container">
-          <div className="hero-content">
+      <section className={styles.heroSection}>
+        <div className={styles.container}>
+          <div className={styles.heroContent}>
             <h1>Launch Your Own Branded App in Just 3 Days!</h1>
-            <p className="hero-description">
+            <p className={styles.heroDescription}>
               Transform our proven app into your own branded solution. Complete white label 
               service with your logo, colors, domain, and full admin control. No technical 
               expertise required.
             </p>
-            <div className="hero-buttons">
+            <div className={styles.heroButtons}>
               <button 
-                className="btn btn-primary"
+                className={`${styles.btn} ${styles.btnPrimary}`}
                 onClick={() => document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })}
               >
                 View Pricing
               </button>
               <button 
-                className="btn btn-secondary"
+                className={`${styles.btn} ${styles.btnSecondary}`}
                 onClick={() => document.getElementById('demo').scrollIntoView({ behavior: 'smooth' })}
               >
                 See Demo
@@ -151,16 +151,16 @@ const WhiteLabelApp = () => {
       </section>
 
       {/* Features Section */}
-      <section className="features-section">
-        <div className="container">
-          <div className="section-header">
+      <section className={styles.featuresSection}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
             <h2>Complete White Label Solution</h2>
             <p>Everything you need to launch your branded mobile app</p>
           </div>
-          <div className="features-grid">
+          <div className={styles.featuresGrid}>
             {features.map((feature, index) => (
-              <div key={index} className="feature-card">
-                <div className="feature-icon">{feature.icon}</div>
+              <div key={index} className={styles.featureCard}>
+                <div className={styles.featureIcon}>{feature.icon}</div>
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
               </div>
@@ -170,20 +170,20 @@ const WhiteLabelApp = () => {
       </section>
 
       {/* Demo Section */}
-      <section id="demo" className="demo-section">
-        <div className="container">
-          <div className="section-header">
+      <section id="demo" className={styles.demoSection}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
             <h2>See It In Action</h2>
             <p>Experience the white label app with your branding</p>
           </div>
-          <div className="demo-content">
-            <div className="demo-video">
-              <div className="video-placeholder">
-                <div className="play-button">▶</div>
+          <div className={styles.demoContent}>
+            <div className={styles.demoVideo}>
+              <div className={styles.videoPlaceholder}>
+                <div className={styles.playButton}>▶</div>
                 <p>White Label App Demo Video</p>
               </div>
             </div>
-            <div className="demo-features">
+            <div className={styles.demoFeatures}>
               <h3>What You Get</h3>
               <ul>
                 <li>Fully branded iOS and Android apps</li>
@@ -198,28 +198,28 @@ const WhiteLabelApp = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="pricing-section">
-        <div className="container">
-          <div className="section-header">
+      <section id="pricing" className={styles.pricingSection}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
             <h2>Simple, Transparent Pricing</h2>
             <p>Choose the plan that fits your business needs</p>
           </div>
-          <div className="pricing-grid">
+          <div className={styles.pricingGrid}>
             {plans.map((plan, index) => (
-              <div key={index} className={`pricing-card ${plan.popular ? 'popular' : ''}`}>
-                {plan.popular && <div className="popular-badge">Most Popular</div>}
-                <div className="plan-header">
+              <div key={index} className={`${styles.pricingCard} ${plan.popular ? styles.popular : ''}`}>
+                {plan.popular && <div className={styles.popularBadge}>Most Popular</div>}
+                <div className={styles.planHeader}>
                   <h3>{plan.name}</h3>
-                  <div className="price">{plan.price}</div>
-                  <div className="period">{plan.period}</div>
+                  <div className={styles.price}>{plan.price}</div>
+                  <div className={styles.period}>{plan.period}</div>
                 </div>
-                <ul className="plan-features">
+                <ul className={styles.planFeatures}>
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex}>{feature}</li>
                   ))}
                 </ul>
                 <button 
-                  className={`btn ${plan.popular ? 'btn-primary' : 'btn-secondary'}`}
+                  className={`${styles.btn} ${plan.popular ? styles.btnPrimary : styles.btnSecondary}`}
                   onClick={() => handlePlanSelect(plan.planId)}
                 >
                   {plan.buttonText}
@@ -227,23 +227,23 @@ const WhiteLabelApp = () => {
               </div>
             ))}
           </div>
-          <div className="pricing-footer">
+          <div className={styles.pricingFooter}>
             <p>All plans include 3-day setup guarantee. Need a custom solution? <a href="#contact">Contact us</a></p>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="contact-section">
-        <div className="container">
-          <div className="section-header">
+      <section id="contact" className={styles.contactSection}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
             <h2>Get Started Today</h2>
             <p>Ready to launch your white label app? Send us your details and we'll get you set up.</p>
           </div>
-          <div className="contact-content">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-row">
-                <div className="form-group">
+          <div className={styles.contactContent}>
+            <form className={styles.contactForm} onSubmit={handleSubmit}>
+              <div className={styles.formRow}>
+                <div className={styles.formGroup}>
                   <label htmlFor="name">Full Name *</label>
                   <input
                     type="text"
@@ -254,7 +254,7 @@ const WhiteLabelApp = () => {
                     required
                   />
                 </div>
-                <div className="form-group">
+                <div className={styles.formGroup}>
                   <label htmlFor="company">Company</label>
                   <input
                     type="text"
@@ -265,8 +265,8 @@ const WhiteLabelApp = () => {
                   />
                 </div>
               </div>
-              <div className="form-row">
-                <div className="form-group">
+              <div className={styles.formRow}>
+                <div className={styles.formGroup}>
                   <label htmlFor="email">Email *</label>
                   <input
                     type="email"
@@ -277,7 +277,7 @@ const WhiteLabelApp = () => {
                     required
                   />
                 </div>
-                <div className="form-group">
+                <div className={styles.formGroup}>
                   <label htmlFor="phone">Phone</label>
                   <input
                     type="tel"
@@ -288,7 +288,7 @@ const WhiteLabelApp = () => {
                   />
                 </div>
               </div>
-              <div className="form-group">
+              <div className={styles.formGroup}>
                 <label htmlFor="message">Your Requirements</label>
                 <textarea
                   id="message"
@@ -299,7 +299,7 @@ const WhiteLabelApp = () => {
                   placeholder="Tell us about your app requirements, timeline, and any specific features you need..."
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-primary btn-full">
+              <button type="submit" className={`${styles.btn} ${styles.btnPrimary} ${styles.btnFull}`}>
                 Submit Inquiry
               </button>
             </form>
@@ -309,5 +309,4 @@ const WhiteLabelApp = () => {
     </div>
   );
 };
-
 export default WhiteLabelApp;
