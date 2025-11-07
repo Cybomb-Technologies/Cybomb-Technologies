@@ -1,5 +1,5 @@
 import HomeBanner from "../component/usa-home/usa-banner";
-import HomeService from "../component/usa-home/usa-home-service";
+import USAHomeService from "../component/usa-home/usa-home-service";
 import HomeKeydiffer from "../component/usa-home/usa-home-keydiffer";
 import Homewhychoose from "../component/usa-home/usa-home-whychoose";
 import Hometestimonial from "../component/usa-home/usa-home-testimonial";
@@ -12,6 +12,7 @@ import HomePartners from "../component/usa-home/usa-home-partners";
 import Metatags from "../SEO/meta-tags";
 import HomePressrelease from "../component/usa-home/usa-home-press-release";
 import HomeProcess from "../component/usa-home/usa-home-process";
+import HomeIndustries from "../component/usa-home/usa-home-industries";
 
 // import HomePricing from "../component/home/home-pricing";
 
@@ -31,7 +32,9 @@ function Home() {
       <Metatags metaProps={metaPropsData} />
 
       <HomeBanner />
-      <HomeService />
+      <USAHomeService />
+      <Homecontact />
+      <HomeIndustries />
       <HomeProcess />
       <HomeKeydiffer />
       <HomeUIUX />
@@ -42,7 +45,6 @@ function Home() {
       <Homeform />
       {/* <Homenewsletter /> */}
       <HomePartners />
-      <Homecontact />
       <HomePressrelease />
     </>
   );
