@@ -74,7 +74,9 @@ const BlogForm = ({ blogToEdit, onSubmit, onCancel }) => {
       const contentType = response.headers.get("content-type");
       if (!contentType || !contentType.includes("application/json")) {
         const text = await response.text();
-        throw new Error(`Server returned ${response.status}: ${text.slice(0, 100)}`);
+        throw new Error(
+          `Server returned ${response.status}: ${text.slice(0, 100)}`
+        );
       }
 
       const data = await response.json();
@@ -98,7 +100,9 @@ const BlogForm = ({ blogToEdit, onSubmit, onCancel }) => {
           onSubmit();
         }, 1500);
       } else {
-        throw new Error(data.message || data.errors?.[0] || "Failed to save blog");
+        throw new Error(
+          data.message || data.errors?.[0] || "Failed to save blog"
+        );
       }
     } catch (error) {
       console.error("Error submitting blog:", error);
@@ -150,7 +154,10 @@ const BlogForm = ({ blogToEdit, onSubmit, onCancel }) => {
               <label className="form-label">Image URL</label>
               <div className="input-group">
                 <span className="input-group-text">
-                  <Image className="text-muted" style={{ width: "16px", height: "16px" }} />
+                  <Image
+                    className="text-muted"
+                    style={{ width: "16px", height: "16px" }}
+                  />
                 </span>
                 <input
                   type="url"
@@ -181,7 +188,10 @@ const BlogForm = ({ blogToEdit, onSubmit, onCancel }) => {
                 <label className="form-label">Tags</label>
                 <div className="input-group">
                   <span className="input-group-text">
-                    <Tag className="text-muted" style={{ width: "16px", height: "16px" }} />
+                    <Tag
+                      className="text-muted"
+                      style={{ width: "16px", height: "16px" }}
+                    />
                   </span>
                   <input
                     type="text"
@@ -191,14 +201,19 @@ const BlogForm = ({ blogToEdit, onSubmit, onCancel }) => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-text">Separate tags with commas (max 30 characters each)</div>
+                <div className="form-text">
+                  Separate tags with commas (max 30 characters each)
+                </div>
               </div>
 
               <div className="col-12 col-md-6">
                 <label className="form-label">Read Time</label>
                 <div className="input-group">
                   <span className="input-group-text">
-                    <Clock className="text-muted" style={{ width: "16px", height: "16px" }} />
+                    <Clock
+                      className="text-muted"
+                      style={{ width: "16px", height: "16px" }}
+                    />
                   </span>
                   <input
                     type="text"
@@ -228,7 +243,10 @@ const BlogForm = ({ blogToEdit, onSubmit, onCancel }) => {
               <div className="form-text">
                 {content.length} characters (minimum 100 required)
                 {content.length < 100 && (
-                  <span className="text-danger"> - {100 - content.length} more characters needed</span>
+                  <span className="text-danger">
+                    {" "}
+                    - {100 - content.length} more characters needed
+                  </span>
                 )}
               </div>
             </div>
@@ -241,8 +259,14 @@ const BlogForm = ({ blogToEdit, onSubmit, onCancel }) => {
                 onChange={(e) => setFeatured(e.target.checked)}
                 className="form-check-input"
               />
-              <label htmlFor="featured" className="form-check-label d-flex align-items-center">
-                <Star className="me-2 text-warning" style={{ width: "16px", height: "16px" }} />
+              <label
+                htmlFor="featured"
+                className="form-check-label d-flex align-items-center"
+              >
+                <Star
+                  className="me-2 text-warning"
+                  style={{ width: "16px", height: "16px" }}
+                />
                 Mark as featured post
               </label>
             </div>
@@ -262,11 +286,20 @@ const BlogForm = ({ blogToEdit, onSubmit, onCancel }) => {
                 className="btn btn-primary d-flex align-items-center"
               >
                 {isLoading ? (
-                  <Loader className="animate-spin me-2" style={{ width: "16px", height: "16px" }} />
+                  <Loader
+                    className="animate-spin me-2"
+                    style={{ width: "16px", height: "16px" }}
+                  />
                 ) : isEditMode ? (
-                  <Edit className="me-2" style={{ width: "16px", height: "16px" }} />
+                  <Edit
+                    className="me-2"
+                    style={{ width: "16px", height: "16px" }}
+                  />
                 ) : (
-                  <PlusCircle className="me-2" style={{ width: "16px", height: "16px" }} />
+                  <PlusCircle
+                    className="me-2"
+                    style={{ width: "16px", height: "16px" }}
+                  />
                 )}
                 {isEditMode ? "Update Blog" : "Publish Blog"}
               </button>
@@ -278,7 +311,10 @@ const BlogForm = ({ blogToEdit, onSubmit, onCancel }) => {
                 } d-flex align-items-center`}
               >
                 {!message.includes("Error") && (
-                  <CheckCircle className="me-2" style={{ width: "16px", height: "16px" }} />
+                  <CheckCircle
+                    className="me-2"
+                    style={{ width: "16px", height: "16px" }}
+                  />
                 )}
                 {message}
               </div>
@@ -308,7 +344,9 @@ const BlogManager = () => {
       const contentType = response.headers.get("content-type");
       if (!contentType || !contentType.includes("application/json")) {
         const text = await response.text();
-        throw new Error(`Server returned ${response.status}: ${text.slice(0, 100)}`);
+        throw new Error(
+          `Server returned ${response.status}: ${text.slice(0, 100)}`
+        );
       }
 
       const data = await response.json();
@@ -348,7 +386,9 @@ const BlogManager = () => {
           return;
         }
         const text = await response.text();
-        throw new Error(`Server returned ${response.status}: ${text.slice(0, 100)}`);
+        throw new Error(
+          `Server returned ${response.status}: ${text.slice(0, 100)}`
+        );
       }
 
       const data = await response.json();
@@ -408,7 +448,9 @@ const BlogManager = () => {
       const contentType = response.headers.get("content-type");
       if (!contentType || !contentType.includes("application/json")) {
         const text = await response.text();
-        throw new Error(`Server returned ${response.status}: ${text.slice(0, 100)}`);
+        throw new Error(
+          `Server returned ${response.status}: ${text.slice(0, 100)}`
+        );
       }
 
       const data = await response.json();
@@ -429,24 +471,31 @@ const BlogManager = () => {
 
   const toggleFeatured = async (blogId, currentFeatured) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/blog/${blogId}/featured`, {
-        method: "PATCH",
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
-        },
-      });
+      const response = await fetch(
+        `${API_BASE_URL}/api/blog/${blogId}/featured`,
+        {
+          method: "PATCH",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
+          },
+        }
+      );
 
       const contentType = response.headers.get("content-type");
       if (!contentType || !contentType.includes("application/json")) {
         const text = await response.text();
-        throw new Error(`Server returned ${response.status}: ${text.slice(0, 100)}`);
+        throw new Error(
+          `Server returned ${response.status}: ${text.slice(0, 100)}`
+        );
       }
 
       const data = await response.json();
 
       if (response.ok && data.success) {
         setMessage(
-          `Blog ${!currentFeatured ? "marked as featured" : "removed from featured"}!`
+          `Blog ${
+            !currentFeatured ? "marked as featured" : "removed from featured"
+          }!`
         );
         fetchBlogs();
         setTimeout(() => setMessage(""), 3000);
@@ -483,7 +532,11 @@ const BlogManager = () => {
 
   if (isFormVisible) {
     return (
-      <BlogForm blogToEdit={blogToEdit} onSubmit={handleCancel} onCancel={handleCancel} />
+      <BlogForm
+        blogToEdit={blogToEdit}
+        onSubmit={handleCancel}
+        onCancel={handleCancel}
+      />
     );
   }
 
@@ -511,14 +564,26 @@ const BlogManager = () => {
     <div className="container-fluid" style={{ overflowX: "hidden" }}>
       <div className="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
         <div style={safeBreak}>
-          <h2 className="h3 fw-bold d-flex align-items-center text-primary mb-1" style={safeBreak}>
-            <BookOpen className="me-3 text-primary" style={{ width: "24px", height: "24px" }} />
+          <h2
+            className="h3 fw-bold d-flex align-items-center text-primary mb-1"
+            style={safeBreak}
+          >
+            <BookOpen
+              className="me-3 text-primary"
+              style={{ width: "24px", height: "24px" }}
+            />
             Blog Management
           </h2>
           <p className="text-muted mb-0">Manage your blog posts and content</p>
         </div>
-        <button onClick={handleCreateNew} className="btn btn-primary d-flex align-items-center">
-          <PlusCircle className="me-2" style={{ width: "16px", height: "16px" }} />
+        <button
+          onClick={handleCreateNew}
+          className="btn btn-primary d-flex align-items-center"
+        >
+          <PlusCircle
+            className="me-2"
+            style={{ width: "16px", height: "16px" }}
+          />
           New Post
         </button>
       </div>
@@ -533,7 +598,9 @@ const BlogManager = () => {
                   <h4 className="card-title mb-0">{basicStats.totalBlogs}</h4>
                   <p className="card-text mb-0">Total Blogs</p>
                 </div>
-                <BookOpen style={{ width: "48px", height: "48px", opacity: 0.7 }} />
+                <BookOpen
+                  style={{ width: "48px", height: "48px", opacity: 0.7 }}
+                />
               </div>
             </div>
           </div>
@@ -543,7 +610,9 @@ const BlogManager = () => {
             <div className="card-body">
               <div className="d-flex justify-content-between align-items-center">
                 <div>
-                  <h4 className="card-title mb-0">{basicStats.featuredBlogs}</h4>
+                  <h4 className="card-title mb-0">
+                    {basicStats.featuredBlogs}
+                  </h4>
                   <p className="card-text mb-0">Featured</p>
                 </div>
                 <Star style={{ width: "48px", height: "48px", opacity: 0.7 }} />
@@ -572,7 +641,9 @@ const BlogManager = () => {
                   <h4 className="card-title mb-0">{basicStats.recentBlogs}</h4>
                   <p className="card-text mb-0">Last 6 Months</p>
                 </div>
-                <Calendar style={{ width: "48px", height: "48px", opacity: 0.7 }} />
+                <Calendar
+                  style={{ width: "48px", height: "48px", opacity: 0.7 }}
+                />
               </div>
             </div>
           </div>
@@ -581,13 +652,20 @@ const BlogManager = () => {
 
       {statsError && (
         <div className="alert alert-warning d-flex align-items-center mb-4">
-          <AlertCircle className="me-2" style={{ width: "16px", height: "16px" }} />
+          <AlertCircle
+            className="me-2"
+            style={{ width: "16px", height: "16px" }}
+          />
           <small>Advanced statistics unavailable: {statsError}</small>
         </div>
       )}
 
       {message && (
-        <div className={`alert ${message.includes("Error") ? "alert-danger" : "alert-success"} mb-4`}>
+        <div
+          className={`alert ${
+            message.includes("Error") ? "alert-danger" : "alert-success"
+          } mb-4`}
+        >
           {message}
         </div>
       )}
@@ -601,9 +679,14 @@ const BlogManager = () => {
         </div>
       ) : blogs.length === 0 ? (
         <div className="text-center py-5">
-          <BookOpen className="mb-3 text-muted" style={{ width: "64px", height: "64px" }} />
+          <BookOpen
+            className="mb-3 text-muted"
+            style={{ width: "64px", height: "64px" }}
+          />
           <h3 className="h4 text-dark mb-2">No blog posts yet</h3>
-          <p className="text-muted mb-4">Get started by creating your first blog post!</p>
+          <p className="text-muted mb-4">
+            Get started by creating your first blog post!
+          </p>
           <button onClick={handleCreateNew} className="btn btn-primary">
             Create First Post
           </button>
@@ -614,7 +697,10 @@ const BlogManager = () => {
             <div key={blog._id} className="col-12 col-sm-6 col-lg-4 col-xl-3">
               <div className="card h-100 shadow-sm border-0">
                 {blog.image ? (
-                  <div className="position-relative overflow-hidden" style={{ height: "200px" }}>
+                  <div
+                    className="position-relative overflow-hidden"
+                    style={{ height: "200px" }}
+                  >
                     <img
                       src={blog.image}
                       alt={blog.title}
@@ -639,7 +725,10 @@ const BlogManager = () => {
                     className="position-relative bg-light d-flex align-items-center justify-content-center"
                     style={{ height: "200px" }}
                   >
-                    <Image className="text-muted" style={{ width: "48px", height: "48px" }} />
+                    <Image
+                      className="text-muted"
+                      style={{ width: "48px", height: "48px" }}
+                    />
                     {blog.featured && (
                       <div className="position-absolute top-0 end-0 m-2">
                         <Star
@@ -654,47 +743,78 @@ const BlogManager = () => {
 
                 <div className="card-body d-flex flex-column">
                   <div className="d-flex justify-content-between align-items-center mb-3">
-                    <span className={`badge ${blog.featured ? "bg-warning text-dark" : "bg-secondary"}`}>
+                    <span
+                      className={`badge ${
+                        blog.featured ? "bg-warning text-dark" : "bg-secondary"
+                      }`}
+                    >
                       {blog.featured ? "Featured" : "Standard"}
                     </span>
                     {blog.readTime && (
-                      <small className="text-muted d-flex align-items-center" style={safeBreak}>
-                        <Clock className="me-1" style={{ width: "14px", height: "14px" }} />
+                      <small
+                        className="text-muted d-flex align-items-center"
+                        style={safeBreak}
+                      >
+                        <Clock
+                          className="me-1"
+                          style={{ width: "14px", height: "14px" }}
+                        />
                         {blog.readTime}
                       </small>
                     )}
                   </div>
 
-                  <h5 className="card-title text-dark mb-2" style={clampedTitle}>
+                  <h5
+                    className="card-title text-dark mb-2"
+                    style={clampedTitle}
+                  >
                     {blog.title}
                   </h5>
 
                   <p className="text-primary mb-3" style={safeBreak}>
                     by {blog.author}
                   </p>
-
-                  <p className="card-text text-muted small mb-3 flex-grow-1" style={clampedExcerpt}>
-                    {blog.content.replace(/<[^>]*>/g, "").slice(0, 150)}
-                    {blog.content.replace(/<[^>]*>/g, "").length > 150 ? "..." : ""}
+                  <p
+                    className="card-text text-muted small mb-3 flex-grow-1"
+                    style={clampedExcerpt}
+                  >
+                    {blog.content
+                      ? blog.content.replace(/<[^>]*>/g, "").slice(0, 150)
+                      : "No content available"}
+                    {blog.content &&
+                    blog.content.replace(/<[^>]*>/g, "").length > 150
+                      ? "..."
+                      : ""}
                   </p>
 
                   {blog.tags && blog.tags.length > 0 && (
                     <div className="d-flex flex-wrap gap-1 mb-3">
                       {blog.tags.slice(0, 3).map((tag, index) => (
-                        <span key={index} className="badge bg-light text-dark border" style={safeBreak}>
+                        <span
+                          key={index}
+                          className="badge bg-light text-dark border"
+                          style={safeBreak}
+                        >
                           #{tag}
                         </span>
                       ))}
                       {blog.tags.length > 3 && (
-                        <span className="badge bg-light text-muted border">+{blog.tags.length - 3} more</span>
+                        <span className="badge bg-light text-muted border">
+                          +{blog.tags.length - 3} more
+                        </span>
                       )}
                     </div>
                   )}
 
                   <div className="d-flex justify-content-between align-items-center text-xs text-muted mb-3">
-                    <span>Created: {new Date(blog.createdAt).toLocaleDateString()}</span>
+                    <span>
+                      Created: {new Date(blog.createdAt).toLocaleDateString()}
+                    </span>
                     <span className="d-flex align-items-center">
-                      <Eye className="me-1" style={{ width: "14px", height: "14px" }} />
+                      <Eye
+                        className="me-1"
+                        style={{ width: "14px", height: "14px" }}
+                      />
                       {blog.views || 0}
                     </span>
                   </div>
@@ -704,7 +824,10 @@ const BlogManager = () => {
                       onClick={() => handleEdit(blog)}
                       className="btn btn-outline-primary btn-sm d-flex align-items-center flex-grow-1 justify-content-center"
                     >
-                      <Edit className="me-1" style={{ width: "14px", height: "14px" }} />
+                      <Edit
+                        className="me-1"
+                        style={{ width: "14px", height: "14px" }}
+                      />
                       Edit
                     </button>
                     <button
@@ -712,10 +835,17 @@ const BlogManager = () => {
                       className={`btn btn-sm d-flex align-items-center justify-content-center ${
                         blog.featured ? "btn-warning" : "btn-outline-warning"
                       }`}
-                      title={blog.featured ? "Remove from featured" : "Mark as featured"}
+                      title={
+                        blog.featured
+                          ? "Remove from featured"
+                          : "Mark as featured"
+                      }
                       style={{ width: "40px" }}
                     >
-                      <Star className={blog.featured ? "text-white" : ""} style={{ width: "14px", height: "14px" }} />
+                      <Star
+                        className={blog.featured ? "text-white" : ""}
+                        style={{ width: "14px", height: "14px" }}
+                      />
                     </button>
                     <button
                       onClick={() => handleDelete(blog._id)}
