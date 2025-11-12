@@ -14,7 +14,7 @@ import Faq from "../pages/faq";
 import Ecommdev from "../component/pages-services/design-development/Ecommerce-development/Ecomm-dev";
 // import AdminLogin from "../Admin/Login/login";
 import WhiteLabelApp from "../component/Whitelableapp/WhiteLabelApp";
-import CheckoutPage from "../component/checkoutpage/CheckoutPage";
+import CheckoutPage from "../component/whitecheckoutpage/WhiteCheckoutPage";
 // import HomePage from "../pages/HomePage"; // Uncomment if you have this file
 
 
@@ -30,7 +30,7 @@ const emp1Routes = (
     <Route path="/blog" element={<CybombBlog />} />
     
     <Route path="/privacy-policy" element={<Privacypolicy />} />
-    <Route path="/terms" element={<Terms />} />
+    <Route path="/terms-conditions" element={<Terms />} />
     <Route path="/refund-policy" element={<Refundpolicy />} />
     <Route path="/services/ecommerce-development" element={<Ecommdev/>} />
     {/* <Route path="/admin/login" element={<AdminLogin/>} /> */}

@@ -33,10 +33,10 @@ function useViewportWidth() {
 }
 
 const defaultLegalLinks = [
-  { to: "/privacy-policy", label: "Privacy" },
-  { to: "/terms", label: "Terms" },
-  { to: "/refund-policy", label: "Refund" },
-  { to: "/cookie-policy", label: "Cookie" },
+  { to: "/privacy-policy", label: "Privacy Policy" },
+  { to: "/terms-conditions", label: "Terms of Conditions" },
+  { to: "/refund-policy", label: "Refund Policy" },
+  { to: "/cookie-policy", label: "Cookie Policy" },
 ];
 
 function Footer1({ legalLinks = defaultLegalLinks }) {
@@ -219,42 +219,13 @@ function Footer1({ legalLinks = defaultLegalLinks }) {
             style={{
               display: "flex",
               flexDirection: isNarrow ? "column" : "row",
-              justifyContent: isNarrow ? "center" : "space-between",
+              justifyContent:"center",
               alignItems: isNarrow ? "center" : "center",
               flexWrap: "wrap",
               gap: isNarrow ? "0.8rem" : "1rem",
             }}
           >
-            {/* Legal Links */}
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "center",
-                justifyContent: isNarrow ? "center" : "flex-start",
-                gap: isNarrow ? "14px" : "18px",
-                minWidth: 240,
-                width: isNarrow ? "100%" : "auto",
-              }}
-            >
-              {legalLinks.map((link, i) => (
-                <Link
-                  key={i}
-                  to={link.to}
-                  style={{
-                    color: "rgba(255, 255, 255, 0.9)",
-                    textDecoration: "none",
-                    fontWeight: 500,
-                    fontSize: isNarrow ? "0.9rem" : "0.95rem",
-                    transition: "color 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => (e.target.style.color = "#3fc5ff")}
-                  onMouseLeave={(e) => (e.target.style.color = "rgba(255, 255, 255, 0.9)")}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
+           
 
             {/* Certificates */}
             <div
@@ -307,7 +278,8 @@ function Footer1({ legalLinks = defaultLegalLinks }) {
           </div>
 
           {/* Row 2: Copyright */}
-          <div
+          <div style={{display:"flex", justifyContent:"space-between"}}>
+             <div
             style={{
               textAlign: isNarrow ? "center" : "left",
               color: "rgba(255, 255, 255, 0.85)",
@@ -316,6 +288,38 @@ function Footer1({ legalLinks = defaultLegalLinks }) {
           >
             © {new Date().getFullYear()} Cybomb Technologies Pvt Ltd. All rights reserved.
           </div>
+           {/* Legal Links */}
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: isNarrow ? "center" : "flex-start",
+                gap: isNarrow ? "14px" : "18px",
+                minWidth: 240,
+                width: isNarrow ? "100%" : "auto",
+              }}
+            >
+              {legalLinks.map((link, i) => (
+                <Link
+                  key={i}
+                  to={link.to}
+                  style={{
+                    color: "rgba(255, 255, 255, 0.9)",
+                    textDecoration: "none",
+                    fontWeight: 500,
+                    fontSize: isNarrow ? "0.9rem" : "0.95rem",
+                    transition: "color 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => (e.target.style.color = "#3fc5ff")}
+                  onMouseLeave={(e) => (e.target.style.color = "rgba(255, 255, 255, 0.9)")}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+         
         </div>
       </div>
     </footer>

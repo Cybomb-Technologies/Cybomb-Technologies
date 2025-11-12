@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import './CheckoutPage.css';
+import styles from './WhiteCheckoutPage.module.css';
 
 const CheckoutPage = () => {
   const [plan, setPlan] = useState('starter');
@@ -116,65 +116,65 @@ const CheckoutPage = () => {
   const currentPlan = getPlanDetails();
 
   return (
-    <div className="checkout-page">
-      <div className="container">
+    <div className={styles.checkoutPage}>
+      <div className={styles.container}>
         {/* Improved Hero Section */}
-        <div className="checkout-hero">
-          <div className="hero-content">
+        <div className={styles.checkoutHero}>
+          <div className={styles.heroContent}>
             <h1>Launch Your Branded App</h1>
-            <p className="hero-subtitle">Complete your white label app purchase and get to market in just 3 days</p>
-            <div className="hero-badges">
-              <span className="badge">🚀 3-Day Setup</span>
-              <span className="badge">💫 Priority Support</span>
-              <span className="badge">🛡️ Secure Payment</span>
+            <p className={styles.heroSubtitle}>Complete your white label app purchase and get to market in just 3 days</p>
+            <div className={styles.heroBadges}>
+              <span className={styles.badge}>🚀 3-Day Setup</span>
+              <span className={styles.badge}>💫 Priority Support</span>
+              <span className={styles.badge}>🛡️ Secure Payment</span>
             </div>
           </div>
         </div>
 
-        <div className="checkout-content">
+        <div className={styles.checkoutContent}>
           {/* Enhanced Checkout Summary Card with more content */}
-          <div className="checkout-summary-card">
-            <div className="summary-header">
+          <div className={styles.checkoutSummaryCard}>
+            <div className={styles.summaryHeader}>
               <h3>Order Summary</h3>
-              <div className="plan-badge">{currentPlan.name}</div>
+              <div className={styles.planBadge}>{currentPlan.name}</div>
             </div>
             
-            <div className="selected-plan">
-              <div className="plan-price-main">
+            <div className={styles.selectedPlan}>
+              <div className={styles.planPriceMain}>
                 {typeof currentPlan.price === 'number' ? `$${currentPlan.price}` : currentPlan.price}
               </div>
-              <p className="price-description">One-time setup fee</p>
+              <p className={styles.priceDescription}>One-time setup fee</p>
             </div>
             
             {/* Plan Comparison */}
-            <div className="plan-comparison">
+            <div className={styles.planComparison}>
               <h4>Plan Comparison</h4>
-              <div className="comparison-table">
-                <div className="comparison-row">
+              <div className={styles.comparisonTable}>
+                <div className={styles.comparisonRow}>
                   <span>Setup Time</span>
-                  <span className="highlight-text">3 Business Days</span>
+                  <span className={styles.highlightText}>3 Business Days</span>
                 </div>
-                <div className="comparison-row">
+                <div className={styles.comparisonRow}>
                   <span>Support Duration</span>
                   <span>{plan === 'starter' ? '30 days' : plan === 'pro' ? '90 days' : '1 year'}</span>
                 </div>
-                <div className="comparison-row">
+                <div className={styles.comparisonRow}>
                   <span>App Store Submission</span>
-                  <span className="highlight-text">Included</span>
+                  <span className={styles.highlightText}>Included</span>
                 </div>
-                <div className="comparison-row">
+                <div className={styles.comparisonRow}>
                   <span>Custom Branding</span>
-                  <span className="highlight-text">Full Customization</span>
+                  <span className={styles.highlightText}>Full Customization</span>
                 </div>
               </div>
             </div>
             
-            <div className="plan-features">
+            <div className={styles.planFeatures}>
               <h5>What's included:</h5>
               <ul>
                 {currentPlan.features.map((feature, index) => (
                   <li key={index}>
-                    <span className="feature-icon">✓</span>
+                    <span className={styles.featureIcon}>✓</span>
                     {feature}
                   </li>
                 ))}
@@ -182,38 +182,38 @@ const CheckoutPage = () => {
             </div>
 
             {/* Value Proposition Section */}
-            <div className="value-proposition">
+            <div className={styles.valueProposition}>
               <h4>🎯 Why Choose White Label?</h4>
-              <div className="value-items">
-                <div className="value-item">
+              <div className={styles.valueItems}>
+                <div className={styles.valueItem}>
                   <strong>Time to Market</strong>
                   <p>Launch in days instead of months</p>
                 </div>
-                <div className="value-item">
+                <div className={styles.valueItem}>
                   <strong>Cost Effective</strong>
                   <p>Save 70% vs custom development</p>
                 </div>
-                <div className="value-item">
+                <div className={styles.valueItem}>
                   <strong>Proven Technology</strong>
                   <p>Built on tested, scalable platform</p>
                 </div>
-                <div className="value-item">
+                <div className={styles.valueItem}>
                   <strong>Ongoing Updates</strong>
                   <p>Regular feature enhancements included</p>
                 </div>
               </div>
             </div>
 
-            <div className="guarantee-box">
-              <div className="guarantee-header">
-                <span className="guarantee-icon">🚀</span>
+            <div className={styles.guaranteeBox}>
+              <div className={styles.guaranteeHeader}>
+                <span className={styles.guaranteeIcon}>🚀</span>
                 <h4>3-Day Setup Guarantee</h4>
               </div>
               <p>We'll have your white label app ready in just 3 business days after payment confirmation.</p>
             </div>
 
             {/* Technical Specifications */}
-            <div className="tech-specs">
+            <div className={styles.techSpecs}>
               <h4>🛠 Technical Specifications</h4>
               <ul>
                 <li>iOS & Android Native Apps</li>
@@ -226,7 +226,7 @@ const CheckoutPage = () => {
               </ul>
             </div>
 
-            {/* <div className="support-info">
+            {/* <div className={styles.supportInfo}>
               <h4>💫 What Happens Next?</h4>
               <ol>
                 <li>Instant payment confirmation</li>
@@ -238,28 +238,28 @@ const CheckoutPage = () => {
             </div> */}
 
             {/* FAQ Section */}
-            {/* <div className="faq-section">
+            {/* <div className={styles.faqSection}>
               <h4>❓ Frequently Asked Questions</h4>
-              <div className="faq-item">
+              <div className={styles.faqItem}>
                 <strong>Can I upgrade later?</strong>
                 <p>Yes, you can upgrade your plan at any time with prorated pricing.</p>
               </div>
-              <div className="faq-item">
+              <div className={styles.faqItem}>
                 <strong>What about app store fees?</strong>
                 <p>Apple App Store ($99/year) and Google Play ($25 one-time) fees are separate.</p>
               </div>
-              <div className="faq-item">
+              <div className={styles.faqItem}>
                 <strong>Is there a money-back guarantee?</strong>
                 <p>Yes, we offer a 14-day money-back guarantee if we can't deliver as promised.</p>
               </div>
             </div> */}
           </div>
 
-          <div className="checkout-form-container">
-            <form className="checkout-form" onSubmit={handleSubmit}>
-              <div className="form-section">
+          <div className={styles.checkoutFormContainer}>
+            <form className={styles.checkoutForm} onSubmit={handleSubmit}>
+              <div className={styles.formSection}>
                 <h3>Contact Information</h3>
-                <div className="form-group">
+                <div className={styles.formGroup}>
                   <label htmlFor="name">Full Name *</label>
                   <input
                     type="text"
@@ -271,8 +271,8 @@ const CheckoutPage = () => {
                   />
                 </div>
                 
-                <div className="form-row">
-                  <div className="form-group">
+                <div className={styles.formRow}>
+                  <div className={styles.formGroup}>
                     <label htmlFor="email">Email Address *</label>
                     <input
                       type="email"
@@ -283,7 +283,7 @@ const CheckoutPage = () => {
                       required
                     />
                   </div>
-                  <div className="form-group">
+                  <div className={styles.formGroup}>
                     <label htmlFor="phone">Phone Number *</label>
                     <input
                       type="tel"
@@ -296,7 +296,7 @@ const CheckoutPage = () => {
                   </div>
                 </div>
 
-                <div className="form-group">
+                <div className={styles.formGroup}>
                   <label htmlFor="company">Company Name</label>
                   <input
                     type="text"
@@ -308,9 +308,9 @@ const CheckoutPage = () => {
                 </div>
               </div>
 
-              <div className="form-section">
+              <div className={styles.formSection}>
                 <h3>Billing Information</h3>
-                <div className="form-group">
+                <div className={styles.formGroup}>
                   <label htmlFor="billing.line1">Address Line 1 *</label>
                   <input
                     type="text"
@@ -322,7 +322,7 @@ const CheckoutPage = () => {
                   />
                 </div>
 
-                <div className="form-group">
+                <div className={styles.formGroup}>
                   <label htmlFor="billing.line2">Address Line 2</label>
                   <input
                     type="text"
@@ -333,8 +333,8 @@ const CheckoutPage = () => {
                   />
                 </div>
 
-                <div className="form-row">
-                  <div className="form-group">
+                <div className={styles.formRow}>
+                  <div className={styles.formGroup}>
                     <label htmlFor="billing.city">City *</label>
                     <input
                       type="text"
@@ -345,7 +345,7 @@ const CheckoutPage = () => {
                       required
                     />
                   </div>
-                  <div className="form-group">
+                  <div className={styles.formGroup}>
                     <label htmlFor="billing.state">State *</label>
                     <input
                       type="text"
@@ -358,8 +358,8 @@ const CheckoutPage = () => {
                   </div>
                 </div>
 
-                <div className="form-row">
-                  <div className="form-group">
+                <div className={styles.formRow}>
+                  <div className={styles.formGroup}>
                     <label htmlFor="billing.zipCode">ZIP Code *</label>
                     <input
                       type="text"
@@ -370,7 +370,7 @@ const CheckoutPage = () => {
                       required
                     />
                   </div>
-                  <div className="form-group">
+                  <div className={styles.formGroup}>
                     <label htmlFor="billing.country">Country *</label>
                     <select
                       id="billing.country"
@@ -390,10 +390,10 @@ const CheckoutPage = () => {
                 </div>
               </div>
 
-              <div className="form-section">
+              <div className={styles.formSection}>
                 <h3>Payment Information</h3>
-                <div className="payment-methods">
-                  <div className="payment-method">
+                <div className={styles.paymentMethods}>
+                  <div className={styles.paymentMethod}>
                     <input 
                       type="radio" 
                       id="credit-card" 
@@ -403,7 +403,7 @@ const CheckoutPage = () => {
                     />
                     <label htmlFor="credit-card">Credit Card</label>
                   </div>
-                  <div className="payment-method">
+                  <div className={styles.paymentMethod}>
                     <input 
                       type="radio" 
                       id="paypal" 
@@ -413,7 +413,7 @@ const CheckoutPage = () => {
                     />
                     <label htmlFor="paypal">PayPal</label>
                   </div>
-                  <div className="payment-method">
+                  <div className={styles.paymentMethod}>
                     <input 
                       type="radio" 
                       id="bank-transfer" 
@@ -426,8 +426,8 @@ const CheckoutPage = () => {
                 </div>
 
                 {formData.payment.method === 'credit-card' && (
-                  <div className="credit-card-form">
-                    <div className="form-group">
+                  <div className={styles.creditCardForm}>
+                    <div className={styles.formGroup}>
                       <label htmlFor="cardNumber">Card Number</label>
                       <input
                         type="text"
@@ -440,8 +440,8 @@ const CheckoutPage = () => {
                       />
                     </div>
 
-                    <div className="form-row">
-                      <div className="form-group">
+                    <div className={styles.formRow}>
+                      <div className={styles.formGroup}>
                         <label htmlFor="expiry">Expiry Date</label>
                         <input
                           type="text"
@@ -453,7 +453,7 @@ const CheckoutPage = () => {
                           required
                         />
                       </div>
-                      <div className="form-group">
+                      <div className={styles.formGroup}>
                         <label htmlFor="cvc">CVC</label>
                         <input
                           type="text"
@@ -467,7 +467,7 @@ const CheckoutPage = () => {
                       </div>
                     </div>
 
-                    <div className="form-group">
+                    <div className={styles.formGroup}>
                       <label htmlFor="cardName">Name on Card</label>
                       <input
                         type="text"
@@ -482,28 +482,28 @@ const CheckoutPage = () => {
                 )}
 
                 {formData.payment.method === 'paypal' && (
-                  <div className="payment-method-info">
+                  <div className={styles.paymentMethodInfo}>
                     <p>You will be redirected to PayPal to complete your payment after submitting the form.</p>
                   </div>
                 )}
 
                 {formData.payment.method === 'bank-transfer' && (
-                  <div className="payment-method-info">
+                  <div className={styles.paymentMethodInfo}>
                     <p>Bank transfer details will be sent to your email after form submission.</p>
                   </div>
                 )}
               </div>
 
-              <div className="form-actions">
+              <div className={styles.formActions}>
                 <button 
                   type="submit" 
-                  className="btn btn-primary btn-full"
+                  className={`${styles.btn} ${styles.btnPrimary}`}
                   disabled={isProcessing}
                 >
                   {isProcessing ? 'Processing...' : `Complete Purchase - ${typeof currentPlan.price === 'number' ? `$${currentPlan.price}` : 'Contact for Pricing'}`}
                 </button>
                 
-                <div className="security-notice">
+                <div className={styles.securityNotice}>
                   <p>🔒 Your payment is secure and encrypted</p>
                 </div>
               </div>

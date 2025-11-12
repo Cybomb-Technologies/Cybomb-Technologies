@@ -55,12 +55,12 @@
 .placeholderImage {
   height: 100%;
   width: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #e0f7ff 0%, #7fd8ff 100%);
   color: white;
 }
 
 .readMoreBtn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #003459;
   border: none;
   border-radius: 8px;
   padding: 12px 24px;
@@ -76,13 +76,18 @@
 }
 
 .readMoreBtn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   transition: left 0.5s;
 }
 
@@ -119,11 +124,11 @@
   .pressContainer {
     padding: 40px 0;
   }
-  
+
   .pressTitle {
     font-size: 2rem;
   }
-  
+
   .imageContainer {
     height: 180px;
   }
@@ -146,12 +151,24 @@
 }
 
 /* Stagger animation for cards */
-.pressCard:nth-child(1) { animation-delay: 0.1s; }
-.pressCard:nth-child(2) { animation-delay: 0.2s; }
-.pressCard:nth-child(3) { animation-delay: 0.3s; }
-.pressCard:nth-child(4) { animation-delay: 0.4s; }
-.pressCard:nth-child(5) { animation-delay: 0.5s; }
-.pressCard:nth-child(6) { animation-delay: 0.6s; }
+.pressCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.pressCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.pressCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.pressCard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.pressCard:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.pressCard:nth-child(6) {
+  animation-delay: 0.6s;
+}
 
 /* Badge styles */
 .badge {
