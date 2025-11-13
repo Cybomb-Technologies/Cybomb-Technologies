@@ -13,7 +13,7 @@ const testimonials = [
   {
     name: "Emily Johnson",
     role: "CTO, InnovateX",
-    image: "images/testimonial-2.jpg",
+    image: "images/testimonial-3.png",
     rating: 5,
     feedback:
       "Cybomb Technologies delivered an exceptional mobile health platform that exceeded our expectations. The AI integration features have revolutionized how our patients interact with healthcare data.",
@@ -21,7 +21,7 @@ const testimonials = [
   {
     name: "Ravi Kumar",
     role: "Founder, TechSprout",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    image: "images/testimonial-2.jpg",
     rating: 4,
     feedback:
       "Working with Cybomb was a game-changer. They built a scalable SaaS solution that handles millions of transactions. Their support helped us scale quickly.",

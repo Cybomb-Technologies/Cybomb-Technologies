@@ -8,7 +8,8 @@ const __dirname = path.dirname(__filename);
 // Create new application
 export const createApplication = async (req, res) => {
   try {
-    const { name, email, phone, role, experience, coverLetter } = req.body;
+    // UPDATED: Destructure new field 'referredBy'
+    const { name, email, phone, role, experience, coverLetter, isReferral, referredBy } = req.body;
     
     // Validation
     if (!name || !email || !role) {
@@ -38,6 +39,9 @@ export const createApplication = async (req, res) => {
       role,
       experience,
       coverLetter,
+      isReferral: isReferral === 'true', // Convert string from FormData to boolean
+      // NEW FIELD ASSIGNMENT
+      referredBy: referredBy || null, 
       resume: resumeData
     });
 

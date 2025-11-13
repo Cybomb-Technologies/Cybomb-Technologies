@@ -11,6 +11,9 @@ const QuickApplyModal = ({ show, onClose, onApply, onApplyFinished, jobTitle }) 
     experience: "",
     coverLetter: "",
     resume: null,
+    isReferral: false,
+    // NEW FIELD
+    referredBy: "", 
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,6 +47,9 @@ const QuickApplyModal = ({ show, onClose, onApply, onApplyFinished, jobTitle }) 
         experience: "",
         coverLetter: "",
         resume: null,
+        isReferral: false,
+        // NEW FIELD RESET
+        referredBy: "",
       });
       setErrors({});
       setSubmitSuccess(false);
@@ -53,8 +59,21 @@ const QuickApplyModal = ({ show, onClose, onApply, onApplyFinished, jobTitle }) 
   }, [show, jobTitle]);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const { name, value, type, checked } = e.target;
+    // Handle checkbox change specifically
+    const newValue = type === 'checkbox' ? checked : value;
+
+    setFormData((prev) => {
+      let newState = { ...prev, [name]: newValue };
+      
+      // If isReferral is unchecked, clear referredBy
+      if (name === 'isReferral' && !checked) {
+        newState = { ...newState, referredBy: "" };
+      }
+
+      return newState;
+    });
+    
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: "" }));
@@ -111,6 +130,10 @@ const QuickApplyModal = ({ show, onClose, onApply, onApplyFinished, jobTitle }) 
     ) {
       newErrors.phone = "Valid phone number is required";
     }
+    // NEW FIELD VALIDATION
+    if (formData.isReferral && !formData.referredBy.trim()) {
+      newErrors.referredBy = "Employee name is required for referrals";
+    }
     if (!formData.resume) newErrors.resume = "Resume is required";
 
     setErrors(newErrors);
@@ -137,6 +160,10 @@ const QuickApplyModal = ({ show, onClose, onApply, onApplyFinished, jobTitle }) 
       formDataToSend.append("role", formData.role);
       formDataToSend.append("experience", formData.experience);
       formDataToSend.append("coverLetter", formData.coverLetter);
+      formDataToSend.append("isReferral", formData.isReferral);
+      // NEW FIELD APPEND
+      formDataToSend.append("referredBy", formData.referredBy);
+
 
       if (formData.resume) {
         formDataToSend.append("resume", formData.resume);
@@ -377,6 +404,45 @@ const QuickApplyModal = ({ show, onClose, onApply, onApplyFinished, jobTitle }) 
                     ))}
                   </select>
                 </div>
+
+                {/* REFERRAL SWITCH */}
+                <div className="col-12">
+                  <div className="form-check form-switch mt-2">
+                    <input 
+                      className="form-check-input" 
+                      type="checkbox" 
+                      id="isReferralSwitch"
+                      name="isReferral"
+                      checked={formData.isReferral}
+                      onChange={handleChange}
+                      role="switch"
+                    />
+                    <label className="form-check-label fw-medium" htmlFor="isReferralSwitch" style={{ color: '#003459' }}>
+                      <FiUser className="me-1" style={{ color: '#007ea7' }} />
+                      I was referred by a current employee
+                    </label>
+                  </div>
+                </div>
+
+                {/* CONDITIONAL REFERRED BY INPUT FIELD */}
+                {formData.isReferral && (
+                    <div className="col-12 mt-2">
+                        <label className="form-label d-flex align-items-center fw-medium" style={{ color: '#003459' }}>
+                            Referred By (Employee Name)*
+                        </label>
+                        <input
+                            type="text"
+                            name="referredBy"
+                            value={formData.referredBy}
+                            onChange={handleChange}
+                            className={`form-control ${errors.referredBy ? "is-invalid" : ""}`}
+                            placeholder="Employee Name"
+                            style={{ borderRadius: '8px', border: '1.5px solid #e9ecef', padding: '10px 12px' }}
+                        />
+                        {errors.referredBy && <div className="invalid-feedback">{errors.referredBy}</div>}
+                    </div>
+                )}
+                
 
                 <div className="col-12">
                   <label className="form-label d-flex align-items-center fw-medium" style={{ color: '#003459' }}>

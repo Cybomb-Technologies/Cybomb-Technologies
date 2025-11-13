@@ -379,7 +379,7 @@ const portfolioItems = [
 }
 ];
 function PortfolioContent() {
-  const itemsPerPage = 3;
+  const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(portfolioItems.length / itemsPerPage);
   const portfolioSectionRef = useRef(null);

@@ -9,8 +9,100 @@ import {
   Filter,
   ChevronDown,
   ChevronUp,
+  Eye, 
 } from "lucide-react";
 const API_BASE_URL1 = import.meta.env.VITE_API_BASE_URL;
+
+// Helper component for the Details Modal (kept for context, but not changed)
+const DetailsModal = ({ isOpen, application, onClose }) => {
+  if (!isOpen || !application) return null;
+
+  // Function to render field value
+  const renderValue = (key, value) => {
+    if (key === 'isReferral') {
+      return (
+        <span className={`badge ${value ? 'bg-success' : 'bg-secondary'} text-white`}>
+          {value ? 'Yes' : 'No'}
+        </span>
+      );
+    }
+    if (key === 'createdAt' || key === 'updatedAt') {
+      return new Date(value).toLocaleString();
+    }
+    // Handle multiline text for coverLetter/experience
+    if (key === 'coverLetter' || key === 'experience') {
+        return <p style={{whiteSpace: 'pre-wrap', maxHeight: '200px', overflowY: 'auto'}} className="mb-0 border p-2 rounded bg-light">{value || 'N/A'}</p>;
+    }
+    return value || "N/A";
+  };
+  
+  // Define the order and labels for fields to display (matches Application.js schema)
+  const fields = [
+      { key: 'name', label: 'Full Name' },
+      { key: 'email', label: 'Email' },
+      { key: 'phone', label: 'Phone' },
+      { key: 'role', label: 'Applied Role' },
+      { key: 'experience', label: 'Experience Summary' },
+      { key: 'coverLetter', label: 'Cover Letter' },
+      { key: 'isReferral', label: 'Is Referral?' },
+      { key: 'referredBy', label: 'Referred By' },
+      { key: 'createdAt', label: 'Applied On' },
+      { key: 'updatedAt', label: 'Last Updated' },
+  ];
+
+  return (
+    <div
+      className="modal fade show d-block"
+      style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+      onClick={onClose}
+    >
+      <div className="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+        <div className="modal-content border-0 shadow-lg">
+          <div className="modal-header text-white" style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)'}}>
+            <h5 className="modal-title d-flex align-items-center">
+              <Eye className="me-2 flex-shrink-0" />
+              <span className="text-truncate">Application Details: {application.name}</span>
+            </h5>
+            <button
+              type="button"
+              className="btn-close btn-close-white"
+              onClick={onClose}
+            ></button>
+          </div>
+
+          <div className="modal-body">
+            <div className="row">
+              {fields.map(({ key, label }) => {
+                // Skip the 'resume' object as it's handled by the other modal
+                if (key === 'resume') return null; 
+
+                // Use the application data
+                const value = application[key];
+                
+                return (
+                  <div key={key} className={`col-12 mb-3 ${key === 'coverLetter' || key === 'experience' ? 'col-lg-12' : 'col-lg-6'}`}>
+                    <p className="mb-1 text-muted fw-medium small text-uppercase">{label}</p>
+                    {key === 'coverLetter' || key === 'experience' ? (
+                        renderValue(key, value)
+                    ) : (
+                        <p className="fw-bold mb-0 text-break">{renderValue(key, value)}</p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="modal-footer justify-content-center">
+            <button onClick={onClose} className="btn btn-outline-primary">
+              Close Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
   const [resumePopup, setResumePopup] = useState({
@@ -18,6 +110,12 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
     content: null,
     fileName: "",
     isLoading: false,
+  });
+
+  // STATE for Details Modal
+  const [detailsPopup, setDetailsPopup] = useState({
+    isOpen: false,
+    application: null,
   });
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -46,7 +144,8 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
     if (searchTerm) {
       result = result.filter((item) =>
         headers.some((header) => {
-          const key = header.toLowerCase().replace(/\s/g, "");
+          // Use 'createdAt' for sorting/filtering 'Date Applied'
+          const key = header.toLowerCase().replace(/\s/g, "") === 'dateapplied' ? 'createdat' : header.toLowerCase().replace(/\s/g, "");
           const value = item[key]?.toString().toLowerCase() || "";
           return value.includes(searchTerm.toLowerCase());
         })
@@ -55,9 +154,12 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
 
     // Apply sorting
     if (sortConfig.key) {
+      // If sorting by 'dateapplied', use 'createdat' property
+      const sortKey = sortConfig.key === 'dateapplied' ? 'createdat' : sortConfig.key;
+      
       result.sort((a, b) => {
-        const aValue = a[sortConfig.key]?.toString().toLowerCase() || "";
-        const bValue = b[sortConfig.key]?.toString().toLowerCase() || "";
+        const aValue = a[sortKey]?.toString().toLowerCase() || "";
+        const bValue = b[sortKey]?.toString().toLowerCase() || "";
 
         if (aValue < bValue) return sortConfig.direction === "asc" ? -1 : 1;
         if (aValue > bValue) return sortConfig.direction === "asc" ? 1 : -1;
@@ -68,7 +170,10 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
     setFilteredData(result);
   }, [data, searchTerm, sortConfig, headers]);
 
-  const handleSort = (key) => {
+  const handleSort = (header) => {
+    // Map 'Date Applied' back to 'createdat' for internal state
+    const key = header.toLowerCase().replace(/\s/g, "") === 'dateapplied' ? 'createdat' : header.toLowerCase().replace(/\s/g, "");
+    
     setSortConfig((current) => ({
       key,
       direction:
@@ -87,6 +192,26 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
       return newSet;
     });
   };
+  
+  // function to open the Details Modal
+  const handleViewDetails = (application) => {
+    setDetailsPopup({
+      isOpen: true,
+      application: application,
+    });
+  };
+
+  // function to close the Details Modal
+  const closeDetailsPopup = (e) => {
+    // Only close if the backdrop or X button is clicked (to allow scrolling in modal)
+    if (e.target === e.currentTarget || e.target.closest('.btn-close')) { 
+      setDetailsPopup({
+        isOpen: false,
+        application: null,
+      });
+    }
+  };
+
 
   const handleViewResume = async (applicationId, fileName) => {
     try {
@@ -147,14 +272,19 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
 
   useEffect(() => {
     const handleEscapeKey = (e) => {
-      if (e.key === "Escape" && resumePopup.isOpen) {
-        closeResumePopup();
+      if (e.key === "Escape") {
+        if (resumePopup.isOpen) {
+            closeResumePopup();
+        } else if (detailsPopup.isOpen) { 
+            closeDetailsPopup({ target: { closest: () => null }, currentTarget: {} }); 
+        }
       }
     };
 
     document.addEventListener("keydown", handleEscapeKey);
     return () => document.removeEventListener("keydown", handleEscapeKey);
-  }, [resumePopup.isOpen]);
+  }, [resumePopup.isOpen, detailsPopup.isOpen]);
+
 
   const renderCellContent = (item, header) => {
     const key = header.toLowerCase().replace(/\s/g, "");
@@ -166,6 +296,7 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
           <button
             onClick={() => handleViewResume(item._id, item.resume.originalName)}
             className="btn btn-primary btn-sm d-flex align-items-center justify-content-center w-100 w-sm-auto"
+            style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', border: 'none'}}
           >
             <FileText className="me-1 flex-shrink-0" style={{width: '14px', height: '14px'}} />
             <span className="text-truncate">View Resume</span>
@@ -173,13 +304,23 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
         );
       } else {
         return (
-          <span className="badge bg-danger text-white p-2 d-inline-block text-center w-100 w-sm-auto">
+          <span className="badge bg-secondary text-white p-2 d-inline-block text-center w-100 w-sm-auto">
             No Resume
           </span>
         );
       }
     }
 
+    // NEW CASE: Render the formatted creation date
+    if (key === "dateapplied") {
+        // 'createdAt' is the actual database field name 
+        if (item.createdAt) {
+            return new Date(item.createdAt).toLocaleDateString();
+        }
+        return "N/A";
+    }
+
+    // Default truncation logic
     if (content && content.length > 50 && !isMobile) {
       content = content.substring(0, 47) + "...";
     }
@@ -190,14 +331,22 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
   const renderMobileCard = (item, index) => (
     <div
       key={item._id || index}
-      className="card mb-3"
+      className="card mb-3 border-0 shadow-sm"
+      style={{background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)'}}
     >
       <div className="card-body">
         <div className="d-flex justify-content-between align-items-start mb-2">
-          <h5 className="card-title text-truncate me-2 mb-0 flex-grow-1">
+          <h5 className="card-title text-truncate me-2 mb-0 flex-grow-1 text-primary">
             {item.name || "N/A"}
           </h5>
           <div className="d-flex align-items-center flex-shrink-0">
+            <button
+              onClick={() => handleViewDetails(item)} 
+              className="btn btn-link text-primary p-1 me-1"
+              title="View Details"
+            >
+              <Eye style={{width: '16px', height: '16px'}} />
+            </button>
             <button
               onClick={() => onDelete(item._id, title.toLowerCase())}
               className="btn btn-link text-danger p-1 me-1"
@@ -206,7 +355,7 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
             </button>
             <button
               onClick={() => toggleRowExpand(item._id)}
-              className="btn btn-link text-secondary p-1"
+              className="btn btn-link text-primary p-1"
             >
               {expandedRows.has(item._id) ? (
                 <ChevronUp style={{width: '16px', height: '16px'}} />
@@ -229,6 +378,10 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
             <span className="small">{item.role || "N/A"}</span>
           </div>
           <div className="d-flex justify-content-between align-items-center">
+            <span className="text-muted small fw-medium">Applied On:</span>
+            <span className="small text-end ms-2">{item.createdAt ? new Date(item.createdAt).toLocaleDateString() : "N/A"}</span>
+          </div>
+          <div className="d-flex justify-content-between align-items-center">
             <span className="text-muted small fw-medium">Resume:</span>
             <div className="ms-2">{renderCellContent(item, "Resume")}</div>
           </div>
@@ -238,7 +391,8 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
           <div className="mt-3 pt-3 border-top">
             {headers
               .filter(
-                (header) => !["Name", "Email", "Role", "Resume"].includes(header)
+                // Filter out the fields already shown above 
+                (header) => !["Name", "Email", "Role", "Date Applied", "Resume"].includes(header) 
               )
               .map((header) => {
                 const key = header.toLowerCase().replace(/\s/g, "");
@@ -249,11 +403,22 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
                       {header}:
                     </span>
                     <span className="small text-end ms-2">
-                      {value}
+                      {renderCellContent(item, header)}
                     </span>
                   </div>
                 );
               })}
+              {/* Adding referral info to mobile details - which is in the full schema, but not in table headers */}
+              {item.isReferral && (
+                <div key="referredBy" className="d-flex justify-content-between mb-2">
+                    <span className="text-muted small fw-medium">
+                      Referred By:
+                    </span>
+                    <span className="small text-end ms-2">
+                      {item.referredBy || "N/A"}
+                    </span>
+                </div>
+              )}
           </div>
         )}
       </div>
@@ -261,7 +426,10 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
   );
 
   const SortIcon = ({ columnKey }) => {
-    if (sortConfig.key !== columnKey) {
+    // Map back 'dateapplied' to 'createdat' for comparison
+    const internalKey = columnKey === 'dateapplied' ? 'createdat' : columnKey;
+    
+    if (sortConfig.key !== internalKey) {
       return <ChevronDown style={{width: '16px', height: '16px', opacity: '0.3'}} />;
     }
     return sortConfig.direction === "asc" ? (
@@ -272,19 +440,19 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
   };
 
   return (
-    <div className="card shadow-sm border-0">
+    <div className="card shadow-lg border-0" style={{background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)'}}>
       <div className="card-body">
         {/* Header Section */}
         <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
-          <h2 className="h4 fw-bold d-flex align-items-center text-primary mb-0">
-            <Icon className="me-2 me-md-3 text-primary" style={{width: '20px', height: '20px'}} />
+          <h2 className="h4 fw-bold d-flex align-items-center text-white mb-0 px-3 py-2 rounded" style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)'}}>
+            <Icon className="me-2 me-md-3 text-white" style={{width: '20px', height: '20px'}} />
             {title} Data ({filteredData.length})
           </h2>
 
           {/* Search and Filter Section */}
           <div className="d-flex flex-column flex-md-row gap-2 w-100 w-md-auto">
             <div className="input-group flex-grow-1 flex-md-grow-0" style={{maxWidth: '300px'}}>
-              <span className="input-group-text bg-white border-end-0">
+              <span className="input-group-text text-white border-end-0" style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)'}}>
                 <Search style={{width: '16px', height: '16px'}} />
               </span>
               <input
@@ -293,12 +461,13 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="form-control border-start-0"
+                style={{borderColor: '#3b82f6'}}
               />
             </div>
             {searchTerm && (
               <button
                 onClick={() => setSearchTerm("")}
-                className="btn btn-outline-secondary"
+                className="btn btn-outline-primary"
               >
                 Clear
               </button>
@@ -309,7 +478,7 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
         {/* Data Display */}
         <div>
           {filteredData.length === 0 ? (
-            <div className="text-center py-5 border rounded bg-light">
+            <div className="text-center py-5 border rounded" style={{background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)'}}>
               <p className="text-muted fst-italic mb-3">
                 {searchTerm
                   ? `No ${title.toLowerCase()} records match your search.`
@@ -318,7 +487,8 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
               {searchTerm && (
                 <button
                   onClick={() => setSearchTerm("")}
-                  className="btn btn-primary"
+                  className="btn text-white"
+                  style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', border: 'none'}}
                 >
                   Clear Search
                 </button>
@@ -333,15 +503,16 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
             // Desktop Table View
             <div className="table-responsive">
               <table className="table table-hover">
-                <thead className="table-light">
+                <thead className="text-white" style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)'}}>
                   <tr>
                     {headers.map((header) => {
+                      // Use 'dateapplied' as the column key in table headers
                       const key = header.toLowerCase().replace(/\s/g, "");
                       return (
                         <th
                           key={header}
                           className="cursor-pointer"
-                          onClick={() => handleSort(key)}
+                          onClick={() => handleSort(header)} // Pass header for proper key mapping
                         >
                           <div className="d-flex align-items-center gap-1">
                             <span>{header}</span>
@@ -355,13 +526,21 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
                 </thead>
                 <tbody>
                   {filteredData.map((item, index) => (
-                    <tr key={item._id || index}>
+                    <tr key={item._id || index} style={{background: index % 2 === 0 ? '#ffffff' : '#f8fafc'}}>
                       {headers.map((header) => (
                         <td key={`${item._id}-${header}`} className="text-nowrap">
                           {renderCellContent(item, header)}
                         </td>
                       ))}
-                      <td className="text-nowrap">
+                      <td className="text-nowrap d-flex gap-2">
+                        <button
+                          onClick={() => handleViewDetails(item)} 
+                          className="btn btn-sm text-white"
+                          title="View Details"
+                          style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', border: 'none'}}
+                        >
+                          <Eye style={{width: '16px', height: '16px'}} />
+                        </button>
                         <button
                           onClick={() => onDelete(item._id, title.toLowerCase())}
                           className="btn btn-sm btn-outline-danger"
@@ -378,71 +557,81 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
           )}
         </div>
 
-        {/* Resume Popup Modal */}
         {resumePopup.isOpen && (
-          <div
-            className="modal fade show d-block"
-            style={{backgroundColor: 'rgba(0,0,0,0.5)'}}
-            onClick={handleBackdropClick}
-          >
-            <div className="modal-dialog modal-lg modal-dialog-centered">
-              <div className="modal-content">
-                <div className="modal-header bg-primary text-white">
-                  <h5 className="modal-title d-flex align-items-center">
-                    <FileText className="me-2 flex-shrink-0" />
-                    <span className="text-truncate">Resume: {resumePopup.fileName}</span>
-                  </h5>
-                  <button
-                    type="button"
-                    className="btn-close btn-close-white"
-                    onClick={closeResumePopup}
-                  ></button>
-                </div>
+  <div
+    className="modal fade show d-block"
+    style={{backgroundColor: 'rgba(0,0,0,0.5)'}}
+    onClick={handleBackdropClick}
+  >
+    {/* Changed to modal-xl for maximum width and increased height */}
+    <div className="modal-dialog modal-xl modal-dialog-centered" style={{maxWidth: '95vw', height: '95vh'}}>
+      <div className="modal-content border-0 shadow-lg h-100">
+        <div className="modal-header text-white" style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)'}}>
+          <h5 className="modal-title d-flex align-items-center">
+            <FileText className="me-2 flex-shrink-0" />
+            <span className="text-truncate">Resume: {resumePopup.fileName}</span>
+          </h5>
+          <button
+            type="button"
+            className="btn-close btn-close-white"
+            onClick={closeResumePopup}
+          ></button>
+        </div>
 
-                <div className="modal-body">
-                  {resumePopup.isLoading ? (
-                    <div className="d-flex justify-content-center align-items-center py-5">
-                      <div className="spinner-border text-primary me-3" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                      </div>
-                      <span className="fw-medium text-dark">Loading Resume...</span>
-                    </div>
-                  ) : resumePopup.content ? (
-                    <div>
-                      <iframe
-                        src={resumePopup.content}
-                        className="w-100 border rounded"
-                        style={{height: '400px'}}
-                        title="Resume Preview"
-                      />
-                      <div className="d-flex flex-column flex-sm-row justify-content-center gap-2 mt-3">
-                        <a
-                          href={resumePopup.content}
-                          download={resumePopup.fileName}
-                          className="btn btn-primary d-flex align-items-center justify-content-center"
-                        >
-                          <FileText className="me-2" />
-                          Download Resume
-                        </a>
-                        <button
-                          onClick={closeResumePopup}
-                          className="btn btn-outline-secondary"
-                        >
-                          Close
-                        </button>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="text-center py-4 text-muted">
-                      <FileText className="mb-2 opacity-50" style={{width: '48px', height: '48px'}} />
-                      <p>Unable to load resume content.</p>
-                    </div>
-                  )}
-                </div>
+        <div className="modal-body d-flex flex-column">
+          {resumePopup.isLoading ? (
+            <div className="d-flex justify-content-center align-items-center py-5 flex-grow-1">
+              <div className="spinner-border text-primary me-3" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <span className="fw-medium text-dark">Loading Resume...</span>
+            </div>
+          ) : resumePopup.content ? (
+            <div className="d-flex flex-column flex-grow-1">
+              {/* Increased iframe height to take most of the available space */}
+              <iframe
+                src={resumePopup.content}
+                className="w-100 border rounded flex-grow-1"
+                style={{minHeight: '70vh', height: '100%'}}
+                title="Resume Preview"
+              />
+              <div className="d-flex flex-column flex-sm-row justify-content-center gap-2 mt-3">
+                <a
+                  href={resumePopup.content}
+                  download={resumePopup.fileName}
+                  className="btn text-white d-flex align-items-center justify-content-center"
+                  style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', border: 'none'}}
+                >
+                  <FileText className="me-2" />
+                  Download Resume
+                </a>
+                <button
+                  onClick={closeResumePopup}
+                  className="btn btn-outline-primary"
+                >
+                  Close
+                </button>
               </div>
             </div>
-          </div>
-        )}
+          ) : (
+            <div className="text-center py-4 text-muted flex-grow-1 d-flex flex-column justify-content-center">
+              <FileText className="mb-2 opacity-50 mx-auto" style={{width: '48px', height: '48px'}} />
+              <p>Unable to load resume content.</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+        
+        {/* Details Popup Modal */}
+        <DetailsModal
+            isOpen={detailsPopup.isOpen}
+            application={detailsPopup.application}
+            onClose={closeDetailsPopup}
+        />
+        
       </div>
     </div>
   );
@@ -454,7 +643,8 @@ const ApplicationManager = ({ applications, onDelete }) => {
       title="Application"
       icon={Briefcase}
       data={applications}
-      headers={["Name", "Email", "Role", "Resume"]}
+      // UPDATED headers: Replaced "Is Referral" with "Date Applied"
+      headers={["Name", "Email", "Role", "Date Applied", "Resume"]} 
       onDelete={onDelete}
     />
   );
