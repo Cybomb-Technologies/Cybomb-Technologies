@@ -26,6 +26,16 @@ const applicationSchema = mongoose.Schema(
       type: String,
       required: false,
     },
+    isReferral: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    // NEW FIELD
+    referredBy: {
+      type: String,
+      required: false,
+    },
     resume: {
       filename: {
         type: String,

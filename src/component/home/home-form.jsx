@@ -154,7 +154,7 @@ function Homeform() {
                       value={formData.phone}
                       onChange={handleChange}
                     />
-                    <small className="text-muted">We'll use this for better communication</small>
+                    <small className="text-white">We'll use this for better communication</small>
                   </div>
 
                   <div className="mb-3">
