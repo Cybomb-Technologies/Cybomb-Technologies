@@ -4,24 +4,22 @@ import { FiClock, FiMapPin, FiAward, FiDollarSign, FiArrowRight } from "react-ic
 import styles from "./career-content.module.css";
 import QuickApplyModal from "./job-apply-modal";
 
-const CareerCard = ({ job, onView, onApply }) => {
+const CareerCard = ({ job, onView, onApply}) => {
   const [showQuickApply, setShowQuickApply] = useState(false);
 
-  const handleApplyClick = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setShowQuickApply(true);
+
+  // This is kept for backward compatibility if QuickApplyModal ever calls onApply earlier
+  const handleApplySuccess = (jobFromModal) => {
+    console.log("Application submitted (early callback) for:", job?.title || jobFromModal?.title);
+    // don't close here — let the modal finish its success display and call handleApplyFinished afterwards
+    if (typeof onApply === "function") {
+      try { onApply(jobFromModal || job); } catch (e) { console.error(e); }
+    }
   };
 
-  const handleViewDetails = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    onView(job);
-  };
-
-  const handleApplySuccess = () => {
+  const handleCloseModal = () => {
+    console.log("Closing Quick Apply modal");
     setShowQuickApply(false);
-    onApply?.(job);
   };
 
   return (
@@ -30,14 +28,12 @@ const CareerCard = ({ job, onView, onApply }) => {
         className={`card h-100 shadow-sm border-0 overflow-hidden ${styles.jobCard}`}
       >
         <div className="card-body d-flex flex-column position-relative">
-          {/* New Badge */}
           {job.isNew && (
             <div className={`position-absolute top-0 end-0 m-3 ${styles.newBadge}`}>
               <FiAward className="me-1" /> New
             </div>
           )}
-          
-          {/* Job Header */}
+
           <div className="d-flex justify-content-between align-items-start mb-3">
             <div className="flex-grow-1 pe-3">
               <h5 className={`card-title fw-bold mb-2 ${styles.jobTitle}`}>{job.title}</h5>
@@ -48,7 +44,6 @@ const CareerCard = ({ job, onView, onApply }) => {
             </span>
           </div>
 
-          {/* Job Details */}
           <div className="mb-3">
             <div className="d-flex align-items-center mb-2">
               <FiMapPin className={`me-2 ${styles.detailIcon}`} />
@@ -85,7 +80,6 @@ const CareerCard = ({ job, onView, onApply }) => {
             )}
           </div>
 
-          {/* Buttons */}
           <div className="mt-auto pt-3">
             <div className="d-flex justify-content-between align-items-center">
               <button
@@ -96,7 +90,10 @@ const CareerCard = ({ job, onView, onApply }) => {
               </button>
               <button
                 className={`btn ${styles.applyNowBtn}`}
-                onClick={handleApplyClick}
+                onClick={() => {
+                  console.log("Apply Now clicked for:", job.title);
+                  setShowQuickApply(true);
+                }}
               >
                 Apply Now
               </button>
@@ -105,13 +102,16 @@ const CareerCard = ({ job, onView, onApply }) => {
         </div>
       </div>
 
-      {/* Quick Apply Modal - Fixed to pass show prop */}
-      <QuickApplyModal
-        show={showQuickApply}
-        job={job}
-        onClose={() => setShowQuickApply(false)}
-        onApply={handleApplySuccess}
-      />
+      {/* Quick Apply Modal */}
+      {showQuickApply && (
+        <QuickApplyModal
+          show={showQuickApply}
+          onClose={handleCloseModal}
+          onApply={handleApplySuccess}           // optional early notification (kept for compatibility)
+          // onApplyFinished={handleApplyFinished} // called AFTER success display (5s) to avoid reopen race
+          jobTitle={job.title}
+        />
+      )}
     </>
   );
 };

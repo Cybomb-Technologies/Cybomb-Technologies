@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./dropdown.module.css";
-import { FaBriefcase, FaChevronDown, FaChevronUp,
+import { FaBriefcase, FaChevronDown, FaChevronUp,FaMicrosoft,FaGlobe,
   FaHotel,
   FaFilm,
   FaTruck,
@@ -84,6 +84,9 @@ function Successstoriesdropdown1({
                   <div className={styles.dropdownHeader}>
                     <FaBriefcase className={styles.icon} /> Our Work
                   </div>
+                   <Link to="/white-label-app" className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaMicrosoft className={styles.icon} /> White Label App
+                  </Link>
 
                   <Link to="/portfolio" className={styles.dropdownItem} onClick={onLinkClick}>
                     <FaFolderOpen className={styles.icon} /> Portfolio
@@ -102,6 +105,9 @@ function Successstoriesdropdown1({
                 <div className={styles.dropdownColumn}>
                   <Link to="/about-us" className={styles.dropdownItem} onClick={onLinkClick}>
                     <FaInfoCircle className={styles.icon} /> About Us
+                  </Link>
+                  <Link to="/global-presence" className={styles.dropdownItem} onClick={onLinkClick}>
+                    <FaGlobe className={styles.icon} /> Global Presence
                   </Link>
                 </div>
               </div>

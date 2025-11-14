@@ -19,7 +19,6 @@ const JobDetailModal = ({ job, onClose }) => {
     <div className="modal fade show" style={{ display: "block", backgroundColor: 'rgba(0, 52, 89, 0.8)' }} tabIndex="-1">
       <div className="modal-dialog modal-lg modal-dialog-centered">
         <div className="modal-content border-0 shadow-lg" style={{ borderRadius: '12px', overflow: 'hidden' }}>
-          {/* Modal Header */}
           <div className="modal-header text-white" style={{ background: 'linear-gradient(135deg, #007ea7 0%, #005f7a 100%)', borderBottom: 'none' }}>
             <div className="flex-grow-1">
               <h5 className="modal-title mb-1 fw-bold">{job.title}</h5>
@@ -39,10 +38,8 @@ const JobDetailModal = ({ job, onClose }) => {
             ></button>
           </div>
 
-          {/* Modal Body */}
           <div className="modal-body p-4">
             <div className="mb-4">
-              {/* Job Overview */}
               <div className="row mb-4">
                 {job.salary && (
                   <div className="col-md-6 mb-3">
@@ -151,7 +148,6 @@ const JobDetailModal = ({ job, onClose }) => {
             </div>
           </div>
 
-          {/* Modal Footer */}
           <div className="modal-footer border-top-0 pt-0">
             <button
               type="button"
@@ -168,24 +164,8 @@ const JobDetailModal = ({ job, onClose }) => {
             >
               Close
             </button>
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={() => {
-                // This would typically open the application form
-                console.log('Apply for job:', job.id);
-              }}
-              style={{
-                borderRadius: '8px',
-                padding: '10px 24px',
-                background: 'linear-gradient(135deg, #007ea7 0%, #005f7a 100%)',
-                border: 'none',
-                color: 'white',
-                fontWeight: '500'
-              }}
-            >
-              Apply Now
-            </button>
+            
+              
           </div>
         </div>
       </div>

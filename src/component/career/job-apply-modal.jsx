@@ -1,21 +1,26 @@
-import React, { useState } from "react";
-import { FiUpload, FiCheckCircle, FiUser, FiMail, FiPhone, FiBriefcase, FiClock, FiFileText, FiX } from "react-icons/fi";
+// job-apply-modal.jsx
+import React, { useState, useEffect } from "react";
+import { FiUpload, FiCheckCircle, FiUser, FiMail, FiPhone, FiBriefcase, FiClock, FiFileText, FiX, FiHeart } from "react-icons/fi";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-
-const QuickApplyModal = ({ show, onClose, onApply }) => {
+const QuickApplyModal = ({ show, onClose, onApply, onApplyFinished, jobTitle }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
-    role: "General Application", // Default role for quick apply
+    role: jobTitle || "General Application",
     experience: "",
     coverLetter: "",
     resume: null,
+    isReferral: false,
+    // NEW FIELD
+    referredBy: "", 
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [applicantName, setApplicantName] = useState("");
+
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 
   const experienceOptions = [
     "Less than 1 year",
@@ -25,26 +30,50 @@ const QuickApplyModal = ({ show, onClose, onApply }) => {
     "10+ years",
   ];
 
-  // Reset form when modal closes
-  React.useEffect(() => {
-    if (!show) {
+  // Reset form when modal closes or jobTitle changes
+  useEffect(() => {
+    if (show) {
+      setFormData(prev => ({
+        ...prev,
+        role: jobTitle || "General Application"
+      }));
+    } else {
+      // Reset everything when modal closes
       setFormData({
         name: "",
         phone: "",
         email: "",
-        role: "General Application",
+        role: jobTitle || "General Application",
         experience: "",
         coverLetter: "",
         resume: null,
+        isReferral: false,
+        // NEW FIELD RESET
+        referredBy: "",
       });
       setErrors({});
       setSubmitSuccess(false);
+      setIsSubmitting(false);
+      setApplicantName("");
     }
-  }, [show]);
+  }, [show, jobTitle]);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const { name, value, type, checked } = e.target;
+    // Handle checkbox change specifically
+    const newValue = type === 'checkbox' ? checked : value;
+
+    setFormData((prev) => {
+      let newState = { ...prev, [name]: newValue };
+      
+      // If isReferral is unchecked, clear referredBy
+      if (name === 'isReferral' && !checked) {
+        newState = { ...newState, referredBy: "" };
+      }
+
+      return newState;
+    });
+    
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: "" }));
@@ -88,15 +117,23 @@ const QuickApplyModal = ({ show, onClose, onApply }) => {
   const validate = () => {
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Full name is required";
-    if (!formData.email.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/))
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!formData.email.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)) {
       newErrors.email = "Valid email is required";
+    }
     if (
       formData.phone &&
       !formData.phone.match(
         /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
       )
-    )
+    ) {
       newErrors.phone = "Valid phone number is required";
+    }
+    // NEW FIELD VALIDATION
+    if (formData.isReferral && !formData.referredBy.trim()) {
+      newErrors.referredBy = "Employee name is required for referrals";
+    }
     if (!formData.resume) newErrors.resume = "Resume is required";
 
     setErrors(newErrors);
@@ -105,8 +142,15 @@ const QuickApplyModal = ({ show, onClose, onApply }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validate()) return;
+    console.log("Form submission started");
+    
+    if (!validate()) {
+      console.log("Validation failed", errors);
+      return;
+    }
+    
     setIsSubmitting(true);
+    console.log("Submitting form data:", formData);
 
     try {
       const formDataToSend = new FormData();
@@ -116,29 +160,46 @@ const QuickApplyModal = ({ show, onClose, onApply }) => {
       formDataToSend.append("role", formData.role);
       formDataToSend.append("experience", formData.experience);
       formDataToSend.append("coverLetter", formData.coverLetter);
+      formDataToSend.append("isReferral", formData.isReferral);
+      // NEW FIELD APPEND
+      formDataToSend.append("referredBy", formData.referredBy);
+
 
       if (formData.resume) {
         formDataToSend.append("resume", formData.resume);
       }
 
+      console.log("Sending request to:", `${API_BASE_URL}/api/application`);
+      
       const res = await fetch(`${API_BASE_URL}/api/application`, {
         method: "POST",
         body: formDataToSend,
       });
 
       const responseData = await res.json();
+      console.log("Response received:", responseData);
 
       if (!res.ok) {
         throw new Error(responseData.message || "Failed to submit application");
       }
 
+      // Mark local success UI
       setSubmitSuccess(true);
-      onApply?.(); // Call success callback
-      
-      // Auto close after success
+      setApplicantName(formData.name?.split(' ')[0] || 'Applicant');
+
+      // If you want to notify parent immediately (optional), you could call onApply here.
+      // But to avoid reopening race conditions, we will notify the parent AFTER the success display.
+      // Wait for greeting to be visible, then notify parent and close:
       setTimeout(() => {
-        onClose();
-      }, 3000);
+        // Notify parent that the whole success display is finished
+        if (typeof onApplyFinished === 'function') {
+          try { onApplyFinished({ title: jobTitle }); } catch (err) { console.error(err); }
+        }
+
+        // Now close the modal (existing behaviour)
+        if (typeof onClose === 'function') onClose();
+      }, 5000);
+
     } catch (error) {
       console.error("Submission error:", error);
       setErrors({ submit: error.message || "Failed to submit application. Please try again." });
@@ -149,7 +210,7 @@ const QuickApplyModal = ({ show, onClose, onApply }) => {
 
   // Handle backdrop click
   const handleBackdropClick = (e) => {
-    if (e.target === e.currentTarget) {
+    if (e.target === e.currentTarget && !submitSuccess) {
       onClose();
     }
   };
@@ -165,36 +226,92 @@ const QuickApplyModal = ({ show, onClose, onApply }) => {
     >
       <div className="modal-dialog modal-lg modal-dialog-centered">
         <div className="modal-content border-0 shadow-lg" style={{ borderRadius: '12px', overflow: 'hidden' }}>
-          <div className="modal-header text-white" style={{ background: 'linear-gradient(135deg, #007ea7 0%, #005f7a 100%)', borderBottom: 'none' }}>
+          <div className="modal-header text-white" style={{ 
+            background: submitSuccess 
+              ? 'linear-gradient(135deg, #28a745 0%, #20c997 100%)' 
+              : 'linear-gradient(135deg, #007ea7 0%, #005f7a 100%)', 
+            borderBottom: 'none' 
+          }}>
             <h5 className="modal-title d-flex align-items-center mb-0">
-              <FiBriefcase className="me-2" />
-              Quick Application - Submit Your CV
+              {submitSuccess ? (
+                <>
+                  <FiCheckCircle className="me-2" />
+                  Application Successful!
+                </>
+              ) : (
+                <>
+                  <FiBriefcase className="me-2" />
+                  Quick Application - {jobTitle || "Submit Your CV"}
+                </>
+              )}
             </h5>
-            <button type="button" className="btn-close btn-close-white" onClick={onClose}></button>
+            {!submitSuccess && (
+              <button type="button" className="btn-close btn-close-white" onClick={onClose}></button>
+            )}
           </div>
           <div className="modal-body p-4">
             {submitSuccess ? (
               <div className="text-center py-4">
-                <FiCheckCircle className="text-success mb-3" style={{ fontSize: "3rem" }} />
-                <h4 className="text-success mb-2" style={{ color: '#28a745' }}>Application Submitted!</h4>
-                <p className="text-muted">
-                  Thank you for submitting your CV. We'll review your application and contact you if there's a match with our open positions.
-                </p>
-                <div className="progress mt-4" style={{ height: "4px", backgroundColor: '#e9ecef' }}>
+                <div className="mb-4">
+                  <FiCheckCircle className="text-success" style={{ fontSize: "4rem" }} />
+                </div>
+
+                <h4 className="text-success mb-3" style={{ color: '#007ea7' }}>
+                  Thank You{applicantName ? `, ${applicantName}` : ''}! 
+                </h4>
+
+                <div className="success-message mb-4">
+                  <p className="lead text-dark mb-3">
+                    Your application for <strong className="text-primary">{formData.role}</strong> has been successfully submitted!
+                  </p>
+
+                  <div className="alert alert-light border-0 mb-3" style={{ background: '#f8f9fa' }}>
+                    <div className="d-flex align-items-center justify-content-center mb-2">
+                      <FiHeart className="text-danger me-2" />
+                      <strong>What happens next?</strong>
+                    </div>
+                    <small className="text-muted">
+                      • We've received your application and will review it carefully<br/>
+                      • Our team will contact you if there's a match with our requirements<br/>
+                      • You'll hear back from us within 3-5 business days
+                    </small>
+                  </div>
+
+                  <div className="contact-info mt-4 p-3 rounded" style={{ background: 'linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%)' }}>
+                    <small className="text-muted d-block">
+                      <strong>Need to reach us?</strong>
+                    </small>
+                    <small className="text-muted">
+                      Email: support@cybomb.com | Phone: +91 9715092104
+                    </small>
+                  </div>
+                </div>
+
+                <div className="progress mt-4" style={{ height: "6px", backgroundColor: '#e9ecef', borderRadius: '10px' }}>
                   <div 
-                    className="progress-bar" 
+                    className="progress-bar bg-success" 
                     role="progressbar" 
                     style={{ 
                       width: "100%", 
-                      transition: "width 3s ease",
-                      background: 'linear-gradient(135deg, #007ea7 0%, #005f7a 100%)'
+                      transition: "width 5s ease",
+                      borderRadius: '10px'
                     }}
                     aria-valuenow="100" 
                     aria-valuemin="0" 
                     aria-valuemax="100"
                   ></div>
                 </div>
-                <small className="text-muted">Closing automatically...</small>
+                <small className="text-muted mt-2 d-block">
+                  This window will close automatically in <strong>5 seconds</strong>...
+                </small>
+
+                <button 
+                  className="btn btn-outline-success mt-3"
+                  onClick={onClose}
+                  style={{ borderRadius: '8px' }}
+                >
+                  Close Now
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="row g-3">
@@ -262,7 +379,9 @@ const QuickApplyModal = ({ show, onClose, onApply }) => {
                     className="form-control bg-light"
                     style={{ borderRadius: '8px', border: '1.5px solid #e9ecef', padding: '10px 12px' }}
                   />
-                  <small className="text-muted">This is a general application. You can specify roles when browsing open positions.</small>
+                  <small className="text-muted">
+                    You are applying for: <strong>{formData.role}</strong>
+                  </small>
                 </div>
 
                 <div className="col-12">
@@ -285,6 +404,45 @@ const QuickApplyModal = ({ show, onClose, onApply }) => {
                     ))}
                   </select>
                 </div>
+
+                {/* REFERRAL SWITCH */}
+                <div className="col-12">
+                  <div className="form-check form-switch mt-2">
+                    <input 
+                      className="form-check-input" 
+                      type="checkbox" 
+                      id="isReferralSwitch"
+                      name="isReferral"
+                      checked={formData.isReferral}
+                      onChange={handleChange}
+                      role="switch"
+                    />
+                    <label className="form-check-label fw-medium" htmlFor="isReferralSwitch" style={{ color: '#003459' }}>
+                      <FiUser className="me-1" style={{ color: '#007ea7' }} />
+                      I was referred by a current employee
+                    </label>
+                  </div>
+                </div>
+
+                {/* CONDITIONAL REFERRED BY INPUT FIELD */}
+                {formData.isReferral && (
+                    <div className="col-12 mt-2">
+                        <label className="form-label d-flex align-items-center fw-medium" style={{ color: '#003459' }}>
+                            Referred By (Employee Name)*
+                        </label>
+                        <input
+                            type="text"
+                            name="referredBy"
+                            value={formData.referredBy}
+                            onChange={handleChange}
+                            className={`form-control ${errors.referredBy ? "is-invalid" : ""}`}
+                            placeholder="Employee Name"
+                            style={{ borderRadius: '8px', border: '1.5px solid #e9ecef', padding: '10px 12px' }}
+                        />
+                        {errors.referredBy && <div className="invalid-feedback">{errors.referredBy}</div>}
+                    </div>
+                )}
+                
 
                 <div className="col-12">
                   <label className="form-label d-flex align-items-center fw-medium" style={{ color: '#003459' }}>
@@ -334,7 +492,7 @@ const QuickApplyModal = ({ show, onClose, onApply }) => {
                         <label className="btn btn-outline-primary mb-2" style={{ 
                           borderRadius: '8px',
                           border: '1.5px solid #007ea7',
-                          color: '#007ea7'
+                          
                         }}>
                           <FiUpload className="me-1" /> Upload File
                           <input
@@ -367,6 +525,7 @@ const QuickApplyModal = ({ show, onClose, onApply }) => {
                       type="button" 
                       className="btn btn-secondary" 
                       onClick={onClose}
+                      disabled={isSubmitting}
                       style={{ 
                         borderRadius: '8px',
                         padding: '10px 20px',

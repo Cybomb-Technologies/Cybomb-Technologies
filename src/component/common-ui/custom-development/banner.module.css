@@ -12,89 +12,129 @@
   color: white;
 }
 
+/* Headings and text */
 .heading {
   font-size: 3rem;
   margin-bottom: 1rem;
-  font-weight: bold;
-  padding-top: 1rem;
+  font-weight: 700;
+  padding-top: 2rem;
 }
 
 .subtext {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  max-width: 1200px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
-  font-weight: normal;
 }
 
-.button {
-  background-color: #00171f;
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  width: 20%;
-  margin: auto;
-  font-size: 1.4rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 2rem;
-  /* cursor: pointer; */
-  transition: background-color 0.3s ease;
-}
-/* 
-.button:hover {
-  background-color: #003459;
-} */
-
-.note{
+.note {
   font-size: 1rem;
   margin-top: 1rem;
-  margin-bottom: 0rem;
-  max-width: 1000px;
+  margin-bottom: 1rem;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
+/* Button wrapper keeps the button centered and separated */
+.buttonWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+/* Responsive, accessible button */
+.button {
+  display: inline-block;
+  background-color: #00171f;
+  color: #ffffff;
+  padding: 0.85rem 1.6rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  min-width: 160px;       /* keeps it tappable on mobile */
+  max-width: 90%;         /* prevents overflow on very small screens */
+  width: auto;
+  text-align: center;
+  transition: background-color 0.25s ease, transform 0.08s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Hover/focus states */
+.button:hover {
+  filter: brightness(0.95);
+  transform: translateY(-2px);
+}
+.button:active {
+  transform: translateY(0);
+}
+.button:focus {
+  outline: 3px solid rgba(255,255,255,0.18);
+  outline-offset: 3px;
+}
+
+/* Tablet / medium screens */
+@media (max-width: 1024px) {
   .heading {
-    font-size: 2rem;
-    padding-top: 0.5rem ;
+    font-size: 2.4rem;
   }
-
-  .subtext {
-    font-size: 1.2rem;
-    padding: 0 1rem;
-  }
-
   .button {
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
+    min-width: 140px;
+    font-size: 1.05rem;
+    padding: 0.75rem 1.4rem;
   }
-
-  .note {
-    font-size: 0.9rem;
-    padding: 0 1rem;
+  .PageBannerSection {
+    padding: 5rem 1rem 5rem 1rem;
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile */
+@media (max-width: 768px) {
   .heading {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    margin-bottom: 0.9rem;
   }
 
   .subtext {
     font-size: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .button {
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
+    min-width: 140px;
+    max-width: 84%;
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
   }
 
-  .note {
-    font-size: 0.85rem;
+  .PageBannerSection {
+    padding: 4rem 1rem 4rem 1rem;
+  }
+}
+
+/* Very small / narrow devices */
+@media (max-width: 420px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+  .subtext {
+    font-size: 0.95rem;
+  }
+  .button {
+    min-width: 120px;
+    max-width: 86%;
+    font-size: 0.98rem;
+    padding: 0.6rem 1rem;
+  }
+  .PageBannerSection {
+    padding: 3rem 0.75rem 3rem 0.75rem;
   }
 }

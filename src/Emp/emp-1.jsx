@@ -35,7 +35,7 @@ const emp1Routes = (
     <Route path="/services/ecommerce-development" element={<Ecommdev/>} />
     {/* <Route path="/admin/login" element={<AdminLogin/>} /> */}
     <Route path="/white-label-app" element={<WhiteLabelApp />} />
-    <Route path="/checkout" element={<CheckoutPage />} />
+    <Route path="/white-label-checkout" element={<CheckoutPage />} />
     <Route path="*" element={<NotFoundPage/>} />
     <Route path="/services/ecommerce-development" element={<Ecommdev />} />
     <Route path="*" element={<NotFoundPage />} />
