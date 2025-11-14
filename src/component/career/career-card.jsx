@@ -7,6 +7,23 @@ import QuickApplyModal from "./job-apply-modal";
 const CareerCard = ({ job, onView, onApply }) => {
   const [showQuickApply, setShowQuickApply] = useState(false);
 
+  const handleApplyClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setShowQuickApply(true);
+  };
+
+  const handleViewDetails = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onView(job);
+  };
+
+  const handleApplySuccess = () => {
+    setShowQuickApply(false);
+    onApply?.(job);
+  };
+
   return (
     <>
       <div
@@ -73,13 +90,13 @@ const CareerCard = ({ job, onView, onApply }) => {
             <div className="d-flex justify-content-between align-items-center">
               <button
                 className={`btn ${styles.viewDetailsBtn}`}
-                onClick={() => onView(job)}
+                onClick={handleViewDetails}
               >
                 View Details <FiArrowRight className="ms-1" />
               </button>
               <button
                 className={`btn ${styles.applyNowBtn}`}
-                onClick={() => setShowQuickApply(true)}
+                onClick={handleApplyClick}
               >
                 Apply Now
               </button>
@@ -88,17 +105,13 @@ const CareerCard = ({ job, onView, onApply }) => {
         </div>
       </div>
 
-      {/* Quick Apply Modal */}
-      {showQuickApply && (
-        <QuickApplyModal
-          job={job}
-          onClose={() => setShowQuickApply(false)}
-          onApply={() => {
-            setShowQuickApply(false);
-            onApply?.(job);
-          }}
-        />
-      )}
+      {/* Quick Apply Modal - Fixed to pass show prop */}
+      <QuickApplyModal
+        show={showQuickApply}
+        job={job}
+        onClose={() => setShowQuickApply(false)}
+        onApply={handleApplySuccess}
+      />
     </>
   );
 };
