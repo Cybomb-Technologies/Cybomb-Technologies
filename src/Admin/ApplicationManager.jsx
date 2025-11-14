@@ -295,8 +295,8 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
         return (
           <button
             onClick={() => handleViewResume(item._id, item.resume.originalName)}
-            className="btn btn-primary btn-sm d-flex align-items-center justify-content-center w-100 w-sm-auto"
-            style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', border: 'none'}}
+            className="btn btn-primary btn-sm d-flex align-items-center justify-content-center w-100"
+            style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', border: 'none', minWidth: '120px'}}
           >
             <FileText className="me-1 flex-shrink-0" style={{width: '14px', height: '14px'}} />
             <span className="text-truncate">View Resume</span>
@@ -304,7 +304,7 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
         );
       } else {
         return (
-          <span className="badge bg-secondary text-white p-2 d-inline-block text-center w-100 w-sm-auto">
+          <span className="badge bg-secondary text-white p-2 d-inline-block text-center w-100" style={{minWidth: '100px'}}>
             No Resume
           </span>
         );
@@ -321,8 +321,8 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
     }
 
     // Default truncation logic
-    if (content && content.length > 50 && !isMobile) {
-      content = content.substring(0, 47) + "...";
+    if (content && content.length > 30) {
+      content = content.substring(0, 27) + "...";
     }
 
     return content;
@@ -439,6 +439,26 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
     );
   };
 
+  // Function to get column width based on header
+  const getColumnWidth = (header) => {
+    switch(header.toLowerCase()) {
+      case 'name':
+        return '15%';
+      case 'email':
+        return '20%';
+      case 'role':
+        return '20%';
+      case 'date applied':
+        return '15%';
+      case 'resume':
+        return '20%';
+      case 'actions':
+        return '10%';
+      default:
+        return 'auto';
+    }
+  };
+
   return (
     <div className="card shadow-lg border-0" style={{background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)'}}>
       <div className="card-body">
@@ -500,53 +520,59 @@ const DataTableView = ({ title, icon: Icon, data, headers, onDelete }) => {
               {filteredData.map((item, index) => renderMobileCard(item, index))}
             </div>
           ) : (
-            // Desktop Table View
-            <div className="table-responsive">
-              <table className="table table-hover">
+            // Desktop Table View with fixed widths and no horizontal scroll
+            <div className="table-responsive" style={{overflowX: 'hidden'}}>
+              <table className="table table-hover mb-0" style={{tableLayout: 'fixed', width: '100%', minWidth: '100%'}}>
                 <thead className="text-white" style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)'}}>
                   <tr>
                     {headers.map((header) => {
-                      // Use 'dateapplied' as the column key in table headers
                       const key = header.toLowerCase().replace(/\s/g, "");
                       return (
                         <th
                           key={header}
                           className="cursor-pointer"
-                          onClick={() => handleSort(header)} // Pass header for proper key mapping
+                          onClick={() => handleSort(header)}
+                          style={{width: getColumnWidth(header), padding: '12px 8px'}}
                         >
                           <div className="d-flex align-items-center gap-1">
-                            <span>{header}</span>
+                            <span className="text-truncate">{header}</span>
                             <SortIcon columnKey={key} />
                           </div>
                         </th>
                       );
                     })}
-                    <th className="text-nowrap">Actions</th>
+                    <th className="text-nowrap" style={{width: getColumnWidth('actions'), padding: '12px 8px'}}>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   {filteredData.map((item, index) => (
                     <tr key={item._id || index} style={{background: index % 2 === 0 ? '#ffffff' : '#f8fafc'}}>
                       {headers.map((header) => (
-                        <td key={`${item._id}-${header}`} className="text-nowrap">
+                        <td 
+                          key={`${item._id}-${header}`} 
+                          className="text-truncate"
+                          style={{width: getColumnWidth(header), padding: '12px 8px'}}
+                          title={item[header.toLowerCase().replace(/\s/g, "")] || "N/A"}
+                        >
                           {renderCellContent(item, header)}
                         </td>
                       ))}
-                      <td className="text-nowrap d-flex gap-2">
+                      <td className="d-flex gap-1" style={{width: getColumnWidth('actions'), padding: '12px 8px'}}>
                         <button
                           onClick={() => handleViewDetails(item)} 
-                          className="btn btn-sm text-white"
+                          className="btn btn-sm text-white flex-shrink-0"
                           title="View Details"
-                          style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', border: 'none'}}
+                          style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', border: 'none', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
                         >
-                          <Eye style={{width: '16px', height: '16px'}} />
+                          <Eye style={{width: '14px', height: '14px'}} />
                         </button>
                         <button
                           onClick={() => onDelete(item._id, title.toLowerCase())}
-                          className="btn btn-sm btn-outline-danger"
+                          className="btn btn-sm btn-outline-danger flex-shrink-0"
                           title="Delete"
+                          style={{width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
                         >
-                          <Trash2 style={{width: '16px', height: '16px'}} />
+                          <Trash2 style={{width: '14px', height: '14px'}} />
                         </button>
                       </td>
                     </tr>

@@ -84,7 +84,7 @@ const CareerCard = ({ job, onView, onApply}) => {
             <div className="d-flex justify-content-between align-items-center">
               <button
                 className={`btn ${styles.viewDetailsBtn}`}
-                onClick={handleViewDetails}
+                onClick={() => onView(job)}
               >
                 View Details <FiArrowRight className="ms-1" />
               </button>
