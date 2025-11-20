@@ -114,7 +114,7 @@
   box-shadow: 0 8px 20px rgba(0, 168, 232, 0.3);
 }
 
-.benefitCard h5 {
+.benefitTitle {
   font-weight: 700;
   margin-bottom: 1rem;
   color: #00171f;
@@ -122,9 +122,10 @@
   position: relative;
   display: inline-block;
   padding-left: 10px;
+  text-align: inherit;
 }
 
-.benefitCard h5::after {
+.benefitTitle::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -136,14 +137,15 @@
   transition: width 0.3s ease;
 }
 
-.benefitCard:hover h5::after {
+.benefitCard:hover .benefitTitle::after {
   width: 60px;
 }
 
-.benefitCard p {
+.benefitDesc {
   color: #003459;
   line-height: 1.6;
   font-size: 0.95rem;
+  text-align: inherit;
 }
 
 .hoverEffect {
@@ -160,6 +162,58 @@
 
 .benefitCard:hover .hoverEffect {
   opacity: 1;
+}
+
+/* Mobile styles for left alignment */
+@media (max-width: 768px) {
+  .benefitCard {
+    text-align: left;
+    padding: 2rem 1.5rem;
+  }
+
+  .iconWrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .benefitTitle {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .benefitTitle::after {
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .benefitDesc {
+    text-align: left;
+  }
+}
+
+/* Tablet and desktop styles for center alignment */
+@media (min-width: 769px) {
+  .benefitCard {
+    text-align: center;
+  }
+
+  .iconWrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .benefitTitle {
+    text-align: center;
+  }
+
+  .benefitTitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .benefitDesc {
+    text-align: center;
+  }
 }
 
 @media (max-width: 992px) {

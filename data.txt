@@ -1,10 +1,16 @@
-t4.vZqtsZGOBY-uF7TnF
-113.30.177.111
-113.30.177.111
- http://192.168.1.33
-http://147.93.111.96:5000
-http://147.93.111.96:5000
+User name : ssh root@147.93.111.96
 
-+DB.FJ2z&yuoTQZXBgc5
+password : +DB.FJ2z&yuoTQZXBgc5
 
-http://147.93.111.96/
+mongosh -u "sudesh.t@cybomb.com" -p 'Cybomb@1234' --authenticationDatabase admin  ---> ssh mongodb connect code
+
+use cybomb  -------> cybomb is a database name
+
+db.users.deleteMany({}) -----> users is a collection name
+
+show collections -----> list table name
+
+show dbs ----> list database name
+
+
+

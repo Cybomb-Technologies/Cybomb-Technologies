@@ -11,6 +11,7 @@ import HomeUIUX from "../component/home/home-ui-ux";
 import HomePartners from "../component/home/home-partners";
 import Metatags from "../SEO/meta-tags";
 import HomePressrelease from "../component/home/home-press-release";
+import HomePlaystore from "../component/home/home-playstore";
 // import HomePricing from "../component/home/home-pricing";
 
 function Home() {
@@ -40,8 +41,10 @@ function Home() {
       <HomePartners/>
       <Homecontact />
       <Homenewsletter />
+     
       <HomePressrelease/>
-      
+     
+        <HomePlaystore/>
     </>
   );
 }
