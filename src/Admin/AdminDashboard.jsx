@@ -18,6 +18,7 @@ import {
   Settings,
   User,
   FileText,
+  Smartphone,
 } from "lucide-react";
 
 import Overview from "./Overview";
@@ -27,7 +28,8 @@ import ApplicationManager from "./ApplicationManager";
 import JobOpeningManager from "./JobOpeningManager";
 import BlogManager from "./BlogManager";
 import NewsletterManager from "./NewsletterManager";
-import AdminPressrelease from "./Press-Release"; // Add press release import
+import AdminPressrelease from "./Press-Release";
+import MobileApp from "./MobileApp";
 
 /** Replace with your real auth impl if available */
 const useAuth = () => ({
@@ -64,7 +66,8 @@ const AdminDashboard = () => {
   const [enquiries, setEnquiries] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const [jobOpenings, setJobOpenings] = useState([]);
-  const [pressReleases, setPressReleases] = useState([]); // Add press releases state
+  const [pressReleases, setPressReleases] = useState([]);
+  const [mobileAppData, setMobileAppData] = useState([]);
 
   const { user, logout } = useAuth();
 
@@ -100,7 +103,8 @@ const AdminDashboard = () => {
         popupFormsRes,
         blogsRes,
         jobOpeningsRes,
-        pressReleasesRes, // Add press releases API call
+        pressReleasesRes,
+        mobileAppRes,
       ] = await Promise.all([
         fetch(`${API_BASE_URL}/api/contact`, {
           headers: { Authorization: `Bearer ${token}` },
@@ -117,7 +121,10 @@ const AdminDashboard = () => {
         fetch(`${API_BASE_URL}/api/applications`, {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        fetch(`${API_BASE_URL}/api/pressrelease`, { // Add press releases fetch
+        fetch(`${API_BASE_URL}/api/pressrelease`, {
+          headers: { Authorization: `Bearer ${token}` },
+        }),
+        fetch(`${API_BASE_URL}/api/mobile-app`, {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -166,6 +173,14 @@ const AdminDashboard = () => {
         console.error("Failed to fetch press releases:", pressReleasesRes.status);
       }
 
+      // Handle mobile app data response
+      if (mobileAppRes.ok) {
+        const data = await mobileAppRes.json();
+        setMobileAppData(data.data || data);
+      } else {
+        console.error("Failed to fetch mobile app data:", mobileAppRes.status);
+      }
+
     } catch (err) {
       console.error("Error fetching data:", err);
     } finally {
@@ -177,17 +192,18 @@ const AdminDashboard = () => {
     fetchData();
   }, []);
 
-  // Computed counts for badges - Add PressReleases count
+  // Computed counts for badges - Add MobileApp count
   const counts = {
     Enquiries: enquiries?.length || 0,
     Contacts: contacts?.length || 0,
     Application: applications?.length || 0,
     JobOpenings: jobOpenings?.length || 0,
     Blogs: blogs?.length || 0,
-    PressReleases: pressReleases?.length || 0, // Add press releases count
+    PressReleases: pressReleases?.length || 0,
+    MobileApp: mobileAppData?.length || 0,
   };
 
-  // Navigation definition - Add PressReleases item
+  // Navigation definition - Add MobileApp item
   const navItems = [
     { id: "Overview", label: "Dashboard Overview", icon: LayoutDashboard },
     { id: "Enquiries", label: "Popup Form Submissions", icon: Inbox, count: counts.Enquiries },
@@ -195,7 +211,8 @@ const AdminDashboard = () => {
     { id: "Application", label: "Applications", icon: Users, count: counts.Application },
     { id: "JobOpenings", label: "Job Openings", icon: Briefcase, count: counts.JobOpenings },
     { id: "Blogs", label: "Blog Manager", icon: BookOpen, count: counts.Blogs },
-    { id: "PressReleases", label: "Press Releases", icon: FileText, count: counts.PressReleases }, // Add Press Releases
+    { id: "PressReleases", label: "Press Releases", icon: FileText, count: counts.PressReleases },
+    { id: "MobileApp", label: "Mobile App", icon: Smartphone, count: counts.MobileApp },
     { id: "Newsletter", label: "Newsletter Subscribers", icon: Megaphone },
   ];
 
@@ -246,8 +263,10 @@ const AdminDashboard = () => {
         return <EnquiryManager popupForms={enquiries} onDelete={handleDelete} onRefresh={handleRefresh} />;
       case "Blogs":
         return <BlogManager blogs={blogs} onBlogsUpdate={fetchData} onRefresh={handleRefresh} />;
-      case "PressReleases": // Add Press Releases case
+      case "PressReleases":
         return <AdminPressrelease />;
+      case "MobileApp":
+        return <MobileApp mobileAppData={mobileAppData} onMobileAppUpdate={fetchData} onRefresh={handleRefresh} />;
       case "Newsletter":
         return <NewsletterManager onRefresh={handleRefresh} />;
       default:
@@ -265,6 +284,8 @@ const AdminDashboard = () => {
       let endpoint = '';
       if (type === 'popup') {
         endpoint = `${API_BASE_URL}/api/popup-mail/${id}`;
+      } else if (type === 'mobile-app') {
+        endpoint = `${API_BASE_URL}/api/mobile-app/${id}`;
       } else {
         endpoint = `${API_BASE_URL}/api/${type}/${id}`;
       }
