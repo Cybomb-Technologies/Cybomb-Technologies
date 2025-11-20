@@ -17,6 +17,7 @@ import { setupOverviewRoutes } from './routes-new/overviewRoutes.js';
 import newsletterRoutes from './routes-new/newsletterRoutes.js';
 import pressreleaseRoute from './routes-new/PressreleaseRoute.js'
 import popupMailRoute from './routes-new/popupMailRoute.js'
+import appRoute from "./routes-new/approute.js";
 // Load environment variables from .env file
 dotenv.config();
 
@@ -66,6 +67,8 @@ app.use('/api/applications', applicationManagerRoutes);
 app.use('/api/newsletter', newsletterRoutes);
 app.use("/api/pressrelease", pressreleaseRoute);
 app.use("/api/popup-mail", popupMailRoute);
+app.use("/api/apps", appRoute);
+
 // Root endpoint
 app.get('/', (req, res) => {
   res.json({

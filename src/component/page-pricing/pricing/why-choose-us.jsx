@@ -75,8 +75,8 @@ const WhyChooseUs = () => {
                 <div className={styles.iconWrapper}>
                   {item.icon}
                 </div>
-                <h5>{item.title}</h5>
-                <p>{item.desc}</p>
+                <h5 className={styles.benefitTitle}>{item.title}</h5>
+                <p className={styles.benefitDesc}>{item.desc}</p>
                 <div className={styles.hoverEffect}></div>
               </div>
             </Col>
