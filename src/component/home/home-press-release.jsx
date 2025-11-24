@@ -201,7 +201,7 @@ function HomePressrelease() {
                   <div className="mt-4 pt-2">
                     <Link
                       to={`/pressrelease/${item._id}`}
-                      className={`btn btn-primary w-100 ${styles.readMoreBtn}`}
+                      className={`btn w-100 ${styles.readMoreBtn}`} style={{backgroundColor: "#0098e8"}}
                     >
                       Read More <i className="fas fa-arrow-right ms-2"></i>
                     </Link>

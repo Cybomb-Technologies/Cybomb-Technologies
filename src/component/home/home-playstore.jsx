@@ -31,7 +31,7 @@ function HomePlaystore() {
   return (
     <div className={styles.page} style={{paddingTop:"50px", paddingBottom:"50px"}}>
       <div className={styles.headingBox}>
-        <h1 className={styles.mainTitle} style={{color:"#22c55e", fontSize:"37px"}}>Our Mobile Apps</h1>
+        <h1 className={styles.mainTitle} style={{color:"#0098e8", fontSize:"37px"}}>Our Mobile Apps</h1>
         <p className={styles.subText}>Download and explore our apps instantly</p>
       </div>
 
