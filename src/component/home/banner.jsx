@@ -24,7 +24,7 @@ function HomeBanner() {
                       intelligent AI systems, and seamless SaaS platforms —
                       custom-built to fuel your growth.
                     </p>
-                    <Link to="/services" className="btn btn-primary btn-lg">
+                    <Link to="/services" className="btn btn-lg" style={{backgroundColor: "#0098e8", color:"white"}}>
                       Explore Services →
                     </Link>
                   </div>
@@ -51,7 +51,7 @@ function HomeBanner() {
                       From concept to launch, we craft user-focused solutions
                       that merge sleek design with powerful technology
                     </p>
-                    <Link to="/services" className="btn btn-primary btn-lg">
+                    <Link to="/services" className="btn btn-lg" style={{backgroundColor: "#0098e8", color:"white"}}>
                       Explore Services →
                     </Link>
                   </div>
@@ -79,7 +79,7 @@ function HomeBanner() {
                       enhance customer engagement, and unlock new revenue
                       streams.
                     </p>
-                    <Link to="/services" className="btn btn-primary btn-lg">
+                    <Link to="/services" className="btn btn-lg" style={{backgroundColor: "#0098e8", color:"white"}}>
                       Explore Services →
                     </Link>
                   </div>
