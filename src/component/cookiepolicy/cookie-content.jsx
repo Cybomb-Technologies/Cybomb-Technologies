@@ -10,7 +10,7 @@ function Cookiecontent() {
 
           <div className="mt-4">
             <p>
-              This Cookie Policy explains how Cybomb Technologies ("we", "our", or "us") uses cookies and similar technologies to recognize you when you visit our website at www.cybomb.com. It explains what these technologies are, why we use them, and your rights to control their use.
+              This Cookie Policy explains how Cybomb Technologies MNC uses cookies and similar technologies to recognize you when you visit our website at www.cybomb.com. It explains what these technologies are, why we use them, and your rights to control their use.
             </p>
             <p>
               By continuing to browse or use our site, you agree to our use of cookies as described in this policy.

@@ -6,11 +6,11 @@ import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
 
 export default function AiIntegration() {
   const metaPropsData = {
-  title: "AI Integration Services - Cybomb Technologies | Automation & AI Solutions",
+  title: "AI integration development service in chennai - Cybomb MNC",
   description:
-    "Cybomb Technologies offers AI integration services for automation, analytics, and smart decisions by embedding AI into apps, workflows, and cloud systems",
+    "Cybomb Tech is a top-rated AI development company in Chennai creating custom AI solutions and GenAI models to improve efficiency and automate complex tasks.",
   keyword:
-    "AI Integration Services, Artificial Intelligence Solutions, AI Automation, AI Consulting, AI Application Development, AI in Cloud, AI Workflow Automation, Machine Learning Integration, AI Services India",
+    "AI Integration Services in Chennai, Artificial Intelligence Solutions, AI Automation, AI Consulting, AI Application Development, AI in Cloud, AI Workflow Automation, Machine Learning Integration, AI Services India",
   url: "https://www.cybomb.com/services/ai-integration",
   image: "https://www.cybomb.com", 
 };

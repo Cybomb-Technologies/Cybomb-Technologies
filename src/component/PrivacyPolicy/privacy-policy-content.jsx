@@ -9,7 +9,7 @@ function Privacypolicycontent() {
           <div className="mt-4">
             {/* <i className="bi bi-arrow-right arrow-right-icon bg-primary mt-1"></i> */}
             <p>
-              Welcome to Cybomb ("we," "our," or "us"). At www.cybomb.com, we
+              Welcome to Cybomb MNC. At www.cybomb.com, we
               value your privacy and are committed to protecting your personal
               information. This Privacy Policy explains how we collect, use,
               share, and protect your information when you visit our website,

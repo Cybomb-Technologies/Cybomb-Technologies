@@ -125,7 +125,7 @@ function HomePressrelease() {
         {/* Press Releases Grid */}
         <div className="row g-4">
           {press.slice(0, visible).map((item) => (
-            <div key={item._id} className="col-xl-4 col-lg-6 col-md-6">
+            <div key={item._id} className="col-xl-4 col-lg-6 col-md-6 px-4 px-lg-0">
               <div
                 className={`card h-100 shadow-lg border-0 overflow-hidden ${styles.pressCard}`}
               >

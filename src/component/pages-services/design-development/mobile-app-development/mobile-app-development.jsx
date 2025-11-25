@@ -214,15 +214,15 @@ function MobileAppDevelopment() {
     <>
       <Helmet>
         <title>
-          Mobile App Development in Chennai | Native & Cross Platform  
+          Best Mobile App Development Company in Chennai | Cybomb MNC  
         </title>
         <meta
           name="description"
-          content="Cybomb Technologies delivers mobile app development, web solutions, UI/UX design, and digital services tailored for startups and enterprises worldwide."
+          content="Transform your ideas into live apps with Android, iOS, and Flutter app development. Chennai's best app developers provide Cross-Platform & Native Applications."
         />
         <meta
           name="keywords"
-          content="Cybomb Technologies, Web Development, Mobile App Development, UI UX Design, React Developer, Chennai IT Company, Software Services India"
+          content="Mobile App Development Company in Chennai,Native Apps Development,Mobile App Development Services,App Design,Android App Development,iOS App Development,Flutter App Development"
         />
         <meta name="author" content="Cybomb Technologies" />
         <meta name="robots" content="index, follow" />

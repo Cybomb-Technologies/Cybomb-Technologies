@@ -3,11 +3,11 @@ import StillNotSure from './../../common-ui/stillnotsure/StillNotSure';
 import Metatags from '../../../SEO/meta-tags';
 function AwsCloud() {
   const metaPropsData = {
-  title: "AWS Cloud Services - Cybomb Technologies | Cloud Solutions & Deployment",
+  title: "AWS Cloud Services in chennai | Cybomb Tech MNC",
   description:
-    "Discover Cybomb Technologies' AWS Cloud Services, offering secure, scalable, and cost-effective cloud solutions. From migration to deployment, we help businesses leverage AWS for performance, reliability, and innovation.",
+    "Discover Cybomb Tech MNC AWS Cloud Services, offering secure, scalable, and cost-effective cloud solutions. From migration to deployment, we help businesses leverage AWS for performance, reliability, and innovation.",
   keyword:
-    "AWS Cloud Services, AWS Migration, AWS Deployment, AWS Cloud Consulting, Cloud Infrastructure Management, AWS Solutions India, Secure Cloud Hosting, Scalable Cloud Applications",
+    "AWS Cloud Services in chennai, AWS Migration, AWS Deployment, AWS Cloud Consulting, Cloud Infrastructure Management, AWS Solutions India, Secure Cloud Hosting, Scalable Cloud Applications",
   url: "https://www.cybomb.com/Services/aws-cloud",
   image: "https://www.cybomb.com", 
 };
