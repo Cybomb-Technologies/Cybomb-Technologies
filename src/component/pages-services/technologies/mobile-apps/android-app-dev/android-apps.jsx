@@ -4,11 +4,11 @@ import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 function AndroidApp() {
   const metaPropsData = {
-    title: "Android App Development - Cybomb Technologies | Custom Mobile Solutions",
+    title: "Android App Development service in chennai | Cybomb MNC",
     description:
-      "Cybomb Technologies specializes in Android app development, delivering high-performance, scalable, and user-friendly mobile applications tailored to your business needs.",
+      "Cybomb Tech, a leading Android app development company in Chennai, delivers scalable, high-performance and user-friendly mobile apps for businesses across industries.",
     keyword:
-      "Android App Development, Mobile App Development, Custom Android Apps, Android Application Developers, Mobile Solutions, Cybomb Technologies",
+      "Android App Development in chennai, Mobile App Development, Custom Android Apps, Android Application Developers, Mobile Solutions, Cybomb Technologies",
     url: "https://www.cybomb.com/services/android-app-development",
     image: "https://www.cybomb.com/images/banner-2.jpg", // Replace with actual banner if available
   };

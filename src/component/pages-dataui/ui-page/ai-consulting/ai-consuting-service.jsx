@@ -5,9 +5,9 @@ import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
 
 function AiConsultingServices() {
   const metaPropsData = {
-    title: "AI Consulting & Strategy Services - Cybomb Technologies | Accelerate AI Adoption",
+    title: "AI Consulting & Strategy Services in chennai | Cybomb Tech MNC",
     description:
-      "Cybomb Technologies provides expert AI consulting and strategy services, helping businesses integrate artificial intelligence into their operations for innovation and growth.",
+      "Cybomb MNC provides expert AI consulting and strategy services, helping businesses integrate artificial intelligence into their operations for innovation and growth.",
     keyword:
       "AI Consulting, AI Strategy, Artificial Intelligence Services, AI Integration, Business Transformation, Cybomb Technologies",
     url: "https://www.cybomb.com/services/ai-consulting-strategy",

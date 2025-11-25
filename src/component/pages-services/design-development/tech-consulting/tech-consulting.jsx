@@ -6,11 +6,11 @@ import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
 
 export default function TechConsulting() {
   const metaPropsData = {
-  title: "Tech Consulting Services - Cybomb Technologies | IT Tech Advisory",
+  title: "Best Tech consulting & services in chennai | Cybomb MNC",
   description:
-    "Cybomb Technologies offers tech consulting to guide IT planning, system audits, cloud adoption, and digital transformation for businesses.",
+    "Cybomb Tech is a global digital and technology services company with AI at its core, delivering cloud, data, and digital solutions for enterprises in Chennai.",
   keyword:
-    "Tech Consulting Services, IT Consulting, Technology Advisory, Digital Transformation Consulting, Cloud Adoption Strategy, IT System Audit, Enterprise Technology Solutions, IT Consulting India",
+    "Tech Consulting Services in chennai, IT Consulting, Technology Advisory, Digital Transformation Consulting, Cloud Adoption Strategy, IT System Audit, Enterprise Technology Solutions, IT Consulting India",
   url: "https://www.cybomb.com/services/tech-consulting",
   image: "https://www.cybomb.com", 
 };
