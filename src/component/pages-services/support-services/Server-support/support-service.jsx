@@ -4,11 +4,11 @@ import Metatags from '../../../../SEO/meta-tags';
 
 function SupportServices() {
   const metaPropsData = {
-    title: "Support Services - Cybomb Technologies | Comprehensive Business Assistance",
+    title: "server Support Services in chennai - Cybomb MNC",
     description:
-      "Cybomb Technologies provides end-to-end support services, including technical assistance, customer support, maintenance, and operational help to ensure your business runs efficiently.",
+      "Cybomb Tech MNC provides end-to-end support services, including technical assistance, customer support, maintenance, and operational help to ensure your business runs efficiently.",
     keyword:
-      "Support Services, Technical Support, Business Assistance, Maintenance Services, Customer Support, Operational Support, Cybomb Technologies",
+      "Server Support Services in chennai, Technical Support, Business Assistance, Maintenance Services, Customer Support, Operational Support, Cybomb Technologies",
     url: "https://www.cybomb.com/services/support-service",
     image: "https://www.cybomb.com/images/banner-2.jpg", // Replace with actual banner if available
   };

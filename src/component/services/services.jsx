@@ -6,11 +6,11 @@ import Metatags from "../../SEO/meta-tags";
 
 function Services(){
 const metaPropsData = {
-  title: "Our Services - Cybomb Technologies | End-to-End IT, Cloud, and Digital Solutions",
+  title: "Cybomb - IT services, Tech Support, & Digital Solutions",
   description:
-    "Explore Cybomb Technologies’ comprehensive range of services, including cloud solutions, software development, e-commerce, AI integration, security, and consulting. We deliver innovative technology solutions tailored to your business needs.",
+    "Explore Cybomb Tech MNC comprehensive range of services, including cloud solutions, software development, e-commerce, AI integration, security, and consulting. We deliver innovative technology solutions tailored to your business needs.",
   keyword:
-    "IT Services, Cloud Solutions, Software Development, E-Commerce Development, AI Integration, Cybersecurity Services, Technology Consulting, Managed IT Services, Digital Solutions India",
+    "IT Services in chennai, Cloud Solutions, Software Development, E-Commerce Development, AI Integration, Cybersecurity Services, Technology Consulting, Managed IT Services, Digital Solutions India",
   url: "https://www.cybomb.com/Services",
   image: "https://www.cybomb.com",
 };
