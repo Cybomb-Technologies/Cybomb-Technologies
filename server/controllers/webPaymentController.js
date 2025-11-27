@@ -320,9 +320,75 @@ const webPackageWebhook = async (req, res) => {
   }
 };
 
+const getAllPaymentOrders = async (req, res) => {
+  try {
+    const { page = 1, limit = 10, status } = req.query;
+    const skip = (page - 1) * limit;
+
+    // Build filter
+    const filter = {};
+    if (status && status !== 'all') {
+      filter['paymentDetails.paymentStatus'] = status;
+    }
+
+    const orders = await WebOrder.find(filter)
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(parseInt(limit))
+      .lean();
+
+    const total = await WebOrder.countDocuments(filter);
+
+    res.json({
+      success: true,
+      data: orders,
+      pagination: {
+        page: parseInt(page),
+        limit: parseInt(limit),
+        total,
+        pages: Math.ceil(total / limit)
+      }
+    });
+
+  } catch (err) {
+    console.error("Get All Orders Error:", err);
+    res.status(500).json({
+      success: false,
+      message: "Failed to fetch payment orders"
+    });
+  }
+};
+
+const getPaymentOrderById = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const order = await WebOrder.findById(id);
+    if (!order) {
+      return res.status(404).json({
+        success: false,
+        message: "Order not found"
+      });
+    }
+
+    res.json({
+      success: true,
+      data: order
+    });
+  } catch (err) {
+    console.error("Get Order By ID Error:", err);
+    res.status(500).json({
+      success: false,
+      message: "Failed to fetch order details"
+    });
+  }
+};
+
 module.exports = {
   createWebPackageOrder,
   verifyWebPackagePayment,
   getOrderDetails,
-  webPackageWebhook
+  webPackageWebhook,
+  getAllPaymentOrders,
+  getPaymentOrderById
 };
