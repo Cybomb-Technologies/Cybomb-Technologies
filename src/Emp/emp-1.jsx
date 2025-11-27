@@ -15,6 +15,7 @@ import Ecommdev from "../component/pages-services/design-development/Ecommerce-d
 // import AdminLogin from "../Admin/Login/login";
 import WhiteLabelApp from "../component/Whitelableapp/WhiteLabelApp";
 import CheckoutPage from "../component/whitecheckoutpage/WhiteCheckoutPage";
+import OrderSuccess from "../component/page-pricing/pricing/OrderSuccess";
 // import HomePage from "../pages/HomePage"; // Uncomment if you have this file
 
 
@@ -38,6 +39,7 @@ const emp1Routes = (
     <Route path="/white-label-checkout" element={<CheckoutPage />} />
     <Route path="*" element={<NotFoundPage/>} />
     <Route path="/services/ecommerce-development" element={<Ecommdev />} />
+        <Route path="/order-success" element={<OrderSuccess/>} />
     <Route path="*" element={<NotFoundPage />} />
     
   </>

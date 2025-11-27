@@ -18,6 +18,8 @@ import newsletterRoutes from './routes-new/newsletterRoutes.js';
 import pressreleaseRoute from './routes-new/PressreleaseRoute.js'
 import popupMailRoute from './routes-new/popupMailRoute.js'
 import appRoute from "./routes-new/approute.js";
+
+import webPaymentRoutes from './routes-new/webPaymentRoutes.js';
 // Load environment variables from .env file
 dotenv.config();
 
@@ -68,6 +70,8 @@ app.use('/api/newsletter', newsletterRoutes);
 app.use("/api/pressrelease", pressreleaseRoute);
 app.use("/api/popup-mail", popupMailRoute);
 app.use("/api/apps", appRoute);
+// ✅ ADD PAYMENT ROUTES HERE
+app.use('/api/web-payment', webPaymentRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
