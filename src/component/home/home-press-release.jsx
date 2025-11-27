@@ -215,8 +215,8 @@ function HomePressrelease() {
         {/* Load More Button */}
         {visible < press.length && (
           <div className="text-center mt-5">
-            <button
-              className={`btn btn-outline-primary btn-lg px-5 ${styles.loadMoreBtn}`}
+            <button style={{backgroundColor: "#0098e8", color:"white", borderRadius:"20px"}}
+              className={`btn btn-lg px-5 `}
               onClick={loadMore}
             >
               <i className="fas fa-plus me-2"></i> View More
