@@ -19,6 +19,7 @@ import {
   User,
   FileText,
   Smartphone,
+  CreditCard,
 } from "lucide-react";
 
 import Overview from "./Overview";
@@ -30,6 +31,7 @@ import BlogManager from "./BlogManager";
 import NewsletterManager from "./NewsletterManager";
 import AdminPressrelease from "./Press-Release";
 import MobileApp from "./MobileApp";
+import PaymentUser from "./payment-user";
 
 /** Replace with your real auth impl if available */
 const useAuth = () => ({
@@ -68,6 +70,7 @@ const AdminDashboard = () => {
   const [jobOpenings, setJobOpenings] = useState([]);
   const [pressReleases, setPressReleases] = useState([]);
   const [mobileAppData, setMobileAppData] = useState([]);
+  const [paymentUsers, setPaymentUsers] = useState([]);
 
   const { user, logout } = useAuth();
 
@@ -105,6 +108,7 @@ const AdminDashboard = () => {
         jobOpeningsRes,
         pressReleasesRes,
         mobileAppRes,
+        paymentUsersRes,
       ] = await Promise.all([
         fetch(`${API_BASE_URL}/api/contact`, {
           headers: { Authorization: `Bearer ${token}` },
@@ -125,6 +129,9 @@ const AdminDashboard = () => {
           headers: { Authorization: `Bearer ${token}` },
         }),
         fetch(`${API_BASE_URL}/api/mobile-app`, {
+          headers: { Authorization: `Bearer ${token}` },
+        }),
+        fetch(`${API_BASE_URL}/api/web-payment/orders`, {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -181,6 +188,14 @@ const AdminDashboard = () => {
         console.error("Failed to fetch mobile app data:", mobileAppRes.status);
       }
 
+      // Handle payment users response
+      if (paymentUsersRes.ok) {
+        const data = await paymentUsersRes.json();
+        setPaymentUsers(data.data || data.orders || data);
+      } else {
+        console.error("Failed to fetch payment users:", paymentUsersRes.status);
+      }
+
     } catch (err) {
       console.error("Error fetching data:", err);
     } finally {
@@ -192,7 +207,7 @@ const AdminDashboard = () => {
     fetchData();
   }, []);
 
-  // Computed counts for badges - Add MobileApp count
+  // Computed counts for badges
   const counts = {
     Enquiries: enquiries?.length || 0,
     Contacts: contacts?.length || 0,
@@ -201,9 +216,10 @@ const AdminDashboard = () => {
     Blogs: blogs?.length || 0,
     PressReleases: pressReleases?.length || 0,
     MobileApp: mobileAppData?.length || 0,
+    PaymentUser: paymentUsers?.length || 0,
   };
 
-  // Navigation definition - Add MobileApp item
+  // Navigation definition
   const navItems = [
     { id: "Overview", label: "Dashboard Overview", icon: LayoutDashboard },
     { id: "Enquiries", label: "Popup Form Submissions", icon: Inbox, count: counts.Enquiries },
@@ -213,6 +229,7 @@ const AdminDashboard = () => {
     { id: "Blogs", label: "Blog Manager", icon: BookOpen, count: counts.Blogs },
     { id: "PressReleases", label: "Press Releases", icon: FileText, count: counts.PressReleases },
     { id: "MobileApp", label: "Mobile App", icon: Smartphone, count: counts.MobileApp },
+    { id: "PaymentUser", label: "Payment Users", icon: CreditCard, count: counts.PaymentUser },
     { id: "Newsletter", label: "Newsletter Subscribers", icon: Megaphone },
   ];
 
@@ -267,6 +284,8 @@ const AdminDashboard = () => {
         return <AdminPressrelease />;
       case "MobileApp":
         return <MobileApp mobileAppData={mobileAppData} onMobileAppUpdate={fetchData} onRefresh={handleRefresh} />;
+      case "PaymentUser":
+        return <PaymentUser paymentUsers={paymentUsers} onPaymentUsersUpdate={fetchData} onRefresh={handleRefresh} />;
       case "Newsletter":
         return <NewsletterManager onRefresh={handleRefresh} />;
       default:
@@ -286,6 +305,8 @@ const AdminDashboard = () => {
         endpoint = `${API_BASE_URL}/api/popup-mail/${id}`;
       } else if (type === 'mobile-app') {
         endpoint = `${API_BASE_URL}/api/mobile-app/${id}`;
+      } else if (type === 'payment-user') {
+        endpoint = `${API_BASE_URL}/api/web-payment/order/${id}`;
       } else {
         endpoint = `${API_BASE_URL}/api/${type}/${id}`;
       }
@@ -743,7 +764,6 @@ const AdminDashboard = () => {
             </button>
             <div className="fw-semibold fs-5 text-slate-800">Cybomb Admin</div>
             
-            {/* REMOVED: Notification and Profile dropdowns from topbar */}
             <div className="ms-auto">
               <div className="user-avatar">
                 {user.name?.charAt(0) || user.email?.charAt(0) || 'A'}
