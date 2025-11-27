@@ -38,7 +38,7 @@ app.use(cors({
   'https://www.cybomb.com',
   'https://api.cybomb.com',
   'http://147.93.111.96:5000',
-  'https://admin.cybomb.com'], // your frontend URL
+  'https://cybombadmin.cybomb.com'], // your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // include PATCH method
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'], // include necessary headers
   credentials: true // allow cookies/auth headers if needed
