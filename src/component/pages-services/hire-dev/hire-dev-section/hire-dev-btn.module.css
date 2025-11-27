@@ -1,0 +1,126 @@
+.buildTeamSection {
+  background: #ffffff;
+  padding: 3rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border: #003459 1px solid;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.textColumn {
+  flex: 0 0 80%;
+}
+
+.imageColumn {
+  flex: 0 0 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  font-size: 1.8rem;
+  color: #003459;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.ctaButton {
+  background: #003459;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background: #005b7f;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .row {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .text {
+    font-size: 1.5rem;
+  }
+
+  .ctaButton {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  /* Optionally hide image on smaller tablets */
+  .imageColumn {
+    flex: 0 0 25%;
+  }
+
+  .textColumn{
+    flex: 0 0 70%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .textColumn,
+  .imageColumn {
+    flex: 0 0 100%;
+  }
+
+  .imageColumn {
+    display: none;
+  }
+
+  .text {
+    font-size: 1.4rem;
+  }
+
+  .ctaButton {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .text {
+    font-size: 1.2rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  /* Hide image for extra small devices if needed */
+  .imageColumn {
+    display: none;
+  }
+}

@@ -1,0 +1,69 @@
+.section {
+  background-color: #fff;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  width: 900px;
+  height: 550px;
+}
+
+/* SVG Circle Path */
+.svgCircle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Center Title */
+.centerTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* Card Styles */
+.card {
+  position: absolute;
+  background: #003459;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  width: 140px; /* Slightly smaller */
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+  word-wrap: break-word;
+  line-height: 1.3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: auto;
+  }
+  .card, .centerTitle {
+    position: static;
+    transform: none;
+    margin: 1rem auto;
+  }
+}

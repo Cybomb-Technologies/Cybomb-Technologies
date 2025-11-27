@@ -1,0 +1,289 @@
+/* Main Banner Container */
+.homeBanner {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.homeBanner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(29, 29, 29, 0.205);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.homeBanner .container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 1220px) {
+  .customBannerImg {
+    object-fit: cover;
+    height: 100vh !important;
+  }
+  .carouselCaption {
+    right: 5% !important;
+  }
+}
+
+.customCaption {
+  position: absolute;
+  top: 20% !important; /* Position from top for header-like placement */
+  bottom: auto !important;
+  left: 5% !important;
+  display: flex;
+  align-items: flex-start; /* Align to top */
+  justify-content: flex-start;
+  text-align: left;
+  z-index: 5;
+  transform: translateY(0); /* Remove any vertical centering */
+}
+
+.captionBox {
+  background: rgba(0, 0, 0, 0.456); /* semi-transparent black */
+  padding: 25px 30px;
+  border-radius: 5px;
+  margin-top: 2rem; /* Add some top margin */
+}
+
+.captionBox h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.captionBox h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.captionBox p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.captionBox .btn {
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+.carouselImg {
+  height: 100vh; /* Full viewport height */
+  object-fit: cover; /* Maintain aspect ratio & crop overflow */
+}
+
+/* Text Styles */
+.gradientText {
+  color: #ffffff; /* Pure white for maximum contrast */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dynamicTextContainer {
+  display: inline-block;
+  min-width: 100%;
+  white-space: nowrap;
+}
+
+.dynamicText {
+  color: #6dc2ff; /* Light blue that stands out against wood tones */
+  font-weight: 650;
+  animation: fadeIn 0.8s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.bannerContentWrapper {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.bannerParagraphContent {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+.exploreBtn {
+  background: #ffffff25 100% !important;
+  border-color: #ffffff !important;
+  border-radius: 50px !important;
+  color: white !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+}
+
+.exploreBtn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #e0f7ff 0%, #7fd8ff 100%);
+  z-index: -1;
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.exploreBtn:hover {
+  color: #1a3a5a !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(126, 216, 255, 0.3);
+}
+
+.exploreBtn:hover::before {
+  opacity: 1;
+}
+
+.consultationBtn {
+  border-color: #ffffff !important;
+  background: #ffffff25 100% !important;
+  background-clip: padding-box !important;
+  color: #e0f7ff !important;
+  border-radius: 50px !important;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.consultationBtn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #e0f7ff 0%, #7fd8ff 100%);
+  z-index: -1;
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.consultationBtn:hover {
+  color: #1a3a5a !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(126, 216, 255, 0.3);
+}
+
+.consultationBtn:hover::before {
+  opacity: 1;
+}
+
+/* Mobile adjustments for buttons */
+@media (max-width: 767.98px) {
+  .exploreBtn,
+  .consultationBtn {
+    padding: 0.75rem 1.5rem !important;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1199.98px) {
+  .homeBanner h1 {
+    font-size: 2.8rem;
+  }
+
+  .captionBox h1,
+  .captionBox h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .dynamicTextContainer {
+    white-space: normal;
+  }
+
+  .customCaption {
+    top: 15% !important;
+  }
+
+  .captionBox {
+    margin-top: 1rem;
+    padding: 20px 25px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .homeBanner h1 {
+    font-size: 2.2rem;
+  }
+
+  .captionBox h1,
+  .captionBox h2 {
+    font-size: 1.8rem;
+  }
+
+  .bannerParagraphContent {
+    font-size: 1.1rem;
+  }
+
+  .customCaption {
+    top: 12% !important;
+    left: 2% !important;
+    right: 2% !important;
+  }
+
+  .captionBox {
+    padding: 15px 20px;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .homeBanner h1 {
+    font-size: 1.8rem;
+  }
+
+  .captionBox h1,
+  .captionBox h2 {
+    font-size: 1.5rem;
+  }
+
+  .dynamicText {
+    color: #7fd8ff; /* Slightly darker blue for better mobile visibility */
+  }
+
+  .consultationBtn {
+    border-color: #7fd8ff;
+    color: #7fd8ff;
+  }
+
+  .customCaption {
+    top: 10% !important;
+  }
+}

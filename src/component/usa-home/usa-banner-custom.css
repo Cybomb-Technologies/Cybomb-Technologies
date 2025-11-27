@@ -1,0 +1,247 @@
+/* Main Banner Container */
+.home-banner {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.home-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(29, 29, 29, 0.205);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.home-banner .container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 1220px) {
+  .custom-banner-img {
+    object-fit: cover;
+    height: 100vh !important;
+  }
+  .carousel-caption {
+    right: 5% !important;
+  }
+}
+
+.custom-caption {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 5% !important;
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: flex-start;
+  text-align: left;
+  z-index: 5;
+}
+
+.caption-box {
+  background: rgba(0, 0, 0, 0.456); /* semi-transparent black */
+  padding: 25px 30px;
+  /* max-width: 550px; */
+  border-radius: 5px;
+}
+
+.caption-box h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.caption-box p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.caption-box .btn {
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+.carousel-img {
+  height: 100vh; /* Full viewport height */
+  object-fit: cover; /* Maintain aspect ratio & crop overflow */
+}
+/* Text Styles */
+.gradient-text {
+  color: #ffffff; /* Pure white for maximum contrast */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dynamic-text-container {
+  display: inline-block;
+  min-width: 100%;
+  white-space: nowrap;
+}
+
+.dynamic-text {
+  color: #6dc2ff; /* Light blue that stands out against wood tones */
+  font-weight: 650;
+  animation: fadeIn 0.8s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.banner-content-wrapper {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.banner-paragraph-content {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+.explore-btn {
+  background: #ffffff25 100% !important;
+  border-color: #ffffff !important;
+  border-radius: 50px !important;
+  color: white !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+}
+.explore-btn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #e0f7ff 0%, #7fd8ff 100%);
+  z-index: -1;
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.explore-btn:hover {
+  color: #1a3a5a !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(126, 216, 255, 0.3);
+}
+
+.explore-btn:hover::before {
+  opacity: 1;
+}
+
+.consultation-btn {
+  border-color: #ffffff !important;
+  background: #ffffff25 100% !important;
+  background-clip: padding-box !important;
+  color: #e0f7ff !important;
+  border-radius: 50px !important;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.consultation-btn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #e0f7ff 0%, #7fd8ff 100%);
+  z-index: -1;
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.consultation-btn:hover {
+  color: #1a3a5a !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(126, 216, 255, 0.3);
+}
+
+.consultation-btn:hover::before {
+  opacity: 1;
+}
+
+/* Mobile adjustments for buttons */
+@media (max-width: 767.98px) {
+  .explore-btn,
+  .consultation-btn {
+    padding: 0.75rem 1.5rem !important;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1199.98px) {
+  .home-banner h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .dynamic-text-container {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .home-banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner-paragraph-content {
+    font-size: 1.1rem;
+  }
+
+  /* .explore-btn,
+  .consultation-btn {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 0.75rem;
+  } */
+}
+
+@media (max-width: 575.98px) {
+  .home-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .dynamic-text {
+    color: #7fd8ff; /* Slightly darker blue for better mobile visibility */
+  }
+
+  .consultation-btn {
+    border-color: #7fd8ff;
+    color: #7fd8ff;
+  }
+}

@@ -1,0 +1,74 @@
+/* Industries Section - Following Process Section Dark Theme with White Cards */
+.industries-section {
+  background-color: #003459;
+}
+
+.industries-title {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.industries-subtitle {
+  color: #ffffff;
+}
+
+.industries-card {
+  background: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.industries-card:hover {
+  background: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.industries-icon {
+  width: 60px;
+  height: 60px;
+  background: #00a8e8;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+}
+
+.industries-card-title {
+  color: #003459;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.industries-card-text {
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.industries-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.industries-feature-badge {
+  background: #00a8e8;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Updated CTA section to match process section */
+.industries-cta {
+  background: #00a8e8;
+  color: white;
+  border: none;
+  padding: 2rem;
+  width: 100%;
+}

@@ -1,0 +1,109 @@
+.HomeKeydiffer {
+  background-color: #003459;
+  padding: 60px 0px;
+}
+
+.differentiator-card {
+  background-color: #ffffff !important;
+  color: #1e293b;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.differentiator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+
+.differentiator-card .icon-box {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.bg-purple {
+  background-color: #9333ea !important;
+}
+
+.text-purple {
+  color: #9333ea !important;
+}
+
+.stat-box {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive Tweaks */
+
+/* Tablets and below */
+@media (max-width: 991.98px) {
+  .differentiator-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .stat-box {
+    margin-bottom: 1rem;
+  }
+
+  .icon-box {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .differentiator-card h5 {
+    font-size: 1rem;
+  }
+
+  .differentiator-card p {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 575.98px) {
+  .icon-box {
+    width: 40px;
+    height: 40px;
+    font-size: 0.95rem;
+  }
+
+  .differentiator-card h5 {
+    font-size: 0.95rem;
+  }
+
+  .differentiator-card p {
+    font-size: 0.85rem !important;
+  }
+
+  .stat-box h5 {
+    font-size: 1rem;
+  }
+
+  .stat-box p {
+    font-size: 0.85rem;
+  }
+
+  .row.g-4 {
+    row-gap: 1.5rem;
+  }
+}

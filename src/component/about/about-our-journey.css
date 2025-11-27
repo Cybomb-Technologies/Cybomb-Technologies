@@ -1,0 +1,245 @@
+/* about-our-journey.css */
+.ourjourney {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 60px 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003459;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Timeline Navigation */
+.timeline-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.nav-year {
+  padding: 12px 24px;
+  border: 2px solid #e2e8f0;
+  background: white;
+  border-radius: 25px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.nav-year:hover {
+  border-color: #0078d4;
+  color: #0078d4;
+  transform: translateY(-2px);
+}
+
+.nav-year.active {
+  background: #003459;
+  border-color: #003459;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 52, 89, 0.3);
+}
+
+/* Active Content */
+.active-content {
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.content-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #003459;
+  transition: all 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.year-icon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #003459, #0078d4);
+  border-radius: 12px;
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #003459;
+  margin: 0 0 5px 0;
+}
+
+.year-badge {
+  background: rgba(0, 116, 212, 0.1);
+  color: #0078d4;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.content-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.card-stats {
+  display: flex;
+  gap: 10px;
+}
+
+.stat-tag {
+  background: linear-gradient(135deg, #003459, #0078d4);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Quick Stats */
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.stat {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-3px);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #003459;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ourjourney {
+    padding: 40px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .timeline-nav {
+    gap: 8px;
+  }
+  
+  .nav-year {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+  
+  .content-card {
+    padding: 20px;
+    margin: 0 15px;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .year-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .quick-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+  }
+  
+  .timeline-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .nav-year {
+    flex-shrink: 0;
+  }
+  
+  .quick-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat {
+    padding: 15px 10px;
+  }
+  
+  .stat-number {
+    font-size: 1.6rem;
+  }
+}

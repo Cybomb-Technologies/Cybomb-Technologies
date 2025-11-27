@@ -1,0 +1,151 @@
+import React, { useState } from "react";
+import styles from "./../../../common-ui/design-and-development/development-technologies-dnd.module.css";
+import { Link } from "react-router-dom";
+
+const techData = {
+  Frontend: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind CSS"],
+  Frameworks: ["React", "Next.js", "Vue.js", "jQuery"],
+  "CMS Platforms": ["WordPress", "Webflow", "Ghost", "Strapi"],
+  eCommerce: ["WooCommerce", "Shopify", "BigCommerce"],
+  Backend: ["Node.js", "PHP", "Python", "MySQL", "MongoDB"],
+  Hosting: ["Vercel", "Netlify", "Hostinger", "AWS", "GoDaddy", "GitHub Pages"],
+  "Design Tools": ["Figma", "Adobe XD", "Photoshop", "Canva"],
+};
+
+const techLogos = {
+  HTML5:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  CSS3: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  JavaScript:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  Bootstrap:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+  "Tailwind CSS": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+  React:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "Next.js":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  "Vue.js":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+  jQuery:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+  WordPress:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVhNUS5emquOnd63nSxHHhN3Ow_16X_rdokA&s",
+  Webflow:
+    "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/webflow-icon.png",
+  Ghost: "https://docs.ghost.org/images/74e0ffae-ghost-logo-orb.png",
+  Strapi:
+    "https://assets.super.so/e7c0f16c-8bd3-4c76-8075-4c86f986e1b2/uploads/favicon/9c68ae10-0a8a-4e3f-9084-3625b19df9cb.png",
+  WooCommerce:
+    "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/woocommerce-icon.png",
+  Shopify: "https://cdn.shopify.com/static/images/logos/shopify-bag.png",
+  BigCommerce: "https://www.svgrepo.com/show/330049/bigcommerce.svg",
+  "Node.js":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  PHP: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  Python:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  MySQL:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  MongoDB:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  Vercel:
+    "https://assets.vercel.com/image/upload/front/favicon/vercel/favicon.ico",
+  Netlify: "https://www.netlify.com/v3/static/favicon/apple-touch-icon.png",
+  Hostinger: "https://cdn.worldvectorlogo.com/logos/hostinger.svg",
+  AWS: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/768px-Amazon_Web_Services_Logo.svg.png",
+  GoDaddy:
+    "https://krausgroupmarketing.com/wp-content/uploads/2020/03/GoDaddy_newlogo.png",
+  "GitHub Pages": "https://github.githubassets.com/favicons/favicon.svg",
+  Figma:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  "Adobe XD":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg",
+  Photoshop:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg",
+  Canva: "https://static.vecteezy.com/system/resources/previews/032/329/171/non_2x/canva-icon-logo-symbol-free-png.png",
+};
+
+const techUrls = {
+  HTML5: "/services/html5-development-service",
+  CSS3: "/services/css",
+  JavaScript: "/services/javascript-development-service",
+  Bootstrap: "/services/html5-development-service",
+  "Tailwind CSS": "/services/html5-development-service",
+  React: "/services/react-development-service",
+  "Next.js": "/services/javascript-development-service",
+  "Vue.js": "/services/javascript-development-service",
+  jQuery: "/services/javascript-development-service",
+  WordPress: "/services/wordpress",
+  Webflow: "",
+  Ghost: "",
+  Strapi: "",
+  WooCommerce: "/services/woo-commerce",
+  Shopify: "/services/shopify",
+  BigCommerce: "/services/big-commerce",
+  "Node.js": "/services/nodejs-development-service",
+  PHP: "/services/php-development-service",
+  Python: "/services/python-development-service",
+  MySQL: "/services/database-development-service",
+  MongoDB: "/services/database-development-service",
+  Vercel: "/services/hosting-service",
+  Netlify: "/services/hosting-service",
+  Hostinger: "/services/hosting-service",
+  AWS: "/hosting/aws",
+  GoDaddy: "",
+  "GitHub Pages": "/services/versioncontrol-development-service",
+  Figma: "/services/ui-ux-design",
+  "Adobe XD": "/services/ui-ux-design",
+  Photoshop: "/services/ui-ux-design",
+  Canva: "/services/ui-ux-design",
+};
+
+const TechToolsSection = () => {
+  const categories = Object.keys(techData);
+  const [selected, setSelected] = useState(categories[0]);
+
+  return (
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <h2 className={styles.title}>Website Development Technologies</h2>
+
+        {/* Tabs */}
+        <div className={styles.tabWrapper}>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={`${styles.tab} ${
+                selected === cat ? styles.activeTab : ""
+              }`}
+              onClick={() => setSelected(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Tech Cards */}
+        <div className={styles.cardGrid}>
+          {techData[selected].map((item) => (
+            <Link
+              key={item}
+              to={techUrls[item]}
+              className="text-decoration-none"
+            >
+              <div key={item} className={styles.techCard}>
+                <img
+                  src={techLogos[item]}
+                  alt={`${item} logo`}
+                  className={styles.logo}
+                />
+                <span>{item}</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TechToolsSection;

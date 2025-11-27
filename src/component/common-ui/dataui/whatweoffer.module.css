@@ -1,0 +1,114 @@
+.uiuxSection {
+  background-color: #003459;
+  padding: 2rem 1rem 3rem 1rem;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.containerUiux {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 0.6rem;
+  padding: 4rem 2rem;
+}
+
+.sectionTitleUiux {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  display: inline-block;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.servicesGridUiux {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .sectionTitleUiux {
+    margin-bottom: 1.2rem;
+  }
+  .containerUiux {
+    padding: 2rem 0.2rem 1rem; /* left/right reduced */
+  }
+  .uiuxSection {
+    padding: 2rem 1rem;
+    padding: 2rem 0.5rem 2rem;
+  }
+  .containerUiux {
+    padding: 2.5rem 0.8rem 1rem;
+  }
+
+  .servicesGridUiux {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .servicesGridUiux {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .containerUiux {
+    padding: 2rem 1rem;
+  }
+}
+
+.serviceCardUiux {
+  position: relative;
+  background-color: #003459;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.serviceTitleUiux {
+  position: absolute;
+  top: -1.25rem;
+  left: 50%;
+  background-color: #00a8e8;
+  color: #ffffff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+  z-index: 10;
+  width: 101%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transform: translateX(-50%);
+}
+
+.serviceDescriptionUiux {
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding: 0 0.5rem;
+}
+
+.serviceTitleUiux i {
+  font-size: 1.1rem;
+  vertical-align: middle;
+}

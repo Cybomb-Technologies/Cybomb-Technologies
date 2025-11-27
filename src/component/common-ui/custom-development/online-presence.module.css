@@ -1,0 +1,143 @@
+.section {
+  background-color: #ffffff;
+  padding: 3rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #003459;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+.textContent {
+  flex: 0 0 70%;
+  text-align: left;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.button {
+  background-color: #1c85cb;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0d6ba3;
+}
+
+.arrow {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+.imageWrapper {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  height: 200px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+    padding: 2rem;
+  }
+
+  .textContent {
+    flex: 1;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .imageWrapper {
+    margin-top: 2rem;
+    display: none;
+  }
+  .image {
+    display:none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .image {
+    display: none;
+  }
+  .imageWrapper {
+    margin-top: 1.5rem;
+    display: none;
+  }
+}

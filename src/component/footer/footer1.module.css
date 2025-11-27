@@ -1,0 +1,899 @@
+/* =========================
+   GLOBAL RESET
+   ========================= */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+/* =========================
+   BASE STYLES
+   ========================= */
+.footer {
+  padding: 10px 0 0;
+  background-color: #00171f;
+  color: white;
+}
+ 
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+ 
+.logo {
+  width: 150px;
+  height: 50px;
+}
+ 
+.footerText {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+}
+ 
+.subTitle {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+ 
+.sectionTitle {
+  color: #00a8e8;
+  margin-bottom: 1.2rem;
+}
+ 
+.subscribeSection p {
+  margin-top: 0;
+  color: #ffffffcf;
+  margin-bottom: 1rem;
+}
+ 
+.mobileTop {
+  margin-bottom: 2rem;
+}
+ 
+.logoCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+ 
+/* =========================
+   SOCIAL ICONS
+   ========================= */
+.socials {
+  display: flex;
+  
+  margin-top: 1rem;
+  justify-content: flex-start;
+}
+ 
+.socials i.fa-x-twitter {
+  margin-top: -8px;
+}
+ 
+.socials i {
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: #003459;
+  padding: 1rem;
+  border-radius: 16%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  transition: background-color 0.3s ease;
+  vertical-align: middle;
+  line-height: 1;
+}
+ 
+.socials i:hover {
+  background-color: #ffffff;
+  color: #00171f;
+}
+ 
+/* =========================
+   LINK STYLES
+   ========================= */
+.linkGroup,
+.pageLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+ 
+.linkGroup a,
+.quickLinks a,
+.services a,
+.mobileLinks a,
+.desktopGrid a,
+.legalLinks a {
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  font-size: 15px;
+}
+ 
+.linkGroup a:hover,
+.quickLinks a:hover,
+.services a:hover,
+.mobileLinks a:hover,
+.desktopGrid a:hover {
+  color: #3fc5ff !important;
+}
+ 
+/* Applies to all link groups in footer: Quick Links, Services, etc. */
+.linkGroup a,
+.quickLinks a,
+.services a,
+.mobileLinks a,
+.desktopGrid a {
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+ 
+@media (max-width: 767px) {
+  .linkGroup a,
+  .quickLinks a,
+  .services a,
+  .mobileLinks a {
+    font-size: 15px;
+    margin-bottom: 0rem;
+  }
+}
+ 
+@media (min-width: 1200px) {
+  .linkGroup a,
+  .quickLinks a,
+  .services a,
+  .desktopGrid a {
+    margin-bottom: 0.1rem;
+  }
+}
+ 
+/* =========================
+   CONTACT SECTION
+   ========================= */
+.contactItem {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+ 
+.icon {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 16%;
+  flex-shrink: 0;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.contactItem a {
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  cursor: pointer;
+}
+ 
+.contactItem a:hover {
+  color: #3fc5ff !important;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+ 
+.contactItem p {
+  margin-bottom: 0rem;
+}
+ 
+/*
+@media (min-width: 1200px),
+(min-width: 768px) and (max-width: 1199px),
+(max-width: 767px) {
+  .contactItem p {
+    margin-bottom: 0rem;
+  }
+} */
+ 
+/* =========================
+   FOOTER BOTTOM
+   ========================= */
+.footerBottom {
+  margin-top: 1rem;
+  border-top: 1px solid #00bfff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+ 
+.footerBottom ul {
+  justify-content: center;
+}
+ 
+.legalLinks {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ 
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 1rem;
+}
+ 
+/* =========================
+   CERTIFICATE SECTION
+   ========================= */
+.certificateSection {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  gap: 0.5rem;
+  flex: 0 0 72%;
+  justify-content: flex-end;
+}
+
+.certificateItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    background: rgb(0 52 89 / 70%);
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+}
+ 
+.certificateItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.certificateId {
+  font-size: 0.9rem;
+  color: #fff;
+  white-space: nowrap;
+}
+ 
+.certificateLogo {
+  width: 180px;
+  height: auto;
+  flex-shrink: 0;
+}
+ 
+.certificateText {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+ 
+.certificateLabel {
+  font-size: 0.85rem;
+  color: #fff;
+}
+ 
+.certificateValue {
+  font-size: 0.85rem;
+  color: #ddd;
+  font-weight: 600;
+}
+
+.thirdCertificateLogo {
+  width: 80px;
+  height: auto;
+}
+
+.certificateSection .certificateItem:nth-child(3) .certificateLogo {
+  width: 80px;
+  height: auto;
+}
+
+.copyrightSection {
+  flex: 0 0 22%;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+ 
+.desktopGrid {
+  display: none;
+}
+ 
+@media (min-width: 1200px) {
+  .desktopGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 0.9fr 2fr;
+    gap: 1rem;
+  }
+ 
+  .tabletView,
+  .mobileView,
+  .mobileGetInTouch {
+    display: none;
+  }
+ 
+  .footerBottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+ 
+  .desktopLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+ 
+  .footerTop {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 40%;
+    gap: 1.5rem;
+  }
+ 
+  .footerTopRow1 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+    gap: 2rem;
+    background-color: #003459;
+    padding: 2rem;
+    border-radius: 16px;
+  }
+ 
+  .footerTopRow2 {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 40%;
+    align-items: start;
+    gap: 2rem;
+    padding: 1rem ;
+    padding: 1rem 0.5rem;
+    padding-bottom: 0% !important;
+    
+  }
+ 
+  .desktopGrid {
+    display: none !important;
+  }
+ 
+  .mobileLinks {
+    display: none;
+  }
+ 
+  .subscribeSection input {
+    width: 70%;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+  }
+ 
+  .subscribeSection button {
+    padding: 0.5rem 1rem;
+    background-color: #00171f1f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border: #ffffff 2px solid;
+    border-radius: 4px;
+  }
+}
+ 
+.tabletView {
+  display: none;
+}
+ 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .tabletView {
+    display: block;
+  }
+ 
+  .desktopGrid,
+  .mobileView {
+    display: none;
+  }
+ 
+  .tabletMiddle {
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+ 
+  .tabletMiddle > div {
+    flex: 1 1 0;
+    min-width: 200px;
+  }
+ 
+  .mobileGetInTouch {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+ 
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+  }
+ 
+  .legalLinks {
+    display: flex;
+    grid-template-columns: repeat(4, auto);
+    gap: 0.75rem 2rem;
+    justify-content: center;
+    text-align: center;
+  }
+ 
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+ 
+  .desktopGrid {
+    display: none !important;
+  }
+ 
+  .mobileLinks {
+    display: block;
+  }
+ 
+  .footerTop {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 40%;
+    gap: 1.5rem;
+  }
+ 
+  .footerTopRow1{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+    gap: 2rem;
+    background-color: #003459;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+  }
+ 
+  .subscribeSection input {
+    width: 70%;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+  }
+ 
+  .subscribeSection button {
+    padding: 0.5rem 1rem;
+    background-color: #00171f1f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border: #ffffff 2px solid;
+    border-radius: 4px;
+  }
+ 
+  .footerTopRow2 {
+    display: grid;
+    grid-template-columns: 15% 20% 15% 50%;
+    align-items: start;
+    gap: 2rem;
+    padding: 1rem;
+  }
+ 
+  .getInTouch{
+    white-space: pre-line;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+  }
+ 
+  .contactItem{
+    padding-right: 5rem;
+  }
+ 
+  .footerBottom {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+ 
+  .certificateSection {
+    flex-direction: row;
+    gap: 1rem;
+  }
+ 
+}
+ 
+.getInTouch{
+    white-space: pre-line;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+  }
+ 
+.mobileView {
+  display: none;
+}
+ 
+@media (max-width: 767px) {
+ 
+  .footer {
+    padding: 20px 0 0;
+  }
+  .mobileView {
+    display: block;
+    width: 100%;
+  }
+ 
+  .mobileTop {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+ 
+  .mobileLinks {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: 100%;
+  }
+ 
+  .mobileLinks > div {
+    flex: 1 1 50%;
+    text-align: left;
+  }
+ 
+  .mobileLinks ul {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    list-style: none;
+  }
+ 
+  .mobileLinks a,
+  .mobileLinks span {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+ 
+  .mobileGetInTouch {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    text-align: left;
+  }
+ 
+  .footerBottom {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #00bfff;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+ 
+  .footerBottom ul {
+    justify-content: center;
+  }
+ 
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+ 
+  .desktopGrid {
+    display: none !important;
+  }
+ 
+  .mobileLinks {
+    display: block;
+  }
+ 
+  .footerTop {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 40%;
+    gap: 1.5rem;
+  }
+ 
+  .footerTopRow1{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    background-color: #003459;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+  }
+ 
+  .subscribeSection input {
+    width: 70%;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+  }
+ 
+  .subscribeSection button {
+    padding: 0.5rem 1rem;
+    background-color: #00171f1f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border: #ffffff 2px solid;
+    border-radius: 4px;
+  }
+}
+ 
+@media (max-width: 767px) {
+    .footerTopRow2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+    }
+ 
+    .footerLegalLinks,
+    .footerQuickLinks {
+        flex: 1 1 50%;
+        min-width: 50%;
+    }
+ 
+    .footerServices {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+ 
+    .footerGetInTouch {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+}
+ 
+/* Tablet layout for around 540px to 720px height */
+/* @media (min-width: 540px) and (max-width: 767px) {
+    .footerTopRow2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+    }
+ 
+    .footerTopRow2 .footerQuickLinks {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+ 
+    .footerTopRow2 .footerServices {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+ 
+    .footerTopRow2 .footerLegalLinks {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+ 
+    .footerTopRow2 .footerGetInTouch {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+} */
+ 
+ 
+ 
+@media (max-width: 767px) {
+  .footerBottom {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+ 
+  .certificateSection,
+  .copyrightSection {
+    flex: 100%;
+    text-align: left;
+  }
+ 
+  .certificateSection {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+ 
+/* =========================
+   LIST RESET IN FOOTER
+   ========================= */
+.footer ul,
+.footer ol,
+.footerWrapper ul,
+.footerWrapper ol,
+.desktopGrid ul,
+.tabletView ul,
+.mobileView ul,
+.quickLinks ul,
+.services ul,
+.pageLinks {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  list-style: none !important;
+}
+ 
+/* =========================
+   LINK DECORATION OVERRIDES
+   ========================= */
+.linkGroup a,
+.quickLinks a,
+.services a,
+.mobileLinks a,
+.desktopGrid a {
+  text-decoration: none;
+  color: inherit;
+}
+ 
+.linkGroup a:hover,
+.quickLinks a:hover,
+.services a:hover,
+.mobileLinks a:hover,
+.desktopGrid a:hover {
+  text-decoration: none;
+}
+ 
+.rowAlign {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+ 
+.rowAlign input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color:black;
+}
+ 
+.rowAlign button {
+   padding: 0.5rem 1rem;
+    background-color: #00171f1f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border: #ffffff 2px solid;
+    border-radius: 4px;
+}
+ 
+.rowAlign button:hover {
+  background-color: #005080;
+}
+ 
+ 
+.desktopOnly {
+  white-space: normal;
+}
+ 
+.mobileOnly {
+  display: none;
+  white-space: pre-line; /* keeps \n line breaks */
+}
+ 
+@media (max-width: 991px) {
+  .desktopOnly {
+    display: none;
+  }
+  .mobileOnly {
+    display: block;
+  }
+}
+ 
+.addressText {
+  white-space: pre-line;
+}
+ 
+@media (min-width: 1200px) {
+  .addressText {
+    white-space: pre-line;
+    display: block;
+  }
+ 
+  .addressText::before {
+    content: "";
+    /* Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street, Sripuram colony,\A St. Thomas Mount, Chennai, Tamil Nadu - 600 016, India */
+    white-space: pre;
+    display: block;
+  }
+  
+  .certificateLabel{
+    text-align: start;
+  }
+  .certificateValue{
+    text-align: start;
+  }
+}
+ 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .addressText {
+    white-space: pre-line;
+  }
+ 
+  .addressText::before {
+    content: "";
+    /* Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street,\A Sripuram colony, St. Thomas Mount,\A Chennai, Tamil Nadu - 600 016, India */
+    white-space: pre;
+    display: block;
+  }
+}
+ 
+@media (max-width: 767px) {
+  .addressText {
+    white-space: pre-line;
+  }
+ 
+  .addressText::before {
+    content: "";
+    /* Cybomb Technologies LLP,\A Prime Plaza No.54/1, 1st street,\A Sripuram colony, St. Thomas Mount,\A Chennai, Tamil Nadu - 600 016, India */
+    white-space: pre;
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .certificateLogo {
+    max-width: 140px;
+    width: 100%;
+    height: auto;
+  }
+
+  .certificateSection {
+    flex: 1 1 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footerTopRow2 {
+    grid-template-columns: 20% 20% 20% 38%;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .footerGetInTouch {
+    grid-column: span 4;
+    width: 100%;
+    text-align: left;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .contactItem {
+    padding-right: 1rem;
+  }
+
+}
