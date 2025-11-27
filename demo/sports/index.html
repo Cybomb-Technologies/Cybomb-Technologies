@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cybomb Sports</title>
+    <meta
+      content="Cybomb Sports — scores, events, highlights, news and more."
+      name="description"
+    />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="./images/logo.png" rel="icon" type="image/svg+xml" />
+    <link
+      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ90DBy8wP0l2XQ6d2eP8l4Zz3J+5B0Vv9LhWqTfA1G7T6S7u0x0V9P6b85Vq=="
+      referrerpolicy="no-referrer"
+      rel="stylesheet"
+    />
+    <!-- responsive-fixes-injected -->
+    <style>
+      /* --- Global responsive fixes injected --- */
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      .responsive-media {
+        width: 100%;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+      }
+      .responsive-media > img,
+      .responsive-media > video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      .grid {
+        display: grid;
+        gap: 16px;
+      }
+      /* Nav: logo + links in one line, collapses to hamburger */
+      header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: inherit;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand-logo {
+        height: 40px;
+        width: auto;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav a {
+        text-decoration: none;
+      }
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: 1px solid currentColor;
+        padding: 6px 10px;
+        border-radius: 8px;
+      }
+      @media (max-width: 860px) {
+        .nav {
+          flex-wrap: nowrap;
+        }
+        .nav-toggle {
+          display: inline-flex;
+        }
+        .nav-links {
+          display: none;
+          position: absolute;
+          right: 16px;
+          top: 60px;
+          flex-direction: column;
+          gap: 12px;
+          background: rgba(0, 0, 0, 0.75);
+          backdrop-filter: blur(6px);
+          padding: 12px 14px;
+          border-radius: 12px;
+        }
+        .nav-links.show {
+          display: flex;
+        }
+      }
+      /* Cards & sections */
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+      @media (max-width: 1024px) {
+        .cards {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 640px) {
+        .cards {
+          grid-template-columns: 1fr;
+        }
+      }
+      /* Utility spacing */
+      .section {
+        padding: 40px 0;
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar navbar-flex">
+      <div class="container nav-wrap">
+        <a class="logo" href="#home">
+          <img
+            alt="Cybomb Sports logo"
+            src="./images/logo.png"
+            class="img-cover"
+          />
+        </a>
+
+        <!-- Hamburger Menu (mobile only) -->
+        <button
+          aria-label="Toggle navigation"
+          class="menu-toggle"
+          id="menuToggle"
+        >
+          ☰
+        </button>
+
+        <!-- Nav links -->
+        <nav aria-label="Primary" class="navlinks" id="navlinks">
+          <a href="#home">Home</a>
+          <a href="#categories">Sports Categories</a>
+          <a href="#events">Upcoming Events</a>
+          <a href="#highlights">Highlights</a>
+          <a href="#stats">Live Statistics</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#news">News &amp; Articles</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" id="home">
+      <section class="hero">
+        <div>
+          <div class="badge">ALL THINGS SPORTS • LIVE • FAST • FUN</div>
+          <h1>
+            Fuel your game with
+            <span
+              style="
+                background: linear-gradient(90deg, var(--brand), var(--accent));
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+              "
+              >Cybomb Sports</span
+            >.
+          </h1>
+          <p class="lead">
+            From fixtures to final whistles—scores, schedules, highlights, and
+            breaking stories across football, basketball, cricket, tennis, and
+            more.
+          </p>
+          <div class="cta-row">
+            <a class="btn brand" href="#events">View Upcoming Events</a>
+            <a class="btn ghost" href="#news">Read Latest Articles</a>
+          </div>
+          <div class="chips" style="margin-top: 12px">
+            <span class="chip">Football</span><span class="chip">Cricket</span
+            ><span class="chip">Basketball</span><span class="chip">Tennis</span
+            ><span class="chip">Esports</span>
+          </div>
+        </div>
+        <img
+          alt="Athletes in action collage"
+          src="./images/hero.jpg"
+          class="img-cover"
+        />
+      </section>
+    </main>
+
+    <section class="section" id="categories">
+      <div class="categories-wrapper">
+        <div class="categories-img">
+          <img src="./images/categories.jpg" alt="Sports Categories" />
+        </div>
+        <div class="categories-content">
+          <h2>Explore Diverse Sports Categories</h2>
+          <p>
+            From football to swimming, athletics to e-sports — our platform
+            covers a wide spectrum of sports, ensuring there’s something for
+            every fan. Discover events, updates, and in-depth insights for each
+            category.
+          </p>
+          <p>
+            Dive into your favorite sport or explore something new — the world
+            of sports is at your fingertips!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="events">
+      <div class="container">
+        <h2>Upcoming Events</h2>
+        <p class="lead">
+          Mark your calendars—don’t miss the biggest clashes and finals coming
+          up.
+        </p>
+        <div class="grid cols-3">
+          <article class="card">
+            <img
+              alt="Upcoming events banner"
+              src="./images/event1.jpg"
+              class="img-cover"
+            />
+            <h3>Derby Day: Cybomb FC vs Thunder United</h3>
+            <p class="meta">Sat • 7:30 PM • Cybomb Arena</p>
+          </article>
+          <article class="card">
+            <img
+              alt="Upcoming events banner"
+              src="./images/event2.jpg"
+              class="img-cover"
+            />
+            <h3>International Cricket T20 — Series Decider</h3>
+            <p class="meta">Sun • 6:00 PM • National Stadium</p>
+          </article>
+          <article class="card">
+            <img
+              alt="Upcoming events banner"
+              src="./images/event3.jpg"
+              class="img-cover"
+            />
+            <h3>Grand Slam Semifinal — Centre Court</h3>
+            <p class="meta">Tue • 1:00 PM • City Tennis Club</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="highlights">
+      <div class="container">
+        <h2>Highlights</h2>
+        <p class="lead">
+          Relive the moments that shook the stands—buzzer beaters, hat‑tricks,
+          and rally points.
+        </p>
+        <div class="grid cols-3">
+          <article class="card highlight">
+            <img
+              alt="Highlights reel thumbnail"
+              src="./images/highlight1.jpg"
+              class="img-cover"
+            />
+            <h3>Top 10 Plays • This Week</h3>
+            <p class="meta">
+              Spectacular assists, saves, and last‑minute winners.
+            </p>
+          </article>
+          <article class="card highlight">
+            <img
+              alt="Highlights reel thumbnail"
+              src="./images/highlight2.jpg"
+              class="img-cover"
+            />
+            <h3>Cricket Big Hits Compilation</h3>
+            <p class="meta">Sixes raining all over the park—pure carnage.</p>
+          </article>
+          <article class="card highlight">
+            <img
+              alt="Highlights reel thumbnail"
+              src="./images/highlight3.jpg"
+              class="img-cover"
+            />
+            <h3>Tennis Rallies You Can’t Miss</h3>
+            <p class="meta">Ridiculous defense turned into winners.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section
+      class="section"
+      id="stats"
+      style="padding: 60px 0; background: #0b1026; color: #e8ebff"
+    >
+      <div
+        class="container"
+        style="max-width: 1140px; margin: auto; padding: 0 15px"
+      >
+        <!-- Title + Lead -->
+        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 15px">
+          Live Statistics
+        </h2>
+        <p style="color: #c7c9e2; font-size: 1rem; margin-bottom: 40px">
+          Real-time indicators from ongoing matches. Numbers below update while
+          you watch.
+        </p>
+
+        <!-- Stats Boxes -->
+        <div
+          class="row text-center g-3 mb-5"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+          "
+        >
+          <div class="col-6 col-md-3" style="flex: 1; min-width: 200px">
+            <div
+              style="
+                background: #111633;
+                border-radius: 12px;
+                padding: 20px;
+                transition: 0.3s;
+                cursor: pointer;
+              "
+              onmouseover="this.style.boxShadow='0 0 12px #5dd8ff';"
+              onmouseout="this.style.boxShadow='none';"
+            >
+              <div
+                id="matchesToday"
+                style="font-size: 1.8rem; text-align: center; font-weight: 700"
+              >
+                0
+              </div>
+              <div style="color: #8b92b7; text-align: center">
+                Matches today
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" style="flex: 1; min-width: 200px">
+            <div
+              style="
+                background: #111633;
+                border-radius: 12px;
+                padding: 20px;
+                transition: 0.3s;
+                cursor: pointer;
+              "
+              onmouseover="this.style.boxShadow='0 0 12px #5dd8ff';"
+              onmouseout="this.style.boxShadow='none';"
+            >
+              <div
+                id="liveViewers"
+                style="font-size: 1.8rem; text-align: center; font-weight: 700"
+              >
+                0
+              </div>
+              <div style="color: #8b92b7; text-align: center">Live viewers</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" style="flex: 1; min-width: 200px">
+            <div
+              style="
+                background: #111633;
+                border-radius: 12px;
+                padding: 20px;
+                transition: 0.3s;
+                cursor: pointer;
+              "
+              onmouseover="this.style.boxShadow='0 0 12px #5dd8ff';"
+              onmouseout="this.style.boxShadow='none';"
+            >
+              <div
+                id="goalsScored"
+                style="font-size: 1.8rem; text-align: center; font-weight: 700"
+              >
+                0
+              </div>
+              <div style="color: #8b92b7; text-align: center">Goals scored</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" style="flex: 1; min-width: 200px">
+            <div
+              style="
+                background: #111633;
+                border-radius: 12px;
+                padding: 20px;
+                transition: 0.3s;
+                cursor: pointer;
+              "
+              onmouseover="this.style.boxShadow='0 0 12px #5dd8ff';"
+              onmouseout="this.style.boxShadow='none';"
+            >
+              <div
+                id="avgSpeed"
+                style="font-size: 1.8rem; text-align: center; font-weight: 700"
+              >
+                0
+              </div>
+              <div style="color: #8b92b7; text-align: center">
+                Avg. sprint speed (km/h)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Scoreboard -->
+        <div aria-live="polite" class="scoreboard" style="margin-bottom: 50px">
+          <div
+            class="row g-4"
+            style="display: flex; flex-wrap: wrap; gap: 20px"
+          >
+            <div class="col-md-4 d-flex" style="flex: 1; min-width: 280px">
+              <div
+                style="
+                  background: #111633;
+                  border-radius: 12px;
+                  padding: 20px;
+                  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+                  width: 100%;
+                  transition: 0.3s;
+                  cursor: pointer;
+                "
+                onmouseover="this.style.boxShadow='0 0 12px #5dd8ff';"
+                onmouseout="this.style.boxShadow='0 2px 6px rgba(0,0,0,0.4)';"
+              >
+                <div
+                  style="
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    margin-bottom: 8px;
+                  "
+                >
+                  <span style="color: #e8ebff"
+                    >Cybomb FC <span class="val">1</span></span
+                  >
+                  —
+                  <span style="color: #e8ebff"
+                    ><span class="val">1</span> Thunder United</span
+                  >
+                </div>
+                <div style="color: #8b92b7; font-size: 0.9rem">Live • 54'</div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex" style="flex: 1; min-width: 280px">
+              <div
+                style="
+                  background: #111633;
+                  border-radius: 12px;
+                  padding: 20px;
+                  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+                  width: 100%;
+                  transition: 0.3s;
+                  cursor: pointer;
+                "
+                onmouseover="this.style.boxShadow='0 0 12px #5dd8ff';"
+                onmouseout="this.style.boxShadow='0 2px 6px rgba(0,0,0,0.4)';"
+              >
+                <div
+                  style="
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    margin-bottom: 8px;
+                  "
+                >
+                  <span style="color: #e8ebff"
+                    >Raptors <span class="val">76</span></span
+                  >
+                  —
+                  <span style="color: #e8ebff"
+                    ><span class="val">72</span> Falcons</span
+                  >
+                </div>
+                <div style="color: #8b92b7; font-size: 0.9rem">
+                  Live • Q3 06:32
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex" style="flex: 1; min-width: 280px">
+              <div
+                style="
+                  background: #111633;
+                  border-radius: 12px;
+                  padding: 20px;
+                  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+                  width: 100%;
+                  transition: 0.3s;
+                  cursor: pointer;
+                "
+                onmouseover="this.style.boxShadow='0 0 12px #5dd8ff';"
+                onmouseout="this.style.boxShadow='0 2px 6px rgba(0,0,0,0.4)';"
+              >
+                <div
+                  style="
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    margin-bottom: 8px;
+                  "
+                >
+                  <span style="color: #e8ebff"
+                    >Blaze <span class="val">2</span></span
+                  >
+                  —
+                  <span style="color: #e8ebff"
+                    ><span class="val">3</span> Tornadoes</span
+                  >
+                </div>
+                <div style="color: #8b92b7; font-size: 0.9rem">Live • 77'</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Left, Content Right -->
+        <div
+          class="row align-items-center g-4"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            margin-top: 20px;
+          "
+        >
+          <!-- Left Image -->
+          <div
+            class="col-md-6 text-center"
+            style="flex: 1; min-width: 300px; text-align: center"
+          >
+            <img
+              src="./images/stats.jpg"
+              alt="Live statistics graphic"
+              style="
+                max-width: 75%;
+                border-radius: 12px;
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+              "
+              class="img-cover"
+            />
+          </div>
+          <!-- Right Text -->
+          <div
+            class="col-md-6"
+            style="flex: 1; min-width: 300px; color: #e8ebff"
+          >
+            <h3
+              style="font-size: 1.6rem; font-weight: 700; margin-bottom: 15px"
+            >
+              Real-Time Performance Insights
+            </h3>
+            <p style="color: #c7c9e2; font-size: 1rem; line-height: 1.6">
+              Track live scores, player performance, and match trends instantly.
+              Our statistics dashboard updates in real-time, helping fans,
+              coaches, and analysts stay ahead of the game.
+            </p>
+            <p style="color: #c7c9e2; font-size: 1rem; line-height: 1.6">
+              From goal counts to possession rates — we bring the numbers to
+              life!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="container">
+        <!-- Top: Title + Lead + Carousel -->
+        <h2>Testimonials</h2>
+        <p class="lead">
+          What fans, athletes, and coaches are saying about Cybomb Sports.
+        </p>
+
+        <div
+          aria-label="Testimonials"
+          aria-roledescription="carousel"
+          class="carousel"
+        >
+          <div class="carousel-track">
+            <article class="testimonial">
+              <p>
+                “The fastest live scores and the cleanest UI. Cybomb Sports is
+                my match-day essential.”
+              </p>
+              <p class="meta">— Arjun Mehta, Football Analyst</p>
+            </article>
+            <article class="testimonial">
+              <p>
+                “I love the quick filters and stat snapshots. Pulling pre-game
+                notes is a breeze.”
+              </p>
+              <p class="meta">— Priya Sharma, Cricket Coach</p>
+            </article>
+            <article class="testimonial">
+              <p>
+                “Highlights drop within minutes. The carousel is the best way to
+                relive the action.”
+              </p>
+              <p class="meta">— Daniel Kim, Sports Fan</p>
+            </article>
+          </div>
+          <div aria-label="Testimonial slides" class="dots" role="tablist">
+            <button aria-label="Slide 1" class="dot active"></button>
+            <button aria-label="Slide 2" class="dot"></button>
+            <button aria-label="Slide 3" class="dot"></button>
+          </div>
+        </div>
+
+        <!-- Bottom: Image Left + Community Text Right -->
+        <div
+          class="row align-items-center mt-5"
+          style="display: flex; align-items: center; gap: 20px"
+        >
+          <!-- Left Image -->
+          <div style="flex: 1">
+            <img
+              src="./images/testimonials.jpg"
+              alt="Testimonials artwork"
+              class="img-fluid rounded shadow"
+              style="width: 100%; max-width: 500px; border-radius: 12px"
+            />
+          </div>
+
+          <!-- Right Content (ONLY community text) -->
+          <div style="flex: 1; color: #fff">
+            <h3>Voices of Our Community</h3>
+            <p>
+              From dedicated fans to seasoned professionals, our community
+              shares their passion, experiences, and unforgettable moments. Each
+              testimonial is a story of connection, excitement, and love for the
+              game.
+            </p>
+            <p>
+              Join the conversation — your voice could inspire the next
+              generation of sports enthusiasts!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="container">
+        <h2>News &amp; Articles</h2>
+        <p class="lead">
+          Editorial pieces, quick hits, and weekend reads—only about sports.
+        </p>
+        <div class="grid cols-3">
+          <article class="card news-card">
+            <img
+              alt="News article cover"
+              src="./images/news1.jpg"
+              class="img-cover"
+            />
+            <h3>Five Rising Stars to Watch This Season</h3>
+            <div class="meta">
+              <span>Analysis</span
+              ><time datetime="2025-08-14">Aug 14, 2025</time>
+            </div>
+            <p>
+              Young talents lighting up the pitch and court with fearless plays
+              and elite vision.
+            </p>
+            <a aria-disabled="true" class="read" href="#">Read more</a>
+          </article>
+          <article class="card news-card">
+            <img
+              alt="News article cover"
+              src="./images/news2.jpg"
+              class="img-cover"
+            />
+            <h3>How Data Is Changing Coaching</h3>
+            <div class="meta">
+              <span>Feature</span
+              ><time datetime="2025-08-12">Aug 12, 2025</time>
+            </div>
+            <p>
+              From heat maps to shot charts, staff lean on numbers to win the
+              margins.
+            </p>
+            <a aria-disabled="true" class="read" href="#">Read more</a>
+          </article>
+          <article class="card news-card">
+            <img
+              alt="News article cover"
+              src="./images/news3.jpg"
+              class="img-cover"
+            />
+            <h3>Inside the Derby: A Tactical Explainer</h3>
+            <div class="meta">
+              <span>Tactics</span
+              ><time datetime="2025-08-10">Aug 10, 2025</time>
+            </div>
+            <p>
+              Press triggers, overloads, and why the wide channels matter this
+              weekend.
+            </p>
+            <a aria-disabled="true" class="read" href="#">Read more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p class="lead">
+          Have feedback, partnership ideas, or press inquiries? Send us a
+          message.
+        </p>
+        <div class="grid cols-2">
+          <form aria-label="Contact form" class="card" id="contactForm">
+            <input
+              aria-label="Full name"
+              class="input"
+              name="name"
+              placeholder="Full name"
+              required=""
+              type="text"
+            />
+            <input
+              aria-label="Email address"
+              class="input"
+              name="email"
+              placeholder="Email address"
+              required=""
+              type="email"
+            />
+            <textarea
+              aria-label="Message"
+              class="input"
+              name="message"
+              placeholder="Your message"
+              required=""
+            ></textarea>
+            <button class="btn brand" type="submit">Send Message</button>
+            <div class="success" role="status">
+              Thanks! Your message has been sent.
+            </div>
+          </form>
+          <div class="card">
+            <h3>Our Office</h3>
+            <p class="meta">
+              Where the game meets the code.<br />
+              Passion, innovation, and sports.<br />
+              Driven by data, fueled by fans.
+            </p>
+            <img
+              alt="Contact illustration"
+              src="./images/contact.jpg"
+              style="margin-top: 8px"
+              class="img-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container cols">
+        <div class="footer-section">
+          <div class="logo">
+            <span style="font-weight: bold">Cybomb Publishing</span>
+          </div>
+
+          <p>
+            Stay on top of the game with real-time updates, exclusive
+            highlights, and in-depth analysis. We are your source for all things
+            sports, delivering the latest news and scores with speed and
+            precision.
+          </p>
+          <div class="social"></div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Insights</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Our Solutions</h4>
+          <ul>
+            <li><a href="#">Live Streaming</a></li>
+            <li><a href="#">Mobile Score App</a></li>
+            <li><a href="#">Interactive Fan Experiences</a></li>
+            <li><a href="#">Real-time Data Analytics</a></li>
+            <li><a href="#">Media Licensing</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Get In Touch</h4>
+          <p>
+            Ready to transform your business? Contact us today to discuss your
+            project.
+          </p>
+          <div class="contact-info">
+            <p>
+              <span
+                style="
+                  background: rgba(255, 255, 255, 0.08);
+                  padding: 0.3rem 0.4rem;
+                  border-radius: 8px;
+                "
+                >📞</span
+              >
+              <a href="tel:+919876543210">+91 98765 43210</a>
+            </p>
+            <p>
+              <span
+                style="
+                  background: rgba(255, 255, 255, 0.08);
+                  padding: 0.3rem 0.4rem;
+                  border-radius: 8px;
+                "
+                >📧</span
+              >
+              <a href="mailto:info@cybombtech.com">info@cybombtech.com</a>
+            </p>
+            <p>
+              <span
+                style="
+                  background: rgba(255, 255, 255, 0.08);
+                  padding: 0.3rem 0.4rem;
+                  border-radius: 8px;
+                "
+                >🏢</span
+              >
+              Cybomb Technologies Pvt Ltd,
+                       Prime Plaza No.54/1, 1st street,
+                       Sripuram colony, St. Thomas Mount,
+                       Chennai, Tamil Nadu - 600 016, India<br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="margin-top: 12px">
+        <hr class="footer-divider" />
+        <p class="meta" style="text-align: center; margin: 0px">
+          © <span id="year"></span> Cybomb Technologies. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+      // Set current year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+    <!-- nav-toggle-injected -->
+    <script>
+      (function () {
+        var btn = document.querySelector(".nav-toggle");
+        var links = document.querySelector(".nav-links");
+        if (btn && links) {
+          btn.addEventListener("click", function () {
+            links.classList.toggle("show");
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

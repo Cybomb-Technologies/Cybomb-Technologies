@@ -1,0 +1,120 @@
+.section {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+}
+
+/* Inner colored block */
+.coloredBox {
+  background-color: #00171f;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Left content */
+.leftContent {
+  flex: 1 1 65%;
+  color: #ffffff;
+}
+
+/* Heading */
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+/* Button */
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  background-color: #007ea7;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background-color: #005f80;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Right image */
+.rightImage {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.rightImage img {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+  border-radius: 0.5rem;
+}
+
+/* Tablet (1024px and below) */
+@media (max-width: 1024px) {
+  .coloredBox {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+
+  .leftContent,
+  .rightImage {
+    flex: 1 1 100%;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .ctaButton {
+    font-size: 1rem;
+    padding: 0.9rem 1.4rem;
+    justify-content: center;
+  }
+
+  .rightImage img {
+    max-height: 220px;
+  }
+}
+
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
+  .coloredBox {
+    padding: 2rem 1.5rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .rightImage img {
+    max-height: 180px;
+  }
+}

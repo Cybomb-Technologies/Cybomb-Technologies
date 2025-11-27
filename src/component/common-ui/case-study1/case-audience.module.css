@@ -1,0 +1,77 @@
+.audienceSection {
+  background: #fff;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111827;
+}
+
+.cardsContainer {
+  gap: 10 px;
+}
+
+.card {
+  border: 3px solid #5ea4ff;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  padding: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.darkCard {
+  border: 2px solid #000;
+}
+
+.iconWrapper {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #f5faff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 32px;
+  color: #007bff;
+}
+
+.darkIcon {
+  color: #000 !important;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #007bff;
+}
+
+.darkTitle {
+  color: #000;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #007bff;
+}
+
+.darkDescription {
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 28px;
+  }
+}

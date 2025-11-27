@@ -1,0 +1,89 @@
+/* CaseBanner.module.css */
+.caseBanner {
+  margin: 8rem 0 4rem;
+}
+
+.bannerLeft {
+  background: linear-gradient(to right, rgba(29, 78, 216, 0.9), rgba(236, 72, 153, 0.8));
+  color: #fff;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  min-height: 320px;
+}
+
+.bannerContent h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.bannerContent p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5rem;
+  color: #e5e7eb;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background: #fff;
+  color: #1d4ed8;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btnPrimary:hover {
+  background: #e5e7eb;
+}
+
+.btnSecondary {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.bannerRight {
+  background: #04394e;
+  color: #fff;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  min-height: 320px;
+}
+
+.bannerRight p {
+  max-width: 360px;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .caseBanner {
+    margin: 4rem 0;
+  }
+  
+  .bannerLeft, .bannerRight {
+    padding: 2rem;
+    min-height: auto;
+  }
+  
+  .buttons {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,326 @@
+/* === HERO SECTION === */
+.hero {
+  background: linear-gradient(135deg, #00171f, #003459);
+  padding-top: 25%;
+  color: white;
+  padding: 6rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.btn.btn-primary{
+  background-color: #003459 !important;
+}
+
+.custom-card-body1 {
+  background-color: #ffffff !important;
+  display: flex;
+  flex-direction: column; 
+  height: 100%;  /* ensure card fills height */
+}
+
+.custom-card-body1 .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;  /* take up available space */
+}
+
+.custom-btn-contact {
+  margin-top: auto;   /* push button down */
+  align-self: center; /* keep it centered */
+  width: auto;
+}
+
+.contactMethodCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/assets/hero-bg-pattern.png') center/cover no-repeat;
+  opacity: 0.2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* === CONTACT METHOD CARDS === */
+.contactMethods {
+  margin-top: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.contactMethodCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.contactMethodCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,52,89,0.2);
+}
+
+.iconContainer {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 1.5rem;
+  background-color: #003459;
+  color: white;
+}
+
+/* === FORM STYLING === */
+.form-control {
+  border-radius: 12px !important;
+  border: 2px solid #e0e0e0;
+  padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+  border-color: #003459;
+  box-shadow: 0 0 0 0.25rem rgba(0,52,89,0.25);
+}
+
+/* Match phone input to other fields */
+.react-tel-input {
+  width: 100%;
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  border: 2px solid #e0e0e0 !important;
+  padding-left: 52px !important;
+  font-size: 1rem !important;
+  box-shadow: none !important;
+}
+
+.react-tel-input .form-control:focus {
+  border-color: #003459 !important;
+  box-shadow: 0 0 0 0.25rem rgba(0,52,89,0.25) !important;
+}
+
+.react-tel-input .flag-dropdown {
+  border-radius: 12px 0 0 12px !important;
+  border: 2px solid #e0e0e0 !important;
+  border-right: none !important;
+}
+
+/* === BUTTON STYLES === */
+.btn-primary {
+  background-color: #003459;
+  border-color: #003459;
+}
+
+.btn-primary:hover {
+  background-color: #00253d;
+  border-color: #00253d;
+}
+
+.btn-outline-primary {
+  color: #003459;
+  border-color: #003459;
+}
+
+.btn-outline-primary:hover {
+  background-color: #003459;
+  color: white;
+}
+
+/* === MAP SECTION === */
+.mapContainer {
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  height: 400px;
+  margin-top: 3rem;
+}
+
+.mapOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 23, 31, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mapContainer:hover .mapOverlay {
+  opacity: 1;
+}
+
+/* === FLOATING WHATSAPP BUTTON === */
+.floatingBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: pulse 2s infinite;
+}
+
+.floatingBtn:hover {
+  background-color: #128C7E;
+  color: white;
+}
+
+.phoneInput {
+  width: 100% !important;
+  border-radius: 12px !important;
+  border: 2px solid #e0e0e0 !important;
+  padding-left: 52px !important;
+  height: 48px !important;
+}
+
+.phoneInput:focus {
+  border-color: #003459 !important;
+  box-shadow: 0 0 0 0.25rem rgba(0,52,89,0.25) !important;
+}
+
+.react-tel-input .flag-dropdown {
+  border-radius: 12px 0 0 12px !important;
+}
+
+/* Contact info icon container */
+.contactInfoItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contactInfoIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  background-color: #003459;
+  color: white;
+}
+
+.contactInfoText h5 {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.contactInfoText p {
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Extra spacing for Visit Our Office block */
+.contactInfoTextBlock h5 {
+  color: white;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.contactInfoTextBlock p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* === RESPONSIVE STYLES === */
+@media (max-width: 992px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .contactMethodCard {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .mapContainer {
+    height: 300px;
+  }
+  
+  .contactMethods {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 2rem 1rem;
+    margin-top: 56px;
+  }
+}

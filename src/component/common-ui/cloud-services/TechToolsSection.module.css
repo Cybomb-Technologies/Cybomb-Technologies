@@ -1,0 +1,210 @@
+.section {
+  padding: 4rem 1rem;
+  background-color: #007ea7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #000000;
+  line-height: 1.3;
+}
+
+.tabWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+.tab {
+  background-color: #e5e7eb;
+  color: #111827;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: max-content;
+}
+
+.activeTab {
+  background-color: #000000;
+  color: white;
+}
+
+.cardGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Slideshow container */
+.slideshowContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Single row layout */
+.cardRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  min-height: 150px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Tech card styling */
+.techCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  min-width: 100px;
+  width: calc(20% - 1rem);
+  margin-bottom: 1rem;
+}
+
+.techCard:hover {
+  transform: translateY(-5px);
+}
+
+.techLogo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.techName {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* Slide indicators */
+.slideIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.slideIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slideIndicator:hover, 
+.activeIndicator {
+  background: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .techCard {
+    width: calc(25% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+  
+  .title {
+    margin-bottom: 1.5rem;
+  }
+  
+  .tabWrapper {
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tab {
+    padding: 0.5rem 0.8rem;
+  }
+  
+.cardRow {
+    justify-content: center; /* Ensure cards are centered */
+    padding: 0 0.5rem; /* Add some padding to prevent edge sticking */
+  }
+  
+  .techCard {
+    width: calc(50% - 1rem); /* Adjust width calculation */
+    margin: 0 0.5rem 1rem 0.5rem; /* Add equal margins on both sides */
+    min-width: auto; /* Remove fixed min-width */
+  }
+  .techLogo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+  
+  .tabWrapper {
+    justify-content: center;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+  
+  .tabWrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+.cardRow {
+    justify-content: center; /* Double ensure centering */
+    gap: 0.8rem; /* Consistent gap */
+  }
+  
+  .techCard {
+    width: 45%; /* Slightly more generous width */
+    margin: 0; /* Remove individual margins */
+    flex-grow: 0; /* Prevent unwanted stretching */
+    flex-shrink: 0; /* Prevent unwanted shrinking */
+  }
+  
+  .techLogo {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .techName {
+    font-size: 0.7rem;
+  }
+}

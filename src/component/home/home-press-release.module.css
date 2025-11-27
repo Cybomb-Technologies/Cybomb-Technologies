@@ -1,0 +1,181 @@
+/* home-press-release.module.css */
+
+.pressContainer {
+  padding: 60px 0;
+  /* background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%); */
+  min-height: max-content;
+}
+
+/* .pressTitle {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+} */
+
+.titleUnderline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.pressCard {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+}
+
+.pressCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.cardImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pressCard:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.placeholderImage {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #e0f7ff 0%, #7fd8ff 100%);
+  color: white;
+}
+
+.readMoreBtn {
+  background: #003459;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.readMoreBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.readMoreBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.readMoreBtn:hover::before {
+  left: 100%;
+}
+
+.loadMoreBtn {
+  border: 2px solid #667eea;
+  color: #667eea;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 12px 40px;
+}
+
+.loadMoreBtn:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.emptyState {
+  padding: 60px 20px;
+}
+
+.emptyState i {
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pressContainer {
+    padding: 40px 0;
+  }
+  
+  .pressTitle {
+    font-size: 2rem;
+  }
+  
+  .imageContainer {
+    height: 180px;
+  }
+}
+
+/* Animation for card entrance */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pressCard {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Stagger animation for cards */
+.pressCard:nth-child(1) { animation-delay: 0.1s; }
+.pressCard:nth-child(2) { animation-delay: 0.2s; }
+.pressCard:nth-child(3) { animation-delay: 0.3s; }
+.pressCard:nth-child(4) { animation-delay: 0.4s; }
+.pressCard:nth-child(5) { animation-delay: 0.5s; }
+.pressCard:nth-child(6) { animation-delay: 0.6s; }
+
+/* Badge styles */
+.badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* Custom scrollbar for webkit browsers */
+.pressContainer ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pressContainer ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.pressContainer ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+}
+
+.pressContainer ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}

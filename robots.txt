@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /technologies
+Sitemap: https://www.cybomb.com/sitemap.xml
+Disallow: /termsandconditions
+Disallow: /about
+Disallow: /websitedevelopmentinchennai
+Disallow: /aboutus
+Disallow: /privacypolicy

@@ -1,0 +1,71 @@
+.apiSection {
+  padding: 60px 20px;
+  background: #f4f8fb;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1f36;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 100%;
+  max-width: 260px;
+  height: 320px;
+  background: linear-gradient(145deg, #ffffff, #e6edf7);
+  border-radius: 18px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.15);
+}
+
+.cardIcon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0f1b3f;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: #4a506b;
+  line-height: 1.5;
+}
+
+.learnBtn {
+  background: #4f7ef6;
+  color: #fff;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learnBtn:hover {
+  background: #3660d8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Adjustments handled by Bootstrap grid, no extra CSS needed */

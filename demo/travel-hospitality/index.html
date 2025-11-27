@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Cybomb Luxury Travel & Hospitality - Where Every Journey Feels Like Home
+    </title>
+    <meta
+      name="description"
+      content="Premium travel experiences with luxury stays, personalized tours, and seamless travel services. Discover your perfect destination with our expert hospitality team."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@400;500;600&family=Open+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* :where([class^="ri-"])::before {
+        content: "\f3c2";
+      } */
+      * {
+        scroll-behavior: smooth;
+      }
+
+      /* Brand colors override */
+      .bg-primary {
+        background-color: #002244 !important;
+      }
+      .bg-secondary {
+        background-color: #cfaf6a !important;
+        color: black !important;
+      }
+      .text-primary {
+        color: #002244 !important;
+      }
+      .text-secondary {
+        color: black !important;
+      }
+      .text-secondary1 {
+        color: #cfaf6a !important;
+        transition: all 0.3s ease;
+        display: inline-block; /* needed for transform to work smoothly */
+      }
+
+      .text-secondary1:hover {
+        color: #e6c980 !important; /* lighter gold */
+        text-shadow: 0 0 8px rgba(207, 175, 106, 0.6); /* gold glow */
+        transform: scale(1.05); /* slight zoom */
+      }
+
+      .border-primary {
+        border-color: #002244 !important;
+      }
+      .border-secondary {
+        border-color: #cfaf6a !important;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: #333;
+      }
+
+      .hero-bg {
+        background-image: linear-gradient(
+            rgba(0, 34, 68, 0.7),
+            rgba(0, 34, 68, 0.5)
+          ),
+          url("./images/banner.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      /* Primary button hover effect */
+      .btn-primary:hover {
+        background-color: #001a33 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 34, 68, 0.3);
+      }
+
+      /* Secondary button hover effect */
+      .btn-secondary:hover {
+        background-color: #c5a05d !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(207, 175, 106, 0.4);
+      }
+
+      /* Outline button hover effect */
+      .btn-outline-light:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white !important;
+      }
+
+      /* Golden glow button enhancement */
+      .btn-golden-glow {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        transition: all 0.4s ease;
+      }
+
+      .btn-golden-glow:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(207, 175, 106, 0.3);
+      }
+
+      .btn-golden-glow::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          45deg,
+          rgba(207, 175, 106, 0.8),
+          rgba(207, 175, 106, 0.4),
+          transparent
+        );
+        transform: translateX(-100%);
+        transition: transform 0.6s ease;
+        z-index: -1;
+      }
+
+      .btn-golden-glow:hover::before {
+        transform: translateX(0);
+      }
+
+      /* Add transition to all buttons */
+      .btn {
+        transition: all 0.3s ease;
+      }
+      .navbar-scroll {
+        transition: all 0.3s ease;
+      }
+      .navbar-scroll.scrolled {
+        background: rgba(0, 34, 68, 0.95) !important;
+        backdrop-filter: blur(10px);
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .hover-zoom {
+        transition: transform 0.3s ease;
+      }
+      .hover-zoom:hover {
+        transform: scale(1.05);
+      }
+      .destination-card {
+        position: relative;
+        overflow: hidden;
+      }
+      .destination-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 34, 68, 0.8), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .destination-card:hover .destination-overlay {
+        opacity: 1;
+      }
+      /* Flip card container */
+      .flip-card {
+        perspective: 1000px;
+        background-color: transparent;
+        height: 320px; /* consistent height for all cards */
+        width: 100%;
+      }
+
+      /* Inner wrapper that flips */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        min-height: 250px;
+        height: auto;
+        text-align: center;
+        transition: transform 0.8s ease;
+        transform-style: preserve-3d;
+      }
+
+      /* Flip effect on hover (desktop only) */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Front and back faces */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute; /* makes them stack */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .flip-card-front {
+        background-color: white;
+        color: #002244;
+        z-index: 2; /* stays on top until flipped */
+      }
+
+      .flip-card-back {
+        background-color: #002244;
+        color: white;
+        transform: rotateY(180deg);
+        z-index: 1;
+      }
+
+      /* Mobile view: Show only back side */
+      @media (max-width: 768px) {
+        .custom-nav-menu {
+          background-color: aliceblue;
+        }
+        .navbar-toggler {
+          background-color: #cfaf6a;
+        }
+        .flip-card {
+          height: auto; /* let content set height */
+        }
+        .flip-card-inner {
+          transform: none !important; /* disable flip */
+        }
+        .flip-card-front {
+          display: none !important; /* hide front face */
+        }
+        .flip-card-back {
+          position: relative;
+          transform: none !important;
+          backface-visibility: visible;
+          -webkit-backface-visibility: visible;
+          height: auto;
+          box-shadow: none;
+        }
+      }
+
+      .contact-bg {
+        background-image: linear-gradient(
+            rgba(0, 34, 68, 0.8),
+            rgba(207, 175, 106, 0.3)
+          ),
+          url("/images/contact-bg.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      .custom-input {
+        border: 2px solid;
+        border-color: #cfaf6a !important;
+        background: rgba(255, 255, 255, 0.9);
+        transition: all 0.3s ease;
+      }
+      .custom-input:focus {
+        border-color: #cfaf6a;
+        background: white;
+        outline: none;
+      }
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+      }
+      .rounded-button {
+        border-radius: 8px !important;
+      }
+      .p {
+        color: white !important;
+      }
+
+      /* Print styles */
+      @media print {
+        nav,
+        footer,
+        .flip-card-back,
+        .btn {
+          display: none !important;
+        }
+        body {
+          background: white !important;
+          color: black !important;
+          font-size: 12pt;
+        }
+        .text-primary {
+          color: black !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar custom-nav-menu navbar-expand-lg navbar-dark navbar-scroll fixed-top py-3"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand fw-bold fs-3 text-secondary1"
+          href="#home"
+          style="font-family: 'Poppins', sans-serif"
+          >Cybomb</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a class="nav-link text-secondary1" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary1" href="#destinations"
+                >Destinations</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary1" href="#experiences"
+                >Experiences</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary1" href="#hospitality"
+                >Hospitality</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary1" href="#reviews">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary1" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero-bg min-vh-100 d-flex align-items-center text-white"
+    >
+      <div class="container text-center fade-in">
+        <h1
+          class="fw-bold mb-4"
+          style="
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            line-height: 1.2;
+          "
+        >
+          Where Every Journey Feels Like Home
+        </h1>
+        <p class="lead mb-5 text-white" style="font-size: 1.25rem">
+          Tailored travel experiences that blend luxury, comfort, and authentic
+          cultural immersion for the discerning traveler
+        </p>
+        <div
+          class="d-flex flex-column flex-sm-row gap-3 justify-content-center"
+        >
+          <a
+            href="#experiences"
+            class="btn btn-golden-glow bg-secondary text-primary fw-semibold px-5 py-3 rounded-button"
+            >View Experiences</a
+          >
+          <a
+            href="#contact"
+            class="btn btn-outline-light fw-semibold px-5 py-3 rounded-button"
+            >Plan Your Trip</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5 bg-white">
+      <div class="container py-5">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 fade-in">
+            <h2
+              class="fw-semibold text-primary mb-4 display-5"
+              style="font-family: 'Lora', serif"
+            >
+              Crafting Unforgettable Journeys Since 2015
+            </h2>
+            <p class="text-muted mb-4 fs-5">
+              We believe that travel is more than just visiting new places—it's
+              about creating meaningful connections, discovering hidden gems,
+              and experiencing the world through a lens of luxury and
+              authenticity. Our team of travel experts curates each journey with
+              meticulous attention to detail.
+            </p>
+            <div class="d-flex align-items-center gap-3">
+              <div
+                class="bg-secondary bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 64px; height: 64px"
+              >
+                <i class="ri-award-line text-secondary fs-4"></i>
+              </div>
+              <div>
+                <h5
+                  class="fw-semibold text-primary mb-1"
+                  style="font-family: 'Poppins', sans-serif"
+                >
+                  Award-Winning Service
+                </h5>
+                <p class="text-muted mb-0">
+                  Recognized globally for excellence
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 fade-in">
+            <div class="row g-4">
+              <div class="col-12 bg-light p-5 rounded-3 hover-zoom">
+                <div
+                  class="bg-secondary bg-opacity-20 rounded d-inline-flex align-items-center justify-content-center mb-3"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-hotel-line text-secondary fs-5"></i>
+                </div>
+                <h5
+                  class="fw-semibold text-primary mb-2 fs-4"
+                  style="font-family: 'Poppins', sans-serif"
+                >
+                  Luxury Stays
+                </h5>
+                <p class="text-muted mb-0">
+                  Handpicked accommodations that define elegance and comfort
+                </p>
+              </div>
+              <div class="col-12 bg-light p-5 rounded-3 hover-zoom">
+                <div
+                  class="bg-secondary bg-opacity-20 rounded d-inline-flex align-items-center justify-content-center mb-3"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-map-2-line text-secondary fs-5"></i>
+                </div>
+                <h5
+                  class="fw-semibold text-primary mb-2 fs-4"
+                  style="font-family: 'Poppins', sans-serif"
+                >
+                  Personalized Tours
+                </h5>
+                <p class="text-muted mb-0">
+                  Custom itineraries tailored to your unique preferences
+                </p>
+              </div>
+              <div class="col-12 bg-light p-5 rounded-3 hover-zoom">
+                <div
+                  class="bg-secondary bg-opacity-20 rounded d-inline-flex align-items-center justify-content-center mb-3"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="ri-plane-line text-secondary fs-5"></i>
+                </div>
+                <h5
+                  class="fw-semibold text-primary mb-2 fs-4"
+                  style="font-family: 'Poppins', sans-serif"
+                >
+                  Seamless Travel
+                </h5>
+                <p class="text-muted mb-0">
+                  End-to-end coordination for stress-free journeys
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="py-5 bg-light">
+      <div class="container py-5">
+        <div class="text-center mb-5 fade-in">
+          <h2
+            class="fw-semibold text-primary mb-3 display-5"
+            style="font-family: 'Lora', serif"
+          >
+            Featured Destinations
+          </h2>
+          <p class="text-muted fs-5 mx-auto" style="max-width: 700px">
+            Discover breathtaking locations curated for the ultimate luxury
+            travel experience
+          </p>
+        </div>
+
+        <div class="row g-4 mb-5">
+          <div class="col-md-6 col-lg-4 fade-in">
+            <div class="destination-card rounded-3 overflow-hidden hover-zoom">
+              <img
+                src="./images/greece.jpg"
+                alt="Santorini, Greece"
+                class="w-100"
+                style="height: 256px; object-fit: cover"
+              />
+              <div class="destination-overlay d-flex align-items-end p-4">
+                <div class="text-white">
+                  <h5
+                    class="fw-semibold mb-2"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Santorini, Greece
+                  </h5>
+                  <p class="mb-0 small opacity-90">
+                    Iconic sunsets and luxury cliff-side resorts
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-in">
+            <div class="destination-card rounded-3 overflow-hidden hover-zoom">
+              <img
+                src="./images/maldives.jpg"
+                alt="Maldives"
+                class="w-100"
+                style="height: 256px; object-fit: cover"
+              />
+              <div class="destination-overlay d-flex align-items-end p-4">
+                <div class="text-white">
+                  <h5
+                    class="fw-semibold mb-2"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Maldives
+                  </h5>
+                  <p class="mb-0 small opacity-90">
+                    Overwater villas in pristine paradise
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-in">
+            <div class="destination-card rounded-3 overflow-hidden hover-zoom">
+              <img
+                src="./images/swiss.jpg"
+                alt="Swiss Alps"
+                class="w-100"
+                style="height: 256px; object-fit: cover"
+              />
+              <div class="destination-overlay d-flex align-items-end p-4">
+                <div class="text-white">
+                  <h5
+                    class="fw-semibold mb-2"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Swiss Alps
+                  </h5>
+                  <p class="mb-0 small opacity-90">
+                    Mountain luxury with breathtaking views
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-in">
+            <div class="destination-card rounded-3 overflow-hidden hover-zoom">
+              <img
+                src="./images/kyoto.jpg"
+                alt="Kyoto, Japan"
+                class="w-100"
+                style="height: 256px; object-fit: cover"
+              />
+              <div class="destination-overlay d-flex align-items-end p-4">
+                <div class="text-white">
+                  <h5
+                    class="fw-semibold mb-2"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Kyoto, Japan
+                  </h5>
+                  <p class="mb-0 small opacity-90">
+                    Traditional elegance meets modern luxury
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-in">
+            <div class="destination-card rounded-3 overflow-hidden hover-zoom">
+              <img
+                src="./images/italy.jpg"
+                alt="Tuscany, Italy"
+                class="w-100"
+                style="height: 256px; object-fit: cover"
+              />
+              <div class="destination-overlay d-flex align-items-end p-4">
+                <div class="text-white">
+                  <h5
+                    class="fw-semibold mb-2"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Tuscany, Italy
+                  </h5>
+                  <p class="mb-0 small opacity-90">
+                    Wine country luxury and culinary excellence
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-in">
+            <div class="destination-card rounded-3 overflow-hidden hover-zoom">
+              <img
+                src="./images/bora.jpg"
+                alt="Bora Bora"
+                class="w-100"
+                style="height: 256px; object-fit: cover"
+              />
+              <div class="destination-overlay d-flex align-items-end p-4">
+                <div class="text-white">
+                  <h5
+                    class="fw-semibold mb-2"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Bora Bora
+                  </h5>
+                  <p class="mb-0 small opacity-90">
+                    Ultimate tropical luxury escape
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a
+            href="#"
+            class="btn btn-primary btn-golden-glow bg-primary text-white fw-semibold px-5 py-3 rounded-button"
+            >View More Destinations</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section id="experiences" class="py-5 bg-white">
+      <div class="container py-5">
+        <div class="text-center mb-5 fade-in">
+          <h2
+            class="fw-semibold text-primary mb-3 display-5"
+            style="font-family: 'Lora', serif"
+          >
+            Travel Experiences
+          </h2>
+          <p class="text-muted fs-5 mx-auto" style="max-width: 700px">
+            Discover our curated collection of extraordinary travel experiences
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 fade-in">
+            <div
+              class="bg-white rounded-3 shadow overflow-hidden hover-zoom h-100"
+            >
+              <img
+                src="./images/african-safari.jpg"
+                alt="African Safari Experience"
+                class="w-100"
+                style="height: 192px; object-fit: cover"
+              />
+              <div class="p-4">
+                <span
+                  class="badge bg-secondary bg-opacity-20 text-secondary mb-3"
+                  >Adventure</span
+                >
+                <h5
+                  class="fw-semibold text-primary mb-3"
+                  style="font-family: 'Poppins', sans-serif"
+                >
+                  African Safari Luxury
+                </h5>
+                <p class="text-muted mb-4">
+                  Experience the wild beauty of Africa from the comfort of our
+                  exclusive safari lodges
+                </p>
+                <ul class="text-muted mb-4 ps-3" style="list-style-type: disc">
+                  <li class="mb-2">Private game drives with expert guides</li>
+                  <li class="mb-2">Luxury tented accommodations</li>
+                  <li class="mb-2">Gourmet bush dining experiences</li>
+                </ul>
+                <a
+                  href="#"
+                  class="text-secondary fw-semibold d-flex align-items-center gap-2"
+                >
+                  Read More <i class="ri-arrow-right-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 fade-in">
+            <div
+              class="bg-white rounded-3 shadow overflow-hidden hover-zoom h-100"
+            >
+              <img
+                src="./images/luxuary.jpg"
+                alt="Mediterranean Yacht Charter"
+                class="w-100"
+                style="height: 192px; object-fit: cover"
+              />
+              <div class="p-4">
+                <span
+                  class="badge bg-secondary bg-opacity-20 text-secondary mb-3"
+                  >Luxury</span
+                >
+                <h5
+                  class="fw-semibold text-primary mb-3"
+                  style="font-family: 'Poppins', sans-serif"
+                >
+                  Mediterranean Yacht Charter
+                </h5>
+                <p class="text-muted mb-4">
+                  Sail the azure waters of the Mediterranean aboard our luxury
+                  yacht fleet
+                </p>
+                <ul class="text-muted mb-4 ps-3" style="list-style-type: disc">
+                  <li class="mb-2">Private yacht with professional crew</li>
+                  <li class="mb-2">Customized island-hopping itinerary</li>
+                  <li class="mb-2">Michelin-starred chef on board</li>
+                </ul>
+                <a
+                  href="#"
+                  class="text-secondary fw-semibold d-flex align-items-center gap-2"
+                >
+                  Read More <i class="ri-arrow-right-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 fade-in">
+            <div
+              class="bg-white rounded-3 shadow overflow-hidden hover-zoom h-100"
+            >
+              <img
+                src="./images/cultural.jpg"
+                alt="Cultural Immersion"
+                class="w-100"
+                style="height: 192px; object-fit: cover"
+              />
+              <div class="p-4">
+                <span
+                  class="badge bg-secondary bg-opacity-20 text-secondary mb-3"
+                  >Cultural</span
+                >
+                <h5
+                  class="fw-semibold text-primary mb-3"
+                  style="font-family: 'Poppins', sans-serif"
+                >
+                  Cultural Immersion
+                </h5>
+                <p class="text-muted mb-4">
+                  Deep dive into local cultures with exclusive access to
+                  authentic experiences
+                </p>
+                <ul class="text-muted mb-4 ps-3" style="list-style-type: disc">
+                  <li class="mb-2">Private cultural ceremonies</li>
+                  <li class="mb-2">Master craftsman workshops</li>
+                  <li class="mb-2">Exclusive heritage site access</li>
+                </ul>
+                <a
+                  href="#"
+                  class="text-secondary fw-semibold d-flex align-items-center gap-2"
+                >
+                  Read More <i class="ri-arrow-right-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hospitality Section -->
+    <section id="hospitality" class="py-5 bg-light">
+      <div class="container py-5">
+        <div class="text-center mb-5 fade-in">
+          <h2
+            class="fw-semibold text-primary mb-3 display-5"
+            style="font-family: 'Lora', serif"
+          >
+            Hospitality Highlights
+          </h2>
+          <p class="text-muted fs-5 mx-auto" style="max-width: 700px">
+            Exceptional services that define luxury travel
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 fade-in">
+            <div class="flip-card h-100">
+              <div class="flip-card-inner h-100">
+                <div
+                  class="flip-card-front bg-white shadow rounded-3 p-4 d-flex flex-column justify-content-center"
+                >
+                  <div
+                    class="bg-secondary bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center mb-4 mx-auto"
+                    style="width: 64px; height: 64px"
+                  >
+                    <i class="ri-hotel-line text-secondary fs-4"></i>
+                  </div>
+                  <h5
+                    class="fw-semibold text-primary text-center"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Luxury Hotel Stays
+                  </h5>
+                </div>
+                <div
+                  class="flip-card-back bg-primary text-white rounded-3 p-4 d-flex flex-column justify-content-center"
+                >
+                  <h5
+                    class="fw-semibold mb-3 text-center"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Luxury Hotel Stays
+                  </h5>
+                  <p class="text-center mb-4">
+                    Handpicked 5-star accommodations with exclusive amenities
+                    and personalized service
+                  </p>
+                  <button
+                    class="btn btn-secondary bg-secondary text-primary fw-semibold mx-auto rounded-button"
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 fade-in">
+            <div class="flip-card h-100">
+              <div class="flip-card-inner h-100">
+                <div
+                  class="flip-card-front bg-white shadow rounded-3 p-4 d-flex flex-column justify-content-center"
+                >
+                  <div
+                    class="bg-secondary bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center mb-4 mx-auto"
+                    style="width: 64px; height: 64px"
+                  >
+                    <i class="ri-car-line text-secondary fs-4"></i>
+                  </div>
+                  <h5
+                    class="fw-semibold text-primary text-center"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Private Transfers
+                  </h5>
+                </div>
+                <div
+                  class="flip-card-back bg-primary text-white rounded-3 p-4 d-flex flex-column justify-content-center"
+                >
+                  <h5
+                    class="fw-semibold mb-3 text-center"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Private Transfers
+                  </h5>
+                  <p class="text-center mb-4">
+                    Luxury vehicle fleet with professional chauffeurs for
+                    seamless transportation
+                  </p>
+                  <button
+                    class="btn bg-secondary text-primary fw-semibold mx-auto rounded-button"
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 fade-in">
+            <div class="flip-card h-100">
+              <div class="flip-card-inner h-100">
+                <div
+                  class="flip-card-front bg-white shadow rounded-3 p-4 d-flex flex-column justify-content-center"
+                >
+                  <div
+                    class="bg-secondary bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center mb-4 mx-auto"
+                    style="width: 64px; height: 64px"
+                  >
+                    <i
+                      class="ri-customer-service-2-line text-secondary fs-4"
+                    ></i>
+                  </div>
+                  <h5
+                    class="fw-semibold text-primary text-center"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    24/7 Support
+                  </h5>
+                </div>
+                <div
+                  class="flip-card-back bg-primary text-white rounded-3 p-4 d-flex flex-column justify-content-center"
+                >
+                  <h5
+                    class="fw-semibold mb-3 text-center"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    24/7 Support
+                  </h5>
+                  <p class="text-center mb-4">
+                    Round-the-clock concierge service to assist with any travel
+                    needs or emergencies
+                  </p>
+                  <button
+                    class="btn bg-secondary text-primary fw-semibold mx-auto rounded-button"
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 fade-in">
+            <div class="flip-card h-100">
+              <div class="flip-card-inner h-100">
+                <div
+                  class="flip-card-front bg-white shadow rounded-3 p-4 d-flex flex-column justify-content-center"
+                >
+                  <div
+                    class="bg-secondary bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center mb-4 mx-auto"
+                    style="width: 64px; height: 64px"
+                  >
+                    <i class="ri-restaurant-line text-secondary fs-4"></i>
+                  </div>
+                  <h5
+                    class="fw-semibold text-primary text-center"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Gourmet Dining
+                  </h5>
+                </div>
+                <div
+                  class="flip-card-back bg-primary text-white rounded-3 p-4 d-flex flex-column justify-content-center"
+                >
+                  <h5
+                    class="fw-semibold mb-3 text-center"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Gourmet Dining
+                  </h5>
+                  <p class="text-center mb-4">
+                    Exclusive reservations at world-renowned restaurants and
+                    private chef experiences
+                  </p>
+                  <button
+                    class="btn bg-secondary text-primary fw-semibold mx-auto rounded-button"
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-5 bg-white">
+      <div class="container py-5">
+        <div class="text-center mb-5 fade-in">
+          <h2
+            class="fw-semibold text-primary mb-3 display-5"
+            style="font-family: 'Lora', serif"
+          >
+            What Our Travelers Say
+          </h2>
+          <p class="text-muted fs-5 mx-auto" style="max-width: 700px">
+            Testimonials from our valued clients around the world
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 fade-in">
+            <div class="testimonial-card p-5 rounded-3 shadow h-100">
+              <div class="d-flex align-items-center mb-4">
+                <img
+                  src="./images/review1.jpg"
+                  alt="Sarah Mitchell"
+                  class="rounded-circle me-3"
+                  style="width: 64px; height: 64px; object-fit: cover"
+                />
+                <div>
+                  <h5
+                    class="fw-semibold text-primary mb-1"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Sarah Mitchell
+                  </h5>
+                  <p class="text-muted mb-1">London, UK</p>
+                  <div class="text-secondary1">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-muted fst-italic">
+                "The attention to detail was extraordinary. Every moment of our
+                Santorini getaway was perfectly orchestrated. The private sunset
+                cruise was absolutely magical."
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 fade-in">
+            <div class="testimonial-card p-5 rounded-3 shadow h-100">
+              <div class="d-flex align-items-center mb-4">
+                <img
+                  src="./images/review2.jpg"
+                  alt="James Rodriguez"
+                  class="rounded-circle me-3"
+                  style="width: 64px; height: 64px; object-fit: cover"
+                />
+                <div>
+                  <h5
+                    class="fw-semibold text-primary mb-1"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    James Rodriguez
+                  </h5>
+                  <p class="text-muted mb-1">New York, USA</p>
+                  <div class="text-secondary1">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-muted fst-italic">
+                "Exceptional service from start to finish. The African safari
+                exceeded all expectations. The luxury tented camp was beyond
+                anything I could have imagined."
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 fade-in">
+            <div class="testimonial-card p-5 rounded-3 shadow h-100">
+              <div class="d-flex align-items-center mb-4">
+                <img
+                  src="./images/review3.jpg"
+                  alt="Emma Chen"
+                  class="rounded-circle me-3"
+                  style="width: 64px; height: 64px; object-fit: cover"
+                />
+                <div>
+                  <h5
+                    class="fw-semibold text-primary mb-1"
+                    style="font-family: 'Poppins', sans-serif"
+                  >
+                    Emma Chen
+                  </h5>
+                  <p class="text-muted mb-1">Singapore</p>
+                  <div class="text-secondary1">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-muted fst-italic">
+                "The cultural immersion experience in Kyoto was transformative.
+                Having private access to traditional ceremonies made this trip
+                truly unforgettable."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-bg py-5 text-white">
+      <div class="container py-5">
+        <div class="text-center mb-5 fade-in">
+          <h2
+            class="fw-semibold mb-3 display-5"
+            style="font-family: 'Lora', serif"
+          >
+            Plan Your Dream Trip
+          </h2>
+          <p class="text-white fs-5 mx-auto" style="max-width: 700px">
+            Let us create a personalized luxury travel experience just for you
+          </p>
+        </div>
+
+        <div
+          class="bg-white bg-opacity-95 rounded-3 p-4 p-md-5 mx-auto fade-in"
+          style="max-width: 900px"
+        >
+          <form class="row g-4">
+            <div class="col-md-6">
+              <label class="form-label fw-semibold text-primary"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                class="form-control custom-input py-3"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold text-primary"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                class="form-control custom-input py-3"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold text-primary"
+                >Preferred Destination</label
+              >
+              <input
+                type="text"
+                class="form-control custom-input py-3"
+                placeholder="Where would you like to go?"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold text-primary"
+                >Travel Date</label
+              >
+              <input type="date" class="form-control custom-input py-3" />
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-semibold text-primary"
+                >Special Requests</label
+              >
+              <textarea
+                rows="4"
+                class="form-control custom-input"
+                placeholder="Tell us about your preferences, interests, or any special requirements..."
+              ></textarea>
+            </div>
+            <div class="col-12 text-center">
+              <button
+                type="submit"
+                class="btn btn-golden-glow bg-secondary text-primary fw-semibold px-5 py-3 rounded-button"
+              >
+                Start Planning My Journey
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-5">
+      <div class="container py-4">
+        <div class="row g-5 mb-5">
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="fw-bold fs-3 text-white mb-3 text-secondary1"
+              style="font-family: 'Poppins', sans-serif"
+            >
+              Cybomb
+            </div>
+            <p class="text-white mb-4">
+              Creating extraordinary travel experiences that blend luxury,
+              authenticity, and personalized service for discerning travelers
+              worldwide.
+            </p>
+            <div class="d-flex gap-3">
+              <a
+                href="https://www.instagram.com/cybomb_tech/?hl=en"
+                class="text-white bg-secondary bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 40px; height: 40px"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="https://x.com/CybombTech"
+                class="text-white bg-secondary bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 40px; height: 40px"
+              >
+                <i class="ri-twitter-x-line"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/cybomb/"
+                class="text-white bg-secondary bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 40px; height: 40px"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h5
+              class="fw-semibold mb-4"
+              style="font-family: 'Poppins', sans-serif"
+            >
+              Quick Links
+            </h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="#destinations"
+                  class="text-white text-decoration-none hover:text-secondary"
+                  >Destinations</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#experiences"
+                  class="text-white text-decoration-none hover:text-secondary"
+                  >Experiences</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#hospitality"
+                  class="text-white text-decoration-none hover:text-secondary"
+                  >Hospitality</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#reviews"
+                  class="text-white text-decoration-none hover:text-secondary"
+                  >Reviews</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#contact"
+                  class="btn btn-outline-light text-white text-decoration-none hover:text-secondary"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h5
+              class="fw-semibold mb-4"
+              style="font-family: 'Poppins', sans-serif"
+            >
+              Contact Info
+            </h5>
+            <ul class="list-unstyled text-white">
+              <li class="mb-3 d-flex align-items-start gap-2">
+                <i class="ri-phone-line text-secondary1 mt-1"></i>
+                <span>+91 9715092104</span>
+              </li>
+              <li class="mb-3 d-flex align-items-start gap-2">
+                <i class="ri-mail-line text-secondary1 mt-1"></i>
+                <span>support@cybomb.com</span>
+              </li>
+              <li class="mb-3 d-flex align-items-start gap-2">
+                <i class="ri-map-pin-line text-secondary1 mt-1"></i>
+                <span
+                  >Cybomb Technologies Pvt Ltd,
+                       Prime Plaza No.54/1, 1st street,
+                       Sripuram colony, St. Thomas Mount,
+                       Chennai, Tamil Nadu - 600 016, India</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h5
+              class="fw-semibold mb-4"
+              style="font-family: 'Poppins', sans-serif"
+            >
+              Newsletter
+            </h5>
+            <p class="text-white mb-3">
+              Subscribe for exclusive travel offers and destination insights
+            </p>
+            <form class="d-flex gap-2">
+              <input
+                type="email"
+                class="form-control bg-opacity-10 border-white border-opacity-20 text-white"
+                placeholder="Your email"
+              />
+              <button
+                class="btn bg-secondary text-primary fw-semibold rounded-button"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="border-top border-white border-opacity-20 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center"
+        >
+          <p class="text-white mb-3 mb-md-0">
+            &copy; 2025 Cybomb Luxury Travel & Hospitality. All rights reserved.
+          </p>
+          <a
+            href="#"
+            class="text-secondary1 text-decoration-none"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+          >
+            <i class="ri-arrow-up-line fs-4"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script>
+      // Navbar scroll effect
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.querySelector(".navbar-scroll");
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 100) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+        });
+      });
+
+      // Scroll animations
+      document.addEventListener("DOMContentLoaded", function () {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll(".fade-in").forEach((el) => {
+          observer.observe(el);
+        });
+      });
+
+      // Smooth scroll for anchor links
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          const navbarCollapse = document.querySelector(".navbar-collapse");
+
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false,
+          });
+
+          bsCollapse.hide();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+.case-objective {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 143px 113px 4px;
+  background: #ffffff;
+  gap: 40px;
+  
+}
+
+/* LEFT TEXT CONTENT */
+.objective-content {
+  flex: 1;
+}
+
+.objective-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111827;
+  word-spacing: 4px;
+}
+
+.objective-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.objective-content li {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #1f2937;
+  word-spacing: 4px;
+}
+
+/* RIGHT IMAGE CONTENT */
+.objective-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.objective-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  padding-top: 13px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .case-objective {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .objective-image img {
+    max-width: 300px;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,64 @@
+/* CaseObjective.module.css */
+.caseObjective {
+  background: #ffffff;
+}
+
+.objectiveContent h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #111827;
+  word-spacing: 4px;
+  justify-self: center;
+}
+
+.objectiveContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.objectiveContent li {
+  font-size: 25px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: #1f2937;
+  word-spacing: 4px;
+  font-weight: 540;
+}
+
+.objectiveImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholderImage {
+  width: 300px;
+  height: 300px;
+  background: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .objectiveContent h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  .objectiveContent li {
+    font-size: 16px;
+  }
+  
+  .placeholderImage {
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+  }
+}

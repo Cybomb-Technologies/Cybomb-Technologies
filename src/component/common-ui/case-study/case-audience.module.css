@@ -1,0 +1,88 @@
+.audienceSection {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #002b5c;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f9f9ff;
+  border: 1px solid #cce3ff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 220px;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark card for 2nd & 4th */
+.darkCard {
+  border: 1px solid #000;
+}
+
+.iconTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 20px;
+  color: #007bff;
+}
+
+.darkIcon {
+  color: #000 !important;
+}
+
+
+.title {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0;
+  color: #007bff;
+}
+
+.darkTitle {
+  color: #000;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #007bff;
+  line-height: 1.4;
+}
+
+.darkDescription {
+  color: #000;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+  }
+}
