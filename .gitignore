@@ -27,3 +27,4 @@ build
 .envgit add .
 .env.production
 .env.development
+ssh-cybomb.txt
