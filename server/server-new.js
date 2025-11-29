@@ -18,7 +18,7 @@ import newsletterRoutes from './routes-new/newsletterRoutes.js';
 import pressreleaseRoute from './routes-new/PressreleaseRoute.js'
 import popupMailRoute from './routes-new/popupMailRoute.js'
 import appRoute from "./routes-new/approute.js";
-
+import notificationRoutes from "./routes-new/notificationRoutes.js";
 import webPaymentRoutes from './routes-new/webPaymentRoutes.js';
 // Load environment variables from .env file
 dotenv.config();
@@ -34,6 +34,7 @@ const app = express();
 app.use(cors({
   origin: [ 'http://localhost:3000',
   'http://localhost:5173',
+  'http://localhost:5174',
   'https://cybomb.com',
   'https://www.cybomb.com',
   'https://api.cybomb.com',
@@ -72,7 +73,7 @@ app.use("/api/popup-mail", popupMailRoute);
 app.use("/api/apps", appRoute);
 // ✅ ADD PAYMENT ROUTES HERE
 app.use('/api/web-payment', webPaymentRoutes);
-
+app.use("/api/notifications", notificationRoutes);
 // Root endpoint
 app.get('/', (req, res) => {
   res.json({

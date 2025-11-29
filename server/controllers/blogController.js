@@ -1,5 +1,5 @@
 import Blog from '../models-new/Blog.js';
-
+import Notification from '../models-new/Notification.js';
 // Get all blogs (Public)
 export const getBlogs = async (req, res) => {
   try {
@@ -124,6 +124,7 @@ export const getBlogsByTag = async (req, res) => {
 };
 
 // Create new blog (Admin only)
+// Create new blog (Admin only)
 export const createBlog = async (req, res) => {
   try {
     const { title, content, author, tags, image, readTime, featured } = req.body;
@@ -153,12 +154,20 @@ export const createBlog = async (req, res) => {
       featured: featured || false
     });
 
-    await blog.save();
-    
+    // 1️⃣ Save blog
+    const savedBlog = await blog.save();
+
+    await Notification.create({
+      title: "New Blog Published",
+      message: `Blog titled "${savedBlog.title}" created by ${savedBlog.author}`,
+      type: "cybomb-blog",
+      relatedId: savedBlog._id
+    });
+
     res.status(201).json({
       success: true,
       message: 'Blog created successfully',
-      data: blog
+      data: savedBlog
     });
   } catch (error) {
     console.error('Blog creation error:', error);
@@ -188,6 +197,7 @@ export const createBlog = async (req, res) => {
     });
   }
 };
+
 
 // Update blog (Admin only)
 export const updateBlog = async (req, res) => {

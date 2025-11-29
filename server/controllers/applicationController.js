@@ -1,6 +1,7 @@
 import Application from '../models-new/Application.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import Notification from '../models-new/Notification.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -8,20 +9,17 @@ const __dirname = path.dirname(__filename);
 // Create new application
 export const createApplication = async (req, res) => {
   try {
-    // UPDATED: Destructure new field 'referredBy'
     const { name, email, phone, role, experience, coverLetter, isReferral, referredBy } = req.body;
     
-    // Validation
     if (!name || !email || !role) {
       return res.status(400).json({
         success: false,
-        message: 'Name, email, and role are required fields.',
+        message: 'Name, email, and role are required fields.'
       });
     }
 
     let resumeData = null;
     
-    // Handle file upload
     if (req.file) {
       resumeData = {
         filename: req.file.filename,
@@ -39,19 +37,28 @@ export const createApplication = async (req, res) => {
       role,
       experience,
       coverLetter,
-      isReferral: isReferral === 'true', // Convert string from FormData to boolean
-      // NEW FIELD ASSIGNMENT
-      referredBy: referredBy || null, 
+      isReferral: isReferral === 'true',
+      referredBy: referredBy || null,
       resume: resumeData
     });
 
-    await application.save();
-    
+    // 1️⃣ Save application
+    const savedApplication = await application.save();
+
+    // 2️⃣ Create notification ONLY on creation
+    await Notification.create({
+      title: "New Job Application Submitted",
+      message: `${name} applied for role "${role}"`,
+      type: "cybomb-appication", // ✅ Use a type you want
+      relatedId: savedApplication._id
+    });
+
     res.status(201).json({
       success: true,
       message: req.file ? 'Application submitted successfully with resume.' : 'Application submitted successfully.',
-      data: application
+      data: savedApplication
     });
+
   } catch (error) {
     console.error('Application creation error:', error);
     res.status(500).json({
