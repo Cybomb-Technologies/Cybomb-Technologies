@@ -1,6 +1,7 @@
 // controllers/newsletterController.js
 import Newsletter from '../models-new/Newsletter.js';
 import ExcelJS from 'exceljs';
+import Notification from '../models-new/Notification.js';
 
 // Subscribe to newsletter
 export const subscribeToNewsletter = async (req, res) => {
@@ -14,30 +15,31 @@ export const subscribeToNewsletter = async (req, res) => {
       });
     }
 
-    // Check if already subscribed
     const existingSubscriber = await Newsletter.findOne({ email });
+
     if (existingSubscriber) {
       if (existingSubscriber.isActive) {
         return res.status(400).json({
           success: false,
           message: 'Email is already subscribed'
         });
-      } else {
-        // Reactivate subscription
-        existingSubscriber.isActive = true;
-        existingSubscriber.unsubscribedAt = null;
-        existingSubscriber.name = name || existingSubscriber.name;
-        await existingSubscriber.save();
-        
-        return res.json({
-          success: true,
-          message: 'Successfully resubscribed to newsletter',
-          data: existingSubscriber
-        });
       }
+
+      // Reactivate (NO notification here)
+      existingSubscriber.isActive = true;
+      existingSubscriber.unsubscribedAt = null;
+      existingSubscriber.name = name || existingSubscriber.name;
+
+      await existingSubscriber.save();
+
+      return res.json({
+        success: true,
+        message: 'Successfully resubscribed to newsletter',
+        data: existingSubscriber
+      });
     }
 
-    // Create new subscription
+    // NEW SUBSCRIBER
     const subscriber = new Newsletter({
       email,
       name,
@@ -46,14 +48,23 @@ export const subscribeToNewsletter = async (req, res) => {
 
     await subscriber.save();
 
+    // 🔔 Notification ONLY for new subscribers
+    await Notification.create({
+      title: "New Newsletter Subscription",
+      message: `${email} subscribed to the newsletter`,
+      type: "cybomb-newsletter",
+      createdFor: "admin"
+    });
+
     res.status(201).json({
       success: true,
       message: 'Successfully subscribed to newsletter',
       data: subscriber
     });
+
   } catch (error) {
     console.error('Newsletter subscription error:', error);
-    
+
     if (error.code === 11000) {
       return res.status(400).json({
         success: false,

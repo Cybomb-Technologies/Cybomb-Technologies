@@ -1,9 +1,8 @@
 import Contact from '../models-new/Contact.js';
-
+import Notification from '../models-new/Notification.js';
 // contactController.js - Updated createContact function
 export const createContact = async (req, res) => {
   try {
-    // Destructure all fields from request body
     const { name, email, phone, message, subscribe, source, referralSource } = req.body; 
     
     const contact = new Contact({
@@ -17,13 +16,23 @@ export const createContact = async (req, res) => {
       formType: req.body.formType || 'contact'
     });
 
+    // 1️⃣ Save contact
     await contact.save();
-    
+
+    // 2️⃣ Create notification ONLY on creation
+    await Notification.create({
+      title: "New Contact Form Submitted",
+      message: `${name} submitted a contact form.`,
+      type: "cybomb-contact",
+      relatedId: contact._id
+    });
+
     res.status(201).json({
       success: true,
       message: 'Contact form submitted successfully',
       data: contact
     });
+
   } catch (error) {
     console.error('Contact creation error:', error);
     res.status(500).json({
