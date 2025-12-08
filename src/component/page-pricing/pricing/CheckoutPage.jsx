@@ -607,7 +607,7 @@ const CheckoutPage = () => {
                           id="terms-agreement"
                           label={
                             <span>
-                              I agree to the <Link to="/terms" target="_blank">Terms of Service</Link> and <Link to="/privacy-policy" target="_blank">Privacy Policy</Link>
+                              I agree to the <Link to="/terms-conditions" target="_blank">Terms of Service</Link> and <Link to="/privacy-policy" target="_blank">Privacy Policy</Link>
                             </span>
                           }
                           required
