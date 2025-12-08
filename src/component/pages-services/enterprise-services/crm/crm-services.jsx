@@ -2,8 +2,19 @@ import CrmServicesContent from "./crm-services-content";
 import StillNotSure from "../../../common-ui/stillnotsure/StillNotSure";
 import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
 import CRMTools from "../../../common-ui/enterprise-services/CRMTools";
+import Metatags from "../../../../SEO/meta-tags";
 
 function CRMServices() {
+  const metaPropsData = {
+    title:
+      "CRM Services in Chennai - Cybomb MNC | Implementation, Development & Consulting",
+    description:
+      "Expert CRM services including Salesforce, HubSpot, Zoho, Microsoft Dynamics implementation, custom CRM development, automation, and consulting solutions for businesses.",
+    keyword:
+      "crm software development company, best sales crm software, best crm software in chennai, best customized crm software company, best crm software company in chennai",
+    url: "https://www.cybomb.com/services/crm-services",
+    image: "https://www.cybomb.com/images/logo-11.png",
+  };
   const tabsData = [
     {
       id: "planning",
@@ -190,6 +201,7 @@ function CRMServices() {
 
   return (
     <>
+      <Metatags metaProps={metaPropsData} />
       <CrmServicesContent />
       <AgileProcess1
         title="Our Agile Process"
