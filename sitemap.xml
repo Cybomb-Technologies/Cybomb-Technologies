@@ -6,11 +6,70 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://www.cybomb.com/</loc>
   <lastmod>2025-11-06T06:57:13+00:00</lastmod>
+  <priority>0.1</priority>
 </url>
 
+<url>
+  <loc>https://www.cybomb.com/services/api-development</loc>
+  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.cybomb.com/services/custom-software-integration-services</loc>
+  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.cybomb.com/services/ecommerce-development</loc>
+  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.cybomb.com/services/software-development</loc>
+  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.cybomb.com/services/zoho-services</loc>
+  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.cybomb.com/services/crm-services</loc>
+  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
+  <priority>0.1</priority>
+</url>
+
+<url>
+  <loc>https://www.cybomb.com/services/cloud-solution</loc>
+  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.cybomb.com/services/data-engineering</loc>
+  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.cybomb.com/services/hubspot-services</loc>
+  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.cybomb.com/services/salesforce-services</loc>
+  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
 
 </urlset>
