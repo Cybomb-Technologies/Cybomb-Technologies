@@ -8,12 +8,13 @@ function DataEngineering() {
     title:
       "Data Engineering Services - Cybomb Technologies | Build Scalable Data Platforms & Pipelines",
     description:
-      "Cybomb Technologies offers expert Data Engineering Services to design, build, and manage scalable data pipelines, warehouses, and analytics platforms for actionable business insights.",
+      "Cybomb Tech offers expert Data Engineering Services to design, build, and manage scalable data pipelines, warehouses, and analytics platforms for actionable business insights.",
     keyword:
       "data engineering services & solutions, data engineering services in chennai, trusted data engineering company, data engineering services & solutions, data engineering consulting services, data engineering services & consulting",
     url: "https://www.cybomb.com/services/data-engineering",
     image: "https://www.cybomb.com/images/logo-11.png",
   };
+
   const tabsData = [
     {
       id: "planning",

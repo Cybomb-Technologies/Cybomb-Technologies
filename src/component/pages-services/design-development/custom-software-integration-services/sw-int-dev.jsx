@@ -5,7 +5,8 @@ import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
 
 export default function SwIntDev() {
   const metaPropsData = {
-    title: "Custom Software Integration Services in Chennai - Cybomb MNC",
+    title:
+      "Custom Software Integration Services in Chennai - Cybomb Technologies",
     description:
       "Cybomb Tech in Chennai offers seamless system connectivity, application integration, database connectivity, and cloud platform integration services for enhanced business efficiency.",
     keyword:

@@ -5,9 +5,9 @@ import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
 
 export default function Ecommdev() {
   const metaPropsData = {
-    title: "E-commerce Development Services in Chennai | Cybomb MNC",
+    title: "E-commerce Development Services in Chennai | Cybomb Technologies",
     description:
-      "Cybomb Tech MNC offers E-commerce development services to build secure, scalable, and conversion-focused online stores. We provide custom store development, platform solutions, payment integration, and mobile-optimized shopping experiences.",
+      "Cybomb Tech offers E-commerce development services to build secure, scalable, and conversion-focused online stores. We provide custom store development, platform solutions, payment integration, and mobile-optimized shopping experiences.",
     keyword:
       "ecommerce website development company in chennai, leading ecommerce development company, experienced e-commerce website development, ecommerce web development services, online store development chennai",
     url: "https://www.cybomb.com/services/ecommerce-development",
