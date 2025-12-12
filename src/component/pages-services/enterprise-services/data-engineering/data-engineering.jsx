@@ -14,6 +14,7 @@ function DataEngineering() {
     url: "https://www.cybomb.com/services/data-engineering",
     image: "https://www.cybomb.com/images/logo-11.png",
   };
+
   const tabsData = [
     {
       id: "planning",

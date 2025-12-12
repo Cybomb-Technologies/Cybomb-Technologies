@@ -8,7 +8,7 @@ function ApiDevelopment() {
   const metaPropsData = {
     title: "API Development Services in Chennai | Cybomb Technologies",
     description:
-      "Cybomb Tech provides scalable, secure, and high-performance API Development Services. We specialize in RESTful & GraphQL APIs, third-party integrations, and custom backend solutions that ensure seamless connectivity and optimal performance.",
+      "Cybomb Tech provides scalable, secure, and high-performance API Development Services. We specialize in RESTful & GraphQL APIs, third-party integrations and custom backend solutions that ensure seamless connectivity and optimal performance.",
     keyword:
       "best api development company in chennai, custom api integration services, api integration services in chennai, custom api & middleware integration, api integration development company",
     url: "https://www.cybomb.com/services/api-development",
