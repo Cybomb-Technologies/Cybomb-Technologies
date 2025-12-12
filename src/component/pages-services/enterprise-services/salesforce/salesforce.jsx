@@ -6,9 +6,9 @@ import Metatags from "../../../../SEO/meta-tags";
 function Salesforce() {
   const metaPropsData = {
     title:
-      "Salesforce Services in Chennai - Cybomb MNC | Implementation, Customization & Integration",
+      "Salesforce Services in Chennai - Cybomb Technologies | Implementation, Customization & Integration",
     description:
-      "Cybomb Tech MNC offers expert Salesforce services including Sales Cloud, Service Cloud, Marketing Cloud implementation, customization, and integration solutions.",
+      "Cybomb Tech offers expert Salesforce services including Sales Cloud, Service Cloud, Marketing Cloud implementation, customization, and integration solutions.",
     keyword:
       "best salesforce development company in chennai, salesforce implementation services, salesforce partner in chennai, salesforce implementation consulting, leading salesforce implementation partner, certified salesforce consulting services",
     url: "https://www.cybomb.com/services/salesforce-services",

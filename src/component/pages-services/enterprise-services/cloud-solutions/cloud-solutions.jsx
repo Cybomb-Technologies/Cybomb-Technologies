@@ -5,11 +5,12 @@ import Metatags from "../../../../SEO/meta-tags";
 
 function CloudSolutions() {
   const metaPropsData = {
-    title: "Cloud Solutions Services in Chennai - Cybomb MNC | AWS, Azure, GCP",
+    title:
+      "Cloud Solutions Services in Chennai - Cybomb Technologies | AWS, Azure, GCP",
     description:
-      "Expert cloud solutions including AWS, Azure, Google Cloud implementation, migration, DevOps, containerization, and cloud-native application development services.",
+      "Cybomb Tech provides expert cloud solutions including AWS, Azure, Google Cloud implementation, migration, DevOps, containerization, and cloud-native application development services.",
     keyword:
-      "Cloud Solutions in Chennai, best cloud consulting company in chennai, cloud hosting chennai, multi cloud management services,, cloud storage solutions in chennai, cloud management services, best cloud solutions services in chennai",
+      "Cloud Solutions in Chennai, best cloud consulting company in chennai, cloud hosting chennai, multi cloud management services, cloud storage solutions in chennai, cloud management services, best cloud solutions services in chennai",
     url: "https://www.cybomb.com/services/cloud-solution",
     image: "https://www.cybomb.com/images/logo-11.png",
   };

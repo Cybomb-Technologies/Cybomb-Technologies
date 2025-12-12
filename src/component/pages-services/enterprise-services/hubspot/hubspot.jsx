@@ -8,7 +8,7 @@ function HubSpot() {
     title:
       "HubSpot CRM Services - Cybomb Technologies | Implementation, Integration & Customization",
     description:
-      "Cybomb Technologies offers expert HubSpot CRM services including implementation, customization, marketing automation, and full HubSpot ecosystem integration for business growth.",
+      "Cybomb Tech offers expert HubSpot CRM services including implementation, customization, marketing automation, and full HubSpot ecosystem integration for business growth.",
     keyword:
       "best custom hubspot integration services in chennai, leading hubspot solutions partner, hubspot crm implementation service provider, expert hubspot development services, experienced hubspot website development, hubspot api integration service",
     url: "https://www.cybomb.com/services/hubspot-services",

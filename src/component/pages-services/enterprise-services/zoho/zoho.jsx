@@ -6,11 +6,11 @@ import Metatags from "../../../../SEO/meta-tags";
 function Zoho() {
   const metaPropsData = {
     title:
-      "Zoho CRM Services in Chennai - Cybomb MNC | Implementation, Customization & Support",
+      "Zoho CRM Services in Chennai - Cybomb Technologies | Implementation, Customization & Support",
     description:
-      "Expert Zoho services including CRM implementation, Zoho One ecosystem, custom module development, workflow automation, Deluge scripting, and integration solutions.",
+      "Cybomb Tech provides expert Zoho services including CRM implementation, Zoho One ecosystem, custom module development, workflow automation, Deluge scripting, and integration solutions.",
     keyword:
-      "zoho authorised partner chennai, best zoho implementation services, authorized zoho impementation partner, zoho consulting services, trusted zoho partner in chennai",
+      "zoho authorised partner chennai, best zoho implementation services, authorized zoho implementation partner, zoho consulting services, trusted zoho partner in chennai",
     url: "https://www.cybomb.com/services/zoho-services",
     image: "https://www.cybomb.com/images/logo-11.png",
   };
