@@ -32,7 +32,7 @@ function Aboutourjourney() {
     "2025-today": {
   title: "october 2025",
   description:
-    "In October 2025, Cybomb LLP was converted to Cybomb Private Limited, marking a significant milestone in our corporate growth and strengthening our commitment to delivering exceptional digital solutions.\nExpanding our global footprint by forming a strategic partnership with a leading U.S. Incorporated (Inc.) company. This move solidifies our status as a truly Multinational Company (MNC).",
+    "In October 2025, Cybomb LLP was converted to Cybomb Private Limited, marking a significant milestone in our corporate growth and strengthening our commitment to delivering exceptional digital solutions.\n\nExpanding our global footprint by forming a strategic partnership with a leading U.S. Incorporated (Inc.) company. This move solidifies our status as a truly Multinational Company (MNC).",
   icon: "⚡",
   stats: "Milestone"
 }
