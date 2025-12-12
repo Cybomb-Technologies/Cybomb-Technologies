@@ -3,7 +3,7 @@ import Metatags from "../../../../../SEO/meta-tags";
 
 function ReactApp() {
     const metaPropsData = {
-        title: "React Development Services in chennai | Cybomb MNC",
+        title: "React Development Services in chennai | Cybomb",
         description:
           "Cybomb Technologies provides expert React development services, creating fast, interactive, and scalable web applications with seamless user experiences.",
         keyword:

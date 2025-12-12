@@ -5,9 +5,9 @@ import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 function Aem() {
   const metaPropsData = {
     title:
-      "Adobe Experience Manager Services in chennai - Cybomb MNC",
+      "Adobe Experience Manager Services in chennai - Cybomb",
     description:
-      "Cybomb Tech MNC provides expert AEM development services, delivering personalized, scalable, and high-performing digital experiences. We specialize in AEM Sites, Assets, and custom integrations.",
+      "Cybomb Tech provides expert AEM development services, delivering personalized, scalable, and high-performing digital experiences. We specialize in AEM Sites, Assets, and custom integrations.",
     keyword:
       "Adobe Experience Manager Services in chennai,AEM Development, Adobe Experience Manager, AEM Sites, AEM Assets, AEM Integration, Digital Experience Platform, Cybomb Technologies",
     url: "https://www.cybomb.com/services/aem-development",

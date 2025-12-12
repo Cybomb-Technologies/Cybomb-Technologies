@@ -6,7 +6,7 @@ import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
 
 export default function UiUxDesign() {
   const metaPropsData = {
-  title: "Mobile & web UI/UX Design Services in Chennai - Cybomb MNC",
+  title: "Mobile & web UI/UX Design Services in Chennai - Cybomb",
   description:
     "Cybomb Tech in Chennai offers intuitive UX/UI research, web and app design, development, branding, and user-centered mobile and web UI/UX design and consulting.",
   keyword:

@@ -6,7 +6,7 @@ import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
 
 export default function TechConsulting() {
   const metaPropsData = {
-  title: "Best Tech consulting & services in chennai | Cybomb MNC",
+  title: "Best Tech consulting & services in chennai | Cybomb",
   description:
     "Cybomb Tech is a global digital and technology services company with AI at its core, delivering cloud, data, and digital solutions for enterprises in Chennai.",
   keyword:

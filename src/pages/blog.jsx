@@ -9,7 +9,7 @@ import Metatags from "../SEO/meta-tags";
 function Blog() {
 
   const metaPropsData = {
-    title: "Cybomb MNC Blog | Latest Web Development & AI Insights",
+    title: "Latest Web Development & AI Insights | Cybomb Blog",
     description:
       "Explore Cybomb Technologies Blog – articles on web development, mobile apps, AI, SaaS, UI/UX, cloud solutions, and digital transformation for businesses worldwide.",
     keyword:

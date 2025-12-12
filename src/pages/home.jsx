@@ -17,8 +17,8 @@ import HomePlaystore from "../component/home/home-playstore";
 function Home() {
 
   const metaPropsData = {
-    title: "Mobile App and Web Development in Chennai | Cybomb MNC",
-    description:"Cybomb Technologies(MNC) is a top IT company offering expert web development, mobile app development, UI/UX design, and digital solutions for startups and enterprises.",
+    title: "Mobile App and Web Development in Chennai | Cybomb",
+    description:"Cybomb Technologies is a top IT company offering expert web development, mobile app development, UI/UX design, and digital solutions for startups and enterprises.",
     keyword:"Cybomb Technologies, Web Development, Mobile App Development, UI UX Design, React Developer, Chennai IT Company, Software Services India",
     url: "https://www.cybomb.com/",
     image: "https://www.cybomb.com/images/logo-11.png",

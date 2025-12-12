@@ -7,9 +7,9 @@ import AgileProcess1 from '../../../common-ui/agile-process/agile-process1';
 
 export default function BespokeDev() {
   const metaPropsData = {
-  title: "Bespoke Development Services in chennai | Cybomb MNC",
+  title: "Bespoke Development Services in chennai | Cybomb",
   description:
-    "Cybomb Tech MNC provides Bespoke Development Services tailored to your business needs. We design and develop custom web, mobile, and enterprise applications that deliver scalability, performance, and competitive advantage.",
+    "Cybomb Tech provides Bespoke Development Services tailored to your business needs. We design and develop custom web, mobile, and enterprise applications that deliver scalability, performance, and competitive advantage.",
   keyword:
     "Bespoke Development Services in chennai, Custom Software Development, Tailored Web Applications, Bespoke Mobile App Development, Enterprise Software Solutions, Custom Application Design, Bespoke Software India",
   url: "https://www.cybomb.com/services/bespoke-development",
