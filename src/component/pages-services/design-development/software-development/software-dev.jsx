@@ -8,7 +8,7 @@ export default function SoftwareDev() {
   const metaPropsData = {
     title: "Software Development Services in Chennai | Cybomb Technologies",
     description:
-      "Cybomb Techn MNC offers Software Development Services including custom web applications, mobile apps, and enterprise solutions with scalability, performance, and security for businesses in Chennai.",
+      "Cybomb offers Software Development Services including custom web applications, mobile apps, and enterprise solutions with scalability, performance, and security for businesses in Chennai.",
     keyword:
       "best software development company in chennai, ai powered software development & consulting, custom software development company, chennai software solutions, custom software development services",
     url: "https://www.cybomb.com/services/software-development",

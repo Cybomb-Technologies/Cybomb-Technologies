@@ -4,7 +4,7 @@ import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 function FlutterApp() {
   const metaPropsData = {
-    title: "Flutter App Development in chennai | Cybomb MNC",
+    title: "Flutter App Development in chennai | Cybomb",
     description:
       "Cybomb Tech in chennai offers expert Flutter app development services, building high-performance, cross-platform mobile applications with a single codebase for Android and iOS.",
     keyword:

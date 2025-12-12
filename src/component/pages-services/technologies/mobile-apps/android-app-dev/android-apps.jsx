@@ -4,7 +4,7 @@ import AgileProcess1 from '../../../../common-ui/agile-process/agile-process1';
 import StillNotSure from "../../../../common-ui/stillnotsure/StillNotSure";
 function AndroidApp() {
   const metaPropsData = {
-    title: "Android App Development service in chennai | Cybomb MNC",
+    title: "Android App Development service in chennai | Cybomb",
     description:
       "Cybomb Tech, a leading Android app development company in Chennai, delivers scalable, high-performance and user-friendly mobile apps for businesses across industries.",
     keyword:
