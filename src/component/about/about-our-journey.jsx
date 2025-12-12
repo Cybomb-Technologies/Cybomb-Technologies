@@ -30,11 +30,13 @@ function Aboutourjourney() {
       stats: "Team: 80+"
     },
     "2025-today": {
-      title: "Today",
-      description: "In October 2025, Cybomb LLP was converted to Cybomb Private Limited, marking a significant milestone in our corporate growth and strengthening our commitment to delivering exceptional digital solutions.",
-      icon: "⚡",
-      stats: "Milestone"
-    }
+  title: "october 2025",
+  description:
+    "In October 2025, Cybomb LLP was converted to Cybomb Private Limited, marking a significant milestone in our corporate growth and strengthening our commitment to delivering exceptional digital solutions.\n\nExpanding our global footprint by forming a strategic partnership with a leading U.S. Incorporated (Inc.) company. This move solidifies our status as a truly Multinational Company (MNC).",
+  icon: "⚡",
+  stats: "Milestone"
+}
+
     
   };
 
@@ -91,7 +93,11 @@ function Aboutourjourney() {
                   {/* <span className="year-badge">2025</span> */}
                 </div>
               </div>
-              <p>{journeyData[activeYear].description}</p>
+
+              <p style={{ whiteSpace: "pre-line" }}>
+  {journeyData[activeYear].description}
+</p>
+
               <div className="card-stats">
                 <span className="stat-tag">{journeyData[activeYear].stats}</span>
               </div>

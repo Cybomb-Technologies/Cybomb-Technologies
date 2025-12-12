@@ -9,7 +9,7 @@ function Termscontent() {
           </h2>
           <h6>Effective Date: 21-02-2025</h6>
           <p>
-            Welcome to Cybomb MNC. By accessing or using
+            Welcome to Cybomb. By accessing or using
             www.cybomb.com (the "Website"), you agree to comply with and be
             bound by the following Terms and Conditions. If you do not agree
             with these terms, please refrain from using our website.
