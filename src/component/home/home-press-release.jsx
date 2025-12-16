@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./home-press-release.module.css";
 
-const API_URL = import.meta.env.VITE_API_BASE_URL; 
+const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 function HomePressrelease() {
   const [press, setPress] = useState([]);
@@ -93,7 +93,7 @@ function HomePressrelease() {
   }
 
   return (
-    <div style={{backgroundColor:"#f4efef"}}>
+    <div style={{ backgroundColor: "#f4efef" }}>
       <div className={`container ${styles.pressContainer}`}>
         {/* ✅ Internal CSS for 2-line description */}
         <style>
@@ -111,9 +111,7 @@ function HomePressrelease() {
 
         {/* Header Section */}
         <div className="text-center mb-5">
-          <h1
-            className={`h1 fw-bold text-primary mb-3 ${styles.pressTitle}`}
-          >
+          <h1 className={`h1 fw-bold text-primary mb-3 ${styles.pressTitle}`}>
             Latest Press Releases
           </h1>
           <p className="lead text-muted">
@@ -122,12 +120,16 @@ function HomePressrelease() {
           <div className={styles.titleUnderline}></div>
         </div>
 
-        {/* Press Releases Grid */}
+        {/* Press Releases Grid - Increased spacing with g-5 and px-4 */}
         <div className="row g-4">
           {press.slice(0, visible).map((item) => (
-            <div key={item._id} className="col-xl-4 col-lg-6 col-md-6 px-4 px-lg-0">
+            <div
+              key={item._id}
+              className="col-xl-4 col-lg-6 col-md-6 px-4 px-lg-4" // Increased horizontal padding
+            >
               <div
                 className={`card h-100 shadow-lg border-0 overflow-hidden ${styles.pressCard}`}
+                style={{ marginBottom: "1rem" }}
               >
                 {/* Image Section */}
                 <div className={styles.imageContainer}>
@@ -138,8 +140,8 @@ function HomePressrelease() {
                       alt={item.title}
                       loading="lazy"
                       onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.nextElementSibling.style.display = 'flex';
+                        e.target.style.display = "none";
+                        e.target.nextElementSibling.style.display = "flex";
                       }}
                     />
                   ) : null}
@@ -201,7 +203,8 @@ function HomePressrelease() {
                   <div className="mt-4 pt-2">
                     <Link
                       to={`/pressrelease/${item._id}`}
-                      className={`btn w-100 ${styles.readMoreBtn}`} style={{backgroundColor: "#0098e8"}}
+                      className={`btn w-100 ${styles.readMoreBtn}`}
+                      style={{ backgroundColor: "#0098e8" }}
                     >
                       Read More <i className="fas fa-arrow-right ms-2"></i>
                     </Link>
@@ -215,7 +218,12 @@ function HomePressrelease() {
         {/* Load More Button */}
         {visible < press.length && (
           <div className="text-center mt-5">
-            <button style={{backgroundColor: "#0098e8", color:"white", borderRadius:"20px"}}
+            <button
+              style={{
+                backgroundColor: "#0098e8",
+                color: "white",
+                borderRadius: "20px",
+              }}
               className={`btn btn-lg px-5 `}
               onClick={loadMore}
             >
