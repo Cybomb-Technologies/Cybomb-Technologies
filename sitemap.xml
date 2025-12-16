@@ -8,7 +8,7 @@
 
 <url>
   <loc>https://www.cybomb.com/</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
+  <lastmod>2025-12-16T06:57:13+00:00</lastmod>
   <priority>0.1</priority>
 </url>
 
@@ -68,20 +68,20 @@
 
 <url>
   <loc>https://www.cybomb.com/blog</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
-  <priority>0.7</priority>
+  <lastmod>2025-12-16T06:57:13+00:00</lastmod>
+  <priority>0.1</priority>
 </url>
 
 <url>
   <loc>https://www.cybomb.com/services/mobile-app-development</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
-  <priority>0.7</priority>
+  <lastmod>2025-12-16T06:57:13+00:00</lastmod>
+  <priority>0.1</priority>
 </url>
 
 <url>
   <loc>https://www.cybomb.com/services/web-development</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
-  <priority>0.7</priority>
+  <lastmod>2025-12-16T06:57:13+00:00</lastmod>
+  <priority>0.1</priority>
 </url>
 
 <url>
@@ -104,20 +104,20 @@
 
 <url>
   <loc>https://www.cybomb.com/services/ui-ux-design</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
-  <priority>0.7</priority>
+  <lastmod>2025-12-16T06:57:13+00:00</lastmod>
+  <priority>0.1</priority>
 </url>
 
 <url>
   <loc>https://www.cybomb.com/services/android-app-development</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
-  <priority>0.7</priority>
+  <lastmod>2025-12-16T06:57:13+00:00</lastmod>
+  <priority>0.1</priority>
 </url>
 
 <url>
   <loc>https://www.cybomb.com/services/flutter-app-development</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
-  <priority>0.7</priority>
+  <lastmod>2025-12-16T06:57:13+00:00</lastmod>
+  <priority>0.1</priority>
 </url>
 
 <url>
@@ -158,8 +158,8 @@
 
 <url>
   <loc>https://www.cybomb.com/career</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
-  <priority>0.7</priority>
+  <lastmod>2025-12-16T06:57:13+00:00</lastmod>
+  <priority>0.1</priority>
 </url>
 
 <url>
@@ -208,6 +208,12 @@
   <loc>https://www.cybomb.com/services/staff-agumentation</loc>
   <lastmod>2025-11-06T06:57:13+00:00</lastmod>
   <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.cybomb.com/USA</loc>
+  <lastmod>2025-12-16T06:57:13+00:00</lastmod>
+  <priority>0.1</priority>
 </url>
 
 </urlset>

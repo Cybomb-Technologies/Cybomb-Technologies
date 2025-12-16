@@ -28,6 +28,7 @@
   border-radius: 16px;
   overflow: hidden;
   background: white;
+  margin-bottom: 1.5rem !important; /* Added extra margin between cards */
 }
 
 .pressCard:hover {
@@ -76,13 +77,18 @@
 }
 
 .readMoreBtn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   transition: left 0.5s;
 }
 
@@ -119,13 +125,18 @@
   .pressContainer {
     padding: 40px 0;
   }
-  
+
   .pressTitle {
     font-size: 2rem;
   }
-  
+
   .imageContainer {
     height: 180px;
+  }
+
+  /* Adjust spacing for mobile */
+  .pressCard {
+    margin-bottom: 2rem !important;
   }
 }
 
@@ -146,12 +157,24 @@
 }
 
 /* Stagger animation for cards */
-.pressCard:nth-child(1) { animation-delay: 0.1s; }
-.pressCard:nth-child(2) { animation-delay: 0.2s; }
-.pressCard:nth-child(3) { animation-delay: 0.3s; }
-.pressCard:nth-child(4) { animation-delay: 0.4s; }
-.pressCard:nth-child(5) { animation-delay: 0.5s; }
-.pressCard:nth-child(6) { animation-delay: 0.6s; }
+.pressCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.pressCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.pressCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.pressCard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.pressCard:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.pressCard:nth-child(6) {
+  animation-delay: 0.6s;
+}
 
 /* Badge styles */
 .badge {
@@ -178,4 +201,15 @@
 
 .pressContainer ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+/* Additional spacing classes for better separation */
+.card-spacing {
+  margin: 1rem 0;
+}
+
+/* Container spacing for better layout */
+.row.g-5 {
+  --bs-gutter-x: 3rem;
+  --bs-gutter-y: 2.5rem;
 }

@@ -18,11 +18,11 @@ import HomeIndustries from "../component/usa-home/usa-home-industries";
 
 function Home() {
   const metaPropsData = {
-    title: "Cybomb Technologies | Mobile App and Web Development in USA",
+    title: "Best Web & Mobile App Development in USA | Cybomb Technologies",
     description:
-      "Cybomb Technologies Inc. is a top company offering expert web development, mobile app development, UI/UX design, and digital solutions for startups and enterprises.",
+      "Cybomb Technologies Inc. offers expert web development, mobile apps, UI/UX design & digital solutions for startups and enterprises globally.",
     keyword:
-      "Cybomb Technologies INC, Web Development, Mobile App Development, UI UX Design, React Developer, Chennai IT Company, Software Services India",
+      "cybomb technologies inc, web development, mobile app development, ui ux design, react developer, chennai it company, software services india",
     url: "https://www.cybomb.com/",
     image: "https://www.cybomb.com/images/logo-11.png",
   };

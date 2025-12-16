@@ -5,15 +5,13 @@ import CybombBlog from "../component/blog/cybomb-blog";
 // import { BlogPost } from "../component/blog/cybomb-blog";
 import Metatags from "../SEO/meta-tags";
 
-
 function Blog() {
-
   const metaPropsData = {
-    title: "Latest Web Development & AI Insights | Cybomb Blog",
+    title: "Latest Web Development & AI Insights Articles | Cybomb Tech Blogs",
     description:
-      "Explore Cybomb Technologies Blog – articles on web development, mobile apps, AI, SaaS, UI/UX, cloud solutions, and digital transformation for businesses worldwide.",
+      "Explore Cybomb Technologies articles on web development, mobile apps, AI, SaaS, UI/UX, cloud solutions, and digital transformation strategies globally.",
     keyword:
-      "Cybomb Blog, Web Development Blog, AI Blog, SaaS Blog, Mobile App Development Articles, UI UX Tips, Tech News, Cybomb Technologies",
+      "web development blog, ai blog, saas blog, mobile app development articles, ui ux tips, tech news",
     url: "https://www.cybomb.com/blog",
     image: "https://www.cybomb.com/images/logo-11.png",
   };
@@ -23,15 +21,15 @@ function Blog() {
       <Metatags metaProps={metaPropsData} />
 
       <Routes>
-        <Route 
-          path="/" 
+        <Route
+          path="/"
           element={
             <>
               <Blogbanner />
               <CybombBlog />
               <Blogcontent />
             </>
-          } 
+          }
         />
 
         {/* For Single Blog Post */}
