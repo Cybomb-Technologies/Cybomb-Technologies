@@ -1,14 +1,16 @@
-.news-letter{
-    background-color:  #003459!important;
+.news-letter {
+    background-color: #003459 !important;
 }
-.newsletter-card{
-   background: #FFFFFF !important;
+
+.newsletter-card {
+    background: #FFFFFF !important;
 }
-.news-letter-btn{
-    background: linear-gradient(90deg, #2563EB 0%, #9333EA 100%);
-    border:none !important;
+
+.news-letter-btn {
+    background: #003459;
+    border: none !important;
     padding: 8px;
-    color:white;
+    color: white;
     font-weight: 600;
     border-radius: 7px;
-} 
+}

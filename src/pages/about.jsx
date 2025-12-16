@@ -1,12 +1,14 @@
 import Aboutbanner from "../component/about/about-banner";
 import Aboutnewsletter from "../component/about/about-news-letter";
 import Aboutourcore from "../component/about/about-our-core";
-import Aboutourjourne from "../component/about/about-our-journey";
-import Aboutourmission from "../component/about/about-our-mission";
-import Aboutourvision from "../component/about/about-our-vision";
+import Aboutourjourney from "../component/about/about-our-journey";
+import MissionVision from "../component/about/MissionVision";
+import LeadershipTeam from "../component/about/LeadershipTeam";
+// import Aboutourmission from "../component/about/about-our-mission";
+// import Aboutourvision from "../component/about/about-our-vision";
 import Aboutourteam from "../component/about/about-ourteam";
 import ManagementTeam from "../component/about/ManagementTeam";
-import TeamMember from "../component/about/team-member";
+// import TeamMember from "../component/about/team-member";
 import Metatags from "../SEO/meta-tags";
 
 function About() {
@@ -24,10 +26,13 @@ function About() {
     <>
       <Metatags metaProps={metaPropsData} />
       <Aboutbanner />
-      <Aboutourmission />
-      <Aboutourvision />
-      <Aboutourjourne />
+
+      {/* <Aboutourmission /> */}
+      {/* <Aboutourvision /> */}
+      <Aboutourjourney />
+      <MissionVision />
       <Aboutourcore />
+      {/* <LeadershipTeam /> */}
       <ManagementTeam />
       {/* <TeamMember /> */}
       <Aboutourteam />

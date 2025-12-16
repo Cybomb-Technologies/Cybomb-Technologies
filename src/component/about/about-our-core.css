@@ -1,11 +1,32 @@
 .core-value {
-  background: #003459;
+  background: #ffffff;
+  padding: 80px 0;
 }
-.our-core-card{
-    background: #FFFFFF !important;
+
+.our-core-card {
+  background: #ffffff;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
-/* .our-core-card p{
-    color: rgb(235, 232, 232);
-} */
 
+.our-core-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
 
+.our-core-card h6 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.our-core-card p {
+  color: #64748b;
+  /* Slate-500 matches text-secondary roughly but cleaner */
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
