@@ -15,19 +15,20 @@ import HomePlaystore from "../component/home/home-playstore";
 // import HomePricing from "../component/home/home-pricing";
 
 function Home() {
-
   const metaPropsData = {
-    title: "Mobile App and Web Development in Chennai | Cybomb",
-    description:"Cybomb Technologies is a top IT company offering expert web development, mobile app development, UI/UX design, and digital solutions for startups and enterprises.",
-    keyword:"Cybomb Technologies, Web Development, Mobile App Development, UI UX Design, React Developer, Chennai IT Company, Software Services India",
+    title: "Best Mobile App & Web Development in Chennai | Cybomb Technologies",
+    description:
+      "Cybomb Technologies provides custom mobile app development, responsive web development & solutions, UI/UX design, and software services for wide range of businesses.",
+    keyword:
+      "web development, mobile app development, ui ux design, chennai it company, software services india",
     url: "https://www.cybomb.com/",
     image: "https://www.cybomb.com/images/logo-11.png",
   };
 
   return (
     <>
-      <Metatags  metaProps={metaPropsData}/>
-      
+      <Metatags metaProps={metaPropsData} />
+
       <HomeBanner />
       <HomeService />
       <HomeKeydiffer />
@@ -37,14 +38,14 @@ function Home() {
       <Homeourexpertise />
       {/* <HomePricing/> */}
       <Homeform />
-      
-      <HomePartners/>
+
+      <HomePartners />
       <Homecontact />
       <Homenewsletter />
-     
-      <HomePressrelease/>
-     
-        <HomePlaystore/>
+
+      <HomePressrelease />
+
+      <HomePlaystore />
     </>
   );
 }
