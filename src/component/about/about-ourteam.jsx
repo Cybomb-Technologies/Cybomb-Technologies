@@ -2,14 +2,14 @@ import "./about-ourteam.css";
 import { useEffect } from 'react';
 
 function Aboutourteam() {
- 
+
   useEffect(() => {
 
     if (typeof window !== 'undefined' && window.bootstrap) {
       const carousel = new window.bootstrap.Carousel(document.getElementById('aboutCarousel'), {
-        interval: 1000,  
-        pause: 'hover',  
-        wrap: true      
+        interval: 1000,
+        pause: 'hover',
+        wrap: true
       });
     }
   }, []);
@@ -40,15 +40,15 @@ function Aboutourteam() {
          
           
           </div> */}
-          
+
           {/* Carousel Section */}
           <div className="row mt-4" data-aos="fade-right">
-            <h2 className="text-primary">Gallery
-</h2>
+            <h2 className="text-white">Gallery
+            </h2>
             <div className="col-lg-8 mx-auto mt-3">
-              <div 
-                id="aboutCarousel" 
-                className="carousel slide" 
+              <div
+                id="aboutCarousel"
+                className="carousel slide"
                 data-bs-ride="carousel"
                 data-bs-interval="3000"
               >
@@ -62,10 +62,10 @@ function Aboutourteam() {
                   <div className="carousel-item">
                     <img src="images/about/about-3.jpg" className="d-block w-100" alt="Team photo 3" />
                   </div>
-                    <div className="carousel-item">
+                  <div className="carousel-item">
                     <img src="images/about/about-4.jpg" className="d-block w-100" alt="Team photo 3" />
                   </div>
-                    <div className="carousel-item">
+                  <div className="carousel-item">
                     <img src="images/about/about-5.jpg" className="d-block w-100" alt="Team photo 3" />
                   </div>
                 </div>

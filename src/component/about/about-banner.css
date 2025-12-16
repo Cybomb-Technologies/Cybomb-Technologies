@@ -1,8 +1,62 @@
 .about-banner-img {
-  background: url('/images/about-banner.webp'); 
-  background-size: cover;        
-  background-position: center;   
-  background-repeat: no-repeat;  
-  height: 260px;                 
+  background: url('/images/about-banner.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Increased height to fit content, or let it grow with padding */
+  min-height: 500px;
   width: 100%;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
+}
+
+.banner-content-card {
+  background-color: white;
+  border-radius: 30px;
+  /* Large rounded corners as per image */
+  padding: 40px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.banner-content-text {
+  color: #334155;
+  /* Slate-700 equivalent for good readability */
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.banner-content-text:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .banner-content-card {
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .banner-content-text {
+    font-size: 0.95rem;
+  }
 }

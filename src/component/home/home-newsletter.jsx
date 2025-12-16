@@ -11,24 +11,24 @@ function Homenewsletter() {
   const handleSubscribe = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
-    
+
     try {
       const res = await fetch(`${API_URL}/api/newsletter/subscribe`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           email,
           source: "home-newsletter" // Different source to track where subscription came from
         }),
       });
-      
+
       const data = await res.json();
-      
+
       if (res.ok && data.success) {
         setStatus("✅ Subscription successful!");
         setEmail("");
         setIsSubscribed(true);
-        
+
         // Reset status after 3 seconds
         setTimeout(() => {
           setStatus("");
@@ -43,7 +43,7 @@ function Homenewsletter() {
   };
 
   return (
-    <section className="newsletter-section text-white py-5">
+    <section id="newsletter" className="newsletter-section text-white py-5">
       <div className="container" data-aos="zoom-out-up">
         <h4 className="headline mb-3 text-center">
           <span className="badge px-4 py-2 rounded-pill mx-auto d-inline-block">
@@ -82,8 +82,8 @@ function Homenewsletter() {
             </p>
           </div>
         )}
-          
-        
+
+
 
         <div className="extra-info text-light mt-4">
           <div className="d-flex justify-content-center gap-4 flex-wrap mb-2">

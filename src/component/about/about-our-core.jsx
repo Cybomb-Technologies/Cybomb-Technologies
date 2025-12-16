@@ -2,10 +2,10 @@ import "./about-our-core.css";
 function Aboutourcore() {
   return (
     <>
-      <section className="core-value" style={{ padding: "60px 0px"}}>
+      <section className="core-value" style={{ padding: "60px 0px" }}>
         <div className="container">
           <h2 className="text-center text-primary"> Our Core Values</h2>
-          <p className="text-center text-white">
+          <p className="text-center text-secondary">
             Numbers that speak for our commitment to excellence
           </p>
           <div className="row mt-5">
@@ -27,7 +27,7 @@ function Aboutourcore() {
               <div className="card p-4 our-core-card h-100" data-aos="zoom-out-up">
                 <h6
                   className="text-center"
-                  style={{ color: "rgba(74, 222, 128, 1)" }}
+                  style={{ color: "rgba(96, 165, 250, 1" }}
                 >
                   Collaborative Spirit{" "}
                 </h6>
@@ -42,7 +42,7 @@ function Aboutourcore() {
               <div className="card p-4 our-core-card h-100" data-aos="zoom-out-down">
                 <h6
                   className="text-center"
-                  style={{ color: "rgba(192, 132, 252, 1)" }}
+                  style={{ color: "rgba(96, 165, 250, 1" }}
                 >
                   Agile Approach
                 </h6>
@@ -55,14 +55,14 @@ function Aboutourcore() {
             <div className="col-md-3 mt-3 mt-md-0">
               <div className="card p-4 our-core-card h-100" data-aos="zoom-out-right">
                 <h6
-                  className="text-center" 
-                  style={{ color: "rgba(251, 146, 60, 1)" }}
+                  className="text-center"
+                  style={{ color: "rgba(96, 165, 250, 1)" }}
                 >
                   Innovative Thinking
                 </h6>
                 <p className="text-center mb-0 mt-2 text-secondary fw-bold">
                   We constantly explore new ideas and technologies to provide
-                  forward-thinking solutions for our clients.   
+                  forward-thinking solutions for our clients.
                 </p>
               </div>
             </div>
