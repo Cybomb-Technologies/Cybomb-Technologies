@@ -49,6 +49,16 @@
     transition: transform 0.6s ease;
 }
 
+/* Specific styling for decorative images (like the logo) */
+.deco-img {
+    object-fit: contain !important;
+    /* Ensure logo fits in box */
+    padding: 15px;
+    /* Add breathing room */
+    background-color: #ffffff;
+    /* White bg for logo clarity */
+}
+
 /* SIZING CLASSES (10-col) */
 
 /* CEO (40% width) */
@@ -138,12 +148,28 @@
     font-size: 0.8rem;
     font-weight: 700;
     margin: 0;
+    transition: font-size 0.3s ease;
+}
+
+/* INCREASE FONT SIZE ON HOVER */
+.bento-item:hover .member-details h4 {
+    font-size: 1.1rem;
+    /* Larger Name */
 }
 
 .member-details p {
     color: #cbd5e1;
     font-size: 0.6rem;
     margin: 2px 0 0 0;
+    transition: font-size 0.3s ease;
+}
+
+/* INCREASE FONT SIZE ON HOVER */
+.bento-item:hover .member-details p {
+    font-size: 0.85rem;
+    /* Larger Role */
+    color: #ffffff;
+    /* Brighter white */
 }
 
 /* Responsive */
