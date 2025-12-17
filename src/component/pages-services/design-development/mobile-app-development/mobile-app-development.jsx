@@ -3,7 +3,7 @@ import AgileProcess from "../../../common-ui/agile-process/agile-process";
 import StillNotSure from "../../../common-ui/stillnotsure/StillNotSure";
 import { Helmet } from "react-helmet";
 import AgileProcess1 from "../../../common-ui/agile-process/agile-process1";
-import Metatags from "../SEO/meta-tags";
+import Metatags from "../../../../SEO/meta-tags";
 
 function MobileAppDevelopment() {
   const metaPropsData = {
