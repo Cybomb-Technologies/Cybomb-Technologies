@@ -7,8 +7,8 @@ import LeadershipTeam from "../component/about/LeadershipTeam";
 // import Aboutourmission from "../component/about/about-our-mission";
 // import Aboutourvision from "../component/about/about-our-vision";
 import Aboutourteam from "../component/about/about-ourteam";
-import ManagementTeam from "../component/about/ManagementTeam";
-// import TeamMember from "../component/about/team-member";
+// import ManagementTeam from "../component/about/ManagementTeam";
+//import TeamMember from "../component/about/team-member";
 import Metatags from "../SEO/meta-tags";
 
 function About() {
@@ -32,8 +32,8 @@ function About() {
       <Aboutourjourney />
       <MissionVision />
       <Aboutourcore />
-      {/* <LeadershipTeam /> */}
-      <ManagementTeam />
+      <LeadershipTeam />
+      {/* <ManagementTeam /> */}
       {/* <TeamMember /> */}
       <Aboutourteam />
       <Aboutnewsletter />
