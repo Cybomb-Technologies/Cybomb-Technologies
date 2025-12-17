@@ -96,12 +96,12 @@ function LeadershipTeam() {
             color: "dark",
             type: "decoration"
         },
-        // Deco 10: Wide (2x1)
+        // Deco 10: Wide (2x1) -> LOGO IMAGE
         {
             id: "deco-10",
             size: "size-md-wide",
-            color: "grey",
-            type: "decoration"
+            image: "images/logo-11.png", // Using public path directly
+            type: "image-deco"
         }
     ];
 
@@ -112,6 +112,7 @@ function LeadershipTeam() {
 
                 <div className="bento-grid">
                     {gridItems.map((item) => {
+                        // Case 1: Pure Decoration (Color Box)
                         if (item.type === "decoration") {
                             return (
                                 <div
@@ -120,6 +121,15 @@ function LeadershipTeam() {
                                 ></div>
                             );
                         }
+                        // Case 2: Image Decoration (Logo/PNGs)
+                        if (item.type === "image-deco") {
+                            return (
+                                <div key={item.id} className={`bento-item ${item.size} is-decoration`}>
+                                    <img src={item.image} alt="Decoration" className="deco-img" />
+                                </div>
+                            );
+                        }
+                        // Case 3: Team Member
                         return (
                             <div key={item.id} className={`bento-item ${item.size} is-member`}>
                                 <img src={item.image} alt={item.name} />
