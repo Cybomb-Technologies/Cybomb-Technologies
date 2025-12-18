@@ -56,7 +56,7 @@ function Datadropdown({ onLinkClick, isMobile }) {
               <Link className="dropdown-item" to="#" onClick={onLinkClick}>AI Business Intelligence</Link>
               <Link className="dropdown-item" to="#" onClick={onLinkClick}>Large Language Models Solutions</Link>
               <Link className="dropdown-item" to="#" onClick={onLinkClick}>AI Personalized Customer Experience</Link>
-              <Link className="dropdown-item" to="#" onClick={onLinkClick}>Blockchain</Link>
+             
             </div>
           </div>
         </li>

@@ -129,9 +129,6 @@ function Datadropdown1({
                 <Link className={styles.dropdownItem1} to="/services/ai-persolized-experience" onClick={onLinkClick}>
                   <FaUserCog className={styles.icon} /> AI Personalized Customer Experience
                 </Link>
-                <Link className={styles.dropdownItem1} to="/services/ai-blockchain-integration" onClick={onLinkClick}>
-                  <FaCube className={styles.icon} /> Blockchain
-                </Link>
               </div>
             </div>
           </div>
