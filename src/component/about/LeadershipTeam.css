@@ -15,18 +15,18 @@
 }
 
 /* 
-  High Resolution Bento Grid (10 Columns)
-  Restored to stable 10-column layout.
-  - CEO: 4x4 (40%)
-  - Members: 2x2 (20%)
-  - Decos: 1x1, 2x1, 1x2 (Smaller)
+  High Resolution Bento Grid (10 Columns) - Restored
+  - Layout: Scattered Bento
+  - Width: Reduced to 800px for "even smaller" images.
+  - Columns: 10
 */
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-auto-flow: dense;
     gap: 12px;
-    max-width: 1200px;
+    max-width: 800px;
+    /* Reduced width to make images smaller */
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -47,6 +47,16 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
+}
+
+/* Specific styling for decorative images (like the logo) */
+.deco-img {
+    object-fit: contain !important;
+    /* Ensure logo fits in box */
+    padding: 15px;
+    /* Add breathing room */
+    background-color: #ffffff;
+    /* White bg for logo clarity */
 }
 
 /* SIZING CLASSES (10-col) */
@@ -86,11 +96,11 @@
 
 /* Decorative Boxes Colors */
 .deco-box.blue {
-    background-color: #3b82f6;
+    background-color: rgba(64, 126, 226, 0.6);
 }
 
 .deco-box.dark {
-    background-color: #0f172a;
+    background-color: rgba(15, 23, 42, 0.6);
 }
 
 .deco-box.grey {
@@ -135,15 +145,31 @@
 
 .member-details h4 {
     color: #ffffff;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 700;
     margin: 0;
+    transition: font-size 0.3s ease;
+}
+
+/* INCREASE FONT SIZE ON HOVER */
+.bento-item:hover .member-details h4 {
+    font-size: 1.1rem;
+    /* Larger Name */
 }
 
 .member-details p {
     color: #cbd5e1;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     margin: 2px 0 0 0;
+    transition: font-size 0.3s ease;
+}
+
+/* INCREASE FONT SIZE ON HOVER */
+.bento-item:hover .member-details p {
+    font-size: 0.85rem;
+    /* Larger Role */
+    color: #ffffff;
+    /* Brighter white */
 }
 
 /* Responsive */

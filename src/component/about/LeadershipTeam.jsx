@@ -2,8 +2,7 @@ import "./LeadershipTeam.css";
 
 function LeadershipTeam() {
     const gridItems = [
-        // --- ROW 1 ---
-        // CEO (Large 4x4)
+        // --- CEO (4x4) ---
         {
             id: 1,
             name: "Dev Venkatesan",
@@ -12,14 +11,24 @@ function LeadershipTeam() {
             size: "size-xxl",
             type: "member"
         },
-        // Deco 1: Tiny (1x1)
+
+        // --- SCATTERED DECOS & MEMBERS ---
+
+        // Deco 1: Small (1x1)
         {
             id: "deco-1",
             size: "size-sm",
+            color: "blue",
+            type: "decoration"
+        },
+        // Deco 2: Wide (2x1)
+        {
+            id: "deco-2",
+            size: "size-md-wide",
             color: "dark",
             type: "decoration"
         },
-        // Member: Standard (2x2)
+        // COO (2x2)
         {
             id: 2,
             name: "Meenaskhi Sundaram",
@@ -28,16 +37,22 @@ function LeadershipTeam() {
             size: "size-lg",
             type: "member"
         },
-        // Deco 2: Wide Small (2x1)
+        // Deco 3: Small (1x1)
         {
-            id: "deco-2",
-            size: "size-md-wide",
+            id: "deco-3",
+            size: "size-sm",
             color: "grey",
             type: "decoration"
         },
+        // Deco 4: Tall (1x2)
+        {
+            id: "deco-4",
+            size: "size-md-tall",
+            color: "dark",
+            type: "decoration"
+        },
 
-        // --- ROW 2 / Flow ---
-        // Member: Standard (2x2)
+        // VP (2x2)
         {
             id: 3,
             name: "Sudesh T",
@@ -46,105 +61,47 @@ function LeadershipTeam() {
             size: "size-lg",
             type: "member"
         },
-        // Deco 3: Tall Small (1x2)
-        {
-            id: "deco-3",
-            size: "size-md-tall",
-            color: "blue",
-            type: "decoration"
-        },
-        // Member: Standard (2x2)
-        {
-            id: 4,
-            name: "Divyadharshini Subramani",
-            role: "Web Developer",
-            image: "https://res.cloudinary.com/duomzq5mm/image/upload/v1755750475/team-5_mttqoe.jpg",
-            size: "size-lg",
-            type: "member"
-        },
-
-        // --- ROW 3 / Flow ---
-        // Deco 4: Tiny (1x1)
-        {
-            id: "deco-4",
-            size: "size-sm",
-            color: "grey",
-            type: "decoration"
-        },
-        // Member: Standard (2x2)
-        {
-            id: 5,
-            name: "Lakshmi Pathy",
-            role: "Full Stack Developer",
-            image: "https://res.cloudinary.com/dcfjt8shw/image/upload/v1765886463/ukl1opko3limwypf0pvz.png",
-            size: "size-lg",
-            type: "member"
-        },
-        // Deco 5: Wide Small (2x1)
+        // Deco 5: Wide (2x1)
         {
             id: "deco-5",
             size: "size-md-wide",
-            color: "dark",
-            type: "decoration"
-        },
-        // Member: Standard (2x2)
-        {
-            id: 6,
-            name: "Santhosh K",
-            role: "Full Stack Developer",
-            image: "https://res.cloudinary.com/duomzq5mm/image/upload/v1755750259/team-1_rkkmff.png",
-            size: "size-lg",
-            type: "member"
-        },
-        // Deco 6: Tiny (1x1)
-        {
-            id: "deco-6",
-            size: "size-sm",
-            color: "grey",
-            type: "decoration"
-        },
-
-        // --- ROW 4 / Flow ---
-        // Member: Standard (2x2)
-        {
-            id: 7,
-            name: "Manoj M R",
-            role: "UI & UX Designer",
-            image: "https://res.cloudinary.com/dcfjt8shw/image/upload/v1765886189/nx9douz8xlirwnxjy4fp.png",
-            size: "size-lg",
-            type: "member"
-        },
-        // Deco 7: Wide Small (2x1)
-        {
-            id: "deco-7",
-            size: "size-md-wide",
             color: "blue",
             type: "decoration"
         },
-        // Member: Standard (2x2)
+        // Deco 6: Small (1x1)
         {
-            id: 8,
-            name: "Devashree Salunke",
-            role: "Frontend Developer",
-            image: "https://res.cloudinary.com/duomzq5mm/image/upload/v1755750572/team-8_hpix5t.png",
-            size: "size-lg",
-            type: "member"
-        },
-        // Deco 8: Tall Small (1x2)
-        {
-            id: "deco-8",
-            size: "size-md-tall",
+            id: "deco-6",
+            size: "size-sm",
             color: "dark",
             type: "decoration"
         },
-        // Member: Standard (2x2)
+        // Deco 7: Wide (2x1)
         {
-            id: 9,
-            name: "Divya Baskaran",
-            role: "Full Stack Developer",
-            image: "https://res.cloudinary.com/duomzq5mm/image/upload/v1756106400/divya_daydeb.jpg",
-            size: "size-lg",
-            type: "member"
+            id: "deco-7",
+            size: "size-md-wide",
+            color: "grey",
+            type: "decoration"
+        },
+        // Deco 8: Small (1x1)
+        {
+            id: "deco-8",
+            size: "size-sm",
+            color: "blue",
+            type: "decoration"
+        },
+        // Deco 9: Wide (2x1)
+        {
+            id: "deco-9",
+            size: "size-md-wide",
+            color: "dark",
+            type: "decoration"
+        },
+        // Deco 10: Wide (2x1) -> LOGO IMAGE
+        {
+            id: "deco-10",
+            size: "size-md-wide",
+            image: "images/logo-11.png", // Using public path directly
+            type: "image-deco"
         }
     ];
 
@@ -155,6 +112,7 @@ function LeadershipTeam() {
 
                 <div className="bento-grid">
                     {gridItems.map((item) => {
+                        // Case 1: Pure Decoration (Color Box)
                         if (item.type === "decoration") {
                             return (
                                 <div
@@ -163,6 +121,15 @@ function LeadershipTeam() {
                                 ></div>
                             );
                         }
+                        // Case 2: Image Decoration (Logo/PNGs)
+                        if (item.type === "image-deco") {
+                            return (
+                                <div key={item.id} className={`bento-item ${item.size} is-decoration`}>
+                                    <img src={item.image} alt="Decoration" className="deco-img" />
+                                </div>
+                            );
+                        }
+                        // Case 3: Team Member
                         return (
                             <div key={item.id} className={`bento-item ${item.size} is-member`}>
                                 <img src={item.image} alt={item.name} />
