@@ -3,20 +3,19 @@ import Metatags from "../../../../../SEO/meta-tags";
 
 function DatabaseApp() {
   const metaPropsData = {
-    title: "Database Development Services in chennai | Cybomb Tech",
+    title: "Database Development Services in Chennai | Cybomb Technologies",
     description:
-      "Cybomb Tech offers expert database services across MongoDB, Django ORM, Firebase, MySQL, SQL Server, and PostgreSQL. We design secure, scalable, and high-performance database solutions tailored to your business needs.",
+      "Cybomb Tech provides expert database services with MongoDB, Firebase, SQL Server & PostgreSQL for secure, scalable, high-performance data solutions in Chennai.",
     keyword:
-      "Database Development service in chennai, MongoDB, Firebase, SQL Server, PostgreSQL, MySQL, Django ORM, Cybomb Technologies",
+      "database development chennai, mongodb services, firebase database, sql server development, postgresql development",
     url: "https://www.cybomb.com/services/database-development-service",
-    image: "https://www.cybomb.com/images/database-banner.jpg", // replace with actual DB banner
+    image: "https://www.cybomb.com/images/logo-11.png",
   };
 
   return (
     <>
       <Metatags metaProps={metaPropsData} />
       <DatabaseContent />
-      
     </>
   );
 }
