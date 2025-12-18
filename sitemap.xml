@@ -128,8 +128,8 @@
 
 <url>
   <loc>https://www.cybomb.com/services/devops-support</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
-  <priority>0.7</priority>
+  <lastmod>2025-11-18T06:57:13+00:00</lastmod>
+  <priority>0.8</priority>
 </url>
 
 <url>
@@ -140,8 +140,8 @@
 
 <url>
   <loc>https://www.cybomb.com/services/database-development-service</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
-  <priority>0.7</priority>
+  <lastmod>2025-11-18T06:57:13+00:00</lastmod>
+  <priority>0.8</priority>
 </url>
 
 <url>
@@ -182,14 +182,14 @@
 
 <url>
   <loc>https://www.cybomb.com/services/aem</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
-  <priority>0.7</priority>
+  <lastmod>2025-11-18T06:57:13+00:00</lastmod>
+  <priority>0.8</priority>
 </url>
 
 <url>
   <loc>https://www.cybomb.com/services/java-development-service</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
-  <priority>0.7</priority>
+  <lastmod>2025-11-18T06:57:13+00:00</lastmod>
+  <priority>0.8</priority>
 </url>
 
 <url>
@@ -206,14 +206,20 @@
 
 <url>
   <loc>https://www.cybomb.com/services/staff-agumentation</loc>
-  <lastmod>2025-11-06T06:57:13+00:00</lastmod>
-  <priority>0.7</priority>
+  <lastmod>2025-11-18T06:57:13+00:00</lastmod>
+  <priority>0.8</priority>
 </url>
 
 <url>
   <loc>https://www.cybomb.com/USA</loc>
   <lastmod>2025-12-16T06:57:13+00:00</lastmod>
   <priority>0.1</priority>
+</url>
+
+<url>
+  <loc>https://www.cybomb.com/services/ai-consulting-strategy</loc>
+  <lastmod>2025-12-18T06:57:13+00:00</lastmod>
+  <priority>0.8</priority>
 </url>
 
 </urlset>

@@ -1,16 +1,16 @@
-import StaffServicesContent from './staff-content';
-import StillNotSure from '../../../common-ui/stillnotsure/StillNotSure';
-import Metatags from '../../../../SEO/meta-tags';
+import StaffServicesContent from "./staff-content";
+import StillNotSure from "../../../common-ui/stillnotsure/StillNotSure";
+import Metatags from "../../../../SEO/meta-tags";
 
 function Staff() {
   const metaPropsData = {
-    title: "Staff Augmentation Services in chennai | Cybomb",
+    title: "Best Staff Augmentation Services in Chennai | Cybomb Tech",
     description:
-      "Cybomb Tech offers expert staff augmentation services, providing skilled IT professionals, developers, and engineers to enhance your team’s capabilities and meet project demands.",
+      "As a leading staff augmentation provider in Chennai, Cybomb Technologies offers expert skilled IT professionals to scale your team efficiently and effectively.",
     keyword:
-      "Staff Augmentation Service in chennai, IT Staffing, Hire Developers, Dedicated Team, Skilled IT Professionals, Temporary Staffing, Cybomb Technologies",
+      "staff augmentation services Chennai, IT staffing Chennai, hire developers Chennai, dedicated development team, IT outsourcing Chennai",
     url: "https://www.cybomb.com/services/staff-agumentation",
-    image: "https://www.cybomb.com/images/banner-2.jpg", // Replace with actual banner if available
+    image: "https://www.cybomb.com/images/logo-11.png",
   };
 
   return (
