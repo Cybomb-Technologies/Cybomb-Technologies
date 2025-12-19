@@ -13,13 +13,13 @@ import Metatags from "../SEO/meta-tags";
 
 function About() {
   const metaPropsData = {
-    title: "About Us - Cybomb Technologies | Leading IT Company in Chennai",
+    title: "About Us - Leading IT Company in Chennai | Cybomb Technologies",
     description:
-      "Learn about Cybomb Technologies – a top IT company in India specializing in web development, mobile app development, UI/UX design, and innovative digital solutions for businesses.",
+      "Learn about Cybomb Technologies – a leading top IT company in India specializing in web development, mobile apps, UI/UX design and innovative digital solutions.",
     keyword:
-      "About Cybomb Technologies, IT Company India, Web App Development, UI UX Design, Software Solutions, React Developers India, Digital Services",
-    url: "https://www.cybomb.com/about",
-    image: "https://www.cybomb.com/images/logo-11.png", // You can replace with actual about-page banner if available
+      "IT company chennai, web development company chennai, mobile app development chennai, ui ux design services india, react developers in chennai",
+    url: "https://www.cybomb.com/about-us",
+    image: "https://www.cybomb.com/images/logo-11.png",
   };
 
   return (
