@@ -1,16 +1,16 @@
-import SupportServicesContent from './support-service-content';
-import StillNotSure from '../../../common-ui/stillnotsure/StillNotSure';
-import Metatags from '../../../../SEO/meta-tags';
+import SupportServicesContent from "./support-service-content";
+import StillNotSure from "../../../common-ui/stillnotsure/StillNotSure";
+import Metatags from "../../../../SEO/meta-tags";
 
 function SupportServices() {
   const metaPropsData = {
-    title: "server Support Services in chennai - Cybomb",
+    title: "Server Support Services in Chennai - Cybomb Technologies",
     description:
-      "Cybomb Tech provides end-to-end support services, including technical assistance, customer support, maintenance, and operational help to ensure your business runs efficiently.",
+      "Cybomb Tech offers end-to-end support services including technical assistance, customer support, maintenance, and operational help for business efficiency.",
     keyword:
-      "Server Support Services in chennai, Technical Support, Business Assistance, Maintenance Services, Customer Support, Operational Support, Cybomb Technologies",
-    url: "https://www.cybomb.com/services/support-service",
-    image: "https://www.cybomb.com/images/banner-2.jpg", // Replace with actual banner if available
+      "server support services in chennai, technical support, business assistance, maintenance services, customer support, operational support",
+    url: "https://cybomb.com/services/server-support",
+    image: "https://www.cybomb.com/images/logo-11.png",
   };
 
   return (

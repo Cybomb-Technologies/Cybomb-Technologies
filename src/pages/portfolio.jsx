@@ -1,22 +1,22 @@
-
 import Portfoliocontent from "../component/portfolio/portfolio-content";
 import Metatags from "../SEO/meta-tags";
 
 function Prortfolio() {
   const metaPropsData = {
-  title: "Portfolio - Cybomb Technologies | Our Work & Client Success Stories",
-  description:
-    "Explore the portfolio of Cybomb Technologies showcasing successful web and mobile app development projects, UI/UX designs, and digital solutions delivered to clients across various industries.",
-  keyword:
-    "Cybomb Portfolio, Project Showcase, Web Development Work, App Development Portfolio, UI UX Projects, Client Success Stories, Software Solutions India",
-  url: "https://www.cybomb.com/portfolio",
-  image: "https://www.cybomb.com/images/portfolio-banner.jpg", // Replace with actual portfolio banner if available
-};
+    title:
+      "Portfolio -  Our Work & Client Success Stories | Cybomb Technologies",
+    description:
+      "Cybomb Technologies portfolio showcases successful web and mobile app development projects. View our client success stories and innovative digital solutions.",
+    keyword:
+      "portfolio, project showcase, web development work, app development portfolio, ui ux projects",
+    url: "https://www.cybomb.com/portfolio",
+    image: "https://www.cybomb.com/images/logo-11.png",
+  };
 
   return (
     <>
-    <Metatags  metaProps={metaPropsData}/>
-      
+      <Metatags metaProps={metaPropsData} />
+
       <Portfoliocontent />
     </>
   );
