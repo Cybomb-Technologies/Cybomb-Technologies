@@ -20,10 +20,10 @@ function Home() {
   const metaPropsData = {
     title: "Best Web & Mobile App Development in USA | Cybomb Technologies",
     description:
-      "Cybomb Technologies Inc. offers expert web development, mobile apps, UI/UX design & digital solutions for startups and enterprises globally.",
+      "Cybomb Technologies Inc. delivers expert web & mobile app development, UI/UX design, and tailored digital solutions for startups and enterprises globally.",
     keyword:
       "cybomb technologies inc, web development, mobile app development, ui ux design, react developer, chennai it company, software services india",
-    url: "https://www.cybomb.com/",
+    url: "https://www.cybomb.com/USA",
     image: "https://www.cybomb.com/images/logo-11.png",
   };
 

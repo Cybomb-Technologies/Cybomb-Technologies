@@ -8,7 +8,7 @@ export default function WebDev() {
     title:
       "Best Web Design & Website Development Company in Chennai | Cybomb Tech",
     description:
-      "Cybomb Technologies, a leading website design company in Chennai, offers custom web design, development, redesigning, and professional mobile app development.",
+      "A leading web design company in Chennai, Cybomb Technologies provides custom design, development, redesign, and professional mobile app development services.",
     keyword:
       "website development services in chennai, custom website design, responsive web development, business website development, ecommerce website development, site development india",
     url: "https://www.cybomb.com/services/web-development",

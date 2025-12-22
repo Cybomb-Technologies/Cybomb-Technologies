@@ -18,7 +18,7 @@ function Home() {
   const metaPropsData = {
     title: "Best Mobile App & Web Development in Chennai | Cybomb Technologies",
     description:
-      "Cybomb Technologies provides custom mobile app development, responsive web development & solutions, UI/UX design, and software services for wide range of businesses.",
+      "Cybomb Technologies provides custom mobile app development, responsive web development & solutions, UI/UX design & software services for wide range of businesses.",
     keyword:
       "web development, mobile app development, ui ux design, chennai it company, software services india",
     url: "https://www.cybomb.com/",
