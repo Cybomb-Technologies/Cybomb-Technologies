@@ -10,7 +10,7 @@ function MobileAppDevelopment() {
     title:
       "Best Mobile App Development company in Chennai - Cybomb Technologies",
     description:
-      "Transform your ideas into live apps with Android, iOS, and Flutter app development. Chennai's best app developers provide Cross-Platform & Native Applications.",
+      "Transform your ideas into live apps with expert Android, iOS & Flutter development. Chennai's leading app developers deliver Cross-Platform & Native Applications.",
     keyword:
       "mobile app development chennai, android app development, ios app development, cross-platform app development, native app development",
     url: "https://www.cybomb.com/services/mobile-app-development",

@@ -9,7 +9,7 @@ function Blog() {
   const metaPropsData = {
     title: "Latest Web Development & AI Insights Articles | Cybomb Tech Blogs",
     description:
-      "Explore Cybomb Technologies articles on web development, mobile apps, AI, SaaS, UI/UX, cloud solutions, and digital transformation strategies globally.",
+      "Explore Cybomb Technologies articles on web development, mobile apps, AI Solutions, SaaS, UI/UX, cloud solutions and digital transformation strategies globally.",
     keyword:
       "web development blog, ai blog, saas blog, mobile app development articles, ui ux tips, tech news",
     url: "https://www.cybomb.com/blog",
